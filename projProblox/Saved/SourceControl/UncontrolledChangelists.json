@@ -1,0 +1,19 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset",
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/Sandbox.umap",
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/Material/M_Core.uasset",
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/Blueprints/BP_CubeCore.uasset",
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/Blueprints/BP_Propeller.uasset",
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/Blueprints/BP_Player.uasset",
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/Textures/T_Core.uasset",
+				"C:/Users/Deany/Documents/Unreal Projects/projProblox/Content/CustomGameMode.uasset"
+			]
+		}
+	]
+}

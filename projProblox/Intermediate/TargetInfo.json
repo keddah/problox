@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "projProblox",
+			"Path": "..\\Source\\projProblox.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "projProbloxEditor",
+			"Path": "..\\Source\\projProbloxEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
