@@ -11151,3 +11151,435 @@ Make sure 'BP_Connector_C' has been compiled for  Get closestSocket
 [2024.03.03-21.43.13:534][692]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
 [2024.03.03-21.43.13:540][692]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
 [2024.03.03-21.43.13:568][693]LogPlayLevel: Display: Destroying online subsystem :Context_42
+[2024.03.03-21.43.49:080][771]BlueprintLog: New page: Compile BP_Connector
+[2024.03.03-21.43.49:112][771]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.03.03-21.43.49:156][771]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-21.43.49:243][771]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Connector
+[2024.03.03-21.43.49:244][771]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Connector0195F4794E82263DD2BF60A807B656E2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Connector.uasset'
+[2024.03.03-21.43.49:249][771]LogFileHelpers: InternalPromptForCheckoutAndSave took 92 ms (total: 6.47 sec)
+[2024.03.03-21.43.49:256][771]AssetCheck: New page: Asset Save: BP_Connector
+[2024.03.03-21.43.49:256][771]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Connector.BP_Connector
+[2024.03.03-21.43.57:030][693]LogEditorTransaction: Undo Delete current selection
+[2024.03.03-21.45.25:537][ 72]BlueprintLog: New page: Compile BP_Connector
+[2024.03.03-21.45.25:572][ 72]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.03.03-21.45.25:612][ 72]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-21.45.25:687][ 72]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Connector
+[2024.03.03-21.45.25:687][ 72]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_ConnectorBF7029504D9122F4CF2397B365D6A12E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Connector.uasset'
+[2024.03.03-21.45.25:693][ 72]LogFileHelpers: InternalPromptForCheckoutAndSave took 81 ms (total: 6.55 sec)
+[2024.03.03-21.45.25:708][ 72]AssetCheck: New page: Asset Save: BP_Connector
+[2024.03.03-21.45.25:708][ 72]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Connector.BP_Connector
+[2024.03.03-21.45.46:536][546]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-21.45.46:543][546]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-21.45.46:543][546]PIE: New page: PIE session: Sandbox (3 Mar 2024, 21:45:46)
+[2024.03.03-21.45.46:543][546]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.03-21.45.46:550][546]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006546s)
+[2024.03.03-21.45.46:550][546]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.006573s)
+[2024.03.03-21.45.46:561][546]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.03.03-21.45.46:565][546]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-21.45.46:565][546]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-21.45.46:565][546]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.03-21.45.46:565][546]LogPlayLevel: PIE: World Init took: (0.000743s)
+[2024.03.03-21.45.46:565][546]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2024.03.03-21.45.46:565][546]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-21.45.46:565][546]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-21.45.46:565][546]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-21.45.46:565][546]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-21.45.46:565][546]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-21.45.46:565][546]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-21.45.46:565][546]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-21.45.46:565][546]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-21.45.46:566][546]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-21.45.46:566][546]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-21.45.46:566][546]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-21.45.46:567][546]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-21.45.46:579][546]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.03.03-21.45.46:579][546]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-21.45.46:579][546]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-21.45.46:579][546]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-21.45.46:579][546]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=24
+[2024.03.03-21.45.46:579][546]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=24
+[2024.03.03-21.45.46:581][546]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=24
+[2024.03.03-21.45.46:581][546]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=24
+[2024.03.03-21.45.46:581][546]LogInit: FAudioDevice initialized with ID 24.
+[2024.03.03-21.45.46:581][546]LogAudio: Display: Audio Device (ID: 24) registered with world 'Sandbox'.
+[2024.03.03-21.45.46:581][546]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 24
+[2024.03.03-21.45.46:610][546]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-21.45.46:610][546]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.03-21.45.46:612][546]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.03-21.45.46
+[2024.03.03-21.45.46:612][546]LogWorld: Bringing up level for play took: 0.002028
+[2024.03.03-21.45.46:614][546]LogOnline: OSS: Created online subsystem instance for: :Context_43
+[2024.03.03-21.45.46:617][546]PIE: Server logged in
+[2024.03.03-21.45.46:619][546]PIE: Play in editor total start time 0.076 seconds.
+[2024.03.03-21.45.46:630][546]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.
+[2024.03.03-21.45.55:768][432]LogBlueprintUserMessages: [BP_Connector_C_1] P=90.000000 Y=-143.556750 R=-143.928922
+[2024.03.03-21.46.00:392][905]LogBlueprintUserMessages: [BP_Connector_C_1] P=90.000000 Y=37.030855 R=36.659181
+[2024.03.03-21.46.18:985][783]LogBlueprintUserMessages: [BP_Connector_C_1] P=90.000000 Y=37.030855 R=36.659181
+[2024.03.03-21.46.27:636][666]LogBlueprintUserMessages: [BP_Propeller_C_2] P=-0.000052 Y=0.371713 R=0.000039
+[2024.03.03-21.46.30:904][  4]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:914][  5]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:924][  6]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:934][  7]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:943][  8]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:953][  9]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:964][ 10]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:976][ 11]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:986][ 12]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.30:996][ 13]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:005][ 14]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:018][ 15]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:028][ 16]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:042][ 17]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:052][ 18]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:063][ 19]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:073][ 20]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:083][ 21]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:093][ 22]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:103][ 23]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:113][ 24]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:124][ 25]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:135][ 26]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:147][ 27]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:159][ 28]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:169][ 29]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:181][ 30]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:192][ 31]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:203][ 32]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:214][ 33]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:225][ 34]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:235][ 35]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:245][ 36]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:256][ 37]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:269][ 38]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:279][ 39]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:290][ 40]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:299][ 41]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:310][ 42]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:321][ 43]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:331][ 44]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:343][ 45]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:355][ 46]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:365][ 47]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:375][ 48]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:385][ 49]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:395][ 50]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:405][ 51]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:415][ 52]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:425][ 53]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:436][ 54]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:446][ 55]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:456][ 56]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:466][ 57]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.31:478][ 58]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:156][622]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:166][623]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:176][624]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:186][625]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:196][626]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:206][627]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:218][628]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:228][629]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:238][630]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:248][631]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:258][632]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:270][633]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:280][634]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:290][635]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:300][636]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:310][637]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:320][638]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:329][639]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:339][640]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:349][641]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:359][642]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:369][643]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:379][644]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:389][645]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:398][646]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:408][647]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:418][648]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:428][649]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:438][650]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:448][651]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:457][652]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:467][653]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:477][654]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:488][655]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:498][656]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:508][657]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:518][658]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:529][659]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:539][660]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:549][661]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:559][662]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:569][663]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:578][664]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:588][665]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:598][666]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:609][667]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:619][668]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:629][669]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:639][670]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:649][671]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.37:659][672]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:107][717]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:118][718]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:128][719]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:138][720]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:148][721]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:158][722]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:168][723]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:178][724]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:189][725]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:199][726]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:209][727]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:219][728]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:229][729]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:239][730]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:251][731]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:260][732]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:273][733]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:283][734]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:293][735]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:304][736]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:315][737]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:325][738]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:335][739]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:345][740]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:356][741]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:366][742]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:376][743]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:386][744]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:396][745]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:406][746]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:417][747]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:427][748]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:437][749]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:447][750]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:457][751]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:467][752]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:477][753]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:487][754]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:498][755]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:508][756]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:518][757]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:530][758]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:541][759]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:551][760]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:561][761]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:571][762]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:581][763]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:930][798]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:939][799]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:950][800]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:960][801]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:970][802]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:980][803]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.38:990][804]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:001][805]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:011][806]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:021][807]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:031][808]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:041][809]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:051][810]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:061][811]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:071][812]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:081][813]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:091][814]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:103][815]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:114][816]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:124][817]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:133][818]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:143][819]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:153][820]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:164][821]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:174][822]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:184][823]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:193][824]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:203][825]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:213][826]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:224][827]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:234][828]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:244][829]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:253][830]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:263][831]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:274][832]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:284][833]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:294][834]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.39:305][835]LogBlueprintUserMessages: [BP_Propeller_C_2] 1473710.284163
+[2024.03.03-21.46.45:134][406]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-21.46.45:135][406]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.03-21.46.45:135][406]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.03-21.46.45:141][406]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-21.46.45:141][406]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-21.46.45:199][406]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-21.46.45:202][406]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-21.46.45:213][406]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 24
+[2024.03.03-21.46.45:213][406]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.03.03-21.46.45:214][406]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.03.03-21.46.45:221][406]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.03.03-21.46.45:316][407]LogPlayLevel: Display: Destroying online subsystem :Context_43
+[2024.03.03-21.47.08:524][ 99]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-21.47.08:532][ 99]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.03.03-21.47.08:533][ 99]LogPlayLevel: [PlayLevel] Compiling BP_Player before play...
+[2024.03.03-21.47.08:614][ 99]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-21.47.08:641][ 99]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Player" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Player.uasset" SILENT=true
+[2024.03.03-21.47.08:664][ 99]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_Player
+[2024.03.03-21.47.08:665][ 99]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Player4C0FCCAD41DA2626ECAC5980DACB7F20.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Player.uasset'
+[2024.03.03-21.47.08:670][ 99]LogFileHelpers: InternalPromptForCheckoutAndSave took 56 ms (total: 6.61 sec)
+[2024.03.03-21.47.08:679][ 99]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.03.03-21.47.08:682][ 99]LogPlayLevel: PlayLevel: Blueprint regeneration took 150 ms (1 blueprints)
+[2024.03.03-21.47.08:682][ 99]PIE: New page: PIE session: Sandbox (3 Mar 2024, 21:47:08)
+[2024.03.03-21.47.08:682][ 99]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.03-21.47.08:689][ 99]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006707s)
+[2024.03.03-21.47.08:689][ 99]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.006731s)
+[2024.03.03-21.47.08:700][ 99]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.03.03-21.47.08:701][ 99]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-21.47.08:701][ 99]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-21.47.08:701][ 99]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.03-21.47.08:701][ 99]LogPlayLevel: PIE: World Init took: (0.000728s)
+[2024.03.03-21.47.08:701][ 99]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2024.03.03-21.47.08:702][ 99]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-21.47.08:702][ 99]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-21.47.08:702][ 99]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-21.47.08:702][ 99]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-21.47.08:702][ 99]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-21.47.08:702][ 99]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-21.47.08:702][ 99]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-21.47.08:702][ 99]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-21.47.08:702][ 99]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-21.47.08:702][ 99]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-21.47.08:702][ 99]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-21.47.08:704][ 99]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-21.47.08:714][ 99]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.03.03-21.47.08:715][ 99]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-21.47.08:715][ 99]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-21.47.08:715][ 99]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-21.47.08:715][ 99]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=25
+[2024.03.03-21.47.08:715][ 99]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=25
+[2024.03.03-21.47.08:717][ 99]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=25
+[2024.03.03-21.47.08:717][ 99]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=25
+[2024.03.03-21.47.08:717][ 99]LogInit: FAudioDevice initialized with ID 25.
+[2024.03.03-21.47.08:717][ 99]LogAudio: Display: Audio Device (ID: 25) registered with world 'Sandbox'.
+[2024.03.03-21.47.08:717][ 99]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 25
+[2024.03.03-21.47.08:744][ 99]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-21.47.08:744][ 99]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.03-21.47.08:746][ 99]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.03-21.47.08
+[2024.03.03-21.47.08:746][ 99]LogWorld: Bringing up level for play took: 0.002150
+[2024.03.03-21.47.08:748][ 99]LogOnline: OSS: Created online subsystem instance for: :Context_44
+[2024.03.03-21.47.08:750][ 99]PIE: Server logged in
+[2024.03.03-21.47.08:750][ 99]PIE: Play in editor total start time 0.219 seconds.
+[2024.03.03-21.47.08:789][ 99]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.
+[2024.03.03-21.47.08:798][100]AssetCheck: New page: Asset Save: BP_Player
+[2024.03.03-21.47.08:798][100]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_Player.BP_Player
+[2024.03.03-21.47.22:825][609]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-21.47.22:825][609]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.03-21.47.22:825][609]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.03-21.47.22:830][609]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-21.47.22:830][609]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-21.47.22:862][609]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-21.47.22:865][609]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-21.47.22:876][609]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 25
+[2024.03.03-21.47.22:876][609]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.03.03-21.47.22:877][609]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.03.03-21.47.22:883][609]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2024.03.03-21.47.22:913][610]LogPlayLevel: Display: Destroying online subsystem :Context_44
+[2024.03.03-21.48.42:595][954]BlueprintLog: New page: Compile BP_Player
+[2024.03.03-21.48.42:629][954]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.03.03-21.48.42:650][954]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-21.48.42:675][954]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Player" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Player.uasset" SILENT=true
+[2024.03.03-21.48.42:698][954]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_Player
+[2024.03.03-21.48.42:698][954]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Player4A7127734235442896EF949884531B4F.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Player.uasset'
+[2024.03.03-21.48.42:705][954]LogFileHelpers: InternalPromptForCheckoutAndSave took 54 ms (total: 6.67 sec)
+[2024.03.03-21.48.42:707][954]AssetCheck: New page: Asset Save: BP_Player
+[2024.03.03-21.48.42:707][954]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_Player.BP_Player
+[2024.03.03-21.48.47:072][470]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-21.48.47:078][470]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-21.48.47:078][470]PIE: New page: PIE session: Sandbox (3 Mar 2024, 21:48:47)
+[2024.03.03-21.48.47:078][470]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.03-21.48.47:085][470]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006723s)
+[2024.03.03-21.48.47:085][470]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.006747s)
+[2024.03.03-21.48.47:095][470]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.03.03-21.48.47:098][470]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-21.48.47:098][470]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-21.48.47:098][470]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.03-21.48.47:099][470]LogPlayLevel: PIE: World Init took: (0.001025s)
+[2024.03.03-21.48.47:099][470]LogAudio: Display: Creating Audio Device:                 Id: 26, Scope: Unique, Realtime: True
+[2024.03.03-21.48.47:099][470]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-21.48.47:099][470]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-21.48.47:099][470]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-21.48.47:099][470]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-21.48.47:099][470]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-21.48.47:099][470]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-21.48.47:099][470]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-21.48.47:099][470]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-21.48.47:099][470]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-21.48.47:099][470]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-21.48.47:099][470]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-21.48.47:101][470]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-21.48.47:112][470]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.03.03-21.48.47:112][470]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-21.48.47:112][470]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-21.48.47:112][470]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-21.48.47:112][470]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=26
+[2024.03.03-21.48.47:112][470]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=26
+[2024.03.03-21.48.47:114][470]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=26
+[2024.03.03-21.48.47:114][470]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=26
+[2024.03.03-21.48.47:114][470]LogInit: FAudioDevice initialized with ID 26.
+[2024.03.03-21.48.47:114][470]LogAudio: Display: Audio Device (ID: 26) registered with world 'Sandbox'.
+[2024.03.03-21.48.47:114][470]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 26
+[2024.03.03-21.48.47:142][470]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-21.48.47:142][470]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.03-21.48.47:144][470]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.03-21.48.47
+[2024.03.03-21.48.47:144][470]LogWorld: Bringing up level for play took: 0.001952
+[2024.03.03-21.48.47:146][470]LogOnline: OSS: Created online subsystem instance for: :Context_45
+[2024.03.03-21.48.47:148][470]PIE: Server logged in
+[2024.03.03-21.48.47:149][470]PIE: Play in editor total start time 0.071 seconds.
+[2024.03.03-21.48.47:157][470]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.
+[2024.03.03-21.49.05:994][537]LogBlueprintUserMessages: [BP_Propeller_C_2] P=-0.000104 Y=-0.044300 R=0.000212
+[2024.03.03-21.49.08:620][823]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:631][824]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:644][825]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:653][826]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:663][827]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:673][828]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:681][829]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:692][830]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:701][831]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:710][832]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:718][833]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:727][834]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:737][835]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:747][836]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:757][837]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:766][838]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:776][839]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:787][840]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:797][841]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:807][842]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:817][843]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:825][844]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:834][845]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:844][846]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:853][847]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:863][848]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:872][849]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:881][850]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:891][851]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:900][852]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:910][853]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:919][854]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.08:928][855]LogBlueprintUserMessages: [BP_Propeller_C_2] 1493701.443829
+[2024.03.03-21.49.16:024][594]LogBlueprintUserMessages: [BP_Connector_C_1] P=89.401874 Y=-0.138720 R=6.760135
+[2024.03.03-21.49.20:175][ 33]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-21.49.20:175][ 33]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.03-21.49.20:176][ 33]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.03-21.49.20:180][ 33]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-21.49.20:180][ 33]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-21.49.20:186][ 33]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-21.49.20:189][ 33]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-21.49.20:200][ 33]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.03-21.49.20:200][ 33]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 26
+[2024.03.03-21.49.20:200][ 33]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.03.03-21.49.20:202][ 33]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.03.03-21.49.20:208][ 33]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.03.03-21.49.20:240][ 34]LogPlayLevel: Display: Destroying online subsystem :Context_45
