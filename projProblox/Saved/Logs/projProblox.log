@@ -11583,3 +11583,20 @@ Make sure 'BP_Connector_C' has been compiled for  Get closestSocket
 [2024.03.03-21.49.20:202][ 33]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
 [2024.03.03-21.49.20:208][ 33]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
 [2024.03.03-21.49.20:240][ 34]LogPlayLevel: Display: Destroying online subsystem :Context_45
+[2024.03.03-21.49.40:098][345]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2024.03.03-21.49.40:099][345]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto6.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2024.03.03-21.49.40:135][345]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Sandbox_Auto6
+[2024.03.03-21.49.40:135][345]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox_Auto6F35C0473447544123C4DA8B065747652.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto6.umap'
+[2024.03.03-21.49.40:136][345]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto6.umap is in the /Temp path, will not scan.
+[2024.03.03-21.49.40:137][345]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.049
+[2024.03.03-21.49.40:137][345]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.049
+[2024.03.03-21.49.44:837][410]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.03.03-21.49.44:840][410]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-21.49.44:872][410]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.03.03-21.49.44:902][410]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.03.03-21.49.44:936][410]LogSavePackage: Moving output files for package: /Game/Sandbox
+[2024.03.03-21.49.44:937][410]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox59ECCF664A82C5F5D67DFEB19BFC8814.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap'
+[2024.03.03-21.49.44:943][410]LogFileHelpers: Saving map 'Sandbox' took 0.071
+[2024.03.03-21.49.44:952][410]LogFileHelpers: InternalPromptForCheckoutAndSave took 110 ms (total: 6.78 sec)
+[2024.03.03-21.49.44:953][410]AssetCheck: New page: Asset Save: Sandbox
+[2024.03.03-21.49.44:953][410]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
