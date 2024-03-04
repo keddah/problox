@@ -167218,3 +167218,20 @@ Script Stack (0 frames) :
 [2024.03.04-16.19.41:643][623]LogFileHelpers: InternalPromptForCheckoutAndSave took 89 ms (total: 25.9 sec)
 [2024.03.04-16.19.41:644][623]AssetCheck: New page: Asset Save: BP_Piston
 [2024.03.04-16.19.41:644][623]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Piston.BP_Piston
+[2024.03.04-16.20.23:581][570]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.03.04-16.20.23:585][570]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto5.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2024.03.04-16.20.23:621][570]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Sandbox_Auto5
+[2024.03.04-16.20.23:622][570]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox_Auto563CAFCBB42F0E6E120CFF0BDE9FD1BA0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto5.umap'
+[2024.03.04-16.20.23:623][570]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto5.umap is in the /Temp path, will not scan.
+[2024.03.04-16.20.23:623][570]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.053
+[2024.03.04-16.20.23:623][570]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.053
+[2024.03.04-16.21.13:866][138]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2024.03.04-16.21.13:871][138]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.04-16.21.13:897][138]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.03.04-16.21.13:926][138]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.03.04-16.21.13:966][138]LogSavePackage: Moving output files for package: /Game/Sandbox
+[2024.03.04-16.21.13:966][138]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox05921A1A4DD705144BE3BA8FF20A7F7B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap'
+[2024.03.04-16.21.13:972][138]LogFileHelpers: Saving map 'Sandbox' took 0.075
+[2024.03.04-16.21.13:979][138]LogFileHelpers: InternalPromptForCheckoutAndSave took 108 ms (total: 26.0 sec)
+[2024.03.04-16.21.13:980][138]AssetCheck: New page: Asset Save: Sandbox
+[2024.03.04-16.21.13:980][138]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
