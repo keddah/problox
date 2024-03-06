@@ -154174,3 +154174,888 @@ Make sure 'BP_CoreObject_C' has been compiled for  Remove Attachment 1
 [2024.03.06-18.52.24:442][151]LogFileHelpers: InternalPromptForCheckoutAndSave took 93 ms (total: 13.8 sec)
 [2024.03.06-18.52.24:444][151]AssetCheck: New page: Asset Save: Sandbox
 [2024.03.06-18.52.24:444][151]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
+[2024.03.06-18.53.14:032][ 45]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.06-18.53.14:039][ 45]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.06-18.53.14:039][ 45]PIE: New page: PIE session: Sandbox (6 Mar 2024, 18:53:14)
+[2024.03.06-18.53.14:039][ 45]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.06-18.53.14:049][ 45]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009503s)
+[2024.03.06-18.53.14:049][ 45]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.009530s)
+[2024.03.06-18.53.14:060][ 45]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.03.06-18.53.14:061][ 45]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.06-18.53.14:061][ 45]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.06-18.53.14:061][ 45]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.06-18.53.14:062][ 45]LogPlayLevel: PIE: World Init took: (0.000928s)
+[2024.03.06-18.53.14:062][ 45]LogAudio: Display: Creating Audio Device:                 Id: 76, Scope: Unique, Realtime: True
+[2024.03.06-18.53.14:062][ 45]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.06-18.53.14:062][ 45]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.06-18.53.14:062][ 45]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.06-18.53.14:062][ 45]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.06-18.53.14:062][ 45]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.06-18.53.14:062][ 45]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.06-18.53.14:062][ 45]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.06-18.53.14:062][ 45]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.06-18.53.14:062][ 45]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.06-18.53.14:062][ 45]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.06-18.53.14:062][ 45]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.06-18.53.14:064][ 45]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.06-18.53.14:075][ 45]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.03.06-18.53.14:075][ 45]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.06-18.53.14:075][ 45]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.06-18.53.14:075][ 45]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.06-18.53.14:076][ 45]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=76
+[2024.03.06-18.53.14:076][ 45]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=76
+[2024.03.06-18.53.14:077][ 45]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=76
+[2024.03.06-18.53.14:077][ 45]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=76
+[2024.03.06-18.53.14:077][ 45]LogInit: FAudioDevice initialized with ID 76.
+[2024.03.06-18.53.14:077][ 45]LogAudio: Display: Audio Device (ID: 76) registered with world 'Sandbox'.
+[2024.03.06-18.53.14:077][ 45]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 76
+[2024.03.06-18.53.14:103][ 45]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.06-18.53.14:103][ 45]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.06-18.53.14:106][ 45]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.06-18.53.14
+[2024.03.06-18.53.14:106][ 45]LogWorld: Bringing up level for play took: 0.002452
+[2024.03.06-18.53.14:108][ 45]LogOnline: OSS: Created online subsystem instance for: :Context_102
+[2024.03.06-18.53.14:205][ 45]PIE: Server logged in
+[2024.03.06-18.53.14:206][ 45]PIE: Play in editor total start time 0.167 seconds.
+[2024.03.06-18.53.14:512][ 45]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.
+[2024.03.06-18.53.17:447][271]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:14.110 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 7346 files in 9656 folders with total size 696 MiB.
+[2024.03.06-18.53.47:250][364]LogBlueprintUserMessages: [BP_Propeller_C_2] invalid
+[2024.03.06-18.53.53:524][775]LogBlueprintUserMessages: [BP_Propeller_C_2] adding Top
+[2024.03.06-18.53.59:896][196]LogBlueprintUserMessages: [BP_Connector_C_4] invalid
+[2024.03.06-18.54.02:204][347]LogBlueprintUserMessages: [BP_Connector_C_6] invalid
+[2024.03.06-18.54.05:291][547]LogBlueprintUserMessages: [BP_Connector_C_3] invalid
+[2024.03.06-18.54.08:895][782]LogBlueprintUserMessages: [BP_Connector_C_1] invalid
+[2024.03.06-18.54.13:032][ 51]LogBlueprintUserMessages: [BP_Connector_C_8] invalid
+[2024.03.06-18.54.26:453][918]LogBlueprintUserMessages: [BP_Connector_C_8] invalid
+[2024.03.06-18.54.30:684][191]LogBlueprintUserMessages: [BP_Connector_C_7] invalid
+[2024.03.06-18.54.51:519][540]LogBlueprintUserMessages: [BP_Propeller_C_2] invalid
+[2024.03.06-18.54.53:062][638]LogBlueprintUserMessages: [BP_Grapple_C_1] invalid
+[2024.03.06-18.54.54:338][719]LogBlueprintUserMessages: [BP_Grapple_C_1] adding Top
+[2024.03.06-18.55.11:569][824]LogBlueprintUserMessages: [BP_GrappleHead_C_1] Box Brush2
+[2024.03.06-18.55.11:570][824]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:585][825]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:600][826]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:615][827]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:630][828]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:647][829]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:663][830]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:678][831]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:694][832]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:710][833]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:725][834]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:741][835]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:756][836]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:771][837]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:786][838]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:802][839]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:817][840]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:833][841]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:848][842]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:864][843]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:879][844]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:896][845]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:912][846]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:928][847]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:944][848]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:960][849]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:976][850]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.11:991][851]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:006][852]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:022][853]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:037][854]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:053][855]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:069][856]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:085][857]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:101][858]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:117][859]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:132][860]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:148][861]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:163][862]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:180][863]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:195][864]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:211][865]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:227][866]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:243][867]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:258][868]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:274][869]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:290][870]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:305][871]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:321][872]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:336][873]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:352][874]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:367][875]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:382][876]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:398][877]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:414][878]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:429][879]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:444][880]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:460][881]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:475][882]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:491][883]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:505][884]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:521][885]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:537][886]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:552][887]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:567][888]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:584][889]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:600][890]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:616][891]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:631][892]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:648][893]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:663][894]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:678][895]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:694][896]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:711][897]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:727][898]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:742][899]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:758][900]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:774][901]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:790][902]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:805][903]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:820][904]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:836][905]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:851][906]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:867][907]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:883][908]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:899][909]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:915][910]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:930][911]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:946][912]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:961][913]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:977][914]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.12:992][915]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:008][916]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:024][917]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:040][918]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:054][919]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:070][920]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:085][921]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:101][922]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:116][923]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:132][924]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:148][925]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:164][926]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:178][927]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:194][928]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:210][929]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:225][930]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:241][931]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:256][932]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:272][933]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:288][934]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:302][935]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:319][936]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:335][937]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:351][938]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:366][939]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:381][940]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:397][941]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:413][942]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:428][943]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:444][944]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:459][945]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:475][946]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:490][947]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:506][948]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:522][949]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:537][950]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:552][951]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:568][952]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:583][953]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:598][954]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:614][955]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:629][956]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:646][957]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:661][958]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:676][959]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:692][960]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:708][961]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:724][962]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:739][963]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:755][964]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:770][965]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:785][966]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:801][967]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:816][968]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:832][969]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:848][970]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:864][971]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:880][972]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:896][973]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:912][974]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:927][975]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:943][976]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:961][977]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:976][978]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.13:991][979]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:007][980]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:023][981]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:039][982]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:053][983]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:069][984]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:086][985]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:101][986]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:117][987]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:132][988]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:149][989]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:165][990]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:180][991]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:195][992]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:211][993]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:226][994]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:242][995]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:257][996]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:273][997]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:288][998]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:303][999]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:319][  0]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:335][  1]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:350][  2]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:365][  3]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:381][  4]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:397][  5]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:413][  6]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:428][  7]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:445][  8]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:461][  9]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:477][ 10]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:493][ 11]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:509][ 12]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:525][ 13]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:540][ 14]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:556][ 15]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:572][ 16]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:588][ 17]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:604][ 18]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:619][ 19]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:636][ 20]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:653][ 21]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:668][ 22]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:684][ 23]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:701][ 24]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:717][ 25]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:732][ 26]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:748][ 27]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:764][ 28]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:780][ 29]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:796][ 30]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:812][ 31]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:827][ 32]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:843][ 33]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:859][ 34]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:875][ 35]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:892][ 36]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:908][ 37]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:924][ 38]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:940][ 39]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:956][ 40]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:972][ 41]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.14:987][ 42]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:004][ 43]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:019][ 44]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:035][ 45]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:052][ 46]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:067][ 47]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:083][ 48]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:098][ 49]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:114][ 50]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:130][ 51]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:147][ 52]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:162][ 53]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:178][ 54]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:194][ 55]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:210][ 56]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:226][ 57]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:241][ 58]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:257][ 59]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:273][ 60]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:289][ 61]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:304][ 62]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:320][ 63]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:336][ 64]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:351][ 65]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:367][ 66]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:383][ 67]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:399][ 68]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:414][ 69]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:431][ 70]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:447][ 71]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:463][ 72]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:478][ 73]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:493][ 74]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:509][ 75]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:524][ 76]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:539][ 77]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:555][ 78]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:571][ 79]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:587][ 80]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:602][ 81]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:617][ 82]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:634][ 83]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:650][ 84]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:665][ 85]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:681][ 86]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:697][ 87]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:712][ 88]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:727][ 89]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:743][ 90]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:759][ 91]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:774][ 92]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:790][ 93]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:806][ 94]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:821][ 95]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:837][ 96]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:852][ 97]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:867][ 98]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:883][ 99]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:899][100]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:915][101]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:930][102]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:946][103]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:961][104]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:976][105]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.15:991][106]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:007][107]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:023][108]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:038][109]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:055][110]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:071][111]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:086][112]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:103][113]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:119][114]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:136][115]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:151][116]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:167][117]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:182][118]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:198][119]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:212][120]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:228][121]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:243][122]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:259][123]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:273][124]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:289][125]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:305][126]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:320][127]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:335][128]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:351][129]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:367][130]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:383][131]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:398][132]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:414][133]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:430][134]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:445][135]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:460][136]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:476][137]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:491][138]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:507][139]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:521][140]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:537][141]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:552][142]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:568][143]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:583][144]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:599][145]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:615][146]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:630][147]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:646][148]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:662][149]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:677][150]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:693][151]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:708][152]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:725][153]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:740][154]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:755][155]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:770][156]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:785][157]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:801][158]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:816][159]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:831][160]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:847][161]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:862][162]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:878][163]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:894][164]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:910][165]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:937][166]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:955][167]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:971][168]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.16:986][169]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:003][170]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:018][171]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:034][172]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:049][173]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:065][174]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:080][175]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:096][176]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:111][177]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:127][178]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:143][179]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:159][180]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:174][181]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:189][182]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:204][183]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:220][184]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:235][185]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:251][186]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:267][187]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:282][188]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:298][189]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:313][190]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:328][191]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:344][192]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:359][193]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:375][194]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:391][195]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:406][196]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:422][197]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:437][198]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:452][199]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:468][200]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:483][201]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:498][202]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:513][203]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:529][204]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:544][205]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:560][206]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:575][207]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:590][208]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:606][209]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:621][210]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:637][211]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:653][212]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:669][213]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:684][214]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:699][215]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:715][216]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:730][217]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:746][218]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:762][219]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:777][220]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:792][221]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:808][222]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:823][223]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:838][224]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:853][225]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:868][226]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:885][227]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:900][228]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:916][229]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:931][230]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:947][231]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:962][232]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:977][233]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.17:992][234]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:008][235]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:023][236]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:038][237]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:053][238]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:069][239]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:084][240]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:099][241]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:115][242]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:130][243]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:146][244]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:161][245]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:177][246]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:193][247]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.18:207][248]LogBlueprintUserMessages: [BP_GrappleHead_C_1] true
+[2024.03.06-18.55.19:240][311]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.06-18.55.19:240][311]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.06-18.55.19:240][311]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.06-18.55.19:248][311]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.06-18.55.19:260][311]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.06-18.55.19:262][311]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.06-18.55.19:266][311]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.06-18.55.19:282][311]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 76
+[2024.03.06-18.55.19:282][311]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=76
+[2024.03.06-18.55.19:284][311]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=76
+[2024.03.06-18.55.19:338][311]LogUObjectHash: Compacting FUObjectHashTables data took   1.58ms
+[2024.03.06-18.55.19:407][312]LogPlayLevel: Display: Destroying online subsystem :Context_102
+[2024.03.06-18.55.20:424][434]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.06-18.55.20:430][434]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.06-18.55.20:430][434]PIE: New page: PIE session: Sandbox (6 Mar 2024, 18:55:20)
+[2024.03.06-18.55.20:431][434]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.06-18.55.20:440][434]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009624s)
+[2024.03.06-18.55.20:440][434]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.009649s)
+[2024.03.06-18.55.20:452][434]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.03.06-18.55.20:453][434]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.06-18.55.20:453][434]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.06-18.55.20:453][434]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.06-18.55.20:454][434]LogPlayLevel: PIE: World Init took: (0.000840s)
+[2024.03.06-18.55.20:454][434]LogAudio: Display: Creating Audio Device:                 Id: 77, Scope: Unique, Realtime: True
+[2024.03.06-18.55.20:454][434]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.06-18.55.20:454][434]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.06-18.55.20:454][434]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.06-18.55.20:454][434]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.06-18.55.20:454][434]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.06-18.55.20:454][434]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.06-18.55.20:454][434]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.06-18.55.20:454][434]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.06-18.55.20:454][434]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.06-18.55.20:454][434]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.06-18.55.20:454][434]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.06-18.55.20:456][434]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.06-18.55.20:467][434]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.03.06-18.55.20:468][434]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.06-18.55.20:468][434]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.06-18.55.20:468][434]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.06-18.55.20:468][434]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=77
+[2024.03.06-18.55.20:468][434]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=77
+[2024.03.06-18.55.20:469][434]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=77
+[2024.03.06-18.55.20:469][434]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=77
+[2024.03.06-18.55.20:469][434]LogInit: FAudioDevice initialized with ID 77.
+[2024.03.06-18.55.20:469][434]LogAudio: Display: Audio Device (ID: 77) registered with world 'Sandbox'.
+[2024.03.06-18.55.20:469][434]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 77
+[2024.03.06-18.55.20:500][434]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.06-18.55.20:501][434]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.06-18.55.20:503][434]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.06-18.55.20
+[2024.03.06-18.55.20:503][434]LogWorld: Bringing up level for play took: 0.002540
+[2024.03.06-18.55.20:505][434]LogOnline: OSS: Created online subsystem instance for: :Context_103
+[2024.03.06-18.55.20:603][434]PIE: Server logged in
+[2024.03.06-18.55.20:603][434]PIE: Play in editor total start time 0.173 seconds.
+[2024.03.06-18.55.20:907][434]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.
+[2024.03.06-18.55.36:982][648]LogBlueprintUserMessages: [BP_Propeller_C_0] invalid
+[2024.03.06-18.55.40:570][882]LogBlueprintUserMessages: [BP_Propeller_C_0] adding Top
+[2024.03.06-18.55.54:752][794]LogBlueprintUserMessages: [BP_Connector_C_8] invalid
+[2024.03.06-18.55.58:908][ 56]LogBlueprintUserMessages: [BP_Propeller_C_3] invalid
+[2024.03.06-18.56.00:045][129]LogBlueprintUserMessages: [BP_Connector_C_1] invalid
+[2024.03.06-18.56.06:293][525]LogBlueprintUserMessages: [BP_Propeller_C_3] invalid
+[2024.03.06-18.56.10:010][762]LogBlueprintUserMessages: [BP_Propeller_C_3] adding Right
+[2024.03.06-18.56.11:253][842]LogBlueprintUserMessages: [BP_Propeller_C_1] invalid
+[2024.03.06-18.56.15:979][146]LogBlueprintUserMessages: [BP_Propeller_C_1] adding Right
+[2024.03.06-18.56.17:804][263]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.000 Y=0.000 Z=5000.000
+[2024.03.06-18.56.17:804][263]LogBlueprintUserMessages: [BP_Propeller_C_3] X=-0.002 Y=-0.057 Z=5000.000
+[2024.03.06-18.56.17:820][264]LogBlueprintUserMessages: [BP_Propeller_C_1] X=-0.000 Y=0.000 Z=5000.000
+[2024.03.06-18.56.17:821][264]LogBlueprintUserMessages: [BP_Propeller_C_3] X=-0.002 Y=-0.057 Z=5000.000
+[2024.03.06-18.56.17:836][265]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.000 Y=0.000 Z=5000.000
+[2024.03.06-18.56.17:836][265]LogBlueprintUserMessages: [BP_Propeller_C_3] X=-0.002 Y=-0.057 Z=5000.000
+[2024.03.06-18.56.17:852][266]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.007 Y=0.009 Z=5000.000
+[2024.03.06-18.56.17:852][266]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.005 Y=-0.047 Z=5000.000
+[2024.03.06-18.56.17:868][267]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.007 Y=0.009 Z=5000.000
+[2024.03.06-18.56.17:868][267]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.005 Y=-0.047 Z=5000.000
+[2024.03.06-18.56.17:885][268]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.016 Y=0.015 Z=5000.000
+[2024.03.06-18.56.17:885][268]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.014 Y=-0.041 Z=5000.000
+[2024.03.06-18.56.17:901][269]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.016 Y=0.015 Z=5000.000
+[2024.03.06-18.56.17:901][269]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.014 Y=-0.041 Z=5000.000
+[2024.03.06-18.56.17:917][270]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.026 Y=0.010 Z=5000.000
+[2024.03.06-18.56.17:917][270]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.024 Y=-0.047 Z=5000.000
+[2024.03.06-18.56.17:934][271]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.026 Y=0.010 Z=5000.000
+[2024.03.06-18.56.17:934][271]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.024 Y=-0.047 Z=5000.000
+[2024.03.06-18.56.17:951][272]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.026 Y=0.010 Z=5000.000
+[2024.03.06-18.56.17:951][272]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.024 Y=-0.047 Z=5000.000
+[2024.03.06-18.56.17:968][273]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.034 Y=0.000 Z=5000.000
+[2024.03.06-18.56.17:968][273]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.032 Y=-0.056 Z=5000.000
+[2024.03.06-18.56.17:984][274]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.034 Y=0.000 Z=5000.000
+[2024.03.06-18.56.17:984][274]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.032 Y=-0.056 Z=5000.000
+[2024.03.06-18.56.18:000][275]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.034 Y=0.000 Z=5000.000
+[2024.03.06-18.56.18:000][275]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.032 Y=-0.056 Z=5000.000
+[2024.03.06-18.56.18:016][276]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.043 Y=0.004 Z=5000.000
+[2024.03.06-18.56.18:016][276]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.041 Y=-0.053 Z=5000.000
+[2024.03.06-18.56.18:032][277]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.043 Y=0.004 Z=5000.000
+[2024.03.06-18.56.18:032][277]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.041 Y=-0.053 Z=5000.000
+[2024.03.06-18.56.18:048][278]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.052 Y=-0.001 Z=5000.000
+[2024.03.06-18.56.18:049][278]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.050 Y=-0.058 Z=5000.000
+[2024.03.06-18.56.18:065][279]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.052 Y=-0.001 Z=5000.000
+[2024.03.06-18.56.18:066][279]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.050 Y=-0.058 Z=5000.000
+[2024.03.06-18.56.18:083][280]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.059 Y=-0.015 Z=5000.000
+[2024.03.06-18.56.18:083][280]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.057 Y=-0.072 Z=5000.000
+[2024.03.06-18.56.18:098][281]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.059 Y=-0.015 Z=5000.000
+[2024.03.06-18.56.18:099][281]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.057 Y=-0.072 Z=5000.000
+[2024.03.06-18.56.18:114][282]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.060 Y=-0.028 Z=5000.000
+[2024.03.06-18.56.18:114][282]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.058 Y=-0.085 Z=5000.000
+[2024.03.06-18.56.18:131][283]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.060 Y=-0.028 Z=5000.000
+[2024.03.06-18.56.18:131][283]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.058 Y=-0.085 Z=5000.000
+[2024.03.06-18.56.18:147][284]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.060 Y=-0.028 Z=5000.000
+[2024.03.06-18.56.18:147][284]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.058 Y=-0.085 Z=5000.000
+[2024.03.06-18.56.18:163][285]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.060 Y=-0.028 Z=5000.000
+[2024.03.06-18.56.18:163][285]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.058 Y=-0.085 Z=5000.000
+[2024.03.06-18.56.18:179][286]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.064 Y=-0.019 Z=5000.000
+[2024.03.06-18.56.18:180][286]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.062 Y=-0.075 Z=5000.000
+[2024.03.06-18.56.18:196][287]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.064 Y=-0.019 Z=5000.000
+[2024.03.06-18.56.18:196][287]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.062 Y=-0.075 Z=5000.000
+[2024.03.06-18.56.18:213][288]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.074 Y=-0.015 Z=5000.000
+[2024.03.06-18.56.18:213][288]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.072 Y=-0.072 Z=5000.000
+[2024.03.06-18.56.18:229][289]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.074 Y=-0.015 Z=5000.000
+[2024.03.06-18.56.18:229][289]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.072 Y=-0.072 Z=5000.000
+[2024.03.06-18.56.18:246][290]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.083 Y=-0.023 Z=5000.000
+[2024.03.06-18.56.18:246][290]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.081 Y=-0.080 Z=5000.000
+[2024.03.06-18.56.18:262][291]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.083 Y=-0.023 Z=5000.000
+[2024.03.06-18.56.18:262][291]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.081 Y=-0.080 Z=5000.000
+[2024.03.06-18.56.18:278][292]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.088 Y=-0.034 Z=5000.000
+[2024.03.06-18.56.18:278][292]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.086 Y=-0.091 Z=5000.000
+[2024.03.06-18.56.18:296][293]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.088 Y=-0.034 Z=5000.000
+[2024.03.06-18.56.18:296][293]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.086 Y=-0.091 Z=5000.000
+[2024.03.06-18.56.18:313][294]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.088 Y=-0.034 Z=5000.000
+[2024.03.06-18.56.18:313][294]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.086 Y=-0.091 Z=5000.000
+[2024.03.06-18.56.18:331][295]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.088 Y=-0.034 Z=5000.000
+[2024.03.06-18.56.18:332][295]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.086 Y=-0.091 Z=5000.000
+[2024.03.06-18.56.18:348][296]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.099 Y=-0.039 Z=5000.000
+[2024.03.06-18.56.18:348][296]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.097 Y=-0.095 Z=5000.000
+[2024.03.06-18.56.18:365][297]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.099 Y=-0.039 Z=5000.000
+[2024.03.06-18.56.18:365][297]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.097 Y=-0.095 Z=5000.000
+[2024.03.06-18.56.18:384][298]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.109 Y=-0.047 Z=5000.000
+[2024.03.06-18.56.18:384][298]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.107 Y=-0.104 Z=5000.000
+[2024.03.06-18.56.18:400][299]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.113 Y=-0.056 Z=5000.000
+[2024.03.06-18.56.18:400][299]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.111 Y=-0.112 Z=5000.000
+[2024.03.06-18.56.18:416][300]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.116 Y=-0.066 Z=5000.000
+[2024.03.06-18.56.18:416][300]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.114 Y=-0.123 Z=5000.000
+[2024.03.06-18.56.18:432][301]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.117 Y=-0.075 Z=5000.000
+[2024.03.06-18.56.18:432][301]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.115 Y=-0.132 Z=5000.000
+[2024.03.06-18.56.18:448][302]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.117 Y=-0.075 Z=5000.000
+[2024.03.06-18.56.18:449][302]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.115 Y=-0.132 Z=5000.000
+[2024.03.06-18.56.18:465][303]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.116 Y=-0.086 Z=5000.000
+[2024.03.06-18.56.18:466][303]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.114 Y=-0.142 Z=5000.000
+[2024.03.06-18.56.18:483][304]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.116 Y=-0.086 Z=5000.000
+[2024.03.06-18.56.18:483][304]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.114 Y=-0.142 Z=5000.000
+[2024.03.06-18.56.18:500][305]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.116 Y=-0.086 Z=5000.000
+[2024.03.06-18.56.18:500][305]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.114 Y=-0.142 Z=5000.000
+[2024.03.06-18.56.18:517][306]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.116 Y=-0.086 Z=5000.000
+[2024.03.06-18.56.18:517][306]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.114 Y=-0.142 Z=5000.000
+[2024.03.06-18.56.18:535][307]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.126 Y=-0.077 Z=5000.000
+[2024.03.06-18.56.18:535][307]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.124 Y=-0.134 Z=5000.000
+[2024.03.06-18.56.18:551][308]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.126 Y=-0.077 Z=5000.000
+[2024.03.06-18.56.18:551][308]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.124 Y=-0.134 Z=5000.000
+[2024.03.06-18.56.18:568][309]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.137 Y=-0.084 Z=5000.000
+[2024.03.06-18.56.18:568][309]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.135 Y=-0.140 Z=5000.000
+[2024.03.06-18.56.18:586][310]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.137 Y=-0.084 Z=5000.000
+[2024.03.06-18.56.18:586][310]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.135 Y=-0.140 Z=5000.000
+[2024.03.06-18.56.18:603][311]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.145 Y=-0.099 Z=5000.000
+[2024.03.06-18.56.18:603][311]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.143 Y=-0.156 Z=5000.000
+[2024.03.06-18.56.18:619][312]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.145 Y=-0.099 Z=5000.000
+[2024.03.06-18.56.18:619][312]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.143 Y=-0.156 Z=5000.000
+[2024.03.06-18.56.18:635][313]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.150 Y=-0.112 Z=5000.000
+[2024.03.06-18.56.18:636][313]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.148 Y=-0.168 Z=5000.000
+[2024.03.06-18.56.18:651][314]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.150 Y=-0.112 Z=5000.000
+[2024.03.06-18.56.18:651][314]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.148 Y=-0.168 Z=5000.000
+[2024.03.06-18.56.18:667][315]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.150 Y=-0.112 Z=5000.000
+[2024.03.06-18.56.18:668][315]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.148 Y=-0.168 Z=5000.000
+[2024.03.06-18.56.18:684][316]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.158 Y=-0.119 Z=5000.000
+[2024.03.06-18.56.18:684][316]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.157 Y=-0.175 Z=5000.000
+[2024.03.06-18.56.18:700][317]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.158 Y=-0.119 Z=5000.000
+[2024.03.06-18.56.18:700][317]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.157 Y=-0.175 Z=5000.000
+[2024.03.06-18.56.18:716][318]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.168 Y=-0.131 Z=5000.000
+[2024.03.06-18.56.18:716][318]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.166 Y=-0.187 Z=5000.000
+[2024.03.06-18.56.18:732][319]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.171 Y=-0.141 Z=5000.000
+[2024.03.06-18.56.18:733][319]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.170 Y=-0.197 Z=5000.000
+[2024.03.06-18.56.18:750][320]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.174 Y=-0.152 Z=5000.000
+[2024.03.06-18.56.18:750][320]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.172 Y=-0.208 Z=5000.000
+[2024.03.06-18.56.18:766][321]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.175 Y=-0.164 Z=5000.000
+[2024.03.06-18.56.18:766][321]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.173 Y=-0.220 Z=5000.000
+[2024.03.06-18.56.18:783][322]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.175 Y=-0.164 Z=5000.000
+[2024.03.06-18.56.18:783][322]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.173 Y=-0.220 Z=5000.000
+[2024.03.06-18.56.18:799][323]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.175 Y=-0.177 Z=5000.000
+[2024.03.06-18.56.18:799][323]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.173 Y=-0.233 Z=5000.000
+[2024.03.06-18.56.18:816][324]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.175 Y=-0.177 Z=5000.000
+[2024.03.06-18.56.18:816][324]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.173 Y=-0.233 Z=5000.000
+[2024.03.06-18.56.18:834][325]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.175 Y=-0.177 Z=5000.000
+[2024.03.06-18.56.18:834][325]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.173 Y=-0.233 Z=5000.000
+[2024.03.06-18.56.18:849][326]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.179 Y=-0.175 Z=5000.000
+[2024.03.06-18.56.18:849][326]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.177 Y=-0.232 Z=5000.000
+[2024.03.06-18.56.18:866][327]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.179 Y=-0.175 Z=5000.000
+[2024.03.06-18.56.18:866][327]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.177 Y=-0.232 Z=5000.000
+[2024.03.06-18.56.18:882][328]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.189 Y=-0.178 Z=5000.000
+[2024.03.06-18.56.18:882][328]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.187 Y=-0.235 Z=5000.000
+[2024.03.06-18.56.18:897][329]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.189 Y=-0.178 Z=5000.000
+[2024.03.06-18.56.18:897][329]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.187 Y=-0.235 Z=5000.000
+[2024.03.06-18.56.18:913][330]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.198 Y=-0.192 Z=5000.000
+[2024.03.06-18.56.18:913][330]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.196 Y=-0.248 Z=5000.000
+[2024.03.06-18.56.18:930][331]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.198 Y=-0.192 Z=5000.000
+[2024.03.06-18.56.18:930][331]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.196 Y=-0.248 Z=5000.000
+[2024.03.06-18.56.18:946][332]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.203 Y=-0.208 Z=5000.000
+[2024.03.06-18.56.18:946][332]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.201 Y=-0.265 Z=5000.000
+[2024.03.06-18.56.18:964][333]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.203 Y=-0.208 Z=5000.000
+[2024.03.06-18.56.18:965][333]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.201 Y=-0.265 Z=5000.000
+[2024.03.06-18.56.18:982][334]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.207 Y=-0.218 Z=5000.000
+[2024.03.06-18.56.18:982][334]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.205 Y=-0.275 Z=5000.000
+[2024.03.06-18.56.18:998][335]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.207 Y=-0.218 Z=5000.000
+[2024.03.06-18.56.18:998][335]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.205 Y=-0.275 Z=5000.000
+[2024.03.06-18.56.19:014][336]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.207 Y=-0.218 Z=5000.000
+[2024.03.06-18.56.19:014][336]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.205 Y=-0.275 Z=5000.000
+[2024.03.06-18.56.19:032][337]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.219 Y=-0.229 Z=5000.000
+[2024.03.06-18.56.19:032][337]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.217 Y=-0.286 Z=5000.000
+[2024.03.06-18.56.19:049][338]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.224 Y=-0.239 Z=5000.000
+[2024.03.06-18.56.19:050][338]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.222 Y=-0.295 Z=5000.000
+[2024.03.06-18.56.19:066][339]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.228 Y=-0.251 Z=5000.000
+[2024.03.06-18.56.19:066][339]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.226 Y=-0.307 Z=5000.000
+[2024.03.06-18.56.19:083][340]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.231 Y=-0.263 Z=5000.000
+[2024.03.06-18.56.19:083][340]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.229 Y=-0.320 Z=5000.000
+[2024.03.06-18.56.19:100][341]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.232 Y=-0.276 Z=5000.000
+[2024.03.06-18.56.19:100][341]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.230 Y=-0.333 Z=5000.000
+[2024.03.06-18.56.19:116][342]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.232 Y=-0.286 Z=5000.000
+[2024.03.06-18.56.19:116][342]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.230 Y=-0.342 Z=5000.000
+[2024.03.06-18.56.19:132][343]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.232 Y=-0.286 Z=5000.000
+[2024.03.06-18.56.19:133][343]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.230 Y=-0.342 Z=5000.000
+[2024.03.06-18.56.19:148][344]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.231 Y=-0.294 Z=5000.000
+[2024.03.06-18.56.19:148][344]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.229 Y=-0.351 Z=5000.000
+[2024.03.06-18.56.19:164][345]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.231 Y=-0.294 Z=5000.000
+[2024.03.06-18.56.19:164][345]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.229 Y=-0.351 Z=5000.000
+[2024.03.06-18.56.19:181][346]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.235 Y=-0.295 Z=5000.000
+[2024.03.06-18.56.19:181][346]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.233 Y=-0.351 Z=5000.000
+[2024.03.06-18.56.19:197][347]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.235 Y=-0.295 Z=5000.000
+[2024.03.06-18.56.19:197][347]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.233 Y=-0.351 Z=5000.000
+[2024.03.06-18.56.19:213][348]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.244 Y=-0.300 Z=5000.000
+[2024.03.06-18.56.19:213][348]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.242 Y=-0.357 Z=5000.000
+[2024.03.06-18.56.19:229][349]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.244 Y=-0.300 Z=5000.000
+[2024.03.06-18.56.19:229][349]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.242 Y=-0.357 Z=5000.000
+[2024.03.06-18.56.19:245][350]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.253 Y=-0.317 Z=5000.000
+[2024.03.06-18.56.19:245][350]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.251 Y=-0.373 Z=5000.000
+[2024.03.06-18.56.19:261][351]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.256 Y=-0.327 Z=5000.000
+[2024.03.06-18.56.19:261][351]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.254 Y=-0.383 Z=5000.000
+[2024.03.06-18.56.19:287][352]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.258 Y=-0.336 Z=5000.000
+[2024.03.06-18.56.19:288][352]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.256 Y=-0.393 Z=5000.000
+[2024.03.06-18.56.19:306][353]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.258 Y=-0.336 Z=5000.000
+[2024.03.06-18.56.19:306][353]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.256 Y=-0.393 Z=5000.000
+[2024.03.06-18.56.19:323][354]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.263 Y=-0.350 Z=5000.000
+[2024.03.06-18.56.19:323][354]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.261 Y=-0.407 Z=5000.000
+[2024.03.06-18.56.19:340][355]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.263 Y=-0.350 Z=5000.000
+[2024.03.06-18.56.19:340][355]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.261 Y=-0.407 Z=5000.000
+[2024.03.06-18.56.19:358][356]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.271 Y=-0.357 Z=5000.000
+[2024.03.06-18.56.19:358][356]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.269 Y=-0.414 Z=5000.000
+[2024.03.06-18.56.19:374][357]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.271 Y=-0.357 Z=5000.000
+[2024.03.06-18.56.19:374][357]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.269 Y=-0.414 Z=5000.000
+[2024.03.06-18.56.19:390][358]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.280 Y=-0.372 Z=5000.000
+[2024.03.06-18.56.19:390][358]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.278 Y=-0.428 Z=5000.000
+[2024.03.06-18.56.19:405][359]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.284 Y=-0.383 Z=5000.000
+[2024.03.06-18.56.19:405][359]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.282 Y=-0.439 Z=5000.000
+[2024.03.06-18.56.19:421][360]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.287 Y=-0.395 Z=5000.000
+[2024.03.06-18.56.19:421][360]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.285 Y=-0.452 Z=5000.000
+[2024.03.06-18.56.19:437][361]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.288 Y=-0.407 Z=5000.000
+[2024.03.06-18.56.19:437][361]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.286 Y=-0.463 Z=5000.000
+[2024.03.06-18.56.19:454][362]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.288 Y=-0.416 Z=5000.000
+[2024.03.06-18.56.19:454][362]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.286 Y=-0.472 Z=5000.000
+[2024.03.06-18.56.19:470][363]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.288 Y=-0.416 Z=5000.000
+[2024.03.06-18.56.19:470][363]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.286 Y=-0.472 Z=5000.000
+[2024.03.06-18.56.19:487][364]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.288 Y=-0.425 Z=5000.000
+[2024.03.06-18.56.19:487][364]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.287 Y=-0.481 Z=5000.000
+[2024.03.06-18.56.19:503][365]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.288 Y=-0.425 Z=5000.000
+[2024.03.06-18.56.19:503][365]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.287 Y=-0.481 Z=5000.000
+[2024.03.06-18.56.19:519][366]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.293 Y=-0.425 Z=5000.000
+[2024.03.06-18.56.19:519][366]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.291 Y=-0.481 Z=5000.000
+[2024.03.06-18.56.19:537][367]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.293 Y=-0.425 Z=5000.000
+[2024.03.06-18.56.19:537][367]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.291 Y=-0.481 Z=5000.000
+[2024.03.06-18.56.19:553][368]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.304 Y=-0.431 Z=5000.000
+[2024.03.06-18.56.19:553][368]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.302 Y=-0.488 Z=5000.000
+[2024.03.06-18.56.19:570][369]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.304 Y=-0.431 Z=5000.000
+[2024.03.06-18.56.19:570][369]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.302 Y=-0.488 Z=5000.000
+[2024.03.06-18.56.19:586][370]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.313 Y=-0.448 Z=5000.000
+[2024.03.06-18.56.19:586][370]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.312 Y=-0.505 Z=5000.000
+[2024.03.06-18.56.19:603][371]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.317 Y=-0.459 Z=5000.000
+[2024.03.06-18.56.19:603][371]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.315 Y=-0.516 Z=5000.000
+[2024.03.06-18.56.19:619][372]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.319 Y=-0.469 Z=5000.000
+[2024.03.06-18.56.19:619][372]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.317 Y=-0.525 Z=5000.000
+[2024.03.06-18.56.19:635][373]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.319 Y=-0.469 Z=5000.000
+[2024.03.06-18.56.19:635][373]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.317 Y=-0.525 Z=5000.000
+[2024.03.06-18.56.19:651][374]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.324 Y=-0.482 Z=5000.000
+[2024.03.06-18.56.19:651][374]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.322 Y=-0.539 Z=5000.000
+[2024.03.06-18.56.19:667][375]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.324 Y=-0.482 Z=5000.000
+[2024.03.06-18.56.19:667][375]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.322 Y=-0.539 Z=5000.000
+[2024.03.06-18.56.19:684][376]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.331 Y=-0.492 Z=5000.000
+[2024.03.06-18.56.19:684][376]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.329 Y=-0.549 Z=5000.000
+[2024.03.06-18.56.19:700][377]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.331 Y=-0.492 Z=5000.000
+[2024.03.06-18.56.19:701][377]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.329 Y=-0.549 Z=5000.000
+[2024.03.06-18.56.19:717][378]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.340 Y=-0.510 Z=5000.000
+[2024.03.06-18.56.19:717][378]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.338 Y=-0.566 Z=5000.000
+[2024.03.06-18.56.19:733][379]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.344 Y=-0.524 Z=5000.000
+[2024.03.06-18.56.19:734][379]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.342 Y=-0.580 Z=5000.000
+[2024.03.06-18.56.19:750][380]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.347 Y=-0.538 Z=5000.000
+[2024.03.06-18.56.19:750][380]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.345 Y=-0.594 Z=5000.000
+[2024.03.06-18.56.19:765][381]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.348 Y=-0.551 Z=5000.000
+[2024.03.06-18.56.19:765][381]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.346 Y=-0.608 Z=5000.000
+[2024.03.06-18.56.19:782][382]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.348 Y=-0.563 Z=5000.000
+[2024.03.06-18.56.19:783][382]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.347 Y=-0.619 Z=5000.000
+[2024.03.06-18.56.19:800][383]LogBlueprintUserMessages: [BP_Propeller_C_1] X=0.348 Y=-0.563 Z=5000.000
+[2024.03.06-18.56.19:800][383]LogBlueprintUserMessages: [BP_Propeller_C_3] X=0.347 Y=-0.619 Z=5000.000
+[2024.03.06-18.56.25:483][740]LogBlueprintUserMessages: [BP_Propeller_C_3] adding Top
+[2024.03.06-18.56.47:531][137]LogBlueprintUserMessages: [BP_Bowl_C_1] invalid
+[2024.03.06-18.56.49:451][258]LogBlueprintUserMessages: [BP_Bowl_C_1] adding Top
+[2024.03.06-18.57.00:340][950]LogBlueprintUserMessages: [BP_Connector_C_6] invalid
+[2024.03.06-18.57.03:971][175]LogBlueprintUserMessages: [BP_Connector_C_6] invalid
+[2024.03.06-18.57.07:715][409]LogBlueprintUserMessages: [BP_Connector_C_0] invalid
+[2024.03.06-18.57.16:540][962]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.06-18.57.16:540][962]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.06-18.57.16:541][962]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.06-18.57.16:547][962]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.06-18.57.16:559][962]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.06-18.57.16:562][962]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.06-18.57.16:566][962]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.06-18.57.16:581][962]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 77
+[2024.03.06-18.57.16:581][962]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=77
+[2024.03.06-18.57.16:583][962]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=77
+[2024.03.06-18.57.16:620][962]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.03.06-18.57.16:690][963]LogPlayLevel: Display: Destroying online subsystem :Context_103
+[2024.03.06-18.57.31:959][909]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.06-18.57.31:965][909]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.03.06-18.57.31:966][909]LogPlayLevel: [PlayLevel] Compiling BP_Gremlin before play...
+[2024.03.06-18.57.32:026][909]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.06-18.57.32:097][909]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Gremlin" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Gremlin.uasset" SILENT=true
+[2024.03.06-18.57.32:107][909]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_Gremlin
+[2024.03.06-18.57.32:107][909]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GremlinE8214515420107B29F9CA2A50D479507.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Gremlin.uasset'
+[2024.03.06-18.57.32:114][909]LogFileHelpers: InternalPromptForCheckoutAndSave took 88 ms (total: 13.9 sec)
+[2024.03.06-18.57.32:125][909]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.03.06-18.57.32:127][909]LogPlayLevel: PlayLevel: Blueprint regeneration took 162 ms (1 blueprints)
+[2024.03.06-18.57.32:127][909]PIE: New page: PIE session: Sandbox (6 Mar 2024, 18:57:32)
+[2024.03.06-18.57.32:127][909]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.06-18.57.32:137][909]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009497s)
+[2024.03.06-18.57.32:137][909]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.009521s)
+[2024.03.06-18.57.32:147][909]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.03.06-18.57.32:148][909]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.06-18.57.32:148][909]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.06-18.57.32:149][909]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.06-18.57.32:149][909]LogPlayLevel: PIE: World Init took: (0.000785s)
+[2024.03.06-18.57.32:149][909]LogAudio: Display: Creating Audio Device:                 Id: 78, Scope: Unique, Realtime: True
+[2024.03.06-18.57.32:149][909]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.06-18.57.32:149][909]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.06-18.57.32:149][909]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.06-18.57.32:149][909]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.06-18.57.32:149][909]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.06-18.57.32:149][909]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.06-18.57.32:149][909]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.06-18.57.32:149][909]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.06-18.57.32:149][909]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.06-18.57.32:149][909]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.06-18.57.32:149][909]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.06-18.57.32:152][909]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.06-18.57.32:163][909]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.03.06-18.57.32:163][909]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.06-18.57.32:163][909]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.06-18.57.32:163][909]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.06-18.57.32:164][909]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=78
+[2024.03.06-18.57.32:164][909]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=78
+[2024.03.06-18.57.32:165][909]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=78
+[2024.03.06-18.57.32:165][909]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=78
+[2024.03.06-18.57.32:165][909]LogInit: FAudioDevice initialized with ID 78.
+[2024.03.06-18.57.32:165][909]LogAudio: Display: Audio Device (ID: 78) registered with world 'Sandbox'.
+[2024.03.06-18.57.32:165][909]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 78
+[2024.03.06-18.57.32:193][909]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.06-18.57.32:193][909]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.06-18.57.32:195][909]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.06-18.57.32
+[2024.03.06-18.57.32:195][909]LogWorld: Bringing up level for play took: 0.002198
+[2024.03.06-18.57.32:197][909]LogOnline: OSS: Created online subsystem instance for: :Context_104
+[2024.03.06-18.57.32:295][909]PIE: Server logged in
+[2024.03.06-18.57.32:296][909]PIE: Play in editor total start time 0.331 seconds.
+[2024.03.06-18.57.32:640][909]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.
+[2024.03.06-18.57.32:651][910]AssetCheck: New page: Asset Save: BP_Gremlin
+[2024.03.06-18.57.32:651][910]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_Gremlin.BP_Gremlin
+[2024.03.06-18.58.31:751][262]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.06-18.58.31:751][262]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.06-18.58.31:751][262]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.06-18.58.31:757][262]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.06-18.58.31:772][262]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.06-18.58.31:774][262]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.06-18.58.31:778][262]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.06-18.58.31:796][262]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 78
+[2024.03.06-18.58.31:796][262]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=78
+[2024.03.06-18.58.31:798][262]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=78
+[2024.03.06-18.58.31:830][262]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.03.06-18.58.32:059][263]LogPlayLevel: Display: Destroying online subsystem :Context_104
+[2024.03.06-19.18.36:496][369]LogEditorTransaction: Undo Create Pin Link
+[2024.03.06-19.18.36:999][382]LogEditorTransaction: Undo Delete current selection
+[2024.03.06-19.18.38:769][571]LogEditorTransaction: Redo Delete current selection
+[2024.03.06-19.18.40:003][699]LogEditorTransaction: Redo Create Pin Link
+[2024.03.06-19.18.41:498][861]LogEditorTransaction: Undo Create Pin Link
+[2024.03.06-19.18.43:665][ 70]BlueprintLog: New page: Compile BP_Gremlin
+[2024.03.06-19.18.43:711][ 70]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2024.03.06-19.18.43:747][ 70]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.06-19.18.43:824][ 70]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Gremlin" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Gremlin.uasset" SILENT=true
+[2024.03.06-19.18.43:833][ 70]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_Gremlin
+[2024.03.06-19.18.43:834][ 70]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Gremlin209C881F43AEF02CAFB5B38ECF723797.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Gremlin.uasset'
+[2024.03.06-19.18.43:842][ 70]LogFileHelpers: InternalPromptForCheckoutAndSave took 94 ms (total: 14.0 sec)
+[2024.03.06-19.18.43:843][ 70]AssetCheck: New page: Asset Save: BP_Gremlin
+[2024.03.06-19.18.43:843][ 70]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_Gremlin.BP_Gremlin
