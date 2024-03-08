@@ -53,12 +53,12 @@ void APlayerCharacter::SelectObject()
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
-	// TArray<TEnumAsByte<EObjectTypeQuery>> objTypes;
-	//
-	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
-	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
-	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
-	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_PhysicsBody));
+	TArray<TEnumAsByte<EObjectTypeQuery>> objTypes;
+	
+	objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
+	objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
+	objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+	objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_PhysicsBody));
 
 	FVector end, direction;
 
@@ -66,17 +66,15 @@ void APlayerCharacter::SelectObject()
 
 	FCollisionQueryParams traceParams;
 	DrawDebugLine(wrld, GetActorLocation(), end, FColor::Red, false, 5);	
-	wrld->LineTraceSingleByChannel(hit, GetActorLocation(), end,ECC_Visibility, traceParams);
+	wrld->LineTraceSingleByChannel(hit, GetActorLocation(), end,ECC_Visibility, FCollisionQueryParams(traceParams));
+
+	if(!hit.bBlockingHit) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("didnt hit anmything"));
 
 	if(!hit.bBlockingHit) return;
 	if(hit.GetActor()) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Selected obj") + hit.GetActor()->GetName());
-	else GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("didnt hit anmything"));
-	
 	
 	selectedObj = Cast<APickupableMaster>(hit.GetActor());
 	if(selectedObj) selectedObj->SetSelected(true);
-
-	
 }
 
 void APlayerCharacter::MoveSelection()
@@ -85,23 +83,21 @@ void APlayerCharacter::MoveSelection()
 
 	selectedObj->GravitySelection();
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("moving"));
 	if(selectedObj->IsA<ACubeCore>())
 	{
-		exclusions.Append(core->GetAttachedObjects(true));
+		// exclusions.Append(core->GetAttachedObjects(true));
 		exclusions.AddUnique(selectedObj);
 	}
 	else
 	{
-		exclusions.Remove(core);
+		// exclusions.Remove(core);
 		exclusions.AddUnique(selectedObj);
 	}
 
 	FVector hitLocation, hitDir;
 	GetCursorLocation(hitLocation, hitDir);
 
-	selectedObj->GetMesh()->SetWorldLocation(hitLocation);
-
+	selectedObj->GetMesh()->SetWorldLocation({hitLocation.X, hitLocation.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
 }
 
 FHitResult APlayerCharacter::GetCursorLocation(FVector& rLocation, FVector& rDirection) const
