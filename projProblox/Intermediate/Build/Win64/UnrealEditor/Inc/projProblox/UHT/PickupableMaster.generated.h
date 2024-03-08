@@ -21,13 +21,16 @@ class UStaticMeshComponent;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAscendDescend); \
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execGravitySelection); \
+	DECLARE_FUNCTION(execSnapRotateMesh); \
+	DECLARE_FUNCTION(execRotateMesh); \
+	DECLARE_FUNCTION(execSetAbilityActive); \
 	DECLARE_FUNCTION(execRemoveAttachment); \
 	DECLARE_FUNCTION(execAddAttachment); \
 	DECLARE_FUNCTION(execResetRotation); \
-	DECLARE_FUNCTION(execSetAbilityActive); \
 	DECLARE_FUNCTION(execPlacement);
 
 

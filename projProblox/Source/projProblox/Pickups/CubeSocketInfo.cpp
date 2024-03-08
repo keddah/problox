@@ -54,9 +54,22 @@ void UCubeSocketInfo::RemoveAttachment(FName socket)
 	// delete socketObjects[index];
 }
 
-TArray<AActor*> UCubeSocketInfo::GetAttachments() const
+TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const
 {
 	TArray<AActor*> output;
+	for (const auto& obj : socketObjects)
+	{
+		if(obj == nullptr) continue;
+
+		output.Add(obj);
+	}
+
+	return output;
+}
+
+TArray<APickupableMaster*> UCubeSocketInfo::GetAttachments() const
+{
+	TArray<APickupableMaster*> output;
 	for (const auto& obj : socketObjects)
 	{
 		if(obj == nullptr) continue;

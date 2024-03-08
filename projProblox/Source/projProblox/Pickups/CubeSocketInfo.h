@@ -32,7 +32,10 @@ public:
 	void RemoveAttachment(FName socket);
 
 	UFUNCTION(BlueprintCallable)
-	TArray<AActor*> GetAttachments() const;
+	TArray<AActor*> GetAttachmentActors() const;
+
+	UFUNCTION(BlueprintCallable)
+	TArray<APickupableMaster*> GetAttachments() const;
 
 protected:
 };

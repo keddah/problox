@@ -44,7 +44,7 @@ void APickupableMaster::Placement()
 	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
 	
 	// Debug Draw
-	DrawDebugLine(wrld, objMesh->GetComponentLocation(), direction * placeRange, FColor::Red, false, 5);	
+	DrawDebugLine(wrld, objMesh->GetComponentLocation(), objMesh->GetComponentLocation() + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, objMesh->GetComponentLocation(), direction * placeRange, ECC_Visibility, FCollisionQueryParams::DefaultQueryParam);
 	
 	if(!hit.bBlockingHit) return;

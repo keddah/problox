@@ -22,6 +22,7 @@ class APickupableMaster;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetAttachments); \
+	DECLARE_FUNCTION(execGetAttachmentActors); \
 	DECLARE_FUNCTION(execRemoveAttachment); \
 	DECLARE_FUNCTION(execAddAttachment); \
 	DECLARE_FUNCTION(execObjectInSocket);

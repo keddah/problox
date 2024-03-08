@@ -20,7 +20,14 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(TArray<AActor*>*)Z_Param__Result=P_THIS->GetAttachments();
+		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->GetAttachments();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UCubeSocketInfo::execGetAttachmentActors)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<AActor*>*)Z_Param__Result=P_THIS->GetAttachmentActors();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UCubeSocketInfo::execRemoveAttachment)
@@ -53,6 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		UClass* Class = UCubeSocketInfo::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddAttachment", &UCubeSocketInfo::execAddAttachment },
+			{ "GetAttachmentActors", &UCubeSocketInfo::execGetAttachmentActors },
 			{ "GetAttachments", &UCubeSocketInfo::execGetAttachments },
 			{ "ObjectInSocket", &UCubeSocketInfo::execObjectInSocket },
 			{ "RemoveAttachment", &UCubeSocketInfo::execRemoveAttachment },
@@ -97,9 +105,9 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics
+	struct Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics
 	{
-		struct CubeSocketInfo_eventGetAttachments_Parms
+		struct CubeSocketInfo_eventGetAttachmentActors_Parms
 		{
 			TArray<AActor*> ReturnValue;
 		};
@@ -111,7 +119,44 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeSocketInfo_eventGetAttachmentActors_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::NewProp_ReturnValue_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCubeSocketInfo, nullptr, "GetAttachmentActors", nullptr, nullptr, Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::CubeSocketInfo_eventGetAttachmentActors_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::CubeSocketInfo_eventGetAttachmentActors_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics
+	{
+		struct CubeSocketInfo_eventGetAttachments_Parms
+		{
+			TArray<APickupableMaster*> ReturnValue;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeSocketInfo_eventGetAttachments_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::NewProp_ReturnValue_Inner,
@@ -252,7 +297,8 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCubeSocketInfo_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCubeSocketInfo_AddAttachment, "AddAttachment" }, // 2106301276
-		{ &Z_Construct_UFunction_UCubeSocketInfo_GetAttachments, "GetAttachments" }, // 797397495
+		{ &Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors, "GetAttachmentActors" }, // 1365483319
+		{ &Z_Construct_UFunction_UCubeSocketInfo_GetAttachments, "GetAttachments" }, // 216165080
 		{ &Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket, "ObjectInSocket" }, // 3983912390
 		{ &Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment, "RemoveAttachment" }, // 1488195697
 	};
@@ -327,9 +373,9 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 472670081U) },
+		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 141677751U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_1880199851(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_2140383274(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

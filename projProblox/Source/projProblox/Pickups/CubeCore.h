@@ -35,8 +35,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
 
+	virtual void SetAbilityActive(bool value) override;
+
+	// Depending on the given bool.. return the array of AActors or APickupableMasters 
 	UFUNCTION(BlueprintCallable)
-	TArray<AActor*> GetAttachedObjects() const { return socketInfo->GetAttachments(); }
+	TArray<AActor*> GetAttachedObjects(const bool returnAActor) const { return socketInfo->GetAttachmentActors(); }
+	TArray<APickupableMaster*> GetAttachedObjects() const { return socketInfo->GetAttachments(); }
 
 	virtual void SetSelected(const bool value) override;
 };

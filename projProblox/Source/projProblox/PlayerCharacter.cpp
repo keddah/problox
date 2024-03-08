@@ -3,6 +3,9 @@
 
 #include "PlayerCharacter.h"
 
+#include "GameFramework/GameSession.h"
+#include "Pickups/CubeCore.h"
+
 // Sets default values
 APlayerCharacter::APlayerCharacter()
 {
@@ -23,6 +26,7 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	MoveSelection();
 }
 
 // Called to bind functionality to input
@@ -30,5 +34,93 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void APlayerCharacter::SelectObject()
+{
+	// When the hold button is let go
+	if(!holding)
+	{
+		if(!selectedObj) return;
+
+		selectedObj->SetSelected(false);
+		selectedObj = nullptr;
+		return;
+	}
+
+	if(selectedObj) return;
+
+	const UWorld* wrld = GetWorld();
+	
+	FHitResult hit;
+	// TArray<TEnumAsByte<EObjectTypeQuery>> objTypes;
+	//
+	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
+	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
+	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+	// objTypes.Add(UEngineTypes::ConvertToObjectType(ECC_PhysicsBody));
+
+	FVector end, direction;
+
+	GetCursorLocation(end, direction);
+
+	FCollisionQueryParams traceParams;
+	DrawDebugLine(wrld, GetActorLocation(), end, FColor::Red, false, 5);	
+	wrld->LineTraceSingleByChannel(hit, GetActorLocation(), end,ECC_Visibility, traceParams);
+
+	if(!hit.bBlockingHit) return;
+	if(hit.GetActor()) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Selected obj") + hit.GetActor()->GetName());
+	else GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("didnt hit anmything"));
+	
+	
+	selectedObj = Cast<APickupableMaster>(hit.GetActor());
+	if(selectedObj) selectedObj->SetSelected(true);
+
+	
+}
+
+void APlayerCharacter::MoveSelection()
+{
+	if(!selectedObj) return;
+
+	selectedObj->GravitySelection();
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("moving"));
+	if(selectedObj->IsA<ACubeCore>())
+	{
+		exclusions.Append(core->GetAttachedObjects(true));
+		exclusions.AddUnique(selectedObj);
+	}
+	else
+	{
+		exclusions.Remove(core);
+		exclusions.AddUnique(selectedObj);
+	}
+
+	FVector hitLocation, hitDir;
+	GetCursorLocation(hitLocation, hitDir);
+
+	selectedObj->GetMesh()->SetWorldLocation(hitLocation);
+
+}
+
+FHitResult APlayerCharacter::GetCursorLocation(FVector& rLocation, FVector& rDirection) const
+{
+	FHitResult hit;
+
+	const UWorld* wrld = GetWorld();
+	const FVector start = GetActorLocation();
+
+	FCollisionQueryParams traceParams;
+	traceParams.AddIgnoredActors(exclusions);
+
+	APlayerController* controller = Cast<APlayerController>(GetController());
+	if(!controller->DeprojectMousePositionToWorld(rLocation, rDirection)) return hit;
+	
+	wrld->LineTraceSingleByChannel(hit, start, start + rDirection * mouseDistance,ECC_Visibility, traceParams);
+	
+	if(hit.bBlockingHit) rLocation = hit.ImpactPoint;
+	else rLocation = hit.TraceEnd;
+	return hit;
 }
 

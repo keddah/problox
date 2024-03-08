@@ -58,9 +58,6 @@ protected:
 	virtual void Ability();
 
 	UFUNCTION(BlueprintCallable)
-	void SetAbilityActive(const bool value) { active = value; }
-	
-	UFUNCTION(BlueprintCallable)
 	void ResetRotation(bool resetVelocity = false);
 	
 	UFUNCTION(BlueprintCallable)
@@ -78,6 +75,15 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	virtual void SetAbilityActive(const bool value) { active = value; }
+	
+	UFUNCTION(BlueprintCallable)
+	void RotateMesh(const FRotator& rotation) { objMesh->AddRelativeRotation(rotation); }
+
+	UFUNCTION(BlueprintCallable)
+	void SnapRotateMesh(const bool hori) { RotateMesh(hori? FRotator{0,90,00} : FRotator{90,0,0}); }
+	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
 	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }
@@ -87,4 +93,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	virtual void SetSelected(const bool value);
+
+	UFUNCTION(BlueprintCallable)
+	void AscendDescend(const float inputValue) { objMesh->AddLocalOffset(FVector::UpVector * inputValue); }
 };

@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Pickups/PickupableMaster.h"
+#include "GameFramework/PlayerController.h"
 #include "PlayerCharacter.generated.h"
+
 
 UCLASS()
 class PROJPROBLOX_API APlayerCharacter : public ACharacter
@@ -20,6 +22,24 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(BlueprintReadOnly)
+	APickupableMaster* selectedObj;
+	
+	UPROPERTY(BlueprintReadWrite)
+	bool holding;
+	
+	UPROPERTY(BlueprintReadWrite)
+	bool toggleSelection = false;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool groupSelection = false;
+
+	UPROPERTY(BlueprintReadWrite)
+	TArray<AActor*> exclusions;
+	
+	UPROPERTY(BlueprintReadWrite)
+	ACubeCore* core;
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -28,11 +48,13 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	bool holding;
-	TArray<TSubclassOf<AActor>*> exclusions;
-	bool toggleSelection = false;
 	float mouseDistance = 10000;
 
-	TSubclassOf<APickupableMaster*> selectedObj;
-	ACubeCore* core;
+	UFUNCTION(BlueprintCallable)
+	void SelectObject();
+
+	
+	void MoveSelection();
+
+	FHitResult GetCursorLocation(FVector& rLocation, FVector& ) const;
 };

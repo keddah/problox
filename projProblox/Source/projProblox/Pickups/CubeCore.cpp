@@ -23,6 +23,11 @@ void ACubeCore::RemoveAttachment(FName socket)
 	socketInfo->RemoveAttachment(socket);
 }
 
+void ACubeCore::SetAbilityActive(bool value)
+{
+	for (const auto& obj : socketInfo->GetAttachments()) obj->SetAbilityActive(value);
+}
+
 void ACubeCore::SetSelected(const bool value)
 {
 	Super::SetSelected(value);
