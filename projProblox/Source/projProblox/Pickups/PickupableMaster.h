@@ -1,0 +1,90 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Components/BoxComponent.h"
+#include "GameFramework/Actor.h"
+#include "PickupableMaster.generated.h"
+
+class ACubeCore;
+
+UCLASS()
+class PROJPROBLOX_API APickupableMaster : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	APickupableMaster();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+
+	/////////////////// PROPERTIES ///////////////////
+
+	// Blueprint visible components..
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* scene;
+
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* objMesh;
+
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* collider;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool active;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool selected;
+
+	UPROPERTY(BlueprintReadWrite)
+	FVector placeDir {0, 0,-1};
+
+	UPROPERTY(BlueprintReadWrite)
+	float placeRange = 100;
+
+	UPROPERTY(BlueprintReadOnly)
+	ACubeCore* objCore;
+	
+	/////////////////// FUNCTIONS ///////////////////
+	
+	UFUNCTION(BlueprintCallable)
+	virtual void Placement();
+	
+	virtual void Ability();
+
+	UFUNCTION(BlueprintCallable)
+	void SetAbilityActive(const bool value) { active = value; }
+	
+	UFUNCTION(BlueprintCallable)
+	void ResetRotation(bool resetVelocity = false);
+	
+	UFUNCTION(BlueprintCallable)
+	virtual void AddAttachment(APickupableMaster* attachment, FName socket) { attachedSocket = socket; }
+
+	UFUNCTION(BlueprintCallable)
+	virtual void RemoveAttachment(FName socket) { attachedSocket = "None"; }
+	
+	FName attachedSocket;
+	
+private:
+	FRotator defaultRot{};
+	
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	// Enable/Disable gravity when selected/deselected
+	UFUNCTION(BlueprintCallable)
+	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }
+	
+	UFUNCTION(BlueprintCallable)
+	UStaticMeshComponent* GetMesh() const { return objMesh; }
+
+	UFUNCTION(BlueprintCallable)
+	virtual void SetSelected(const bool value);
+};

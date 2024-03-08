@@ -11,6 +11,7 @@
     <None Include="..\..\Source\projProbloxEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -29,6 +30,30 @@
     <Filter Include="Source\projProblox">
       <UniqueIdentifier>{EF8B8155-4D92-329C-8C65-A60DE3C5D0D3}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\projProblox\CubeCore.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\CubeCore.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\CubeSocketInfo.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\CubeSocketInfo.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\PickupableMaster.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\PickupableMaster.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\PlayerCharacter.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\PlayerCharacter.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <None Include="..\..\Source\projProblox\projProblox.Build.cs">
       <Filter>Source\projProblox</Filter>
     </None>

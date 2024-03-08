@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3iUIAzT0fks3N6fTkUfI6impmyqThPMbAbuMh9CU2Edh9ge/lTJF3hhqL9pisaVatAXAJhQpRUF8Y+NQvsZ+JQ==",
+  "dgSpecHash": "W/JS5ckiPy5fTlwib4o3e0bRUARpzKwha5olllMIsJCapf29sfvMNhKiEHliwDBKqXorY+7kQzCUsKJv4jUvPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Deany\\Documents\\Unreal Projects\\projProblox\\Intermediate\\Build\\BuildRulesProjects\\projProbloxModuleRules\\projProbloxModuleRules.csproj",
+  "projectFilePath": "C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Intermediate\\Build\\BuildRulesProjects\\projProbloxModuleRules\\projProbloxModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Deany\\.nuget\\packages\\blake3\\0.5.1\\blake3.0.5.1.nupkg.sha512",
     "C:\\Users\\Deany\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

@@ -33,6 +33,8 @@
 				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Platform.uasset",
 				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Grapple.uasset",
 				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_GrappleHead.uasset",
+				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_MasterPickup.uasset",
+				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_CubeCore.uasset",
 				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Wheel.uasset",
 				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Shape_Cube1.uasset",
 				"C:/Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Cube.uasset",
