@@ -18,6 +18,10 @@ bool UCubeSocketInfo::ObjectInSocket(const FName& socket) const
 	else if(str_socket == sockets[5]) index = 5;
 	else index = 0;
 
+	for (auto& obj : socketObjects)
+	{
+		if(obj) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, obj->GetName());
+	}
 	// Returns whether or not the pointer is valid
 	return !(socketObjects[index] == nullptr);
 }

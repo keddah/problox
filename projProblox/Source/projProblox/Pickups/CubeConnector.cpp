@@ -5,11 +5,12 @@
 
 ACubeConnector::ACubeConnector()
 {
-	placeRange = 500;
+	defaultPlaceDir = placeDir;
 }
 
 void ACubeConnector::BeginPlay()
 {
+	placeRange = 100;
 	Super::BeginPlay();
 }
 
@@ -83,36 +84,35 @@ void ACubeConnector::Placement()
 
 		float shortestDistance = 9999999;
 		FName closestSocket = "None";
-		
-		// Attempt to cast to the cubecore
-		objCore = Cast<ACubeCore>(hitActor);
-		if(objCore)
-		{
-			const UStaticMeshComponent* coreMesh = objCore->GetMesh();
-	
-			for(const auto& socket: coreMesh->GetAllSocketNames())
-			{
-				// If the cube doesn't have an object in its socket...
-				if(objCore->ObjectInSocket(socket)) continue;
 
-				// Compare the distance between the current socket and this connector's mesh
-				const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), objMesh->GetComponentLocation());
-				if(distance < shortestDistance)
-				{
-					shortestDistance = distance;
-					closestSocket = socket;
-				}
-			}
-
-			attachedSocket = closestSocket;
-			hitObj = nullptr;
-			break;
-		}
-
-		// If the cast to the cubecore was unsuccessful...
 		hitObj = Cast<APickupableMaster>(hitActor);
 		if(hitObj)
 		{
+			// Attempt to cast to the cubecore
+			if(hitObj->IsA<ACubeCore>())
+			{
+				objCore = Cast<ACubeCore>(hitObj);
+				const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	
+				for(const auto& socket: coreMesh->GetAllSocketNames())
+				{
+					// If the cube doesn't have an object in its socket...
+					if(objCore->ObjectInSocket(socket)) continue;
+
+					// Compare the distance between the current socket and this connector's mesh
+					const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), objMesh->GetComponentLocation());
+					if(distance < shortestDistance)
+					{
+						shortestDistance = distance;
+						closestSocket = socket;
+					}
+				}
+
+				attachedSocket = closestSocket;
+				hitObj = nullptr;
+				break;
+			}
+
 			// Foreach of the connector's sockets
 			for(const auto& socket: objMesh->GetAllSocketNames())
 			{
@@ -131,11 +131,76 @@ void ACubeConnector::Placement()
 			attachedSocket = closestSocket;
 			objCore = nullptr;
 			hitObj->SetCore(this);
+			break;
 		}
+
 	}
 }
 
 void ACubeConnector::SetSelected(const bool value)
 {
-	Super::SetSelected(value);
+	selected = value;
+
+	// Detach from its components if selected
+	if(selected)
+	{
+		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+		if(objCore)
+		{
+			objCore->RemoveAttachment(attachedSocket);
+			objCore = nullptr;
+		}
+
+		else if(hitObj)
+		{
+			RemoveAttachment(attachedSocket);
+			// hitObj->GetMesh()->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+			hitObj = nullptr;
+		}
+		
+		attachedSocket = "None";
+		return;
+	}
+
+	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+
+	// Rotate/Manipulate self when it hits the core
+	if(objCore)
+	{
+		UStaticMeshComponent* coreMesh = objCore->GetMesh();
+		
+		ResetRotation();
+		const FRotator socketRotation = coreMesh->GetSocketRotation(attachedSocket);
+		const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
+		
+		// Rotate to match the socket rotation
+		objMesh->SetWorldRotation(socketDirection.Rotation());
+
+		// Attach self to the core
+		objMesh->AttachToComponent(coreMesh, rules, attachedSocket);
+		objCore->AddAttachment(this, attachedSocket);
+	}
+
+	// Rotate/Manipulate the hit object if the placement ray hit a normal object 
+	else if(hitObj)
+	{
+		hitObj->ResetRotation();
+		UStaticMeshComponent* hitMesh = hitObj->GetMesh();
+		const FRotator socketRotation = objMesh->GetSocketRotation(attachedSocket);
+		const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
+	
+		// Rotate to match the socket rotation
+		hitMesh->SetWorldRotation(socketDirection.Rotation());
+
+		// attach it to this mesh
+		hitMesh->AttachToComponent(objMesh, rules, attachedSocket);
+		AddAttachment(hitObj, attachedSocket);
+		hitObj->SetAttachedSocket(attachedSocket);
+	}
+	
+}
+
+void ACubeConnector::RemoveAttachment(FName socket)
+{
+	Super::RemoveAttachment(socket);
 }

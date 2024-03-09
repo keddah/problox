@@ -24,11 +24,11 @@ protected:
 public:
 	virtual void Tick(float DeltaSeconds) override;
 
-
-	virtual void Placement() override;
 	virtual void SetSelected(const bool value) override;
+	virtual void RemoveAttachment(FName socket) override;
 
 private:
-
+	virtual void Placement() override;
+	FVector defaultPlaceDir;
 	
 };
