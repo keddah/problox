@@ -25,12 +25,12 @@ class UStaticMeshComponent;
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execGravitySelection); \
+	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateMesh); \
 	DECLARE_FUNCTION(execSetAbilityActive); \
 	DECLARE_FUNCTION(execRemoveAttachment); \
 	DECLARE_FUNCTION(execAddAttachment); \
-	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execPlacement);
 
 

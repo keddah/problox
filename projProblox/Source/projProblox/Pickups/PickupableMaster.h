@@ -45,7 +45,7 @@ protected:
 	FVector placeDir {0, 0,-1};
 
 	UPROPERTY(BlueprintReadWrite)
-	float placeRange = 100;
+	float placeRange = 300;
 
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* objCore;
@@ -57,9 +57,6 @@ protected:
 	
 	virtual void Ability();
 
-	UFUNCTION(BlueprintCallable)
-	void ResetRotation(bool resetVelocity = false);
-	
 	UFUNCTION(BlueprintCallable)
 	virtual void AddAttachment(APickupableMaster* attachment, FName socket) { attachedSocket = socket; }
 
@@ -83,6 +80,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SnapRotateMesh(const bool hori) { RotateMesh(hori? FRotator{0,90,00} : FRotator{90,0,0}); }
+
+	UFUNCTION(BlueprintCallable)
+	void ResetRotation(bool resetVelocity = false);
 	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
@@ -93,6 +93,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	virtual void SetSelected(const bool value);
+
+	void SetCore(ACubeCore* _core) { objCore = _core; }
+	void SetAttachedSocket(FName socket) { attachedSocket = socket; }
 
 	UFUNCTION(BlueprintCallable)
 	void AscendDescend(const float inputValue) { objMesh->AddLocalOffset(FVector::UpVector * inputValue); }

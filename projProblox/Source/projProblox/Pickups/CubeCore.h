@@ -23,7 +23,15 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UCubeSocketInfo* socketInfo;
 
+	UPROPERTY(EditDefaultsOnly)
+	USceneComponent* pivot;
+
 	virtual void Placement() override;
+
+	UFUNCTION(Blueprintable)
+	void CalculateCenter() { placeRange *= objMesh->GetRelativeScale3D().Length(); }
+
+	APickupableMaster* hitObj;
 
 public:	
 	// Called every frame

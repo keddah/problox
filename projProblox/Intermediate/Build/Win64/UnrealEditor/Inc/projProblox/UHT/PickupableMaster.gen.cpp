@@ -50,6 +50,14 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		P_THIS->GravitySelection();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APickupableMaster::execResetRotation)
+	{
+		P_GET_UBOOL(Z_Param_resetVelocity);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ResetRotation(Z_Param_resetVelocity);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APickupableMaster::execSnapRotateMesh)
 	{
 		P_GET_UBOOL(Z_Param_hori);
@@ -89,14 +97,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->AddAttachment(Z_Param_attachment,Z_Param_socket);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(APickupableMaster::execResetRotation)
-	{
-		P_GET_UBOOL(Z_Param_resetVelocity);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->ResetRotation(Z_Param_resetVelocity);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(APickupableMaster::execPlacement)
@@ -364,7 +364,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ "ModuleRelativePath", "Pickups/PickupableMaster.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "ResetRotation", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PickupableMaster_eventResetRotation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "ResetRotation", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PickupableMaster_eventResetRotation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::Function_MetaDataParams) };
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PropPointers) < 2048);
 	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_ResetRotation_Statics::PickupableMaster_eventResetRotation_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_APickupableMaster_ResetRotation()
@@ -621,7 +621,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ &Z_Construct_UFunction_APickupableMaster_GravitySelection, "GravitySelection" }, // 3848286903
 		{ &Z_Construct_UFunction_APickupableMaster_Placement, "Placement" }, // 1722872120
 		{ &Z_Construct_UFunction_APickupableMaster_RemoveAttachment, "RemoveAttachment" }, // 2818181948
-		{ &Z_Construct_UFunction_APickupableMaster_ResetRotation, "ResetRotation" }, // 2126190750
+		{ &Z_Construct_UFunction_APickupableMaster_ResetRotation, "ResetRotation" }, // 3063790737
 		{ &Z_Construct_UFunction_APickupableMaster_RotateMesh, "RotateMesh" }, // 152319599
 		{ &Z_Construct_UFunction_APickupableMaster_SetAbilityActive, "SetAbilityActive" }, // 4019941948
 		{ &Z_Construct_UFunction_APickupableMaster_SetSelected, "SetSelected" }, // 80610846
@@ -755,9 +755,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 577146353U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 282572704U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_3878601416(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_3425479495(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

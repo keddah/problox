@@ -42,10 +42,17 @@ void APickupableMaster::Placement()
 	
 	FHitResult hit;
 	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
+
+	FCollisionQueryParams collisionParams;
+	collisionParams.AddIgnoredActor(this);
+	// collisionParams.AddIgnoredComponent(objMesh);
+	// collisionParams.AddIgnoredComponent(collider);
+	collisionParams.MobilityType = EQueryMobilityType::Any;
+	collisionParams.bDebugQuery = true;
 	
 	// Debug Draw
 	DrawDebugLine(wrld, objMesh->GetComponentLocation(), objMesh->GetComponentLocation() + direction * placeRange, FColor::Red, false, 5);	
-	wrld->LineTraceSingleByChannel(hit, objMesh->GetComponentLocation(), direction * placeRange, ECC_Visibility, FCollisionQueryParams::DefaultQueryParam);
+	wrld->LineTraceSingleByChannel(hit, objMesh->GetComponentLocation(), direction * placeRange, ECC_Camera, collisionParams);
 	
 	if(!hit.bBlockingHit) return;
 	

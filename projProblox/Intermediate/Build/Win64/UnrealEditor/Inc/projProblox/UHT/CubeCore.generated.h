@@ -21,7 +21,8 @@ class AActor;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetAttachedObjects); \
-	DECLARE_FUNCTION(execObjectInSocket);
+	DECLARE_FUNCTION(execObjectInSocket); \
+	DECLARE_FUNCTION(execCalculateCenter);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_16_ACCESSORS
