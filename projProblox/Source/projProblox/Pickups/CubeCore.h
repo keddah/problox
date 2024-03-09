@@ -14,9 +14,10 @@ UCLASS()
 class PROJPROBLOX_API ACubeCore : public APickupableMaster
 {
 	GENERATED_BODY()
-	ACubeCore();
 	
 protected:
+	ACubeCore();
+	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -28,8 +29,7 @@ protected:
 
 	virtual void Placement() override;
 
-	UFUNCTION(Blueprintable)
-	void CalculateCenter() { placeRange *= objMesh->GetRelativeScale3D().Length(); }
+	void AdjustRange() { placeRange *= objMesh->GetRelativeScale3D().Length(); }
 
 	APickupableMaster* hitObj;
 

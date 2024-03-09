@@ -30,24 +30,6 @@
     <Filter Include="Source\projProblox">
       <UniqueIdentifier>{EF8B8155-4D92-329C-8C65-A60DE3C5D0D3}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\projProblox\CubeCore.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\CubeCore.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\CubeSocketInfo.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\CubeSocketInfo.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\PickupableMaster.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\PickupableMaster.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\PlayerCharacter.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
@@ -62,6 +44,33 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\projProblox.h">
       <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <Filter Include="Source\projProblox\Pickups">
+      <UniqueIdentifier>{20891638-0A53-3940-8B30-055C384D4E46}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickups\CubeConnector.cpp">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickups\CubeConnector.h">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickups\CubeCore.cpp">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickups\CubeCore.h">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickups\CubeSocketInfo.cpp">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickups\CubeSocketInfo.h">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickups\PickupableMaster.cpp">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickups\PickupableMaster.h">
+      <Filter>Source\projProblox\Pickups</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

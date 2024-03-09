@@ -30,8 +30,7 @@ class UStaticMeshComponent;
 	DECLARE_FUNCTION(execRotateMesh); \
 	DECLARE_FUNCTION(execSetAbilityActive); \
 	DECLARE_FUNCTION(execRemoveAttachment); \
-	DECLARE_FUNCTION(execAddAttachment); \
-	DECLARE_FUNCTION(execPlacement);
+	DECLARE_FUNCTION(execAddAttachment);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_15_ACCESSORS

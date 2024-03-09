@@ -10,11 +10,15 @@ ACubeCore::ACubeCore()
 
 	pivot = CreateDefaultSubobject<USceneComponent>(TEXT("Center"));
 	pivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+
+	placeRange = 50;
+
 }
 
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
+	AdjustRange();
 }
 
 void ACubeCore::RemoveAttachment(FName socket)
@@ -76,16 +80,15 @@ void ACubeCore::Placement()
 	FHitResult hit;
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
-	// collisionParams.AddIgnoredComponent(objMesh);
-	// collisionParams.AddIgnoredComponent(collider);
 	collisionParams.MobilityType = EQueryMobilityType::Any;
 	collisionParams.bDebugQuery = true;
 
 	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
 	
 	// Debug Draw
-	DrawDebugLine(wrld, pivot->GetComponentLocation(), objMesh->GetComponentLocation() + direction * placeRange, FColor::Red, false, 5);	
-	wrld->LineTraceSingleByChannel(hit, pivot->GetComponentLocation(), direction * placeRange, ECC_Visibility, collisionParams);
+	const FVector start = pivot->GetComponentLocation();
+	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 	AActor* hitActor = hit.GetActor();
 	if(!hitActor) return;

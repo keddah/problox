@@ -51,9 +51,10 @@ void APickupableMaster::Placement()
 	collisionParams.bDebugQuery = true;
 	
 	// Debug Draw
-	DrawDebugLine(wrld, objMesh->GetComponentLocation(), objMesh->GetComponentLocation() + direction * placeRange, FColor::Red, false, 5);	
-	wrld->LineTraceSingleByChannel(hit, objMesh->GetComponentLocation(), direction * placeRange, ECC_Camera, collisionParams);
-	
+	const FVector start = objMesh->GetComponentLocation();
+	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
+	if(hit.GetActor()) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, hit.GetActor()->GetName());
 	if(!hit.bBlockingHit) return;
 	
 	objCore = Cast<ACubeCore>(hit.GetActor());

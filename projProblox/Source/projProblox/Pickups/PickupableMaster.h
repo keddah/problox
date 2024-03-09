@@ -45,14 +45,13 @@ protected:
 	FVector placeDir {0, 0,-1};
 
 	UPROPERTY(BlueprintReadWrite)
-	float placeRange = 300;
+	float placeRange = 180;
 
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* objCore;
 	
 	/////////////////// FUNCTIONS ///////////////////
 	
-	UFUNCTION(BlueprintCallable)
 	virtual void Placement();
 	
 	virtual void Ability();

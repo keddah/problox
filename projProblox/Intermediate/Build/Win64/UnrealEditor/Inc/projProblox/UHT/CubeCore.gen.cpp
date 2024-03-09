@@ -33,46 +33,14 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 		*(bool*)Z_Param__Result=P_THIS->ObjectInSocket(Z_Param_socketToCheck);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ACubeCore::execCalculateCenter)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->CalculateCenter();
-		P_NATIVE_END;
-	}
 	void ACubeCore::StaticRegisterNativesACubeCore()
 	{
 		UClass* Class = ACubeCore::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "CalculateCenter", &ACubeCore::execCalculateCenter },
 			{ "GetAttachedObjects", &ACubeCore::execGetAttachedObjects },
 			{ "ObjectInSocket", &ACubeCore::execObjectInSocket },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_ACubeCore_CalculateCenter_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_CalculateCenter_Statics::Function_MetaDataParams[] = {
-		{ "BlueprintType", "true" },
-		{ "IsBlueprintBase", "true" },
-		{ "ModuleRelativePath", "Pickups/CubeCore.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_CalculateCenter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "CalculateCenter", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_CalculateCenter_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_CalculateCenter_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_ACubeCore_CalculateCenter()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_CalculateCenter_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ACubeCore_GetAttachedObjects_Statics
 	{
@@ -207,7 +175,6 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACubeCore_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACubeCore_CalculateCenter, "CalculateCenter" }, // 2532597296
 		{ &Z_Construct_UFunction_ACubeCore_GetAttachedObjects, "GetAttachedObjects" }, // 2516450227
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 665348194
 	};
@@ -278,9 +245,9 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1134486840U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1714992418U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_1643128413(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_2300788909(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
