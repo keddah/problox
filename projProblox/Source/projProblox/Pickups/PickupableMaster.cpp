@@ -19,7 +19,8 @@ APickupableMaster::APickupableMaster()
 	
 	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collision"));
 	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
-
+	collider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	
 	defaultRot = objMesh->GetRelativeRotation();
 
 	scene->SetAutoActivate(true);
@@ -45,15 +46,13 @@ void APickupableMaster::Placement()
 
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
-	// collisionParams.AddIgnoredComponent(objMesh);
-	// collisionParams.AddIgnoredComponent(collider);
 	collisionParams.MobilityType = EQueryMobilityType::Any;
-	collisionParams.bDebugQuery = true;
 	
 	// Debug Draw
 	const FVector start = objMesh->GetComponentLocation();
 	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
+
 	if(hit.GetActor()) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, hit.GetActor()->GetName());
 	if(!hit.bBlockingHit) return;
 	
@@ -79,7 +78,7 @@ void APickupableMaster::Placement()
 	{
 		if(objCore) if(objCore->ObjectInSocket(socket)) continue;
 		
-		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), objMesh->GetComponentLocation());
+		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
 		if(distance < shortestDistance)
 		{
 			shortestDistance = distance;
@@ -92,6 +91,11 @@ void APickupableMaster::Placement()
 
 void APickupableMaster::Ability()
 {
+}
+
+void APickupableMaster::AddAttachment(APickupableMaster* attachment, FName socket)
+{
+	attachedSocket = socket;
 }
 
 void APickupableMaster::ResetRotation(const bool resetVelocity)

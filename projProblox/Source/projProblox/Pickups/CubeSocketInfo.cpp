@@ -5,25 +5,20 @@
 
 bool UCubeSocketInfo::ObjectInSocket(const FName& socket) const 
 {
-	if(socketObjects.IsEmpty()) return false;
-	
-	int32 index;
+	if (socketObjects.IsEmpty()) return false;
+
+	int32 index = 0; // Default to 0 if no match is found
 
 	const FString str_socket = socket.ToString().ToUpper();
-	
-	if(str_socket == sockets[1]) index = 1;
-	else if(str_socket == sockets[2]) index = 2;
-	else if(str_socket == sockets[3]) index = 3;
-	else if(str_socket == sockets[4]) index = 4;
-	else if(str_socket == sockets[5]) index = 5;
-	else index = 0;
+    
+	if (str_socket == sockets[1]) index = 1;
+	else if (str_socket == sockets[2]) index = 2;
+	else if (str_socket == sockets[3]) index = 3;
+	else if (str_socket == sockets[4]) index = 4;
+	else if (str_socket == sockets[5]) index = 5;
 
-	for (auto& obj : socketObjects)
-	{
-		if(obj) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, obj->GetName());
-	}
-	// Returns whether or not the pointer is valid
-	return !(socketObjects[index] == nullptr);
+	// Check if the index is within bounds and the pointer is valid
+	return socketObjects.IsValidIndex(index) && socketObjects[index] != nullptr;
 }
 
 void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)

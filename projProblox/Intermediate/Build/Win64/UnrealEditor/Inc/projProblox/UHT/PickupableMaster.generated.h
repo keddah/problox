@@ -21,6 +21,7 @@ class UStaticMeshComponent;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetMass); \
 	DECLARE_FUNCTION(execAscendDescend); \
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execGetMesh); \

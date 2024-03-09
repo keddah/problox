@@ -42,7 +42,6 @@ void ACubeCore::SetSelected(const bool value)
 		if(!hitObj) return;
 
 		RemoveAttachment(attachedSocket);
-		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 		hitObj = nullptr;
 		return;
 	}
@@ -54,26 +53,41 @@ void ACubeCore::SetSelected(const bool value)
 	const FRotator socketRotation = objMesh->GetSocketRotation(attachedSocket);
 	const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
 
+	UStaticMeshComponent* hitMesh = hitObj->GetMesh();
+	
 	// Rotate to match the socket rotation
-	objMesh->SetWorldRotation(socketDirection.Rotation());
+	hitMesh->SetWorldRotation(socketDirection.Rotation());
 
 	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
-
-	hitObj->AttachToComponent(objMesh, rules, attachedSocket);
+	
+	objMesh->AttachToComponent(hitObj->GetMesh(), rules, attachedSocket);
 	AddAttachment(hitObj, attachedSocket);
 	hitObj->SetAttachedSocket(attachedSocket);
+}
+
+float ACubeCore::GetMass() const
+{
+	float mass = Super::GetMass();
+
+	for (const auto& obj : socketInfo->GetAttachments())
+	{
+		mass += obj->GetMass();
+	}
+
+	return mass;
 }
 
 void ACubeCore::Placement()
 {
 	GravitySelection();
 	
-	if(!selected) return;
 	if(ObjectInSocket("Down"))
 	{
 		hitObj = nullptr;
 		return;
 	}
+	
+	if(!selected) return;
 	
 	const UWorld* wrld = GetWorld();
 	
@@ -93,28 +107,28 @@ void ACubeCore::Placement()
 	AActor* hitActor = hit.GetActor();
 	if(!hitActor) return;
 	
-	hitObj = Cast<APickupableMaster>(hitActor);
-	if(hitObj) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, hitObj->GetName());
-	
 	// If the cast was unsuccessful....
-	if(!hitObj)
-	{
-		// Delete or set as null??
-		hitObj = nullptr;
-		// delete hitObj;
-		return;
-	}
+	hitObj = Cast<APickupableMaster>(hitActor);
+	if(!hitObj) return;
 	
 	attachedSocket = "Down";
 	hitObj->SetCore(this);
+	hitObj->SetAttachedSocket(attachedSocket);
 }
 
 void ACubeCore::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	// for (auto& info : GetAttachedObjects(true))
+	// {
+	// 	if(info) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, info->GetName());
+	// }
 }
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, FName socket)
 {
 	Super::AddAttachment(attachment, socket);
+
+	socketInfo->AddAttachment(attachment, socket);
 }

@@ -57,7 +57,7 @@ protected:
 	virtual void Ability();
 
 	UFUNCTION(BlueprintCallable)
-	virtual void AddAttachment(APickupableMaster* attachment, FName socket) { attachedSocket = socket; }
+	virtual void AddAttachment(APickupableMaster* attachment, FName socket);
 
 	UFUNCTION(BlueprintCallable)
 	virtual void RemoveAttachment(FName socket) { attachedSocket = "None"; }
@@ -98,4 +98,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void AscendDescend(const float inputValue) { objMesh->AddLocalOffset(FVector::UpVector * inputValue); }
+
+	UFUNCTION(BlueprintGetter)
+	virtual float GetMass() const { return objMesh->GetMass(); }
 };

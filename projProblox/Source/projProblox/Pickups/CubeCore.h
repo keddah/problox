@@ -52,4 +52,6 @@ public:
 	TArray<APickupableMaster*> GetAttachedObjects() const { return socketInfo->GetAttachments(); }
 
 	virtual void SetSelected(const bool value) override;
+
+	virtual float GetMass() const override;
 };

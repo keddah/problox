@@ -100,7 +100,7 @@ void ACubeConnector::Placement()
 					if(objCore->ObjectInSocket(socket)) continue;
 
 					// Compare the distance between the current socket and this connector's mesh
-					const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), objMesh->GetComponentLocation());
+					const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
 					if(distance < shortestDistance)
 					{
 						shortestDistance = distance;
@@ -145,62 +145,28 @@ void ACubeConnector::SetSelected(const bool value)
 	if(selected)
 	{
 		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-		if(objCore)
-		{
-			objCore->RemoveAttachment(attachedSocket);
-			objCore = nullptr;
-		}
-
-		else if(hitObj)
-		{
-			RemoveAttachment(attachedSocket);
-			// hitObj->GetMesh()->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-			hitObj = nullptr;
-		}
+		active = false;
 		
-		attachedSocket = "None";
+		if(objCore) objCore->RemoveAttachment(attachedSocket);
 		return;
 	}
 
-	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
-
 	// Rotate/Manipulate self when it hits the core
-	if(objCore)
-	{
-		UStaticMeshComponent* coreMesh = objCore->GetMesh();
-		
-		ResetRotation();
-		const FRotator socketRotation = coreMesh->GetSocketRotation(attachedSocket);
-		const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
-		
-		// Rotate to match the socket rotation
-		objMesh->SetWorldRotation(socketDirection.Rotation());
+	if(!objCore) return;
+	ResetRotation();
 
-		// Attach self to the core
-		objMesh->AttachToComponent(coreMesh, rules, attachedSocket);
-		objCore->AddAttachment(this, attachedSocket);
-	}
-
-	// Rotate/Manipulate the hit object if the placement ray hit a normal object 
-	else if(hitObj)
-	{
-		hitObj->ResetRotation();
-		UStaticMeshComponent* hitMesh = hitObj->GetMesh();
-		const FRotator socketRotation = objMesh->GetSocketRotation(attachedSocket);
-		const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
+	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
 	
-		// Rotate to match the socket rotation
-		hitMesh->SetWorldRotation(socketDirection.Rotation());
-
-		// attach it to this mesh
-		hitMesh->AttachToComponent(objMesh, rules, attachedSocket);
-		AddAttachment(hitObj, attachedSocket);
-		hitObj->SetAttachedSocket(attachedSocket);
-	}
+	const FRotator socketRotation = coreMesh->GetSocketRotation(attachedSocket);
+	const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
 	
-}
+	// Rotate to match the socket rotation
+	objMesh->SetWorldRotation(socketDirection.Rotation());
 
-void ACubeConnector::RemoveAttachment(FName socket)
-{
-	Super::RemoveAttachment(socket);
+
+	// Attach self to the core
+	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+	objMesh->AttachToComponent(objCore->GetMesh(), rules, attachedSocket);
+
+	objCore->AddAttachment(this, attachedSocket);
 }

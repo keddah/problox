@@ -29,7 +29,7 @@ protected:
 	bool holding;
 	
 	UPROPERTY(BlueprintReadWrite)
-	bool toggleSelection = false;
+	bool toggleSelection = true;
 
 	UPROPERTY(BlueprintReadWrite)
 	bool groupSelection = false;
@@ -40,6 +40,9 @@ protected:
 	UPROPERTY(BlueprintReadWrite)
 	ACubeCore* core;
 	
+	UPROPERTY(BlueprintReadOnly)
+	float mouseDistance = 20000;
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -48,13 +51,11 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	float mouseDistance = 10000;
 
 	UFUNCTION(BlueprintCallable)
-	void SelectObject();
+	void SelectObject(const FHitResult& hit);
 
 	
-	void MoveSelection();
-
-	FHitResult GetCursorLocation(FVector& rLocation, FVector& ) const;
+	UFUNCTION(BlueprintCallable)
+	void MoveSelection(const FVector& mousePos);
 };
