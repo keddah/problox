@@ -95,5 +95,5 @@ public:
 	virtual void SetSelected(const bool value);
 
 	UFUNCTION(BlueprintCallable)
-	void AscendDescend(const float inputValue) { objMesh->AddLocalOffset(FVector::UpVector * inputValue); GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::FromInt(inputValue)); }
+	void AscendDescend(const float inputValue) { objMesh->AddLocalOffset(FVector::UpVector * inputValue); }
 };

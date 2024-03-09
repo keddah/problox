@@ -68,10 +68,7 @@ void APlayerCharacter::SelectObject()
 	DrawDebugLine(wrld, GetActorLocation(), end, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, GetActorLocation(), end,ECC_Visibility, FCollisionQueryParams(traceParams));
 
-	if(!hit.bBlockingHit) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("didnt hit anmything"));
-
 	if(!hit.bBlockingHit) return;
-	if(hit.GetActor()) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Selected obj") + hit.GetActor()->GetName());
 	
 	selectedObj = Cast<APickupableMaster>(hit.GetActor());
 	if(selectedObj) selectedObj->SetSelected(true);

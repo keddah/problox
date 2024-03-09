@@ -19,8 +19,8 @@ public:
 	UPROPERTY(VisibleDefaultsOnly)
 	TArray<FName> sockets { "FRONT", "BACK", "LEFT", "RIGHT", "UP", "DOWN"};
 
-	UPROPERTY(meta = (ArrayClamp = "sockets"))
-	TArray<APickupableMaster*> socketObjects;
+	UPROPERTY(VisibleDefaultsOnly, meta = (ArrayClamp = "sockets"))
+	TArray<APickupableMaster*> socketObjects { 0, 0, 0, 0, 0, 0 };
 
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(const FName& socket) const;

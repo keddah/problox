@@ -50,6 +50,7 @@ void APickupableMaster::Placement()
 	if(!hit.bBlockingHit) return;
 	
 	objCore = Cast<ACubeCore>(hit.GetActor());
+	if(objCore) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, objCore->GetName());
 	
 	// If the cast was unsuccessful....
 	if(!objCore)
@@ -68,8 +69,8 @@ void APickupableMaster::Placement()
 	
 	for(const auto& socket: coreMesh->GetAllSocketNames())
 	{
-		if(objCore->ObjectInSocket(socket)) continue;
-	
+		if(objCore) if(objCore->ObjectInSocket(socket)) continue;
+		
 		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), objMesh->GetComponentLocation());
 		if(distance < shortestDistance)
 		{

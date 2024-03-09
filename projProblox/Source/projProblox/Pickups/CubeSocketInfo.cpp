@@ -5,6 +5,8 @@
 
 bool UCubeSocketInfo::ObjectInSocket(const FName& socket) const 
 {
+	if(socketObjects.IsEmpty()) return false;
+	
 	int32 index;
 
 	const FString str_socket = socket.ToString().ToUpper();
