@@ -12,12 +12,24 @@ ACubeCore::ACubeCore()
 	pivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
 
 	placeRange = 50;
+}
 
+void ACubeCore::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	
+	// Delete the data asset when the object is destroyed / game ends
+	socketInfo->DeleteData();
 }
 
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	// Create a socket info for each cube (also inherited to connectors)
+	// Need to create one for each cube otherwise the information would be shared/overrided.
+	socketInfo = NewObject<UCubeSocketInfo>();
+	
 	AdjustRange();
 }
 
@@ -30,7 +42,6 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 
 void ACubeCore::SetAbilityActive(bool value)
 {
-	if(!isCore) return;
 	for (const auto& obj : socketInfo->GetAttachments()) obj->SetAbilityActive(value);
 }
 
@@ -38,16 +49,8 @@ void ACubeCore::SetSelected(const bool value)
 {
 	selected = value;
 
-	if(selected)
-	{
-		if(!hitObj) return;
-
-		RemoveAttachment(attachedSocket);
-		hitObj = nullptr;
-		return;
-	}
-
-	if(!hitObj) return;
+	if(selected) return;
+	if(!IsValid(hitObj)) return;
 
 	hitObj->ResetRotation();
 
@@ -58,16 +61,14 @@ void ACubeCore::SetSelected(const bool value)
 	// Rotate to match the socket rotation
 	hitMesh->SetWorldRotation(rot);
 
-	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
-	
-	objMesh->AttachToComponent(hitObj->GetMesh(), rules, attachedSocket);
+	hitMesh->AttachToComponent(objMesh, attachRules, attachedSocket);
 	AddAttachment(hitObj, attachedSocket);
 	hitObj->SetAttachedSocket(attachedSocket);
 }
 
 float ACubeCore::GetMass() const
 {
-	float mass = Super::GetMass();
+	float mass = objMesh->GetMass();
 
 	for (const auto& obj : socketInfo->GetAttachments())
 	{
@@ -81,13 +82,14 @@ void ACubeCore::Placement()
 {
 	GravitySelection();
 	
+	
+	if(!selected) return;
+	
 	if(ObjectInSocket("Down"))
 	{
 		hitObj = nullptr;
 		return;
 	}
-	
-	if(!selected) return;
 	
 	const UWorld* wrld = GetWorld();
 	
@@ -108,9 +110,10 @@ void ACubeCore::Placement()
 	if(!hitActor) return;
 	
 	// If the cast was unsuccessful....
-	hitObj = Cast<APickupableMaster>(hitActor);
-	if(!hitObj) return;
-	
+	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
+	else hitObj = 0;
+	if(!IsValid(hitObj)) return;
+
 	attachedSocket = "Down";
 	hitObj->SetCore(this);
 	hitObj->SetAttachedSocket(attachedSocket);

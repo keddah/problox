@@ -17,11 +17,14 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	
 protected:
 	ACubeCore();
+
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;;
+
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly)
+	// A data asset that contains an array of things that are attached to each face of the cube.
 	UCubeSocketInfo* socketInfo;
 
 	UPROPERTY(EditDefaultsOnly)
@@ -32,8 +35,6 @@ protected:
 	void AdjustRange() { placeRange *= objMesh->GetRelativeScale3D().Length(); }
 
 	APickupableMaster* hitObj;
-
-	bool isCore = true;
 
 public:	
 	// Called every frame

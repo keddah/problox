@@ -26,6 +26,8 @@ public:
 
 	virtual void SetSelected(const bool value) override;
 
+	virtual void SetAbilityActive(bool value) override;
+
 private:
 	virtual void Placement() override;
 	FVector defaultPlaceDir;

@@ -6,12 +6,12 @@
 ACubeConnector::ACubeConnector()
 {
 	defaultPlaceDir = placeDir;
-	isCore = false;
 }
 
 void ACubeConnector::BeginPlay()
 {
 	placeRange = 100;
+	
 	Super::BeginPlay();
 }
 
@@ -35,16 +35,17 @@ void ACubeConnector::Placement()
 	// Change the direction to each face of the cube
 	for(int i = 0; i < 6; i++)
 	{
+		// The indices have to match up with the socket names in the CubeSocketInfo dataAsset
 		switch (i)
 		{
-			//backwards
+			//front
 			case 0:
-				placeDir = {-1, 0, 0};
+				placeDir = {1, 0, 0};
 				break;
 
-			//forwards
+			//back
 			case 1:
-				placeDir = {1, 0, 0};
+				placeDir = {-1, 0, 0};
 				break;
 
 			//left
@@ -68,6 +69,9 @@ void ACubeConnector::Placement()
 				break;
 		}
 
+		// Don't do anything if there's already something in the current direction slot.
+		if(socketInfo->ObjectInSocket(i)) continue;;
+		
 		FHitResult hit;
 		const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
 		const FVector start = pivot->GetComponentLocation();
@@ -77,51 +81,43 @@ void ACubeConnector::Placement()
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 		// Go to the next ray if it didn't hit anything...
-		if(!hit.bBlockingHit) continue;
+		if(!hit.bBlockingHit)
+		{
+			hitObj = 0;
+			objCore = 0;
+			continue;
+		}
 		
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();
 		if(!hitActor) continue;
 
-		float shortestDistance = 9999999;
 		FName closestSocket = "None";
 
-		hitObj = Cast<APickupableMaster>(hitActor);
-		if(hitObj)
+		if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
+		else
 		{
-			// Attempt to cast to the cubecore
-			if(hitObj->IsA<ACubeCore>())
+			objCore = 0;
+			hitObj = 0;
+		}
+		if(!IsValid(hitObj)) continue;
+
+		float shortestDistance = 9999999;
+		
+		// Attempt to cast to the cubecore
+		if(hitObj->IsA<ACubeCore>())
+		{
+			// All the previous checks ensure that the cast is valid
+			objCore = Cast<ACubeCore>(hitObj);
+			const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+
+			for(const auto& socket: coreMesh->GetAllSocketNames())
 			{
-				objCore = Cast<ACubeCore>(hitObj);
-				const UStaticMeshComponent* coreMesh = objCore->GetMesh();
-	
-				for(const auto& socket: coreMesh->GetAllSocketNames())
-				{
-					// If the cube doesn't have an object in its socket...
-					if(objCore->ObjectInSocket(socket)) continue;
+				// If the cube doesn't have an object in its socket...
+				if(objCore->ObjectInSocket(socket)) continue;
 
-					// Compare the distance between the current socket and this connector's mesh
-					const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
-					if(distance < shortestDistance)
-					{
-						shortestDistance = distance;
-						closestSocket = socket;
-					}
-				}
-
-				attachedSocket = closestSocket;
-				hitObj = nullptr;
-				break;
-			}
-
-			// Foreach of the connector's sockets
-			for(const auto& socket: objMesh->GetAllSocketNames())
-			{
-				// If the socket is free...
-				if(ObjectInSocket(socket)) continue;
-
-				// Compare the distances between the current socket and the impact point
-				const float distance = FVector::Distance(objMesh->GetSocketLocation(socket), hit.ImpactPoint);
+				// Compare the distance between the current socket and this connector's mesh
+				const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
 				if(distance < shortestDistance)
 				{
 					shortestDistance = distance;
@@ -130,11 +126,31 @@ void ACubeConnector::Placement()
 			}
 
 			attachedSocket = closestSocket;
-			objCore = nullptr;
-			hitObj->SetCore(this);
+			hitObj = nullptr;
+
+			GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Somehow mafe it");
 			break;
 		}
 
+		// Foreach of the connector's sockets
+		for(const auto& socket: objMesh->GetAllSocketNames())
+		{
+			// If the socket is free...
+			if(ObjectInSocket(socket)) continue;
+
+			// Compare the distances between the current socket and the impact point
+			const float distance = FVector::Distance(objMesh->GetSocketLocation(socket), hit.ImpactPoint);
+			if(distance < shortestDistance)
+			{
+				shortestDistance = distance;
+				closestSocket = socket;
+			}
+		}
+
+		attachedSocket = closestSocket;
+		objCore = nullptr;
+		hitObj->SetCore(this);
+		break;
 	}
 }
 
@@ -148,12 +164,15 @@ void ACubeConnector::SetSelected(const bool value)
 		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 		active = false;
 		
-		if(objCore) objCore->RemoveAttachment(attachedSocket);
+		if(!IsValid(objCore)) return;
+
+		objCore->RemoveAttachment(attachedSocket);
 		return;
 	}
 
 	// Rotate/Manipulate self when it hits the core
-	if(!objCore) return;
+	if(!IsValid(objCore)) return;
+	
 	ResetRotation();
 
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
@@ -164,10 +183,16 @@ void ACubeConnector::SetSelected(const bool value)
 	// Rotate to match the socket rotation
 	objMesh->SetWorldRotation(rot);
 
-
 	// Attach self to the core
-	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
-	objMesh->AttachToComponent(objCore->GetMesh(), rules, attachedSocket);
-
+	objMesh->AttachToComponent(objCore->GetMesh(), attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
+}
+
+void ACubeConnector::SetAbilityActive(bool value)
+{
+	if(!IsValid(objCore)) return;
+
+	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Somehow mafe it");
+	
+	Super::SetAbilityActive(value);
 }

@@ -231,7 +231,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_GetMass_Statics::Function_MetaDataParams[] = {
-		{ "BlueprintGetter", "" },
 		{ "ModuleRelativePath", "Pickups/PickupableMaster.h" },
 	};
 #endif
@@ -640,7 +639,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_APickupableMaster_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_APickupableMaster_AddAttachment, "AddAttachment" }, // 2741499387
 		{ &Z_Construct_UFunction_APickupableMaster_AscendDescend, "AscendDescend" }, // 2074423749
-		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 3503931810
+		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 4115861574
 		{ &Z_Construct_UFunction_APickupableMaster_GetMesh, "GetMesh" }, // 568971449
 		{ &Z_Construct_UFunction_APickupableMaster_GravitySelection, "GravitySelection" }, // 3848286903
 		{ &Z_Construct_UFunction_APickupableMaster_RemoveAttachment, "RemoveAttachment" }, // 4290359571
@@ -778,9 +777,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 1705925542U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 240954586U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_3506210485(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_3513624051(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

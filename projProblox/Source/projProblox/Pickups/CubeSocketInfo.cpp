@@ -18,7 +18,15 @@ bool UCubeSocketInfo::ObjectInSocket(const FName& socket) const
 	else if (str_socket == sockets[5]) index = 5;
 
 	// Check if the index is within bounds and the pointer is valid
-	return socketObjects.IsValidIndex(index) && socketObjects[index] != nullptr;
+	return socketObjects.IsValidIndex(index) && IsValid(socketObjects[index]);
+}
+
+bool UCubeSocketInfo::ObjectInSocket(int index) const
+{
+	if (socketObjects.IsEmpty()) return false;
+
+	// Check if the index is within bounds and the pointer is valid
+	return socketObjects.IsValidIndex(index) && IsValid(socketObjects[index]);
 }
 
 void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
@@ -60,7 +68,7 @@ TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const
 	TArray<AActor*> output;
 	for (const auto& obj : socketObjects)
 	{
-		if(obj == nullptr) continue;
+		if(!IsValid(obj)) continue;
 
 		output.Add(obj);
 	}
@@ -75,7 +83,7 @@ TArray<APickupableMaster*> UCubeSocketInfo::GetAttachments() const
 	TArray<APickupableMaster*> output;
 	for (const auto& obj : socketObjects)
 	{
-		if(obj == nullptr) continue;
+		if(!IsValid(obj)) continue;
 
 		output.Add(obj);
 	}

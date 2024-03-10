@@ -41,19 +41,25 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	// When the hold button is let go
 	if(!holding)
 	{
-		if(!selectedObj) return;
+		if(!IsValid(selectedObj)) return;
 
 		selectedObj->SetSelected(false);
 		selectedObj = nullptr;
 		return;
 	}
 
-	if(selectedObj) return;
-
+	if(IsValid(selectedObj)) return;
 	if(!hit.bBlockingHit) return;
+
+	AActor* hitActor = hit.GetActor();
 	
-	selectedObj = Cast<APickupableMaster>(hit.GetActor());
-	if(selectedObj) selectedObj->SetSelected(true);
+	if(!IsValid(hitActor)) return;
+	
+	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
+	{
+		selectedObj = obj;
+		selectedObj->SetSelected(true);
+	}
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)

@@ -24,6 +24,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(const FName& socket) const;
+	bool ObjectInSocket(int index) const;
 
 	UFUNCTION(BlueprintCallable)
 	void AddAttachment(APickupableMaster* attachment, FName socket);
@@ -37,5 +38,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	TArray<APickupableMaster*> GetAttachments() const;
 
+	void DeleteData() { sockets.Empty(); socketObjects.Empty(); ConditionalBeginDestroy(); }
+	
 protected:
 };

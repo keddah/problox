@@ -50,6 +50,9 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* objCore;
+
+	const FAttachmentTransformRules attachRules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+
 	
 	/////////////////// FUNCTIONS ///////////////////
 	
@@ -100,6 +103,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void AscendDescend(const float inputValue) { objMesh->AddWorldOffset(FVector::UpVector * inputValue); }
 
-	UFUNCTION(BlueprintGetter)
+	UFUNCTION(BlueprintPure)
 	virtual float GetMass() const { return objMesh->GetMass(); }
 };

@@ -53,36 +53,34 @@ void APickupableMaster::Placement()
 	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
 
-	if(hit.GetActor()) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, hit.GetActor()->GetName());
-	if(!hit.bBlockingHit) return;
-	
-	objCore = Cast<ACubeCore>(hit.GetActor());
-	if(objCore) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, objCore->GetName());
-	
-	// If the cast was unsuccessful....
-	if(!objCore)
+	if(!hit.bBlockingHit)
 	{
-		// Delete or set as null??
-		objCore = nullptr;
-		// delete objCore;
+		objCore = 0;
 		return;
 	}
+	
+	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) objCore = core;
+	else objCore = nullptr;
+	if(!IsValid(objCore)) return;
 	
 	// objCore has been set to the hit actor.
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
 	
 	float shortestDistance = 9999999;
 	FName closestSocket = "None";
-	
-	for(const auto& socket: coreMesh->GetAllSocketNames())
+
+	for(int i = 0; i < 2; i++)
 	{
-		if(objCore) if(objCore->ObjectInSocket(socket)) continue;
-		
-		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
-		if(distance < shortestDistance)
+		for(const auto& socket: coreMesh->GetAllSocketNames())
 		{
-			shortestDistance = distance;
-			closestSocket = socket;
+			if(objCore) if(objCore->ObjectInSocket(socket)) continue;
+			
+			const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+			if(distance < shortestDistance)
+			{
+				shortestDistance = distance;
+				closestSocket = socket;
+			}
 		}
 	}
 	
@@ -123,15 +121,16 @@ void APickupableMaster::SetSelected(const bool value)
 
 	if(selected)
 	{
-		if(!objCore) return;
+		if(!IsValid(objCore)) return;
 
 		objCore->RemoveAttachment(attachedSocket);
 		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+		// objCore = nullptr;
 		active = false;
 		return;
 	}
 
-	if(!objCore) return;
+	if(!IsValid(objCore)) return;
 
 	ResetRotation();
 
@@ -146,9 +145,7 @@ void APickupableMaster::SetSelected(const bool value)
 	// Rotate to match the socket rotation
 	objMesh->SetWorldRotation(rot);
 
-	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
-
-	objMesh->AttachToComponent(coreMesh, rules, attachedSocket);
+	objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 }
 
