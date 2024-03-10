@@ -93,7 +93,7 @@ void APickupableMaster::Ability()
 {
 }
 
-void APickupableMaster::AddAttachment(APickupableMaster* attachment, FName socket)
+void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	attachedSocket = socket;
 }
@@ -136,15 +136,15 @@ void APickupableMaster::SetSelected(const bool value)
 	ResetRotation();
 
 	UStaticMeshComponent* coreMesh = objCore->GetMesh();
-	const FRotator socketRotation = coreMesh->GetSocketRotation(attachedSocket);
-	FVector socketDirection;
-	
-	if(placeDir.X != 0) socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::X);
-	else if(placeDir.Y != 0) socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Y);
-	else if(placeDir.Z != 0) socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+	
 	// Rotate to match the socket rotation
-	objMesh->SetWorldRotation(socketDirection.Rotation());
+	objMesh->SetWorldRotation(rot);
 
 	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "PickupableMaster.generated.h"
 
 class ACubeCore;
@@ -57,10 +58,10 @@ protected:
 	virtual void Ability();
 
 	UFUNCTION(BlueprintCallable)
-	virtual void AddAttachment(APickupableMaster* attachment, FName socket);
+	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
 
 	UFUNCTION(BlueprintCallable)
-	virtual void RemoveAttachment(FName socket) { attachedSocket = "None"; }
+	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 	
 	FName attachedSocket;
 	
@@ -97,7 +98,7 @@ public:
 	void SetAttachedSocket(FName socket) { attachedSocket = socket; }
 
 	UFUNCTION(BlueprintCallable)
-	void AscendDescend(const float inputValue) { objMesh->AddLocalOffset(FVector::UpVector * inputValue); }
+	void AscendDescend(const float inputValue) { objMesh->AddWorldOffset(FVector::UpVector * inputValue); }
 
 	UFUNCTION(BlueprintGetter)
 	virtual float GetMass() const { return objMesh->GetMass(); }

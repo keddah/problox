@@ -21,7 +21,7 @@ void ACubeCore::BeginPlay()
 	AdjustRange();
 }
 
-void ACubeCore::RemoveAttachment(FName socket)
+void ACubeCore::RemoveAttachment(const FName& socket)
 {
 	Super::RemoveAttachment(socket);
 
@@ -30,6 +30,7 @@ void ACubeCore::RemoveAttachment(FName socket)
 
 void ACubeCore::SetAbilityActive(bool value)
 {
+	if(!isCore) return;
 	for (const auto& obj : socketInfo->GetAttachments()) obj->SetAbilityActive(value);
 }
 
@@ -50,13 +51,12 @@ void ACubeCore::SetSelected(const bool value)
 
 	hitObj->ResetRotation();
 
-	const FRotator socketRotation = objMesh->GetSocketRotation(attachedSocket);
-	const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
-
 	UStaticMeshComponent* hitMesh = hitObj->GetMesh();
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(attachedSocket));
+	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 	
 	// Rotate to match the socket rotation
-	hitMesh->SetWorldRotation(socketDirection.Rotation());
+	hitMesh->SetWorldRotation(rot);
 
 	const FAttachmentTransformRules rules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 	
@@ -126,7 +126,7 @@ void ACubeCore::Tick(float DeltaTime)
 	// }
 }
 
-void ACubeCore::AddAttachment(APickupableMaster* attachment, FName socket)
+void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	Super::AddAttachment(attachment, socket);
 

@@ -91,19 +91,19 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	}
 	DEFINE_FUNCTION(APickupableMaster::execRemoveAttachment)
 	{
-		P_GET_PROPERTY(FNameProperty,Z_Param_socket);
+		P_GET_PROPERTY_REF(FNameProperty,Z_Param_Out_socket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->RemoveAttachment(Z_Param_socket);
+		P_THIS->RemoveAttachment(Z_Param_Out_socket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(APickupableMaster::execAddAttachment)
 	{
 		P_GET_OBJECT(APickupableMaster,Z_Param_attachment);
-		P_GET_PROPERTY(FNameProperty,Z_Param_socket);
+		P_GET_PROPERTY_REF(FNameProperty,Z_Param_Out_socket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AddAttachment(Z_Param_attachment,Z_Param_socket);
+		P_THIS->AddAttachment(Z_Param_attachment,Z_Param_Out_socket);
 		P_NATIVE_END;
 	}
 	void APickupableMaster::StaticRegisterNativesAPickupableMaster()
@@ -132,6 +132,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 			FName socket;
 		};
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_attachment;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_socket_MetaData[];
+#endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_socket;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
@@ -140,7 +143,12 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_attachment = { "attachment", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventAddAttachment_Parms, attachment), Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_socket = { "socket", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventAddAttachment_Parms, socket), METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_socket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_socket = { "socket", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventAddAttachment_Parms, socket), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_socket_MetaData), Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_socket_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_attachment,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::NewProp_socket,
@@ -150,7 +158,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ "ModuleRelativePath", "Pickups/PickupableMaster.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "AddAttachment", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PickupableMaster_eventAddAttachment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "AddAttachment", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PickupableMaster_eventAddAttachment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::Function_MetaDataParams) };
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PropPointers) < 2048);
 	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_AddAttachment_Statics::PickupableMaster_eventAddAttachment_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_APickupableMaster_AddAttachment()
@@ -315,6 +323,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{
 			FName socket;
 		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_socket_MetaData[];
+#endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_socket;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
@@ -322,7 +333,12 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::NewProp_socket = { "socket", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventRemoveAttachment_Parms, socket), METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::NewProp_socket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::NewProp_socket = { "socket", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventRemoveAttachment_Parms, socket), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::NewProp_socket_MetaData), Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::NewProp_socket_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::NewProp_socket,
 	};
@@ -331,7 +347,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ "ModuleRelativePath", "Pickups/PickupableMaster.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "RemoveAttachment", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PickupableMaster_eventRemoveAttachment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "RemoveAttachment", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PickupableMaster_eventRemoveAttachment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::Function_MetaDataParams) };
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PropPointers) < 2048);
 	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_RemoveAttachment_Statics::PickupableMaster_eventRemoveAttachment_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_APickupableMaster_RemoveAttachment()
@@ -622,12 +638,12 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APickupableMaster_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_APickupableMaster_AddAttachment, "AddAttachment" }, // 2410992574
+		{ &Z_Construct_UFunction_APickupableMaster_AddAttachment, "AddAttachment" }, // 2741499387
 		{ &Z_Construct_UFunction_APickupableMaster_AscendDescend, "AscendDescend" }, // 2074423749
 		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 3503931810
 		{ &Z_Construct_UFunction_APickupableMaster_GetMesh, "GetMesh" }, // 568971449
 		{ &Z_Construct_UFunction_APickupableMaster_GravitySelection, "GravitySelection" }, // 3848286903
-		{ &Z_Construct_UFunction_APickupableMaster_RemoveAttachment, "RemoveAttachment" }, // 2818181948
+		{ &Z_Construct_UFunction_APickupableMaster_RemoveAttachment, "RemoveAttachment" }, // 4290359571
 		{ &Z_Construct_UFunction_APickupableMaster_ResetRotation, "ResetRotation" }, // 3063790737
 		{ &Z_Construct_UFunction_APickupableMaster_RotateMesh, "RotateMesh" }, // 152319599
 		{ &Z_Construct_UFunction_APickupableMaster_SetAbilityActive, "SetAbilityActive" }, // 4019941948
@@ -762,9 +778,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 3621862219U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 1705925542U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_1104022340(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_3506210485(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

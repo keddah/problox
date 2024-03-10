@@ -33,13 +33,15 @@ protected:
 
 	APickupableMaster* hitObj;
 
+	bool isCore = true;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void AddAttachment(APickupableMaster* attachment, FName socket) override;
+	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 
-	virtual void RemoveAttachment(FName socket) override;
+	virtual void RemoveAttachment(const FName& socket) override;
 
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };

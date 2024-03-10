@@ -6,6 +6,7 @@
 ACubeConnector::ACubeConnector()
 {
 	defaultPlaceDir = placeDir;
+	isCore = false;
 }
 
 void ACubeConnector::BeginPlay()
@@ -157,11 +158,11 @@ void ACubeConnector::SetSelected(const bool value)
 
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
 	
-	const FRotator socketRotation = coreMesh->GetSocketRotation(attachedSocket);
-	const FVector socketDirection = FRotationMatrix(socketRotation).GetScaledAxis(EAxis::Z);
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 	
 	// Rotate to match the socket rotation
-	objMesh->SetWorldRotation(socketDirection.Rotation());
+	objMesh->SetWorldRotation(rot);
 
 
 	// Attach self to the core

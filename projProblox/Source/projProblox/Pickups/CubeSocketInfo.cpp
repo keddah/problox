@@ -70,6 +70,8 @@ TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const
 
 TArray<APickupableMaster*> UCubeSocketInfo::GetAttachments() const
 {
+	if(socketObjects.IsEmpty()) return {};
+	
 	TArray<APickupableMaster*> output;
 	for (const auto& obj : socketObjects)
 	{
