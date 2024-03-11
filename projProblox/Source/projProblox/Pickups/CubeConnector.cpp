@@ -25,6 +25,8 @@ void ACubeConnector::Placement()
 	GravitySelection();
 	
 	if(!selected) return;
+	FRotator rot = objMesh->GetComponentRotation(); 
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw));
 
 	const UWorld* wrld = GetWorld();
 	FCollisionQueryParams collisionParams;
@@ -127,8 +129,6 @@ void ACubeConnector::Placement()
 
 			attachedSocket = closestSocket;
 			hitObj = nullptr;
-
-			GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Somehow mafe it");
 			break;
 		}
 
@@ -173,16 +173,15 @@ void ACubeConnector::SetSelected(const bool value)
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(objCore)) return;
 	
-	ResetRotation();
-
-	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
-	
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objCore->GetMesh()->GetSocketRotation(attachedSocket));
 	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 	
-	// Rotate to match the socket rotation
-	objMesh->SetWorldRotation(rot);
+	// Rotate to match the socket rotation but incorporate the crot1urrent rotation
+	// const FRotator currentRot = RoundRotation(objMesh->GetComponentRotation(), 90);
+	// const FRotator newRot =  currentRot + (rot - FRotator(0, 0, currentRot.Roll));
 
+	objMesh->SetWorldRotation(rot);
+	
 	// Attach self to the core
 	objMesh->AttachToComponent(objCore->GetMesh(), attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
@@ -192,7 +191,5 @@ void ACubeConnector::SetAbilityActive(bool value)
 {
 	if(!IsValid(objCore)) return;
 
-	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Somehow mafe it");
-	
 	Super::SetAbilityActive(value);
 }

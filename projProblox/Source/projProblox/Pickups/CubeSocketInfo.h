@@ -38,7 +38,5 @@ public:
 	UFUNCTION(BlueprintCallable)
 	TArray<APickupableMaster*> GetAttachments() const;
 
-	void DeleteData() { sockets.Empty(); socketObjects.Empty(); ConditionalBeginDestroy(); }
-	
 protected:
 };

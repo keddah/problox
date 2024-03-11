@@ -67,7 +67,18 @@ protected:
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 	
 	FName attachedSocket;
-	
+
+	static FRotator RoundRotation(const FRotator& rotation, float roundTo)
+	{
+		// Quantize each component of the Rotator using Frac and Floor
+		FRotator rounded;
+		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / roundTo) * roundTo;
+		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / roundTo) * roundTo;
+		rounded.Roll = FMath::FloorToFloat(rotation.Roll / roundTo) * roundTo;
+
+		return rounded;
+	}
+
 private:
 	FRotator defaultRot{};
 	
@@ -79,12 +90,12 @@ public:
 	virtual void SetAbilityActive(const bool value) { active = value; }
 	
 	UFUNCTION(BlueprintCallable)
-	void RotateMesh(const FRotator& rotation) { objMesh->AddRelativeRotation(rotation); }
+	void RotateMesh(const FRotator& rotation);
 
 	UFUNCTION(BlueprintCallable)
 	void SnapRotateMesh(const bool hori) { RotateMesh(hori? FRotator{0,90,00} : FRotator{90,0,0}); }
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	void ResetRotation(bool resetVelocity = false);
 	
 	// Enable/Disable gravity when selected/deselected

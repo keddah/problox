@@ -115,6 +115,17 @@ void APickupableMaster::Tick(float DeltaTime)
 	Placement();
 }
 
+void APickupableMaster::RotateMesh(const FRotator& rotation)
+{
+	if(!selected) return;
+	
+	FRotator dirRot;
+	if(placeDir.X != 0) dirRot = UKismetMathLibrary::MakeRotFromX(placeDir);
+	else if(placeDir.Y != 0) dirRot = UKismetMathLibrary::MakeRotFromY(placeDir);
+	else if(placeDir.Z != 0) dirRot = UKismetMathLibrary::MakeRotFromZ(placeDir);
+	objMesh->AddRelativeRotation(rotation);
+}
+
 void APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
@@ -141,10 +152,12 @@ void APickupableMaster::SetSelected(const bool value)
 	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
 	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
 	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-	
+
 	// Rotate to match the socket rotation
 	objMesh->SetWorldRotation(rot);
-
+	
+		
+	
 	objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 }

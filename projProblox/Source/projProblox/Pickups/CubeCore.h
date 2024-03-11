@@ -18,13 +18,11 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 protected:
 	ACubeCore();
 
-	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;;
-
-	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	// A data asset that contains an array of things that are attached to each face of the cube.
+	UPROPERTY(EditDefaultsOnly)
 	UCubeSocketInfo* socketInfo;
 
 	UPROPERTY(EditDefaultsOnly)

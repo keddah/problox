@@ -14,14 +14,6 @@ ACubeCore::ACubeCore()
 	placeRange = 50;
 }
 
-void ACubeCore::EndPlay(const EEndPlayReason::Type EndPlayReason)
-{
-	Super::EndPlay(EndPlayReason);
-	
-	// Delete the data asset when the object is destroyed / game ends
-	socketInfo->DeleteData();
-}
-
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
@@ -57,6 +49,8 @@ void ACubeCore::SetSelected(const bool value)
 	UStaticMeshComponent* hitMesh = hitObj->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(attachedSocket));
 	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	// Rotate to match the socket rotation.
 	
 	// Rotate to match the socket rotation
 	hitMesh->SetWorldRotation(rot);
