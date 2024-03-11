@@ -72,6 +72,12 @@
     <ClInclude Include="..\..\Source\projProblox\Pickups\PickupableMaster.h">
       <Filter>Source\projProblox\Pickups</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickups\Piston.cpp">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickups\Piston.h">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickups\Propeller.cpp">
       <Filter>Source\projProblox\Pickups</Filter>
     </ClCompile>

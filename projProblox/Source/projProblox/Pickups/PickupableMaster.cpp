@@ -16,10 +16,14 @@ APickupableMaster::APickupableMaster()
 	objMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	objMesh->AttachToComponent(scene, FAttachmentTransformRules::KeepRelativeTransform);
 	objMesh->SetSimulatePhysics(true);
+	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	objMesh->SetGenerateOverlapEvents(true);
+	
 	
 	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collision"));
 	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
 	collider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	collider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
 	
 	defaultRot = objMesh->GetRelativeRotation();
 
@@ -136,7 +140,6 @@ void APickupableMaster::SetSelected(const bool value)
 
 		objCore->RemoveAttachment(attachedSocket);
 		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-		// objCore = nullptr;
 		active = false;
 		return;
 	}

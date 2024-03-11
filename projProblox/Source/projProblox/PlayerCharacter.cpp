@@ -54,11 +54,14 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	AActor* hitActor = hit.GetActor();
 	
 	if(!IsValid(hitActor)) return;
+
+	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "hit thing " + hitActor->GetName());
 	
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
+		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "casted to " + selectedObj->GetName());
 	}
 }
 
@@ -79,26 +82,3 @@ void APlayerCharacter::MoveSelection(const FVector& mousePos)
 
 	selectedObj->GetMesh()->SetWorldLocation({mousePos.X, mousePos.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
 }
-
-// FHitResult APlayerCharacter::GetCursorLocation(FVector& rLocation, FVector& rDirection) const
-// {
-// 	FHitResult hit;
-//
-// 	const UWorld* wrld = GetWorld();
-// 	const FVector start = GetActorLocation();
-//
-// 	FCollisionQueryParams traceParams;
-// 	traceParams.AddIgnoredActors(exclusions);
-// 	traceParams.AddIgnoredActor(this);
-// 	traceParams.MobilityType = EQueryMobilityType::Any;
-//
-// 	APlayerController* controller = Cast<APlayerController>(GetController());
-// 	if(!controller->DeprojectMousePositionToWorld(rLocation, rDirection)) return hit;
-// 	
-// 	wrld->LineTraceSingleByChannel(hit, start, start + rDirection * mouseDistance,ECC_Camera, traceParams);
-// 	
-// 	if(hit.bBlockingHit) rLocation = hit.ImpactPoint;
-// 	else rLocation = hit.TraceEnd;
-// 	return hit;
-// }
-

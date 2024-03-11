@@ -27,13 +27,13 @@ protected:
 	/////////////////// PROPERTIES ///////////////////
 
 	// Blueprint visible components..
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	USceneComponent* scene;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* objMesh;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UBoxComponent* collider;
 
 	UPROPERTY(BlueprintReadOnly)
@@ -42,7 +42,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
 
 	UPROPERTY(BlueprintReadWrite)
@@ -53,6 +53,8 @@ protected:
 
 	const FAttachmentTransformRules attachRules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 
+	UPROPERTY(BlueprintReadOnly)
+	FName attachedSocket;
 	
 	/////////////////// FUNCTIONS ///////////////////
 	
@@ -66,7 +68,6 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 	
-	FName attachedSocket;
 
 	static FRotator RoundRotation(const FRotator& rotation, float roundTo)
 	{
