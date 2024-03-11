@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x194F7956,
-				0xFB08F5EB,
+				0xE80B8B95,
+				0x07F394FF,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x194F7956, 0xFB08F5EB));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xE80B8B95, 0x07F394FF));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

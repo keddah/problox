@@ -68531,3 +68531,608 @@ Script Stack (0 frames) :
 [2024.03.11-16.45.51:140][385]LogFileHelpers: InternalPromptForCheckoutAndSave took 95 ms (total: 14.1 sec)
 [2024.03.11-16.45.51:141][385]AssetCheck: New page: Asset Save: Sandbox
 [2024.03.11-16.45.51:141][385]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
+[2024.03.11-16.48.44:938][126]Running C:/Program Files/Epic Games/UE_5.3/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" -game -rocket -progress
+[2024.03.11-16.48.45:070][126]Using bundled DotNet SDK version: 6.0.302
+[2024.03.11-16.48.45:070][126]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" -game -rocket -progress
+[2024.03.11-16.48.45:872][126]Log file: C:\Users\Deany\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2024.03.11-16.48.46:874][126]
+[2024.03.11-16.48.46:874][126]Some Platforms were skipped due to invalid SDK setup: IOS, Android, Linux, LinuxArm64.
+[2024.03.11-16.48.46:874][126]See the log file for detailed information
+[2024.03.11-16.48.46:874][126]
+[2024.03.11-16.48.46:874][126]
+[2024.03.11-16.48.46:874][126]Generating VisualStudio project files:
+[2024.03.11-16.48.46:874][126]Discovering modules, targets and source code for project...
+[2024.03.11-16.48.52:487][126]Binding IntelliSense data...
+[2024.03.11-16.49.17:654][126]Binding IntelliSense data... 75%
+[2024.03.11-16.49.17:655][126]Binding IntelliSense data... 100%
+[2024.03.11-16.49.17:655][126]Creating common properties file...
+[2024.03.11-16.49.17:655][126]Creating common properties file... 0%
+[2024.03.11-16.49.17:655][126]Writing project files...
+[2024.03.11-16.49.19:568][126]Writing project files... 100%
+[2024.03.11-16.49.19:569][126]
+[2024.03.11-16.49.19:569][126]Generating QueryTargets data for editor...
+[2024.03.11-16.49.19:798][126]Candidate modules for hot reload:
+[2024.03.11-16.49.19:798][126]  projProblox
+[2024.03.11-16.49.19:806][126]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.3/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=projProblox,2705 projProbloxEditor Win64 Development -Project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" "C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject"  -IgnoreJunk]
+[2024.03.11-16.49.39:059][126]CompilerResultsLog: New page: Compilation - 11 Mar 2024, 16:49:39
+[2024.03.11-16.49.39:059][126]CompilerResultsLog: Using bundled DotNet SDK version: 6.0.302
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=projProblox,2705 projProbloxEditor Win64 Development -Project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" "C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject"  -IgnoreJunk
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Log file: C:\Users\Deany\AppData\Local\UnrealBuildTool\Log.txt
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Deany\Documents\GitHub\problox).
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Creating makefile for projProbloxEditor (no existing makefile)
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Parsing headers for projProbloxEditor
+[2024.03.11-16.49.39:060][126]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\Deany\Documents\GitHub\problox\projProblox\projProblox.uproject C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\projProbloxEditor\Development\projProbloxEditor.uhtmanifest -WarningsAsErrors -installed
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Total of 3 written
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Reflection code generated for projProbloxEditor in 2.4373965 seconds
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Building projProbloxEditor...
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Using Visual Studio 2022 14.37.32822 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: [Adaptive Build] Excluded from projProblox unity file: Treads.cpp
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2024.03.11-16.49.39:060][126]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2024.03.11-16.49.39:060][126]CompilerResultsLog:   Requested 1.5 GB memory per action, 2.55 GB available: limiting max parallel actions to 1
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Distributing 6 actions to XGE
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: UnrealBuildTool Compile
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: License not activated:
+[2024.03.11-16.49.39:060][126]CompilerResultsLog:     License is not activated. Please activate the license in the coordinator.
+[2024.03.11-16.49.39:060][126]CompilerResultsLog:     This build will run in standalone mode.
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: -------------------------------------------------------------------------------
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Build ID: {20220C77-2500-4376-8A18-2C211858174B}
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: [1/6] Compile [x64] Treads.cpp (0:00.96 at +0:00)
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickups\Treads.cpp(4): fatal error C1083: Cannot open include file: 'Pickups/Treads.h': No such file or directory
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: Error executing C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\Hostx64\x64\cl.exe (tool returned code: 2)
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: [2/6] Compile [x64] Treads.gen.cpp (0:00.95 at +0:00)
+[2024.03.11-16.49.39:060][126]CompilerResultsLog: C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickups\Treads.h(6): fatal error C1083: Cannot open include file: 'Pickups/PickupableMaster.h': No such file or directory
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: Error executing C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\Hostx64\x64\cl.exe (tool returned code: 2)
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: [3/6] Compile [x64] projProblox.init.gen.cpp (0:12.43 at +0:00)
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: ---------------------- Done ----------------------
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:061][126]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: 1 build system warning(s):
+[2024.03.11-16.49.39:061][126]CompilerResultsLog:    - License not activated
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: 
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: Total time in XGE executor: 12.99 seconds
+[2024.03.11-16.49.39:061][126]CompilerResultsLog: Total execution time: 18.96 seconds
+[2024.03.11-16.49.39:061][126]LogMainFrame: MainFrame: Module compiling took 19.287 seconds
+[2024.03.11-16.49.39:085][126]Warning: HotReload failed, recompile failed
+[2024.03.11-16.49.39:085][126]Warning: RebindPackages failed because compilation failed.
+[2024.03.11-16.49.40:498][126]LogSlate: Window 'Message' being destroyed
+[2024.03.11-16.49.40:503][126]Message dialog closed, result: Yes, title: Message, text: Successfully added class 'Treads', however you must recompile the 'projProblox' module before it will appear in the Content Browser. Failed to automatically hot reload the 'projProblox' module.
+
+Would you like to open the Output Log to see more details?
+[2024.03.11-16.49.43:887][126]LogSlate: Window 'Add C++ Class' being destroyed
+[2024.03.11-16.49.45:824][226]LogSlate: Window 'Output Log' being destroyed
+[2024.03.11-16.49.45:850][226]LogSlate: Window 'Output Log' being destroyed
+[2024.03.11-16.49.46:030][226]LogHotReload: New module detected: UnrealEditor-projProblox-0191.dll
+[2024.03.11-16.49.47:880][306]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-16.49.47:946][306]LogUObjectHash: Compacting FUObjectHashTables data took   1.55ms
+[2024.03.11-16.49.48:091][306]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-16.49.48:118][306]LogClass: Could not find existing class Treads in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-16.49.48:331][306]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.03.11-16.49.48:430][306]Display: HotReload took  0.5s.
+[2024.03.11-16.49.48:430][306]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 7 classes unchanged, 20 functions remapped
+[2024.03.11-16.50.02:714][124]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads
+[2024.03.11-16.50.02:717][124]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-16.50.02:717][124]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-16.50.02:929][124]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.03.11-16.50.03:069][124]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_30:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-16.50.03:126][124]LogViewport: Scene viewport resized to 1141x691, mode Windowed.
+[2024.03.11-16.50.05:810][362]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-16.50.05:810][362]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-16.50.07:270][471]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.03.11-16.50.07:270][471]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-16.50.07:270][471]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-16.50.14:606][952]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Treads.BP_Treads
+[2024.03.11-16.50.14:606][952]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-16.50.14:606][952]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-16.50.16:531][ 66]LogViewport: Scene viewport resized to 1141x691, mode Windowed.
+[2024.03.11-16.51.49:631][163]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2024.03.11-16.51.49:634][163]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.112
+[2024.03.11-16.51.49:635][163]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/Pickupables/C++/BP_TankTreads] ([2] browsable assets)...
+[2024.03.11-16.51.49:635][163]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-16.51.49:641][163]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-16.51.49:694][163]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads]
+[2024.03.11-16.51.49:694][163]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-16.51.49:702][163]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_33:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-16.51.49:713][163]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C]
+[2024.03.11-16.51.49:713][163]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/C++/BP_TankTreads]
+[2024.03.11-16.51.49:719][163]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-16.51.49:719][163]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-16.51.49:721][163]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/C++/BP_TankTreads_Auto8
+[2024.03.11-16.51.49:721][163]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads_Auto84E3A7F614B28E5C0336A5DA41240A956.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/C++/BP_TankTreads_Auto8.uasset'
+[2024.03.11-16.51.49:722][163]LogFileHelpers: Auto-saving content packages took 0.088
+[2024.03.11-16.53.07:498][166]LogHotReload: New module detected: UnrealEditor-projProblox-0192.dll
+[2024.03.11-16.53.08:172][169]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-16.53.08:261][169]LogUObjectHash: Compacting FUObjectHashTables data took   1.96ms
+[2024.03.11-16.53.08:295][169]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-16.53.08:295][169]LogClass: UClass Treads Reload.
+[2024.03.11-16.53.08:306][169]LogClass: Could not find existing class Treads in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-16.53.08:330][169]Re-instancing Treads after reload.
+[2024.03.11-16.53.08:344][169]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_30:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-16.53.08:345][169]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-16.53.08:346][169]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_33:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-16.53.08:355][169]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-16.53.08:361][169]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-16.53.08:406][169]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-16.53.08:407][169]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-16.53.08:407][169]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_TankTreads
+[2024.03.11-16.53.08:407][169]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreadsB1B4692F425043FA843E23A0151D8D27.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_TankTreads.uasset'
+[2024.03.11-16.53.08:412][169]LogFileHelpers: InternalPromptForCheckoutAndSave took 51 ms (total: 14.2 sec)
+[2024.03.11-16.53.08:522][169]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2024.03.11-16.53.08:566][169]Display: HotReload took  0.4s.
+[2024.03.11-16.53.08:566][169]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 7 classes unchanged, 20 functions remapped
+[2024.03.11-16.53.08:601][169]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.03.11-16.53.08:602][169]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads
+[2024.03.11-16.55.07:146][303]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.03.11-16.55.07:147][303]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.064
+[2024.03.11-16.55.07:148][303]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Blueprints/Pickupables/C++/BP_TankTreads] ([2] browsable assets)...
+[2024.03.11-16.55.07:148][303]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/C++/BP_TankTreads]
+[2024.03.11-16.55.07:150][303]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-16.55.07:150][303]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-16.55.07:151][303]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/C++/BP_TankTreads_Auto9
+[2024.03.11-16.55.07:151][303]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads_Auto94E83074F44C3F2102F3ACAA441166000.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/C++/BP_TankTreads_Auto9.uasset'
+[2024.03.11-16.55.07:152][303]LogFileHelpers: Auto-saving content packages took 0.005
+[2024.03.11-17.00.29:567][ 67]LogHotReload: New module detected: UnrealEditor-projProblox-0193.dll
+[2024.03.11-17.00.30:572][ 71]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.00.30:647][ 71]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.03.11-17.00.30:678][ 71]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.00.30:678][ 71]LogClass: UClass Treads Reload.
+[2024.03.11-17.00.30:690][ 71]LogClass: Could not find existing class Treads in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.00.30:709][ 71]Re-instancing Treads after reload.
+[2024.03.11-17.00.30:741][ 71]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_30:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.00.30:742][ 71]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.00.30:742][ 71]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_33:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.00.30:752][ 71]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.00.30:757][ 71]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.00.30:806][ 71]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-17.00.30:806][ 71]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-17.00.30:807][ 71]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_TankTreads
+[2024.03.11-17.00.30:807][ 71]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreadsCF0E1BE144D834C4138F95A6DD61C392.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_TankTreads.uasset'
+[2024.03.11-17.00.30:808][ 71]LogFileHelpers: InternalPromptForCheckoutAndSave took 51 ms (total: 14.2 sec)
+[2024.03.11-17.00.30:910][ 71]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2024.03.11-17.00.30:954][ 71]Display: HotReload took  0.4s.
+[2024.03.11-17.00.30:955][ 71]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 7 classes unchanged, 20 functions remapped
+[2024.03.11-17.00.30:989][ 71]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.03.11-17.00.30:989][ 71]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads
+[2024.03.11-17.00.40:712][958]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C
+[2024.03.11-17.00.40:713][958]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C
+[2024.03.11-17.00.40:713][958]LogActor: Warning: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.00.40:715][958]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads as actor: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_0
+[2024.03.11-17.00.40:715][958]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads as actor: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_0
+[2024.03.11-17.00.40:722][958]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2024.03.11-17.00.41:294][ 22]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C
+[2024.03.11-17.00.41:294][ 22]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C
+[2024.03.11-17.00.41:296][ 22]LogActor: Warning: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.00.41:296][ 22]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads as actor: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_1
+[2024.03.11-17.00.41:297][ 22]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads as actor: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_1
+[2024.03.11-17.00.42:439][149]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.11-17.00.42:449][149]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.11-17.00.42:449][149]PIE: New page: PIE session: Sandbox (11 Mar 2024, 17:00:42)
+[2024.03.11-17.00.42:482][149]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.00.42:498][149]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015589s)
+[2024.03.11-17.00.42:498][149]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.015624s)
+[2024.03.11-17.00.42:549][149]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2024.03.11-17.00.42:554][149]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.00.42:554][149]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.00.42:554][149]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.11-17.00.42:555][149]LogPlayLevel: PIE: World Init took: (0.000825s)
+[2024.03.11-17.00.42:555][149]LogAudio: Display: Creating Audio Device:                 Id: 184, Scope: Unique, Realtime: True
+[2024.03.11-17.00.42:555][149]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.11-17.00.42:555][149]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.11-17.00.42:555][149]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.11-17.00.42:555][149]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.11-17.00.42:555][149]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.11-17.00.42:555][149]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.11-17.00.42:555][149]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.11-17.00.42:555][149]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.11-17.00.42:555][149]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.11-17.00.42:555][149]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.11-17.00.42:555][149]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.11-17.00.42:557][149]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.11-17.00.42:568][149]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.03.11-17.00.42:568][149]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.11-17.00.42:568][149]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.11-17.00.42:568][149]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.11-17.00.42:569][149]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=184
+[2024.03.11-17.00.42:569][149]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=184
+[2024.03.11-17.00.42:570][149]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=184
+[2024.03.11-17.00.42:570][149]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=184
+[2024.03.11-17.00.42:570][149]LogInit: FAudioDevice initialized with ID 184.
+[2024.03.11-17.00.42:570][149]LogAudio: Display: Audio Device (ID: 184) registered with world 'Sandbox'.
+[2024.03.11-17.00.42:570][149]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 184
+[2024.03.11-17.00.42:578][149]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.11-17.00.42:580][149]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.00.42:580][149]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.00.42:582][149]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.11-17.00.42
+[2024.03.11-17.00.42:582][149]LogWorld: Bringing up level for play took: 0.003219
+[2024.03.11-17.00.42:584][149]LogOnline: OSS: Created online subsystem instance for: :Context_217
+[2024.03.11-17.00.42:681][149]PIE: Server logged in
+[2024.03.11-17.00.42:682][149]PIE: Play in editor total start time 0.236 seconds.
+[2024.03.11-17.00.54:071][138]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.00.54:071][138]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.00.54:074][138]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.00.54:086][138]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.00.54:090][138]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.11-17.00.54:094][138]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.00.54:115][138]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.11-17.00.54:121][138]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 184
+[2024.03.11-17.00.54:121][138]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=184
+[2024.03.11-17.00.54:123][138]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=184
+[2024.03.11-17.00.54:127][138]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.00.54:165][138]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2024.03.11-17.00.54:241][139]LogPlayLevel: Display: Destroying online subsystem :Context_217
+[2024.03.11-17.00.55:593][262]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.00.55:606][262]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.01.14:424][477]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.03.11-17.01.14:429][477]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto0.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2024.03.11-17.01.14:459][477]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Sandbox_Auto0
+[2024.03.11-17.01.14:460][477]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox_Auto05E2BA16A4327BA3810B5DAB2DCB90DBC.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto0.umap'
+[2024.03.11-17.01.14:461][477]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto0.umap is in the /Temp path, will not scan.
+[2024.03.11-17.01.14:462][477]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.050
+[2024.03.11-17.01.14:462][477]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.050
+[2024.03.11-17.02.44:418][786]LogHotReload: New module detected: UnrealEditor-projProblox-0194.dll
+[2024.03.11-17.02.45:135][791]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.02.45:179][791]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2024.03.11-17.02.45:341][791]LogUObjectHash: Compacting FUObjectHashTables data took   1.21ms
+[2024.03.11-17.02.45:388][791]Display: HotReload took  0.3s.
+[2024.03.11-17.02.45:389][791]Display: Reload/Re-instancing Complete: 1 package changed, 8 classes unchanged, 20 functions remapped
+[2024.03.11-17.02.46:214][840]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.11-17.02.46:221][840]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.11-17.02.46:221][840]PIE: New page: PIE session: Sandbox (11 Mar 2024, 17:02:46)
+[2024.03.11-17.02.46:251][840]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.02.46:266][840]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015134s)
+[2024.03.11-17.02.46:266][840]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.015167s)
+[2024.03.11-17.02.46:318][840]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2024.03.11-17.02.46:323][840]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.02.46:323][840]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.02.46:323][840]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.11-17.02.46:323][840]LogPlayLevel: PIE: World Init took: (0.000818s)
+[2024.03.11-17.02.46:323][840]LogAudio: Display: Creating Audio Device:                 Id: 185, Scope: Unique, Realtime: True
+[2024.03.11-17.02.46:323][840]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.11-17.02.46:323][840]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.11-17.02.46:323][840]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.11-17.02.46:323][840]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.11-17.02.46:323][840]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.11-17.02.46:323][840]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.11-17.02.46:324][840]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.11-17.02.46:324][840]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.11-17.02.46:324][840]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.11-17.02.46:324][840]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.11-17.02.46:324][840]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.11-17.02.46:326][840]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.11-17.02.46:337][840]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.03.11-17.02.46:338][840]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.11-17.02.46:338][840]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.11-17.02.46:338][840]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.11-17.02.46:338][840]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=185
+[2024.03.11-17.02.46:338][840]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=185
+[2024.03.11-17.02.46:340][840]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=185
+[2024.03.11-17.02.46:340][840]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=185
+[2024.03.11-17.02.46:340][840]LogInit: FAudioDevice initialized with ID 185.
+[2024.03.11-17.02.46:340][840]LogAudio: Display: Audio Device (ID: 185) registered with world 'Sandbox'.
+[2024.03.11-17.02.46:340][840]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 185
+[2024.03.11-17.02.46:342][840]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.11-17.02.46:343][840]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.02.46:343][840]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.02.46:345][840]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.11-17.02.46
+[2024.03.11-17.02.46:345][840]LogWorld: Bringing up level for play took: 0.003237
+[2024.03.11-17.02.46:347][840]LogOnline: OSS: Created online subsystem instance for: :Context_218
+[2024.03.11-17.02.46:444][840]PIE: Server logged in
+[2024.03.11-17.02.46:445][840]PIE: Play in editor total start time 0.224 seconds.
+[2024.03.11-17.03.04:943][420]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.03.04:943][420]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.03.04:945][420]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.03.04:959][420]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.03.04:962][420]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.11-17.03.04:967][420]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.03.04:979][420]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.11-17.03.04:983][420]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 185
+[2024.03.11-17.03.04:983][420]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=185
+[2024.03.11-17.03.04:985][420]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=185
+[2024.03.11-17.03.04:988][420]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.03.05:020][420]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.03.11-17.03.05:095][421]LogPlayLevel: Display: Destroying online subsystem :Context_218
+[2024.03.11-17.03.07:640][673]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.03.07:652][673]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.03.56:648][ 38]LogHotReload: New module detected: UnrealEditor-projProblox-0195.dll
+[2024.03.11-17.03.57:767][151]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.03.57:810][151]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.03.11-17.03.57:955][151]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2024.03.11-17.03.58:005][151]Display: HotReload took  0.2s.
+[2024.03.11-17.03.58:005][151]Display: Reload/Re-instancing Complete: 1 package changed, 8 classes unchanged, 20 functions remapped
+[2024.03.11-17.03.58:409][157]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.11-17.03.58:418][157]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.11-17.03.58:418][157]PIE: New page: PIE session: Sandbox (11 Mar 2024, 17:03:58)
+[2024.03.11-17.03.58:450][157]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.03.58:465][157]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015039s)
+[2024.03.11-17.03.58:466][157]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.015074s)
+[2024.03.11-17.03.58:517][157]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2024.03.11-17.03.58:522][157]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.03.58:522][157]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.03.58:522][157]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.11-17.03.58:523][157]LogPlayLevel: PIE: World Init took: (0.000884s)
+[2024.03.11-17.03.58:523][157]LogAudio: Display: Creating Audio Device:                 Id: 186, Scope: Unique, Realtime: True
+[2024.03.11-17.03.58:523][157]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.11-17.03.58:523][157]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.11-17.03.58:523][157]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.11-17.03.58:523][157]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.11-17.03.58:523][157]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.11-17.03.58:523][157]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.11-17.03.58:523][157]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.11-17.03.58:523][157]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.11-17.03.58:523][157]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.11-17.03.58:523][157]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.11-17.03.58:523][157]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.11-17.03.58:525][157]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.11-17.03.58:537][157]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.03.11-17.03.58:537][157]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.11-17.03.58:537][157]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.11-17.03.58:537][157]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.11-17.03.58:538][157]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=186
+[2024.03.11-17.03.58:538][157]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=186
+[2024.03.11-17.03.58:539][157]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=186
+[2024.03.11-17.03.58:540][157]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=186
+[2024.03.11-17.03.58:540][157]LogInit: FAudioDevice initialized with ID 186.
+[2024.03.11-17.03.58:540][157]LogAudio: Display: Audio Device (ID: 186) registered with world 'Sandbox'.
+[2024.03.11-17.03.58:540][157]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 186
+[2024.03.11-17.03.58:542][157]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.11-17.03.58:543][157]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.03.58:543][157]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.03.58:545][157]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.11-17.03.58
+[2024.03.11-17.03.58:545][157]LogWorld: Bringing up level for play took: 0.003305
+[2024.03.11-17.03.58:547][157]LogOnline: OSS: Created online subsystem instance for: :Context_219
+[2024.03.11-17.03.58:642][157]PIE: Server logged in
+[2024.03.11-17.03.58:642][157]PIE: Play in editor total start time 0.225 seconds.
+[2024.03.11-17.04.06:851][910]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.04.06:851][910]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.04.06:853][910]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.04.06:864][910]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.04.06:868][910]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.11-17.04.06:872][910]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.04.06:885][910]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.11-17.04.06:895][910]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 186
+[2024.03.11-17.04.06:896][910]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=186
+[2024.03.11-17.04.06:897][910]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=186
+[2024.03.11-17.04.06:901][910]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.04.06:942][910]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2024.03.11-17.04.07:018][911]LogPlayLevel: Display: Destroying online subsystem :Context_219
+[2024.03.11-17.04.08:303][ 24]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.04.08:315][ 24]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.05.47:569][580]LogHotReload: New module detected: UnrealEditor-projProblox-0196.dll
+[2024.03.11-17.05.48:619][697]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.05.48:657][697]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.03.11-17.05.48:793][697]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.03.11-17.05.48:838][697]Display: HotReload took  0.2s.
+[2024.03.11-17.05.48:838][697]Display: Reload/Re-instancing Complete: 1 package changed, 8 classes unchanged, 20 functions remapped
+[2024.03.11-17.05.49:390][719]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.11-17.05.49:398][719]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.11-17.05.49:398][719]PIE: New page: PIE session: Sandbox (11 Mar 2024, 17:05:49)
+[2024.03.11-17.05.49:422][719]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.05.49:437][719]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014915s)
+[2024.03.11-17.05.49:437][719]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.014947s)
+[2024.03.11-17.05.49:489][719]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.03.11-17.05.49:494][719]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.05.49:494][719]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.05.49:494][719]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.11-17.05.49:495][719]LogPlayLevel: PIE: World Init took: (0.000801s)
+[2024.03.11-17.05.49:495][719]LogAudio: Display: Creating Audio Device:                 Id: 187, Scope: Unique, Realtime: True
+[2024.03.11-17.05.49:495][719]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.11-17.05.49:495][719]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.11-17.05.49:495][719]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.11-17.05.49:495][719]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.11-17.05.49:495][719]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.11-17.05.49:495][719]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.11-17.05.49:495][719]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.11-17.05.49:495][719]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.11-17.05.49:495][719]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.11-17.05.49:495][719]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.11-17.05.49:495][719]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.11-17.05.49:497][719]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.11-17.05.49:507][719]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.03.11-17.05.49:508][719]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.11-17.05.49:508][719]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.11-17.05.49:508][719]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.11-17.05.49:508][719]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=187
+[2024.03.11-17.05.49:508][719]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=187
+[2024.03.11-17.05.49:510][719]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=187
+[2024.03.11-17.05.49:510][719]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=187
+[2024.03.11-17.05.49:510][719]LogInit: FAudioDevice initialized with ID 187.
+[2024.03.11-17.05.49:510][719]LogAudio: Display: Audio Device (ID: 187) registered with world 'Sandbox'.
+[2024.03.11-17.05.49:510][719]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 187
+[2024.03.11-17.05.49:511][719]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.11-17.05.49:513][719]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.05.49:513][719]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.05.49:515][719]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.11-17.05.49
+[2024.03.11-17.05.49:515][719]LogWorld: Bringing up level for play took: 0.003136
+[2024.03.11-17.05.49:517][719]LogOnline: OSS: Created online subsystem instance for: :Context_220
+[2024.03.11-17.05.49:613][719]PIE: Server logged in
+[2024.03.11-17.05.49:614][719]PIE: Play in editor total start time 0.215 seconds.
+[2024.03.11-17.05.57:062][408]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.05.57:062][408]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.05.57:064][408]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.05.57:075][408]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.05.57:078][408]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.11-17.05.57:082][408]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.05.57:095][408]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.11-17.05.57:104][408]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 187
+[2024.03.11-17.05.57:104][408]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=187
+[2024.03.11-17.05.57:105][408]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=187
+[2024.03.11-17.05.57:108][408]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.05.57:146][408]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2024.03.11-17.05.57:221][409]LogPlayLevel: Display: Destroying online subsystem :Context_220
+[2024.03.11-17.05.58:147][482]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.05.58:158][482]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.06.22:976][419]LogBlueprintNodeCache: Display: The blueprint template-node cache is full. As a result, you may experience interactions which are slower than normal. To avoid this, increase the cache's cap in the blueprint editor prefences.
+[2024.03.11-17.06.44:849][912]BlueprintLog: New page: Compile BP_TankTreads
+[2024.03.11-17.06.44:855][912]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_30:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.06.44:856][912]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_33:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.06.44:856][912]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.06.44:856][912]LogActor: Warning: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.06.44:896][912]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2024.03.11-17.06.44:901][912]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.06.44:909][912]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.06.44:980][912]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-17.06.44:980][912]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-17.06.44:981][912]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_TankTreads
+[2024.03.11-17.06.44:982][912]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads3AC310B745A52A7C7A9D048B3696488B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_TankTreads.uasset'
+[2024.03.11-17.06.44:987][912]LogFileHelpers: InternalPromptForCheckoutAndSave took 77 ms (total: 14.3 sec)
+[2024.03.11-17.06.44:988][912]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.03.11-17.06.44:988][912]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads
+[2024.03.11-17.06.55:429][225]LogHotReload: New module detected: UnrealEditor-projProblox-0197.dll
+[2024.03.11-17.06.56:192][317]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.06.56:233][317]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.03.11-17.06.56:374][317]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.03.11-17.06.56:421][317]Display: HotReload took  0.2s.
+[2024.03.11-17.06.56:421][317]Display: Reload/Re-instancing Complete: 1 package changed, 8 classes unchanged, 20 functions remapped
+[2024.03.11-17.06.57:183][366]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.11-17.06.57:190][366]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.11-17.06.57:190][366]PIE: New page: PIE session: Sandbox (11 Mar 2024, 17:06:57)
+[2024.03.11-17.06.57:222][366]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.06.57:237][366]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015717s)
+[2024.03.11-17.06.57:237][366]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.015751s)
+[2024.03.11-17.06.57:291][366]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2024.03.11-17.06.57:294][366]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.06.57:294][366]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.06.57:295][366]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.11-17.06.57:295][366]LogPlayLevel: PIE: World Init took: (0.000846s)
+[2024.03.11-17.06.57:295][366]LogAudio: Display: Creating Audio Device:                 Id: 188, Scope: Unique, Realtime: True
+[2024.03.11-17.06.57:295][366]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.11-17.06.57:295][366]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.11-17.06.57:295][366]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.11-17.06.57:295][366]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.11-17.06.57:295][366]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.11-17.06.57:295][366]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.11-17.06.57:295][366]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.11-17.06.57:295][366]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.11-17.06.57:296][366]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.11-17.06.57:296][366]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.11-17.06.57:296][366]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.11-17.06.57:297][366]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.11-17.06.57:308][366]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.03.11-17.06.57:308][366]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.11-17.06.57:308][366]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.11-17.06.57:308][366]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.11-17.06.57:309][366]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=188
+[2024.03.11-17.06.57:309][366]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=188
+[2024.03.11-17.06.57:311][366]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=188
+[2024.03.11-17.06.57:311][366]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=188
+[2024.03.11-17.06.57:311][366]LogInit: FAudioDevice initialized with ID 188.
+[2024.03.11-17.06.57:311][366]LogAudio: Display: Audio Device (ID: 188) registered with world 'Sandbox'.
+[2024.03.11-17.06.57:311][366]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 188
+[2024.03.11-17.06.57:328][366]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.06.57:328][366]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.11-17.06.57:329][366]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.06.57:329][366]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.06.57:331][366]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.11-17.06.57
+[2024.03.11-17.06.57:332][366]LogWorld: Bringing up level for play took: 0.003439
+[2024.03.11-17.06.57:334][366]LogOnline: OSS: Created online subsystem instance for: :Context_221
+[2024.03.11-17.06.57:430][366]PIE: Server logged in
+[2024.03.11-17.06.57:430][366]PIE: Play in editor total start time 0.241 seconds.
+[2024.03.11-17.06.57:722][366]LogViewport: Scene viewport resized to 1911x1000, mode Windowed.
+[2024.03.11-17.07.15:771][704]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.07.15:771][704]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.07.15:771][704]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.11-17.07.15:776][704]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.07.15:788][704]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.07.15:793][704]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.11-17.07.15:798][704]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.07.15:811][704]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.11-17.07.15:821][704]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 188
+[2024.03.11-17.07.15:821][704]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=188
+[2024.03.11-17.07.15:823][704]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=188
+[2024.03.11-17.07.15:877][704]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2024.03.11-17.07.15:977][705]LogPlayLevel: Display: Destroying online subsystem :Context_221
+[2024.03.11-17.07.16:824][783]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.07.16:828][783]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.07.34:729][899]BlueprintLog: New page: Compile BP_TankTreads
+[2024.03.11-17.07.34:756][899]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_30:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.07.34:757][899]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_33:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.07.34:757][899]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.07.34:757][899]LogActor: Warning: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.07.34:797][899]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.03.11-17.07.34:804][899]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.07.34:812][899]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.07.34:850][899]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-17.07.34:850][899]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C' for saving '/Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads_C'
+[2024.03.11-17.07.34:851][899]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_TankTreads
+[2024.03.11-17.07.34:852][899]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads7F7F84DC46A545702C144F997600B3E7.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_TankTreads.uasset'
+[2024.03.11-17.07.34:857][899]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 14.4 sec)
+[2024.03.11-17.07.34:885][899]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.03.11-17.07.34:885][899]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_TankTreads.BP_TankTreads
+[2024.03.11-17.07.40:262][532]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.11-17.07.40:268][532]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.11-17.07.40:268][532]PIE: New page: PIE session: Sandbox (11 Mar 2024, 17:07:40)
+[2024.03.11-17.07.40:268][532]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.07.40:283][532]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014941s)
+[2024.03.11-17.07.40:283][532]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.014967s)
+[2024.03.11-17.07.40:293][532]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2024.03.11-17.07.40:300][532]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.07.40:300][532]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.07.40:300][532]LogAIModule: Creating AISystem for world Sandbox
+[2024.03.11-17.07.40:300][532]LogPlayLevel: PIE: World Init took: (0.000828s)
+[2024.03.11-17.07.40:301][532]LogAudio: Display: Creating Audio Device:                 Id: 189, Scope: Unique, Realtime: True
+[2024.03.11-17.07.40:301][532]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.11-17.07.40:301][532]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.11-17.07.40:301][532]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.11-17.07.40:301][532]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.11-17.07.40:301][532]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.11-17.07.40:301][532]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.11-17.07.40:301][532]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.11-17.07.40:301][532]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.11-17.07.40:301][532]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.11-17.07.40:301][532]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.11-17.07.40:301][532]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.11-17.07.40:303][532]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.11-17.07.40:314][532]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.03.11-17.07.40:314][532]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.11-17.07.40:314][532]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.11-17.07.40:314][532]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.11-17.07.40:315][532]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=189
+[2024.03.11-17.07.40:315][532]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=189
+[2024.03.11-17.07.40:317][532]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=189
+[2024.03.11-17.07.40:317][532]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=189
+[2024.03.11-17.07.40:317][532]LogInit: FAudioDevice initialized with ID 189.
+[2024.03.11-17.07.40:317][532]LogAudio: Display: Audio Device (ID: 189) registered with world 'Sandbox'.
+[2024.03.11-17.07.40:317][532]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 189
+[2024.03.11-17.07.40:340][532]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.07.40:341][532]LogLoad: Game class is 'CustomGameMode_C'
+[2024.03.11-17.07.40:342][532]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.07.40:342][532]PIE: Warning: Invalid Simulate Options: Body (Box Brush2.Box) is set to simulate physics but Collision Enabled is incompatible
+[2024.03.11-17.07.40:344][532]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.03.11-17.07.40
+[2024.03.11-17.07.40:344][532]LogWorld: Bringing up level for play took: 0.003444
+[2024.03.11-17.07.40:346][532]LogOnline: OSS: Created online subsystem instance for: :Context_222
+[2024.03.11-17.07.40:443][532]PIE: Server logged in
+[2024.03.11-17.07.40:444][532]PIE: Play in editor total start time 0.176 seconds.
+[2024.03.11-17.07.40:741][532]LogViewport: Scene viewport resized to 1911x1000, mode Windowed.
+[2024.03.11-17.07.48:832][111]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.11-17.07.48:832][111]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.11-17.07.48:832][111]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.03.11-17.07.48:838][111]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.07.48:850][111]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.07.48:853][111]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.11-17.07.48:857][111]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.07.48:871][111]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 189
+[2024.03.11-17.07.48:871][111]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=189
+[2024.03.11-17.07.48:873][111]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=189
+[2024.03.11-17.07.48:904][111]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2024.03.11-17.07.49:010][112]LogPlayLevel: Display: Destroying online subsystem :Context_222
+[2024.03.11-17.07.49:868][188]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.07.49:872][188]LogSlate: Window 'Message Log' being destroyed
+[2024.03.11-17.07.53:415][611]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.03.11-17.07.53:420][611]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.07.53:439][611]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.03.11-17.07.53:468][611]LogUObjectHash: Compacting FUObjectHashTables data took   0.32ms
+[2024.03.11-17.07.53:498][611]LogSavePackage: Moving output files for package: /Game/Sandbox
+[2024.03.11-17.07.53:498][611]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox091E243C44715E6278B8A5BF0E991657.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap'
+[2024.03.11-17.07.53:504][611]LogFileHelpers: Saving map 'Sandbox' took 0.065
+[2024.03.11-17.07.53:513][611]LogFileHelpers: InternalPromptForCheckoutAndSave took 93 ms (total: 14.5 sec)
+[2024.03.11-17.07.53:515][611]AssetCheck: New page: Asset Save: Sandbox
+[2024.03.11-17.07.53:515][611]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox

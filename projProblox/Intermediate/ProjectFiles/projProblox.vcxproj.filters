@@ -84,5 +84,11 @@
     <ClInclude Include="..\..\Source\projProblox\Pickups\Propeller.h">
       <Filter>Source\projProblox\Pickups</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickups\Treads.cpp">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickups\Treads.h">
+      <Filter>Source\projProblox\Pickups</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
