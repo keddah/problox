@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/Pickups/CubeSocketInfo.h"
+#include "projProblox/CubeSocketInfo.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 // Cross Module References
@@ -90,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCubeSocketInfo_AddAttachment_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCubeSocketInfo_AddAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCubeSocketInfo, nullptr, "AddAttachment", nullptr, nullptr, Z_Construct_UFunction_UCubeSocketInfo_AddAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_AddAttachment_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCubeSocketInfo_AddAttachment_Statics::CubeSocketInfo_eventAddAttachment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_AddAttachment_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCubeSocketInfo_AddAttachment_Statics::Function_MetaDataParams) };
@@ -127,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCubeSocketInfo, nullptr, "GetAttachmentActors", nullptr, nullptr, Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::CubeSocketInfo_eventGetAttachmentActors_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors_Statics::Function_MetaDataParams) };
@@ -164,7 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCubeSocketInfo, nullptr, "GetAttachments", nullptr, nullptr, Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::CubeSocketInfo_eventGetAttachments_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCubeSocketInfo_GetAttachments_Statics::Function_MetaDataParams) };
@@ -215,7 +215,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCubeSocketInfo, nullptr, "ObjectInSocket", nullptr, nullptr, Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket_Statics::CubeSocketInfo_eventObjectInSocket_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket_Statics::Function_MetaDataParams) };
@@ -249,7 +249,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCubeSocketInfo, nullptr, "RemoveAttachment", nullptr, nullptr, Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment_Statics::CubeSocketInfo_eventRemoveAttachment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment_Statics::Function_MetaDataParams) };
@@ -296,11 +296,11 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCubeSocketInfo_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCubeSocketInfo_AddAttachment, "AddAttachment" }, // 2106301276
-		{ &Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors, "GetAttachmentActors" }, // 1365483319
-		{ &Z_Construct_UFunction_UCubeSocketInfo_GetAttachments, "GetAttachments" }, // 216165080
-		{ &Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket, "ObjectInSocket" }, // 3983912390
-		{ &Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment, "RemoveAttachment" }, // 1488195697
+		{ &Z_Construct_UFunction_UCubeSocketInfo_AddAttachment, "AddAttachment" }, // 193658722
+		{ &Z_Construct_UFunction_UCubeSocketInfo_GetAttachmentActors, "GetAttachmentActors" }, // 328770665
+		{ &Z_Construct_UFunction_UCubeSocketInfo_GetAttachments, "GetAttachments" }, // 3202279542
+		{ &Z_Construct_UFunction_UCubeSocketInfo_ObjectInSocket, "ObjectInSocket" }, // 3975000146
+		{ &Z_Construct_UFunction_UCubeSocketInfo_RemoveAttachment, "RemoveAttachment" }, // 4271172243
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -308,15 +308,15 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "Pickups/CubeSocketInfo.h" },
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "IncludePath", "CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_Inner = { "sockets", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData[] = {
 		{ "Category", "CubeSocketInfo" },
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets = { "sockets", nullptr, (EPropertyFlags)0x0010000000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, sockets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData) };
@@ -325,7 +325,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData[] = {
 		{ "ArrayClamp", "sockets" },
 		{ "Category", "CubeSocketInfo" },
-		{ "ModuleRelativePath", "Pickups/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects = { "socketObjects", nullptr, (EPropertyFlags)0x0010000000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, socketObjects), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData) };
@@ -369,15 +369,15 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	UCubeSocketInfo::UCubeSocketInfo(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UCubeSocketInfo);
 	UCubeSocketInfo::~UCubeSocketInfo() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 3396438392U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 1428527932U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_1730834472(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeSocketInfo_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_747882380(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/Pickups/CubeCore.h"
+#include "projProblox/CubeCore.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 // Cross Module References
@@ -84,7 +84,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Depending on the given bool.. return the array of AActors or APickupableMasters \n" },
 #endif
-		{ "ModuleRelativePath", "Pickups/CubeCore.h" },
+		{ "ModuleRelativePath", "CubeCore.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Depending on the given bool.. return the array of AActors or APickupableMasters" },
 #endif
@@ -130,7 +130,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickups/CubeCore.h" },
+		{ "ModuleRelativePath", "CubeCore.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "ObjectInSocket", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::CubeCore_eventObjectInSocket_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::Function_MetaDataParams) };
@@ -175,8 +175,8 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACubeCore_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACubeCore_GetAttachedObjects, "GetAttachedObjects" }, // 2516450227
-		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 665348194
+		{ &Z_Construct_UFunction_ACubeCore_GetAttachedObjects, "GetAttachedObjects" }, // 1762743637
+		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3382861889
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -184,8 +184,8 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "Pickups/CubeCore.h" },
-		{ "ModuleRelativePath", "Pickups/CubeCore.h" },
+		{ "IncludePath", "CubeCore.h" },
+		{ "ModuleRelativePath", "CubeCore.h" },
 	};
 #endif
 #if WITH_METADATA
@@ -194,7 +194,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// A data asset that contains an array of things that are attached to each face of the cube.\n" },
 #endif
-		{ "ModuleRelativePath", "Pickups/CubeCore.h" },
+		{ "ModuleRelativePath", "CubeCore.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "A data asset that contains an array of things that are attached to each face of the cube." },
 #endif
@@ -205,7 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_pivot_MetaData[] = {
 		{ "Category", "CubeCore" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Pickups/CubeCore.h" },
+		{ "ModuleRelativePath", "CubeCore.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_pivot = { "pivot", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, pivot), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_pivot_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_pivot_MetaData) };
@@ -246,15 +246,15 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACubeCore);
 	ACubeCore::~ACubeCore() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1118705834U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 2190476817U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_853515888(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeCore_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_4041770700(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

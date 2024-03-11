@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "Pickups/PickupableMaster.h"
+#include "PickupableMaster.h"
 #include "GameFramework/PlayerController.h"
 #include "PlayerCharacter.generated.h"
 

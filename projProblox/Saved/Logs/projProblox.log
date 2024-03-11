@@ -69136,3 +69136,504 @@ Would you like to open the Output Log to see more details?
 [2024.03.11-17.07.53:513][611]LogFileHelpers: InternalPromptForCheckoutAndSave took 93 ms (total: 14.5 sec)
 [2024.03.11-17.07.53:515][611]AssetCheck: New page: Asset Save: Sandbox
 [2024.03.11-17.07.53:515][611]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
+[2024.03.11-17.08.12:958][ 24]LogContentBrowser: Attempting asset rename: BP_TankTreads -> BP_TankTreads
+[2024.03.11-17.08.27:446][624]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Grapple.BP_Grapple
+[2024.03.11-17.08.27:447][624]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.08.27:447][624]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.08.29:286][821]LogWorld: UWorld::CleanupWorld for World_30, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.08.29:286][821]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.08.29:606][852]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.03.11-17.08.29:606][852]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.08.29:606][852]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.08.30:350][926]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.03.11-17.08.30:351][926]LogWorld: UWorld::CleanupWorld for World_31, bSessionEnded=true, bCleanupResources=true
+[2024.03.11-17.08.30:351][926]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.11-17.16.50:369][987]LogAudioMixer: Warning: FMixerPlatformXAudio2: Changing default audio render device to new device: Role=Console, DeviceName=27G1G4 (NVIDIA High Definition Audio), InstanceID=1
+[2024.03.11-17.16.50:517][987]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=1592
+[2024.03.11-17.16.50:844][988]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{310ab777-8505-40a6-86bc-1273a95922e9}, Name=27G1G4 (NVIDIA High Definition Audio)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=59.08
+[2024.03.11-17.16.50:845][988]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2024.03.11-17.16.50:846][988]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2024.03.11-17.19.09:338][580]Running C:/Program Files/Epic Games/UE_5.3/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" -game -rocket -progress
+[2024.03.11-17.19.09:450][580]Using bundled DotNet SDK version: 6.0.302
+[2024.03.11-17.19.09:450][580]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" -game -rocket -progress
+[2024.03.11-17.19.10:251][580]Log file: C:\Users\Deany\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2024.03.11-17.19.10:652][580]
+[2024.03.11-17.19.10:652][580]Some Platforms were skipped due to invalid SDK setup: IOS, Android, Linux, LinuxArm64.
+[2024.03.11-17.19.10:652][580]See the log file for detailed information
+[2024.03.11-17.19.10:652][580]
+[2024.03.11-17.19.10:652][580]
+[2024.03.11-17.19.10:652][580]Generating VisualStudio project files:
+[2024.03.11-17.19.10:752][580]Discovering modules, targets and source code for project...
+[2024.03.11-17.19.13:558][580]Binding IntelliSense data...
+[2024.03.11-17.19.28:094][580]Binding IntelliSense data... 75%
+[2024.03.11-17.19.28:094][580]Binding IntelliSense data... 100%
+[2024.03.11-17.19.28:094][580]Creating common properties file...
+[2024.03.11-17.19.28:194][580]Creating common properties file... 0%
+[2024.03.11-17.19.28:194][580]Writing project files...
+[2024.03.11-17.19.29:199][580]Writing project files... 100%
+[2024.03.11-17.19.29:299][580]
+[2024.03.11-17.19.29:299][580]Generating QueryTargets data for editor...
+[2024.03.11-17.19.29:513][580]Candidate modules for hot reload:
+[2024.03.11-17.19.29:513][580]  projProblox
+[2024.03.11-17.19.29:517][580]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.3/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=projProblox,7025 projProbloxEditor Win64 Development -Project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" "C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject"  -IgnoreJunk]
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: New page: Compilation - 11 Mar 2024, 17:19:36
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Using bundled DotNet SDK version: 6.0.302
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=projProblox,7025 projProbloxEditor Win64 Development -Project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" "C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject"  -IgnoreJunk
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Log file: C:\Users\Deany\AppData\Local\UnrealBuildTool\Log.txt
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Deany\Documents\GitHub\problox).
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Creating makefile for projProbloxEditor (no existing makefile)
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Parsing headers for projProbloxEditor
+[2024.03.11-17.19.36:277][580]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\Deany\Documents\GitHub\problox\projProblox\projProblox.uproject C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\projProbloxEditor\Development\projProbloxEditor.uhtmanifest -WarningsAsErrors -installed
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Total of 3 written
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Reflection code generated for projProbloxEditor in 2.4809308 seconds
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Building projProbloxEditor...
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Using Visual Studio 2022 14.37.32822 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: [Adaptive Build] Excluded from projProblox unity file: Grappler.cpp
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2024.03.11-17.19.36:277][580]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2024.03.11-17.19.36:277][580]CompilerResultsLog:   Requested 1.5 GB memory per action, 7.64 GB available: limiting max parallel actions to 5
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Distributing 6 actions to XGE
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: UnrealBuildTool Compile
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: License not activated:
+[2024.03.11-17.19.36:277][580]CompilerResultsLog:     License is not activated. Please activate the license in the coordinator.
+[2024.03.11-17.19.36:277][580]CompilerResultsLog:     This build will run in standalone mode.
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: -------------------------------------------------------------------------------
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Build ID: {9182A2C1-5620-4B23-8986-B9D14FB71156}
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: [1/6] Compile [x64] Grappler.cpp (0:00.28 at +0:00)
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickups\Grappler.cpp(4): fatal error C1083: Cannot open include file: 'Pickups/Grappler.h': No such file or directory
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Error executing C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\Hostx64\x64\cl.exe (tool returned code: 2)
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: [2/6] Compile [x64] Grappler.gen.cpp (0:00.31 at +0:00)
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickups\Grappler.h(6): fatal error C1083: Cannot open include file: 'Pickups/PickupableMaster.h': No such file or directory
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: Error executing C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\Hostx64\x64\cl.exe (tool returned code: 2)
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: [3/6] Compile [x64] projProblox.init.gen.cpp (0:01.68 at +0:00)
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: ---------------------- Done ----------------------
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:277][580]CompilerResultsLog: 1 build system warning(s):
+[2024.03.11-17.19.36:277][580]CompilerResultsLog:    - License not activated
+[2024.03.11-17.19.36:278][580]CompilerResultsLog: 
+[2024.03.11-17.19.36:278][580]CompilerResultsLog: Total time in XGE executor: 2.14 seconds
+[2024.03.11-17.19.36:278][580]CompilerResultsLog: Total execution time: 6.56 seconds
+[2024.03.11-17.19.36:278][580]LogMainFrame: MainFrame: Module compiling took 6.775 seconds
+[2024.03.11-17.19.36:278][580]Warning: HotReload failed, recompile failed
+[2024.03.11-17.19.36:278][580]Warning: RebindPackages failed because compilation failed.
+[2024.03.11-17.19.39:103][580]LogSlate: Window 'Message' being destroyed
+[2024.03.11-17.19.39:108][580]Message dialog closed, result: Yes, title: Message, text: Successfully added class 'Grappler', however you must recompile the 'projProblox' module before it will appear in the Content Browser. Failed to automatically hot reload the 'projProblox' module.
+
+Would you like to open the Output Log to see more details?
+[2024.03.11-17.19.41:577][580]LogSlate: Window 'Add C++ Class' being destroyed
+[2024.03.11-17.19.54:312][619]LogSlate: Window 'Output Log' being destroyed
+[2024.03.11-17.19.54:313][619]LogSlate: Window 'Output Log' being destroyed
+[2024.03.11-17.19.57:673][877]LogHotReload: New module detected: UnrealEditor-projProblox-0199.dll
+[2024.03.11-17.19.58:627][992]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.19.58:668][992]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.03.11-17.19.58:693][992]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.19.58:699][992]LogClass: Could not find existing class Grappler in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.19.58:767][992]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.03.11-17.19.58:811][992]Display: HotReload took  0.2s.
+[2024.03.11-17.19.58:811][992]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 8 classes unchanged, 20 functions remapped
+[2024.03.11-17.20.09:918][259]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler
+[2024.03.11-17.20.09:918][259]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.20.09:918][259]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.20.09:990][259]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.03.11-17.20.10:036][259]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_35:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.20.10:048][259]LogViewport: Scene viewport resized to 1141x691, mode Windowed.
+[2024.03.11-17.21.30:437][566]LogViewport: Scene viewport resized to 1141x691, mode Windowed.
+[2024.03.11-17.21.48:054][639]LogEditorTransaction: Undo Add Component
+[2024.03.11-17.22.42:359][707]LogUObjectHash: Compacting FUObjectHashTables data took   2.33ms
+[2024.03.11-17.22.42:362][707]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.092
+[2024.03.11-17.22.42:363][707]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/Pickupables/C++/BP_Grappler] ([2] browsable assets)...
+[2024.03.11-17.22.42:363][707]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.22.42:370][707]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_36:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.22.42:418][707]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler]
+[2024.03.11-17.22.42:418][707]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.22.42:423][707]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_37:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.22.42:434][707]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C]
+[2024.03.11-17.22.42:434][707]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/C++/BP_Grappler]
+[2024.03.11-17.22.42:437][707]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.22.42:437][707]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.22.42:437][707]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/C++/BP_Grappler_Auto1
+[2024.03.11-17.22.42:438][707]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grappler_Auto11ADC48C345F76BA3511FA0A71B08FC32.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/C++/BP_Grappler_Auto1.uasset'
+[2024.03.11-17.22.42:438][707]LogFileHelpers: Auto-saving content packages took 0.076
+[2024.03.11-17.25.03:727][367]LogSlate: Window 'Plugins' being destroyed
+[2024.03.11-17.25.03:730][367]LogSlate: Window 'Plugins' being destroyed
+[2024.03.11-17.25.03:730][367]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/' was aborted.
+[2024.03.11-17.32.12:493][888]LogHotReload: New module detected: UnrealEditor-projProblox-0202.dll
+[2024.03.11-17.32.13:163][891]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.32.13:200][891]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2024.03.11-17.32.13:233][891]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.32.13:233][891]LogClass: UClass CubeConnector Reload.
+[2024.03.11-17.32.13:233][891]LogClass: UClass CubeCore Reload.
+[2024.03.11-17.32.13:234][891]LogClass: UClass CubeSocketInfo Reload.
+[2024.03.11-17.32.13:234][891]LogClass: UClass Grappler Reload.
+[2024.03.11-17.32.13:234][891]LogClass: UClass PickupableMaster Reload.
+[2024.03.11-17.32.13:234][891]LogClass: UClass Piston Reload.
+[2024.03.11-17.32.13:234][891]LogClass: UClass Propeller Reload.
+[2024.03.11-17.32.13:234][891]LogClass: UClass Treads Reload.
+[2024.03.11-17.32.13:234][891]LogClass: Could not find existing class CubeConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:234][891]LogClass: Could not find existing class CubeCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:234][891]LogClass: Could not find existing class PickupableMaster in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:234][891]LogClass: Function AddAttachment is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function AscendDescend is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function GetMass is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function GetMesh is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function GravitySelection is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function RemoveAttachment is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function ResetRotation is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function RotateMesh is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function SetAbilityActive is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function SetSelected is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function SnapRotateMesh is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function GetAttachedObjects is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function ObjectInSocket is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Could not find existing class CubeSocketInfo in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:234][891]LogClass: Function AddAttachment is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function GetAttachmentActors is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function GetAttachments is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function ObjectInSocket is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Function RemoveAttachment is new or belongs to a modified class.
+[2024.03.11-17.32.13:234][891]LogClass: Could not find existing class Grappler in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:235][891]LogClass: Could not find existing class Piston in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:236][891]LogClass: Could not find existing class Propeller in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:237][891]LogClass: Could not find existing class Treads in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.32.13:255][891]Re-instancing PickupableMaster after reload.
+[2024.03.11-17.32.13:266][891]LogActor: Warning: BP_MasterPickup_C /Engine/Transient.World_8:PersistentLevel.BP_MasterPickup_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:298][891]Re-instancing CubeSocketInfo after reload.
+[2024.03.11-17.32.13:323][891]Re-instancing CubeCore after reload.
+[2024.03.11-17.32.13:355][891]LogActor: Warning: BP_CubeCore_C /Game/Sandbox.Sandbox:PersistentLevel.BP_CubeCore_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:356][891]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_0:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:358][891]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_16:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:359][891]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_10:PersistentLevel.BP_CubeCore_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:371][891]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_10:PersistentLevel.BP_CubeCore_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:401][891]Re-instancing CubeConnector after reload.
+[2024.03.11-17.32.13:428][891]LogActor: Warning: BP_CubeConnector_C /Game/Sandbox.Sandbox:PersistentLevel.BP_CubeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:429][891]LogActor: Warning: BP_CubeConnector_C /Game/Sandbox.Sandbox:PersistentLevel.BP_CubeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:430][891]LogActor: Warning: BP_CubeConnector_C /Game/Sandbox.Sandbox:PersistentLevel.BP_CubeConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:430][891]LogActor: Warning: BP_CubeConnector_C /Game/Sandbox.Sandbox:PersistentLevel.BP_CubeConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:431][891]LogActor: Warning: BP_CubeConnector_C /Game/Sandbox.Sandbox:PersistentLevel.BP_CubeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:432][891]LogActor: Warning: BP_CubeConnector_C /Engine/Transient.World_1:PersistentLevel.BP_CubeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:433][891]LogActor: Warning: BP_CubeConnector_C /Engine/Transient.World_15:PersistentLevel.BP_CubeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:433][891]LogActor: Warning: BP_CubeConnector_C /Engine/Transient.World_11:PersistentLevel.BP_CubeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:448][891]LogActor: Warning: BP_CubeConnector_C /Engine/Transient.World_11:PersistentLevel.BP_CubeConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:474][891]Re-instancing Grappler after reload.
+[2024.03.11-17.32.13:500][891]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_35:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:500][891]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_36:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:501][891]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_37:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:509][891]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_36:PersistentLevel.BP_Grappler_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:515][891]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.32.13:572][891]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.32.13:572][891]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.32.13:573][891]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_Grappler
+[2024.03.11-17.32.13:573][891]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grappler90EAB0C642015691AC27F79D205ECBE2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_Grappler.uasset'
+[2024.03.11-17.32.13:577][891]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 14.5 sec)
+[2024.03.11-17.32.13:599][891]Re-instancing Piston after reload.
+[2024.03.11-17.32.13:613][891]LogActor: Warning: BP_Pusher_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Pusher_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:614][891]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_12:PersistentLevel.BP_Pusher_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:614][891]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_7:PersistentLevel.BP_Pusher_C_155 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:647][891]Re-instancing Propeller after reload.
+[2024.03.11-17.32.13:655][891]LogActor: Warning: BP_Fan_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Fan_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:656][891]LogActor: Warning: BP_Fan_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Fan_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:657][891]LogActor: Warning: BP_Fan_C /Engine/Transient.World_9:PersistentLevel.BP_Fan_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:684][891]Re-instancing Treads after reload.
+[2024.03.11-17.32.13:690][891]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_33:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:691][891]LogActor: Warning: BP_TankTreads_C /Game/Sandbox.Sandbox:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:701][891]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.32.13:777][891]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.03.11-17.32.13:818][891]Display: HotReload took  0.7s.
+[2024.03.11-17.32.13:818][891]Display: Reload/Re-instancing Complete: 1 package changed, 8 classes changed, 1 class unchanged, 2 functions remapped
+[2024.03.11-17.32.13:876][891]AssetCheck: New page: Asset Save: BP_Grappler
+[2024.03.11-17.32.13:876][891]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler
+[2024.03.11-17.32.44:969][ 98]LogHotReload: New module detected: UnrealEditor-projProblox-0203.dll
+[2024.03.11-17.32.45:768][193]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.32.45:852][193]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2024.03.11-17.32.45:960][193]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.03.11-17.32.45:999][193]Display: HotReload took  0.2s.
+[2024.03.11-17.32.45:999][193]Display: Reload/Re-instancing Complete: 1 package changed, 9 classes unchanged, 20 functions remapped
+[2024.03.11-17.33.58:271][395]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
+[2024.03.11-17.33.58:277][395]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.073
+[2024.03.11-17.33.58:277][395]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/Pickupables/C++/BP_Grappler] ([2] browsable assets)...
+[2024.03.11-17.33.58:327][395]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler]
+[2024.03.11-17.33.58:327][395]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/C++/BP_Grappler]
+[2024.03.11-17.33.58:330][395]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.33.58:330][395]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.33.58:330][395]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/C++/BP_Grappler_Auto2
+[2024.03.11-17.33.58:330][395]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grappler_Auto2B24FA21D47545D5AABEF49A37F7C8AF5.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/C++/BP_Grappler_Auto2.uasset'
+[2024.03.11-17.33.58:331][395]LogFileHelpers: Auto-saving content packages took 0.054
+[2024.03.11-17.35.05:162][224]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_32:PersistentLevel.BP_TankTreads_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.05:170][225]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_7:PersistentLevel.BP_Pusher_C_156 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.05:188][226]LogActor: Warning: BP_MasterPickup_C /Engine/Transient.World_8:PersistentLevel.BP_MasterPickup_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.05:219][228]LogActor: Warning: BP_Fan_C /Engine/Transient.World_9:PersistentLevel.BP_Fan_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.22:979][309]Running C:/Program Files/Epic Games/UE_5.3/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" -game -rocket -progress
+[2024.03.11-17.35.23:081][309]Using bundled DotNet SDK version: 6.0.302
+[2024.03.11-17.35.23:081][309]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" -game -rocket -progress
+[2024.03.11-17.35.23:382][309]Log file: C:\Users\Deany\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2024.03.11-17.35.23:482][309]
+[2024.03.11-17.35.23:482][309]Some Platforms were skipped due to invalid SDK setup: IOS, Android, Linux, LinuxArm64.
+[2024.03.11-17.35.23:482][309]See the log file for detailed information
+[2024.03.11-17.35.23:482][309]
+[2024.03.11-17.35.23:482][309]
+[2024.03.11-17.35.23:482][309]Generating VisualStudio project files:
+[2024.03.11-17.35.23:582][309]Discovering modules, targets and source code for project...
+[2024.03.11-17.35.24:384][309]Binding IntelliSense data...
+[2024.03.11-17.35.29:319][309]Binding IntelliSense data... 100%
+[2024.03.11-17.35.29:319][309]Creating common properties file...
+[2024.03.11-17.35.29:319][309]Creating common properties file... 0%
+[2024.03.11-17.35.29:319][309]Writing project files...
+[2024.03.11-17.35.30:222][309]Writing project files... 100%
+[2024.03.11-17.35.30:222][309]
+[2024.03.11-17.35.30:222][309]Generating QueryTargets data for editor...
+[2024.03.11-17.35.30:436][309]Candidate modules for hot reload:
+[2024.03.11-17.35.30:436][309]  projProblox
+[2024.03.11-17.35.30:441][309]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.3/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=projProblox,0053 projProbloxEditor Win64 Development -Project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" "C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject"  -IgnoreJunk]
+[2024.03.11-17.35.35:229][309]CompilerResultsLog: New page: Compilation - 11 Mar 2024, 17:35:35
+[2024.03.11-17.35.35:229][309]CompilerResultsLog: Using bundled DotNet SDK version: 6.0.302
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=projProblox,0053 projProbloxEditor Win64 Development -Project="C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject" "C:/Users/Deany/Documents/GitHub/problox/projProblox/projProblox.uproject"  -IgnoreJunk
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Log file: C:\Users\Deany\AppData\Local\UnrealBuildTool\Log.txt
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Deany\Documents\GitHub\problox).
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Creating makefile for projProbloxEditor (no existing makefile)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Parsing headers for projProbloxEditor
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\Deany\Documents\GitHub\problox\projProblox\projProblox.uproject C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\projProbloxEditor\Development\projProbloxEditor.uhtmanifest -WarningsAsErrors -installed
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Total of 4 written
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Reflection code generated for projProbloxEditor in 0.8109768 seconds
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Building projProbloxEditor...
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Using Visual Studio 2022 14.37.32822 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [Adaptive Build] Excluded from projProblox unity file: CubeConnector.cpp, CubeCore.cpp, CubeSocketInfo.cpp, GrappleHead.cpp, Grappler.cpp, PickupableMaster.cpp, Piston.cpp, PlayerCharacter.cpp, Propeller.cpp, Treads.cpp
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:   Requested 1.5 GB memory per action, 6.37 GB available: limiting max parallel actions to 4
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Distributing 8 actions to XGE
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: UnrealBuildTool Compile
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: License not activated:
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:     License is not activated. Please activate the license in the coordinator.
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:     This build will run in standalone mode.
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: -------------------------------------------------------------------------------
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Build ID: {DD66D214-A480-4B99-A6A7-043BFA3C0CA7}
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [1/8] Compile [x64] projProblox.init.gen.cpp (0:00.46 at +0:00)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [2/8] Compile [x64] GrappleHead.gen.cpp (0:00.62 at +0:00)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [3/8] Compile [x64] GrappleHead.cpp (0:00.64 at +0:00)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [4/8] Compile [x64] Grappler.gen.cpp (0:00.82 at +0:00)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [5/8] Compile [x64] Grappler.cpp (0:00.86 at +0:00)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [6/8] Link [x64] UnrealEditor-projProblox-0053.lib (0:00.04 at +0:00)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox-0053.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox-0053.exp
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [7/8] Link [x64] UnrealEditor-projProblox-0053.dll (0:00.57 at +0:00)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox-0053.sup.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox-0053.sup.exp
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: [8/8] WriteMetadata projProbloxEditor.target (0:00.21 at +0:01)
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: ---------------------- Done ----------------------
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 1 build system warning(s):
+[2024.03.11-17.35.35:230][309]CompilerResultsLog:    - License not activated
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: 
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Total time in XGE executor: 1.78 seconds
+[2024.03.11-17.35.35:230][309]CompilerResultsLog: Total execution time: 4.63 seconds
+[2024.03.11-17.35.35:230][309]LogMainFrame: MainFrame: Module compiling took 4.805 seconds
+[2024.03.11-17.35.35:240][309]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.03.11-17.35.35:271][309]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.35.35:271][309]LogClass: UClass Grappler Reload.
+[2024.03.11-17.35.35:277][309]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.35.35:277][309]LogClass: Could not find existing class Grappler in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.35.35:299][309]Re-instancing Grappler after reload.
+[2024.03.11-17.35.35:324][309]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_35:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.35:325][309]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_36:PersistentLevel.BP_Grappler_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.35:325][309]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_37:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.35:335][309]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_36:PersistentLevel.BP_Grappler_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.35.35:340][309]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.35.35:390][309]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.35.35:391][309]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C' for saving '/Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler_C'
+[2024.03.11-17.35.35:391][309]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_Grappler
+[2024.03.11-17.35.35:392][309]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grappler8D7EC9DD425E390750CE70A8AB5B6176.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_Grappler.uasset'
+[2024.03.11-17.35.35:393][309]LogFileHelpers: InternalPromptForCheckoutAndSave took 52 ms (total: 14.6 sec)
+[2024.03.11-17.35.35:452][309]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.03.11-17.35.35:483][309]Display: HotReload took  5.1s.
+[2024.03.11-17.35.35:484][309]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 1 class changed, 8 classes unchanged, 20 functions remapped
+[2024.03.11-17.35.35:488][309]Warning: HotReload operation took  5.1s.
+[2024.03.11-17.35.35:507][309]LogSlate: Window 'Add C++ Class' being destroyed
+[2024.03.11-17.35.35:516][309]LogHotReload: New module detected: UnrealEditor-projProblox-0053.dll
+[2024.03.11-17.35.35:517][309]AssetCheck: New page: Asset Save: BP_Grappler
+[2024.03.11-17.35.35:517][309]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_Grappler.BP_Grappler
+[2024.03.11-17.35.35:866][310]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.35.36:078][310]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.03.11-17.35.36:106][310]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2024.03.11-17.35.36:144][310]Display: HotReload took  0.3s.
+[2024.03.11-17.35.36:144][310]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.03.11-17.36.46:219][499]LogContentBrowser: Attempting asset rename: BP_GrappleHead -> BP_GrappleHead
+[2024.03.11-17.36.46:375][515]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_GrappleHead.BP_GrappleHead
+[2024.03.11-17.36.46:375][515]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.36.46:375][515]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.37.43:293][ 59]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:14.417 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 7704 files in 10077 folders with total size 706 MiB.
+[2024.03.11-17.39.40:493][731]LogHotReload: New module detected: UnrealEditor-projProblox-0205.dll
+[2024.03.11-17.39.41:168][734]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.39.41:268][734]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2024.03.11-17.39.41:299][734]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.39.41:299][734]LogClass: UClass GrappleHead Reload.
+[2024.03.11-17.39.41:299][734]LogClass: UClass Grappler Reload.
+[2024.03.11-17.39.41:304][734]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.39.41:304][734]LogClass: Could not find existing class Grappler in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.39.41:329][734]Re-instancing GrappleHead after reload.
+[2024.03.11-17.39.41:353][734]Re-instancing Grappler after reload.
+[2024.03.11-17.39.41:386][734]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_35:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.39.41:387][734]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_37:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.39.41:388][734]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_36:PersistentLevel.BP_Grappler_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.39.41:398][734]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_36:PersistentLevel.BP_Grappler_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.39.41:462][734]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.03.11-17.39.41:505][734]Display: HotReload took  0.3s.
+[2024.03.11-17.39.41:505][734]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes changed, 8 classes unchanged, 20 functions remapped
+[2024.03.11-17.45.01:292][178]LogHotReload: New module detected: UnrealEditor-projProblox-0206.dll
+[2024.03.11-17.45.01:964][181]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.45.02:077][181]LogUObjectHash: Compacting FUObjectHashTables data took   2.60ms
+[2024.03.11-17.45.02:109][181]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.45.02:109][181]LogClass: UClass GrappleHead Reload.
+[2024.03.11-17.45.02:116][181]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.45.02:145][181]Re-instancing GrappleHead after reload.
+[2024.03.11-17.45.02:205][181]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.03.11-17.45.02:250][181]Display: HotReload took  0.3s.
+[2024.03.11-17.45.02:250][181]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 9 classes unchanged, 20 functions remapped
+[2024.03.11-17.50.49:932][662]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead
+[2024.03.11-17.50.49:932][662]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.11-17.50.49:932][662]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.11-17.50.50:004][662]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.03.11-17.50.50:059][662]LogActor: Warning: BP_GrappleHead_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.50.50:072][662]LogViewport: Scene viewport resized to 1141x691, mode Windowed.
+[2024.03.11-17.51.00:204][270]LogHotReload: New module detected: UnrealEditor-projProblox-0208.dll
+[2024.03.11-17.51.00:875][273]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.51.00:974][273]LogUObjectHash: Compacting FUObjectHashTables data took   2.19ms
+[2024.03.11-17.51.01:001][273]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.51.01:001][273]LogClass: UClass GrappleHead Reload.
+[2024.03.11-17.51.01:011][273]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.51.01:036][273]Re-instancing GrappleHead after reload.
+[2024.03.11-17.51.01:074][273]LogActor: Warning: BP_GrappleHead_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.51.01:085][273]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.51.01:087][273]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C' for saving '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.51.01:087][273]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C' for saving '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.51.01:088][273]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_GrappleHead
+[2024.03.11-17.51.01:088][273]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleHead5FFF86464A7CBF7F2F036B8E7553DF43.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_GrappleHead.uasset'
+[2024.03.11-17.51.01:090][273]LogFileHelpers: InternalPromptForCheckoutAndSave took 5 ms (total: 14.6 sec)
+[2024.03.11-17.51.01:156][273]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.03.11-17.51.01:201][273]Display: HotReload took  0.3s.
+[2024.03.11-17.51.01:201][273]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 9 classes unchanged, 20 functions remapped
+[2024.03.11-17.51.01:236][273]AssetCheck: New page: Asset Save: BP_GrappleHead
+[2024.03.11-17.51.01:236][273]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead
+[2024.03.11-17.52.01:705][167]LogUObjectHash: Compacting FUObjectHashTables data took   1.88ms
+[2024.03.11-17.52.01:707][167]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.078
+[2024.03.11-17.52.01:708][167]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Blueprints/Pickupables/C++/BP_GrappleHead] ([2] browsable assets)...
+[2024.03.11-17.52.01:708][167]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/C++/BP_GrappleHead]
+[2024.03.11-17.52.01:712][167]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C' for saving '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.01:712][167]LogWorldPartition: Can't find class descriptor '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C' for saving '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.01:713][167]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/C++/BP_GrappleHead_Auto3
+[2024.03.11-17.52.01:713][167]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleHead_Auto30A7FB6454DA12079AB01759E7737C400.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/C++/BP_GrappleHead_Auto3.uasset'
+[2024.03.11-17.52.01:714][167]LogFileHelpers: Auto-saving content packages took 0.007
+[2024.03.11-17.52.10:274][193]LogHotReload: New module detected: UnrealEditor-projProblox-0209.dll
+[2024.03.11-17.52.11:279][197]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.52.11:311][197]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2024.03.11-17.52.11:338][197]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.52.11:338][197]LogClass: UClass GrappleHead Reload.
+[2024.03.11-17.52.11:343][197]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.52.11:365][197]Re-instancing GrappleHead after reload.
+[2024.03.11-17.52.11:367][197]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] Could not find a variable named "ProjectileMovement" in 'BP_GrappleHead_C'.
+Make sure 'BP_GrappleHead_C' has been compiled for  Get ProjectileMovement
+[2024.03.11-17.52.11:368][197]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] Could not find a variable named "canPull" in 'BP_GrappleHead_C'.
+Make sure 'BP_GrappleHead_C' has been compiled for  Set canPull
+[2024.03.11-17.52.11:368][197]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] Could not find a variable named "head" in 'BP_GrappleHead_C'.
+Make sure 'BP_GrappleHead_C' has been compiled for  Get head
+[2024.03.11-17.52.11:368][197]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] The property associated with  Projectile Movement  could not be found in '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.11:369][197]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] The property associated with  Head  could not be found in '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.11:369][197]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] The property associated with  Can Pull  could not be found in '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.11:373][197]LogActor: Warning: BP_GrappleHead_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.52.11:453][197]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.03.11-17.52.11:492][197]Display: HotReload took  0.2s.
+[2024.03.11-17.52.11:492][197]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 9 classes unchanged, 20 functions remapped
+[2024.03.11-17.52.14:224][470]BlueprintLog: New page: Compile BP_GrappleHead
+[2024.03.11-17.52.14:226][470]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] Could not find a variable named "ProjectileMovement" in 'BP_GrappleHead_C'.
+Make sure 'BP_GrappleHead_C' has been compiled for  Get ProjectileMovement
+[2024.03.11-17.52.14:226][470]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] Could not find a variable named "canPull" in 'BP_GrappleHead_C'.
+Make sure 'BP_GrappleHead_C' has been compiled for  Set canPull
+[2024.03.11-17.52.14:227][470]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] Could not find a variable named "head" in 'BP_GrappleHead_C'.
+Make sure 'BP_GrappleHead_C' has been compiled for  Get head
+[2024.03.11-17.52.14:227][470]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] The property associated with  Projectile Movement  could not be found in '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.14:227][470]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] The property associated with  Head  could not be found in '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.14:227][470]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] The property associated with  Can Pull  could not be found in '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.BP_GrappleHead_C'
+[2024.03.11-17.52.14:231][470]LogActor: Warning: BP_GrappleHead_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.52.14:287][470]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.03.11-17.53.05:202][174]LogHotReload: New module detected: UnrealEditor-projProblox-0210.dll
+[2024.03.11-17.53.06:112][280]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.53.06:184][280]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.03.11-17.53.06:209][280]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.53.06:210][280]LogClass: UClass GrappleHead Reload.
+[2024.03.11-17.53.06:215][280]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.53.06:241][280]Re-instancing GrappleHead after reload.
+[2024.03.11-17.53.06:244][280]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHead.uasset: [Compiler] GrappleHead.canPull is not blueprint writable.  Set canPull
+[2024.03.11-17.53.06:278][280]LogActor: Warning: BP_GrappleHead_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.53.06:368][280]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.03.11-17.53.06:416][280]Display: HotReload took  0.3s.
+[2024.03.11-17.53.06:416][280]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 9 classes unchanged, 20 functions remapped
+[2024.03.11-17.53.35:768][623]LogContentBrowser: Attempting asset rename: BP_GrappleHead -> BP_GrappleHook
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.BP_GrappleHook:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.SKEL_BP_GrappleHook_C:ReceiveBeginPlay' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.SKEL_BP_GrappleHook_C' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.BP_GrappleHook_C' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.BP_GrappleHook:EventGraph.K2Node_Event_0' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.BP_GrappleHook:EventGraph.K2Node_Event_1' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.BP_GrappleHook:EventGraph.K2Node_Event_2' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.SKEL_BP_GrappleHook_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.SKEL_BP_GrappleHook_C:ReceiveTick' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.SKEL_BP_GrappleHook_C:BndEvt__BP_GrappleHead_collider_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:826][623]LogMetaData: Removing '/Game/Blueprints/Pickupables/C++/BP_GrappleHook.SKEL_BP_GrappleHook_C:UserConstructionScript' ref from Metadata '/Game/Blueprints/Pickupables/C++/BP_GrappleHead.PackageMetaData'
+[2024.03.11-17.53.35:845][623]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.11-17.53.35:878][623]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/C++/BP_GrappleHook
+[2024.03.11-17.53.35:878][623]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleHook66209D2B4AE49935235064AFBBF31BC9.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/C++/BP_GrappleHook.uasset'
+[2024.03.11-17.53.35:885][623]LogFileHelpers: InternalPromptForCheckoutAndSave took 40 ms (total: 14.6 sec)
+[2024.03.11-17.53.36:182][623]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2024.03.11-17.53.36:197][623]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.03.11-17.53.36:209][623]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.03.11-17.53.36:211][623]AssetCheck: New page: Asset Save: BP_GrappleHook
+[2024.03.11-17.53.36:211][623]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/C++/BP_GrappleHook.BP_GrappleHook
+[2024.03.11-17.53.43:026][432]BlueprintLog: New page: Compile BP_GrappleHook
+[2024.03.11-17.53.43:027][432]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\C++\BP_GrappleHook.uasset: [Compiler] GrappleHead.canPull is not blueprint writable.  Set canPull
+[2024.03.11-17.53.43:050][432]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.53.43:065][432]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.03.11-17.53.58:470][607]LogHotReload: New module detected: UnrealEditor-projProblox-0211.dll
+[2024.03.11-17.53.59:369][713]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-17.53.59:402][713]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.03.11-17.53.59:427][713]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-17.53.59:428][713]LogClass: UClass GrappleHead Reload.
+[2024.03.11-17.53.59:433][713]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-17.53.59:456][713]Re-instancing GrappleHead after reload.
+[2024.03.11-17.53.59:461][713]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-17.53.59:538][713]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2024.03.11-17.53.59:584][713]Display: HotReload took  0.2s.
+[2024.03.11-17.53.59:584][713]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 9 classes unchanged, 20 functions remapped
+[2024.03.11-18.03.09:091][900]LogSelectionDetails: Warning: NavigateToFunctionSource:  Unable to find source file and line number for 'UKismetMathLibrary::Normal' [Element not found.]
+[2024.03.11-18.05.46:921][299]LogHotReload: New module detected: UnrealEditor-projProblox-0213.dll
+[2024.03.11-18.05.47:593][302]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-18.05.47:708][302]LogUObjectHash: Compacting FUObjectHashTables data took   2.94ms
+[2024.03.11-18.05.47:745][302]LogClass: UPackage /Script/projProblox Reload.
+[2024.03.11-18.05.47:745][302]LogClass: UClass GrappleHead Reload.
+[2024.03.11-18.05.47:750][302]LogClass: Could not find existing class GrappleHead in package /Script/projProblox for reload, assuming new or modified class
+[2024.03.11-18.05.47:773][302]Re-instancing GrappleHead after reload.
+[2024.03.11-18.05.47:782][302]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_39:PersistentLevel.BP_GrappleHead_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.11-18.05.47:849][302]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.03.11-18.05.47:897][302]Display: HotReload took  0.3s.
+[2024.03.11-18.05.47:897][302]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 9 classes unchanged, 20 functions remapped
+[2024.03.11-18.14.41:418][ 39]LogHotReload: New module detected: UnrealEditor-projProblox-0221.dll
+[2024.03.11-18.14.42:094][ 42]LogHotReload: Starting Hot-Reload from IDE
+[2024.03.11-18.14.42:216][ 42]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2024.03.11-18.14.42:326][ 42]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.03.11-18.14.42:369][ 42]Display: HotReload took  0.3s.
+[2024.03.11-18.14.42:369][ 42]Display: Reload/Re-instancing Complete: 1 package changed, 10 classes unchanged, 20 functions remapped
+[2024.03.11-18.16.33:522][536]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms

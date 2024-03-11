@@ -4,7 +4,7 @@
 #include "PlayerCharacter.h"
 
 #include "GameFramework/GameSession.h"
-#include "Pickups/CubeCore.h"
+#include "CubeCore.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()

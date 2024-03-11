@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickups\\cubesocketinfo.cpp",
+        "Source": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\cubesocketinfo.cpp",
         "ProvidedModule": "",
         "PCH": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\projprobloxeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projproblox\\definitions.projproblox.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickups\\cubesocketinfo.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickups\\pickupablemaster.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\cubesocketinfo.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupablemaster.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",

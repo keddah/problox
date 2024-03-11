@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/Pickups/Treads.h"
+#include "projProblox/Treads.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTreads() {}
 // Cross Module References
@@ -56,22 +56,22 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "Pickups/Treads.h" },
-		{ "ModuleRelativePath", "Pickups/Treads.h" },
+		{ "IncludePath", "Treads.h" },
+		{ "ModuleRelativePath", "Treads.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData[] = {
 		{ "Category", "Treads" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Pickups/Treads.h" },
+		{ "ModuleRelativePath", "Treads.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger = { "driveTrigger", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, driveTrigger), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_grounded_MetaData[] = {
 		{ "Category", "Treads" },
-		{ "ModuleRelativePath", "Pickups/Treads.h" },
+		{ "ModuleRelativePath", "Treads.h" },
 	};
 #endif
 	void Z_Construct_UClass_ATreads_Statics::NewProp_grounded_SetBit(void* Obj)
@@ -82,7 +82,7 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData[] = {
 		{ "Category", "Treads" },
-		{ "ModuleRelativePath", "Pickups/Treads.h" },
+		{ "ModuleRelativePath", "Treads.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed = { "moveSpeed", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, moveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData) };
@@ -124,15 +124,15 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATreads);
 	ATreads::~ATreads() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_Treads_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Treads_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_Treads_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 2247302219U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Treads_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 4205011127U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_Treads_h_3424721776(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_Treads_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_Treads_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Treads_h_2511855574(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Treads_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Treads_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

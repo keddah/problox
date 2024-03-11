@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/Pickups/CubeConnector.h"
+#include "projProblox/CubeConnector.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeConnector() {}
 // Cross Module References
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeCubeConnector() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "Pickups/CubeConnector.h" },
-		{ "ModuleRelativePath", "Pickups/CubeConnector.h" },
+		{ "IncludePath", "CubeConnector.h" },
+		{ "ModuleRelativePath", "CubeConnector.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACubeConnector_Statics::StaticCppClassTypeInfo = {
@@ -77,15 +77,15 @@ void EmptyLinkFunctionForGeneratedCodeCubeConnector() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACubeConnector);
 	ACubeConnector::~ACubeConnector() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeConnector_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeConnector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeConnector, ACubeConnector::StaticClass, TEXT("ACubeConnector"), &Z_Registration_Info_UClass_ACubeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeConnector), 366398499U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ACubeConnector, ACubeConnector::StaticClass, TEXT("ACubeConnector"), &Z_Registration_Info_UClass_ACubeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeConnector), 3149580271U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeConnector_h_1746310989(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeConnector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickups_CubeConnector_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_679755384(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
