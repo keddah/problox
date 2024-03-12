@@ -20,9 +20,6 @@ public:
 	AGrappleHead();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	USceneComponent* scene;
 
@@ -33,9 +30,6 @@ protected:
 	USphereComponent* collider;
 
 	UPROPERTY(BlueprintReadWrite)
-	UProjectileMovementComponent* projMovement;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	AGrappler* parent;
 	
 	UPROPERTY(BlueprintReadWrite)
@@ -47,18 +41,15 @@ protected:
 	UPROPERTY(BlueprintReadWrite)
 	bool canPull;
 
+	UPROPERTY(BlueprintReadWrite)
 	bool shouldPull;
 
 	UPROPERTY(EditDefaultsOnly)
 	float cancelDistance;
 	
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	void SetParent(AGrappler* grappler) { parent = grappler; }
 
-private:
-	void Pull();
+	UStaticMeshComponent* GetMesh() const { return mesh; }
 
 };

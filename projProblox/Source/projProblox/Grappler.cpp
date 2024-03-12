@@ -20,8 +20,6 @@ void AGrappler::Ability()
 
 	if(IsValid(hook)) hook->Destroy();
 
-	FActorSpawnParameters params;
-	params.Owner = this;
-	
-	hook = GetWorld()->SpawnActor<AGrappleHead>(grappleHeadClass, grappleSpawn->GetComponentTransform(), params);
+	// Spawn a new hook...
+	// Being done in BP since its easier...
 }

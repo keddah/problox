@@ -10,7 +10,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -46,10 +45,6 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_collider;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_projMovement_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_projMovement;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_parent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_parent;
@@ -66,6 +61,11 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 #endif
 		static void NewProp_canPull_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_canPull;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_shouldPull_MetaData[];
+#endif
+		static void NewProp_shouldPull_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_shouldPull;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_cancelDistance_MetaData[];
 #endif
@@ -110,20 +110,12 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_collider = { "collider", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, collider), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_collider_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_collider_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_projMovement_MetaData[] = {
-		{ "Category", "GrappleHead" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "GrappleHead.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_projMovement = { "projMovement", nullptr, (EPropertyFlags)0x002008000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, projMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_projMovement_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_projMovement_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent_MetaData[] = {
 		{ "Category", "GrappleHead" },
 		{ "ModuleRelativePath", "GrappleHead.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent = { "parent", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, parent), Z_Construct_UClass_AGrappler_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent = { "parent", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, parent), Z_Construct_UClass_AGrappler_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce_MetaData[] = {
 		{ "Category", "GrappleHead" },
@@ -150,6 +142,17 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull = { "canPull", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AGrappleHead), &Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_MetaData[] = {
+		{ "Category", "GrappleHead" },
+		{ "ModuleRelativePath", "GrappleHead.h" },
+	};
+#endif
+	void Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_SetBit(void* Obj)
+	{
+		((AGrappleHead*)Obj)->shouldPull = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull = { "shouldPull", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AGrappleHead), &Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData[] = {
 		{ "Category", "GrappleHead" },
 		{ "ModuleRelativePath", "GrappleHead.h" },
@@ -160,11 +163,11 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_scene,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_mesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_collider,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_projMovement,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGrappleHead_Statics::StaticCppClassTypeInfo = {
@@ -205,9 +208,9 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 811742628U) },
+		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 660270299U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_927745683(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_3528507177(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

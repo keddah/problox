@@ -27,12 +27,24 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	TSubclassOf<AActor> grappleHeadClass;
+
+	UPROPERTY(BlueprintReadWrite)
+	AGrappleHead* hook;
+
+	UFUNCTION(BlueprintCallable)
+	void SetupLine() { if(hook) grappleLine->SetAttachEndToComponent(hook->GetMesh()); }
 	
 private:
 	virtual void Ability() override;
 
-	AGrappleHead* hook;
 
 public:
-	void Pull(const FVector& direction, const float speed) const { if(IsValid(objCore)) objCore->Movement(direction, speed); }
+	UFUNCTION(BlueprintCallable)
+	void Pull(const FVector& direction, const float speed) { if(IsValid(objCore)) objCore->Movement(direction, speed); }
+
+	UFUNCTION(BlueprintPure)
+	FVector GetSpawnLocation() const { return grappleSpawn->GetComponentLocation(); }
+
+	UFUNCTION(BlueprintCallable)
+	FVector GetLaunchDir() const { return grappleSpawn->GetForwardVector(); }
 };
