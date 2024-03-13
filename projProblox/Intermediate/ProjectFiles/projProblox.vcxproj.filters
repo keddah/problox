@@ -105,5 +105,11 @@
     <ClInclude Include="..\..\Source\projProblox\Treads.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Wheel.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Wheel.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

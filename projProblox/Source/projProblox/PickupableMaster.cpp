@@ -164,6 +164,5 @@ void APickupableMaster::SetSelected(const bool value)
 	objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
-
 }
 

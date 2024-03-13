@@ -97,10 +97,15 @@ void ACubeCore::Placement()
 	
 	// Debug Draw
 	const FVector start = pivot->GetComponentLocation();
-	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 	AActor* hitActor = hit.GetActor();
+	if(!hit.bBlockingHit)
+	{
+		hitObj = 0;
+		return;
+	}
 	if(!hitActor) return;
 	
 	// If the cast was unsuccessful....

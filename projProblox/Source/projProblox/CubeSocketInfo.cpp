@@ -43,7 +43,15 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 	else if(str_socket == sockets[5]) index = 5;
 	else index = 0;
 
+	if(!socketObjects.IsValidIndex(index))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
+		return;
+	}
+	
 	socketObjects[index] = attachment;
+
+	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, IsValid(socketObjects[index]) ? "Successful addition" : "Couldnt add");
 }
 
 void UCubeSocketInfo::RemoveAttachment(FName socket)
@@ -59,8 +67,14 @@ void UCubeSocketInfo::RemoveAttachment(FName socket)
 	else if(str_socket == sockets[5]) index = 5;
 	else index = 0;
 
+	if(!socketObjects.IsValidIndex(index))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
+		return;
+	}
+	
 	socketObjects[index] = nullptr;
-	// delete socketObjects[index];
+	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, IsValid(socketObjects[index]) ? "Successful removal" : "Couldnt remove");
 }
 
 TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const

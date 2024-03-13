@@ -21,7 +21,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	// A data asset that contains an array of things that are attached to each face of the cube.
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(VisibleAnywhere)
 	UCubeSocketInfo* socketInfo;
 
 	UPROPERTY(EditDefaultsOnly)

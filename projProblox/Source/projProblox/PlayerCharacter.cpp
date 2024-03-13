@@ -45,6 +45,9 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 
 		selectedObj->SetSelected(false);
 		selectedObj = nullptr;
+
+		// Clear things to ignore once not selecting anything.
+		exclusions.Empty();
 		return;
 	}
 
@@ -63,6 +66,12 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		selectedObj->SetSelected(true);
 		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "casted to " + selectedObj->GetName());
 	}
+
+	exclusions.Add(selectedObj);
+	if(!selectedObj->IsA<ACubeCore>()) return;
+
+	// Add the things that are connected to the core/connector to the things to ignore
+	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj)) exclusions.Append(obj->GetAttachedObjects(true));
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)

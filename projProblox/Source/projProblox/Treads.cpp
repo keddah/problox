@@ -15,17 +15,17 @@ ATreads::ATreads()
 
 void ATreads::Ability()
 {
-	// Drag();
+	Drag();
 
 	if(!(active && grounded)) return;
 	if(!IsValid(objCore)) return;
 
-	objCore->Movement(objCore->GetMesh()->GetRightVector(), moveSpeed);
+	objCore->Movement(objMesh->GetForwardVector(), moveSpeed);
 }
 
 void ATreads::Drag() const
 {
 	const FVector velocity = objMesh->GetComponentVelocity();
-	const FVector drag = sqrt(velocity.Length()) * velocity * -.5;  
+	const FVector drag = sqrt(velocity.Length()) * velocity * -dragScale;  
 	objMesh->AddForce(drag);
 }

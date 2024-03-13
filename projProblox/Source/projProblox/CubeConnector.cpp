@@ -79,7 +79,7 @@ void ACubeConnector::Placement()
 		const FVector start = pivot->GetComponentLocation();
 
 		// Debug Draw
-		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 		// Go to the next ray if it didn't hit anything...

@@ -24,7 +24,10 @@ protected:
 	bool grounded;
 
 	UPROPERTY(BlueprintReadWrite)
-	float moveSpeed = 10000;
+	float moveSpeed = 7500;
+	
+	UPROPERTY(BlueprintReadWrite)
+	float dragScale = 15;
 
 private:
 	virtual void Ability() override;
