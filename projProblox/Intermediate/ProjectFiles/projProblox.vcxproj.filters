@@ -48,6 +48,12 @@
     <ClInclude Include="..\..\Source\projProblox\CubeSocketInfo.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Glider.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Glider.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\GrappleHead.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>

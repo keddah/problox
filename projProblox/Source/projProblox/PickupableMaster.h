@@ -55,6 +55,8 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
+
+	bool isAttached;
 	
 	/////////////////// FUNCTIONS ///////////////////
 	
@@ -62,6 +64,7 @@ protected:
 	
 	virtual void Ability();
 
+	
 	UFUNCTION(BlueprintCallable)
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
 
@@ -117,4 +120,10 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	virtual float GetMass() const { return objMesh->GetMass(); }
+
+	void AddVelocity(const FVector& velocity) const
+	{
+		const FVector currentVel = objMesh->GetPhysicsLinearVelocity();
+		objMesh->SetPhysicsLinearVelocity(FVector(currentVel.X + velocity.X,currentVel.Y + velocity.Y, currentVel.Z + velocity.Z));
+	}
 };

@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "CubeSocketInfo.h"
-#include "PickupableMaster.h"
 #include "CubeCore.generated.h"
 
 /**

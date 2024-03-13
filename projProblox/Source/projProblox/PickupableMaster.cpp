@@ -24,6 +24,7 @@ APickupableMaster::APickupableMaster()
 	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
 	collider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 	collider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	collider->AddRelativeLocation({0,0,50});
 	
 	defaultRot = objMesh->GetRelativeRotation();
 
@@ -141,6 +142,7 @@ void APickupableMaster::SetSelected(const bool value)
 		objCore->RemoveAttachment(attachedSocket);
 		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 		active = false;
+		isAttached = false;
 		return;
 	}
 
@@ -159,9 +161,9 @@ void APickupableMaster::SetSelected(const bool value)
 	// Rotate to match the socket rotation
 	objMesh->SetWorldRotation(rot);
 	
-		
-	
 	objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
+
 }
 

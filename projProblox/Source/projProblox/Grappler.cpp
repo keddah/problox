@@ -10,6 +10,14 @@ AGrappler::AGrappler()
 
 	grappleLine = CreateDefaultSubobject<UCableComponent>(TEXT("Line"));
 	grappleLine->AttachToComponent(grappleSpawn, FAttachmentTransformRules::KeepRelativeTransform);
+	grappleLine->CableWidth = 20;
+	grappleLine->CableLength = 2500;
+	grappleLine->SolverIterations = 16;
+
+	grappleLine->EndLocation = {};
+
+	grappleLine->NumSides = 4;
+	grappleLine->NumSegments = 20;
 }
 
 void AGrappler::Ability()
