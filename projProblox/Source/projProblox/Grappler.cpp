@@ -12,12 +12,12 @@ AGrappler::AGrappler()
 	grappleLine->AttachToComponent(grappleSpawn, FAttachmentTransformRules::KeepRelativeTransform);
 	grappleLine->CableWidth = 20;
 	grappleLine->CableLength = 2500;
-	grappleLine->SolverIterations = 16;
+	grappleLine->SolverIterations = 100;
 
 	grappleLine->EndLocation = {};
 
 	grappleLine->NumSides = 4;
-	grappleLine->NumSegments = 20;
+	grappleLine->NumSegments = 128;
 }
 
 void AGrappler::Ability()
