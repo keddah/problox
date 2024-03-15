@@ -120,6 +120,10 @@ void ACubeConnector::Placement()
 
 				// Compare the distance between the current socket and this connector's mesh
 				const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+				
+				// Don't allow the attachment if the socket is out of range.
+				if(distance > placeRange) continue;
+				
 				if(distance < shortestDistance)
 				{
 					shortestDistance = distance;
@@ -147,7 +151,7 @@ void ACubeConnector::Placement()
 			}
 		}
 
-		attachedSocket = closestSocket;
+		if(closestSocket != NAME_None) attachedSocket = closestSocket;
 		objCore = nullptr;
 		hitObj->SetCore(this);
 		break;
@@ -172,6 +176,7 @@ void ACubeConnector::SetSelected(const bool value)
 
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(objCore)) return;
+	if(attachedSocket == NAME_None) return;
 	
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objCore->GetMesh()->GetSocketRotation(attachedSocket));
 	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);

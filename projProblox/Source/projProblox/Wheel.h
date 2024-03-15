@@ -17,14 +17,18 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 	GENERATED_BODY()
 
 	AWheel();
+
+	virtual void Placement() override;
 	virtual void SetSelected(const bool value) override;
+	virtual void ResetRotation(bool resetVelocity) override;
 	
 protected:
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	USceneComponent* pivot;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* wheelMesh;
 
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* axel;
-	
-public:
 };

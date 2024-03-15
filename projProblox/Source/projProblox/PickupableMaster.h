@@ -56,6 +56,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
 
+	UPROPERTY(BlueprintReadOnly)
 	bool isAttached;
 	
 	/////////////////// FUNCTIONS ///////////////////
@@ -83,7 +84,6 @@ protected:
 		return rounded;
 	}
 
-private:
 	FRotator defaultRot{};
 	
 public:	
@@ -100,7 +100,7 @@ public:
 	void SnapRotateMesh(const bool hori) { RotateMesh(hori? FRotator{0,90,00} : FRotator{90,0,0}); }
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
-	void ResetRotation(bool resetVelocity = false);
+	virtual void ResetRotation(bool resetVelocity = false);
 	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)

@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWheel() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_UPhysicsConstraintComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APickupableMaster();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AWheel();
@@ -30,6 +31,10 @@ void EmptyLinkFunctionForGeneratedCodeWheel() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_pivot_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_pivot;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_wheelMesh_MetaData[];
 #endif
@@ -57,13 +62,21 @@ void EmptyLinkFunctionForGeneratedCodeWheel() {}
 	};
 #endif
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWheel_Statics::NewProp_pivot_MetaData[] = {
+		{ "Category", "Wheel" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Wheel.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWheel_Statics::NewProp_pivot = { "pivot", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWheel, pivot), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWheel_Statics::NewProp_pivot_MetaData), Z_Construct_UClass_AWheel_Statics::NewProp_pivot_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh_MetaData[] = {
 		{ "Category", "Wheel" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Wheel.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh = { "wheelMesh", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWheel, wheelMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh_MetaData), Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh = { "wheelMesh", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWheel, wheelMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh_MetaData), Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWheel_Statics::NewProp_axel_MetaData[] = {
 		{ "Category", "Wheel" },
@@ -73,6 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeWheel() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWheel_Statics::NewProp_axel = { "axel", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWheel, axel), Z_Construct_UClass_UPhysicsConstraintComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWheel_Statics::NewProp_axel_MetaData), Z_Construct_UClass_AWheel_Statics::NewProp_axel_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWheel_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWheel_Statics::NewProp_pivot,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWheel_Statics::NewProp_wheelMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWheel_Statics::NewProp_axel,
 	};
@@ -114,9 +128,9 @@ void EmptyLinkFunctionForGeneratedCodeWheel() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Wheel_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AWheel, AWheel::StaticClass, TEXT("AWheel"), &Z_Registration_Info_UClass_AWheel, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWheel), 2577298192U) },
+		{ Z_Construct_UClass_AWheel, AWheel::StaticClass, TEXT("AWheel"), &Z_Registration_Info_UClass_AWheel, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWheel), 4062577468U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Wheel_h_143685853(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Wheel_h_4054600912(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Wheel_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Wheel_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

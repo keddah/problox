@@ -71,7 +71,7 @@ void APickupableMaster::Placement()
 	// objCore has been set to the hit actor.
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
 	
-	float shortestDistance = 9999999;
+	float shortestDistance = 9999;
 	FName closestSocket = "None";
 
 	for(int i = 0; i < 2; i++)
@@ -81,6 +81,10 @@ void APickupableMaster::Placement()
 			if(objCore) if(objCore->ObjectInSocket(socket)) continue;
 			
 			const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+
+			// Don't allow the attachment if the socket is out of range.
+			if(distance > placeRange) continue;
+			
 			if(distance < shortestDistance)
 			{
 				shortestDistance = distance;
@@ -88,8 +92,8 @@ void APickupableMaster::Placement()
 			}
 		}
 	}
-	
-	attachedSocket = closestSocket;
+
+	if(closestSocket != NAME_None) attachedSocket = closestSocket;
 }
 
 void APickupableMaster::Ability()
@@ -147,6 +151,7 @@ void APickupableMaster::SetSelected(const bool value)
 	}
 
 	if(!IsValid(objCore)) return;
+	if(attachedSocket == NAME_None) return;
 
 	ResetRotation();
 
