@@ -93,6 +93,12 @@
     <ClInclude Include="..\..\Source\projProblox\Propeller.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Thing.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Thing.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Treads.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>

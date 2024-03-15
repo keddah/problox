@@ -28,6 +28,14 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* pivot;
 
+	UPROPERTY(EditDefaultsOnly)
+	UBoxComponent* thingCollector;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UBoxComponent* thingHomer;
+
+	// UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MakeEditWidget))
+	
 	virtual void Placement() override;
 
 	void AdjustRange() { placeRange *= objMesh->GetRelativeScale3D().Length(); }
@@ -39,9 +47,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
-
 	virtual void RemoveAttachment(const FName& socket) override;
 
+	FVector GetCenterPos() const { return pivot->GetComponentLocation(); }
+	
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
 
@@ -53,7 +62,6 @@ public:
 	TArray<APickupableMaster*> GetAttachedObjects() const { return socketInfo->GetAttachments(); }
 
 	virtual void SetSelected(const bool value) override;
-
 	virtual float GetMass() const override;
 
 	void Movement(const FVector& direction, const float speed) const { objMesh->AddForce(direction * speed * 1000); }
