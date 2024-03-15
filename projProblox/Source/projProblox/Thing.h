@@ -43,7 +43,7 @@ public:
 private:
 	ACubeCore* core;
 	
-	float moveSpeed = 8;
+	float attractionForce = 100;
 	FVector goal;
 	bool isHoming;
 	

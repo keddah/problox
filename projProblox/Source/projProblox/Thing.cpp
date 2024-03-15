@@ -56,5 +56,5 @@ void AThing::GoHome() const
 	const FVector corePos = core->GetCenterPos();
 	const FVector direction = corePos - GetActorLocation();
 
-	body->AddForce(direction * moveSpeed);
+	body->AddForce(direction * attractionForce);
 }

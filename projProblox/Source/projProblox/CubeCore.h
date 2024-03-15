@@ -33,7 +33,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* thingHomer;
 
-	// UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MakeEditWidget))
+	UPROPERTY(BlueprintReadOnly, EditInstanceOnly, meta = (MakeEditWidget))
+	FVector safeSpace;
 	
 	virtual void Placement() override;
 
