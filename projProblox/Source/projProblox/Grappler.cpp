@@ -11,7 +11,7 @@ AGrappler::AGrappler()
 	grappleLine = CreateDefaultSubobject<UCableComponent>(TEXT("Line"));
 	grappleLine->AttachToComponent(grappleSpawn, FAttachmentTransformRules::KeepRelativeTransform);
 	grappleLine->CableWidth = 20;
-	grappleLine->CableLength = 2500;
+	grappleLine->CableLength = 0;
 	grappleLine->SolverIterations = 100;
 
 	grappleLine->EndLocation = {};
@@ -24,10 +24,19 @@ void AGrappler::Ability()
 {
 	Super::Ability();
 
+	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
+	
 	if(!active) return;
 
 	if(IsValid(hook)) hook->Destroy();
 
-	// Spawn a new hook...
-	// Being done in BP since its easier...
+	FActorSpawnParameters params;
+	params.Owner = this;
+	params.bNoFail = true;
+	
+	hook = GetWorld()->SpawnActor<AGrappleHead>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	SetupLine();
+	active = false;
+
+	hook->Launch(grappleSpawn->GetForwardVector());
 }

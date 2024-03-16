@@ -32,7 +32,7 @@ protected:
 	AGrappleHead* hook;
 
 	UFUNCTION(BlueprintCallable)
-	void SetupLine() { if(hook) grappleLine->SetAttachEndToComponent(hook->GetMesh()); }
+	void SetupLine() { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndToComponent(hook->GetMesh()); }
 	
 private:
 	virtual void Ability() override;

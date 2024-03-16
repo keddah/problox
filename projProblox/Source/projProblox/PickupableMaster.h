@@ -8,6 +8,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "PickupableMaster.generated.h"
 
+#define Print(x) { GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, x); }
+
 class ACubeCore;
 
 UCLASS()
@@ -27,9 +29,6 @@ protected:
 	/////////////////// PROPERTIES ///////////////////
 
 	// Blueprint visible components..
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	USceneComponent* scene;
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* objMesh;
 
@@ -62,10 +61,8 @@ protected:
 	/////////////////// FUNCTIONS ///////////////////
 	
 	virtual void Placement();
-	
-	virtual void Ability();
+	virtual void Ability() {}
 
-	
 	UFUNCTION(BlueprintCallable)
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
 
@@ -94,7 +91,7 @@ public:
 	virtual void SetAbilityActive(const bool value) { active = value; }
 	
 	UFUNCTION(BlueprintCallable)
-	void RotateMesh(const FRotator& rotation);
+	void RotateMesh(const FRotator& rot);
 
 	UFUNCTION(BlueprintCallable)
 	void SnapRotateMesh(const bool hori) { RotateMesh(hori? FRotator{0,90,00} : FRotator{90,0,0}); }
@@ -116,14 +113,14 @@ public:
 	void SetAttachedSocket(FName socket) { attachedSocket = socket; }
 
 	UFUNCTION(BlueprintCallable)
-	void AscendDescend(const float inputValue) { objMesh->AddWorldOffset(FVector::UpVector * inputValue); }
+	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue); }
 
 	UFUNCTION(BlueprintPure)
 	virtual float GetMass() const { return objMesh->GetMass(); }
 
 	void AddVelocity(const FVector& velocity) const
 	{
-		const FVector currentVel = objMesh->GetPhysicsLinearVelocity();
+		const FVector currentVel = GetVelocity();
 		objMesh->SetPhysicsLinearVelocity(FVector(currentVel.X + velocity.X,currentVel.Y + velocity.Y, currentVel.Z + velocity.Z));
 	}
 };

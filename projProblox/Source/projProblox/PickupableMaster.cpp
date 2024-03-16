@@ -11,10 +11,7 @@ APickupableMaster::APickupableMaster()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	scene = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-	
 	objMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	objMesh->AttachToComponent(scene, FAttachmentTransformRules::KeepRelativeTransform);
 	objMesh->SetSimulatePhysics(true);
 	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	objMesh->SetGenerateOverlapEvents(true);
@@ -27,8 +24,6 @@ APickupableMaster::APickupableMaster()
 	collider->AddRelativeLocation({0,0,50});
 	
 	defaultRot = objMesh->GetRelativeRotation();
-
-	scene->SetAutoActivate(true);
 }
 
 // Called when the game starts or when spawned
@@ -47,14 +42,14 @@ void APickupableMaster::Placement()
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
-	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
+	const FVector direction = GetActorRotation().RotateVector(placeDir);
 
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
 	collisionParams.MobilityType = EQueryMobilityType::Any;
 	
 	// Debug Draw
-	const FVector start = objMesh->GetComponentLocation();
+	const FVector start = GetActorLocation();
 	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
 
@@ -96,10 +91,6 @@ void APickupableMaster::Placement()
 	if(closestSocket != NAME_None) attachedSocket = closestSocket;
 }
 
-void APickupableMaster::Ability()
-{
-}
-
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	attachedSocket = socket;
@@ -107,7 +98,7 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 
 void APickupableMaster::ResetRotation(const bool resetVelocity)
 {
-	objMesh->SetRelativeRotation(defaultRot);
+	SetActorRotation(defaultRot);
 
 	if(!resetVelocity) return;
 
@@ -132,7 +123,7 @@ void APickupableMaster::RotateMesh(const FRotator& rotation)
 	if(placeDir.X != 0) dirRot = UKismetMathLibrary::MakeRotFromX(placeDir);
 	else if(placeDir.Y != 0) dirRot = UKismetMathLibrary::MakeRotFromY(placeDir);
 	else if(placeDir.Z != 0) dirRot = UKismetMathLibrary::MakeRotFromZ(placeDir);
-	objMesh->AddRelativeRotation(rotation);
+	AddActorLocalRotation(rotation);
 }
 
 void APickupableMaster::SetSelected(const bool value)
@@ -164,7 +155,7 @@ void APickupableMaster::SetSelected(const bool value)
 	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
 	// Rotate to match the socket rotation
-	objMesh->SetWorldRotation(rot);
+	SetActorRotation(rot);
 	
 	objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);

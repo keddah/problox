@@ -20,8 +20,10 @@ public:
 	AGrappleHead();
 
 protected:
+	virtual void BeginPlay() override;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	USceneComponent* scene;
+	UProjectileMovementComponent* projectile;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* mesh;
@@ -48,8 +50,6 @@ protected:
 	float cancelDistance;
 	
 public:	
-	void SetParent(AGrappler* grappler) { parent = grappler; }
-
 	UStaticMeshComponent* GetMesh() const { return mesh; }
-
+	void Launch(const FVector& direction) const { projectile->Velocity = direction * launchForce * 1000; }
 };
