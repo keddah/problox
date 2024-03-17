@@ -62,7 +62,6 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 void UCubeSocketInfo::RemoveAttachment(FName socket)
 {
 	int32 index;
-
 	const FString str_socket = socket.ToString().ToUpper();
 	
 	if(str_socket == sockets[0]) index = 0;
@@ -78,7 +77,8 @@ void UCubeSocketInfo::RemoveAttachment(FName socket)
 		return;
 	}
 
-	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, IsValid(socketObjects[index]) ? "Successful removal" : "Couldnt remove");
+	GEngine->AddOnScreenDebugMessage(-1, 30, FColor::Cyan, IsValid(socketObjects[index]) ? "Successful removal" : "Couldnt remove");
+	
 	socketObjects[index] = nullptr;
 }
 

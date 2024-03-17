@@ -35,8 +35,6 @@ void AWheel::Ability()
 {
 	if(!IsValid(objCore)) return;
 
-	Print(objCore->GetName());
-	
 	const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
 	wheelAxel->SetAngularVelocityTarget(-coreVelocity);
 }
@@ -105,25 +103,42 @@ void AWheel::Placement()
 // The same as the normal function except attachments are managed using the physics constraint.
 void AWheel::SetSelected(const bool value)
 {
-	selected = value;
+	selected = value; 
 	GravitySelection();
 
 	if(selected)
 	{
-		if(!IsValid(objCore)) return;
-
-		objCore->RemoveAttachment(attachedSocket);
-		wheelAxel->BreakConstraint();
-		SetParentDominates(false);
-		active = false;
-		isAttached = false;
-		
+		Detach();
 		return;
 	}
 
-	if(!IsValid(objCore)) return;
+	// If the wheel is unselected whilst the objCore isn't valid
+	if(!IsValid(objCore))
+	{
+		Detach();
+		return;
+	}
 	if(attachedSocket == NAME_None) return;
 
+	Attach(objCore);
+}
+
+void AWheel::Detach()
+{
+	if(!IsValid(objCore)) return;
+
+	objCore->RemoveAttachment(attachedSocket);
+	wheelAxel->BreakConstraint();
+	wheelAxel->UpdateConstraintFrames();
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	SetParentDominates(false);
+	isAttached = false;
+}
+
+void AWheel::Attach(ACubeCore* core)
+{
+	objCore = core;
+	
 	ResetRotation();
 
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
@@ -139,6 +154,8 @@ void AWheel::SetSelected(const bool value)
 	SetActorLocation(coreMesh->GetSocketLocation(attachedSocket));
 	
 	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, objCore->GetMesh(), attachedSocket);
+	wheelAxel->UpdateConstraintFrames();
+	
 	objCore->AddAttachment(this, attachedSocket);
 	SetParentDominates(false);
 	isAttached = true;

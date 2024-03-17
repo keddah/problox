@@ -27,6 +27,7 @@ public:
 
 	void AddAttachment(APickupableMaster* attachment, FName socket);
 	void RemoveAttachment(FName socket);
+	void ClearAttachments() { for(const auto& name : sockets) RemoveAttachment(name);}
 
 	TArray<AActor*> GetAttachmentActors() const;
 	TArray<APickupableMaster*> GetAttachments() const;

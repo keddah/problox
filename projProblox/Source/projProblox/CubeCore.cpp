@@ -45,6 +45,20 @@ void ACubeCore::SetAbilityActive(bool value)
 	for (const auto& obj : socketInfo->GetAttachments()) obj->SetAbilityActive(value);
 }
 
+void ACubeCore::DetachAll()
+{
+	for(const auto& obj : socketInfo->GetAttachments())
+	{
+		obj->Detach();
+		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
+		const float launchForce = obj->GetMass();
+		obj->GravitySelection();
+		obj->AddVelocity(launchDir * launchForce);
+	}
+
+	socketInfo->ClearAttachments();
+}
+
 void ACubeCore::SetSelected(const bool value)
 {
 	selected = value;
@@ -77,9 +91,16 @@ void ACubeCore::SetSelected(const bool value)
 	// Rotate to match the socket rotation
 	hitMesh->SetWorldRotation(rot);
 
-	hitObj->AttachToActor(this, attachRules, attachedSocket);
+	// Syncing the socket info
 	AddAttachment(hitObj, attachedSocket);
 	hitObj->SetAttachedSocket(attachedSocket);
+
+	// Since the wheel uses physics constraints instead of normal attachments
+	if(!hitObj->IsA<AWheel>()) hitObj->AttachToActor(this, attachRules, attachedSocket);
+	else Cast<AWheel>(hitObj)->Attach(this);
+
+	Print("What the obj thinks: " + hitObj->GetAttachedSocket().ToString())
+	Print("what the core thinks: " +  attachedSocket.ToString())
 }
 
 float ACubeCore::GetMass() const
@@ -97,13 +118,8 @@ float ACubeCore::GetMass() const
 void ACubeCore::Placement()
 {
 	if(!selected) return;
+	if(ObjectInSocket("Down")) return;
 
-	if(ObjectInSocket("Down"))
-	{
-		hitObj = nullptr;
-		return;
-	}
-	
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;

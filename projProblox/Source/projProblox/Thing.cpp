@@ -29,8 +29,6 @@ void AThing::BeginPlay()
 	Super::BeginPlay();
 
 	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
-
-	if(!IsValid(core)) GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Couldn't get core...");
 }
 
 // Called every frame

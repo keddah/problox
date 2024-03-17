@@ -17,11 +17,7 @@ public:
 	AThing();
 
 	UFUNCTION(BlueprintCallable)
-	void Teleport(const FVector& pos)
-	{
-		SetActorLocation(pos);
-		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, FString::FromInt(pos.X) + ", " + FString::FromInt(pos.Y) + ", " + FString::FromInt(pos.Z));
-	}
+	void Teleport(const FVector& pos) { SetActorLocation(pos); }
 	
 	UFUNCTION(BlueprintCallable)
 	void SetHoming(const bool home) { isHoming = home;}

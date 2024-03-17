@@ -16,8 +16,8 @@ void AGlider::Ability()
 	}
 	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, FString::FromInt(objMesh->GetPhysicsLinearVelocity().Z));
 
-	// If falling fast enough...
-	if(objMesh->GetPhysicsLinearVelocity().Z > -activationSpeed) return;
+	// If falling fast enough... (doesn't matter which way the thing is falling)
+	if(abs(objMesh->GetPhysicsLinearVelocity().Z) > activationSpeed) return;
 
 	
 	objCore->Movement(objMesh->GetForwardVector(), glideSpeed * 1000);

@@ -8,7 +8,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "PickupableMaster.generated.h"
 
-#define Print(x) { GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, x); }
+#define Print(x) { GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Cyan, x); }
 
 class ACubeCore;
 
@@ -111,6 +111,9 @@ public:
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
 	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }
+
+	FName GetAttachedSocket() const { return attachedSocket; }
+	virtual void Detach();
 	
 	UFUNCTION(BlueprintCallable)
 	UStaticMeshComponent* GetMesh() const { return objMesh; }

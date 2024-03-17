@@ -54,6 +54,9 @@ public:
 
 	virtual void SetAbilityActive(bool value) override;
 
+	UFUNCTION(BlueprintCallable)
+	void DetachAll();
+	
 	// Depending on the given bool.. return the array of AActors or APickupableMasters 
 	UFUNCTION(BlueprintCallable)
 	TArray<AActor*> GetAttachedObjects(const bool returnAActor) const { return socketInfo->GetAttachmentActors(); }

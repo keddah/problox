@@ -106,6 +106,16 @@ void APickupableMaster::RemoveVelocity() const
 	objMesh->SetAllPhysicsAngularVelocityInRadians({});
 }
 
+void APickupableMaster::Detach()
+{
+	if(!IsValid(objCore)) return;
+
+	objCore->RemoveAttachment(attachedSocket);
+	objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	active = false;
+	isAttached = false;
+}
+
 // Called every frame
 void APickupableMaster::Tick(float DeltaTime)
 {
@@ -145,13 +155,7 @@ void APickupableMaster::SetSelected(const bool value)
 
 	if(selected)
 	{
-		if(!IsValid(objCore)) return;
-
-		objCore->RemoveAttachment(attachedSocket);
-		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-		active = false;
-		isAttached = false;
-
+		Detach();
 		return;
 	}
 
