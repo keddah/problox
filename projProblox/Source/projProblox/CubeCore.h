@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "CubeSocketInfo.h"
+#include "Wheel.h"
 #include "CubeCore.generated.h"
 
 /**

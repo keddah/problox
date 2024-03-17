@@ -3,6 +3,7 @@
 
 #include "CubeCore.h"
 
+
 ACubeCore::ACubeCore()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -46,10 +47,24 @@ void ACubeCore::SetSelected(const bool value)
 {
 	selected = value;
 
+	for(const auto& obj : socketInfo->GetAttachments())
+	{
+		if(!obj->IsA<AWheel>()) continue;
+
+		Cast<AWheel>(obj)->SetParentDominates(true);
+	}
+	
 	GravitySelection();
 	if(selected) return;
 	GravitySelection();
+	
+	for(const auto& obj : socketInfo->GetAttachments())
+	{
+		if(!obj->IsA<AWheel>()) continue;
 
+		Cast<AWheel>(obj)->SetParentDominates(false);
+	}
+	
 	if(!IsValid(hitObj)) return;
 
 	hitObj->ResetRotation();

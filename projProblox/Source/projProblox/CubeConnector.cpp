@@ -171,10 +171,23 @@ void ACubeConnector::SetSelected(const bool value)
 
 		objCore->RemoveAttachment(attachedSocket);
 		GravitySelection();
+
+		for(const auto& obj : socketInfo->GetAttachments())
+		{
+			if(!obj->IsA<AWheel>()) continue;
+
+			Cast<AWheel>(obj)->SetParentDominates(true);
+		}
 		return;
 	}
 	GravitySelection();
+	for(const auto& obj : socketInfo->GetAttachments())
+	{
+		if(!obj->IsA<AWheel>()) continue;
 
+		Cast<AWheel>(obj)->SetParentDominates(false);
+	}
+	
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
@@ -190,7 +203,6 @@ void ACubeConnector::SetSelected(const bool value)
 	
 	// Attach self to the core
 	AttachToActor(objCore, attachRules, attachedSocket);
-	// objMesh->AttachToComponent(objCore->GetMesh(), attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 }
 

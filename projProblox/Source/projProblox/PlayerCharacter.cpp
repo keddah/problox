@@ -71,7 +71,11 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	if(!selectedObj->IsA<ACubeCore>()) return;
 
 	// Add the things that are connected to the core/connector to the things to ignore
-	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj)) exclusions.Append(obj->GetAttachedObjects(true));
+	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
+	{
+		exclusions.Append(obj->GetAttachedObjects(true));
+		Print(FString::FromInt(obj->GetAttachedObjects().Num()))
+	}
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)

@@ -52,7 +52,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* objCore;
 
-	FAttachmentTransformRules attachRules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+	const FAttachmentTransformRules attachRules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;

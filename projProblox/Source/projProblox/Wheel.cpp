@@ -28,7 +28,18 @@ AWheel::AWheel()
 
 	
 	placeRange = 300;
-	attachRules.bWeldSimulatedBodies = false;
+	SetParentDominates(false);
+}
+
+void AWheel::Ability()
+{
+	if(!IsValid(objCore)) return;
+	
+	Print(wheelAxel->ConstraintInstance.IsParentDominatesEnabled() ? "domming" : "not domming")
+	const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
+
+	wheelAxel->SetAngularVelocityTarget(-coreVelocity);
+	Print(FString::FromInt(coreVelocity.X) + ", " + FString::FromInt(coreVelocity.Y) + ", " + FString::FromInt(coreVelocity.Z))
 }
 
 
@@ -99,10 +110,11 @@ void AWheel::SetSelected(const bool value)
 		if(!IsValid(objCore)) return;
 
 		objCore->RemoveAttachment(attachedSocket);
-		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+		wheelAxel->BreakConstraint();
+		SetParentDominates(false);
 		active = false;
 		isAttached = false;
-
+		
 		GravitySelection();
 		return;
 	}
@@ -125,7 +137,8 @@ void AWheel::SetSelected(const bool value)
 	SetActorRotation(rot);
 	SetActorLocation(coreMesh->GetSocketLocation(attachedSocket));
 	
-	wheelAxel->SetConstrainedComponents(objCore->GetMesh(), attachedSocket, objMesh, attachedSocket);
+	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, objCore->GetMesh(), attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
+	SetParentDominates(false);
 	isAttached = true;
 }

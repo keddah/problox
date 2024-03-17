@@ -18,6 +18,7 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 
 	AWheel();
 
+	virtual void Ability() override;
 	virtual void Placement() override;
 	virtual void SetSelected(const bool value) override;
 protected:
@@ -26,4 +27,12 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* wheelAxel;
+
+
+public:
+	void SetParentDominates(const bool dominate) const
+	{
+		if(dominate) wheelAxel->ConstraintInstance.EnableParentDominates();
+		else wheelAxel->ConstraintInstance.DisableParentDominates();
+	}
 };
