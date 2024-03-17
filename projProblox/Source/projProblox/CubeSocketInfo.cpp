@@ -11,7 +11,8 @@ bool UCubeSocketInfo::ObjectInSocket(const FName& socket) const
 
 	const FString str_socket = socket.ToString().ToUpper();
     
-	if (str_socket == sockets[1]) index = 1;
+	if (str_socket == sockets[0]) index = 0;
+	else if (str_socket == sockets[1]) index = 1;
 	else if (str_socket == sockets[2]) index = 2;
 	else if (str_socket == sockets[3]) index = 3;
 	else if (str_socket == sockets[4]) index = 4;
@@ -36,13 +37,17 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 
 	const FString str_socket = socket.ToString().ToUpper();
 	
-	if(str_socket == sockets[1]) index = 1;
+	if(str_socket == sockets[0]) index = 0;
+	else if(str_socket == sockets[1]) index = 1;
 	else if(str_socket == sockets[2]) index = 2;
 	else if(str_socket == sockets[3]) index = 3;
 	else if(str_socket == sockets[4]) index = 4;
 	else if(str_socket == sockets[5]) index = 5;
 	else index = 0;
 
+	Print(str_socket)
+	Print(FString::FromInt(index))
+	
 	if(!socketObjects.IsValidIndex(index))
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
@@ -60,21 +65,21 @@ void UCubeSocketInfo::RemoveAttachment(FName socket)
 
 	const FString str_socket = socket.ToString().ToUpper();
 	
-	if(str_socket == sockets[1]) index = 1;
+	if(str_socket == sockets[0]) index = 0;
+	else if(str_socket == sockets[1]) index = 1;
 	else if(str_socket == sockets[2]) index = 2;
 	else if(str_socket == sockets[3]) index = 3;
 	else if(str_socket == sockets[4]) index = 4;
 	else if(str_socket == sockets[5]) index = 5;
-	else index = 0;
 
 	if(!socketObjects.IsValidIndex(index))
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
 		return;
 	}
-	
-	socketObjects[index] = nullptr;
+
 	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, IsValid(socketObjects[index]) ? "Successful removal" : "Couldnt remove");
+	socketObjects[index] = nullptr;
 }
 
 TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const

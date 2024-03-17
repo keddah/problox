@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "CubeSocketInfo.h"
-#include "Wheel.h"
 #include "CubeCore.generated.h"
 
 /**
@@ -45,9 +44,6 @@ protected:
 	APickupableMaster* hitObj;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
 

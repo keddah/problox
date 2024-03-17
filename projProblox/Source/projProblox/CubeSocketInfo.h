@@ -22,21 +22,12 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, meta = (ArrayClamp = "sockets"))
 	TArray<APickupableMaster*> socketObjects { 0, 0, 0, 0, 0, 0 };
 
-	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(const FName& socket) const;
 	bool ObjectInSocket(int index) const;
 
-	UFUNCTION(BlueprintCallable)
 	void AddAttachment(APickupableMaster* attachment, FName socket);
-
-	UFUNCTION(BlueprintCallable)
 	void RemoveAttachment(FName socket);
 
-	UFUNCTION(BlueprintCallable)
 	TArray<AActor*> GetAttachmentActors() const;
-
-	UFUNCTION(BlueprintCallable)
 	TArray<APickupableMaster*> GetAttachments() const;
-
-protected:
 };

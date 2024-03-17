@@ -2,6 +2,7 @@
 
 
 #include "CubeCore.h"
+#include "Wheel.h"
 
 
 ACubeCore::ACubeCore()
@@ -36,6 +37,7 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	Super::RemoveAttachment(socket);
 
 	socketInfo->RemoveAttachment(socket);
+	GravitySelection();
 }
 
 void ACubeCore::SetAbilityActive(bool value)
@@ -46,23 +48,20 @@ void ACubeCore::SetAbilityActive(bool value)
 void ACubeCore::SetSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
 
+	// Make the wheel ignore collisions and not ... fly away
 	for(const auto& obj : socketInfo->GetAttachments())
 	{
-		if(!obj->IsA<AWheel>()) continue;
-
-		Cast<AWheel>(obj)->SetParentDominates(true);
+		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 	}
 	
-	GravitySelection();
 	if(selected) return;
-	GravitySelection();
-	
+
+	// Make the wheel go back to normal when it's unselected.
 	for(const auto& obj : socketInfo->GetAttachments())
 	{
-		if(!obj->IsA<AWheel>()) continue;
-
-		Cast<AWheel>(obj)->SetParentDominates(false);
+		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
 	}
 	
 	if(!IsValid(hitObj)) return;
@@ -79,7 +78,6 @@ void ACubeCore::SetSelected(const bool value)
 	hitMesh->SetWorldRotation(rot);
 
 	hitObj->AttachToActor(this, attachRules, attachedSocket);
-	// hitMesh->AttachToComponent(objMesh, attachRules, attachedSocket);
 	AddAttachment(hitObj, attachedSocket);
 	hitObj->SetAttachedSocket(attachedSocket);
 }
@@ -148,19 +146,11 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 	for(const auto& obj : socketInfo->GetAttachments()) obj->RemoveVelocity();
 }
 
-void ACubeCore::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	// for (auto& info : GetAttachedObjects(true))
-	// {
-	// 	if(info) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, info->GetName());
-	// }
-}
-
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	Super::AddAttachment(attachment, socket);
 
 	socketInfo->AddAttachment(attachment, socket);
+	GravitySelection();
+
 }

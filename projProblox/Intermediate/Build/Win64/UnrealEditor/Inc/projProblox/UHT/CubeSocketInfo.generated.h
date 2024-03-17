@@ -9,8 +9,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
-class APickupableMaster;
 #ifdef PROJPROBLOX_CubeSocketInfo_generated_h
 #error "CubeSocketInfo.generated.h already included, missing '#pragma once' in CubeSocketInfo.h"
 #endif
@@ -19,15 +17,7 @@ class APickupableMaster;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_16_SPARSE_DATA
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_16_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_16_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execGetAttachments); \
-	DECLARE_FUNCTION(execGetAttachmentActors); \
-	DECLARE_FUNCTION(execRemoveAttachment); \
-	DECLARE_FUNCTION(execAddAttachment); \
-	DECLARE_FUNCTION(execObjectInSocket);
-
-
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_16_RPC_WRAPPERS_NO_PURE_DECLS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_16_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_16_INCLASS_NO_PURE_DECLS \
 private: \

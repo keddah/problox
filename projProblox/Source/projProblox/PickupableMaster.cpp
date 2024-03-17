@@ -141,6 +141,7 @@ void APickupableMaster::RotateMesh(const FRotator& rotation)
 void APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
 
 	if(selected)
 	{
@@ -151,10 +152,8 @@ void APickupableMaster::SetSelected(const bool value)
 		active = false;
 		isAttached = false;
 
-		GravitySelection();
 		return;
 	}
-	GravitySelection();
 
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
@@ -176,5 +175,7 @@ void APickupableMaster::SetSelected(const bool value)
 	// objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
+
+	Print(objCore->GetName());
 }
 

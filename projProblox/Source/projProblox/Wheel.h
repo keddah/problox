@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CubeConnector.h"
 #include "PickupableMaster.h"
 #include "Components/SphereComponent.h"
 #include "PhysicsEngine/PhysicsConstraintComponent.h"
@@ -21,6 +22,7 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 	virtual void Ability() override;
 	virtual void Placement() override;
 	virtual void SetSelected(const bool value) override;
+
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	USceneComponent* pivot;

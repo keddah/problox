@@ -58,13 +58,10 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	
 	if(!IsValid(hitActor)) return;
 
-	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "hit thing " + hitActor->GetName());
-	
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
-		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "casted to " + selectedObj->GetName());
 	}
 
 	exclusions.Add(selectedObj);
@@ -74,7 +71,6 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
 		exclusions.Append(obj->GetAttachedObjects(true));
-		Print(FString::FromInt(obj->GetAttachedObjects().Num()))
 	}
 }
 

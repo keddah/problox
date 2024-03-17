@@ -2,6 +2,8 @@
 
 
 #include "CubeConnector.h"
+#include "Wheel.h"
+
 
 ACubeConnector::ACubeConnector()
 {
@@ -25,7 +27,6 @@ void ACubeConnector::Placement()
 	if(!selected) return;
 
 	FRotator rot = objMesh->GetComponentRotation(); 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw));
 
 	const UWorld* wrld = GetWorld();
 	FCollisionQueryParams collisionParams;
@@ -160,6 +161,7 @@ void ACubeConnector::Placement()
 void ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
 
 	// Detach from its components if selected
 	if(selected)
@@ -170,22 +172,17 @@ void ACubeConnector::SetSelected(const bool value)
 		if(!IsValid(objCore)) return;
 
 		objCore->RemoveAttachment(attachedSocket);
-		GravitySelection();
 
 		for(const auto& obj : socketInfo->GetAttachments())
 		{
-			if(!obj->IsA<AWheel>()) continue;
-
-			Cast<AWheel>(obj)->SetParentDominates(true);
+			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 		}
 		return;
 	}
-	GravitySelection();
+	
 	for(const auto& obj : socketInfo->GetAttachments())
 	{
-		if(!obj->IsA<AWheel>()) continue;
-
-		Cast<AWheel>(obj)->SetParentDominates(false);
+		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
 	}
 	
 	// Rotate/Manipulate self when it hits the core

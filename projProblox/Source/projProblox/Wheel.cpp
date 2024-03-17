@@ -34,12 +34,11 @@ AWheel::AWheel()
 void AWheel::Ability()
 {
 	if(!IsValid(objCore)) return;
-	
-	Print(wheelAxel->ConstraintInstance.IsParentDominatesEnabled() ? "domming" : "not domming")
-	const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
 
+	Print(objCore->GetName());
+	
+	const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
 	wheelAxel->SetAngularVelocityTarget(-coreVelocity);
-	Print(FString::FromInt(coreVelocity.X) + ", " + FString::FromInt(coreVelocity.Y) + ", " + FString::FromInt(coreVelocity.Z))
 }
 
 
@@ -67,24 +66,26 @@ void AWheel::Placement()
 		objCore = 0;
 		return;
 	}
-	
+
+	// Do the cube connector first since that's the broken one...
 	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) objCore = core;
 	else objCore = nullptr;
+	
 	if(!IsValid(objCore)) return;
 	
 	// objCore has been set to the hit actor.
-	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const UStaticMeshComponent* cubeMesh = objCore->GetMesh();
 	
 	float shortestDistance = 9999;
 	FName closestSocket = "None";
 
 	for(int i = 0; i < 2; i++)
 	{
-		for(const auto& socket: coreMesh->GetAllSocketNames())
+		for(const auto& socket: cubeMesh->GetAllSocketNames())
 		{
 			if(objCore) if(objCore->ObjectInSocket(socket)) continue;
 			
-			const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+			const float distance = FVector::Distance(cubeMesh->GetSocketLocation(socket), hit.ImpactPoint);
 
 			// Don't allow the attachment if the socket is out of range.
 			if(distance > placeRange) continue;
@@ -101,9 +102,11 @@ void AWheel::Placement()
 	
 }
 
+// The same as the normal function except attachments are managed using the physics constraint.
 void AWheel::SetSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
 
 	if(selected)
 	{
@@ -115,11 +118,9 @@ void AWheel::SetSelected(const bool value)
 		active = false;
 		isAttached = false;
 		
-		GravitySelection();
 		return;
 	}
 
-	GravitySelection();
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
 
