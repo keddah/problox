@@ -20,15 +20,10 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 
 	virtual void Placement() override;
 	virtual void SetSelected(const bool value) override;
-	virtual void ResetRotation(bool resetVelocity) override;
-	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	USceneComponent* pivot;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UStaticMeshComponent* wheelMesh;
-
 	UPROPERTY(EditDefaultsOnly)
-	UPhysicsConstraintComponent* axel;
+	UPhysicsConstraintComponent* wheelAxel;
 };

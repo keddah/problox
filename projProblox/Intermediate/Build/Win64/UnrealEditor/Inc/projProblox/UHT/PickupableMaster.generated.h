@@ -29,6 +29,8 @@ class UStaticMeshComponent;
 	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateMesh); \
+	DECLARE_FUNCTION(execRotateHori); \
+	DECLARE_FUNCTION(execRotateVert); \
 	DECLARE_FUNCTION(execSetAbilityActive); \
 	DECLARE_FUNCTION(execRemoveAttachment); \
 	DECLARE_FUNCTION(execAddAttachment);

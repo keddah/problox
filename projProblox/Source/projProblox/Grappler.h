@@ -18,6 +18,8 @@ class PROJPROBLOX_API AGrappler : public APickupableMaster
 	GENERATED_BODY()
 	AGrappler();
 
+	virtual void SetSelected(const bool value) override;
+
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	USceneComponent* grappleSpawn;

@@ -22,9 +22,8 @@ void ACubeConnector::Tick(float DeltaSeconds)
 
 void ACubeConnector::Placement()
 {
-	GravitySelection();
-	
 	if(!selected) return;
+
 	FRotator rot = objMesh->GetComponentRotation(); 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw));
 
@@ -171,8 +170,10 @@ void ACubeConnector::SetSelected(const bool value)
 		if(!IsValid(objCore)) return;
 
 		objCore->RemoveAttachment(attachedSocket);
+		GravitySelection();
 		return;
 	}
+	GravitySelection();
 
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(objCore)) return;
@@ -188,7 +189,8 @@ void ACubeConnector::SetSelected(const bool value)
 	objMesh->SetWorldRotation(rot);
 	
 	// Attach self to the core
-	objMesh->AttachToComponent(objCore->GetMesh(), attachRules, attachedSocket);
+	AttachToActor(objCore, attachRules, attachedSocket);
+	// objMesh->AttachToComponent(objCore->GetMesh(), attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 }
 

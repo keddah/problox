@@ -11,34 +11,30 @@ AWheel::AWheel()
 	pivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
 	pivot->AddRelativeLocation({0,0,50});
 	
-	axel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Wheel Axel");
-	axel->SetupAttachment(objMesh);
-	axel->SetDisableCollision(true);
+	wheelAxel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Wheel Axel");
+	wheelAxel->SetupAttachment(objMesh);
+	wheelAxel->SetDisableCollision(true);
 	
-	axel->SetLinearXLimit(LCM_Locked, 0);
-	axel->SetLinearYLimit(LCM_Locked, 0);
-	axel->SetLinearZLimit(LCM_Locked, 0);
+	wheelAxel->SetLinearXLimit(LCM_Locked, 0);
+	wheelAxel->SetLinearYLimit(LCM_Locked, 0);
+	wheelAxel->SetLinearZLimit(LCM_Locked, 0);
 	
-	axel->SetAngularSwing1Limit(ACM_Locked, 45);
-	axel->SetAngularSwing2Limit(ACM_Free,45);
-	axel->SetAngularTwistLimit(ACM_Locked,45);
+	wheelAxel->SetAngularSwing1Limit(ACM_Free, 45);
+	wheelAxel->SetAngularSwing2Limit(ACM_Locked,45);
+	wheelAxel->SetAngularTwistLimit(ACM_Locked,45);
 	
-	axel->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
-	axel->SetAngularVelocityDriveTwistAndSwing(false, true);
+	wheelAxel->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
+	wheelAxel->SetAngularVelocityDriveTwistAndSwing(false, true);
 
-	wheelMesh = CreateDefaultSubobject<UStaticMeshComponent>("Wheel Mesh");
-	wheelMesh->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
-	wheelMesh->SetSimulatePhysics(true);
 	
-	axel->SetConstrainedComponents(wheelMesh, "", objMesh, "");
+	placeRange = 300;
+	attachRules.bWeldSimulatedBodies = false;
 }
 
 
 // Override is exactly the same as the original except changing where the line trace starts from...
 void AWheel::Placement()
 {
-	GravitySelection();
-	
 	if(!selected) return;
 	
 	const UWorld* wrld = GetWorld();
@@ -96,22 +92,40 @@ void AWheel::Placement()
 
 void AWheel::SetSelected(const bool value)
 {
-	Super::SetSelected(value);
+	selected = value;
 
-	wheelMesh->SetEnableGravity(!value);
-}
+	if(selected)
+	{
+		if(!IsValid(objCore)) return;
 
-void AWheel::ResetRotation(bool resetVelocity)
-{
-	objMesh->SetRelativeRotation(defaultRot);
+		objCore->RemoveAttachment(attachedSocket);
+		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+		active = false;
+		isAttached = false;
 
-	if(!resetVelocity) return;
+		GravitySelection();
+		return;
+	}
 
-	wheelMesh->SetAllPhysicsLinearVelocity({});
-	wheelMesh->SetAllPhysicsAngularVelocityInRadians({});
-	wheelMesh->ResetSceneVelocity();
+	GravitySelection();
+	if(!IsValid(objCore)) return;
+	if(attachedSocket == NAME_None) return;
 
-	objMesh->SetAllPhysicsLinearVelocity({});
-	objMesh->SetAllPhysicsAngularVelocityInRadians({});
-	objMesh->ResetSceneVelocity();
+	ResetRotation();
+
+	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	// Rotate to match the socket rotation
+	SetActorRotation(rot);
+	SetActorLocation(coreMesh->GetSocketLocation(attachedSocket));
+	
+	wheelAxel->SetConstrainedComponents(objCore->GetMesh(), attachedSocket, objMesh, attachedSocket);
+	objCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
 }

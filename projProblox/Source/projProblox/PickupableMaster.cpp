@@ -35,10 +35,8 @@ void APickupableMaster::BeginPlay()
 
 void APickupableMaster::Placement()
 {
-	GravitySelection();
-	
 	if(!selected) return;
-	
+
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
@@ -99,9 +97,11 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 void APickupableMaster::ResetRotation(const bool resetVelocity)
 {
 	SetActorRotation(defaultRot);
+	if(resetVelocity) RemoveVelocity();
+}
 
-	if(!resetVelocity) return;
-
+void APickupableMaster::RemoveVelocity() const
+{
 	objMesh->SetAllPhysicsLinearVelocity({});
 	objMesh->SetAllPhysicsAngularVelocityInRadians({});
 }
@@ -115,14 +115,26 @@ void APickupableMaster::Tick(float DeltaTime)
 	Placement();
 }
 
+void APickupableMaster::RotateVert()
+{
+	const FRotator rot = (GetActorRightVector() * rotSpeed).Rotation();
+	AddActorLocalRotation(rot);
+	Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
+}
+
+void APickupableMaster::RotateHori()
+{
+	const FRotator rot = (placeDir * rotSpeed).Rotation();
+	AddActorLocalRotation(rot);
+
+	Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
+}
+
 void APickupableMaster::RotateMesh(const FRotator& rotation)
 {
 	if(!selected) return;
 	
-	FRotator dirRot;
-	if(placeDir.X != 0) dirRot = UKismetMathLibrary::MakeRotFromX(placeDir);
-	else if(placeDir.Y != 0) dirRot = UKismetMathLibrary::MakeRotFromY(placeDir);
-	else if(placeDir.Z != 0) dirRot = UKismetMathLibrary::MakeRotFromZ(placeDir);
+	const FRotator dirRot = placeDir.Rotation();
 	AddActorLocalRotation(rotation);
 }
 
@@ -138,8 +150,11 @@ void APickupableMaster::SetSelected(const bool value)
 		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 		active = false;
 		isAttached = false;
+
+		GravitySelection();
 		return;
 	}
+	GravitySelection();
 
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
@@ -156,8 +171,9 @@ void APickupableMaster::SetSelected(const bool value)
 
 	// Rotate to match the socket rotation
 	SetActorRotation(rot);
-	
-	objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
+
+	AttachToActor(objCore, attachRules, attachedSocket);
+	// objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }

@@ -42,6 +42,8 @@ protected:
 	
 	UPROPERTY(BlueprintReadOnly)
 	float mouseDistance = 20000;
+
+	
 	
 public:	
 	// Called every frame

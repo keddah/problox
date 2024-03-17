@@ -16,6 +16,8 @@ UCLASS()
 class PROJPROBLOX_API APickupableMaster : public AActor
 {
 	GENERATED_BODY()
+
+	const float rotSpeed = .001f;
 	
 public:	
 	// Sets default values for this actor's properties
@@ -50,7 +52,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* objCore;
 
-	const FAttachmentTransformRules attachRules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+	FAttachmentTransformRules attachRules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
@@ -91,6 +93,12 @@ public:
 	virtual void SetAbilityActive(const bool value) { active = value; }
 	
 	UFUNCTION(BlueprintCallable)
+	void RotateVert();
+
+	UFUNCTION(BlueprintCallable)
+	void RotateHori();
+	
+	UFUNCTION(BlueprintCallable)
 	void RotateMesh(const FRotator& rot);
 
 	UFUNCTION(BlueprintCallable)
@@ -98,6 +106,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
+	void RemoveVelocity() const;
 	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)

@@ -46,7 +46,10 @@ void ACubeCore::SetSelected(const bool value)
 {
 	selected = value;
 
+	GravitySelection();
 	if(selected) return;
+	GravitySelection();
+
 	if(!IsValid(hitObj)) return;
 
 	hitObj->ResetRotation();
@@ -60,7 +63,8 @@ void ACubeCore::SetSelected(const bool value)
 	// Rotate to match the socket rotation
 	hitMesh->SetWorldRotation(rot);
 
-	hitMesh->AttachToComponent(objMesh, attachRules, attachedSocket);
+	hitObj->AttachToActor(this, attachRules, attachedSocket);
+	// hitMesh->AttachToComponent(objMesh, attachRules, attachedSocket);
 	AddAttachment(hitObj, attachedSocket);
 	hitObj->SetAttachedSocket(attachedSocket);
 }
@@ -79,11 +83,8 @@ float ACubeCore::GetMass() const
 
 void ACubeCore::Placement()
 {
-	GravitySelection();
-	
-	
 	if(!selected) return;
-	
+
 	if(ObjectInSocket("Down"))
 	{
 		hitObj = nullptr;
@@ -121,6 +122,15 @@ void ACubeCore::Placement()
 	attachedSocket = "Down";
 	hitObj->SetCore(this);
 	hitObj->SetAttachedSocket(attachedSocket);
+}
+
+void ACubeCore::ResetRotation(bool resetVelocity)
+{
+	Super::ResetRotation(resetVelocity);
+
+	if(!resetVelocity) return;
+
+	for(const auto& obj : socketInfo->GetAttachments()) obj->RemoveVelocity();
 }
 
 void ACubeCore::Tick(float DeltaTime)

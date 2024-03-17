@@ -20,6 +20,17 @@ AGrappler::AGrappler()
 	grappleLine->NumSegments = 128;
 }
 
+void AGrappler::SetSelected(const bool value)
+{
+	Super::SetSelected(value);
+
+	if(!value) return;
+
+	if(!IsValid(hook)) return;
+	hook->Destroy();
+	grappleLine->CableLength = 0;
+}
+
 void AGrappler::Ability()
 {
 	Super::Ability();

@@ -37,7 +37,8 @@ protected:
 	FVector safeSpace;
 	
 	virtual void Placement() override;
-
+	virtual void ResetRotation(bool resetVelocity) override;
+	
 	void AdjustRange() { placeRange *= objMesh->GetRelativeScale3D().Length(); }
 
 	APickupableMaster* hitObj;

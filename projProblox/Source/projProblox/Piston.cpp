@@ -19,6 +19,9 @@ void APiston::BeginPlay()
 
 void APiston::Ability()
 {
+    objMesh->SetHiddenInGame(!active);
+	objMesh->SetCollisionResponseToAllChannels(active? ECR_Block:ECR_Ignore);
+	
 	if(!active)
 	{
 		pushSpeed = 1;
