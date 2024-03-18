@@ -14353,3 +14353,105 @@ BP_PlayerCharacter0
 [2024.03.18-11.05.43:152][227]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
 [2024.03.18-11.05.43:152][227]MaterialEditorStats: Shader Count: 16
 [2024.03.18-11.05.51:506][757]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_5:PersistentLevel.BP_GrappleHook_C_307 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.18-11.06.01:517][956]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_5:PersistentLevel.BP_GrappleHook_C_308 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.18-11.06.05:268][399]MaterialEditorStats: Texture samplers: 0/16
+[2024.03.18-11.06.05:268][399]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.05:268][399]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.05:268][399]MaterialEditorStats: Shader Count: 0
+[2024.03.18-11.06.05:697][450]MaterialEditorStats: Texture samplers: 1/16
+[2024.03.18-11.06.05:697][450]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.05:697][450]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.05:697][450]MaterialEditorStats: Shader Count: 1
+[2024.03.18-11.06.05:797][462]MaterialEditorStats: Base pass shader: 189 instructions
+[2024.03.18-11.06.05:797][462]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.05:797][462]MaterialEditorStats: Texture samplers: 3/16
+[2024.03.18-11.06.05:797][462]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.05:797][462]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.05:797][462]MaterialEditorStats: Shader Count: 4
+[2024.03.18-11.06.07:359][646]MaterialEditorStats: Texture samplers: 0/16
+[2024.03.18-11.06.07:359][646]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.07:359][646]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.07:359][646]MaterialEditorStats: Shader Count: 0
+[2024.03.18-11.06.07:574][672]MaterialEditorStats: Texture samplers: 1/16
+[2024.03.18-11.06.07:574][672]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.07:574][672]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.07:574][672]MaterialEditorStats: Shader Count: 1
+[2024.03.18-11.06.07:774][696]MaterialEditorStats: Base pass shader: 189 instructions
+[2024.03.18-11.06.07:774][696]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.07:774][696]MaterialEditorStats: Texture samplers: 3/16
+[2024.03.18-11.06.07:774][696]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.07:774][696]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.07:774][696]MaterialEditorStats: Shader Count: 4
+[2024.03.18-11.06.08:950][834]LogSlate: Window 'Color Picker' being destroyed
+[2024.03.18-11.06.08:955][834]MaterialEditorStats: Texture samplers: 0/16
+[2024.03.18-11.06.08:955][834]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.08:955][834]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.08:955][834]MaterialEditorStats: Shader Count: 0
+[2024.03.18-11.06.08:969][836]MaterialEditorStats: Base pass shader: 189 instructions
+[2024.03.18-11.06.08:969][836]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.08:969][836]MaterialEditorStats: Texture samplers: 3/16
+[2024.03.18-11.06.08:969][836]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.08:969][836]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.08:969][836]MaterialEditorStats: Shader Count: 4
+[2024.03.18-11.06.11:040][ 84]LogMaterialEditor: Applying material M_Wheel
+[2024.03.18-11.06.11:114][ 84]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.03.18-11.06.11:480][ 84]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.03.18-11.06.11:587][ 96]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_5:PersistentLevel.BP_GrappleHook_C_309 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.18-11.06.17:350][786]MaterialEditorStats: Texture samplers: 0/16
+[2024.03.18-11.06.17:350][786]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.17:350][786]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.17:350][786]MaterialEditorStats: Shader Count: 0
+[2024.03.18-11.06.17:514][806]MaterialEditorStats: Texture samplers: 1/16
+[2024.03.18-11.06.17:514][806]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.17:514][806]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.17:514][806]MaterialEditorStats: Shader Count: 1
+[2024.03.18-11.06.17:614][818]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.17:614][818]MaterialEditorStats: Texture samplers: 1/16
+[2024.03.18-11.06.17:614][818]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.17:614][818]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.17:614][818]MaterialEditorStats: Shader Count: 3
+[2024.03.18-11.06.17:713][830]MaterialEditorStats: Base pass shader: 189 instructions
+[2024.03.18-11.06.17:714][830]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.17:714][830]MaterialEditorStats: Texture samplers: 3/16
+[2024.03.18-11.06.17:714][830]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.17:714][830]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.17:714][830]MaterialEditorStats: Shader Count: 4
+[2024.03.18-11.06.21:601][294]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_5:PersistentLevel.BP_GrappleHook_C_310 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.18-11.06.23:416][511]MaterialEditorStats: Texture samplers: 0/16
+[2024.03.18-11.06.23:416][511]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.23:416][511]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.23:416][511]MaterialEditorStats: Shader Count: 0
+[2024.03.18-11.06.23:572][530]MaterialEditorStats: Texture samplers: 1/16
+[2024.03.18-11.06.23:572][530]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.23:572][530]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.23:572][530]MaterialEditorStats: Shader Count: 1
+[2024.03.18-11.06.23:672][542]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.23:672][542]MaterialEditorStats: Texture samplers: 1/16
+[2024.03.18-11.06.23:672][542]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.23:672][542]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.23:672][542]MaterialEditorStats: Shader Count: 3
+[2024.03.18-11.06.23:772][554]MaterialEditorStats: Base pass shader: 196 instructions
+[2024.03.18-11.06.23:772][554]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.23:772][554]MaterialEditorStats: Texture samplers: 3/16
+[2024.03.18-11.06.23:772][554]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.23:772][554]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.23:772][554]MaterialEditorStats: Shader Count: 4
+[2024.03.18-11.06.31:612][491]LogActor: Warning: BP_GrappleHook_C /Engine/Transient.World_5:PersistentLevel.BP_GrappleHook_C_311 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.18-11.06.33:790][752]LogMaterialEditor: Applying material M_Wheel
+[2024.03.18-11.06.33:863][752]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.03.18-11.06.34:209][752]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.03.18-11.06.35:910][954]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2024.03.18-11.06.35:913][954]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.18-11.06.36:594][954]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Material/M_Wheel" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Material/M_Wheel.uasset" SILENT=true
+[2024.03.18-11.06.36:596][954]LogSavePackage: Moving output files for package: /Game/Material/M_Wheel
+[2024.03.18-11.06.36:596][954]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/M_Wheel231E1E51412CF6A793B75C907F45F1DA.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Material/M_Wheel.uasset'
+[2024.03.18-11.06.36:601][954]LogFileHelpers: InternalPromptForCheckoutAndSave took 687 ms (total: 8.64 sec)
+[2024.03.18-11.06.36:602][954]AssetCheck: New page: Asset Save: M_Wheel
+[2024.03.18-11.06.36:602][954]LogContentValidation: Display: Validating /Script/Engine.Material /Game/Material/M_Wheel.M_Wheel
+[2024.03.18-11.06.36:602][954]MaterialEditorStats: Base pass shader: 196 instructions
+[2024.03.18-11.06.36:602][954]MaterialEditorStats: Base pass vertex shader: 137 instructions
+[2024.03.18-11.06.36:602][954]MaterialEditorStats: MaxSampler: 245 instructions
+[2024.03.18-11.06.36:602][954]MaterialEditorStats: Texture samplers: 4/16
+[2024.03.18-11.06.36:602][954]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2024.03.18-11.06.36:602][954]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.03.18-11.06.36:602][954]MaterialEditorStats: Shader Count: 16
