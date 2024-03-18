@@ -57,6 +57,8 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		selectedObj->SetSelected(true);
 	}
 
+	if(!IsValid(selectedObj)) return;
+	
 	// Includes if the selected object is the core
 	exclusions.Add(selectedObj);
 	if(!selectedObj->IsA<ACubeCore>()) return;

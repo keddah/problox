@@ -137,10 +137,9 @@ void AWheel::Detach()
 	isAttached = false;
 }
 
-void AWheel::Attach(ACubeCore* core, const bool outsider)
+void AWheel::Attach(ACubeCore* core)
 {
 	objCore = core;
-	Print(outsider? "core" : "self")
 	ResetRotation();
 
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();

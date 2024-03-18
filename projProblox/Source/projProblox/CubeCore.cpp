@@ -95,7 +95,7 @@ void ACubeCore::SetSelected(const bool value)
 
 	// Since the wheel uses physics constraints instead of normal attachments
 	if(!hitObj->IsA<AWheel>()) hitObj->AttachToActor(this, attachRules, attachedSocket);
-	else Cast<AWheel>(hitObj)->Attach(this, true);
+	else Cast<AWheel>(hitObj)->Attach(this);
 
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
