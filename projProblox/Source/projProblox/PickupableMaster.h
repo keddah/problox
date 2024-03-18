@@ -18,7 +18,7 @@ class PROJPROBLOX_API APickupableMaster : public AActor
 {
 	GENERATED_BODY()
 
-	const float rotSpeed = .001f;
+	const float rotSpeed = 2;
 	
 public:	
 	// Sets default values for this actor's properties
@@ -46,6 +46,11 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
+	
+	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin horizontally (On the global axis)."))
+	FVector horiAxis {0, 0,1};
+	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin vertically (On the global axis)."))
+	FVector vertAxis {0, 1,0};
 
 	UPROPERTY(BlueprintReadWrite)
 	float placeRange = 180;
@@ -71,7 +76,6 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
-	
 
 	static FRotator RoundRotation(const FRotator& rotation, float roundTo)
 	{
@@ -94,10 +98,10 @@ public:
 	virtual void SetAbilityActive(const bool value) { active = value; }
 	
 	UFUNCTION(BlueprintCallable)
-	void RotateVert();
+	void RotateVert(float axis);
 
 	UFUNCTION(BlueprintCallable)
-	void RotateHori();
+	void RotateHori(float axis);
 	
 	UFUNCTION(BlueprintCallable)
 	void RotateMesh(const FRotator& rot);

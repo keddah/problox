@@ -130,19 +130,18 @@ void APickupableMaster::Tick(float DeltaTime)
 	Placement();
 }
 
-void APickupableMaster::RotateVert()
+void APickupableMaster::RotateVert(const float axis)
 {
-	const FRotator rot = (GetActorRightVector() * rotSpeed).Rotation();
-	AddActorLocalRotation(rot);
-	Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
+	if(vertAxis.X != 0) AddActorLocalRotation({0,0, axis * rotSpeed});
+	else if(vertAxis.Y != 0) AddActorLocalRotation({axis * rotSpeed, 0, 0});
+	else if(vertAxis.Z != 0) AddActorLocalRotation({0, axis * rotSpeed, 0});
 }
 
-void APickupableMaster::RotateHori()
+void APickupableMaster::RotateHori(const float axis)
 {
-	const FRotator rot = (placeDir * rotSpeed).Rotation();
-	AddActorLocalRotation(rot);
-
-	Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
+	if(horiAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
+	else if(horiAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
+	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 }
 
 void APickupableMaster::RotateMesh(const FRotator& rotation)
