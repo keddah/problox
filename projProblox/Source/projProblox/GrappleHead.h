@@ -38,7 +38,7 @@ protected:
 	float launchForce = 3;
 	
 	UPROPERTY(BlueprintReadWrite)
-	float pullSpeed = 12;
+	float pullSpeed = 9;
 
 	UPROPERTY(BlueprintReadWrite)
 	bool canPull;

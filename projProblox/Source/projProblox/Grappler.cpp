@@ -36,6 +36,7 @@ void AGrappler::Ability()
 	Super::Ability();
 
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
+	if(IsValid(hook)) grappleLine->CableLength = FVector::Distance(GetActorLocation(), hook->GetActorLocation());
 	
 	if(!active) return;
 

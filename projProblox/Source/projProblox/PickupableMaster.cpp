@@ -36,7 +36,7 @@ void APickupableMaster::BeginPlay()
 void APickupableMaster::Placement()
 {
 	if(!selected) return;
-
+	
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
@@ -56,6 +56,8 @@ void APickupableMaster::Placement()
 		objCore = 0;
 		return;
 	}
+
+	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 	
 	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) objCore = core;
 	else objCore = nullptr;

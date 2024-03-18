@@ -49,6 +49,7 @@ void AThing::Drag() const
 
 void AThing::GoHome() const
 {
+	if(safe) return;
 	if(!isHoming) return;
 
 	const FVector corePos = core->GetCenterPos();

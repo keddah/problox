@@ -3,7 +3,6 @@
 
 #include "PlayerCharacter.h"
 
-#include "GameFramework/GameSession.h"
 #include "CubeCore.h"
 
 // Sets default values
@@ -19,14 +18,6 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
-}
-
-// Called every frame
-void APlayerCharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	// if(selectedObj) MoveSelection();
 }
 
 // Called to bind functionality to input
@@ -51,6 +42,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		return;
 	}
 
+	// Don't do anything if the selected object is already valid
 	if(IsValid(selectedObj)) return;
 	if(!hit.bBlockingHit) return;
 
@@ -58,12 +50,14 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	
 	if(!IsValid(hitActor)) return;
 
+	// Cast to the selected object..
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
 	}
 
+	// Includes if the selected object is the core
 	exclusions.Add(selectedObj);
 	if(!selectedObj->IsA<ACubeCore>()) return;
 

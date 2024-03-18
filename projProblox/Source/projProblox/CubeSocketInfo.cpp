@@ -45,9 +45,6 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 	else if(str_socket == sockets[5]) index = 5;
 	else index = 0;
 
-	Print(str_socket)
-	Print(FString::FromInt(index))
-	
 	if(!socketObjects.IsValidIndex(index))
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
@@ -55,8 +52,6 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 	}
 	
 	socketObjects[index] = attachment;
-
-	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, IsValid(socketObjects[index]) ? "Successful addition" : "Couldnt add");
 }
 
 void UCubeSocketInfo::RemoveAttachment(FName socket)
@@ -77,8 +72,6 @@ void UCubeSocketInfo::RemoveAttachment(FName socket)
 		return;
 	}
 
-	GEngine->AddOnScreenDebugMessage(-1, 30, FColor::Cyan, IsValid(socketObjects[index]) ? "Successful removal" : "Couldnt remove");
-	
 	socketObjects[index] = nullptr;
 }
 

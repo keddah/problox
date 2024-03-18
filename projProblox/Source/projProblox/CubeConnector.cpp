@@ -89,7 +89,9 @@ void ACubeConnector::Placement()
 			objCore = 0;
 			continue;
 		}
-		
+
+		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();
 		if(!hitActor) continue;

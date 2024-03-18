@@ -35,8 +35,8 @@ void AWheel::Ability()
 {
 	if(!IsValid(objCore)) return;
 
-	const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
-	wheelAxel->SetAngularVelocityTarget(-coreVelocity);
+	// const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
+	// wheelAxel->SetAngularVelocityTarget(-coreVelocity);
 }
 
 
@@ -44,7 +44,7 @@ void AWheel::Ability()
 void AWheel::Placement()
 {
 	if(!selected) return;
-	
+
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
@@ -64,6 +64,8 @@ void AWheel::Placement()
 		objCore = 0;
 		return;
 	}
+
+	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 
 	// Do the cube connector first since that's the broken one...
 	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) objCore = core;
@@ -105,7 +107,7 @@ void AWheel::SetSelected(const bool value)
 {
 	selected = value; 
 	GravitySelection();
-
+	
 	if(selected)
 	{
 		Detach();
@@ -135,10 +137,10 @@ void AWheel::Detach()
 	isAttached = false;
 }
 
-void AWheel::Attach(ACubeCore* core)
+void AWheel::Attach(ACubeCore* core, const bool outsider)
 {
 	objCore = core;
-	
+	Print(outsider? "core" : "self")
 	ResetRotation();
 
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();

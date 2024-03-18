@@ -17,7 +17,7 @@ public:
 	AThing();
 
 	UFUNCTION(BlueprintCallable)
-	void Teleport(const FVector& pos) { SetActorLocation(pos); }
+	void Teleport(const FVector& pos) { SetActorLocation(pos); safe = true; }
 	
 	UFUNCTION(BlueprintCallable)
 	void SetHoming(const bool home) { isHoming = home;}
@@ -38,10 +38,12 @@ public:
 
 private:
 	ACubeCore* core;
-	
+
 	float attractionForce = 100;
 	FVector goal;
+	
 	bool isHoming;
+	bool safe;
 	
 	void Drag() const;
 	void GoHome() const;

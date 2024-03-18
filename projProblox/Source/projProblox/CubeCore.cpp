@@ -86,8 +86,6 @@ void ACubeCore::SetSelected(const bool value)
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(attachedSocket));
 	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
-	// Rotate to match the socket rotation.
-	
 	// Rotate to match the socket rotation
 	hitMesh->SetWorldRotation(rot);
 
@@ -97,10 +95,10 @@ void ACubeCore::SetSelected(const bool value)
 
 	// Since the wheel uses physics constraints instead of normal attachments
 	if(!hitObj->IsA<AWheel>()) hitObj->AttachToActor(this, attachRules, attachedSocket);
-	else Cast<AWheel>(hitObj)->Attach(this);
+	else Cast<AWheel>(hitObj)->Attach(this, true);
 
-	Print("What the obj thinks: " + hitObj->GetAttachedSocket().ToString())
-	Print("what the core thinks: " +  attachedSocket.ToString())
+	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
+	hitObj = 0;
 }
 
 float ACubeCore::GetMass() const
@@ -141,7 +139,14 @@ void ACubeCore::Placement()
 		hitObj = 0;
 		return;
 	}
-	if(!hitActor) return;
+
+	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+	
+	if(!hitActor)
+	{
+		hitObj = 0;
+		return;
+	}
 	
 	// If the cast was unsuccessful....
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;

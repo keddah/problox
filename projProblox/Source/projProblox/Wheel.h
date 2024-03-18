@@ -38,5 +38,5 @@ public:
 		else wheelAxel->ConstraintInstance.DisableParentDominates();
 	}
 
-	void Attach(ACubeCore* core);
+	void Attach(ACubeCore* core, bool outsider = false);
 };
