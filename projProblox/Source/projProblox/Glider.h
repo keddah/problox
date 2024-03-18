@@ -18,10 +18,10 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 
 protected:
 	UPROPERTY(EditDefaultsOnly)
-	float glideSpeed = 10;
+	float glideSpeed = 2000;
 
 	UPROPERTY(EditDefaultsOnly)
-	float floatAmount = 50;
+	float floatAmount = 1750;
 	
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "How fast the object has to be falling in order to activate the glide (Z axis velocity)."))
 	float activationSpeed = 500;
