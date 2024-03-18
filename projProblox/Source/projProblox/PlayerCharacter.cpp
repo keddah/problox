@@ -55,6 +55,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	{
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
+		selectedObj->RemoveVelocity();
 	}
 
 	if(!IsValid(selectedObj)) return;

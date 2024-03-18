@@ -80,8 +80,6 @@ void ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return;
 
-	hitObj->ResetRotation();
-
 	UStaticMeshComponent* hitMesh = hitObj->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(attachedSocket));
 	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);

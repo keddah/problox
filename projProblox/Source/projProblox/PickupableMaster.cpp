@@ -89,6 +89,9 @@ void APickupableMaster::Placement()
 	}
 
 	if(closestSocket != NAME_None) attachedSocket = closestSocket;
+
+	// FRotator rot = NormalizeRotation(GetActorRotation());
+	// Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
 }
 
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -164,9 +167,7 @@ void APickupableMaster::SetSelected(const bool value)
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
 
-	ResetRotation();
-
-	UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
 	FRotator rot;
@@ -174,14 +175,18 @@ void APickupableMaster::SetSelected(const bool value)
 	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
 	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
+	const FRotator savedRot = RoundRotation(GetActorRotation(), -90);
+	
 	// Rotate to match the socket rotation
 	SetActorRotation(rot);
 
+	// Do this but just around the forward axis of the socket...
+	if(placeDir.X != 0) AddActorWorldRotation(FRotator(0,0,savedRot.Roll));
+	else if(placeDir.Y != 0) AddActorWorldRotation(FRotator(savedRot.Pitch,0,0));
+	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
+	
 	AttachToActor(objCore, attachRules, attachedSocket);
-	// objMesh->AttachToComponent(coreMesh, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
-
-	Print(objCore->GetName());
 }
 

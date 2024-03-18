@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
+#include "Math/Rotator.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "PickupableMaster.generated.h"
 
