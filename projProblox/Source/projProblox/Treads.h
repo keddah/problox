@@ -23,14 +23,13 @@ protected:
 	UPROPERTY(BlueprintReadWrite)
 	bool grounded;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float moveSpeed = 7500;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float dragScale = 15;
 
 private:
 	virtual void Ability() override;
-
 	void Drag() const;
 };

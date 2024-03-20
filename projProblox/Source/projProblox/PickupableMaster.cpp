@@ -144,12 +144,21 @@ void APickupableMaster::RotateHori(const float axis)
 	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 }
 
-void APickupableMaster::RotateMesh(const FRotator& rotation)
+void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 {
-	if(!selected) return;
-	
-	const FRotator dirRot = placeDir.Rotation();
-	AddActorLocalRotation(rotation);
+	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
+		
+	if(hori)
+	{
+		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
+		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
+		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
+		return;
+	}
+
+	if(vertAxis.X != 0) AddActorLocalRotation({0,0, turn});
+	else if(vertAxis.Y != 0) AddActorLocalRotation({turn, 0, 0});
+	else if(vertAxis.Z != 0) AddActorLocalRotation({0, turn, 0});
 }
 
 void APickupableMaster::SetSelected(const bool value)
@@ -174,7 +183,7 @@ void APickupableMaster::SetSelected(const bool value)
 	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
 	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
-	const FRotator savedRot = RoundRotation(GetActorRotation(), -90);
+	const FRotator savedRot = RoundRotation(GetActorRotation());
 	
 	// Rotate to match the socket rotation
 	SetActorRotation(rot);

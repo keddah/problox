@@ -18,6 +18,10 @@ class PROJPROBLOX_API AGrappler : public APickupableMaster
 	GENERATED_BODY()
 	AGrappler();
 
+	// If this is called whilst the hook is valid, destroy the hook (this means pressing the ability button after the grapple has been launched destroy the grapple).  
+	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); if(IsValid(hook) && !active) hook->Destroy(); };
+	virtual void Ability() override;
+	
 	virtual void SetSelected(const bool value) override;
 
 protected:
@@ -30,23 +34,14 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	TSubclassOf<AActor> grappleHeadClass;
 
-	UPROPERTY(BlueprintReadWrite)
 	AGrappleHead* hook;
 
-	UFUNCTION(BlueprintCallable)
-	void SetupLine() { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndToComponent(hook->GetMesh()); }
-	
-private:
-	virtual void Ability() override;
-
+	void SetupLine() const { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndToComponent(hook->GetMesh()); }
 
 public:
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Ability")
 	void Pull(const FVector& direction, const float speed) { if(IsValid(objCore)) objCore->Movement(direction, speed); }
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintPure, Category = "Getters")
 	FVector GetSpawnLocation() const { return grappleSpawn->GetComponentLocation(); }
-
-	UFUNCTION(BlueprintCallable)
-	FVector GetLaunchDir() const { return grappleSpawn->GetForwardVector(); }
 };

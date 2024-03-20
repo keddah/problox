@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "PickupableMaster.h"
-#include "Components/SphereComponent.h"
 #include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "Wheel.generated.h"
 

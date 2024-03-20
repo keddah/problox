@@ -40,15 +40,21 @@ void AGrappler::Ability()
 	
 	if(!active) return;
 
+	// Destroy the hook if one is already valid.
 	if(IsValid(hook)) hook->Destroy();
 
+	// Set the owner and ensure the grapple hook always spawns...
 	FActorSpawnParameters params;
 	params.Owner = this;
 	params.bNoFail = true;
-	
+
+	// Spawn and set the hook
 	hook = GetWorld()->SpawnActor<AGrappleHead>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
+
+	// Deactivate so that this doesn't happen repeatedly
 	active = false;
 
+	// Give the hook the launch direction so it can go...
 	hook->Launch(grappleSpawn->GetForwardVector());
 }

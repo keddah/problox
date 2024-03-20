@@ -17,7 +17,7 @@ ACubeCore::ACubeCore()
 	thingHomer->SetupAttachment(objMesh);
 	thingCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
 	thingCollector->SetupAttachment(objMesh);
-	
+
 	placeRange = 50;
 }
 

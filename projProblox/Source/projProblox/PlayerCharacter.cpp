@@ -4,6 +4,7 @@
 #include "PlayerCharacter.h"
 
 #include "CubeCore.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -18,6 +19,10 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
+	Print(IsValid(core)? "core is valid" : "core invalid")
+
+	core->onRangeExeeded.AddDynamic(this, &APlayerCharacter::Deselect);
 }
 
 // Called to bind functionality to input
@@ -53,6 +58,9 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	// Cast to the selected object..
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
+		// If the player can't pick it up... return.
+		if(!obj->GetCanPickup()) return;
+		
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
 		selectedObj->RemoveVelocity();
@@ -87,4 +95,18 @@ void APlayerCharacter::MoveSelection(const FVector& mousePos)
 	}
 
 	selectedObj->GetMesh()->SetWorldLocation({mousePos.X, mousePos.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
+}
+
+void APlayerCharacter::Deselect()
+{
+	Print("CalledDeselect")
+	holding = false;
+	
+	if(!IsValid(selectedObj)) return;
+
+	selectedObj->SetSelected(false);
+	selectedObj = nullptr;
+
+	// Clear things to ignore once not selecting anything.
+	exclusions.Empty();
 }

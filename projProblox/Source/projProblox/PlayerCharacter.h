@@ -22,19 +22,19 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "Picking up")
 	APickupableMaster* selectedObj;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	bool holding;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	bool toggleSelection = true;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	bool groupSelection = false;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	TArray<AActor*> exclusions;
 	
 	UPROPERTY(BlueprintReadWrite)
@@ -51,10 +51,12 @@ public:
 
 private:
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void SelectObject(const FHitResult& hit);
-
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void MoveSelection(const FVector& mousePos);
+
+	UFUNCTION()
+	void Deselect();
 };

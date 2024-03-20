@@ -47,6 +47,10 @@ void EmptyLinkFunctionForGeneratedCodePropeller() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_pushForce_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_pushForce;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_spinSpeed_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_spinSpeed;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -84,30 +88,41 @@ void EmptyLinkFunctionForGeneratedCodePropeller() {}
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs = { "pushedObjs", nullptr, (EPropertyFlags)0x002008800000000c, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, pushedObjs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData[] = {
-		{ "Category", "Propeller" },
+		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Propeller.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The amount of force to apply to the thing that it's attached to" },
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_propelForce = { "propelForce", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, propelForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_propelForce = { "propelForce", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, propelForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData[] = {
-		{ "Category", "Propeller" },
+		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Propeller.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The amount of force to apply to things that are inside the windCollider while active" },
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Propeller.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The speed the propellers rotate (purely visual)." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed = { "spinSpeed", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, spinSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APropeller_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_windBox,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_propelForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_pushForce,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APropeller_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APropeller>::IsAbstract,
@@ -147,9 +162,9 @@ void EmptyLinkFunctionForGeneratedCodePropeller() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APropeller, APropeller::StaticClass, TEXT("APropeller"), &Z_Registration_Info_UClass_APropeller, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APropeller), 1905118676U) },
+		{ Z_Construct_UClass_APropeller, APropeller::StaticClass, TEXT("APropeller"), &Z_Registration_Info_UClass_APropeller, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APropeller), 4091893587U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_3996115999(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_1388665251(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

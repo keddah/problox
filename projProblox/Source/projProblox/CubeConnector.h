@@ -30,6 +30,4 @@ public:
 
 private:
 	virtual void Placement() override;
-	FVector defaultPlaceDir;
-	
 };

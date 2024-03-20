@@ -122,17 +122,17 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		{ "ModuleRelativePath", "GrappleHead.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce = { "launchForce", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, launchForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce = { "launchForce", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, launchForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData[] = {
-		{ "Category", "GrappleHead" },
+		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "GrappleHead.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed = { "pullSpeed", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, pullSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed = { "pullSpeed", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, pullSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull_MetaData[] = {
-		{ "Category", "GrappleHead" },
+		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "GrappleHead.h" },
 	};
 #endif
@@ -143,7 +143,7 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull = { "canPull", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AGrappleHead), &Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_canPull_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_MetaData[] = {
-		{ "Category", "GrappleHead" },
+		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "GrappleHead.h" },
 	};
 #endif
@@ -154,7 +154,7 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull = { "shouldPull", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AGrappleHead), &Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_shouldPull_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData[] = {
-		{ "Category", "GrappleHead" },
+		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "GrappleHead.h" },
 	};
 #endif
@@ -208,9 +208,9 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 3895465754U) },
+		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 51635990U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_4018790813(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_3780517991(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

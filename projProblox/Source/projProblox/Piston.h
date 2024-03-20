@@ -15,6 +15,7 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 	GENERATED_BODY()
 
 	APiston();
+	virtual void Ability() override;
 	
 protected:
 	virtual void BeginPlay() override;
@@ -22,18 +23,13 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* flatHead;
 
-	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "How fast the piston head should push out."))
+	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "How fast the piston head should push out."))
 	float pushSpeed = 1;
 	
-	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "How fast the piston head should push out."))
+	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "How fast the piston head should push out."))
 	float pushForce = 8;
 	
-	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "How far the flatHead should extend from the piston shaft."))
+	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "How far the flatHead should extend from the piston shaft."))
 	float pushExtent = 100;
 
-public:
-	virtual void Ability() override;
-
-private:
-	// virtual  void SetSelected(const bool value) override;
 };

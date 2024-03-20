@@ -7,7 +7,13 @@
 
 ACubeConnector::ACubeConnector()
 {
-	defaultPlaceDir = placeDir;
+	thingCollector->SetGenerateOverlapEvents(false);
+	thingCollector->SetBoxExtent({});
+	thingCollector->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	
+	thingHomer->SetGenerateOverlapEvents(false);
+	thingHomer->SetBoxExtent({});
+	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
 void ACubeConnector::BeginPlay()

@@ -6,6 +6,8 @@
 #include "CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
+
 /**
  * 
  */
@@ -13,6 +15,8 @@ UCLASS()
 class PROJPROBLOX_API ACubeCore : public APickupableMaster
 {
 	GENERATED_BODY()
+
+	virtual void SetCanPickup(const bool can) override { Super::SetCanPickup(can); if(!canPickup) onRangeExeeded.Broadcast(); }
 	
 protected:
 	ACubeCore();
@@ -27,23 +31,25 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* pivot;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* thingCollector;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* thingHomer;
 
-	UPROPERTY(BlueprintReadOnly, EditInstanceOnly, meta = (MakeEditWidget))
-	FVector safeSpace;
+	UPROPERTY(EditDefaultsOnly, Category = "Collection", BlueprintReadOnly)
+	float fairBounds = 6500;
 	
 	virtual void Placement() override;
 	virtual void ResetRotation(bool resetVelocity) override;
 	
-	void AdjustRange() { placeRange *= objMesh->GetRelativeScale3D().Length(); }
+	void AdjustRange() { placeRange *= GetActorScale().Length(); }
 
 	APickupableMaster* hitObj;
 
-public:	
+public:
+	FOnOutOfRange onRangeExeeded;
+	
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
 

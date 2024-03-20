@@ -1,3 +1,12 @@
+/**************************************************************************************************************
+* Pickupable Master - Header
+* 
+* The header file for the parent class of all the moveable things in the game. Declares inherited methods and variables used to make the pickupable objects more
+* replicable.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
@@ -44,15 +53,22 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
 
+	UPROPERTY(BlueprintReadWrite)
+	bool canPickup = true;
+
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
 	
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin horizontally (On the global axis)."))
 	FVector horiAxis {0, 0,1};
+	
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin vertically (On the global axis)."))
 	FVector vertAxis {0, 1,0};
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditDefaultsOnly)
+	float ascensionSpeed = 2.5f;
+	
+	UPROPERTY(EditDefaultsOnly)
 	float placeRange = 180;
 
 	UPROPERTY(BlueprintReadOnly)
@@ -62,8 +78,7 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
-
-	UPROPERTY(BlueprintReadOnly)
+	
 	bool isAttached;
 	
 	/////////////////// FUNCTIONS ///////////////////
@@ -71,19 +86,19 @@ protected:
 	virtual void Placement();
 	virtual void Ability() {}
 
-	UFUNCTION(BlueprintCallable)
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
-
-	UFUNCTION(BlueprintCallable)
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
-	static FRotator RoundRotation(const FRotator& rotation, float roundTo)
+	// Used when attaching to sockets of the cube... Rounds the given rotation to right angles (90 degrees)
+	static FRotator RoundRotation(const FRotator& rotation)
 	{
 		// Quantize each component of the Rotator using Frac and Floor
 		FRotator rounded;
-		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / roundTo) * roundTo;
-		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / roundTo) * roundTo;
-		rounded.Roll = FMath::FloorToFloat(rotation.Roll / roundTo) * roundTo;
+
+		// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
+		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / -90) * -90;
+		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / -90) * -90;
+		rounded.Roll = FMath::FloorToFloat(rotation.Roll / -90) * -90;
 
 		return rounded;
 	}
@@ -94,22 +109,19 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Ability")
 	virtual void SetAbilityActive(const bool value) { active = value; }
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void RotateVert(float axis);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void RotateHori(float axis);
 	
-	UFUNCTION(BlueprintCallable)
-	void RotateMesh(const FRotator& rot);
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void SnapRotateMesh(bool hori, FString keypress);
 
-	UFUNCTION(BlueprintCallable)
-	void SnapRotateMesh(const bool hori) { RotateMesh(hori? FRotator{0,90,00} : FRotator{90,0,0}); }
-
-	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
+	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
 	void RemoveVelocity() const;
 	
@@ -120,7 +132,7 @@ public:
 	FName GetAttachedSocket() const { return attachedSocket; }
 	virtual void Detach();
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Getters")
 	UStaticMeshComponent* GetMesh() const { return objMesh; }
 
 	UFUNCTION(BlueprintCallable)
@@ -129,10 +141,10 @@ public:
 	void SetCore(ACubeCore* _core) { objCore = _core; }
 	void SetAttachedSocket(FName socket) { attachedSocket = socket; }
 
-	UFUNCTION(BlueprintCallable)
-	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue); }
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const { return objMesh->GetMass(); }
 
 	void AddVelocity(const FVector& velocity) const
@@ -140,4 +152,10 @@ public:
 		const FVector currentVel = GetVelocity();
 		objMesh->SetPhysicsLinearVelocity(FVector(currentVel.X + velocity.X,currentVel.Y + velocity.Y, currentVel.Z + velocity.Z));
 	}
+
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	virtual void SetCanPickup(const bool can) { canPickup = can; }
+
+	// Returns whether or not the player is able to pick this up.
+	bool GetCanPickup() const { return canPickup; }
 };

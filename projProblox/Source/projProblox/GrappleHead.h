@@ -34,19 +34,19 @@ protected:
 	UPROPERTY(BlueprintReadWrite)
 	AGrappler* parent;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	float launchForce = 3;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", BlueprintReadOnly)
 	float pullSpeed = 9;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Ability")
 	bool canPull;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Ability")
 	bool shouldPull;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float cancelDistance;
 	
 public:	
