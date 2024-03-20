@@ -53,6 +53,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
 
+	// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.
 	UPROPERTY(BlueprintReadWrite)
 	bool canPickup = true;
 
