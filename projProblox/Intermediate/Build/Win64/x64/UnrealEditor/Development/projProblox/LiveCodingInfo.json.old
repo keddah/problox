@@ -1,0 +1,39 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.projProblox.cpp.obj": [
+			"CubeSocketInfo.gen.cpp.obj",
+			"Glider.gen.cpp.obj",
+			"GrappleHead.gen.cpp.obj",
+			"Grappler.gen.cpp.obj",
+			"PickupableMaster.gen.cpp.obj",
+			"Piston.gen.cpp.obj",
+			"PlayerCharacter.gen.cpp.obj",
+			"Propeller.gen.cpp.obj",
+			"Thing.gen.cpp.obj",
+			"Treads.gen.cpp.obj",
+			"Wheel.gen.cpp.obj",
+			"CubeConnector.cpp.obj",
+			"CubeSocketInfo.cpp.obj",
+			"Glider.cpp.obj",
+			"GrappleHead.cpp.obj",
+			"Grappler.cpp.obj",
+			"Piston.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"projProblox.cpp.obj",
+			"Propeller.cpp.obj",
+			"Thing.cpp.obj",
+			"Treads.cpp.obj",
+			"Wheel.cpp.obj",
+			"Collector.gen.cpp.obj",
+			"CubeConnector.gen.cpp.obj",
+			"CubeCore.gen.cpp.obj",
+			"MyActor.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
+			"CubeCore.cpp.obj",
+			"PickupableMaster.cpp.obj",
+			"Collector.cpp.obj",
+			"MyActor.cpp.obj"
+		]
+	}
+}

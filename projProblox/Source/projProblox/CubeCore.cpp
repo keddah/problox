@@ -2,7 +2,9 @@
 
 
 #include "CubeCore.h"
+#include "Thing.h"
 #include "Wheel.h"
+#include "Kismet/GameplayStatics.h"
 
 
 ACubeCore::ACubeCore()
@@ -30,6 +32,7 @@ void ACubeCore::BeginPlay()
 	socketInfo = NewObject<UCubeSocketInfo>();
 	
 	AdjustRange();
+	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 }
 
 void ACubeCore::RemoveAttachment(const FName& socket)
@@ -104,13 +107,23 @@ void ACubeCore::SetSelected(const bool value)
 float ACubeCore::GetMass() const
 {
 	float mass = objMesh->GetMass();
-
-	for (const auto& obj : socketInfo->GetAttachments())
-	{
-		mass += obj->GetMass();
-	}
+	for (const auto& obj : socketInfo->GetAttachments()) mass += obj->GetMass();
 
 	return mass;
+}
+
+// Passing an actor to work around the depency loop.....
+void ACubeCore::AddThing(AActor* _thing) const
+{
+	if(!IsValid(collector)) return;
+	if(!IsValid(_thing)) return;
+
+	if(AThing* thing = Cast<AThing>(_thing))
+	{
+		// Using a delegate so that it can send a message to the blueprint (because ui...)
+		thing->Teleport(collector->GetCollectPoint());
+		onAddedThing.Broadcast(thing);
+	}
 }
 
 void ACubeCore::Placement()

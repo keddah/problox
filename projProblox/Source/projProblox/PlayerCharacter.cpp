@@ -3,7 +3,7 @@
 
 #include "PlayerCharacter.h"
 
-#include "CubeCore.h"
+#include "CubeConnector.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -29,7 +29,6 @@ void APlayerCharacter::BeginPlay()
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 void APlayerCharacter::SelectObject(const FHitResult& hit)
@@ -37,13 +36,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	// When the hold button is let go
 	if(!holding)
 	{
-		if(!IsValid(selectedObj)) return;
-
-		selectedObj->SetSelected(false);
-		selectedObj = nullptr;
-
-		// Clear things to ignore once not selecting anything.
-		exclusions.Empty();
+		Deselect();
 		return;
 	}
 
@@ -59,7 +52,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
 		// If the player can't pick it up... return.
-		if(!obj->GetCanPickup()) return;
+		if(!obj->GetCanPickup() && (obj->IsA<ACubeCore>() && !obj->IsA<ACubeConnector>()) ) return;
 		
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
@@ -83,23 +76,14 @@ void APlayerCharacter::MoveSelection(const FVector& mousePos)
 {
 	selectedObj->GravitySelection();
 
-	if(selectedObj->IsA<ACubeCore>())
-	{
-		// exclusions.Append(core->GetAttachedObjects(true));
-		exclusions.AddUnique(selectedObj);
-	}
-	else
-	{
-		// exclusions.Remove(core);
-		exclusions.AddUnique(selectedObj);
-	}
+	if(selectedObj->IsA<ACubeCore>()) exclusions.AddUnique(selectedObj);
+	else exclusions.AddUnique(selectedObj);
 
 	selectedObj->GetMesh()->SetWorldLocation({mousePos.X, mousePos.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
 }
 
 void APlayerCharacter::Deselect()
 {
-	Print("CalledDeselect")
 	holding = false;
 	
 	if(!IsValid(selectedObj)) return;

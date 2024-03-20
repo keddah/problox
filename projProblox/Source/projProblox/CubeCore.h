@@ -3,20 +3,28 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Collector.h"
 #include "CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAddedThing, AActor*, thing);
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API ACubeCore : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	virtual void SetCanPickup(const bool can) override { Super::SetCanPickup(can); if(!canPickup) onRangeExeeded.Broadcast(); }
+	virtual void SetCanPickup(const bool can) override
+	{
+		// Only broadcast when there's a change
+		const bool change = can != canPickup;
+		Super::SetCanPickup(can); if(!canPickup && change)
+		{
+		Print("Sdfsdfdsf")
+			onRangeExeeded.Broadcast();
+		}
+	}
 	
 protected:
 	ACubeCore();
@@ -37,8 +45,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* thingHomer;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Collection", BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, Category = "Collection", BlueprintReadOnly)
 	float fairBounds = 6500;
+	
+	UPROPERTY(BlueprintAssignable)
+	FOnAddedThing onAddedThing;
 	
 	virtual void Placement() override;
 	virtual void ResetRotation(bool resetVelocity) override;
@@ -46,10 +57,11 @@ protected:
 	void AdjustRange() { placeRange *= GetActorScale().Length(); }
 
 	APickupableMaster* hitObj;
+	
+	UPROPERTY(BlueprintReadOnly)
+	ACollector* collector;
 
 public:
-	FOnOutOfRange onRangeExeeded;
-	
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
 
@@ -72,4 +84,8 @@ public:
 	virtual float GetMass() const override;
 
 	void Movement(const FVector& direction, const float speed) const { objMesh->AddForce(direction * speed * 1000); }
+
+	void AddThing(AActor* thing) const;
+
+	FOnOutOfRange onRangeExeeded;
 };

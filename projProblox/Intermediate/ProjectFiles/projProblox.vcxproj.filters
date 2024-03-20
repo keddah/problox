@@ -30,6 +30,12 @@
     <Filter Include="Source\projProblox">
       <UniqueIdentifier>{EF8B8155-4D92-329C-8C65-A60DE3C5D0D3}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Collector.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Collector.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\CubeConnector.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>

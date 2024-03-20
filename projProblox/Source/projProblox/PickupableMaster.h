@@ -81,6 +81,8 @@ protected:
 	FName attachedSocket;
 	
 	bool isAttached;
+
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	
 	/////////////////// FUNCTIONS ///////////////////
 	

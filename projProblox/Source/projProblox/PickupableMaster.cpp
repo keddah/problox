@@ -4,6 +4,7 @@
 #include "PickupableMaster.h"
 
 #include "CubeCore.h"
+#include "Thing.h"
 
 // Sets default values
 APickupableMaster::APickupableMaster()
@@ -15,7 +16,7 @@ APickupableMaster::APickupableMaster()
 	objMesh->SetSimulatePhysics(true);
 	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	objMesh->SetGenerateOverlapEvents(true);
-	
+	// objMesh->SetNotifyRigidBodyCollision(true);
 	
 	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collision"));
 	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
@@ -30,7 +31,16 @@ APickupableMaster::APickupableMaster()
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
-	
+}
+
+void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	Super::NotifyActorBeginOverlap(OtherActor);
+	if(!IsValid(objCore)) return;
+	// if(!IsValid(OtherActor)) return;
+
+	// Successful cast???
+	if(Cast<AThing>(OtherActor)) objCore->AddThing(OtherActor);
 }
 
 void APickupableMaster::Placement()
