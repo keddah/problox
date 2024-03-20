@@ -711,7 +711,13 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup_MetaData[] = {
 		{ "Category", "PickupableMaster" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.\n" },
+#endif
 		{ "ModuleRelativePath", "PickupableMaster.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read." },
+#endif
 	};
 #endif
 	void Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup_SetBit(void* Obj)
@@ -829,9 +835,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 698195000U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 1423260811U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_2094446768(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_1367971853(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
