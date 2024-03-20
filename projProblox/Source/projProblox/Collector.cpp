@@ -3,7 +3,6 @@
 
 #include "Collector.h"
 
-#include "CubeCore.h"
 #include "Components/LightComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -43,9 +42,6 @@ void ACollector::BeginPlay()
 	Super::BeginPlay();
 
 	if(APlayerCharacter* rPlayer = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass()))) player = rPlayer;
-
-	// player->GetCore()->onAddedThing.AddDynamic();
-
 }
 
 // Called every frame
