@@ -40,6 +40,27 @@ void APickupableMaster::BeginPlay()
 	Super::BeginPlay();
 }
 
+void APickupableMaster::AlignSocketRot()
+{
+	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	const FRotator savedRot = RoundRotation(GetActorRotation());
+	
+	// Rotate to match the socket rotation
+	SetActorRotation(rot);
+
+	// Do this but just around the forward axis of the socket...
+	if(placeDir.X != 0) AddActorWorldRotation(FRotator(0,0,savedRot.Roll));
+	else if(placeDir.Y != 0) AddActorWorldRotation(FRotator(savedRot.Pitch,0,0));
+	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
+}
+
 void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
@@ -114,6 +135,7 @@ void APickupableMaster::Placement()
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	attachedSocket = socket;
+	isAttached = true;
 }
 
 void APickupableMaster::ResetRotation(const bool resetVelocity)
@@ -191,25 +213,8 @@ void APickupableMaster::SetSelected(const bool value)
 
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
-
-	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
-
-	FRotator rot;
-	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-
-	const FRotator savedRot = RoundRotation(GetActorRotation());
 	
-	// Rotate to match the socket rotation
-	SetActorRotation(rot);
-
-	// Do this but just around the forward axis of the socket...
-	if(placeDir.X != 0) AddActorWorldRotation(FRotator(0,0,savedRot.Roll));
-	else if(placeDir.Y != 0) AddActorWorldRotation(FRotator(savedRot.Pitch,0,0));
-	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
-	
+	AlignSocketRot();
 	AttachToActor(objCore, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
 	isAttached = true;

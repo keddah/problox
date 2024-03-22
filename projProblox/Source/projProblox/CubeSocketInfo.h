@@ -25,10 +25,17 @@ public:
 	bool ObjectInSocket(const FName& socket) const;
 	bool ObjectInSocket(int index) const;
 
+	// Returns an array of all of the available sockets.
+	TArray<FName> GetFreeSockets() const;
+	
 	void AddAttachment(APickupableMaster* attachment, FName socket);
 	void RemoveAttachment(FName socket);
 	void ClearAttachments() { for(const auto& name : sockets) RemoveAttachment(name);}
 
 	TArray<AActor*> GetAttachmentActors() const;
 	TArray<APickupableMaster*> GetAttachments() const;
+	
+	APickupableMaster* GetObjectInSocket(const int index) const { return socketObjects[index]; }
+	APickupableMaster* GetObjectInSocket(const FName& name) const;
+	
 };

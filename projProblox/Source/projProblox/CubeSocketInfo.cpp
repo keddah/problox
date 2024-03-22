@@ -30,6 +30,21 @@ bool UCubeSocketInfo::ObjectInSocket(int index) const
 	return socketObjects.IsValidIndex(index) && IsValid(socketObjects[index]);
 }
 
+TArray<FName> UCubeSocketInfo::GetFreeSockets() const
+{
+	TArray<FName> free;
+
+	for(int i = 0; i < socketObjects.Num(); i++)
+	{
+		if(IsValid(socketObjects[i])) continue;;
+
+		// Add the name of the socket that is free
+		free.Add(sockets[i]);
+	}
+
+	return free;	
+}
+
 void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 {
 	// Since switches don't work...
@@ -101,4 +116,24 @@ TArray<APickupableMaster*> UCubeSocketInfo::GetAttachments() const
 	}
 
 	return output;
+}
+
+APickupableMaster* UCubeSocketInfo::GetObjectInSocket(const FName& name) const
+{
+	if (socketObjects.IsEmpty()) return 0;
+
+	int32 index = 0; // Default to 0 if no match is found
+
+	const FString str_socket = name.ToString().ToUpper();
+    
+	if (str_socket == sockets[0]) index = 0;
+	else if (str_socket == sockets[1]) index = 1;
+	else if (str_socket == sockets[2]) index = 2;
+	else if (str_socket == sockets[3]) index = 3;
+	else if (str_socket == sockets[4]) index = 4;
+	else if (str_socket == sockets[5]) index = 5;
+
+	// Check if the index is within bounds and the pointer is valid
+	return socketObjects[index];
+	
 }

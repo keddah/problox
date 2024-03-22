@@ -66,6 +66,12 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	ACollector* collector;
 
+	virtual void SetAttachedSocket(FName socket) override;
+
+	// Need to change the attaching socket if there's something in the bottom socket since cubes always attach to the bottom
+	// (since the pivot is at the bottom).
+	void RearrangeSockets();
+	
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
@@ -74,6 +80,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
+	TArray<FName> GetFreeSlots() const { return socketInfo->GetFreeSockets(); };
 
 	virtual void SetAbilityActive(bool value) override;
 

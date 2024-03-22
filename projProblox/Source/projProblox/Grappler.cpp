@@ -33,20 +33,27 @@ void AGrappler::SetSelected(const bool value)
 
 void AGrappler::Ability()
 {
-	Super::Ability();
-
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
-	if(IsValid(hook)) grappleLine->CableLength = FVector::Distance(GetActorLocation(), hook->GetActorLocation());
+
+	const FVector pos1 = GetActorLocation();
+	if(objCore)
+	{
+		const FVector pos2 = objCore->GetMesh()->GetSocketLocation(attachedSocket);
+		Print("self: " + FString::FromInt(pos1.X) + ", " + FString::FromInt(pos1.Y) + ", " + FString::FromInt(pos1.Z))
+		Print("other mesh: " + FString::FromInt(pos2.X) + ", " + FString::FromInt(pos2.Y) + ", " + FString::FromInt(pos2.Z))
+	}
 	
 	if(!active) return;
+	FActorSpawnParameters params;
+	params.Owner = this;
+	params.bNoFail = true;
+	
+	grappleLine->CableLength = 20000;
 
 	// Destroy the hook if one is already valid.
 	if(IsValid(hook)) hook->Destroy();
 
 	// Set the owner and ensure the grapple hook always spawns...
-	FActorSpawnParameters params;
-	params.Owner = this;
-	params.bNoFail = true;
 
 	// Spawn and set the hook
 	hook = GetWorld()->SpawnActor<AGrappleHead>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);

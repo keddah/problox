@@ -32,8 +32,6 @@ void ACubeConnector::Placement()
 {
 	if(!selected) return;
 
-	FRotator rot = objMesh->GetComponentRotation(); 
-
 	const UWorld* wrld = GetWorld();
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
@@ -66,14 +64,14 @@ void ACubeConnector::Placement()
 				placeDir = {0, 1, 0};
 				break;
 
-			//down
+			//up
 			case 4:
-				placeDir = {0, 0, -1};
+				placeDir = {0, 0, 1};
 				break;
 
-			//up
+			//down
 			case 5:
-				placeDir = {0, 0, 1};
+				placeDir = {0, 0, -1};
 				break;
 		}
 
@@ -85,7 +83,7 @@ void ACubeConnector::Placement()
 		const FVector start = pivot->GetComponentLocation();
 
 		// Debug Draw
-		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 		// Go to the next ray if it didn't hit anything...
@@ -96,7 +94,7 @@ void ACubeConnector::Placement()
 			continue;
 		}
 
-		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();
@@ -200,15 +198,13 @@ void ACubeConnector::SetSelected(const bool value)
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objCore->GetMesh()->GetSocketRotation(attachedSocket));
 	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 	
-	// Rotate to match the socket rotation but incorporate the crot1urrent rotation
-	// const FRotator currentRot = RoundRotation(objMesh->GetComponentRotation(), 90);
-	// const FRotator newRot =  currentRot + (rot - FRotator(0, 0, currentRot.Roll));
-
 	objMesh->SetWorldRotation(rot);
-	
+
 	// Attach self to the core
 	AttachToActor(objCore, attachRules, attachedSocket);
 	objCore->AddAttachment(this, attachedSocket);
+
+	RearrangeSockets();
 }
 
 void ACubeConnector::SetAbilityActive(bool value)

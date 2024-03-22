@@ -127,6 +127,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
 	void RemoveVelocity() const;
+
+	void AlignSocketRot();
+
 	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
@@ -142,7 +145,7 @@ public:
 	virtual void SetSelected(const bool value);
 
 	void SetCore(ACubeCore* _core) { objCore = _core; }
-	void SetAttachedSocket(FName socket) { attachedSocket = socket; }
+	virtual void SetAttachedSocket(FName socket) { attachedSocket = socket; }
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }

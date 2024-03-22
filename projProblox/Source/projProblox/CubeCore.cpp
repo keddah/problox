@@ -2,19 +2,10 @@
 
 
 #include "CubeCore.h"
+
 #include "Thing.h"
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
-
-
-void ACubeCore::SetCanPickup(const bool can)
-{
-	// Only broadcast when there's a change
-	const bool change = can != canPickup;
-	Super::SetCanPickup(can);
-		
-	if(!canPickup && change) onRangeExeeded.Broadcast();
-}
 
 ACubeCore::ACubeCore()
 {
@@ -30,6 +21,16 @@ ACubeCore::ACubeCore()
 	thingCollector->SetupAttachment(objMesh);
 
 	placeRange = 50;
+}
+
+
+void ACubeCore::SetCanPickup(const bool can)
+{
+	// Only broadcast when there's a change
+	const bool change = can != canPickup;
+	Super::SetCanPickup(can);
+		
+	if(!canPickup && change) onRangeExeeded.Broadcast();
 }
 
 void ACubeCore::BeginPlay()
@@ -83,7 +84,7 @@ void ACubeCore::SetSelected(const bool value)
 	{
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 	}
-	
+
 	if(selected) return;
 
 	// Make the wheel go back to normal when it's unselected.
@@ -100,10 +101,11 @@ void ACubeCore::SetSelected(const bool value)
 
 	// Rotate to match the socket rotation
 	hitMesh->SetWorldRotation(rot);
-
+	
 	// Syncing the socket info
 	AddAttachment(hitObj, attachedSocket);
 	hitObj->SetAttachedSocket(attachedSocket);
+	hitObj->SetCore(this);
 
 	// Since the wheel uses physics constraints instead of normal attachments
 	if(!hitObj->IsA<AWheel>()) hitObj->AttachToActor(this, attachRules, attachedSocket);
@@ -173,11 +175,10 @@ void ACubeCore::Placement()
 	// If the cast was unsuccessful....
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
 	else hitObj = 0;
+	
 	if(!IsValid(hitObj)) return;
 
 	attachedSocket = "Down";
-	hitObj->SetCore(this);
-	hitObj->SetAttachedSocket(attachedSocket);
 }
 
 void ACubeCore::ResetRotation(bool resetVelocity)
@@ -189,11 +190,40 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 	for(const auto& obj : socketInfo->GetAttachments()) obj->RemoveVelocity();
 }
 
+void ACubeCore::SetAttachedSocket(FName socket)
+{
+	if(socket != "Down")
+	{
+		attachedSocket = socket;
+		return;
+	}
+
+	RearrangeSockets();
+}
+
+void ACubeCore::RearrangeSockets()
+{
+	if(!ObjectInSocket("down")) return;
+
+	// If there isn't an object in the up socket.. use that. Otherwise get the first free slot.
+	const FName newSocket = !socketInfo->ObjectInSocket("up")? "Up" : socketInfo->GetFreeSockets()[0];
+	
+	APickupableMaster* obj = socketInfo->GetObjectInSocket("Down");
+	if(!IsValid(obj)) return;
+
+	RemoveAttachment("down");
+	socketInfo->AddAttachment(obj, newSocket);
+	obj->SetAttachedSocket(newSocket);
+	obj->AttachToComponent(objMesh, attachRules, newSocket);
+
+	obj->AlignSocketRot();
+}
+
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
-	Super::AddAttachment(attachment, socket);
+	attachedSocket = socket;
 
 	socketInfo->AddAttachment(attachment, socket);
 	GravitySelection();
-
+	isAttached = true;
 }
