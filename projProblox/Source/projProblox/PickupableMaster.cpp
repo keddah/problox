@@ -1,5 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/**************************************************************************************************************
+* Pickupable Master - Code
+* 
+* The code file for the parent class of all the moveable things in the game. Gives functionality to the declared functions. Most of these base functions can
+* be modified by inherited classes but functions like rotate and remove velocity are universal.
+* Also creates the actor components that all variations of this class will have... Mesh and collider.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 #include "PickupableMaster.h"
 

@@ -1,4 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Cube core - Header
+* 
+* The header file for the core class (the main cube). This class inherits from the Pickupable Master class.
+* Delegates are declared for when 
+* be modified by inherited classes but functions like rotate and remove velocity are universal.
+* Also creates the actor components that all variations of this class will have... Mesh and collider.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -7,7 +17,11 @@
 #include "CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
+// Should be broadcasted when the cube goes too far away from the container.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
+
+// Should be broadcasted when a "Thing" collides with any of the things that are attached to the cube.
+// This has been declared so that a Blueprint function can be called.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAddedThing, AActor*, thing);
 
 UCLASS()
@@ -15,16 +29,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	virtual void SetCanPickup(const bool can) override
-	{
-		// Only broadcast when there's a change
-		const bool change = can != canPickup;
-		Super::SetCanPickup(can); if(!canPickup && change)
-		{
-		Print("Sdfsdfdsf")
-			onRangeExeeded.Broadcast();
-		}
-	}
+	virtual void SetCanPickup(const bool can) override;
 	
 protected:
 	ACubeCore();

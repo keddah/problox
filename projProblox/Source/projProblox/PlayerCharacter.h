@@ -47,7 +47,7 @@ protected:
 	
 public:	
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 	ACubeCore* GetCore() const { return core; }
 	

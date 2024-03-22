@@ -7,6 +7,15 @@
 #include "Kismet/GameplayStatics.h"
 
 
+void ACubeCore::SetCanPickup(const bool can)
+{
+	// Only broadcast when there's a change
+	const bool change = can != canPickup;
+	Super::SetCanPickup(can);
+		
+	if(!canPickup && change) onRangeExeeded.Broadcast();
+}
+
 ACubeCore::ACubeCore()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
