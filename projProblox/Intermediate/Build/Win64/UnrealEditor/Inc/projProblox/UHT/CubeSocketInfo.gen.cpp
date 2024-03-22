@@ -64,7 +64,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets = { "sockets", nullptr, (EPropertyFlags)0x0010000000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, sockets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets = { "sockets", nullptr, (EPropertyFlags)0x0020080000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, sockets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_Inner = { "socketObjects", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData[] = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		{ "ModuleRelativePath", "CubeSocketInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects = { "socketObjects", nullptr, (EPropertyFlags)0x0010000000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, socketObjects), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects = { "socketObjects", nullptr, (EPropertyFlags)0x0020080000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, socketObjects), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCubeSocketInfo_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets,
@@ -119,9 +119,9 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 3383751379U) },
+		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 2972210752U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_2138555333(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_2726885148(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

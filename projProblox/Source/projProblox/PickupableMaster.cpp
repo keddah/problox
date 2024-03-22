@@ -40,8 +40,10 @@ void APickupableMaster::BeginPlay()
 	Super::BeginPlay();
 }
 
-void APickupableMaster::AlignSocketRot()
+void APickupableMaster::AlignSocketRot(const bool useDirection)
 {
+	if(!IsValid(objCore)) return;
+	
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
@@ -55,6 +57,8 @@ void APickupableMaster::AlignSocketRot()
 	// Rotate to match the socket rotation
 	SetActorRotation(rot);
 
+	if(!useDirection) return;
+	
 	// Do this but just around the forward axis of the socket...
 	if(placeDir.X != 0) AddActorWorldRotation(FRotator(0,0,savedRot.Roll));
 	else if(placeDir.Y != 0) AddActorWorldRotation(FRotator(savedRot.Pitch,0,0));
@@ -158,6 +162,7 @@ void APickupableMaster::Detach()
 	objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	active = false;
 	isAttached = false;
+	attachedSocket = "";
 }
 
 // Called every frame

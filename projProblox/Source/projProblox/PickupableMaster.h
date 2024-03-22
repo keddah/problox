@@ -106,6 +106,9 @@ protected:
 		return rounded;
 	}
 
+	// Ensures that the mesh is pointing in the right direction when attached
+	void AlignSocketRot(bool useDirection = true);
+	
 	FRotator defaultRot{};
 	
 public:	
@@ -128,9 +131,6 @@ public:
 	virtual void ResetRotation(bool resetVelocity = false);
 	void RemoveVelocity() const;
 
-	void AlignSocketRot();
-
-	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
 	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }
@@ -145,7 +145,7 @@ public:
 	virtual void SetSelected(const bool value);
 
 	void SetCore(ACubeCore* _core) { objCore = _core; }
-	virtual void SetAttachedSocket(FName socket) { attachedSocket = socket; }
+	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }

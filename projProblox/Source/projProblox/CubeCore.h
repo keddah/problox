@@ -66,7 +66,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	ACollector* collector;
 
-	virtual void SetAttachedSocket(FName socket) override;
+	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
 
 	// Need to change the attaching socket if there's something in the bottom socket since cubes always attach to the bottom
 	// (since the pivot is at the bottom).
@@ -89,14 +89,14 @@ public:
 	
 	// Depending on the given bool.. return the array of AActors or APickupableMasters 
 	UFUNCTION(BlueprintCallable)
-	TArray<AActor*> GetAttachedObjects(const bool returnAActor) const { return socketInfo->GetAttachmentActors(); }
-	TArray<APickupableMaster*> GetAttachedObjects() const { return socketInfo->GetAttachments(); }
-
+	TArray<AActor*> GetAttachedObjActors(bool deepGet) const;
+	// deepGet is whether or not the objects attach to cubes should be gathered (the objects of the cubes that are attached to this cube). 
+	TArray<APickupableMaster*> GetAttachedObjects(bool deepGet) const;
+	
 	virtual void SetSelected(const bool value) override;
 	virtual float GetMass() const override;
 
 	void Movement(const FVector& direction, const float speed) const { objMesh->AddForce(direction * speed * 1000); }
-
 	void AddThing(AActor* thing) const;
 
 	FOnOutOfRange onRangeExeeded;

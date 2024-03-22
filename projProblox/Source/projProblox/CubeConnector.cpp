@@ -54,14 +54,14 @@ void ACubeConnector::Placement()
 				placeDir = {-1, 0, 0};
 				break;
 
-			//left
+			//right
 			case 2:
-				placeDir = {0, -1, 0};
+				placeDir = {0, 1, 0};
 				break;
 
-			//right
+			//left
 			case 3:
-				placeDir = {0, 1, 0};
+				placeDir = {0, -1, 0};
 				break;
 
 			//up
@@ -83,7 +83,7 @@ void ACubeConnector::Placement()
 		const FVector start = pivot->GetComponentLocation();
 
 		// Debug Draw
-		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 		// Go to the next ray if it didn't hit anything...
@@ -94,7 +94,7 @@ void ACubeConnector::Placement()
 			continue;
 		}
 
-		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();

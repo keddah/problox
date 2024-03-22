@@ -68,7 +68,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	// Add the things that are connected to the core/connector to the things to ignore
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
-		exclusions.Append(obj->GetAttachedObjects(true));
+		exclusions.Append(obj->GetAttachedObjActors(true));
 	}
 }
 

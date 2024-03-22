@@ -60,8 +60,10 @@ void ACubeCore::SetAbilityActive(bool value)
 
 void ACubeCore::DetachAll()
 {
-	for(const auto& obj : socketInfo->GetAttachments())
+	for(const auto& obj : socketInfo->GetObjectsArray())
 	{
+		if(!IsValid(obj)) continue;
+		
 		obj->Detach();
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
 		const float launchForce = obj->GetMass();
@@ -72,6 +74,34 @@ void ACubeCore::DetachAll()
 	}
 
 	socketInfo->ClearAttachments();
+}
+
+TArray<AActor*> ACubeCore::GetAttachedObjActors(const bool deepGet) const
+{
+	TArray<AActor*> objects = socketInfo->GetAttachmentActors();
+
+	if(!deepGet) return objects;
+	
+	for(const auto& obj : objects)
+	{
+		if(const ACubeCore* cube = Cast<ACubeCore>(obj)) objects.Append(cube->GetAttachedObjects(true));
+	}
+	
+	return objects;
+}
+
+TArray<APickupableMaster*> ACubeCore::GetAttachedObjects(bool deepGet) const
+{
+	TArray<APickupableMaster*> objects = socketInfo->GetAttachments();
+
+	if(!deepGet) return objects;
+
+	for(auto& obj : objects)
+	{
+		if(ACubeCore* cube = Cast<ACubeCore>(obj)) objects.Append(cube->GetAttachedObjects(true));
+	}
+	
+	return objects;
 }
 
 void ACubeCore::SetSelected(const bool value)
@@ -190,7 +220,7 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 	for(const auto& obj : socketInfo->GetAttachments()) obj->RemoveVelocity();
 }
 
-void ACubeCore::SetAttachedSocket(FName socket)
+void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
 {
 	if(socket != "Down")
 	{
@@ -203,20 +233,34 @@ void ACubeCore::SetAttachedSocket(FName socket)
 
 void ACubeCore::RearrangeSockets()
 {
+	// This only needs to happen if there's an object in the bottom slot when trying to attach to a cube..
 	if(!ObjectInSocket("down")) return;
 
-	// If there isn't an object in the up socket.. use that. Otherwise get the first free slot.
-	const FName newSocket = !socketInfo->ObjectInSocket("up")? "Up" : socketInfo->GetFreeSockets()[0];
+	TArray<APickupableMaster*> objects = socketInfo->GetObjectsArray();
+	TArray<FName> sockets = socketInfo->GetSockets();
 	
-	APickupableMaster* obj = socketInfo->GetObjectInSocket("Down");
-	if(!IsValid(obj)) return;
+	for(int i = 0; i < objects.Num(); i++)
+	{
+		// Continue if the object is invalid
+		if(!objects[i]) continue;
 
-	RemoveAttachment("down");
-	socketInfo->AddAttachment(obj, newSocket);
-	obj->SetAttachedSocket(newSocket);
-	obj->AttachToComponent(objMesh, attachRules, newSocket);
+		const FName oppSocket = socketInfo->GetOppositeSocket(i);
 
-	obj->AlignSocketRot();
+		// Kick out the thing that's in the opposite socket if there's something there....
+		if(socketInfo->ObjectInSocket(oppSocket))
+		{
+			socketInfo->GetObjectInSocket(oppSocket)->Detach();
+			RemoveAttachment(oppSocket);
+		}
+
+		// Then replace it with the new thing
+		RemoveAttachment(sockets[i]);
+		AddAttachment(objects[i], oppSocket);
+		objects[i]->AttachToActor(this, attachRules, oppSocket);
+		objects[i]->SetAttachedSocket(oppSocket, false);
+	}
+
+	attachedSocket = "Up";
 }
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)

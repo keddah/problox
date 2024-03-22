@@ -35,14 +35,6 @@ void AGrappler::Ability()
 {
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
 
-	const FVector pos1 = GetActorLocation();
-	if(objCore)
-	{
-		const FVector pos2 = objCore->GetMesh()->GetSocketLocation(attachedSocket);
-		Print("self: " + FString::FromInt(pos1.X) + ", " + FString::FromInt(pos1.Y) + ", " + FString::FromInt(pos1.Z))
-		Print("other mesh: " + FString::FromInt(pos2.X) + ", " + FString::FromInt(pos2.Y) + ", " + FString::FromInt(pos2.Z))
-	}
-	
 	if(!active) return;
 	FActorSpawnParameters params;
 	params.Owner = this;
