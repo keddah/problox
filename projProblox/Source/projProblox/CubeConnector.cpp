@@ -201,16 +201,19 @@ void ACubeConnector::SetSelected(const bool value)
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(objCore)) return;
 
-	SetActorRotation(objCore->GetMesh()->GetSocketRotation(attachedSocket));
+	const FRotator socketRot = objCore->GetMesh()->GetSocketRotation(attachedSocket);
+	const FRotator rot = RoundRotation(GetActorRotation());
+	SetActorRotation({ socketRot.Pitch, 0, socketRot.Roll});
 	
 	// Attach self to the core
 	AttachToActor(objCore, attachRules, attachedSocket);
 
+	SetActorRelativeRotation({0,rot.Yaw,0});
+	
 	// If it's the actual core use a smaller offset
 	attachOffset = !objCore->IsA<ACubeConnector>()? 35 : 50; 
 	ApplyOffset();
 	
-	Print(attachedSocket.ToString())
 	objCore->AddAttachment(this, attachedSocket);
 
 	// RearrangeSockets();
