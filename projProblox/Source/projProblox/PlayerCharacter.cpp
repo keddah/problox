@@ -59,7 +59,11 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		selectedObj->RemoveVelocity();
 	}
 
-	if(!IsValid(selectedObj)) return;
+	if(!IsValid(selectedObj))
+	{
+		holding = false;
+		return;
+	}
 	
 	// Includes if the selected object is the core
 	exclusions.Add(selectedObj);

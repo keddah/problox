@@ -5,38 +5,48 @@
 
 #include "CubeCore.h"
 
+void APropeller::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	attachOffset = 5;
+}
+
 APropeller::APropeller()
 {
 	windBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Wind Collider"));
 	windBox->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+
 }
 
 void APropeller::SetSelected(const bool value)
 {
 	selected = value;
 	GravitySelection();
-
+	
 	if(selected)
 	{
 		Detach();
 		return;
 	}
-
+	
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
-
+	
 	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
-
+	
 	FRotator rot;
 	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
 	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
 	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-
+	
 	// Rotate to match the socket rotation
 	SetActorRotation(rot);
 	
 	AttachToActor(objCore, attachRules, attachedSocket);
+	ApplyOffset();
+	
 	objCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }

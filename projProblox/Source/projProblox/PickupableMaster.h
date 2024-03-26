@@ -59,6 +59,8 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
+
+
 	
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin horizontally (On the global axis)."))
 	FVector horiAxis {0, 0,1};
@@ -75,7 +77,10 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* objCore;
 
-	const FAttachmentTransformRules attachRules {EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+	const FAttachmentTransformRules attachRules {EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+
+	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The positional offset for when objects attach to cores."))
+	float attachOffset;
 
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
@@ -131,6 +136,9 @@ public:
 	virtual void ResetRotation(bool resetVelocity = false);
 	void RemoveVelocity() const;
 
+	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
+	void ApplyOffset();
+	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
 	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }

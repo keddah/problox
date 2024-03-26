@@ -14,6 +14,8 @@ class PROJPROBLOX_API APropeller : public APickupableMaster
 {
 	GENERATED_BODY()
 
+	virtual void BeginPlay() override;
+	
 public:
 	APropeller();
 

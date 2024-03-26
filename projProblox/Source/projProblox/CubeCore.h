@@ -41,9 +41,6 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	UCubeSocketInfo* socketInfo;
 
-	UPROPERTY(EditDefaultsOnly)
-	USceneComponent* pivot;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* thingCollector;
 	
@@ -76,8 +73,6 @@ public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
 
-	FVector GetCenterPos() const { return pivot->GetComponentLocation(); }
-	
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
 	TArray<FName> GetFreeSlots() const { return socketInfo->GetFreeSockets(); };

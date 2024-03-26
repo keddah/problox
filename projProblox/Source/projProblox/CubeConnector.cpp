@@ -5,16 +5,6 @@
 #include "Wheel.h"
 
 
-void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
-{
-	attachedSocket = socket;
-
-	if(!useDirection) return;
-
-	RearrangeSockets();
-	AlignSocketRot();
-}
-
 ACubeConnector::ACubeConnector()
 {
 	thingCollector->SetGenerateOverlapEvents(false);
@@ -29,6 +19,7 @@ ACubeConnector::ACubeConnector()
 void ACubeConnector::BeginPlay()
 {
 	placeRange = 100;
+	attachOffset = 50;
 	
 	Super::BeginPlay();
 }
@@ -36,6 +27,16 @@ void ACubeConnector::BeginPlay()
 void ACubeConnector::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+}
+
+void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
+{
+	attachedSocket = socket;
+
+	if(!useDirection) return;
+
+	RearrangeSockets();
+	AlignSocketRot();
 }
 
 void ACubeConnector::Placement()
@@ -90,7 +91,7 @@ void ACubeConnector::Placement()
 		
 		FHitResult hit;
 		const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
-		const FVector start = pivot->GetComponentLocation();
+		const FVector start = GetActorLocation();
 
 		// Debug Draw
 		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
@@ -120,7 +121,7 @@ void ACubeConnector::Placement()
 		}
 		if(!IsValid(hitObj)) continue;
 
-		float shortestDistance = 9999999;
+		float shortestDistance = 999999;
 		
 		// Attempt to cast to the cubecore
 		if(hitObj->IsA<ACubeCore>())
@@ -199,18 +200,20 @@ void ACubeConnector::SetSelected(const bool value)
 	
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(objCore)) return;
-	if(attachedSocket == NAME_None) return;
-	
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objCore->GetMesh()->GetSocketRotation(attachedSocket));
-	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-	
-	objMesh->SetWorldRotation(rot);
 
+	SetActorRotation(objCore->GetMesh()->GetSocketRotation(attachedSocket));
+	
 	// Attach self to the core
 	AttachToActor(objCore, attachRules, attachedSocket);
+
+	// If it's the actual core use a smaller offset
+	attachOffset = !objCore->IsA<ACubeConnector>()? 35 : 50; 
+	ApplyOffset();
+	
+	Print(attachedSocket.ToString())
 	objCore->AddAttachment(this, attachedSocket);
 
-	RearrangeSockets();
+	// RearrangeSockets();
 }
 
 void ACubeConnector::SetAbilityActive(bool value)

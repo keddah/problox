@@ -154,6 +154,13 @@ void APickupableMaster::RemoveVelocity() const
 	objMesh->SetAllPhysicsAngularVelocityInRadians({});
 }
 
+void APickupableMaster::ApplyOffset()
+{
+	if(!IsValid(objCore)) return;
+
+	SetActorRelativeLocation({attachOffset,0,0});
+}
+
 void APickupableMaster::Detach()
 {
 	if(!IsValid(objCore)) return;
@@ -218,9 +225,11 @@ void APickupableMaster::SetSelected(const bool value)
 
 	if(!IsValid(objCore)) return;
 	if(attachedSocket == NAME_None) return;
-	
-	AlignSocketRot();
+
 	AttachToActor(objCore, attachRules, attachedSocket);
+	ApplyOffset();
+	AlignSocketRot();
+	
 	objCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }

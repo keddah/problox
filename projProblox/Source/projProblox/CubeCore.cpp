@@ -12,9 +12,6 @@ ACubeCore::ACubeCore()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	pivot = CreateDefaultSubobject<USceneComponent>(TEXT("Center"));
-	pivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
-
 	thingHomer = CreateDefaultSubobject<UBoxComponent>("Bigger Collider");
 	thingHomer->SetupAttachment(objMesh);
 	thingCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
@@ -150,7 +147,11 @@ void ACubeCore::SetSelected(const bool value)
 	hitObj->SetCore(this);
 
 	// Since the wheel uses physics constraints instead of normal attachments
-	if(!hitObj->IsA<AWheel>()) hitObj->AttachToActor(this, attachRules, attachedSocket);
+	if(!hitObj->IsA<AWheel>())
+	{
+		hitObj->AttachToActor(this, attachRules, attachedSocket);
+		hitObj->SetActorRelativeLocation(UKismetMathLibrary::GetForwardVector(objCore->GetMesh()->GetSocketRotation(attachedSocket)) * attachOffset);
+	}
 	else Cast<AWheel>(hitObj)->Attach(this);
 
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
@@ -195,7 +196,7 @@ void ACubeCore::Placement()
 	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
 	
 	// Debug Draw
-	const FVector start = pivot->GetComponentLocation();
+	const FVector start = GetActorLocation();
 	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
@@ -268,7 +269,9 @@ void ACubeCore::RearrangeSockets()
 		// Then replace it with the new thing
 		RemoveAttachment(sockets[i]);
 		AddAttachment(objects[i], oppSocket);
+
 		objects[i]->AttachToActor(this, attachRules, oppSocket);
+		objects[i]->ApplyOffset();
 		objects[i]->SetAttachedSocket(oppSocket, false);
 	}
 
