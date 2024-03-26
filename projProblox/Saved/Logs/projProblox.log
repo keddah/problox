@@ -7423,3 +7423,255 @@ Script Stack (0 frames) :
 [2024.03.26-14.23.54:535][893]PIE: Play in editor total start time 0.124 seconds.
 [2024.03.26-14.24.10:723][638]LogBlueprintNodeCache: Display: The blueprint template-node cache is full. As a result, you may experience interactions which are slower than normal. To avoid this, increase the cache's cap in the blueprint editor prefences.
 [2024.03.26-14.26.10:504][434]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:18.140 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 9234 files in 11941 folders with total size 1729 MiB.
+[2024.03.26-14.29.24:437][498]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.26-14.29.24:437][498]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.03.26-14.29.24:437][498]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.03.26-14.29.24:441][498]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.26-14.29.24:446][498]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.26-14.29.24:450][498]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.26-14.29.24:463][498]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.26-14.29.24:463][498]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 39
+[2024.03.26-14.29.24:464][498]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=39
+[2024.03.26-14.29.24:465][498]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=39
+[2024.03.26-14.29.24:481][498]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.03.26-14.29.24:537][499]LogPlayLevel: Display: Destroying online subsystem :Context_57
+[2024.03.26-14.32.10:032][739]LogSlate: Took 0.004690 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.03.26-14.32.42:774][530]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.26-14.32.42:797][530]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/StarterContent/Shapes/Cube" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Cube.uasset" SILENT=true
+[2024.03.26-14.32.42:800][530]LogSavePackage: Moving output files for package: /Game/StarterContent/Shapes/Cube
+[2024.03.26-14.32.42:800][530]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/CubeAFACAA374D046E2FB37DCDAEC6EF5ACF.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Cube.uasset'
+[2024.03.26-14.32.42:805][530]LogFileHelpers: InternalPromptForCheckoutAndSave took 30 ms (total: 485 ms)
+[2024.03.26-14.32.42:807][530]AssetCheck: New page: Asset Save: Cube
+[2024.03.26-14.32.42:807][530]LogContentValidation: Display: Validating /Script/Engine.StaticMesh /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.33.38:749][233]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
+[2024.03.26-14.33.38:753][233]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.018
+[2024.03.26-14.33.38:753][233]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/StarterContent/Shapes/Cube] ([1] browsable assets)...
+[2024.03.26-14.33.38:806][233]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/StarterContent/Shapes/Cube.Cube]
+[2024.03.26-14.33.38:806][233]OBJ SavePackage: Finished generating thumbnails for package [/Game/StarterContent/Shapes/Cube]
+[2024.03.26-14.33.38:808][233]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/StarterContent/Shapes/Cube_Auto2
+[2024.03.26-14.33.38:808][233]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Cube_Auto283234C244B7108E296553EBB05305710.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/StarterContent/Shapes/Cube_Auto2.uasset'
+[2024.03.26-14.33.38:809][233]LogFileHelpers: Auto-saving content packages took 0.056
+[2024.03.26-14.36.20:692][105]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.03.26-14.36.22:413][105]LogSlate: Window 'Delete Assets' being destroyed
+[2024.03.26-14.36.23:911][264]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.03.26-14.36.25:795][264]LogSlate: Window 'Delete Assets' being destroyed
+[2024.03.26-14.36.26:985][387]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.03.26-14.36.33:040][387]LogSlate: Window 'Delete Assets' being destroyed
+[2024.03.26-14.36.36:277][753]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2024.03.26-14.36.36:277][753]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.26-14.36.36:308][753]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grappler.BP_Grappler
+[2024.03.26-14.36.36:308][753]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-14.36.36:308][753]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.26-14.36.36:464][753]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_19:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:125][428]BlueprintLog: New page: Compile BP_Grappler
+[2024.03.26-14.36.43:146][428]LogActor: Warning: BP_Grappler_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Grappler_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:148][428]LogActor: Warning: BP_Grappler_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Grappler_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:149][428]LogActor: Warning: BP_Grappler_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Grappler_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:149][428]LogActor: Warning: BP_Grappler_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Grappler_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:150][428]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_18:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:151][428]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_19:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:172][428]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.03.26-14.36.43:175][428]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_18:PersistentLevel.BP_Grappler_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:243][428]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.26-14.36.43:324][428]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-14.36.43:329][428]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_20:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.43:345][428]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_Grappler
+[2024.03.26-14.36.43:346][428]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grappler54B5A74A4B7C6CB867064DA1562165A7.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_Grappler.uasset'
+[2024.03.26-14.36.43:352][428]LogFileHelpers: InternalPromptForCheckoutAndSave took 108 ms (total: 594 ms)
+[2024.03.26-14.36.43:372][428]AssetCheck: New page: Asset Save: BP_Grappler
+[2024.03.26-14.36.43:372][428]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grappler.BP_Grappler
+[2024.03.26-14.36.47:214][765]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.03.26-14.36.48:431][765]LogSlate: Window 'Delete Assets' being destroyed
+[2024.03.26-14.36.48:435][765]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Piston.BP_Piston
+[2024.03.26-14.36.48:436][765]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-14.36.48:436][765]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.26-14.36.48:609][765]LogActor: Warning: BP_Piston_C /Engine/Transient.World_21:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.55:165][427]LogViewport: Scene viewport resized to 1141x691, mode Windowed.
+[2024.03.26-14.36.56:413][568]BlueprintLog: New page: Compile BP_Piston
+[2024.03.26-14.36.56:446][568]LogActor: Warning: BP_Piston_C /Game/Sandbox.Sandbox:PersistentLevel.BP_Piston_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.56:447][568]LogActor: Warning: BP_Piston_C /Engine/Transient.World_13:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.56:447][568]LogActor: Warning: BP_Piston_C /Engine/Transient.World_21:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.56:466][568]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.03.26-14.36.56:468][568]LogActor: Warning: BP_Piston_C /Engine/Transient.World_13:PersistentLevel.BP_Piston_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.56:541][568]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.26-14.36.56:576][568]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-14.36.56:581][568]LogActor: Warning: BP_Piston_C /Engine/Transient.World_22:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.03.26-14.36.56:592][568]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Piston" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Piston.uasset" SILENT=true
+[2024.03.26-14.36.56:605][568]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Piston
+[2024.03.26-14.36.56:606][568]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Piston23E702724D05AFD8599BDB90D1980D7C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Piston.uasset'
+[2024.03.26-14.36.56:611][568]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 664 ms)
+[2024.03.26-14.36.56:636][568]AssetCheck: New page: Asset Save: BP_Piston
+[2024.03.26-14.36.56:636][568]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Piston.BP_Piston
+[2024.03.26-14.36.58:285][735]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2024.03.26-14.36.58:381][735]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.26-14.36.58:409][735]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.03.26-14.36.58:446][735]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2024.03.26-14.36.58:505][735]LogSavePackage: Moving output files for package: /Game/Sandbox
+[2024.03.26-14.36.58:505][735]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/SandboxCF500A544FFB2C4202CC9689667C7B93.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap'
+[2024.03.26-14.36.58:512][735]LogFileHelpers: Saving map 'Sandbox' took 0.104
+[2024.03.26-14.36.58:513][735]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/StarterContent/Shapes/Cube" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Cube.uasset" SILENT=true
+[2024.03.26-14.36.58:515][735]LogSavePackage: Moving output files for package: /Game/StarterContent/Shapes/Cube
+[2024.03.26-14.36.58:515][735]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Cube5F7DAECD4DEAE7DAFF975EBA6134B5EF.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Cube.uasset'
+[2024.03.26-14.36.58:522][735]LogFileHelpers: InternalPromptForCheckoutAndSave took 141 ms (total: 805 ms)
+[2024.03.26-14.36.58:524][735]AssetCheck: New page: Asset Save: multiple assets
+[2024.03.26-14.36.58:524][735]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
+[2024.03.26-14.36.58:524][735]LogContentValidation: Display: Validating /Script/Engine.StaticMesh /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.37.01:233][924]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-14.37.01:253][924]LogMaterial: Warning: [AssetLog] C:\Program Files\Epic Games\UE_5.3\Engine\Content\EngineMaterials\HighResolutionScreenshotMaskFunction.uasset: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+	SceneTexture expressions cannot be used in opaque materials except if used with the Single Layer Water shading model.
+
+[2024.03.26-14.37.02:357][  8]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMaterials: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMaterials' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.19:267][613]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.03.26-14.37.20:102][613]LogSlate: Window 'Delete Assets' being destroyed
+[2024.03.26-14.37.20:207][613]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.03.26-14.37.20:221][613]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.03.26-14.37.20:232][613]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.03.26-14.37.20:382][613]SourceControl: Error: Updated 0 paths from the index
+[2024.03.26-14.37.20:483][613]SourceControl: rm 'projProblox/Content/StarterContent/Shapes/Shape_Cube1.uasset'
+[2024.03.26-14.37.22:865][786]LogViewport: Scene viewport resized to 1405x902, mode Windowed.
+[2024.03.26-14.37.33:623][463]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.37.33:629][463]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.37.33:633][463]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.37.33:658][463]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.37.33:661][463]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.37.33:688][463]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.37.33:701][463]LogEditorFactories: -- imported successfully
+[2024.03.26-14.37.33:701][463]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.37.44:370][516]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.44:370][516]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.44:370][516]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.46:939][817]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.46:939][817]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/BasicShapes: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/BasicShapes' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.49:164][ 78]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/EditorCube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/EditorCube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.49:487][113]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/ParticleCube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/ParticleCube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.50:137][183]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.50:439][217]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm_flippednormals.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm_flippednormals.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.50:497][224]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineVolumetrics/FogEnvironment/Mesh/S_EV_FogVolume_Cube_01.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineVolumetrics/FogEnvironment/Mesh/S_EV_FogVolume_Cube_01.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.50:883][266]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_01.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_01.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.50:917][270]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_02.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_02.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.37.50:933][272]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_03.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_03.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.38.24:126][313]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.38.24:130][313]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.38.24:134][313]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.38.24:159][313]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.38.24:171][313]LogEditorFactories: -- imported successfully
+[2024.03.26-14.38.24:171][313]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.39.04:181][794]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.04:181][794]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.04:181][794]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.07:390][163]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.07:417][166]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm_flippednormals.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm_flippednormals.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.07:441][169]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineVolumetrics/FogEnvironment/Mesh/S_EV_FogVolume_Cube_01.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineVolumetrics/FogEnvironment/Mesh/S_EV_FogVolume_Cube_01.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.07:959][231]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_01.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_01.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.07:981][234]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_02.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_02.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.08:023][239]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_03.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_03.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.39.57:640][225]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.39.57:646][225]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.39.57:650][225]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.39.57:672][225]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.39.57:675][225]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.39.57:702][225]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.39.57:714][225]LogEditorFactories: -- imported successfully
+[2024.03.26-14.39.57:715][225]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.40.25:903][452]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2024.03.26-14.40.25:905][452]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto3.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2024.03.26-14.40.25:961][452]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Sandbox_Auto3
+[2024.03.26-14.40.25:962][452]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox_Auto33191101D4E18FE099942F4A1E0D352CB.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto3.umap'
+[2024.03.26-14.40.25:963][452]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto3.umap is in the /Temp path, will not scan.
+[2024.03.26-14.40.25:963][452]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.072
+[2024.03.26-14.40.25:963][452]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.072
+[2024.03.26-14.40.25:963][452]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/StarterContent/Shapes/Cube] ([1] browsable assets)...
+[2024.03.26-14.40.26:015][452]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/StarterContent/Shapes/Cube.Cube]
+[2024.03.26-14.40.26:016][452]OBJ SavePackage: Finished generating thumbnails for package [/Game/StarterContent/Shapes/Cube]
+[2024.03.26-14.40.26:018][452]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/StarterContent/Shapes/Cube_Auto3
+[2024.03.26-14.40.26:018][452]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Cube_Auto33DD52B084179B15D07A17BBDF685B5B4.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/StarterContent/Shapes/Cube_Auto3.uasset'
+[2024.03.26-14.40.26:019][452]LogFileHelpers: Auto-saving content packages took 0.056
+[2024.03.26-14.40.48:207][817]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.40.48:211][817]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.40.48:215][817]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.40.48:235][817]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.40.48:238][817]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.40.48:265][817]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.40.48:277][817]LogEditorFactories: -- imported successfully
+[2024.03.26-14.40.48:278][817]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.40.56:682][620]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.40.56:683][620]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.40.56:683][620]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.40.59:510][945]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm_flippednormals.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/s_cube_1cm_flippednormals.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.40.59:510][945]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineVolumetrics/FogEnvironment/Mesh/S_EV_FogVolume_Cube_01.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineVolumetrics/FogEnvironment/Mesh/S_EV_FogVolume_Cube_01.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.40.59:527][947]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_01.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/BasicMeshes/SM_Cube_01.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.26-14.42.24:466][455]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.42.24:471][455]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.42.24:474][455]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.42.24:501][455]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.42.24:505][455]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.42.24:529][455]LogStaticMesh: Built static mesh [0.02s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.42.24:543][455]LogEditorFactories: -- imported successfully
+[2024.03.26-14.42.24:543][455]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.43.20:545][ 39]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.43.20:551][ 39]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.43.20:554][ 39]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.43.20:583][ 39]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.43.20:586][ 39]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.43.20:612][ 39]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.43.20:625][ 39]LogEditorFactories: -- imported successfully
+[2024.03.26-14.43.20:625][ 39]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.43.47:285][801]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.03.26-14.43.47:287][801]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto4.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2024.03.26-14.43.47:343][801]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Sandbox_Auto4
+[2024.03.26-14.43.47:343][801]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox_Auto41A4B8ECC435C402D7F3261AE8876A35C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto4.umap'
+[2024.03.26-14.43.47:345][801]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto4.umap is in the /Temp path, will not scan.
+[2024.03.26-14.43.47:345][801]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.072
+[2024.03.26-14.43.47:345][801]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.072
+[2024.03.26-14.43.47:345][801]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/StarterContent/Shapes/Cube] ([1] browsable assets)...
+[2024.03.26-14.43.47:398][801]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/StarterContent/Shapes/Cube.Cube]
+[2024.03.26-14.43.47:398][801]OBJ SavePackage: Finished generating thumbnails for package [/Game/StarterContent/Shapes/Cube]
+[2024.03.26-14.43.47:400][801]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/StarterContent/Shapes/Cube_Auto4
+[2024.03.26-14.43.47:400][801]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Cube_Auto4866E2FC1463E5FB9E6CCC280AAB2DEC8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/StarterContent/Shapes/Cube_Auto4.uasset'
+[2024.03.26-14.43.47:401][801]LogFileHelpers: Auto-saving content packages took 0.056
+[2024.03.26-14.44.03:680][ 44]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.44.03:685][ 44]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.44.03:688][ 44]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.44.03:715][ 44]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.44.03:719][ 44]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.44.03:744][ 44]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.44.03:756][ 44]LogEditorFactories: -- imported successfully
+[2024.03.26-14.44.03:757][ 44]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.45.03:667][571]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.45.03:671][571]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.45.03:675][571]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.45.03:702][571]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.45.03:705][571]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.45.03:730][571]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.45.03:743][571]LogEditorFactories: -- imported successfully
+[2024.03.26-14.45.03:744][571]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.45.36:249][802]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.45.36:254][802]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.45.36:257][802]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.45.36:284][802]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.45.36:287][802]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.45.36:314][802]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.45.36:325][802]LogEditorFactories: -- imported successfully
+[2024.03.26-14.45.36:325][802]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.46.24:035][560]LogEditorFactories: Performing atomic reimport of [C:/Users/Deany/Downloads/Cube.fbx]
+[2024.03.26-14.46.24:040][560]LogFbx: Loading FBX Scene from C:/Users/Deany/Downloads/Cube.fbx
+[2024.03.26-14.46.24:043][560]LogFbx: FBX Scene Loaded Succesfully
+[2024.03.26-14.46.24:068][560]LogFbx: Display: Triangulating static mesh Box001
+[2024.03.26-14.46.24:071][560]LogStaticMesh: Display: Building static mesh Cube...
+[2024.03.26-14.46.24:099][560]LogStaticMesh: Built static mesh [0.03s] /Game/StarterContent/Shapes/Cube.Cube
+[2024.03.26-14.46.24:111][560]LogEditorFactories: -- imported successfully
+[2024.03.26-14.46.24:112][560]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.03.26-14.47.11:774][ 66]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.03.26-14.47.11:888][ 66]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.26-14.47.11:911][ 66]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.03.26-14.47.11:947][ 66]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.03.26-14.47.12:005][ 66]LogSavePackage: Moving output files for package: /Game/Sandbox
+[2024.03.26-14.47.12:006][ 66]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1E08FE1343679A42C400D1A1521521A8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Sandbox.umap'
+[2024.03.26-14.47.12:013][ 66]LogFileHelpers: Saving map 'Sandbox' took 0.102
+[2024.03.26-14.47.12:021][ 66]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/StarterContent/Shapes/Cube" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Cube.uasset" SILENT=true
+[2024.03.26-14.47.12:024][ 66]LogSavePackage: Moving output files for package: /Game/StarterContent/Shapes/Cube
+[2024.03.26-14.47.12:024][ 66]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Cube8F8695AE415CA4423F4B4DB4603A34F8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Cube.uasset'
+[2024.03.26-14.47.12:029][ 66]LogFileHelpers: InternalPromptForCheckoutAndSave took 142 ms (total: 947 ms)
+[2024.03.26-14.47.12:031][ 66]AssetCheck: New page: Asset Save: multiple assets
+[2024.03.26-14.47.12:031][ 66]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
+[2024.03.26-14.47.12:031][ 66]LogContentValidation: Display: Validating /Script/Engine.StaticMesh /Game/StarterContent/Shapes/Cube.Cube
