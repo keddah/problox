@@ -84,7 +84,13 @@ TArray<AActor*> ACubeCore::GetAttachedObjActors(const bool deepGet) const
 	
 	for(const auto& obj : objects)
 	{
-		if(const ACubeCore* cube = Cast<ACubeCore>(obj)) objects.Append(cube->GetAttachedObjects(true));
+		if(const ACubeCore* cube = Cast<ACubeCore>(obj))
+		{
+			// Don't append if the array is empty (crashes otherwise...)
+			if(cube->GetAttachedObjects(true).IsEmpty()) continue;
+
+			objects.Append(cube->GetAttachedObjects(true));
+		}
 	}
 	
 	return objects;
@@ -96,9 +102,15 @@ TArray<APickupableMaster*> ACubeCore::GetAttachedObjects(bool deepGet) const
 
 	if(!deepGet) return objects;
 
-	for(auto& obj : objects)
+	for(const auto& obj : objects)
 	{
-		if(ACubeCore* cube = Cast<ACubeCore>(obj)) objects.Append(cube->GetAttachedObjects(true));
+		if(ACubeCore* cube = Cast<ACubeCore>(obj))
+		{
+			// Don't append if the array is empty (crashes otherwise...)
+			if(cube->GetAttachedObjects(true).IsEmpty()) continue;
+
+			objects.Append(cube->GetAttachedObjects(true));
+		}
 	}
 	
 	return objects;

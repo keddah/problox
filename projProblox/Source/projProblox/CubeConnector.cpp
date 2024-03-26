@@ -5,6 +5,16 @@
 #include "Wheel.h"
 
 
+void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
+{
+	attachedSocket = socket;
+
+	if(!useDirection) return;
+
+	RearrangeSockets();
+	AlignSocketRot();
+}
+
 ACubeConnector::ACubeConnector()
 {
 	thingCollector->SetGenerateOverlapEvents(false);
@@ -172,12 +182,7 @@ void ACubeConnector::SetSelected(const bool value)
 	// Detach from its components if selected
 	if(selected)
 	{
-		objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-		active = false;
-		
-		if(!IsValid(objCore)) return;
-
-		objCore->RemoveAttachment(attachedSocket);
+		Detach();
 
 		for(const auto& obj : socketInfo->GetAttachments())
 		{
@@ -185,7 +190,8 @@ void ACubeConnector::SetSelected(const bool value)
 		}
 		return;
 	}
-	
+
+	// When unselected....
 	for(const auto& obj : socketInfo->GetAttachments())
 	{
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);

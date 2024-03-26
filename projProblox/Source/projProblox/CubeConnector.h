@@ -14,6 +14,8 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 {
 	GENERATED_BODY()
 
+	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
+	
 public:
 	ACubeConnector();
 	

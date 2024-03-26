@@ -69,6 +69,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
 		exclusions.Append(obj->GetAttachedObjActors(true));
+		Print(FString::FromInt(exclusions.Num()))
 	}
 }
 

@@ -36,55 +36,66 @@ FName UCubeSocketInfo::GetOppositeSocket(const FName& origin) const
 {
 	const FString str_socket = origin.ToString().ToUpper();
 
-	if(str_socket == sockets[0]) return sockets[3]; // front
-	if(str_socket == sockets[1]) return sockets[2]; // back
-	if(str_socket == sockets[2]) return sockets[0]; // right
-	if(str_socket == sockets[3]) return sockets[1]; // left 
-	if(str_socket == sockets[4]) return sockets[5]; // up
-	if(str_socket == sockets[5]) return sockets[4]; // down
+	//front
+	if(str_socket == sockets[0]) return sockets[3]; // left
+	//back
+	if(str_socket == sockets[1]) return sockets[2]; // right
+	//right
+	if(str_socket == sockets[2]) return sockets[0]; // front
+	//left
+	if(str_socket == sockets[3]) return sockets[1]; // back 
+	//up
+	if(str_socket == sockets[4]) return sockets[5]; // down
+	//down
+	if(str_socket == sockets[5]) return sockets[4]; // up
 	return "";
 }
 
 // Just hardcode it... 
 FName UCubeSocketInfo::GetOppositeSocket(int index) const
 {
-	if(index == 0) return sockets[3];
-	if(index == 1) return sockets[2];
-	if(index == 2) return sockets[0];
-	if(index == 3) return sockets[1];
-	if(index == 4) return sockets[5];
-	if(index == 5) return sockets[4];
-	return "";
+	//front
+	// if(index == 0) return sockets[3];
+	// //back
+	// if(index == 1) return sockets[2];
+	// //right
+	// if(index == 2) return sockets[0];
+	// //left
+	// if(index == 3) return sockets[1];
+	// //up
+	// if(index == 4) return sockets[5];
+	// //down
+	// if(index == 5) return sockets[4];
+	// return "";
 
-	//
-	// // if it's the bottom slot....
-	// if(sockets.Num() - 1)
-	// {
-	// 	// Even indices are always a positive slot (forward / up / right) 
-	// 	if(index % 2 == 0) index++;
-	// 	else index--;
-	//
-	// 	// Prevent out of range indices...
-	// 	if(index < 0) index = sockets.Num() - 1;
-	// 	else if(index >= sockets.Num()) index = 0;
-	// 		
-	// 	return sockets[index];
-	// }
-	// // Otherwise....
-	//
-	// constexpr int step = 2;
-	//
-	// // Incrementing by 3 moves gets the correct slot after the rotation 
-	// if(index % 2 == 0) index = index + step;
-	// else index = index - step;
-	// Print("unedited num: " + FString::FromInt(index))
-	//
-	// // Prevent invalid indices.
-	// if(index < 0) index = 5;
-	// else if(index >= 6) index = 0;
-	// Print("Edited num: " + FString::FromInt(index))
-	//
-	// return sockets[index];
+	
+	// if it's the bottom slot....
+	if(sockets.Num() - 1)
+	{
+		// Even indices are always a positive slot (forward / up / right) 
+		if(index % 2 == 0) index++;
+		else index--;
+	
+		// Prevent out of range indices...
+		if(index < 0) index = sockets.Num() - 1;
+		else if(index >= sockets.Num()) index = 0;
+			
+		return sockets[index];
+	}
+	// Otherwise....
+	
+	constexpr int step = 2;
+	
+	// Incrementing by 3 moves gets the correct slot after the rotation 
+	if(index % 2 == 0) index = index + step;
+	else index = index - step;
+	
+	// Prevent invalid indices.
+	if(index < 0) index = 5;
+	else if(index >= 6) index = 0;
+
+	Print(sockets[index].ToString())	
+	return sockets[index];
 }
 
 TArray<FName> UCubeSocketInfo::GetFreeSockets() const
