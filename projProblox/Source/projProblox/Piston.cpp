@@ -32,7 +32,7 @@ void APiston::Ability()
 	const float distance = FVector::Distance(flatHead->GetRelativeLocation(), objMesh->GetRelativeLocation());
 	if(distance > pushExtent) return;
 
-	const FVector pushDir = UKismetMathLibrary::GetForwardVector(objCore->GetMesh()->GetSocketRotation(attachedSocket));
+	const FVector pushDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 	flatHead->AddWorldOffset(pushDir * pushSpeed);
 
 	// Accelerate the push speed

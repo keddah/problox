@@ -42,6 +42,7 @@ void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
 
 void ACubeConnector::Placement()
 {
+	if(!canPlace) return;
 	if(!selected) return;
 
 	const UWorld* wrld = GetWorld();
@@ -102,7 +103,7 @@ void ACubeConnector::Placement()
 		if(!hit.bBlockingHit)
 		{
 			hitObj = 0;
-			objCore = 0;
+			parentCore = 0;
 			continue;;
 		}
 
@@ -117,24 +118,28 @@ void ACubeConnector::Placement()
 		if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
 		else
 		{
-			objCore = 0;
+			parentCore = 0;
 			hitObj = 0;
 		}
 		if(!IsValid(hitObj)) continue;
 
+		// Don't do anything if the hit object is anywhere in this actor's hierarchy
+		if(hitObj->Children.Contains(this)) continue;
+		if(hitObj->IsChildOf(this)) continue;
+		
 		float shortestDistance = 999999;
 		
 		// Attempt to cast to the cubecore
 		if(hitObj->IsA<ACubeCore>())
 		{
 			// All the previous checks ensure that the cast is valid
-			objCore = Cast<ACubeCore>(hitObj);
-			const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+			parentCore = Cast<ACubeCore>(hitObj);
+			const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 
 			for(const auto& socket: coreMesh->GetAllSocketNames())
 			{
 				// If the cube doesn't have an object in its socket...
-				if(objCore->ObjectInSocket(socket)) continue;
+				if(parentCore->ObjectInSocket(socket)) continue;
 
 				// Compare the distance between the current socket and this connector's mesh
 				const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
@@ -170,7 +175,7 @@ void ACubeConnector::Placement()
 		}
 
 		if(closestSocket != NAME_None) raySocket = closestSocket;
-		objCore = nullptr;
+		parentCore = nullptr;
 		hitObj->SetCore(this);
 		break;
 	}
@@ -190,6 +195,7 @@ void ACubeConnector::SetSelected(const bool value)
 	// Detach from its components if selected
 	if(selected)
 	{
+		canPlace = true;
 		Detach();
 		
 		for(const auto& obj : socketInfo->GetAttachments())
@@ -206,17 +212,17 @@ void ACubeConnector::SetSelected(const bool value)
 	}
 	
 	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 
 	const FRotator actualRot = GetActorRotation();
-	const FRotator socketRot = objCore->GetMesh()->GetSocketRotation(raySocket);
+	const FRotator socketRot = parentCore->GetMesh()->GetSocketRotation(raySocket);
 	FRotator rot = RoundRotation(actualRot);
 
 	SetActorRotation({0,0,0});
 	
 	// Attach self to the core
 	attachedSocket = raySocket;
-	AttachToActor(objCore, attachRules, attachedSocket);
+	AttachToActor(parentCore, attachRules, attachedSocket);
 
 	// IF THE PITCH IS CHANGED IT MESSES UP
 	const FVector upVec = UKismetMathLibrary::GetUpVector(socketRot);
@@ -245,15 +251,15 @@ void ACubeConnector::SetSelected(const bool value)
 	Print("final Rot: " + FString::SanitizeFloat(rot.Roll) + ", " + FString::SanitizeFloat(rot.Pitch) + ", " + FString::SanitizeFloat(rot.Yaw), 10)
 
 	// If it's the actual core use a smaller offset
-	attachOffset = !objCore->IsA<ACubeConnector>()? 35 : 50; 
+	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50; 
 	ApplyOffset();
 	
-	objCore->AddAttachment(this, attachedSocket);
+	parentCore->AddAttachment(this, attachedSocket);
 }
 
 void ACubeConnector::SetAbilityActive(bool value)
 {
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 
 	Super::SetAbilityActive(value);
 }

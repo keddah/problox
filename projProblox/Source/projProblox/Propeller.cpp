@@ -30,10 +30,10 @@ void APropeller::SetSelected(const bool value)
 		return;
 	}
 	
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 	
-	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 	
 	FRotator rot;
@@ -44,10 +44,10 @@ void APropeller::SetSelected(const bool value)
 	// Rotate to match the socket rotation
 	SetActorRotation(rot);
 	
-	AttachToActor(objCore, attachRules, attachedSocket);
+	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset();
 	
-	objCore->AddAttachment(this, attachedSocket);
+	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }
 
@@ -59,12 +59,12 @@ void APropeller::Ability()
 
 	objMesh->AddLocalRotation({0, 0, spinSpeed});
 
-	if(!objCore) return;
+	if(!parentCore) return;
 
-	const float power = sqrt(objCore->GetMass()) * propelForce * 1000; 
+	const float power = sqrt(parentCore->GetMass()) * propelForce * 1000; 
 	const FVector force = power * objMesh->GetForwardVector();
 	
-	objCore->GetMesh()->AddForceAtLocation(force, objMesh->GetComponentLocation());
+	parentCore->GetMesh()->AddForceAtLocation(force, objMesh->GetComponentLocation());
 
 	// Push the things that are inside the wind box
 	if(pushedObjs.IsEmpty()) return;

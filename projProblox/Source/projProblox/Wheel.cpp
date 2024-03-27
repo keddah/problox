@@ -33,7 +33,7 @@ AWheel::AWheel()
 
 void AWheel::Ability()
 {
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 
 	// const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
 	// wheelAxel->SetAngularVelocityTarget(-coreVelocity);
@@ -61,20 +61,20 @@ void AWheel::Placement()
 
 	if(!hit.bBlockingHit)
 	{
-		objCore = 0;
+		parentCore = 0;
 		return;
 	}
 
 	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 
 	// Do the cube connector first since that's the broken one...
-	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) objCore = core;
-	else objCore = nullptr;
+	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
+	else parentCore = nullptr;
 	
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 	
 	// objCore has been set to the hit actor.
-	const UStaticMeshComponent* cubeMesh = objCore->GetMesh();
+	const UStaticMeshComponent* cubeMesh = parentCore->GetMesh();
 	
 	float shortestDistance = 9999;
 	FName closestSocket = "None";
@@ -83,7 +83,7 @@ void AWheel::Placement()
 	{
 		for(const auto& socket: cubeMesh->GetAllSocketNames())
 		{
-			if(objCore) if(objCore->ObjectInSocket(socket)) continue;
+			if(parentCore) if(parentCore->ObjectInSocket(socket)) continue;
 			
 			const float distance = FVector::Distance(cubeMesh->GetSocketLocation(socket), hit.ImpactPoint);
 
@@ -115,21 +115,21 @@ void AWheel::SetSelected(const bool value)
 	}
 
 	// If the wheel is unselected whilst the objCore isn't valid
-	if(!IsValid(objCore))
+	if(!IsValid(parentCore))
 	{
 		Detach();
 		return;
 	}
 	if(attachedSocket == NAME_None) return;
 
-	Attach(objCore);
+	Attach(parentCore);
 }
 
 void AWheel::Detach()
 {
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 
-	objCore->RemoveAttachment(attachedSocket);
+	parentCore->RemoveAttachment(attachedSocket);
 	wheelAxel->BreakConstraint();
 	wheelAxel->UpdateConstraintFrames();
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
@@ -139,10 +139,10 @@ void AWheel::Detach()
 
 void AWheel::Attach(ACubeCore* core)
 {
-	objCore = core;
+	parentCore = core;
 	ResetRotation();
 
-	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
 	FRotator rot;
@@ -154,10 +154,10 @@ void AWheel::Attach(ACubeCore* core)
 	SetActorRotation(rot);
 	SetActorLocation(coreMesh->GetSocketLocation(attachedSocket));
 	
-	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, objCore->GetMesh(), attachedSocket);
+	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
 	wheelAxel->UpdateConstraintFrames();
 	
-	objCore->AddAttachment(this, attachedSocket);
+	parentCore->AddAttachment(this, attachedSocket);
 	SetParentDominates(false);
 	isAttached = true;
 }

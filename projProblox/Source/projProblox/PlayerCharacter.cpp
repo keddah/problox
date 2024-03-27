@@ -89,6 +89,51 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
 {
+	if(!holding)
+	{
+		Deselect();
+		return;
+	}
+
+	// Don't do anything if there's already something selected.
+	if(IsValid(selectedObj)) return;
+
+	// If the trace didn't hit anything don't do anything...
+	if(!hit.bBlockingHit)
+	{
+		holding = false;
+		return;
+	}
+
+	AActor* hitActor = hit.GetActor();
+	
+	if(!IsValid(hitActor))
+	{
+		holding = false;
+		return;
+	}
+
+	if(APickupableMaster* hitObj = Cast<APickupableMaster>(hitActor))
+	{
+		selectedObj = hitObj->GetParent();
+
+		selectedObj->RemoveVelocity();
+		selectedObj->SetGroupSelected(true);
+	}
+	else holding = false;
+
+	if(!IsValid(selectedObj)) return;
+	
+	// Setup mouse hit exclusions
+	exclusions.Add(selectedObj);
+	
+	if(!selectedObj->IsA<ACubeCore>()) return;
+
+	// Add the things that are connected to the core/connector to the things to ignore
+	const ACubeCore* obj = Cast<ACubeCore>(selectedObj);
+
+	exclusions.Append(obj->GetAttachedObjActors(true));
+	Print(FString::FromInt(exclusions.Num()), 3)
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)

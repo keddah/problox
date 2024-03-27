@@ -39,7 +39,7 @@ protected:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Ability")
-	void Pull(const FVector& direction, const float speed) { if(IsValid(objCore)) objCore->Movement(direction, speed); }
+	void Pull(const FVector& direction, const float speed) { if(IsValid(parentCore)) parentCore->Movement(direction, speed); }
 
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	FVector GetSpawnLocation() const { return grappleSpawn->GetComponentLocation(); }

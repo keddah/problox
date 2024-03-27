@@ -31,15 +31,15 @@ void AGrappler::SetSelected(const bool value)
 		return;
 	}
 
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 
-	AttachToActor(objCore, attachRules, attachedSocket);
+	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset();
 
 	AlignSocketRot(false);
 	
-	objCore->AddAttachment(this, attachedSocket);
+	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 	
 	if(!value) return;

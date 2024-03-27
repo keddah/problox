@@ -10,6 +10,7 @@
 
 #include "PickupableMaster.h"
 
+#include "CubeConnector.h"
 #include "CubeCore.h"
 #include "Thing.h"
 
@@ -42,9 +43,9 @@ void APickupableMaster::BeginPlay()
 
 void APickupableMaster::AlignSocketRot(const bool useDirection)
 {
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 	
-	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
 	FRotator rot;
@@ -65,14 +66,64 @@ void APickupableMaster::AlignSocketRot(const bool useDirection)
 	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
 }
 
+// void APickupableMaster::RecalulatePhysics()
+// {
+// 	TArray<APickupableMaster*> hierarchy = AllObjsInHierarchy();
+// 	APickupableMaster* centerObj = hierarchy[0];
+// 	bool foundCore = false;
+// 	
+// 	for(const auto& obj : hierarchy)
+// 	{
+// 		if(obj->IsA<ACubeCore>() && !obj->IsA<ACubeConnector>())
+// 		{
+// 			foundCore = true;
+// 			centerObj = obj;
+// 		}
+// 	}
+//
+// 	// Only if there isn't a core.
+// 	if(!foundCore)
+// 	{
+// 		FVector averagePos;
+//
+// 		// Get the center of all of the attached things
+// 		for(const auto& obj : hierarchy) averagePos += obj->GetActorLocation();
+// 		averagePos /= hierarchy.Num();
+//
+// 		
+// 		float closest = 9999;
+//
+// 		// Do it twice...
+// 		for(int i = 0; i < 2; i++)
+// 		{
+// 			for(const auto& obj : hierarchy)
+// 			{
+// 				const float distance = FVector::Distance(obj->GetActorLocation(), centerObj->GetActorLocation());
+//
+// 				if(distance < closest)
+// 				{
+// 					closest = distance;
+// 					centerObj = obj;
+// 				}
+// 			}
+// 		}
+// 	}
+//
+// 	// Set the center object as the new parent of everything?
+// 	for (auto& obj : hierarchy)
+// 	{
+// 		obj->AttachToActor(centerObj, attachRules);
+// 	}
+// }
+
 void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 	// if(!IsValid(OtherActor)) return;
 
 	// Successful cast???
-	if(Cast<AThing>(OtherActor)) objCore->AddThing(OtherActor);
+	if(Cast<AThing>(OtherActor)) parentCore->AddThing(OtherActor);
 }
 
 void APickupableMaster::Placement()
@@ -95,18 +146,18 @@ void APickupableMaster::Placement()
 
 	if(!hit.bBlockingHit)
 	{
-		objCore = 0;
+		parentCore = 0;
 		return;
 	}
 
 	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 	
-	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) objCore = core;
-	else objCore = nullptr;
-	if(!IsValid(objCore)) return;
+	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
+	else parentCore = nullptr;
+	if(!IsValid(parentCore)) return;
 	
 	// objCore has been set to the hit actor.
-	const UStaticMeshComponent* coreMesh = objCore->GetMesh();
+	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 	
 	float shortestDistance = 9999;
 	FName closestSocket = "None";
@@ -115,7 +166,7 @@ void APickupableMaster::Placement()
 	{
 		for(const auto& socket: coreMesh->GetAllSocketNames())
 		{
-			if(objCore) if(objCore->ObjectInSocket(socket)) continue;
+			if(parentCore) if(parentCore->ObjectInSocket(socket)) continue;
 			
 			const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
 
@@ -156,20 +207,20 @@ void APickupableMaster::RemoveVelocity() const
 
 void APickupableMaster::ApplyOffset()
 {
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 
 	SetActorRelativeLocation({attachOffset,0,0});
 }
 
 void APickupableMaster::Detach()
 {
-	if(!IsValid(objCore))
+	if(!IsValid(parentCore))
 	{
 		Print("Couldnt detach because the core was invalid", 3)
 		return;
 	}
 
-	objCore->RemoveAttachment(attachedSocket);
+	parentCore->RemoveAttachment(attachedSocket);
 	objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	active = false;
 	isAttached = false;
@@ -222,19 +273,109 @@ void APickupableMaster::SetSelected(const bool value)
 
 	if(selected)
 	{
+		canPlace = true;
 		Detach();
 		return;
 	}
 
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 
-	AttachToActor(objCore, attachRules, attachedSocket);
+	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset();
 
 	AlignSocketRot();
 	
-	objCore->AddAttachment(this, attachedSocket);
+	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
+}
+
+void APickupableMaster::SetGroupSelected(const bool value)
+{
+	selected = value;
+	canPlace = !selected;
+	
+	GravitySelection();
+}
+
+APickupableMaster* APickupableMaster::GetParent()
+{
+	AActor* current = this;
+	while (current->GetAttachParentActor() != nullptr)
+	{
+		current = current->GetAttachParentActor();
+	}
+
+	if(APickupableMaster* parent = Cast<APickupableMaster>(current)) return parent;
+	// If the cast fails
+	Print("Didn't find a pickupable object at the top.", 5)
+	return 0;
+}
+
+bool APickupableMaster::IsChildOf(const APickupableMaster* parent)
+{
+	AActor* current = this;
+	while (current->GetAttachParentActor() != nullptr)
+	{
+		current = current->GetAttachParentActor();
+		if(current == parent) return true;
+	}
+
+	return false;
+}
+
+TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
+{
+	TArray<APickupableMaster*> all;
+	AActor* self = this;
+	
+	TArray<APickupableMaster*> children;
+	TArray<APickupableMaster*> parents;
+	
+	GetDescendents(self, children);
+	GetAscendants(self, parents);
+	all.Append(children);
+	all.Append(parents);
+
+	return all;
+}
+
+TArray<APickupableMaster*> APickupableMaster::GetDescendents(AActor* parent, TArray<APickupableMaster*>& outArray)
+{
+	TArray<APickupableMaster*> all;
+
+	for (AActor* child : parent->Children)
+	{
+		if (child)
+		{
+			all.Add(Cast<APickupableMaster>(child));
+			
+			// Recursively get descendants of this child actor
+			GetDescendents(child, outArray);
+		}
+	}
+
+	return all;
+}
+
+TArray<APickupableMaster*> APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray)
+{
+	TArray<APickupableMaster*> all;
+
+	if (AActor* Parent = child->GetAttachParentActor())
+	{
+		if (APickupableMaster* parent = Cast<APickupableMaster>(Parent))
+		{
+			all.Add(parent);
+			outArray.Add(parent); // Optionally add to OutArray as well
+
+			// Recursively get ascendants of this parent actor
+			TArray<APickupableMaster*> ascendants;
+			GetAscendants(Parent, ascendants);
+			all.Append(ascendants);
+		}
+	}
+
+	return all;
 }
 

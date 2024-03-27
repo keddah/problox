@@ -53,6 +53,10 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
 
+	// When group selected, you're unable to place cores...
+	// (everything would work normally but when attaching welding the physics gets awkward...)
+	bool canPlace;
+
 	// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.
 	UPROPERTY(BlueprintReadWrite)
 	bool canPickup = true;
@@ -60,8 +64,6 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
 
-
-	
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin horizontally (On the global axis)."))
 	FVector horiAxis {0, 0,1};
 	
@@ -75,7 +77,7 @@ protected:
 	float placeRange = 180;
 
 	UPROPERTY(BlueprintReadOnly)
-	ACubeCore* objCore;
+	ACubeCore* parentCore;
 
 	const FAttachmentTransformRules attachRules {EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 
@@ -125,6 +127,8 @@ protected:
 
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
+
+	// void RecalulatePhysics();
 	
 	FRotator defaultRot{};
 	
@@ -163,8 +167,15 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	virtual void SetSelected(const bool value);
+	virtual void SetGroupSelected(const bool value);
 
-	void SetCore(ACubeCore* _core) { objCore = _core; }
+	void SetCore(ACubeCore* _core) { parentCore = _core; }
+	ACubeCore* GetCore() const { return parentCore; }
+
+	APickupableMaster* GetParent();
+	bool IsChildOf(const APickupableMaster* parent);
+	TArray<APickupableMaster*> AllObjsInHierarchy();
+	
 	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
@@ -184,4 +195,9 @@ public:
 
 	// Returns whether or not the player is able to pick this up.
 	bool GetCanPickup() const { return canPickup; }
+
+private:
+	static TArray<APickupableMaster*> GetDescendents(AActor* parent, TArray<APickupableMaster*>& outArray);
+	static TArray<APickupableMaster*> GetAscendants(const AActor* parent, TArray<APickupableMaster*>& outArray);
+
 };

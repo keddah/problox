@@ -18,7 +18,7 @@ void ATreads::Ability()
 	Drag();
 
 	if(!(active && grounded)) return;
-	if(!IsValid(objCore)) return;
+	if(!IsValid(parentCore)) return;
 
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
 	objMesh->AddForce(GetActorForwardVector() * moveSpeed * 1000);

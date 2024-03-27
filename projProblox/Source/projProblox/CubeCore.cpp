@@ -129,7 +129,11 @@ void ACubeCore::SetSelected(const bool value)
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 	}
 
-	if(selected) return;
+	if(selected)
+	{
+		canPlace = true;
+		return;
+	}
 
 	// Make the wheel go back to normal when it's unselected.
 	for(const auto& obj : socketInfo->GetAttachments())
@@ -186,6 +190,7 @@ void ACubeCore::AddThing(AActor* _thing) const
 
 void ACubeCore::Placement()
 {
+	if(!canPlace) return;
 	if(!selected) return;
 	if(ObjectInSocket("Down")) return;
 
