@@ -94,7 +94,7 @@ FName UCubeSocketInfo::GetOppositeSocket(int index) const
 	if(index < 0) index = 5;
 	else if(index >= 6) index = 0;
 
-	Print(sockets[index].ToString())	
+	Print(sockets[index].ToString(), 3)	
 	return sockets[index];
 }
 

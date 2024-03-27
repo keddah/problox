@@ -18,7 +18,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "PickupableMaster.generated.h"
 
-#define Print(x) { GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Cyan, x); }
+#define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
 
 class ACubeCore;
 
@@ -98,15 +98,27 @@ protected:
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
 	// Used when attaching to sockets of the cube... Rounds the given rotation to right angles (90 degrees)
-	static FRotator RoundRotation(const FRotator& rotation)
+	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true)
 	{
 		// Quantize each component of the Rotator using Frac and Floor
 		FRotator rounded;
-
+		const float rounder = negate? -90 : 90;
+		
 		// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
-		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / -90) * -90;
-		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / -90) * -90;
-		rounded.Roll = FMath::FloorToFloat(rotation.Roll / -90) * -90;
+		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / rounder) * rounder;
+		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / rounder) * rounder;
+		rounded.Roll = FMath::FloorToFloat(rotation.Roll / rounder) * rounder;
+
+		return rounded;
+	}
+	static FRotator RoundRotation(const FRotator& rotation, const FRotator& rounder)
+	{
+		// Quantize each component of the Rotator using Frac and Floor
+		FRotator rounded;
+		
+		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / rounder.Pitch) * rounder.Pitch;
+		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / rounder.Yaw) * rounder.Yaw;
+		rounded.Roll = FMath::FloorToFloat(rotation.Roll / rounder.Roll) * rounder.Roll;
 
 		return rounded;
 	}

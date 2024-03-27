@@ -20,7 +20,7 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
-	Print(IsValid(core)? "core is valid" : "core invalid")
+	Print(IsValid(core)? "core is valid" : "core invalid", 3)
 
 	core->onRangeExeeded.AddDynamic(this, &APlayerCharacter::Deselect);
 }
@@ -73,7 +73,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
 		exclusions.Append(obj->GetAttachedObjActors(true));
-		Print(FString::FromInt(exclusions.Num()))
+		Print(FString::FromInt(exclusions.Num()), 3)
 	}
 }
 

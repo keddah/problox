@@ -163,7 +163,11 @@ void APickupableMaster::ApplyOffset()
 
 void APickupableMaster::Detach()
 {
-	if(!IsValid(objCore)) return;
+	if(!IsValid(objCore))
+	{
+		Print("Couldnt detach because the core was invalid", 3)
+		return;
+	}
 
 	objCore->RemoveAttachment(attachedSocket);
 	objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);

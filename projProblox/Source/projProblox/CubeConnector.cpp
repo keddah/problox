@@ -3,6 +3,7 @@
 
 #include "CubeConnector.h"
 #include "Wheel.h"
+#include "Engine/StaticMeshSocket.h"
 
 
 ACubeConnector::ACubeConnector()
@@ -201,22 +202,46 @@ void ACubeConnector::SetSelected(const bool value)
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(objCore)) return;
 
+	const FRotator actualRot = GetActorRotation();
 	const FRotator socketRot = objCore->GetMesh()->GetSocketRotation(attachedSocket);
-	const FRotator rot = RoundRotation(GetActorRotation());
-	SetActorRotation({ socketRot.Pitch, 0, socketRot.Roll});
+	FRotator rot = RoundRotation(actualRot);
+
+	SetActorRotation({0,0,0});
 	
 	// Attach self to the core
 	AttachToActor(objCore, attachRules, attachedSocket);
 
-	SetActorRelativeRotation({0,rot.Yaw,0});
+	// IF THE PITCH IS CHANGED IT MESSES UP
+	const FVector upVec = UKismetMathLibrary::GetUpVector(socketRot);
+
+	// Print(abs(upVec.Z) > .4f? "using Yaw" : "using Roll")
+	Print("added rot: " + FString::SanitizeFloat(rot.Roll) + ", " + FString::SanitizeFloat(rot.Pitch) + ", " + FString::SanitizeFloat(rot.Yaw), 3)
+
 	
+	// = On the sides of the cube (not above/below)
+	if(abs(upVec.Z) > .8f)
+	{
+		SetActorRelativeRotation({0, rot.Yaw, 0});
+		Print("rotated yaw", 3)
+	}
+	else
+	{
+		SetActorRelativeRotation({0,0,0});
+
+		const FRotator worldRot = GetActorRotation();
+		SetActorRelativeRotation(RoundRotation(FRotator(actualRot - worldRot)));
+		
+		Print("rotated roll", 3)
+	}
+
+	rot = GetActorRotation();
+	Print("final Rot: " + FString::SanitizeFloat(rot.Roll) + ", " + FString::SanitizeFloat(rot.Pitch) + ", " + FString::SanitizeFloat(rot.Yaw), 10)
+
 	// If it's the actual core use a smaller offset
 	attachOffset = !objCore->IsA<ACubeConnector>()? 35 : 50; 
 	ApplyOffset();
 	
 	objCore->AddAttachment(this, attachedSocket);
-
-	// RearrangeSockets();
 }
 
 void ACubeConnector::SetAbilityActive(bool value)
