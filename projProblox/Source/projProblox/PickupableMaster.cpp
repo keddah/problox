@@ -232,6 +232,7 @@ void APickupableMaster::SetSelected(const bool value)
 
 	AttachToActor(objCore, attachRules, attachedSocket);
 	ApplyOffset();
+
 	AlignSocketRot();
 	
 	objCore->AddAttachment(this, attachedSocket);

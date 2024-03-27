@@ -22,8 +22,26 @@ AGrappler::AGrappler()
 
 void AGrappler::SetSelected(const bool value)
 {
-	Super::SetSelected(value);
+	selected = value;
+	GravitySelection();
 
+	if(selected)
+	{
+		Detach();
+		return;
+	}
+
+	if(!IsValid(objCore)) return;
+	if(attachedSocket == NAME_None) return;
+
+	AttachToActor(objCore, attachRules, attachedSocket);
+	ApplyOffset();
+
+	AlignSocketRot(false);
+	
+	objCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
+	
 	if(!value) return;
 
 	if(!IsValid(hook)) return;

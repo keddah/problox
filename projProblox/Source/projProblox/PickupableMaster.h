@@ -124,7 +124,7 @@ protected:
 	}
 
 	// Ensures that the mesh is pointing in the right direction when attached
-	void AlignSocketRot(bool useDirection = true);
+	virtual void AlignSocketRot(bool useDirection = true);
 	
 	FRotator defaultRot{};
 	
