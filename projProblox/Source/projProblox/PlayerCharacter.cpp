@@ -20,9 +20,7 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
-	Print(IsValid(core)? "core is valid" : "core invalid", 3)
-
-	core->onRangeExeeded.AddDynamic(this, &APlayerCharacter::Deselect);
+	// Print(IsValid(core)? "core is valid" : "core invalid", 3)
 }
 
 // Called to bind functionality to input
@@ -148,10 +146,21 @@ void APlayerCharacter::MoveSelection(const FVector& mousePos)
 
 void APlayerCharacter::Deselect()
 {
-	holding = false;
-	
 	if(!IsValid(selectedObj)) return;
 
+	// Is the selected object a core?
+	if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
+	{
+		// Is the obj not a connector... if it is... check if it can collect... if it can't return
+		if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
+		{
+			holding = true;
+			return;
+		}
+	}
+
+	holding = false;
+	
 	selectedObj->SetSelected(false);
 	selectedObj = nullptr;
 

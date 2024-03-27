@@ -30,6 +30,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	GENERATED_BODY()
 
 	virtual void SetCanPickup(const bool can) override;
+	void SetCanCollect(bool collectable);
 	
 protected:
 	ACubeCore();
@@ -42,7 +43,12 @@ protected:
 	// A data asset that contains an array of things that are attached to each face of the cube.
 	UPROPERTY(VisibleAnywhere)
 	UCubeSocketInfo* socketInfo;
-
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Collection")
+	UMaterial* inactiveMat;
+	
+	UMaterial* defaultMat;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* thingCollector;
 	
@@ -64,7 +70,10 @@ protected:
 	
 	UPROPERTY(BlueprintReadOnly)
 	ACollector* collector;
-
+	
+	UPROPERTY(BlueprintReadOnly)
+	bool canCollect;
+	
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
 	
 	// Need to change the attaching socket if there's something in the bottom socket since cubes always attach to the bottom
@@ -97,5 +106,7 @@ public:
 	void Movement(const FVector& direction, const float speed) const { objMesh->AddForce(direction * speed * 1000); }
 	void AddThing(AActor* thing) const;
 
-	FOnOutOfRange onRangeExeeded;
+	FOnOutOfRange onRangeExceeded;
+	
+	bool CanCollect() const { return canCollect; }
 };

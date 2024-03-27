@@ -26,14 +26,23 @@ void ACubeCore::SetCanPickup(const bool can)
 	// Only broadcast when there's a change
 	const bool change = can != canPickup;
 	Super::SetCanPickup(can);
-		
-	if(!canPickup && change) onRangeExeeded.Broadcast();
+	
+	SetCanCollect(canPickup);
+
+	if(!canPickup && change) onRangeExceeded.Broadcast();
+}
+
+void ACubeCore::SetCanCollect(bool collectable)
+{
+	objMesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
+	canCollect = collectable;
 }
 
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	defaultMat = Cast<UMaterial>(objMesh->GetMaterial(0));
+
 	// Create a socket info for each cube (also inherited to connectors)
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
@@ -120,7 +129,10 @@ TArray<APickupableMaster*> ACubeCore::GetAttachedObjects(bool deepGet) const
 
 void ACubeCore::SetSelected(const bool value)
 {
-	selected = value;
+	// Not allowed to drop the cube if unable to collect 
+	if(canCollect) selected = value;
+	else selected = true;
+	
 	GravitySelection();
 
 	// Make the wheel ignore collisions and not ... fly away

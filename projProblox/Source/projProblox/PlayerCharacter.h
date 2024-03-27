@@ -29,7 +29,7 @@ protected:
 	bool holding;
 	
 	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
-	bool toggleSelection = true;
+	bool toggleSelection = false;
 
 	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	bool groupSelection = false;

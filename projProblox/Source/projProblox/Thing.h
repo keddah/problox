@@ -21,6 +21,9 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void SetHoming(const bool home) { isHoming = home;}
+
+	UFUNCTION()
+	void DeactivateHoming() { isHoming = false;}
 	
 protected:
 	// Called when the game starts or when spawned
