@@ -55,6 +55,9 @@ private:
 
 	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void SelectObject(const FHitResult& hit);
+
+	UFUNCTION(BlueprintCallable, Category = "Picking up")
+	void GroupSelect(const FHitResult& hit);
 	
 	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void MoveSelection(const FVector& mousePos);

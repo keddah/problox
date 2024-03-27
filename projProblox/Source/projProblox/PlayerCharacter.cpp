@@ -42,11 +42,20 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 
 	// Don't do anything if the selected object is already valid
 	if(IsValid(selectedObj)) return;
-	if(!hit.bBlockingHit) return;
+	
+	if(!hit.bBlockingHit)
+	{
+		holding = false;
+		return;
+	}
 
 	AActor* hitActor = hit.GetActor();
 	
-	if(!IsValid(hitActor)) return;
+	if(!IsValid(hitActor))
+	{
+		holding = false;
+		return;
+	}
 
 	// Cast to the selected object..
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
@@ -58,7 +67,8 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		selectedObj->SetSelected(true);
 		selectedObj->RemoveVelocity();
 	}
-
+	else holding = false;
+	
 	if(!IsValid(selectedObj))
 	{
 		holding = false;
@@ -75,6 +85,10 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		exclusions.Append(obj->GetAttachedObjActors(true));
 		Print(FString::FromInt(exclusions.Num()), 3)
 	}
+}
+
+void APlayerCharacter::GroupSelect(const FHitResult& hit)
+{
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
