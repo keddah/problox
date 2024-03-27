@@ -55,13 +55,16 @@ void ACubeCore::SetAbilityActive(bool value)
 	for (const auto& obj : socketInfo->GetAttachments()) obj->SetAbilityActive(value);
 }
 
-void ACubeCore::DetachAll()
+void ACubeCore::DetachAll(const bool push)
 {
 	for(const auto& obj : socketInfo->GetObjectsArray())
 	{
 		if(!IsValid(obj)) continue;
 		
 		obj->Detach();
+		obj->RemoveVelocity();
+		
+		if(!push) continue;
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
 		const float launchForce = obj->GetMass();
 		obj->GravitySelection();
@@ -72,6 +75,7 @@ void ACubeCore::DetachAll()
 
 	socketInfo->ClearAttachments();
 }
+
 
 TArray<AActor*> ACubeCore::GetAttachedObjActors(const bool deepGet) const
 {
@@ -101,13 +105,14 @@ TArray<APickupableMaster*> ACubeCore::GetAttachedObjects(bool deepGet) const
 
 	for(const auto& obj : objects)
 	{
-		if(ACubeCore* cube = Cast<ACubeCore>(obj))
-		{
-			// Don't append if the array is empty (crashes otherwise...)
-			if(cube->GetAttachedObjects(true).IsEmpty()) continue;
+		TArray<AActor*> outActors;
+		obj->GetAttachedActors(outActors);
 
-			objects.Append(cube->GetAttachedObjects(true));
+		for (const auto& actor : outActors)
+		{
+			objects.AddUnique(Cast<APickupableMaster>(actor));
 		}
+		
 	}
 	
 	return objects;
@@ -134,12 +139,11 @@ void ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return;
 
-	UStaticMeshComponent* hitMesh = hitObj->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(attachedSocket));
 	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
 	// Rotate to match the socket rotation
-	hitMesh->SetWorldRotation(rot);
+	hitObj->SetActorRotation(rot);
 	
 	// Syncing the socket info
 	AddAttachment(hitObj, attachedSocket);
@@ -150,7 +154,7 @@ void ACubeCore::SetSelected(const bool value)
 	if(!hitObj->IsA<AWheel>())
 	{
 		hitObj->AttachToActor(this, attachRules, attachedSocket);
-		hitObj->SetActorRelativeLocation(UKismetMathLibrary::GetForwardVector(objCore->GetMesh()->GetSocketRotation(attachedSocket)) * attachOffset);
+		hitObj->ApplyOffset();
 	}
 	else Cast<AWheel>(hitObj)->Attach(this);
 
@@ -166,7 +170,7 @@ float ACubeCore::GetMass() const
 	return mass;
 }
 
-// Passing an actor to work around the depency loop.....
+// Passing an actor to work around the #include dependency loop.....
 void ACubeCore::AddThing(AActor* _thing) const
 {
 	if(!IsValid(collector)) return;

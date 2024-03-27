@@ -37,6 +37,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	TArray<FName> _attachedSockets;
+	
 	// A data asset that contains an array of things that are attached to each face of the cube.
 	UPROPERTY(VisibleAnywhere)
 	UCubeSocketInfo* socketInfo;
@@ -64,11 +66,11 @@ protected:
 	ACollector* collector;
 
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
-
+	
 	// Need to change the attaching socket if there's something in the bottom socket since cubes always attach to the bottom
 	// (since the pivot is at the bottom).
 	void RearrangeSockets();
-	
+
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
@@ -80,7 +82,8 @@ public:
 	virtual void SetAbilityActive(bool value) override;
 
 	UFUNCTION(BlueprintCallable)
-	void DetachAll();
+	void DetachAll(bool push = true);
+	void DetachFromSocket(const FName& socket) { RemoveAttachment(socket); }
 	
 	// Depending on the given bool.. return the array of AActors or APickupableMasters 
 	UFUNCTION(BlueprintCallable)

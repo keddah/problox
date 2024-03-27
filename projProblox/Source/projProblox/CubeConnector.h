@@ -31,4 +31,7 @@ public:
 
 private:
 	virtual void Placement() override;
+	virtual void Detach() override;
+
+	FName raySocket;
 };

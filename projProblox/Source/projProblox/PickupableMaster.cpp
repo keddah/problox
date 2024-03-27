@@ -173,7 +173,6 @@ void APickupableMaster::Detach()
 	objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	active = false;
 	isAttached = false;
-	attachedSocket = "";
 }
 
 // Called every frame

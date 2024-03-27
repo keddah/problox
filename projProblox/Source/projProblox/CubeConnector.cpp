@@ -88,14 +88,14 @@ void ACubeConnector::Placement()
 		}
 
 		// Don't do anything if there's already something in the current direction slot.
-		if(socketInfo->ObjectInSocket(i)) continue;;
-		
+		if(socketInfo->ObjectInSocket(i)) continue;
+
 		FHitResult hit;
 		const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
 		const FVector start = GetActorLocation();
 
 		// Debug Draw
-		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .5f);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 		// Go to the next ray if it didn't hit anything...
@@ -103,16 +103,16 @@ void ACubeConnector::Placement()
 		{
 			hitObj = 0;
 			objCore = 0;
-			continue;
+			continue;;
 		}
 
-		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .5f);
 
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();
 		if(!hitActor) continue;
 
-		FName closestSocket = "None";
+		FName closestSocket = NAME_None;
 
 		if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
 		else
@@ -149,7 +149,7 @@ void ACubeConnector::Placement()
 				}
 			}
 
-			attachedSocket = closestSocket;
+			raySocket = closestSocket;
 			hitObj = nullptr;
 			break;
 		}
@@ -169,11 +169,17 @@ void ACubeConnector::Placement()
 			}
 		}
 
-		if(closestSocket != NAME_None) attachedSocket = closestSocket;
+		if(closestSocket != NAME_None) raySocket = closestSocket;
 		objCore = nullptr;
 		hitObj->SetCore(this);
 		break;
 	}
+}
+
+void ACubeConnector::Detach()
+{
+	Super::Detach();
+	if(!isAttached) DetachAll(false);
 }
 
 void ACubeConnector::SetSelected(const bool value)
@@ -185,7 +191,7 @@ void ACubeConnector::SetSelected(const bool value)
 	if(selected)
 	{
 		Detach();
-
+		
 		for(const auto& obj : socketInfo->GetAttachments())
 		{
 			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
@@ -203,12 +209,13 @@ void ACubeConnector::SetSelected(const bool value)
 	if(!IsValid(objCore)) return;
 
 	const FRotator actualRot = GetActorRotation();
-	const FRotator socketRot = objCore->GetMesh()->GetSocketRotation(attachedSocket);
+	const FRotator socketRot = objCore->GetMesh()->GetSocketRotation(raySocket);
 	FRotator rot = RoundRotation(actualRot);
 
 	SetActorRotation({0,0,0});
 	
 	// Attach self to the core
+	attachedSocket = raySocket;
 	AttachToActor(objCore, attachRules, attachedSocket);
 
 	// IF THE PITCH IS CHANGED IT MESSES UP
