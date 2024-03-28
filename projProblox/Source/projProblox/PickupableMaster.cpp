@@ -269,7 +269,6 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 void APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
-	GravitySelection();
 
 	if(selected)
 	{
@@ -295,7 +294,6 @@ bool APickupableMaster::SetGroupSelected(const bool value)
 	selected = value;
 	canPlace = !selected;
 	
-	GravitySelection();
 	return true;
 }
 

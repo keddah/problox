@@ -137,8 +137,6 @@ void ACubeCore::SetSelected(const bool value)
 	if(canCollect) selected = value;
 	else selected = true;
 	
-	GravitySelection();
-
 	// Make the wheel ignore collisions and not ... fly away
 	for(const auto& obj : socketInfo->GetAttachments())
 	{
@@ -186,8 +184,6 @@ bool ACubeCore::SetGroupSelected(const bool value)
 {
 	if(!canCollect) return false;
 
-	Print("hola.", 3)
-	
 	return Super::SetGroupSelected(value);;
 }
 

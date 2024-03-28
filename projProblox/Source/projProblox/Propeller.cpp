@@ -22,7 +22,6 @@ APropeller::APropeller()
 void APropeller::SetSelected(const bool value)
 {
 	selected = value;
-	GravitySelection();
 	
 	if(selected)
 	{
@@ -36,13 +35,8 @@ void APropeller::SetSelected(const bool value)
 	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 	
-	FRotator rot;
-	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-	
 	// Rotate to match the socket rotation
-	SetActorRotation(rot);
+	SetActorRotation(coreMesh->GetSocketRotation(attachedSocket));
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset();

@@ -192,14 +192,12 @@ bool ACubeConnector::SetGroupSelected(const bool value)
 	selected = value;
 	canPlace = !selected;
 	
-	GravitySelection();
 	return true;
 }
 
 void ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
-	GravitySelection();
 
 	// Detach from its components if selected
 	if(selected)

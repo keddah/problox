@@ -106,7 +106,6 @@ void AWheel::Placement()
 void AWheel::SetSelected(const bool value)
 {
 	selected = value; 
-	GravitySelection();
 	
 	if(selected)
 	{

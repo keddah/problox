@@ -23,7 +23,6 @@ AGrappler::AGrappler()
 void AGrappler::SetSelected(const bool value)
 {
 	selected = value;
-	GravitySelection();
 
 	if(selected)
 	{
@@ -37,8 +36,11 @@ void AGrappler::SetSelected(const bool value)
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset();
 
+	// The only change from the inherited SetSelected func
 	AlignSocketRot(false);
-	
+
+
+	// The added part.....
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 	

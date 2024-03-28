@@ -64,6 +64,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
 		selectedObj->RemoveVelocity();
+		selectedObj->GravitySelection();
 	}
 	else holding = false;
 	
@@ -130,6 +131,7 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 
 		selectedObj->RemoveVelocity();
 		selectedObj->SetGroupSelected(true);
+		selectedObj->GravitySelection();
 	}
 	else holding = false;
 
@@ -149,8 +151,6 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
 {
-	// selectedObj->GravitySelection();
-
 	if(selectedObj->IsA<ACubeCore>()) exclusions.AddUnique(selectedObj);
 	else exclusions.AddUnique(selectedObj);
 
@@ -175,6 +175,7 @@ void APlayerCharacter::Deselect()
 	holding = false;
 	
 	selectedObj->SetSelected(false);
+	selectedObj->GravitySelection();
 	selectedObj = nullptr;
 
 	// Clear things to ignore once not selecting anything.
