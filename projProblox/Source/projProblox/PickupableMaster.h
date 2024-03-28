@@ -167,7 +167,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	virtual void SetSelected(const bool value);
-	virtual void SetGroupSelected(const bool value);
+	virtual bool SetGroupSelected(const bool value);
 
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	ACubeCore* GetCore() const { return parentCore; }

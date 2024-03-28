@@ -182,6 +182,15 @@ void ACubeCore::SetSelected(const bool value)
 	hitObj = 0;
 }
 
+bool ACubeCore::SetGroupSelected(const bool value)
+{
+	if(!canCollect) return false;
+
+	Print("hola.", 3)
+	
+	return Super::SetGroupSelected(value);;
+}
+
 float ACubeCore::GetMass() const
 {
 	float mass = objMesh->GetMass();

@@ -32,6 +32,7 @@ public:
 private:
 	virtual void Placement() override;
 	virtual void Detach() override;
-
+	virtual bool SetGroupSelected(const bool value) override;
+	
 	FName raySocket;
 };

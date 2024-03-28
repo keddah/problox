@@ -114,6 +114,8 @@ public:
 	}
 	
 	virtual void SetSelected(const bool value) override;
+	virtual bool SetGroupSelected(const bool value) override;
+	
 	virtual float GetMass() const override;
 
 	void Movement(const FVector& direction, const float speed) const { objMesh->AddForce(direction * speed * 1000); }
