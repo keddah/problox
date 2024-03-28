@@ -290,12 +290,13 @@ void APickupableMaster::SetSelected(const bool value)
 	isAttached = true;
 }
 
-void APickupableMaster::SetGroupSelected(const bool value)
+bool APickupableMaster::SetGroupSelected(const bool value)
 {
 	selected = value;
 	canPlace = !selected;
 	
 	GravitySelection();
+	return true;
 }
 
 void APickupableMaster::GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray)
