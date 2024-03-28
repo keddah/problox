@@ -10,7 +10,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AGrappleHead();
@@ -32,10 +31,6 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_projectile_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_projectile;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_mesh_MetaData[];
 #endif
@@ -85,14 +80,6 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		{ "ModuleRelativePath", "GrappleHead.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_projectile_MetaData[] = {
-		{ "Category", "GrappleHead" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "GrappleHead.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_projectile = { "projectile", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, projectile), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_projectile_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_projectile_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_mesh_MetaData[] = {
 		{ "Category", "GrappleHead" },
@@ -160,7 +147,6 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance = { "cancelDistance", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, cancelDistance), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGrappleHead_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_projectile,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_mesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_collider,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_parent,
@@ -208,9 +194,9 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 51635990U) },
+		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 3053140911U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_3780517991(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_3148339157(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GrappleHead_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

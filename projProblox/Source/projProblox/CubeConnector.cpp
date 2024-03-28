@@ -259,7 +259,7 @@ void ACubeConnector::SetSelected(const bool value)
 
 void ACubeConnector::SetAbilityActive(bool value)
 {
-	if(!IsValid(parentCore)) return;
+	// if(!IsValid(parentCore)) return;
 
 	Super::SetAbilityActive(value);
 }

@@ -126,9 +126,9 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 4275344171U) },
+		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 130011805U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_3736848748(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_3474855928(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -6,7 +6,7 @@
 AGrappler::AGrappler()
 {
 	grappleSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Location"));
-	grappleSpawn->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	grappleSpawn->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
 
 	grappleLine = CreateDefaultSubobject<UCableComponent>(TEXT("Line"));
 	grappleLine->AttachToComponent(grappleSpawn, FAttachmentTransformRules::KeepRelativeTransform);
@@ -54,6 +54,7 @@ void AGrappler::Ability()
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
 
 	if(!active) return;
+	Print("start", 2)
 	FActorSpawnParameters params;
 	params.Owner = this;
 	params.bNoFail = true;
@@ -66,12 +67,12 @@ void AGrappler::Ability()
 	// Set the owner and ensure the grapple hook always spawns...
 
 	// Spawn and set the hook
-	hook = GetWorld()->SpawnActor<AGrappleHead>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	hook = GetWorld()->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
 
 	// Deactivate so that this doesn't happen repeatedly
 	active = false;
 
 	// Give the hook the launch direction so it can go...
-	hook->Launch(grappleSpawn->GetForwardVector());
+	// if(hook && grappleSpawn) hook->Launch(grappleSpawn->GetForwardVector());
 }

@@ -94,11 +94,24 @@ public:
 	void DetachAll(bool push = true);
 	void DetachFromSocket(const FName& socket) { RemoveAttachment(socket); }
 	
-	// Depending on the given bool.. return the array of AActors or APickupableMasters 
 	UFUNCTION(BlueprintCallable)
-	TArray<AActor*> GetAttachedObjActors(bool deepGet) const;
-	// deepGet is whether or not the objects attach to cubes should be gathered (the objects of the cubes that are attached to this cube). 
-	TArray<APickupableMaster*> GetAttachedObjects(bool deepGet) const;
+	TArray<AActor*> GetAttachedObjActors()
+	{
+		const AActor* self = this;
+		TArray<AActor*> out;
+		GetDescendentsActors(self, out);
+
+		
+		return out;
+	}
+	TArray<APickupableMaster*> GetAttachedObjects() const
+	{
+		const AActor* self = this;
+		TArray<APickupableMaster*> out;
+		GetDescendents(self, out);
+		
+		return out;
+	}
 	
 	virtual void SetSelected(const bool value) override;
 	virtual float GetMass() const override;

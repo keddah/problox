@@ -61,7 +61,11 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 
 void ACubeCore::SetAbilityActive(bool value)
 {
-	for (const auto& obj : socketInfo->GetAttachments()) obj->SetAbilityActive(value);
+	const AActor* self = this;
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for (const auto& obj : children) obj->SetAbilityActive(value);
 }
 
 void ACubeCore::DetachAll(const bool push)
@@ -86,46 +90,46 @@ void ACubeCore::DetachAll(const bool push)
 }
 
 
-TArray<AActor*> ACubeCore::GetAttachedObjActors(const bool deepGet) const
-{
-	TArray<AActor*> objects = socketInfo->GetAttachmentActors();
-
-	if(!deepGet) return objects;
-	
-	for(const auto& obj : objects)
-	{
-		if(const ACubeCore* cube = Cast<ACubeCore>(obj))
-		{
-			// Don't append if the array is empty (crashes otherwise...)
-			if(cube->GetAttachedObjects(true).IsEmpty()) continue;
-
-			objects.Append(cube->GetAttachedObjects(true));
-		}
-	}
-	
-	return objects;
-}
-
-TArray<APickupableMaster*> ACubeCore::GetAttachedObjects(bool deepGet) const
-{
-	TArray<APickupableMaster*> objects = socketInfo->GetAttachments();
-
-	if(!deepGet) return objects;
-
-	for(const auto& obj : objects)
-	{
-		TArray<AActor*> outActors;
-		obj->GetAttachedActors(outActors);
-
-		for (const auto& actor : outActors)
-		{
-			objects.AddUnique(Cast<APickupableMaster>(actor));
-		}
-		
-	}
-	
-	return objects;
-}
+// TArray<AActor*> ACubeCore::GetAttachedObjActors(const bool deepGet) const
+// {
+// 	TArray<AActor*> objects = socketInfo->GetAttachmentActors();
+//
+// 	if(!deepGet) return objects;
+// 	
+// 	for(const auto& obj : objects)
+// 	{
+// 		if(const ACubeCore* cube = Cast<ACubeCore>(obj))
+// 		{
+// 			// Don't append if the array is empty (crashes otherwise...)
+// 			if(cube->GetAttachedObjects(true).IsEmpty()) continue;
+//
+// 			objects.Append(cube->GetAttachedObjects(true));
+// 		}
+// 	}
+// 	
+// 	return objects;
+// }
+//
+// TArray<APickupableMaster*> ACubeCore::GetAttachedObjects(bool deepGet) const
+// {
+// 	TArray<APickupableMaster*> objects = socketInfo->GetAttachments();
+//
+// 	if(!deepGet) return objects;
+//
+// 	for(const auto& obj : objects)
+// 	{
+// 		TArray<AActor*> outActors;
+// 		obj->GetAttachedActors(outActors);
+//
+// 		for (const auto& actor : outActors)
+// 		{
+// 			objects.AddUnique(Cast<APickupableMaster>(actor));
+// 		}
+// 		
+// 	}
+// 	
+// 	return objects;
+// }
 
 void ACubeCore::SetSelected(const bool value)
 {

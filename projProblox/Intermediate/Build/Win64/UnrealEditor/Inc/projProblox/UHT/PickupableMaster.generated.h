@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APickupableMaster;
 class UStaticMeshComponent;
 #ifdef PROJPROBLOX_PickupableMaster_generated_h
 #error "PickupableMaster.generated.h already included, missing '#pragma once' in PickupableMaster.h"
@@ -23,6 +24,7 @@ class UStaticMeshComponent;
 	DECLARE_FUNCTION(execSetCanPickup); \
 	DECLARE_FUNCTION(execGetMass); \
 	DECLARE_FUNCTION(execAscendDescend); \
+	DECLARE_FUNCTION(execAllObjsInHierarchy); \
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execGravitySelection); \

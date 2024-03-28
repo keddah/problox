@@ -298,6 +298,18 @@ void APickupableMaster::SetGroupSelected(const bool value)
 	GravitySelection();
 }
 
+void APickupableMaster::GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray)
+{
+	if (!child) return;
+
+	if (AActor* parent = child->GetAttachParentActor())
+	{
+		outArray.Add(parent);
+		// Recursively get ascendants of this parent actor
+		GetAscendantsActors(parent, outArray);
+	}
+}
+
 APickupableMaster* APickupableMaster::GetParent()
 {
 	AActor* current = this;
@@ -327,55 +339,59 @@ bool APickupableMaster::IsChildOf(const APickupableMaster* parent)
 TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
 {
 	TArray<APickupableMaster*> all;
-	AActor* self = this;
-	
-	TArray<APickupableMaster*> children;
-	TArray<APickupableMaster*> parents;
-	
-	GetDescendents(self, children);
-	GetAscendants(self, parents);
-	all.Append(children);
-	all.Append(parents);
 
+	GetDescendents(this, all);
+	GetAscendants(this, all);
+
+	Print(FString::FromInt(all.Num()), 4);
 	return all;
 }
 
-TArray<APickupableMaster*> APickupableMaster::GetDescendents(AActor* parent, TArray<APickupableMaster*>& outArray)
+void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray)
 {
-	TArray<APickupableMaster*> all;
+	if (!parent) return;
 
-	for (AActor* child : parent->Children)
+	TArray<AActor*> children;
+	parent->GetAttachedActors(children);
+
+	for (AActor* child : children)
 	{
-		if (child)
+		if (APickupableMaster* objChild = Cast<APickupableMaster>(child))
 		{
-			all.Add(Cast<APickupableMaster>(child));
-			
+			outArray.Add(objChild);
 			// Recursively get descendants of this child actor
 			GetDescendents(child, outArray);
 		}
 	}
-
-	return all;
 }
 
-TArray<APickupableMaster*> APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray)
+void APickupableMaster::GetDescendentsActors(const AActor* parent, TArray<AActor*>& outArray)
 {
-	TArray<APickupableMaster*> all;
+	if (!parent) return;
 
-	if (AActor* Parent = child->GetAttachParentActor())
+	TArray<AActor*> children;
+	parent->GetAttachedActors(children);
+
+	for (AActor* child : children)
 	{
-		if (APickupableMaster* parent = Cast<APickupableMaster>(Parent))
-		{
-			all.Add(parent);
-			outArray.Add(parent); // Optionally add to OutArray as well
+		outArray.Add(child);
+		// Recursively get descendants of this child actor
+		GetDescendentsActors(child, outArray);
+	}
+}
 
+void APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray)
+{
+	if (!child) return;
+
+	if (AActor* parent = child->GetAttachParentActor())
+	{
+		if (APickupableMaster* objParent = Cast<APickupableMaster>(parent))
+		{
+			outArray.Add(objParent);
 			// Recursively get ascendants of this parent actor
-			TArray<APickupableMaster*> ascendants;
-			GetAscendants(Parent, ascendants);
-			all.Append(ascendants);
+			GetAscendants(parent, outArray);
 		}
 	}
-
-	return all;
 }
 

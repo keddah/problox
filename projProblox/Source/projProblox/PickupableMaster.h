@@ -172,9 +172,18 @@ public:
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	ACubeCore* GetCore() const { return parentCore; }
 
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	TArray<APickupableMaster*> AllObjsInHierarchy();
+
+	static void GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray);
+	static void GetDescendentsActors(const AActor* parent, TArray<AActor*>& outArray);
+	
+	static void GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray);
+	static void GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray);
+	
 	APickupableMaster* GetParent();
 	bool IsChildOf(const APickupableMaster* parent);
-	TArray<APickupableMaster*> AllObjsInHierarchy();
+
 	
 	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
 
@@ -195,9 +204,5 @@ public:
 
 	// Returns whether or not the player is able to pick this up.
 	bool GetCanPickup() const { return canPickup; }
-
-private:
-	static TArray<APickupableMaster*> GetDescendents(AActor* parent, TArray<APickupableMaster*>& outArray);
-	static TArray<APickupableMaster*> GetAscendants(const AActor* parent, TArray<APickupableMaster*>& outArray);
 
 };

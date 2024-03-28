@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PickupableMaster.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/Actor.h"
 #include "GameFramework/ProjectileMovementComponent.h"
@@ -21,9 +22,6 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UProjectileMovementComponent* projectile;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* mesh;
@@ -51,5 +49,4 @@ protected:
 	
 public:	
 	UStaticMeshComponent* GetMesh() const { return mesh; }
-	void Launch(const FVector& direction) const { projectile->Velocity = direction * launchForce * 1000; }
 };

@@ -105,10 +105,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 }
 	DEFINE_FUNCTION(ACubeCore::execGetAttachedObjActors)
 	{
-		P_GET_UBOOL(Z_Param_deepGet);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(TArray<AActor*>*)Z_Param__Result=P_THIS->GetAttachedObjActors(Z_Param_deepGet);
+		*(TArray<AActor*>*)Z_Param__Result=P_THIS->GetAttachedObjActors();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execDetachAll)
@@ -181,11 +180,8 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	{
 		struct CubeCore_eventGetAttachedObjActors_Parms
 		{
-			bool deepGet;
 			TArray<AActor*> ReturnValue;
 		};
-		static void NewProp_deepGet_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_deepGet;
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -194,30 +190,18 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	void Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_deepGet_SetBit(void* Obj)
-	{
-		((CubeCore_eventGetAttachedObjActors_Parms*)Obj)->deepGet = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_deepGet = { "deepGet", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CubeCore_eventGetAttachedObjActors_Parms), &Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_deepGet_SetBit, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventGetAttachedObjActors_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_deepGet,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_ReturnValue_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Depending on the given bool.. return the array of AActors or APickupableMasters \n" },
-#endif
 		{ "ModuleRelativePath", "CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Depending on the given bool.. return the array of AActors or APickupableMasters" },
-#endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "GetAttachedObjActors", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::CubeCore_eventGetAttachedObjActors_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "GetAttachedObjActors", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::CubeCore_eventGetAttachedObjActors_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::Function_MetaDataParams) };
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::PropPointers) < 2048);
 	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_GetAttachedObjActors_Statics::CubeCore_eventGetAttachedObjActors_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_ACubeCore_GetAttachedObjActors()
@@ -328,7 +312,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACubeCore_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACubeCore_DetachAll, "DetachAll" }, // 531213272
-		{ &Z_Construct_UFunction_ACubeCore_GetAttachedObjActors, "GetAttachedObjActors" }, // 2625471992
+		{ &Z_Construct_UFunction_ACubeCore_GetAttachedObjActors, "GetAttachedObjActors" }, // 626994401
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3382861889
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::FuncInfo) < 2048);
@@ -453,9 +437,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1327522627U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3934327657U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_3911659299(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_3494918432(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

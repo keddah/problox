@@ -41,6 +41,13 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		P_THIS->AscendDescend(Z_Param_inputValue);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APickupableMaster::execAllObjsInHierarchy)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->AllObjsInHierarchy();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APickupableMaster::execSetSelected)
 	{
 		P_GET_UBOOL(Z_Param_value);
@@ -108,6 +115,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	{
 		UClass* Class = APickupableMaster::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AllObjsInHierarchy", &APickupableMaster::execAllObjsInHierarchy },
 			{ "AscendDescend", &APickupableMaster::execAscendDescend },
 			{ "GetMass", &APickupableMaster::execGetMass },
 			{ "GetMesh", &APickupableMaster::execGetMesh },
@@ -121,6 +129,43 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 			{ "SnapRotateMesh", &APickupableMaster::execSnapRotateMesh },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics
+	{
+		struct PickupableMaster_eventAllObjsInHierarchy_Parms
+		{
+			TArray<APickupableMaster*> ReturnValue;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventAllObjsInHierarchy_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PickupableMaster.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "AllObjsInHierarchy", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PickupableMaster_eventAllObjsInHierarchy_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PickupableMaster_eventAllObjsInHierarchy_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_APickupableMaster_AscendDescend_Statics
 	{
@@ -649,6 +694,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APickupableMaster_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy, "AllObjsInHierarchy" }, // 3571761841
 		{ &Z_Construct_UFunction_APickupableMaster_AscendDescend, "AscendDescend" }, // 3816516389
 		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 2970354779
 		{ &Z_Construct_UFunction_APickupableMaster_GetMesh, "GetMesh" }, // 1731130531
@@ -850,9 +896,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 1584301075U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 82497653U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_960877516(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_2314142661(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

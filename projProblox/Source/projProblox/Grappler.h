@@ -33,13 +33,13 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	TSubclassOf<AActor> grappleHeadClass;
 
-	AGrappleHead* hook;
-
-	void SetupLine() const { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndToComponent(hook->GetMesh()); }
+	AActor* hook;
+	
+	void SetupLine() const { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndTo(hook, ""); }
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Ability")
-	void Pull(const FVector& direction, const float speed) { if(IsValid(parentCore)) parentCore->Movement(direction, speed); }
+	void Pull(const FVector& direction, const float speed) { objMesh->AddForce(direction * speed * 1000); }
 
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	FVector GetSpawnLocation() const { return grappleSpawn->GetComponentLocation(); }

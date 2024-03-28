@@ -80,7 +80,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	// Add the things that are connected to the core/connector to the things to ignore
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
-		exclusions.Append(obj->GetAttachedObjActors(true));
+		exclusions.Append(obj->GetAttachedObjActors());
 		Print(FString::FromInt(exclusions.Num()), 3)
 	}
 }
@@ -128,9 +128,9 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 	if(!selectedObj->IsA<ACubeCore>()) return;
 
 	// Add the things that are connected to the core/connector to the things to ignore
-	const ACubeCore* obj = Cast<ACubeCore>(selectedObj);
+	ACubeCore* obj = Cast<ACubeCore>(selectedObj);
 
-	exclusions.Append(obj->GetAttachedObjActors(true));
+	exclusions.Append(obj->GetAttachedObjActors());
 	Print(FString::FromInt(exclusions.Num()), 3)
 }
 
