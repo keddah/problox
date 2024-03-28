@@ -113,17 +113,20 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 	
 	if(APickupableMaster* hitObj = Cast<APickupableMaster>(hitActor))
 	{
+		selectedObj = hitObj->GetParent();
+		
 		// Prevent the core from being picked up if it's out of range
-		if(const ACubeCore* objCore = Cast<ACubeCore>(hitActor))
+		if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
 		{
 			if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
 			{
 				holding = false;
+				selectedObj = 0;
 				return;
 			}
 		}
-		
-		selectedObj = hitObj->GetParent();
+
+		if(!IsValid(selectedObj)) return;
 
 		selectedObj->RemoveVelocity();
 		selectedObj->SetGroupSelected(true);
