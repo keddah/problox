@@ -1733,3 +1733,24 @@ Script Stack (0 frames) :
 [2024.03.28-15.09.04:051][ 68]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
 [2024.03.28-15.09.04:063][ 68]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
 [2024.03.28-15.09.04:105][ 69]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2024.03.28-15.11.04:970][446]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.28-15.11.06:855][620]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Wedge_B.Shape_Wedge_B
+[2024.03.28-15.11.06:855][620]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Wedge_B.Shape_Wedge_B
+[2024.03.28-15.11.06:856][620]LogActorFactory: Actor Factory spawned StaticMesh /Game/StarterContent/Shapes/Shape_Wedge_B.Shape_Wedge_B as actor: StaticMeshActor /Game/Sandbox.Sandbox:PersistentLevel.StaticMeshActor_1
+[2024.03.28-15.11.07:461][688]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Wedge_B.Shape_Wedge_B
+[2024.03.28-15.11.07:461][688]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Wedge_B.Shape_Wedge_B
+[2024.03.28-15.11.07:462][688]LogActorFactory: Actor Factory spawned StaticMesh /Game/StarterContent/Shapes/Shape_Wedge_B.Shape_Wedge_B as actor: StaticMeshActor /Game/Sandbox.Sandbox:PersistentLevel.StaticMeshActor_3
+[2024.03.28-15.11.54:342][570]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/SimplePivotPainterExample.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/SimplePivotPainterExample.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.03.28-15.12.21:189][541]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.03.28-15.12.21:192][541]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Sandbox" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2024.03.28-15.12.21:198][541]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.005848 seconds
+[2024.03.28-15.12.21:256][541]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Sandbox_Auto1
+[2024.03.28-15.12.21:257][541]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox_Auto1F75CDAAA45C899E4FC426DAEBADF098D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto1.umap'
+[2024.03.28-15.12.21:258][541]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Sandbox_Auto1.umap is in the /Temp path, will not scan.
+[2024.03.28-15.12.21:259][541]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Sandbox' took 0.080
+[2024.03.28-15.12.21:259][541]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.080
+[2024.03.28-15.12.28:955][382]Cmd: DELETE
+[2024.03.28-15.12.28:956][382]Cmd: ACTOR DELETE
+[2024.03.28-15.12.28:969][382]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.03.28-15.12.28:980][382]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.03.28-15.12.28:981][382]LogEditorActor: Deleted 1 Actors (0.019 secs)

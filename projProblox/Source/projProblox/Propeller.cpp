@@ -16,7 +16,6 @@ APropeller::APropeller()
 {
 	windBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Wind Collider"));
 	windBox->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
-
 }
 
 void APropeller::SetSelected(const bool value)
@@ -32,11 +31,8 @@ void APropeller::SetSelected(const bool value)
 	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 	
-	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
-	
 	// Rotate to match the socket rotation
-	SetActorRotation(coreMesh->GetSocketRotation(attachedSocket));
+	SetActorRotation(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset();
