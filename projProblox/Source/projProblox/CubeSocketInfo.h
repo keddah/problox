@@ -23,10 +23,10 @@ protected:
 	TArray<APickupableMaster*> socketObjects { 0, 0, 0, 0, 0, 0 };
 	
 public:
-	bool ObjectInSocket(const FName& socket) const;
-	bool ObjectInSocket(int index) const;
-	FName GetOppositeSocket(const FName& origin) const;
-	FName GetOppositeSocket(int index) const;
+	virtual bool ObjectInSocket(const FName& socket) const;
+	virtual bool ObjectInSocket(int index) const;
+	virtual FName GetOppositeSocket(const FName& origin) const;
+	virtual FName GetOppositeSocket(int index) const;
 	
 	// Returns an array of all of the available sockets.
 	TArray<FName> GetFreeSockets() const;

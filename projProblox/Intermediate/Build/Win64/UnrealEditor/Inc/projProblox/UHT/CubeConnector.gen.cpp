@@ -39,7 +39,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeConnector() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeConnector_Statics::Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * //\n */" },
 #endif
 		{ "IncludePath", "CubeConnector.h" },
 		{ "ModuleRelativePath", "CubeConnector.h" },
@@ -82,9 +82,9 @@ void EmptyLinkFunctionForGeneratedCodeCubeConnector() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeConnector, ACubeConnector::StaticClass, TEXT("ACubeConnector"), &Z_Registration_Info_UClass_ACubeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeConnector), 2005940204U) },
+		{ Z_Construct_UClass_ACubeConnector, ACubeConnector::StaticClass, TEXT("ACubeConnector"), &Z_Registration_Info_UClass_ACubeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeConnector), 1298654639U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_3725628899(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_4206483614(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeConnector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

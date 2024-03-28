@@ -117,6 +117,18 @@
     <ClInclude Include="..\..\Source\projProblox\Treads.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\WedgeConnector.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\WedgeConnector.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\WedgeSocketInfo.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\WedgeSocketInfo.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Wheel.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>

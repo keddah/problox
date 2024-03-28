@@ -46,8 +46,8 @@ void ACubeCore::BeginPlay()
 	// Create a socket info for each cube (also inherited to connectors)
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
-	
 	AdjustRange();
+	
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 }
 

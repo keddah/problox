@@ -2,6 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.projProblox.cpp.obj": [
+			"Collector.gen.cpp.obj",
+			"CubeCore.gen.cpp.obj",
 			"CubeSocketInfo.gen.cpp.obj",
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
@@ -13,11 +15,11 @@
 			"Thing.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
-			"CubeConnector.cpp.obj",
-			"CubeSocketInfo.cpp.obj",
+			"Collector.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
+			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
@@ -25,15 +27,15 @@
 			"Thing.cpp.obj",
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
-			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
-			"CubeCore.gen.cpp.obj",
-			"MyActor.gen.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
+			"WedgeConnector.gen.cpp.obj",
+			"WedgeSocketInfo.gen.cpp.obj",
+			"CubeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
-			"PickupableMaster.cpp.obj",
-			"Collector.cpp.obj",
-			"MyActor.cpp.obj"
+			"CubeSocketInfo.cpp.obj",
+			"WedgeConnector.cpp.obj",
+			"WedgeSocketInfo.cpp.obj"
 		]
 	}
 }

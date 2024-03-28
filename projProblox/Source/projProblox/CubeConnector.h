@@ -7,7 +7,7 @@
 #include "CubeConnector.generated.h"
 
 /**
- * 
+ * //
  */
 UCLASS()
 class PROJPROBLOX_API ACubeConnector : public ACubeCore
@@ -22,6 +22,13 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void Detach() override;
+	virtual void Placement() override;
+
+	// The socket that the placement ray from this object is firing from
+	FName raySocket;
+	
+	FName tempSocket;
 
 public:
 	virtual void Tick(float DeltaSeconds) override;
@@ -30,9 +37,6 @@ public:
 	virtual void SetAbilityActive(bool value) override;
 
 private:
-	virtual void Placement() override;
-	virtual void Detach() override;
 	virtual bool SetGroupSelected(const bool value) override;
 	
-	FName raySocket;
 };

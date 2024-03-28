@@ -113,14 +113,14 @@ protected:
 
 		return rounded;
 	}
-	static FRotator RoundRotation(const FRotator& rotation, const FRotator& rounder)
+	static FRotator RoundRotation(const FRotator& rotation, const float rounder)
 	{
 		// Quantize each component of the Rotator using Frac and Floor
 		FRotator rounded;
 		
-		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / rounder.Pitch) * rounder.Pitch;
-		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / rounder.Yaw) * rounder.Yaw;
-		rounded.Roll = FMath::FloorToFloat(rotation.Roll / rounder.Roll) * rounder.Roll;
+		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / rounder) * rounder;
+		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / rounder) * rounder;
+		rounded.Roll = FMath::FloorToFloat(rotation.Roll / rounder) * rounder;
 
 		return rounded;
 	}

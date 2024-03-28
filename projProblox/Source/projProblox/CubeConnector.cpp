@@ -3,11 +3,11 @@
 
 #include "CubeConnector.h"
 #include "Wheel.h"
-#include "Engine/StaticMeshSocket.h"
 
 
 ACubeConnector::ACubeConnector()
 {
+	// Disable anything to do with Thing collection
 	thingCollector->SetGenerateOverlapEvents(false);
 	thingCollector->SetBoxExtent({});
 	thingCollector->SetCollisionEnabled(ECollisionEnabled::NoCollision);
@@ -52,48 +52,14 @@ void ACubeConnector::Placement()
 	collisionParams.bDebugQuery = true;
 
 	// Change the direction to each face of the cube
-	for(int i = 0; i < 6; i++)
+	for(int i = 0; i < socketInfo->GetSockets().Num(); i++)
 	{
-		// The indices have to match up with the socket names in the CubeSocketInfo dataAsset
-		switch (i)
-		{
-			//front
-			case 0:
-				placeDir = {1, 0, 0};
-				break;
-
-			//back
-			case 1:
-				placeDir = {-1, 0, 0};
-				break;
-
-			//right
-			case 2:
-				placeDir = {0, 1, 0};
-				break;
-
-			//left
-			case 3:
-				placeDir = {0, -1, 0};
-				break;
-
-			//up
-			case 4:
-				placeDir = {0, 0, 1};
-				break;
-
-			//down
-			case 5:
-				placeDir = {0, 0, -1};
-				break;
-		}
-
 		// Don't do anything if there's already something in the current direction slot.
 		if(socketInfo->ObjectInSocket(i)) continue;
 
 		FHitResult hit;
-		const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
-		const FVector start = GetActorLocation();
+		const FVector direction = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(socketInfo->GetSockets()[i]));
+		const FVector start = objMesh->GetSocketLocation(socketInfo->GetSockets()[i]);
 
 		// Debug Draw
 		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .5f);	
@@ -104,7 +70,7 @@ void ACubeConnector::Placement()
 		{
 			hitObj = 0;
 			parentCore = 0;
-			continue;;
+			continue;
 		}
 
 		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .5f);
@@ -128,10 +94,12 @@ void ACubeConnector::Placement()
 		if(hitObj->IsChildOf(this)) continue;
 		
 		float shortestDistance = 999999;
-		
+
 		// Attempt to cast to the cubecore
 		if(hitObj->IsA<ACubeCore>())
 		{
+			raySocket = socketInfo->GetSockets()[i];
+
 			// All the previous checks ensure that the cast is valid
 			parentCore = Cast<ACubeCore>(hitObj);
 			const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
@@ -154,7 +122,7 @@ void ACubeConnector::Placement()
 				}
 			}
 
-			raySocket = closestSocket;
+			tempSocket = closestSocket;
 			hitObj = nullptr;
 			break;
 		}
@@ -174,7 +142,7 @@ void ACubeConnector::Placement()
 			}
 		}
 
-		if(closestSocket != NAME_None) raySocket = closestSocket;
+		if(closestSocket != NAME_None) tempSocket = closestSocket;
 		parentCore = nullptr;
 		hitObj->SetCore(this);
 		break;
@@ -199,13 +167,18 @@ void ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
 
+	const AActor* self = this;
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
 	// Detach from its components if selected
 	if(selected)
 	{
 		canPlace = true;
 		Detach();
+
 		
-		for(const auto& obj : socketInfo->GetAttachments())
+		for(const auto& obj : children)
 		{
 			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 		}
@@ -213,7 +186,7 @@ void ACubeConnector::SetSelected(const bool value)
 	}
 
 	// When unselected....
-	for(const auto& obj : socketInfo->GetAttachments())
+	for(const auto& obj : children)
 	{
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
 	}
@@ -221,14 +194,15 @@ void ACubeConnector::SetSelected(const bool value)
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(parentCore)) return;
 
+	//////// ROTATION stuff /////////
 	const FRotator actualRot = GetActorRotation();
-	const FRotator socketRot = parentCore->GetMesh()->GetSocketRotation(raySocket);
+	const FRotator socketRot = parentCore->GetMesh()->GetSocketRotation(tempSocket);
 	FRotator rot = RoundRotation(actualRot);
 
 	SetActorRotation({0,0,0});
 	
 	// Attach self to the core
-	attachedSocket = raySocket;
+	attachedSocket = tempSocket;
 	AttachToActor(parentCore, attachRules, attachedSocket);
 
 	// IF THE PITCH IS CHANGED IT MESSES UP
@@ -258,7 +232,7 @@ void ACubeConnector::SetSelected(const bool value)
 	Print("final Rot: " + FString::SanitizeFloat(rot.Roll) + ", " + FString::SanitizeFloat(rot.Pitch) + ", " + FString::SanitizeFloat(rot.Yaw), 10)
 
 	// If it's the actual core use a smaller offset
-	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50; 
+	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50;
 	ApplyOffset();
 	
 	parentCore->AddAttachment(this, attachedSocket);

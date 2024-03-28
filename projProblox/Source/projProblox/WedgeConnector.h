@@ -1,0 +1,26 @@
+// Created by Dean Atkinson-Walker 2024
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "CubeConnector.h"
+#include "WedgeConnector.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
+{
+	GENERATED_BODY()
+	AWedgeConnector();
+
+	
+public:
+	virtual void SetSelected(const bool value) override;
+	virtual void SetAbilityActive(bool value) override;
+	virtual void Tick(float DeltaSeconds) override;
+protected:
+	virtual void BeginPlay() override;
+
+};
