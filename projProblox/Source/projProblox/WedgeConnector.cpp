@@ -72,6 +72,8 @@ void AWedgeConnector::SetSelected(const bool value)
 	AddActorLocalRotation(lookRot);
 	///////////////////////////////////////////////////////////////////////
 
+	const FRotator difference = (socketTransform.GetRotation() * FQuat(GetActorRotation()).Inverse()).Rotator();
+	AddActorWorldRotation(difference);
 
 	// Attach the mesh back to its parent component to make sure it stays in place
 	AttachToActor(parentCore, attachRules, attachedSocket);
