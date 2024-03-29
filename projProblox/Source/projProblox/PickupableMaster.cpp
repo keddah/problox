@@ -249,9 +249,10 @@ void APickupableMaster::RotateHori(const float axis)
 	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 }
 
-void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
+void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
 {
-	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
+	const float angle = quarter? 45 : 90;
+	const float turn = keypress == "Q" || keypress == "R"? -angle : angle;
 		
 	if(hori)
 	{

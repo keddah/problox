@@ -56,17 +56,25 @@ void AWedgeConnector::SetSelected(const bool value)
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(parentCore)) return;
 
-	const FRotator actualRot = GetActorRotation();
-
-	// Almost works...
 	const bool isDiag = raySocket == "DIAG";
-	FRotator roundRot = RoundRotation(actualRot, isDiag? -45.0f : -90);
-
-	// Attach self to the core
 	attachedSocket = tempSocket;
-	AttachToActor(parentCore, attachRules, attachedSocket);
 
-	SetActorRelativeRotation({roundRot.Pitch, roundRot.Yaw, 0});
+	
+	//////////////////////////// THE BLUEPRINT ////////////////////////////
+	/// just need to align with the socket rotation.........
+	const FTransform socketTransform = parentCore->GetMesh()->GetSocketTransform(attachedSocket);
+	const FTransform rayTransform = objMesh->GetSocketTransform(raySocket);	
+
+	// Calculate the rotation needed to align the source socket with the target socket
+	const FQuat lookRot = FQuat::FindBetween(rayTransform.GetLocation() - GetActorLocation(), socketTransform.GetLocation() - GetActorLocation());
+
+	// Apply the rotation to the mesh without affecting its original rotation
+	AddActorLocalRotation(lookRot);
+	///////////////////////////////////////////////////////////////////////
+
+
+	// Attach the mesh back to its parent component to make sure it stays in place
+	AttachToActor(parentCore, attachRules, attachedSocket);
 	
 	// If it's the actual core use a smaller offset
 	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50;

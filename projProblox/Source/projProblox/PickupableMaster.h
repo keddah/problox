@@ -107,9 +107,9 @@ protected:
 		const float rounder = negate? -90 : 90;
 		
 		// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
-		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / rounder) * rounder;
-		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / rounder) * rounder;
-		rounded.Roll = FMath::FloorToFloat(rotation.Roll / rounder) * rounder;
+		rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
+		rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
+		rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
 
 		return rounded;
 	}
@@ -118,9 +118,9 @@ protected:
 		// Quantize each component of the Rotator using Frac and Floor
 		FRotator rounded;
 		
-		rounded.Pitch = FMath::FloorToFloat(rotation.Pitch / rounder) * rounder;
-		rounded.Yaw = FMath::FloorToFloat(rotation.Yaw / rounder) * rounder;
-		rounded.Roll = FMath::FloorToFloat(rotation.Roll / rounder) * rounder;
+		rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
+		rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
+		rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
 
 		return rounded;
 	}
@@ -146,7 +146,7 @@ public:
 	void RotateHori(float axis);
 	
 	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void SnapRotateMesh(bool hori, FString keypress);
+	void SnapRotateMesh(bool hori, FString keypress, bool quarter = false);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
