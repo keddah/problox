@@ -70,36 +70,25 @@ void AWedgeConnector::SetSelected(const bool value)
 	/// just need to align with the socket rotation.........
 	/// The front,back,left,right sides of the cube attach properly when using the "BACK" and "DOWN" raySockets of the wedge.
 	/// NONE OF THE DIAGNAL STUFF WORKS ... THE TOP AND BOTTOM FACES OF THE CUBE DON'T WORK PROPERLY.
-
-	// Calculate the rotation based on the alignment of the wedge with the cube's faces
+	/// Works almost perfectly. Just the down and back faces don't round properly (it's aligned but doesn't select the right direction correctly)... 
+	
 	FRotator alignedRotation = FRotator::ZeroRotator;
 
 	const FRotator currentRot = GetActorRotation();
 	const FRotator roundRot = RoundRotation(currentRot);
+
+	// Has to be done manually. there's no other way0_0
+	if (raySocket == "DIAG") alignedRotation = FRotator(135.0f, 0, 0); 
+	else if (raySocket == "DOWN") alignedRotation = FRotator(180.0f, 180.0f, 0); 
+	else if (raySocket == "BACK") alignedRotation = FRotator(0.0f, 0, 0); 
 	
-	if (raySocket == "DIAG") {
-		// Align with the hypotenuse face
-		// Calculate the rotation to align with the hypotenuse face
-		// Assuming the wedge's local X-axis aligns with the edge to be aligned with the hypotenuse
-		alignedRotation = FRotator(135.0f, 0, 0); // Rotate 45 degrees around Z-axis
-	} else if (raySocket == "DOWN") {
-		// Align with the opposite face
-		alignedRotation = FRotator(180.0f, 180.0f, 0); // Rotate 180 degrees around X-axis
-	} else if (raySocket == "BACK") {
-		// Align with the adjacent face
-		// Assuming the wedge's local X-axis aligns with the edge to be aligned with the adjacent face
-		alignedRotation = FRotator(0.0f, 0, 0); // Rotate 90 degrees around Y-axis
-	} else {
-		// Handle other cases if needed
-	}
-//
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
+	
 	// Apply the combined rotation to the actor (assuming socket is attached)
 	SetActorRelativeRotation(alignedRotation);
 
 	AddActorWorldRotation({0, roundRot.Yaw, 0});
-//
 	///////////////////////////////////////////////////////////////////////
 
 	// If it's the actual core use a smaller offset
