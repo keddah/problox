@@ -195,45 +195,39 @@ void ACubeConnector::SetSelected(const bool value)
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(parentCore)) return;
 
-	//////// ROTATION stuff /////////
-	const FRotator actualRot = GetActorRotation();
-	const FRotator socketRot = parentCore->GetMesh()->GetSocketRotation(tempSocket);
-	FRotator rot = RoundRotation(actualRot);
-
-	SetActorRotation({0,0,0});
-	
-	// Attach self to the core
 	attachedSocket = tempSocket;
+	//////// ROTATION stuff /////////
+	
+	FRotator alignedRotation = FRotator::ZeroRotator;
+
+	if (raySocket == "FRONT" || raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
+	else if (raySocket == "LEFT") alignedRotation = FRotator(0, -90, 0);
+	else if (raySocket == "RIGHT") alignedRotation = FRotator(0, 90, 0);
+	else if (raySocket == "UP") alignedRotation = FRotator(-90, 180, 0);
+	else if (raySocket == "DOWN") alignedRotation = FRotator(90, 180, 0);
+
+	// Fixes the rotation depending on the orientation of the cube
+	if(abs(parentCore->GetActorUpVector().Z) < .5f)
+	{
+		if(attachedSocket == "FRONT" || attachedSocket == "BACK") alignedRotation += FRotator(0,0,180);
+		else if (attachedSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
+		else if (attachedSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
+		else if (attachedSocket == "UP" || "DOWN") alignedRotation += FRotator::ZeroRotator;
+	}
+	
+	// Get the current rotation of the actor and round it
+	const FRotator currentRot = {0, appliedYaw, 0};
+	const FRotator roundRot = RoundRotation(currentRot);
+	
+	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
 
-	// IF THE PITCH IS CHANGED IT MESSES UP
-	const FVector upVec = UKismetMathLibrary::GetUpVector(socketRot);
-
-	// Print(abs(upVec.Z) > .4f? "using Yaw" : "using Roll")
-	Print("added rot: " + FString::SanitizeFloat(rot.Roll) + ", " + FString::SanitizeFloat(rot.Pitch) + ", " + FString::SanitizeFloat(rot.Yaw), 3)
-
+	// The rotation of the socket
+	SetActorRelativeRotation(alignedRotation);
 	
-	// = On the sides of the cube (not above/below)
-	if(abs(upVec.Z) > .8f)
-	{
-		SetActorRelativeRotation({0, rot.Yaw, 0});
-		Print("rotated yaw", 3)
-	}
-	else
-	{
-		SetActorRelativeRotation({0,0,0});
-
-		const FRotator worldRot = GetActorRotation();
-		SetActorRelativeRotation(RoundRotation(FRotator(actualRot - worldRot)));
-		
-		Print("rotated roll", 3)
-	}
-	// Reset once the object has been dropped and rotation has been applied
-	appliedYaw = 0;
+	// The rotation the cube had before attaching...
+	AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
 	
-	rot = GetActorRotation();
-	Print("final Rot: " + FString::SanitizeFloat(rot.Roll) + ", " + FString::SanitizeFloat(rot.Pitch) + ", " + FString::SanitizeFloat(rot.Yaw), 10)
-
 	// If it's the actual core use a smaller offset
 	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50;
 	ApplyOffset();

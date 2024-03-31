@@ -21,8 +21,11 @@ ACubeCore::ACubeCore()
 }
 
 
-void ACubeCore::SetCanPickup(const bool can)
+void ACubeCore::SetCanPickup(bool can)
 {
+	// always allow if the cube isn't selected..
+	if(!selected && !can) can = true;
+	
 	// Only broadcast when there's a change
 	const bool change = can != canPickup;
 	Super::SetCanPickup(can);
@@ -148,8 +151,6 @@ void ACubeCore::SetSelected(const bool value)
 		canPlace = true;
 		return;
 	}
-	// Reset once the object has been dropped 
-	appliedYaw = 0;
 	
 	// Make the wheel go back to normal when it's unselected.
 	for(const auto& obj : socketInfo->GetAttachments())

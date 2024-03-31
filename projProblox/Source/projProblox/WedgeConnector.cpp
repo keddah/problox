@@ -71,54 +71,45 @@ void AWedgeConnector::SetSelected(const bool value)
 
 	
 	//////////////////////////// THE BLUEPRINT ////////////////////////////
-	/// just need to align with the socket rotation.........
-	/// The front,back,left,right sides of the cube attach properly when using the "BACK" and "DOWN" raySockets of the wedge.
-	/// NONE OF THE DIAGNAL STUFF WORKS ... THE TOP AND BOTTOM FACES OF THE CUBE DON'T WORK PROPERLY.
-	/// NEEDS TO CONSIDER THAT THE CUBE CAN BE A DIFFERENT ORIENTATION
-	/// NEED TO CLAMP THE ROTATION SO THAT IT CAN'T DO CERTAIN ROTS
 	
 	// Define the initial rotation based on the raySocket
 	FRotator alignedRotation = FRotator::ZeroRotator;
 
-	if (raySocket == "DIAG") 
-		alignedRotation = FRotator(135.0f, 0.0f, 0.0f);
-	 else if (raySocket == "DOWN") 
-		alignedRotation = FRotator(180.0f, 180.0f, 0.0f);
-	 else if (raySocket == "BACK") 
-		alignedRotation = FRotator::ZeroRotator;
+	if (raySocket == "DIAG") alignedRotation = FRotator(135.0f, 0.0f, 0.0f);
+	else if (raySocket == "DOWN") alignedRotation = FRotator(180.0f, 180.0f, 0.0f);
+	else if (raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
+
+	// Fixes the rotation depending on the orientation of the cube
+	if(!isDiag && abs(parentCore->GetActorUpVector().Z) < .5f)
+	{
+		// If the cube is not oriented correctly, adjust the rotation by finding the rotation difference between the cube's forward direction
+		// and the global forward direction.
+		// Cancels out the current orientation of the cube by getting the delta rotation of its original rot to its current
+		if(attachedSocket == "FRONT" || attachedSocket == "BACK") alignedRotation += FRotator(0,0,180);
+		else if (attachedSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
+		else if (attachedSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
+		else if (attachedSocket == "UP" || "DOWN") alignedRotation += FRotator::ZeroRotator;
+	}
 	
 	// Get the current rotation of the actor and round it
 	const FRotator currentRot = {0, appliedYaw, 0};
 	const FRotator roundRot = RoundRotation(currentRot);
 	
-	// Reset once the object has been dropped 
-	// appliedYaw = 0;
-	// Print("current: " + FString::SanitizeFloat(currentRot.Yaw), 3)
-	// Print("rounded: " + FString::SanitizeFloat(roundRot.Yaw), 3)
-	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
-
-	// If the cube is not oriented correctly, adjust the rotation by finding the rotation difference between the cube's forward direction
-	// and the global forward direction.
-	// Cancels out the current orientation of the cube by getting the delta rotation of its original rot to its current
-	// const FRotator relativeRot = (parentCore->GetActorQuat() * FQuat().Inverse()).Rotator();
 
 	// Doesn't work properly.. but close enough
 	const FRotator relativeRot = FRotator::ZeroRotator;
-
 
 	// Apply the aligned rotation to the actor (assuming socket is attached)
 	SetActorRelativeRotation(relativeRot + alignedRotation);
 
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	const bool isCube = parentMesh->GetAllSocketNames().Num() > 3;
-	const bool canDiagRot = isCube && abs(parentMesh->GetSocketRotation(attachedSocket).Vector().Z) > .8f;
+	const bool flatFace = attachedSocket != "DIAG";
+	const bool canDiagRot = flatFace && abs(parentMesh->GetSocketRotation(attachedSocket).Vector().Z) > .8f;
 	
 	// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
 	if(!isDiag || canDiagRot) AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
 
-	// If is hyp... only allow this to be done on the top/bottom faces of the thing
-	
 	///////////////////////////////////////////////////////////////////////
 
 	// If it's the actual core use a smaller offset

@@ -131,8 +131,6 @@ protected:
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 
-	// void RecalulatePhysics();
-	
 	FRotator defaultRot{};
 	
 public:	
