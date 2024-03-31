@@ -33,7 +33,7 @@ protected:
 	float propelForce = 50;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "The amount of force to apply to things that are inside the windCollider while active"))
-	float pushForce = 5;
+	float pushForce = 10;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "The speed the propellers rotate (purely visual)."))
 	float spinSpeed = 22;
