@@ -84,7 +84,7 @@ protected:
 
 	const FAttachmentTransformRules attachRules {EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 
-	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The positional offset for when objects attach to cores."))
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The positional offset for when objects attach to cores."))
 	float attachOffset;
 
 	UPROPERTY(BlueprintReadOnly)
@@ -154,7 +154,7 @@ public:
 	void RemoveVelocity() const;
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
-	void ApplyOffset();
+	virtual void ApplyOffset(ACubeCore* core);
 	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)

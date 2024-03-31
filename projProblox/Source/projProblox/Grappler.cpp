@@ -34,7 +34,7 @@ void AGrappler::SetSelected(const bool value)
 	if(attachedSocket == NAME_None) return;
 
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	ApplyOffset();
+	ApplyOffset(parentCore);
 
 	// The only change from the inherited SetSelected func
 	AlignSocketRot(false);

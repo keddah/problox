@@ -20,6 +20,18 @@ AWedgeConnector::AWedgeConnector()
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+void AWedgeConnector::ApplyOffset(ACubeCore* core)
+{
+	// If it's the actual core use a smaller offset
+	if(!core) return;
+
+	const float distance = core->IsA<ACubeConnector>()? 50 : 25;
+	attachOffset = raySocket == "DIAG" ? distance * .1f : distance;
+
+	Print(FString::SanitizeFloat(attachOffset), 3)
+	SetActorRelativeLocation({attachOffset,0,0});
+}
+
 void AWedgeConnector::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
@@ -88,7 +100,8 @@ void AWedgeConnector::SetSelected(const bool value)
 		if(attachedSocket == "FRONT" || attachedSocket == "BACK") alignedRotation += FRotator(0,0,180);
 		else if (attachedSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
 		else if (attachedSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
-		else if (attachedSocket == "UP" || "DOWN") alignedRotation += FRotator::ZeroRotator;
+		else if (attachedSocket == "UP") alignedRotation += FRotator(0, 180,0);
+		else if(attachedSocket == "DOWN") alignedRotation += FRotator(0, 180, 0);
 	}
 	
 	// Get the current rotation of the actor and round it
@@ -112,12 +125,10 @@ void AWedgeConnector::SetSelected(const bool value)
 
 	///////////////////////////////////////////////////////////////////////
 
-	// If it's the actual core use a smaller offset
-	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50;
-	attachOffset *= isDiag? .1f : 1;
-	ApplyOffset();
+	ApplyOffset(parentCore);
 
 	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
 }
 
 void AWedgeConnector::SetAbilityActive(bool value)
@@ -128,7 +139,7 @@ void AWedgeConnector::SetAbilityActive(bool value)
 void AWedgeConnector::BeginPlay()
 {
 	placeRange = 100;
-	attachOffset = 50;
+	attachOffset = 5;
 
 	socketInfo = NewObject<UWedgeSocketInfo>();
 	AdjustRange();

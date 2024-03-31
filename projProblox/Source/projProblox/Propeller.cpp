@@ -35,7 +35,7 @@ void APropeller::SetSelected(const bool value)
 	SetActorRotation(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	ApplyOffset();
+	ApplyOffset(parentCore);
 	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;

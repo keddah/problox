@@ -66,56 +66,6 @@ void APickupableMaster::AlignSocketRot(const bool useDirection)
 	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
 }
 
-// void APickupableMaster::RecalulatePhysics()
-// {
-// 	TArray<APickupableMaster*> hierarchy = AllObjsInHierarchy();
-// 	APickupableMaster* centerObj = hierarchy[0];
-// 	bool foundCore = false;
-// 	
-// 	for(const auto& obj : hierarchy)
-// 	{
-// 		if(obj->IsA<ACubeCore>() && !obj->IsA<ACubeConnector>())
-// 		{
-// 			foundCore = true;
-// 			centerObj = obj;
-// 		}
-// 	}
-//
-// 	// Only if there isn't a core.
-// 	if(!foundCore)
-// 	{
-// 		FVector averagePos;
-//
-// 		// Get the center of all of the attached things
-// 		for(const auto& obj : hierarchy) averagePos += obj->GetActorLocation();
-// 		averagePos /= hierarchy.Num();
-//
-// 		
-// 		float closest = 9999;
-//
-// 		// Do it twice...
-// 		for(int i = 0; i < 2; i++)
-// 		{
-// 			for(const auto& obj : hierarchy)
-// 			{
-// 				const float distance = FVector::Distance(obj->GetActorLocation(), centerObj->GetActorLocation());
-//
-// 				if(distance < closest)
-// 				{
-// 					closest = distance;
-// 					centerObj = obj;
-// 				}
-// 			}
-// 		}
-// 	}
-//
-// 	// Set the center object as the new parent of everything?
-// 	for (auto& obj : hierarchy)
-// 	{
-// 		obj->AttachToActor(centerObj, attachRules);
-// 	}
-// }
-
 void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
@@ -205,11 +155,9 @@ void APickupableMaster::RemoveVelocity() const
 	objMesh->SetAllPhysicsAngularVelocityInRadians({});
 }
 
-void APickupableMaster::ApplyOffset()
+void APickupableMaster::ApplyOffset(ACubeCore* core)
 {
-	if(!IsValid(parentCore)) return;
-
-	SetActorRelativeLocation({attachOffset,0,0});
+	if(core) SetActorRelativeLocation({attachOffset,0,0});
 }
 
 void APickupableMaster::Detach()
@@ -288,16 +236,12 @@ void APickupableMaster::SetSelected(const bool value)
 		return;
 	}
 	
-	// Reset once the object has been dropped 
-	appliedYaw = 0;
-
 	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	ApplyOffset();
+	ApplyOffset(parentCore);
 
-	
 	AlignSocketRot();
 	
 	parentCore->AddAttachment(this, attachedSocket);

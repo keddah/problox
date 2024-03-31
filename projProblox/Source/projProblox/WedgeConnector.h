@@ -14,6 +14,7 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 {
 	GENERATED_BODY()
 	AWedgeConnector();
+	virtual void ApplyOffset(ACubeCore* core) override;
 	
 public:
 	virtual void SetSelected(const bool value) override;

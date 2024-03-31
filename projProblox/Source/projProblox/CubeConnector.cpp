@@ -17,10 +17,18 @@ ACubeConnector::ACubeConnector()
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+void ACubeConnector::ApplyOffset(ACubeCore* core)
+{
+	// If it's the actual core use a smaller offset
+	if(core) attachOffset = !core->IsA<ACubeConnector>()? 35 : 50;
+	
+	Super::ApplyOffset(core);
+}
+
 void ACubeConnector::BeginPlay()
 {
 	placeRange = 100;
-	attachOffset = 50;
+	attachOffset = 5;
 	
 	Super::BeginPlay();
 }
@@ -228,9 +236,7 @@ void ACubeConnector::SetSelected(const bool value)
 	// The rotation the cube had before attaching...
 	AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
 	
-	// If it's the actual core use a smaller offset
-	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50;
-	ApplyOffset();
+	ApplyOffset(parentCore);
 	
 	parentCore->AddAttachment(this, attachedSocket);
 }

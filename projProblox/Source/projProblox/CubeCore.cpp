@@ -23,14 +23,11 @@ ACubeCore::ACubeCore()
 
 void ACubeCore::SetCanPickup(bool can)
 {
-	// always allow if the cube isn't selected..
-	if(!selected && !can) can = true;
-	
 	// Only broadcast when there's a change
 	const bool change = can != canPickup;
 	Super::SetCanPickup(can);
 	
-	SetCanCollect(canPickup);
+	SetCanCollect(can || !selected);
 
 	if(!canPickup && change) onRangeExceeded.Broadcast();
 }
@@ -137,7 +134,7 @@ void ACubeCore::DetachAll(const bool push)
 void ACubeCore::SetSelected(const bool value)
 {
 	// Not allowed to drop the cube if unable to collect 
-	if(canCollect) selected = value;
+	if(canPickup) selected = value;
 	else selected = true;
 	
 	// Make the wheel ignore collisions and not ... fly away
@@ -175,7 +172,7 @@ void ACubeCore::SetSelected(const bool value)
 	if(!hitObj->IsA<AWheel>())
 	{
 		hitObj->AttachToActor(this, attachRules, attachedSocket);
-		hitObj->ApplyOffset();
+		hitObj->ApplyOffset(this);
 	}
 	else Cast<AWheel>(hitObj)->Attach(this);
 
@@ -304,7 +301,7 @@ void ACubeCore::RearrangeSockets()
 		AddAttachment(objects[i], oppSocket);
 
 		objects[i]->AttachToActor(this, attachRules, oppSocket);
-		objects[i]->ApplyOffset();
+		objects[i]->ApplyOffset(this);
 		objects[i]->SetAttachedSocket(oppSocket, false);
 	}
 

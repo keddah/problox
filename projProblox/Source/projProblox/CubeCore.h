@@ -31,6 +31,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
+
 	
 protected:
 	ACubeCore();
@@ -71,7 +72,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	ACollector* collector;
 	
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, meta = (ToolTip = "Whether or not 'Things' are allowed to be collected (pairs with canPickup)..."))
 	bool canCollect;
 	
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
