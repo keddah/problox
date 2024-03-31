@@ -25,13 +25,16 @@ void AWedgeConnector::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 
 	if(!selected) return;
-	const FRotator currentRot = GetActorRotation();
+
+	const FRotator currentRot = {0, appliedYaw, 0};
 	const FRotator roundRot = RoundRotation(currentRot);
+	// const FRotator currentRot = GetTransform().GetRotation().Rotator();
+	// const FRotator roundRot = RoundRotation(currentRot);
 
 	Print("current: " + FString::SanitizeFloat(currentRot.Yaw), 3)
 	Print("rounded: " + FString::SanitizeFloat(roundRot.Yaw), 3)
 }
-
+//
 void AWedgeConnector::SetSelected(const bool value)
 {
 	selected = value;
@@ -54,6 +57,7 @@ void AWedgeConnector::SetSelected(const bool value)
 	}
 
 	// When unselected....
+	
 	for(const auto& obj : children)
 	{
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
@@ -70,25 +74,51 @@ void AWedgeConnector::SetSelected(const bool value)
 	/// just need to align with the socket rotation.........
 	/// The front,back,left,right sides of the cube attach properly when using the "BACK" and "DOWN" raySockets of the wedge.
 	/// NONE OF THE DIAGNAL STUFF WORKS ... THE TOP AND BOTTOM FACES OF THE CUBE DON'T WORK PROPERLY.
-	/// Works almost perfectly. Just the down and back faces don't round properly (it's aligned but doesn't select the right direction correctly)... 
+	/// NEEDS TO CONSIDER THAT THE CUBE CAN BE A DIFFERENT ORIENTATION
+	/// NEED TO CLAMP THE ROTATION SO THAT IT CAN'T DO CERTAIN ROTS
 	
+	// Define the initial rotation based on the raySocket
 	FRotator alignedRotation = FRotator::ZeroRotator;
 
-	const FRotator currentRot = GetActorRotation();
-	const FRotator roundRot = RoundRotation(currentRot);
-
-	// Has to be done manually. there's no other way0_0
-	if (raySocket == "DIAG") alignedRotation = FRotator(135.0f, 0, 0); 
-	else if (raySocket == "DOWN") alignedRotation = FRotator(180.0f, 180.0f, 0); 
-	else if (raySocket == "BACK") alignedRotation = FRotator(0.0f, 0, 0); 
+	if (raySocket == "DIAG") 
+		alignedRotation = FRotator(135.0f, 0.0f, 0.0f);
+	 else if (raySocket == "DOWN") 
+		alignedRotation = FRotator(180.0f, 180.0f, 0.0f);
+	 else if (raySocket == "BACK") 
+		alignedRotation = FRotator::ZeroRotator;
 	
+	// Get the current rotation of the actor and round it
+	const FRotator currentRot = {0, appliedYaw, 0};
+	const FRotator roundRot = RoundRotation(currentRot);
+	
+	// Reset once the object has been dropped 
+	// appliedYaw = 0;
+	// Print("current: " + FString::SanitizeFloat(currentRot.Yaw), 3)
+	// Print("rounded: " + FString::SanitizeFloat(roundRot.Yaw), 3)
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	
-	// Apply the combined rotation to the actor (assuming socket is attached)
-	SetActorRelativeRotation(alignedRotation);
 
-	AddActorWorldRotation({0, roundRot.Yaw, 0});
+	// If the cube is not oriented correctly, adjust the rotation by finding the rotation difference between the cube's forward direction
+	// and the global forward direction.
+	// Cancels out the current orientation of the cube by getting the delta rotation of its original rot to its current
+	// const FRotator relativeRot = (parentCore->GetActorQuat() * FQuat().Inverse()).Rotator();
+
+	// Doesn't work properly.. but close enough
+	const FRotator relativeRot = FRotator::ZeroRotator;
+
+
+	// Apply the aligned rotation to the actor (assuming socket is attached)
+	SetActorRelativeRotation(relativeRot + alignedRotation);
+
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	const bool isCube = parentMesh->GetAllSocketNames().Num() > 3;
+	const bool canDiagRot = isCube && abs(parentMesh->GetSocketRotation(attachedSocket).Vector().Z) > .8f;
+	
+	// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
+	if(!isDiag || canDiagRot) AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
+
+	// If is hyp... only allow this to be done on the top/bottom faces of the thing
+	
 	///////////////////////////////////////////////////////////////////////
 
 	// If it's the actual core use a smaller offset

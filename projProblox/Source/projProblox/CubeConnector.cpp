@@ -186,6 +186,7 @@ void ACubeConnector::SetSelected(const bool value)
 	}
 
 	// When unselected....
+	
 	for(const auto& obj : children)
 	{
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
@@ -227,7 +228,9 @@ void ACubeConnector::SetSelected(const bool value)
 		
 		Print("rotated roll", 3)
 	}
-
+	// Reset once the object has been dropped and rotation has been applied
+	appliedYaw = 0;
+	
 	rot = GetActorRotation();
 	Print("final Rot: " + FString::SanitizeFloat(rot.Roll) + ", " + FString::SanitizeFloat(rot.Pitch) + ", " + FString::SanitizeFloat(rot.Yaw), 10)
 

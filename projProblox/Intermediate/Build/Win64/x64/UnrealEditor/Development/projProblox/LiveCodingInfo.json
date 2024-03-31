@@ -20,13 +20,10 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Collector.cpp.obj",
-			"CubeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
@@ -35,6 +32,9 @@
 			"Treads.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
+			"CubeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
+			"PickupableMaster.cpp.obj",
 			"WedgeConnector.cpp.obj"
 		]
 	}

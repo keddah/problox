@@ -148,7 +148,9 @@ void ACubeCore::SetSelected(const bool value)
 		canPlace = true;
 		return;
 	}
-
+	// Reset once the object has been dropped 
+	appliedYaw = 0;
+	
 	// Make the wheel go back to normal when it's unselected.
 	for(const auto& obj : socketInfo->GetAttachments())
 	{

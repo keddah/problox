@@ -33,9 +33,9 @@
 			"Propeller.cpp.obj",
 			"Thing.cpp.obj",
 			"Treads.cpp.obj",
-			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
-			"Wheel.cpp.obj"
+			"Wheel.cpp.obj",
+			"WedgeConnector.cpp.obj"
 		]
 	}
 }

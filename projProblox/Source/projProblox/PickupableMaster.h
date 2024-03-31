@@ -70,6 +70,9 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin vertically (On the global axis)."))
 	FVector vertAxis {0, 1,0};
 
+	// Used to properly denote the amount of horizontal rotation the player has applied whilst the object has been held.
+	float appliedYaw = 0;
+	
 	UPROPERTY(EditDefaultsOnly)
 	float ascensionSpeed = 2.5f;
 	
@@ -184,7 +187,6 @@ public:
 	APickupableMaster* GetParent();
 	bool IsChildOf(const APickupableMaster* parent);
 
-	
 	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")

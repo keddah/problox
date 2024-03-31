@@ -247,6 +247,11 @@ void APickupableMaster::RotateHori(const float axis)
 	if(horiAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
 	else if(horiAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
 	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
+	appliedYaw += axis * rotSpeed;
+	
+	// Wrap appliedYaw to -360 / 360
+	if (appliedYaw > 360) appliedYaw -= 720;
+	else if (appliedYaw < -360) appliedYaw += 720.0f;
 }
 
 void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
@@ -259,6 +264,11 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
 		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
 		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
+		appliedYaw += turn;
+		
+		// Wrap appliedYaw to -360 / 360
+		if (appliedYaw > 360) appliedYaw -= 720;
+		else if (appliedYaw < -360) appliedYaw += 720.0f;
 		return;
 	}
 
@@ -277,6 +287,9 @@ void APickupableMaster::SetSelected(const bool value)
 		Detach();
 		return;
 	}
+	
+	// Reset once the object has been dropped 
+	appliedYaw = 0;
 
 	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
@@ -284,6 +297,7 @@ void APickupableMaster::SetSelected(const bool value)
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset();
 
+	
 	AlignSocketRot();
 	
 	parentCore->AddAttachment(this, attachedSocket);
