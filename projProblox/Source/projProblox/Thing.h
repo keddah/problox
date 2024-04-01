@@ -30,9 +30,6 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly)
-    UStaticMeshComponent* head;
-	
-	UPROPERTY(EditDefaultsOnly)
     UStaticMeshComponent* body;
 
 public:	

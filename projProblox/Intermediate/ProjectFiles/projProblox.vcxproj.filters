@@ -111,6 +111,12 @@
     <ClInclude Include="..\..\Source\projProblox\Thing.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\ThingSpawner.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\ThingSpawner.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Treads.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>

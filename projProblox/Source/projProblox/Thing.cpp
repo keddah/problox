@@ -11,15 +11,8 @@ AThing::AThing()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	head = CreateDefaultSubobject<UStaticMeshComponent>("Top");
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
-
-	head->SetupAttachment(body);
-
 	body->SetRelativeScale3D({.7f, .7f,.7f});
-	head->SetRelativeScale3D({.5f,.5f,.5f});
-	head->AddRelativeLocation({0,0,80});
-	
 	body->SetSimulatePhysics(true);
 }
 

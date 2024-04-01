@@ -173,10 +173,6 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_head_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_head;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_body_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_body;
@@ -202,14 +198,6 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	};
 #endif
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThing_Statics::NewProp_head_MetaData[] = {
-		{ "Category", "Thing" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Thing.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThing_Statics::NewProp_head = { "head", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThing, head), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThing_Statics::NewProp_head_MetaData), Z_Construct_UClass_AThing_Statics::NewProp_head_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThing_Statics::NewProp_body_MetaData[] = {
 		{ "Category", "Thing" },
 		{ "EditInline", "true" },
@@ -218,7 +206,6 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThing_Statics::NewProp_body = { "body", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThing, body), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThing_Statics::NewProp_body_MetaData), Z_Construct_UClass_AThing_Statics::NewProp_body_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AThing_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThing_Statics::NewProp_head,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThing_Statics::NewProp_body,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AThing_Statics::StaticCppClassTypeInfo = {
@@ -259,9 +246,9 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AThing, AThing::StaticClass, TEXT("AThing"), &Z_Registration_Info_UClass_AThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThing), 2327346471U) },
+		{ Z_Construct_UClass_AThing, AThing::StaticClass, TEXT("AThing"), &Z_Registration_Info_UClass_AThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThing), 2299444770U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_499093942(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_3404112800(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
