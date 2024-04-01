@@ -27,6 +27,8 @@ protected:
 	int32 spawnAmounts = 10;
 
 public:	
-	void Spawn() const;
-	
+	void BeginSpawn() const;
+
+private:
+	void Spawn(UWorld* wrld, const FVector& spawn, const FActorSpawnParameters& params) const { wrld->SpawnActor<AThing>(thingClass, spawn, {}, params); }
 };

@@ -12,10 +12,7 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
-			"Thing.gen.cpp.obj",
-			"ThingSpawner.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
@@ -36,6 +33,9 @@
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
+			"Thing.gen.cpp.obj",
+			"ThingSpawner.gen.cpp.obj",
 			"Thing.cpp.obj",
 			"ThingSpawner.cpp.obj"
 		]

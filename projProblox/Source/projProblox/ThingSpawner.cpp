@@ -16,10 +16,10 @@ void AThingSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Spawn();
+	BeginSpawn();
 }
 
-void AThingSpawner::Spawn() const
+void AThingSpawner::BeginSpawn() const
 {
 	UWorld* wrld = GetWorld();
 	const FVector spawn = GetActorLocation();
@@ -28,5 +28,5 @@ void AThingSpawner::Spawn() const
 	params.bNoFail = true;
 
 	// Spawn a new Thing for however many spawnAmounts says to.
-	for(int i = 0; i < spawnAmounts; i++) wrld->SpawnActor<AThing>(thingClass, spawn, {}, params);
+	for(int i = 0; i < spawnAmounts; i++) Spawn(wrld, spawn, params);
 }
