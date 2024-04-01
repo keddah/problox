@@ -38,8 +38,8 @@ void AGrappler::SetSelected(const bool value)
 
 	// The only change from the inherited SetSelected func
 	AlignSocketRot(false);
-
-
+	ResetGhost();
+	
 	// The added part.....
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;

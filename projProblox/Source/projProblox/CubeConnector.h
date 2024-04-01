@@ -26,6 +26,7 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Detach() override;
 	virtual void Placement() override;
+	virtual void GhostPlacement() override;
 
 	// The socket that the placement ray from this object is firing from
 	FName raySocket;

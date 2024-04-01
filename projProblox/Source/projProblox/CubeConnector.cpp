@@ -78,6 +78,7 @@ void ACubeConnector::Placement()
 		{
 			hitObj = 0;
 			parentCore = 0;
+			ResetGhost();
 			continue;
 		}
 
@@ -94,6 +95,7 @@ void ACubeConnector::Placement()
 		{
 			parentCore = 0;
 			hitObj = 0;
+			ResetGhost();
 		}
 		if(!IsValid(hitObj)) continue;
 
@@ -155,6 +157,51 @@ void ACubeConnector::Placement()
 		hitObj->SetCore(this);
 		break;
 	}
+
+	GhostPlacement();
+}
+
+void ACubeConnector::GhostPlacement()
+{
+	if(ghostVisible || isAttached) return;
+	if(!parentCore) return;
+
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	
+	silhouette->SetHiddenInGame(false);
+
+	FRotator alignedRotation = FRotator::ZeroRotator;
+
+	if (raySocket == "FRONT" || raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
+	else if (raySocket == "LEFT") alignedRotation = FRotator(0, -90, 0);
+	else if (raySocket == "RIGHT") alignedRotation = FRotator(0, 90, 0);
+	else if (raySocket == "UP") alignedRotation = FRotator(-90, 180, 0);
+	else if (raySocket == "DOWN") alignedRotation = FRotator(90, 180, 0);
+
+	// Fixes the rotation depending on the orientation of the cube
+	if(abs(parentCore->GetActorUpVector().Z) < .5f)
+	{
+		if(tempSocket == "FRONT" || tempSocket == "BACK") alignedRotation += FRotator(0,0,180);
+		else if (tempSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
+		else if (tempSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
+		else if (tempSocket == "UP" || "DOWN") alignedRotation += FRotator::ZeroRotator;
+	}
+	
+	// Get the current rotation of the actor and round it
+	const FRotator currentRot = {0, appliedYaw, 0};
+	const FRotator roundRot = RoundRotation(currentRot);
+	
+	// Attach the actor to the parent with the target socket
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
+
+	// The rotation of the socket
+	silhouette->SetRelativeRotation(alignedRotation);
+	
+	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50;
+	silhouette->SetRelativeLocation({attachOffset,0,0});
+	
+	// The rotation the cube had before attaching...
+	silhouette->AddWorldRotation({0, roundRot.Yaw + RoundRotation(silhouette->GetComponentRotation()).Yaw, 0});
 }
 
 void ACubeConnector::Detach()
@@ -193,6 +240,8 @@ void ACubeConnector::SetSelected(const bool value)
 		return;
 	}
 
+	ResetGhost();
+	
 	// When unselected....
 	
 	for(const auto& obj : children)

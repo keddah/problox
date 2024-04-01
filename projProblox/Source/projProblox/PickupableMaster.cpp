@@ -10,7 +10,6 @@
 
 #include "PickupableMaster.h"
 
-#include "CubeConnector.h"
 #include "CubeCore.h"
 #include "Thing.h"
 
@@ -25,6 +24,13 @@ APickupableMaster::APickupableMaster()
 	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	objMesh->SetGenerateOverlapEvents(true);
 	// objMesh->SetNotifyRigidBodyCollision(true);
+	
+	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
+	silhouette->SetCollisionResponseToAllChannels(ECR_Ignore);
+	silhouette->SetStaticMesh(objMesh->GetStaticMesh());
+	silhouette->SetupAttachment(objMesh);
+	silhouette->SetRelativeLocation({50,0,0});
+	silhouette->SetHiddenInGame(true);
 	
 	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collision"));
 	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
@@ -70,7 +76,7 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 	if(!IsValid(parentCore)) return;
-	// if(!IsValid(OtherActor)) return;
+	// if(!IsValid(OtherActor)) return
 
 	// Successful cast???
 	if(Cast<AThing>(OtherActor)) parentCore->AddThing(OtherActor);
@@ -97,6 +103,7 @@ void APickupableMaster::Placement()
 	if(!hit.bBlockingHit)
 	{
 		parentCore = 0;
+		ResetGhost();
 		return;
 	}
 
@@ -104,7 +111,12 @@ void APickupableMaster::Placement()
 	
 	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
 	else parentCore = nullptr;
-	if(!IsValid(parentCore)) return;
+	
+	if(!IsValid(parentCore))
+	{
+		ResetGhost();
+		return;
+	}
 	
 	// objCore has been set to the hit actor.
 	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
@@ -132,9 +144,43 @@ void APickupableMaster::Placement()
 	}
 
 	if(closestSocket != NAME_None) attachedSocket = closestSocket;
+	GhostPlacement();
 
 	// FRotator rot = NormalizeRotation(GetActorRotation());
 	// Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
+}
+
+// Should only be called in the Placement Function at the very end....
+void APickupableMaster::GhostPlacement()
+{
+	if(ghostVisible || isAttached) return;
+	
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	
+	silhouette->SetHiddenInGame(false);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
+	
+	silhouette->SetRelativeLocation({attachOffset,0,0});
+
+	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	// Rotate to match the socket rotation
+	silhouette->SetWorldRotation(rot);
+
+	ghostVisible = true;
+}
+
+void APickupableMaster::ResetGhost()
+{
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetHiddenInGame(true);
+	ghostVisible = false;
 }
 
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -243,7 +289,8 @@ void APickupableMaster::SetSelected(const bool value)
 	ApplyOffset(parentCore);
 
 	AlignSocketRot();
-	
+	ResetGhost();
+
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }

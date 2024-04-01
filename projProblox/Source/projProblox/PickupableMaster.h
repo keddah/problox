@@ -45,6 +45,9 @@ protected:
 	UStaticMeshComponent* objMesh;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UStaticMeshComponent* silhouette;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UBoxComponent* collider;
 
 	UPROPERTY(BlueprintReadOnly)
@@ -83,6 +86,7 @@ protected:
 	ACubeCore* parentCore;
 
 	const FAttachmentTransformRules attachRules {EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
+	const FAttachmentTransformRules ghostRules {EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, false};
 
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The positional offset for when objects attach to cores."))
 	float attachOffset;
@@ -91,12 +95,18 @@ protected:
 	FName attachedSocket;
 	
 	bool isAttached;
-
+	bool ghostVisible;
+	
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	
 	/////////////////// FUNCTIONS ///////////////////
 	
 	virtual void Placement();
+
+	// Shows a preview of what the placed object would look like.
+	virtual void GhostPlacement();
+	void ResetGhost();
+	
 	virtual void Ability() {}
 
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);

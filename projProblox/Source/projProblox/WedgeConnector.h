@@ -19,6 +19,7 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 public:
 	virtual void SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
+	virtual void GhostPlacement() override;
 	virtual void Tick(float DeltaSeconds) override;
 	
 protected:

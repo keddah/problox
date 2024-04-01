@@ -36,6 +36,8 @@ void APropeller::SetSelected(const bool value)
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	ApplyOffset(parentCore);
+
+	ResetGhost();
 	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
