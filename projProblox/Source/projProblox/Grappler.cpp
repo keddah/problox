@@ -45,7 +45,7 @@ void AGrappler::SetSelected(const bool value)
 	isAttached = true;
 	
 	if(!value) return;
-//
+
 	if(!IsValid(hook)) return;
 	hook->Destroy();
 	grappleLine->CableLength = 0;
