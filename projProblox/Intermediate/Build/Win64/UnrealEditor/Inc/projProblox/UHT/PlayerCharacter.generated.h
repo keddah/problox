@@ -23,6 +23,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execDeselect); \
 	DECLARE_FUNCTION(execMoveSelection); \
 	DECLARE_FUNCTION(execGroupSelect); \
+	DECLARE_FUNCTION(execDetach); \
 	DECLARE_FUNCTION(execSelectObject);
 
 

@@ -86,6 +86,27 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	}
 }
 
+void APlayerCharacter::Detach(const FHitResult& hit)
+{
+	// if the cast is successful...
+	if(ACubeCore* hitCore = Cast<ACubeCore>(hit.GetActor()))
+	{
+		if(ACubeCore* parentCore = hitCore->GetCore())
+		{
+			parentCore->DetachAll(true);
+			return;
+		}
+		
+		hitCore->DetachAll(true);
+	}
+
+	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all.. 
+	else if(const APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor()))
+	{
+		if(ACubeCore* parentCore = obj->GetCore()) parentCore->DetachAll(true);
+	}
+}
+
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
 {
 	if(!holding)

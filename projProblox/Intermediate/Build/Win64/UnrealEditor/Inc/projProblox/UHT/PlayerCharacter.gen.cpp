@@ -43,6 +43,14 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->GroupSelect(Z_Param_Out_hit);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APlayerCharacter::execDetach)
+	{
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_hit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Detach(Z_Param_Out_hit);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APlayerCharacter::execSelectObject)
 	{
 		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_hit);
@@ -56,6 +64,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		UClass* Class = APlayerCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Deselect", &APlayerCharacter::execDeselect },
+			{ "Detach", &APlayerCharacter::execDetach },
 			{ "GroupSelect", &APlayerCharacter::execGroupSelect },
 			{ "MoveSelection", &APlayerCharacter::execMoveSelection },
 			{ "SelectObject", &APlayerCharacter::execSelectObject },
@@ -81,6 +90,48 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Deselect_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_APlayerCharacter_Detach_Statics
+	{
+		struct PlayerCharacter_eventDetach_Parms
+		{
+			FHitResult hit;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_hit_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_hit;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit = { "hit", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventDetach_Parms, hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit_MetaData), Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit_MetaData) }; // 1891709922
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Detach_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_Detach_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "Detach", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PlayerCharacter_eventDetach_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_Detach_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PlayerCharacter_eventDetach_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_Detach()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Detach_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -268,6 +319,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 959344020
+		{ &Z_Construct_UFunction_APlayerCharacter_Detach, "Detach" }, // 1541612637
 		{ &Z_Construct_UFunction_APlayerCharacter_GroupSelect, "GroupSelect" }, // 2137927514
 		{ &Z_Construct_UFunction_APlayerCharacter_MoveSelection, "MoveSelection" }, // 767853428
 		{ &Z_Construct_UFunction_APlayerCharacter_SelectObject, "SelectObject" }, // 1417367341
@@ -390,9 +442,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1235745169U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2047033209U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_1145766981(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_549941460(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
