@@ -40,6 +40,7 @@ public:
 
 	// Use these when an array of only valid elements is wanted
 	TArray<AActor*> GetAttachmentActors() const;
+	// Use these when an array of only valid elements is wanted
 	TArray<APickupableMaster*> GetAttachments() const;
 
 	

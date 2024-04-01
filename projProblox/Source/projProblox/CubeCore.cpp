@@ -56,7 +56,7 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	Super::RemoveAttachment(socket);
 
 	socketInfo->RemoveAttachment(socket);
-	GravitySelection();
+	objMesh->SetEnableGravity(true);
 }
 
 void ACubeCore::SetAbilityActive(bool value)
@@ -70,7 +70,7 @@ void ACubeCore::SetAbilityActive(bool value)
 
 void ACubeCore::DetachAll(const bool push)
 {
-	for(const auto& obj : socketInfo->GetObjectsArray())
+	for(const auto& obj : socketInfo->GetAttachments())
 	{
 		if(!IsValid(obj)) continue;
 		
@@ -80,7 +80,6 @@ void ACubeCore::DetachAll(const bool push)
 		if(!push) continue;
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
 		const float launchForce = obj->GetMass();
-		obj->GravitySelection();
 
 		constexpr float maxVelocity = 1000;
 		obj->AddVelocity(launchDir * std::max(launchForce, maxVelocity));

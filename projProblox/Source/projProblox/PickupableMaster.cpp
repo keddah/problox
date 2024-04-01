@@ -215,7 +215,9 @@ void APickupableMaster::Detach()
 	}
 
 	parentCore->RemoveAttachment(attachedSocket);
-	objMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	objMesh->SetEnableGravity(true);
+	
 	active = false;
 	isAttached = false;
 }
