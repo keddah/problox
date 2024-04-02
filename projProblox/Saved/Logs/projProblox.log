@@ -1383,3 +1383,99 @@ Script Stack (0 frames) :
 [2024.04.02-17.44.46:781][542]LogHttp: Warning: 00000BB335102800: libcurl info message cache 37 (Closing connection)
 [2024.04.02-17.44.46:781][542]LogHttp: Warning: 00000BB335102800: libcurl info message cache 38 (TLSv1.2 (OUT), TLS alert, close notify (256):)
 [2024.04.02-17.44.46:781][542]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BCF941469-4219-15AF-8483-FA83F400364F%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.3.2-29314046%2B%2B%2BUE5%2BRelease-5.3&UserID=73e65d0744ecfe954b536b91e68cb5ae%7C0e41d59f1717457abcdf6957edd36e2f%7C0afb52b3-15ce-4ab5-9c65-3e8a6ef8f089&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.04.02-17.57.58:241][ 89]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.02-17.57.58:241][ 89]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.04.02-17.57.58:241][ 89]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.04.02-17.57.58:244][ 89]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.02-17.57.58:247][ 89]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.02-17.57.58:249][ 89]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.02-17.57.58:251][ 89]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.02-17.57.58:251][ 89]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2024.04.02-17.57.58:252][ 89]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.04.02-17.57.58:253][ 89]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.04.02-17.57.58:257][ 89]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.02-17.57.58:265][ 89]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2024.04.02-17.57.58:325][ 92]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2024.04.02-17.58.02:712][527]LogSlate: Took 0.000112 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.04.02-17.58.04:482][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2024.04.02-17.58.04:527][701]LogBlueprint: Warning: USimpleConstructionScript::FixupRootNodeParentReferences() - Couldn't find native parent component 'Top' for 'eye_r' in BlueprintGeneratedClass 'BP_Thing_C' (it may have been removed)
+[2024.04.02-17.58.04:527][701]LogBlueprint: Warning: USimpleConstructionScript::FixupRootNodeParentReferences() - Couldn't find native parent component 'Top' for 'eye_l' in BlueprintGeneratedClass 'BP_Thing_C' (it may have been removed)
+[2024.04.02-17.58.04:528][701]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.02-17.58.04:531][701]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/LevelProto.LevelProto
+[2024.04.02-17.58.04:531][701]Cmd: MAP LOAD FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/LevelProto.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2024.04.02-17.58.04:531][701]LightingResults: New page: Lighting Build
+[2024.04.02-17.58.04:531][701]LoadErrors: New page: Loading map: LevelProto.umap
+[2024.04.02-17.58.04:584][701]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.04.02-17.58.04:584][701]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.02-17.58.04:584][701]MapCheck: New page: Map Check
+[2024.04.02-17.58.04:584][701]LightingResults: New page: Lighting Build
+[2024.04.02-17.58.04:587][701]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.02-17.58.04:591][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2024.04.02-17.58.04:594][701]LogWorld: UWorld::CleanupWorld for LevelProto, bSessionEnded=true, bCleanupResources=true
+[2024.04.02-17.58.04:594][701]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.02-17.58.04:598][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.02-17.58.04:602][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.04.02-17.58.04:611][701]LogAudio: Display: Audio Device (ID: 1) registered with world 'LevelProto'.
+[2024.04.02-17.58.04:611][701]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.02-17.58.04:611][701]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.02-17.58.04:612][701]LogAIModule: Creating AISystem for world LevelProto
+[2024.04.02-17.58.04:630][701]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2024.04.02-17.58.04:636][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.02-17.58.04:643][701]Cmd: MAP CHECKDEP NOCLEARLOG
+[2024.04.02-17.58.04:643][701]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.179ms to complete.
+[2024.04.02-17.58.07:963][ 41]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.02-17.58.07:989][ 41]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/LevelProto" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/LevelProto.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.04.02-17.58.08:018][ 41]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.04.02-17.58.08:024][ 41]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.004430 seconds
+[2024.04.02-17.58.08:044][ 41]LogSavePackage: Moving output files for package: /Game/Levels/LevelProto
+[2024.04.02-17.58.08:044][ 41]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/LevelProtoED1958724A753EF32C3860B226C13D7D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/LevelProto.umap'
+[2024.04.02-17.58.08:052][ 41]LogFileHelpers: Saving map 'LevelProto' took 0.064
+[2024.04.02-17.58.08:063][ 41]LogFileHelpers: InternalPromptForCheckoutAndSave took 100 ms
+[2024.04.02-17.58.08:065][ 41]AssetCheck: New page: Asset Save: LevelProto
+[2024.04.02-17.58.08:065][ 41]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/LevelProto.LevelProto
+[2024.04.02-18.01.52:933][ 49]LogHotReload: New module detected: UnrealEditor-projProblox-0001.dll
+[2024.04.02-18.01.53:408][ 59]LogHotReload: Starting Hot-Reload from IDE
+[2024.04.02-18.01.53:449][ 59]LogUObjectHash: Compacting FUObjectHashTables data took   0.24ms
+[2024.04.02-18.01.53:562][ 59]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2024.04.02-18.01.53:596][ 59]Display: HotReload took  0.2s.
+[2024.04.02-18.01.53:596][ 59]Display: Reload/Re-instancing Complete: 1 package changed, 19 classes unchanged, 27 functions remapped
+[2024.04.02-18.01.55:736][255]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.02-18.01.55:744][255]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.02-18.01.55:744][255]PIE: New page: PIE session: LevelProto (2 Apr 2024, 20:01:55)
+[2024.04.02-18.01.55:744][255]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_LevelProto
+[2024.04.02-18.01.55:749][255]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005068s)
+[2024.04.02-18.01.55:749][255]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/LevelProto.LevelProto to /Game/Levels/UEDPIE_0_LevelProto.LevelProto (0.005096s)
+[2024.04.02-18.01.55:752][255]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.04.02-18.01.55:752][255]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.02-18.01.55:752][255]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.02-18.01.55:753][255]LogAIModule: Creating AISystem for world LevelProto
+[2024.04.02-18.01.55:753][255]LogPlayLevel: PIE: World Init took: (0.000826s)
+[2024.04.02-18.01.55:753][255]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.04.02-18.01.55:753][255]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.02-18.01.55:753][255]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.02-18.01.55:753][255]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.02-18.01.55:753][255]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.02-18.01.55:753][255]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.04.02-18.01.55:753][255]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.02-18.01.55:753][255]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.04.02-18.01.55:753][255]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.02-18.01.55:754][255]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.02-18.01.55:754][255]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.02-18.01.55:754][255]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.02-18.01.55:755][255]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.02-18.01.55:766][255]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.04.02-18.01.55:766][255]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.02-18.01.55:766][255]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.02-18.01.55:766][255]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.02-18.01.55:767][255]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.04.02-18.01.55:767][255]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2024.04.02-18.01.55:768][255]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.04.02-18.01.55:768][255]LogInit: FAudioDevice initialized with ID 3.
+[2024.04.02-18.01.55:768][255]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.04.02-18.01.55:768][255]LogAudio: Display: Audio Device (ID: 3) registered with world 'LevelProto'.
+[2024.04.02-18.01.55:768][255]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2024.04.02-18.01.55:770][255]LogLoad: Game class is 'CustomGameMode_C'
+[2024.04.02-18.01.55:773][255]LogWorld: Bringing World /Game/Levels/UEDPIE_0_LevelProto.LevelProto up for play (max tick rate 0) at 2024.04.02-19.01.55
+[2024.04.02-18.01.55:773][255]LogWorld: Bringing up level for play took: 0.002355
+[2024.04.02-18.01.55:775][255]LogOnline: OSS: Created online subsystem instance for: :Context_2
+[2024.04.02-18.01.55:776][255]LogActor: Warning: BP_Thing_C /Game/Levels/UEDPIE_0_LevelProto.LevelProto:PersistentLevel.BP_Thing_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily

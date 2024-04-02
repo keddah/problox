@@ -35,13 +35,13 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"Propeller.cpp.obj",
-			"Thing.cpp.obj",
 			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
-			"Wheel.cpp.obj"
+			"Wheel.cpp.obj",
+			"Thing.cpp.obj"
 		]
 	}
 }
