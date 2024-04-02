@@ -1,5 +1,4 @@
 /I "."
-/I "C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Private"
 /I "..\Plugins\Runtime\CableComponent\Intermediate\Build\Win64\UnrealEditor\Inc\CableComponent\UHT"
 /I "..\Plugins\Runtime\CableComponent\Source\CableComponent\Classes"
 /I "Runtime\Core\Public"
@@ -261,7 +260,6 @@
 /I "Developer\WidgetRegistration\Public"
 /I "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\UnrealEditor\Inc\projProblox\UHT"
 /I "C:\Users\Deany\Documents\GitHub\problox\projProblox\Source"
-/I "C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Public"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "ThirdParty\LibTiff\Source\Win64"
