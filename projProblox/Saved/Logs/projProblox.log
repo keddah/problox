@@ -1162,3 +1162,54 @@ Script Stack (0 frames) :
 [2024.04.02-18.13.00:930][  1]Running Python start-up script 'C:/Program Files/Epic Games/UE_5.3/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py': 0.021392 secs
 [2024.04.02-18.13.01:094][  1]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_MediumBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
 [2024.04.02-18.13.01:094][  1]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_BigBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
+[2024.04.02-18.13.14:084][ 40]LogHotReload: New module detected: UnrealEditor-projProblox-0001.dll
+[2024.04.02-18.13.14:755][ 43]LogHotReload: Starting Hot-Reload from IDE
+[2024.04.02-18.13.14:781][ 43]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2024.04.02-18.13.14:880][ 43]LogUObjectHash: Compacting FUObjectHashTables data took   0.52ms
+[2024.04.02-18.13.14:909][ 43]Display: HotReload took  0.2s.
+[2024.04.02-18.13.14:909][ 43]Display: Reload/Re-instancing Complete: 1 package changed, 19 classes unchanged, 27 functions remapped
+[2024.04.02-18.13.14:910][ 43]LogSlate: Took 0.000083 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2024.04.02-18.13.18:309][162]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.02-18.13.18:317][162]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.02-18.13.18:318][162]PIE: New page: PIE session: Sandbox (2 Apr 2024, 20:13:18)
+[2024.04.02-18.13.18:320][162]LogOnline: OSS: Created online subsystem instance for: NULL
+[2024.04.02-18.13.18:321][162]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+[2024.04.02-18.13.18:321][162]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.04.02-18.13.18:346][162]LogPlayLevel: PIE: StaticDuplicateObject took: (0.024954s)
+[2024.04.02-18.13.18:346][162]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.024986s)
+[2024.04.02-18.13.18:349][162]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.02-18.13.18:349][162]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.02-18.13.18:349][162]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.02-18.13.18:350][162]LogAIModule: Creating AISystem for world Sandbox
+[2024.04.02-18.13.18:350][162]LogPlayLevel: PIE: World Init took: (0.000900s)
+[2024.04.02-18.13.18:350][162]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2024.04.02-18.13.18:350][162]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.02-18.13.18:350][162]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.02-18.13.18:350][162]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.02-18.13.18:350][162]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.02-18.13.18:350][162]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.04.02-18.13.18:350][162]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.02-18.13.18:350][162]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.04.02-18.13.18:350][162]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.02-18.13.18:351][162]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.02-18.13.18:351][162]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.02-18.13.18:351][162]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.02-18.13.18:352][162]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.02-18.13.18:363][162]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.04.02-18.13.18:363][162]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.02-18.13.18:363][162]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.02-18.13.18:363][162]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.02-18.13.18:364][162]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2024.04.02-18.13.18:364][162]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2024.04.02-18.13.18:365][162]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2024.04.02-18.13.18:365][162]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2024.04.02-18.13.18:365][162]LogInit: FAudioDevice initialized with ID 2.
+[2024.04.02-18.13.18:365][162]LogAudio: Display: Audio Device (ID: 2) registered with world 'Sandbox'.
+[2024.04.02-18.13.18:365][162]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 2
+[2024.04.02-18.13.18:395][162]LogLoad: Game class is 'CustomGameMode_C'
+[2024.04.02-18.13.18:403][162]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_BigBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
+[2024.04.02-18.13.18:405][162]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_MediumBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
+[2024.04.02-18.13.18:406][162]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.04.02-19.13.18
+[2024.04.02-18.13.18:406][162]LogWorld: Bringing up level for play took: 0.011508
+[2024.04.02-18.13.18:408][162]LogOnline: OSS: Created online subsystem instance for: :Context_1
+[2024.04.02-18.13.18:427][162]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
