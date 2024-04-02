@@ -9,7 +9,6 @@ AWedgeConnector::AWedgeConnector()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	
 	// Disable anything to do with Thing collection
 	thingCollector->SetGenerateOverlapEvents(false);
 	thingCollector->SetBoxExtent({});
@@ -20,6 +19,22 @@ AWedgeConnector::AWedgeConnector()
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+void AWedgeConnector::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	// Don't use the up, right, left arrows...
+	upArrow->SetHiddenInGame(true);
+	leftArrow->SetHiddenInGame(true);
+	rightArrow->SetHiddenInGame(true);
+	
+	placeRange = 100;
+	attachOffset = 5;
+
+	socketInfo = NewObject<UWedgeSocketInfo>();
+	AdjustRange();
+}
+
 void AWedgeConnector::ApplyOffset(ACubeCore* core)
 {
 	// If it's the actual core use a smaller offset
@@ -28,13 +43,12 @@ void AWedgeConnector::ApplyOffset(ACubeCore* core)
 	const float distance = core->IsA<ACubeConnector>()? 50 : 25;
 	attachOffset = raySocket == "DIAG" ? distance * .1f : distance;
 
-	Print(FString::SanitizeFloat(attachOffset), 3)
 	SetActorRelativeLocation({attachOffset,0,0});
 }
 
 void AWedgeConnector::GhostPlacement()
 {
-	Print("Werdge", .1f)
+	// Print("Werdge", .1f)
 
 	if(ghostVisible || isAttached) return;
 	if(!parentCore) return;
@@ -99,13 +113,51 @@ void AWedgeConnector::Tick(float DeltaSeconds)
 	// const FRotator currentRot = GetTransform().GetRotation().Rotator();
 	// const FRotator roundRot = RoundRotation(currentRot);
 
-	Print("current: " + FString::SanitizeFloat(currentRot.Yaw), 3)
-	Print("rounded: " + FString::SanitizeFloat(roundRot.Yaw), 3)
+	// Print("current: " + FString::SanitizeFloat(currentRot.Yaw), 3)
+	// Print("rounded: " + FString::SanitizeFloat(roundRot.Yaw), 3)
 }
-//
+
+void AWedgeConnector::SetHideIndicator(const bool hide)
+{
+	indicator->SetHiddenInGame(hide);
+	backArrow->SetHiddenInGame(hide);
+	downArrow->SetHiddenInGame(hide);
+}
+
+void AWedgeConnector::SetupIndicator()
+{
+	// indicator->SetMaterial(0, indicatorMat);
+	// backArrow->SetMaterial(0, indicatorMat);
+	// downArrow->SetMaterial(0, indicatorMat);
+
+	indicator->ArrowColor.A = .5f;
+	backArrow->ArrowColor.A = .5f;
+	downArrow->ArrowColor.A = .5f;
+
+	
+	indicator->ArrowLength = placeRange;
+	backArrow->ArrowLength = placeRange;
+	downArrow->ArrowLength = placeRange;
+
+	// diag
+	FRotator rot = UKismetMathLibrary::MakeRotFromX({.5f,0,.5f});
+	indicator->SetRelativeRotation(rot);
+
+	// back
+	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
+	backArrow->SetRelativeRotation(rot);
+
+	// down
+	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
+	downArrow->SetRelativeRotation(rot);
+
+	SetHideIndicator(true);
+}
+
 void AWedgeConnector::SetSelected(const bool value)
 {
 	selected = value;
+	SetHideIndicator(!selected);
 
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
@@ -191,13 +243,4 @@ void AWedgeConnector::SetSelected(const bool value)
 void AWedgeConnector::SetAbilityActive(bool value)
 {
 	Super::SetAbilityActive(value);
-}
-
-void AWedgeConnector::BeginPlay()
-{
-	placeRange = 100;
-	attachOffset = 5;
-
-	socketInfo = NewObject<UWedgeSocketInfo>();
-	AdjustRange();
 }

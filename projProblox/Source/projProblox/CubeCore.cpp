@@ -43,6 +43,8 @@ void ACubeCore::BeginPlay()
 	Super::BeginPlay();
 	defaultMat = Cast<UMaterial>(objMesh->GetMaterial(0));
 
+	SetupIndicator();
+	
 	// Create a socket info for each cube (also inherited to connectors)
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
@@ -70,6 +72,7 @@ void ACubeCore::SetAbilityActive(bool value)
 
 void ACubeCore::DetachAll(const bool push)
 {
+	if(!socketInfo) return;
 	for(const auto& obj : socketInfo->GetAttachments())
 	{
 		if(!IsValid(obj)) continue;
@@ -135,7 +138,8 @@ void ACubeCore::SetSelected(const bool value)
 	// Not allowed to drop the cube if unable to collect 
 	if(canPickup) selected = value;
 	else selected = true;
-	
+	SetHideIndicator(!selected);
+
 	// Make the wheel ignore collisions and not ... fly away
 	for(const auto& obj : socketInfo->GetAttachments())
 	{
@@ -147,6 +151,9 @@ void ACubeCore::SetSelected(const bool value)
 		canPlace = true;
 		return;
 	}
+
+	indicator->SetHiddenInGame(true);
+	ResetGhost();
 	
 	// Make the wheel go back to normal when it's unselected.
 	for(const auto& obj : socketInfo->GetAttachments())

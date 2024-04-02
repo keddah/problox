@@ -8,9 +8,8 @@
 void AMagnet::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	TArray<AActor*> magActors;
 
+	TArray<AActor*> magActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), StaticClass(), magActors);
 	for (const auto& magActor : magActors) otherMagnets.Add(Cast<AMagnet>(magActor));
 
@@ -23,8 +22,6 @@ void AMagnet::BeginPlay()
 void AMagnet::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-
-	Print(FString::FromInt(otherMagnets.Num()), .1f)
 }
 
 void AMagnet::Ability()

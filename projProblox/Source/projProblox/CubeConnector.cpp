@@ -7,6 +7,21 @@
 
 ACubeConnector::ACubeConnector()
 {
+	backArrow = CreateDefaultSubobject<UArrowComponent>("Backwards Arrow");
+	backArrow->SetupAttachment(objMesh);
+
+	leftArrow = CreateDefaultSubobject<UArrowComponent>("Left Arrow");
+	leftArrow->SetupAttachment(objMesh);
+
+	rightArrow = CreateDefaultSubobject<UArrowComponent>("Right Arrow");
+	rightArrow->SetupAttachment(objMesh);
+
+	upArrow = CreateDefaultSubobject<UArrowComponent>("Upwards Arrow");
+	upArrow->SetupAttachment(objMesh);
+
+	downArrow = CreateDefaultSubobject<UArrowComponent>("Downwards Arrow");
+	downArrow->SetupAttachment(objMesh);
+
 	// Disable anything to do with Thing collection
 	thingCollector->SetGenerateOverlapEvents(false);
 	thingCollector->SetBoxExtent({});
@@ -70,9 +85,9 @@ void ACubeConnector::Placement()
 		const FVector start = objMesh->GetSocketLocation(socketInfo->GetSockets()[i]);
 
 		// Debug Draw
-		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .5f);	
+		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
-
+		
 		// Go to the next ray if it didn't hit anything...
 		if(!hit.bBlockingHit)
 		{
@@ -82,7 +97,7 @@ void ACubeConnector::Placement()
 			continue;
 		}
 
-		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .5f);
+		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();
@@ -204,6 +219,63 @@ void ACubeConnector::GhostPlacement()
 	silhouette->AddWorldRotation({0, roundRot.Yaw + RoundRotation(silhouette->GetComponentRotation()).Yaw, 0});
 }
 
+void ACubeConnector::SetHideIndicator(const bool hide)
+{
+	Print(FString::SanitizeFloat(backArrow->ArrowLength), 3)
+	
+	Super::SetHideIndicator(hide);
+	backArrow->SetHiddenInGame(hide);
+	leftArrow->SetHiddenInGame(hide);
+	rightArrow->SetHiddenInGame(hide);
+	upArrow->SetHiddenInGame(hide);
+	downArrow->SetHiddenInGame(hide);
+}
+
+void ACubeConnector::SetupIndicator()
+{
+	// indicator->SetMaterial(0, indicatorMat);
+	// backArrow->SetMaterial(0, indicatorMat);
+	// leftArrow->SetMaterial(0, indicatorMat);
+	// rightArrow->SetMaterial(0, indicatorMat);
+	// upArrow->SetMaterial(0, indicatorMat);
+	// downArrow->SetMaterial(0, indicatorMat);
+
+	indicator->ArrowColor.A = .5f;
+	backArrow->ArrowColor.A = .5f;
+	leftArrow->ArrowColor.A = .5f;
+	rightArrow->ArrowColor.A = .5f;
+	upArrow->ArrowColor.A = .5f;
+	downArrow->ArrowColor.A = .5f;
+
+	
+	indicator->ArrowLength = placeRange;
+	backArrow->ArrowLength = placeRange;
+	leftArrow->ArrowLength = placeRange;
+	rightArrow->ArrowLength = placeRange;
+	upArrow->ArrowLength = placeRange;
+	downArrow->ArrowLength = placeRange;
+	
+	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
+	indicator->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
+	backArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,-1,0});
+	leftArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,1,0});
+	rightArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,0,1});
+	upArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
+	downArrow->SetRelativeRotation(rot);
+
+	SetHideIndicator(true);
+}
+
 void ACubeConnector::Detach()
 {
 	Super::Detach();
@@ -221,6 +293,7 @@ bool ACubeConnector::SetGroupSelected(const bool value)
 void ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
+	SetHideIndicator(!selected);
 
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
@@ -232,17 +305,15 @@ void ACubeConnector::SetSelected(const bool value)
 		canPlace = true;
 		Detach();
 
-		
 		for(const auto& obj : children)
 		{
 			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 		}
 		return;
 	}
-
-	ResetGhost();
 	
 	// When unselected....
+	ResetGhost();
 	
 	for(const auto& obj : children)
 	{

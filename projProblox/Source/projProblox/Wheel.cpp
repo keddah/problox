@@ -44,13 +44,14 @@ void AWheel::Ability()
 void AWheel::SetSelected(const bool value)
 {
 	selected = value; 
+	SetHideIndicator(!selected);
 	
 	if(selected)
 	{
 		Detach();
 		return;
 	}
-
+	
 	// If the wheel is unselected whilst the objCore isn't valid
 	if(!IsValid(parentCore))
 	{
@@ -66,7 +67,7 @@ void AWheel::SetSelected(const bool value)
 void AWheel::Detach()
 {
 	if(!IsValid(parentCore)) return;
-
+	
 	parentCore->RemoveAttachment(attachedSocket);
 	wheelAxel->BreakConstraint();
 	wheelAxel->UpdateConstraintFrames();
