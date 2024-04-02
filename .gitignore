@@ -73,12 +73,12 @@ DerivedDataCache/*
 #################################
 # Unreal Engine Generated Files #
 #################################
-/[Bb]uild
-/[Bb]uilds
-/Binaries
-/DerivedDataCache
-/Intermediate
-/Saved
+projProblox/[Bb]uild
+projProblox/[Bb]uilds
+projProblox/Binaries
+projProblox/DerivedDataCache
+projProblox/Intermediate
+projProblox/Saved
 
 #################################
 # Visual Studio Generated Files #
