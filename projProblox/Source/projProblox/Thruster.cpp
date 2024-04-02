@@ -13,7 +13,6 @@ void AThruster::Ability()
 {
 	thruster->ThrustStrength = power * 1000;
 	thruster->SetActive(active);
-	Print("Running", .1f)
 }
 
 void AThruster::AlignSocketRot(bool useDirection)

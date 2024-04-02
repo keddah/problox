@@ -14,8 +14,6 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	virtual void BeginPlay() override;
-	
 	UPROPERTY(EditAnywhere)
 	bool positive;
 
@@ -27,9 +25,12 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly)
 	float attractionForce = 30;
-	
-	virtual void Ability() override;
 
-private:
 	TArray<AMagnet*> otherMagnets;
+
+	
+public:
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
+	virtual void Ability() override;
 };
