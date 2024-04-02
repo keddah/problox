@@ -46,7 +46,11 @@ void AThing::GoHome() const
 	if(safe) return;
 	if(!isHoming) return;
 
-	const FVector direction = core->GetActorLocation() - GetActorLocation();
-
-	body->AddForce(direction * attractionForce);
+	const FVector thisPos = GetActorLocation();
+	const FVector corePos = core->GetActorLocation();
+	
+	const FVector direction = corePos - thisPos;
+	const float squareDist = FVector::DistSquared(corePos, thisPos);
+	
+	body->AddForce(direction * (attractionForce * 1000) / squareDist);
 }

@@ -20,7 +20,7 @@ public:
 	void Teleport(const FVector& pos) { SetActorLocation(pos); safe = true; }
 	
 	UFUNCTION(BlueprintCallable)
-	void SetHoming(const bool home) { isHoming = home;}
+	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
 
 	UFUNCTION()
 	void DeactivateHoming() { isHoming = false;}
@@ -39,7 +39,7 @@ public:
 private:
 	ACubeCore* core;
 
-	float attractionForce = 100;
+	float attractionForce;
 	FVector goal;
 	
 	bool isHoming;
