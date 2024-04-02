@@ -262,6 +262,17 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 	for(const auto& obj : socketInfo->GetAttachments()) obj->RemoveVelocity();
 }
 
+void ACubeCore::RemoveVelocity() const
+{
+	Super::RemoveVelocity();
+
+	const AActor* self = this ;
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for(const auto& obj : children) obj->RemoveVelocity();
+}
+
 void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
 {
 	if(socket != "Down")

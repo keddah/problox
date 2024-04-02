@@ -161,7 +161,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
-	void RemoveVelocity() const;
+	virtual void RemoveVelocity() const;
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(ACubeCore* core);

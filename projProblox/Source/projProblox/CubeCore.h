@@ -64,6 +64,7 @@ protected:
 	
 	virtual void Placement() override;
 	virtual void ResetRotation(bool resetVelocity) override;
+	virtual void RemoveVelocity() const override;
 	
 	void AdjustRange() { placeRange *= GetActorScale().Length(); }
 
