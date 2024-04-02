@@ -105,8 +105,10 @@ DerivedDataCache/*
 *.sdf
 # Solution Files
 *.sln
+
 # VSCode Cache Directory
 .vscode
+
 # VSCode History Files
 **/.history
 
@@ -114,3 +116,6 @@ DerivedDataCache/*
 # Miscellaneous Generated Files #
 #################################
 # ADD AS NEED BE
+**/*.log
+**/*.pdb
+projProblox\Saved\Crashes
