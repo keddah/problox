@@ -15,6 +15,7 @@
 			"Propeller.gen.cpp.obj",
 			"Thing.gen.cpp.obj",
 			"ThingSpawner.gen.cpp.obj",
+			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
@@ -30,16 +31,17 @@
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
+			"Propeller.cpp.obj",
 			"Thing.cpp.obj",
 			"ThingSpawner.cpp.obj",
+			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
+			"Wheel.cpp.obj",
+			"Magnet.gen.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
-			"Thruster.gen.cpp.obj",
-			"Propeller.cpp.obj",
-			"Thruster.cpp.obj",
-			"Wheel.cpp.obj"
+			"Magnet.cpp.obj"
 		]
 	}
 }

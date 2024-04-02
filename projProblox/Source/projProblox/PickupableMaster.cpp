@@ -197,8 +197,8 @@ void APickupableMaster::ResetRotation(const bool resetVelocity)
 
 void APickupableMaster::RemoveVelocity() const
 {
-	objMesh->SetAllPhysicsLinearVelocity({});
-	objMesh->SetAllPhysicsAngularVelocityInRadians({});
+	objMesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
+	objMesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
 void APickupableMaster::ApplyOffset(ACubeCore* core)
