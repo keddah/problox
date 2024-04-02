@@ -27,7 +27,24 @@ protected:
 	virtual void Detach() override;
 	virtual void Placement() override;
 	virtual void GhostPlacement() override;
-
+	virtual void SetHideIndicator(const bool hide) override;
+	virtual void SetupIndicator() override;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* backArrow;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* leftArrow;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* rightArrow;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* upArrow;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* downArrow;
+	
 	// The socket that the placement ray from this object is firing from
 	FName raySocket;
 	

@@ -18,7 +18,6 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 	AWheel();
 
 	virtual void Ability() override;
-	virtual void Placement() override;
 	virtual void SetSelected(const bool value) override;
 	virtual void Detach() override;
 	

@@ -72,6 +72,12 @@
     <ClInclude Include="..\..\Source\projProblox\Grappler.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Magnet.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Magnet.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\PickupableMaster.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
@@ -115,6 +121,12 @@
       <Filter>Source\projProblox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\ThingSpawner.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Thruster.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Thruster.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Treads.cpp">

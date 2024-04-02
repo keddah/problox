@@ -21,13 +21,14 @@ APropeller::APropeller()
 void APropeller::SetSelected(const bool value)
 {
 	selected = value;
-	
+	SetHideIndicator(!selected);
+
 	if(selected)
 	{
 		Detach();
 		return;
 	}
-	
+
 	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 	
@@ -45,8 +46,6 @@ void APropeller::SetSelected(const bool value)
 
 void APropeller::Ability()
 {
-	Super::Ability();
-
 	if(!active) return;
 
 	objMesh->AddLocalRotation({0, 0, spinSpeed});

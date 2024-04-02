@@ -23,13 +23,14 @@ AGrappler::AGrappler()
 void AGrappler::SetSelected(const bool value)
 {
 	selected = value;
+	SetHideIndicator(!selected);
 
 	if(selected)
 	{
 		Detach();
 		return;
 	}
-
+	
 	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 

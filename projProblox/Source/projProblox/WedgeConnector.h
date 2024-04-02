@@ -21,8 +21,10 @@ public:
 	virtual void SetAbilityActive(bool value) override;
 	virtual void GhostPlacement() override;
 	virtual void Tick(float DeltaSeconds) override;
+	virtual void SetHideIndicator(const bool hide) override;
+	virtual void SetupIndicator() override;
 	
 protected:
 	virtual void BeginPlay() override;
-
+	
 };

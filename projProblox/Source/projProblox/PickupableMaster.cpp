@@ -31,6 +31,9 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetupAttachment(objMesh);
 	silhouette->SetRelativeLocation({50,0,0});
 	silhouette->SetHiddenInGame(true);
+
+	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
+	indicator->SetupAttachment(objMesh);
 	
 	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collision"));
 	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
@@ -45,6 +48,8 @@ APickupableMaster::APickupableMaster()
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
+
+	SetupIndicator();
 }
 
 void APickupableMaster::AlignSocketRot(const bool useDirection)
@@ -97,7 +102,7 @@ void APickupableMaster::Placement()
 	
 	// Debug Draw
 	const FVector start = GetActorLocation();
-	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
 
 	if(!hit.bBlockingHit)
@@ -107,7 +112,7 @@ void APickupableMaster::Placement()
 		return;
 	}
 
-	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 	
 	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
 	else parentCore = nullptr;
@@ -189,6 +194,18 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 	isAttached = true;
 }
 
+void APickupableMaster::SetupIndicator()
+{
+	// indicator->SetMaterial(0, Cast<UMaterialInterface>(indicatorMat));
+	indicator->ArrowColor.A = .5f;
+	
+	indicator->ArrowLength = placeRange;
+	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
+	indicator->SetRelativeRotation(rot);
+
+	SetHideIndicator(true);
+}
+
 void APickupableMaster::ResetRotation(const bool resetVelocity)
 {
 	SetActorRotation(defaultRot);
@@ -197,8 +214,8 @@ void APickupableMaster::ResetRotation(const bool resetVelocity)
 
 void APickupableMaster::RemoveVelocity() const
 {
-	objMesh->SetAllPhysicsLinearVelocity({});
-	objMesh->SetAllPhysicsAngularVelocityInRadians({});
+	objMesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
+	objMesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
 void APickupableMaster::ApplyOffset(ACubeCore* core)
@@ -276,6 +293,7 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 void APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
+	SetHideIndicator(!selected);
 
 	if(selected)
 	{
@@ -283,7 +301,7 @@ void APickupableMaster::SetSelected(const bool value)
 		Detach();
 		return;
 	}
-	
+
 	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 

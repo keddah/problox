@@ -12,6 +12,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
 #include "Math/Rotator.h"
@@ -50,6 +51,12 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UBoxComponent* collider;
 
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* indicator;
+
+	// UPROPERTY(EditDefaultsOnly)
+	// UMaterial* indicatorMat;
+	
 	UPROPERTY(BlueprintReadOnly)
 	bool active;
 
@@ -112,6 +119,9 @@ protected:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
+	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
+	virtual void SetupIndicator();
+	
 	// Used when attaching to sockets of the cube... Rounds the given rotation to right angles (90 degrees)
 	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true)
 	{
@@ -161,7 +171,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
-	void RemoveVelocity() const;
+	virtual void RemoveVelocity() const;
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(ACubeCore* core);
