@@ -79,9 +79,9 @@ DerivedDataCache/*
 projProblox/[Bb]uild
 projProblox/[Bb]uilds
 projProblox/Binaries
-projProblox/DerivedDataCache
-projProblox/Intermediate
-projProblox/Saved
+DerivedDataCache/*
+Intermediate/
+projProblox/Saved/*
 
 #################################
 # Visual Studio Generated Files #

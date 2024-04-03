@@ -48,8 +48,6 @@ void AWedgeConnector::ApplyOffset(const ACubeCore* core)
 
 void AWedgeConnector::GhostPlacement()
 {
-	// Print("Werdge", .1f)
-
 	if(ghostVisible || isAttached) return;
 	if(!parentCore) return;
 
@@ -77,6 +75,7 @@ void AWedgeConnector::GhostPlacement()
 		else if (tempSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
 		else if (tempSocket == "UP") alignedRotation += FRotator(0, 180,0);
 		else if(tempSocket == "DOWN") alignedRotation += FRotator(0, 180, 0);
+		else if(tempSocket == "DIAG") alignedRotation = FRotator(45, 0, 0);
 	}
 	
 	// Get the current rotation of the actor and round it
@@ -94,12 +93,16 @@ void AWedgeConnector::GhostPlacement()
 	const bool canDiagRot = flatFace && abs(parentMesh->GetSocketRotation(tempSocket).Vector().Z) > .8f;
 	
 	// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
-	if(!isDiag || canDiagRot) silhouette->AddWorldRotation({0, roundRot.Yaw + RoundRotation(silhouette->GetComponentRotation()).Yaw, 0});
+	// But don't do this if the attached socket is the diagonal face of a wedge
+	if(tempSocket != "DIAG" && (!isDiag || canDiagRot)) silhouette->AddWorldRotation({0, roundRot.Yaw + RoundRotation(silhouette->GetComponentRotation()).Yaw, 0});
 
 	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
 	attachOffset = isDiag ? distance * .1f : distance;
 
 	silhouette->SetRelativeLocation({attachOffset,0,0});
+
+	FRotator ROT = silhouette->GetComponentRotation();
+	Print(FString::SanitizeFloat(ROT.Roll) + ", " + FString::SanitizeFloat(ROT.Pitch) + ", " + FString::SanitizeFloat(ROT.Yaw), .2f)
 }
 
 void AWedgeConnector::Tick(float DeltaSeconds)
@@ -195,11 +198,11 @@ void AWedgeConnector::SetSelected(const bool value)
 	
 	// Define the initial rotation based on the raySocket
 	FRotator alignedRotation = FRotator::ZeroRotator;
-
+	
 	if (isDiag) alignedRotation = FRotator(135.0f, 0.0f, 0.0f);
 	else if (raySocket == "DOWN") alignedRotation = FRotator(180.0f, 180.0f, 0.0f);
 	else if (raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
-
+	
 	// Fixes the rotation depending on the orientation of the cube
 	if(!isDiag && abs(parentCore->GetActorUpVector().Z) < .5f)
 	{
@@ -211,6 +214,7 @@ void AWedgeConnector::SetSelected(const bool value)
 		else if (attachedSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
 		else if (attachedSocket == "UP") alignedRotation += FRotator(0, 180,0);
 		else if(attachedSocket == "DOWN") alignedRotation += FRotator(0, 180, 0);
+		else if(attachedSocket == "DIAG") alignedRotation = FRotator(45,0, 0);
 	}
 	
 	// Get the current rotation of the actor and round it
@@ -230,7 +234,7 @@ void AWedgeConnector::SetSelected(const bool value)
 	const bool canDiagRot = flatFace && abs(parentMesh->GetSocketRotation(attachedSocket).Vector().Z) > .8f;
 	
 	// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
-	if(!isDiag || canDiagRot) AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
+	if(attachedSocket != "DIAG" && (!isDiag || canDiagRot)) AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
 
 	///////////////////////////////////////////////////////////////////////
 

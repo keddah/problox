@@ -19,6 +19,7 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 public:
 	ACubeConnector();
 
+	// The parameter is the parentCore
 	virtual void ApplyOffset(const ACubeCore* core) override;
 	
 protected:

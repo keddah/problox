@@ -22,9 +22,11 @@
 			"Wheel.gen.cpp.obj",
 			"Collector.cpp.obj",
 			"CubeCore.cpp.obj",
-			"CubeSocketInfo.cpp.obj",
+			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
+			"Magnet.cpp.obj",
+			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
@@ -38,9 +40,7 @@
 			"Magnet.gen.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
 			"CubeConnector.cpp.obj",
-			"Glider.cpp.obj",
-			"Magnet.cpp.obj",
-			"PickupableMaster.cpp.obj",
+			"CubeSocketInfo.cpp.obj",
 			"WedgeConnector.cpp.obj"
 		]
 	}
