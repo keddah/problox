@@ -32,7 +32,7 @@ ACubeConnector::ACubeConnector()
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
-void ACubeConnector::ApplyOffset(ACubeCore* core)
+void ACubeConnector::ApplyOffset(const ACubeCore* core)
 {
 	// If it's the actual core use a smaller offset
 	if(core) attachOffset = !core->IsA<ACubeConnector>()? 35 : 50;
@@ -103,7 +103,6 @@ void ACubeConnector::Placement()
 		AActor* hitActor = hit.GetActor();
 		if(!hitActor) continue;
 
-		FName closestSocket = NAME_None;
 
 		if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
 		else
@@ -118,8 +117,6 @@ void ACubeConnector::Placement()
 		if(hitObj->Children.Contains(this)) continue;
 		if(hitObj->IsChildOf(this)) continue;
 		
-		float shortestDistance = 999999;
-
 		// Attempt to cast to the cubecore
 		if(hitObj->IsA<ACubeCore>())
 		{
@@ -127,49 +124,31 @@ void ACubeConnector::Placement()
 
 			// All the previous checks ensure that the cast is valid
 			parentCore = Cast<ACubeCore>(hitObj);
-			const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-
-			for(const auto& socket: coreMesh->GetAllSocketNames())
-			{
-				// If the cube doesn't have an object in its socket...
-				if(parentCore->ObjectInSocket(socket)) continue;
-
-				// Compare the distance between the current socket and this connector's mesh
-				const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
-				
-				// Don't allow the attachment if the socket is out of range.
-				if(distance > placeRange) continue;
-				
-				if(distance < shortestDistance)
-				{
-					shortestDistance = distance;
-					closestSocket = socket;
-				}
-			}
-
+			FName closestSocket = NearestSocket(parentCore, hit);
+			
 			tempSocket = closestSocket;
-			hitObj = nullptr;
+			// hitObj = nullptr;
 			break;
 		}
 
 		// Foreach of the connector's sockets
-		for(const auto& socket: objMesh->GetAllSocketNames())
-		{
-			// If the socket is free...
-			if(ObjectInSocket(socket)) continue;
+		// for(const auto& socket: objMesh->GetAllSocketNames())
+		// {
+		// 	// If the socket is free...
+		// 	if(ObjectInSocket(socket)) continue;
+		//
+		// 	// Compare the distances between the current socket and the impact point
+		// 	const float distance = FVector::Distance(objMesh->GetSocketLocation(socket), hit.ImpactPoint);
+		// 	if(distance < shortestDistance)
+		// 	{
+		// 		shortestDistance = distance;
+		// 		closestSocket = socket;
+		// 	}
+		// }
 
-			// Compare the distances between the current socket and the impact point
-			const float distance = FVector::Distance(objMesh->GetSocketLocation(socket), hit.ImpactPoint);
-			if(distance < shortestDistance)
-			{
-				shortestDistance = distance;
-				closestSocket = socket;
-			}
-		}
-
-		if(closestSocket != NAME_None) tempSocket = closestSocket;
-		parentCore = nullptr;
-		hitObj->SetCore(this);
+		// if(tempSocket != NAME_None) tempSocket = closestSocket;
+		// parentCore = nullptr;
+		// hitObj->SetCore(this);
 		break;
 	}
 

@@ -19,7 +19,7 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 public:
 	ACubeConnector();
 
-	virtual void ApplyOffset(ACubeCore* core) override;
+	virtual void ApplyOffset(const ACubeCore* core) override;
 	
 protected:
 	// Called when the game starts or when spawned

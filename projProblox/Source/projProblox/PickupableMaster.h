@@ -109,7 +109,8 @@ protected:
 	/////////////////// FUNCTIONS ///////////////////
 	
 	virtual void Placement();
-
+	FName NearestSocket(const ACubeCore* core, const FHitResult& hit) const;
+	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
 	void ResetGhost();
@@ -174,7 +175,7 @@ public:
 	virtual void RemoveVelocity() const;
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
-	virtual void ApplyOffset(ACubeCore* core);
+	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
 	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)

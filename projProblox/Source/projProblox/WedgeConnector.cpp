@@ -35,7 +35,7 @@ void AWedgeConnector::BeginPlay()
 	AdjustRange();
 }
 
-void AWedgeConnector::ApplyOffset(ACubeCore* core)
+void AWedgeConnector::ApplyOffset(const ACubeCore* core)
 {
 	// If it's the actual core use a smaller offset
 	if(!core) return;

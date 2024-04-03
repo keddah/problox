@@ -20,6 +20,4 @@ void AGlider::Ability()
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
 	objMesh->AddForce(GetActorForwardVector() * glideSpeed * 1000);
 	objMesh->AddForce(GetActorUpVector() * floatAmount * 1000);
-	// objCore->Movement(objMesh->GetForwardVector(), glideSpeed * 1000);
-	// objCore->AddVelocity(objMesh->GetUpVector() * floatAmount);
 }

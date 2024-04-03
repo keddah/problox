@@ -123,36 +123,38 @@ void APickupableMaster::Placement()
 		return;
 	}
 	
-	// objCore has been set to the hit actor.
-	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	
-	float shortestDistance = 9999;
-	FName closestSocket = "None";
-
-	for(int i = 0; i < 2; i++)
-	{
-		for(const auto& socket: coreMesh->GetAllSocketNames())
-		{
-			if(parentCore) if(parentCore->ObjectInSocket(socket)) continue;
-			
-			const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
-
-			// Don't allow the attachment if the socket is out of range.
-			if(distance > placeRange) continue;
-			
-			if(distance < shortestDistance)
-			{
-				shortestDistance = distance;
-				closestSocket = socket;
-			}
-		}
-	}
+	FName closestSocket = NearestSocket(parentCore, hit);
 
 	if(closestSocket != NAME_None) attachedSocket = closestSocket;
 	GhostPlacement();
 
 	// FRotator rot = NormalizeRotation(GetActorRotation());
 	// Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
+}
+
+FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& hit) const
+{
+	float shortestDistance = 999;
+	FName closestSocket;
+	const UStaticMeshComponent* coreMesh = core->GetMesh();
+	
+	for(const auto& socket: coreMesh->GetAllSocketNames())
+	{
+		if(core) if(core->ObjectInSocket(socket)) continue;
+		
+		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+
+		// Don't allow the attachment if the socket is out of range.
+		if(distance > placeRange) continue;
+		
+		if(distance < shortestDistance)
+		{
+			shortestDistance = distance;
+			closestSocket = socket;
+		}
+	}
+
+	return closestSocket;
 }
 
 // Should only be called in the Placement Function at the very end....
@@ -216,11 +218,6 @@ void APickupableMaster::RemoveVelocity() const
 {
 	objMesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
 	objMesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
-}
-
-void APickupableMaster::ApplyOffset(ACubeCore* core)
-{
-	if(core) SetActorRelativeLocation({attachOffset,0,0});
 }
 
 void APickupableMaster::Detach()
