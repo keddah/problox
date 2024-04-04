@@ -25,7 +25,6 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	virtual void Detach() override;
 	virtual void Placement() override;
 	virtual void GhostPlacement() override;
 	virtual void SetHideIndicator(const bool hide) override;

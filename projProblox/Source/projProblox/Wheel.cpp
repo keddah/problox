@@ -66,6 +66,8 @@ void AWheel::SetSelected(const bool value)
 
 void AWheel::Detach()
 {
+	ResetGhost();
+	
 	if(!IsValid(parentCore)) return;
 	
 	parentCore->RemoveAttachment(attachedSocket);

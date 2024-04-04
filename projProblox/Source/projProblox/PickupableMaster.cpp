@@ -223,6 +223,8 @@ void APickupableMaster::RemoveVelocity() const
 
 void APickupableMaster::Detach()
 {
+	ResetGhost();
+	
 	if(!IsValid(parentCore))
 	{
 		Print("Couldnt detach because the core was invalid", 3)

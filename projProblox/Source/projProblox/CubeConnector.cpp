@@ -282,12 +282,6 @@ void ACubeConnector::SetupIndicator()
 	SetHideIndicator(true);
 }
 
-void ACubeConnector::Detach()
-{
-	Super::Detach();
-	// if(!isAttached) DetachAll(false);
-}
-
 bool ACubeConnector::SetGroupSelected(const bool value)
 {
 	selected = value;
