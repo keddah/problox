@@ -80,7 +80,7 @@ projProblox/[Bb]uild
 projProblox/[Bb]uilds
 projProblox/Binaries
 DerivedDataCache/*
-Intermediate/
+projProblox/Intermediate/*
 projProblox/Saved/*
 
 #################################
@@ -112,5 +112,5 @@ projProblox/Saved/*
 # Miscellaneous Generated Files #
 #################################
 # ADD AS NEED BE
-**/*.log
-**/*.pdb
+**/.log
+**/.pdb

@@ -48,61 +48,54 @@ void AWedgeConnector::ApplyOffset(const ACubeCore* core)
 
 void AWedgeConnector::GhostPlacement()
 {
+	// Print(FString::SanitizeFloat(appliedYaw), .1f);
+	//Print(FString::SanitizeFloat(GetActorUpVector().Z), 2)
 	if(ghostVisible || isAttached) return;
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	
 	silhouette->SetHiddenInGame(false);
 
-	FRotator alignedRotation = FRotator::ZeroRotator;
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
+	///////////// Rotation
+	///
+	// Only allow directional placement of wedges when they're above the cube / wedge and not on a diagonal face.
+	const bool flatFace = tempSocket != "DIAG";
 	const bool isDiag = raySocket == "DIAG";
-	
-	if (isDiag) alignedRotation = FRotator(135.0f, 0.0f, 0.0f);
-	else if (raySocket == "DOWN") alignedRotation = FRotator(180.0f, 180.0f, 0.0f);
-	else if (raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
+	const bool above = parentCore->GetActorLocation().Z + parentCore->GetActorRelativeScale3D().X * 100 <= GetActorLocation().Z;	// 100 = the size of the core
+	const bool canDiagRot = isDiag && flatFace && above;
 
-	
-	// Fixes the rotation depending on the orientation of the cube
-	if(!isDiag && abs(parentCore->GetActorUpVector().Z) < .5f)
-	{
-		// If the cube is not oriented correctly, adjust the rotation by finding the rotation difference between the cube's forward direction
-		// and the global forward direction.
-		// Cancels out the current orientation of the cube by getting the delta rotation of its original rot to its current
-		if(tempSocket == "FRONT" || tempSocket == "BACK") alignedRotation += FRotator(0,0,180);
-		else if (tempSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
-		else if (tempSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
-		else if (tempSocket == "UP") alignedRotation += FRotator(0, 180,0);
-		else if(tempSocket == "DOWN") alignedRotation += FRotator(0, 180, 0);
-		else if(tempSocket == "DIAG") alignedRotation = FRotator(45, 0, 0);
-	}
+	const FRotator socketRelativeRot = parentMesh->GetSocketTransform(tempSocket).GetRelativeTransform(GetTransform()).Rotator();
 	
 	// Get the current rotation of the actor and round it
-	const FRotator currentRot = {0, appliedYaw, 0};
-	const FRotator roundRot = RoundRotation(currentRot);
+	const FRotator currentRot = RoundRotation(GetActorRotation());
+	float roundedYaw = RoundRotation( {0, appliedYaw, 0}).Yaw;
+	const FRotator roundRot = RoundRotation((socketRelativeRot.Quaternion() * FRotator(0, currentRot.Yaw, currentRot.Roll).Quaternion().Inverse()).Rotator());
+	
 	
 	// Attach the actor to the parent with the target socket
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
-	// Apply the aligned rotation to the actor (assuming socket is attached)
-	silhouette->SetRelativeRotation(alignedRotation);
+	// Since the top socket's forward rotation is the x axis... Z is the old X... 
+	silhouette->SetRelativeRotation({currentRot.Pitch, currentRot.Yaw + roundRot.Yaw, roundRot.Roll});
 
-	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	const bool flatFace = tempSocket != "DIAG";
-	const bool canDiagRot = flatFace && abs(parentMesh->GetSocketRotation(tempSocket).Vector().Z) > .8f;
 	
+	//Fixes the rotation when the wedge is pointing on the forward axis.
+	if(roundedYaw == 0) roundedYaw = 180;
+	else if(roundedYaw == 180) roundedYaw = 0;
+	
+	const FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
 	// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
 	// But don't do this if the attached socket is the diagonal face of a wedge
-	if(tempSocket != "DIAG" && (!isDiag || canDiagRot)) silhouette->AddWorldRotation({0, roundRot.Yaw + RoundRotation(silhouette->GetComponentRotation()).Yaw, 0});
+	Print(FString::SanitizeFloat(socketRot.Yaw - appliedYaw), .2f)
+	if((!isDiag && above)|| canDiagRot) silhouette->AddWorldRotation(FRotator(0, RoundRotation({0, roundedYaw + socketRelativeRot.Yaw, 0}).Yaw, 0));
 
+
+	///////////// Location
 	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
 	attachOffset = isDiag ? distance * .1f : distance;
-
 	silhouette->SetRelativeLocation({attachOffset,0,0});
-
-	FRotator ROT = silhouette->GetComponentRotation();
-	Print(FString::SanitizeFloat(ROT.Roll) + ", " + FString::SanitizeFloat(ROT.Pitch) + ", " + FString::SanitizeFloat(ROT.Yaw), .2f)
 }
 
 void AWedgeConnector::Tick(float DeltaSeconds)

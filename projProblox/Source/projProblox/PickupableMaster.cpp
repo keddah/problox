@@ -211,6 +211,7 @@ void APickupableMaster::SetupIndicator()
 void APickupableMaster::ResetRotation(const bool resetVelocity)
 {
 	SetActorRotation(defaultRot);
+	appliedYaw = 0;
 	if(resetVelocity) RemoveVelocity();
 }
 
@@ -259,9 +260,9 @@ void APickupableMaster::RotateHori(const float axis)
 	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 	appliedYaw += axis * rotSpeed;
 	
-	// Wrap appliedYaw to -360 / 360
-	if (appliedYaw > 360) appliedYaw -= 720;
-	else if (appliedYaw < -360) appliedYaw += 720.0f;
+	// Wrap appliedYaw to -180 / 180
+	if (appliedYaw > 180) appliedYaw -= 360;
+	else if (appliedYaw < -180) appliedYaw += 360;
 }
 
 void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
@@ -276,9 +277,9 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
 		appliedYaw += turn;
 		
-		// Wrap appliedYaw to -360 / 360
-		if (appliedYaw > 360) appliedYaw -= 720;
-		else if (appliedYaw < -360) appliedYaw += 720.0f;
+		// Wrap appliedYaw to -180 / 180
+		if (appliedYaw > 180) appliedYaw -= 360;
+		else if (appliedYaw < -180) appliedYaw += 360;
 		return;
 	}
 
