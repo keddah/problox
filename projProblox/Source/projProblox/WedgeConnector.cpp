@@ -85,7 +85,7 @@ void AWedgeConnector::GhostPlacement()
 	const FRotator relativeRot = GetActorRotation() - parentCore->GetActorRotation();
 
 	// Is the wedge trying to attach from a non-hypotenuse side..?
-	if(!isDiag) silhouette->SetRelativeRotation(RoundRotation(relativeRot) - FRotator(roundRot.Pitch,0,0));
+	if(!isDiag) silhouette->SetRelativeRotation(RoundRotation(relativeRot) + FRotator(roundRot.Pitch,(raySocket == "DOWN"? 180: 0),0));
 	else silhouette->SetRelativeRotation({135,0,0});
 
 	// Only allow directional placement of wedges if....
