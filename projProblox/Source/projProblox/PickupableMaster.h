@@ -20,6 +20,8 @@
 #include "PickupableMaster.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+#define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw)); }
+#define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.X) + ", " + "Y: " + FString::SanitizeFloat(x.Y) + ", " + "Z: " + FString::SanitizeFloat(x.Z)); }
 
 class ACubeCore;
 
@@ -186,6 +188,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	UStaticMeshComponent* GetMesh() const { return objMesh; }
+	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
 
 	UFUNCTION(BlueprintCallable)
 	virtual void SetSelected(const bool value);

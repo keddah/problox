@@ -56,7 +56,7 @@ void AWedgeConnector::GhostPlacement()
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(false);
 
-	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
 	///////////// Rotation (ISN'T CONSISTENT)
 	///	ONCE THE TARGET CORE IS ROTATED TO A DIFFERENT ORIENTATION... HORIZONTAL PLACEMENT DOESN'T WORK PROPERLY
@@ -70,43 +70,47 @@ void AWedgeConnector::GhostPlacement()
 	float roundedYaw = RoundRotation( {0, appliedYaw, 0}).Yaw;
 	const FRotator currentRot = GetActorRotation();
 	const FRotator roundRot = RoundRotation(currentRot);
-	const FRotator socketRelativeRot = parentMesh->GetSocketTransform(tempSocket).GetRelativeTransform(GetTransform()).Rotator();
-	// Get the current rotation of the actor and round it
-	const FRotator roundDifference = RoundRotation((socketRelativeRot.Quaternion() * FRotator(0, roundRot.Yaw, roundRot.Roll).Quaternion().Inverse()).Rotator());
+
+	const FRotator originParentRot = parentCore->GetActorRotation();
+	const FRotator originSocketRot = parentMesh->GetSocketRotation(tempSocket);
+	parentCore->SetActorRotation(originSocketRot);
+
+	// Temporarily set the parent core's rotation to 0 so that the orientation problem goes away..
+	// then reset the rotation at the end.
 
 	// Attach the actor to the parent with the target socket
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
-	if(!isDiag)
-	{
-		// Since the top socket's forward rotation is the x axis... Z is the old X... 
-		silhouette->SetRelativeRotation({roundRot.Pitch, roundRot.Yaw + roundDifference.Yaw, roundDifference.Roll});
-	}
-	
-	else
-	{
-		silhouette->SetRelativeRotation({135,0,0});
-	}
+	// Calculate relative rotation based on parent's rotation
+	const FRotator relativeRot = GetActorRotation() - parentCore->GetActorRotation();
 
-	//Fixes the rotation when the wedge is pointing on the forward axis.
-	if(roundedYaw == 0) roundedYaw = 180;
-	else if(roundedYaw == 180) roundedYaw = 0;
-	
-	// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
-	// But don't do this if the attached socket is the diagonal face of a wedge
-	if(!isDiag && above)
+	// Is the wedge trying to attach from a non-hypotenuse side..?
+	if(!isDiag) silhouette->SetRelativeRotation(RoundRotation(relativeRot) - FRotator(roundRot.Pitch,0,0));
+	else silhouette->SetRelativeRotation({135,0,0});
+
+	// Only allow directional placement of wedges if....
+	if((!isDiag && above) || canDiagRot)
 	{
-		silhouette->SetRelativeRotation({0,0, roundedYaw});
-	}
-	else if(canDiagRot)
-	{
-		silhouette->AddWorldRotation({0, roundedYaw + RoundRotation(parentCore->GetActorForwardVector().Rotation()).Yaw, 0});
+		//Fixes the rotation when the wedge is pointing on the forward axis.
+		if(roundedYaw == 0) roundedYaw = 180;
+		else if(roundedYaw == 180) roundedYaw = 0;
+		
+		// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
+		// But don't do this if the attached socket is the diagonal face of a wedge
+		if(canDiagRot)
+		{
+			silhouette->AddWorldRotation({0, roundedYaw + RoundRotation(parentCore->GetActorForwardVector().Rotation()).Yaw, 0});
+		}
+		
+		else silhouette->SetRelativeRotation({0,0, roundedYaw});
 	}
 
 	///////////// Location
 	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
 	attachOffset = isDiag ? distance * .1f : distance;
 	silhouette->SetRelativeLocation({attachOffset,0,0});
+	
+	parentCore->SetActorRotation(originParentRot);
 }
 
 void AWedgeConnector::Tick(float DeltaSeconds)

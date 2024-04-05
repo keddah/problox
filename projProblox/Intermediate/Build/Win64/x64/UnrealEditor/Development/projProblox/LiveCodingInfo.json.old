@@ -38,10 +38,10 @@
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
-			"Wheel.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"PickupableMaster.cpp.obj",
-			"WedgeConnector.cpp.obj"
+			"WedgeConnector.cpp.obj",
+			"Wheel.cpp.obj"
 		]
 	}
 }
