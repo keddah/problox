@@ -1967,3 +1967,105 @@ Script Stack (0 frames) :
 [2024.04.05-16.27.51:999][388]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
 [2024.04.05-16.27.52:489][389]Display: Reload/Re-instancing Complete: No object changes detected
 [2024.04.05-16.27.52:489][389]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.31.02:018][204]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.31.04:298][211]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_110.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_110.exp
+[2024.04.05-16.31.04:598][212]LogUObjectHash: Compacting FUObjectHashTables data took   2.00ms
+[2024.04.05-16.31.05:101][213]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.31.05:101][213]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.32.12:081][504]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.32.14:290][511]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_111.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_111.exp
+[2024.04.05-16.32.14:536][512]LogUObjectHash: Compacting FUObjectHashTables data took   2.07ms
+[2024.04.05-16.32.15:024][513]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.32.15:024][513]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.32.55:569][416]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.05-16.32.55:569][416]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.04.05-16.32.55:569][416]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.05-16.32.55:574][416]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.04.05-16.32.55:576][416]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.05-16.32.55:578][416]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.05-16.32.55:582][416]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.05-16.32.55:593][416]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2024.04.05-16.32.55:593][416]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.05-16.32.55:594][416]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.05-16.32.55:623][416]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2024.04.05-16.32.55:879][417]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2024.04.05-16.33.27:085][511]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.33.29:406][518]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_112.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_112.exp
+[2024.04.05-16.33.29:657][519]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.04.05-16.33.30:175][520]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.33.30:175][520]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.33.32:658][693]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.05-16.33.32:668][693]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.05-16.33.32:668][693]PIE: New page: PIE session: Sandbox (5 Apr 2024, 18:33:32)
+[2024.04.05-16.33.32:668][693]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.04.05-16.33.32:693][693]LogPlayLevel: PIE: StaticDuplicateObject took: (0.025127s)
+[2024.04.05-16.33.32:693][693]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.025153s)
+[2024.04.05-16.33.32:736][693]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
+[2024.04.05-16.33.32:743][693]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.05-16.33.32:743][693]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.05-16.33.32:743][693]LogAIModule: Creating AISystem for world Sandbox
+[2024.04.05-16.33.32:744][693]LogPlayLevel: PIE: World Init took: (0.001076s)
+[2024.04.05-16.33.32:744][693]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.04.05-16.33.32:744][693]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.05-16.33.32:744][693]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.05-16.33.32:744][693]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.05-16.33.32:744][693]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.05-16.33.32:744][693]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.04.05-16.33.32:744][693]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.05-16.33.32:744][693]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.04.05-16.33.32:744][693]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.05-16.33.32:744][693]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.05-16.33.32:744][693]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.05-16.33.32:744][693]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.05-16.33.32:746][693]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.05-16.33.32:756][693]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.04.05-16.33.32:757][693]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.05-16.33.32:757][693]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.05-16.33.32:757][693]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.05-16.33.32:757][693]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.04.05-16.33.32:757][693]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2024.04.05-16.33.32:758][693]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.04.05-16.33.32:758][693]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.04.05-16.33.32:758][693]LogInit: FAudioDevice initialized with ID 4.
+[2024.04.05-16.33.32:759][693]LogAudio: Display: Audio Device (ID: 4) registered with world 'Sandbox'.
+[2024.04.05-16.33.32:759][693]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2024.04.05-16.33.32:779][693]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.05-16.33.32:779][693]LogLoad: Game class is 'CustomGameMode_C'
+[2024.04.05-16.33.32:788][693]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_BigBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
+[2024.04.05-16.33.32:789][693]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_MediumBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
+[2024.04.05-16.33.32:790][693]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.04.05-17.33.32
+[2024.04.05-16.33.32:791][693]LogWorld: Bringing up level for play took: 0.011339
+[2024.04.05-16.33.32:792][693]LogOnline: OSS: Created online subsystem instance for: :Context_10
+[2024.04.05-16.33.32:793][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:794][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:794][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:794][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:794][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:794][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:795][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:795][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:795][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:795][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:795][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:795][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:796][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:796][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:796][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:796][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:796][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:796][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_17 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:796][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_18 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:797][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_19 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:797][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_20 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:797][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_21 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:797][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_22 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:797][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_23 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:797][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_24 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:798][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_25 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:798][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_26 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:798][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_27 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:798][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_28 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:798][693]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_29 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.33.32:800][693]PIE: Server logged in
+[2024.04.05-16.33.32:801][693]PIE: Play in editor total start time 0.133 seconds.
+[2024.04.05-16.33.32:834][693]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.

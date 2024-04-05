@@ -80,8 +80,8 @@ void AWedgeConnector::GhostPlacement()
 		silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 		
 		// The pitch is always 135 if attaching to a hyp side... otherwise.
-		const float pitch = isDiag? 135.0f : roundRot.Pitch - 90;
-		silhouette->SetRelativeRotation({roundRot.Pitch, 0, 0});
+		const float pitch = isDiag? 135.0f : flatFace? roundRot.Pitch : 0;
+		silhouette->SetRelativeRotation({pitch, 0, 0});
 	}
 
 	else
@@ -133,16 +133,6 @@ void AWedgeConnector::GhostPlacement()
 void AWedgeConnector::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-
-	if(!selected) return;
-
-	const FRotator currentRot = {0, appliedYaw, 0};
-	const FRotator roundRot = RoundRotation(currentRot);
-	// const FRotator currentRot = GetTransform().GetRotation().Rotator();
-	// const FRotator roundRot = RoundRotation(currentRot);
-
-	// Print("current: " + FString::SanitizeFloat(currentRot.Yaw), 3)
-	// Print("rounded: " + FString::SanitizeFloat(roundRot.Yaw), 3)
 }
 
 void AWedgeConnector::SetHideIndicator(const bool hide)
@@ -222,48 +212,51 @@ void AWedgeConnector::SetSelected(const bool value)
 	//////////////////////////// THE BLUEPRINT ////////////////////////////
 	
 	// Define the initial rotation based on the raySocket
-	FRotator alignedRotation = FRotator::ZeroRotator;
-	
-	if (isDiag) alignedRotation = FRotator(135.0f, 0.0f, 0.0f);
-	else if (raySocket == "DOWN") alignedRotation = FRotator(180.0f, 180.0f, 0.0f);
-	else if (raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
-	
-	// Fixes the rotation depending on the orientation of the cube
-	if(!isDiag && abs(parentCore->GetActorUpVector().Z) < .5f)
-	{
-		// If the cube is not oriented correctly, adjust the rotation by finding the rotation difference between the cube's forward direction
-		// and the global forward direction.
-		// Cancels out the current orientation of the cube by getting the delta rotation of its original rot to its current
-		if(attachedSocket == "FRONT" || attachedSocket == "BACK") alignedRotation += FRotator(0,0,180);
-		else if (attachedSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
-		else if (attachedSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
-		else if (attachedSocket == "UP") alignedRotation += FRotator(0, 180,0);
-		else if(attachedSocket == "DOWN") alignedRotation += FRotator(0, 180, 0);
-		else if(attachedSocket == "DIAG") alignedRotation = FRotator(45,0, 0);
-	}
-	
-	// Get the current rotation of the actor and round it
-	const FRotator currentRot = {0, appliedYaw, 0};
-	const FRotator roundRot = RoundRotation(currentRot);
+	// FRotator alignedRotation = FRotator::ZeroRotator;
+	//
+	// if (isDiag) alignedRotation = FRotator(135.0f, 0.0f, 0.0f);
+	// else if (raySocket == "DOWN") alignedRotation = FRotator(180.0f, 180.0f, 0.0f);
+	// else if (raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
+	//
+	// // Fixes the rotation depending on the orientation of the cube
+	// if(!isDiag && abs(parentCore->GetActorUpVector().Z) < .5f)
+	// {
+	// 	// If the cube is not oriented correctly, adjust the rotation by finding the rotation difference between the cube's forward direction
+	// 	// and the global forward direction.
+	// 	// Cancels out the current orientation of the cube by getting the delta rotation of its original rot to its current
+	// 	if(attachedSocket == "FRONT" || attachedSocket == "BACK") alignedRotation += FRotator(0,0,180);
+	// 	else if (attachedSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
+	// 	else if (attachedSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
+	// 	else if (attachedSocket == "UP") alignedRotation += FRotator(0, 180,0);
+	// 	else if(attachedSocket == "DOWN") alignedRotation += FRotator(0, 180, 0);
+	// 	else if(attachedSocket == "DIAG") alignedRotation = FRotator(45,0, 0);
+	// }
+	//
+	// // Get the current rotation of the actor and round it
+	// const FRotator currentRot = {0, appliedYaw, 0};
+	// const FRotator roundRot = RoundRotation(currentRot);
+
+	SetActorLocation(silhouette->GetComponentLocation());
+	SetActorRotation(silhouette->GetComponentRotation());
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
-
-	// Doesn't work properly.. but close enough
-	const FRotator relativeRot = FRotator::ZeroRotator;
-
-	// Apply the aligned rotation to the actor (assuming socket is attached)
-	SetActorRelativeRotation(relativeRot + alignedRotation);
-
-	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	const bool flatFace = attachedSocket != "DIAG";
-	const bool canDiagRot = flatFace && abs(parentMesh->GetSocketRotation(attachedSocket).Vector().Z) > .8f;
-	
-	// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
-	if(attachedSocket != "DIAG" && (!isDiag || canDiagRot)) AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
-
-	///////////////////////////////////////////////////////////////////////
-
-	ApplyOffset(parentCore);
+	//
+	// // Doesn't work properly.. but close enough
+	// const FRotator relativeRot = FRotator::ZeroRotator;
+	//
+	// // Apply the aligned rotation to the actor (assuming socket is attached)
+	// SetActorRelativeRotation(relativeRot + alignedRotation);
+	//
+	// const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	// const bool flatFace = attachedSocket != "DIAG";
+	// const bool canDiagRot = flatFace && abs(parentMesh->GetSocketRotation(attachedSocket).Vector().Z) > .8f;
+	//
+	// // Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
+	// if(attachedSocket != "DIAG" && (!isDiag || canDiagRot)) AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
+	//
+	// ///////////////////////////////////////////////////////////////////////
+	//
+	// ApplyOffset(parentCore);
 
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
