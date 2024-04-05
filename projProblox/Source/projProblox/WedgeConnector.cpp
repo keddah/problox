@@ -73,20 +73,37 @@ void AWedgeConnector::GhostPlacement()
 
 	const FRotator originParentRot = parentCore->GetActorRotation();
 	const FRotator originSocketRot = parentMesh->GetSocketRotation(tempSocket);
-	parentCore->SetActorRotation(originSocketRot);
 
-	// Temporarily set the parent core's rotation to 0 so that the orientation problem goes away..
-	// then reset the rotation at the end.
+	if(parentCore->IsA<AWedgeConnector>())
+	{
+		// Attach the actor to the parent with the target socket
+		silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
+		
+		// The pitch is always 135 if attaching to a hyp side... otherwise.
+		const float pitch = isDiag? 135.0f : roundRot.Pitch - 90;
+		silhouette->SetRelativeRotation({roundRot.Pitch, 0, 0});
+	}
 
-	// Attach the actor to the parent with the target socket
-	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
+	else
+	{
+		// Temporarily set the parent core's rotation to the socket so that the orientation problem goes away..
+		// then reset the rotation at the end.
+		parentCore->SetActorRotation(originSocketRot);
 
-	// Calculate relative rotation based on parent's rotation
-	const FRotator relativeRot = GetActorRotation() - parentCore->GetActorRotation();
+		// Attach the actor to the parent with the target socket
+		silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
-	// Is the wedge trying to attach from a non-hypotenuse side..?
-	if(!isDiag) silhouette->SetRelativeRotation(RoundRotation(relativeRot) + FRotator(roundRot.Pitch,(raySocket == "DOWN"? 180: 0),0));
-	else silhouette->SetRelativeRotation({135,0,0});
+		// Calculate relative rotation based on parent's rotation
+		const FRotator relativeRot = GetActorRotation() - parentCore->GetActorRotation();
+		
+		// Is the wedge trying to attach from a non-hypotenuse side..?
+		if(!isDiag)
+		{
+			const bool flip = raySocket == "DOWN" && tempSocket != "DIAG";
+			silhouette->SetRelativeRotation(RoundRotation(relativeRot) + FRotator(roundRot.Pitch,flip? 180: 0,0));
+		}
+		else silhouette->SetRelativeRotation({135,0,0});
+	}
 
 	// Only allow directional placement of wedges if....
 	if((!isDiag && above) || canDiagRot)
@@ -102,7 +119,7 @@ void AWedgeConnector::GhostPlacement()
 			silhouette->AddWorldRotation({0, roundedYaw + RoundRotation(parentCore->GetActorForwardVector().Rotation()).Yaw, 0});
 		}
 		
-		else silhouette->SetRelativeRotation({0,0, roundedYaw});
+		else if(flatFace) silhouette->SetRelativeRotation({0,0, roundedYaw});
 	}
 
 	///////////// Location

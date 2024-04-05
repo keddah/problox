@@ -1623,3 +1623,347 @@ Script Stack (0 frames) :
 [2024.04.05-15.34.31:984][843]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
 [2024.04.05-15.34.32:474][844]Display: Reload/Re-instancing Complete: No object changes detected
 [2024.04.05-15.34.32:474][844]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.36.02:391][660]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.36.04:820][667]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_70.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_70.exp
+[2024.04.05-15.36.05:259][669]LogUObjectHash: Compacting FUObjectHashTables data took   1.60ms
+[2024.04.05-15.36.05:762][670]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.36.05:762][670]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.36.33:595][150]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.36.36:124][157]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_71.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_71.exp
+[2024.04.05-15.36.36:617][159]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.04.05-15.36.37:070][160]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.36.37:070][160]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.41.33:587][245]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.41.35:780][252]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_72.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_72.exp
+[2024.04.05-15.41.36:154][253]LogUObjectHash: Compacting FUObjectHashTables data took   1.54ms
+[2024.04.05-15.41.36:657][254]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.41.36:657][254]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.42.02:526][548]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.42.05:013][555]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_73.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_73.exp
+[2024.04.05-15.42.05:234][556]LogUObjectHash: Compacting FUObjectHashTables data took   1.69ms
+[2024.04.05-15.42.05:702][557]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.42.05:702][557]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.42.39:604][553]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.42.42:053][560]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_74.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_74.exp
+[2024.04.05-15.42.42:277][561]LogUObjectHash: Compacting FUObjectHashTables data took   2.11ms
+[2024.04.05-15.42.42:709][562]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.42.42:709][562]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.43.14:655][965]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.43.17:139][972]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_75.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_75.exp
+[2024.04.05-15.43.17:359][973]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2024.04.05-15.43.17:861][974]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.43.17:861][974]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.43.36:071][922]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.43.38:536][930]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_76.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_76.exp
+[2024.04.05-15.43.38:946][931]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
+[2024.04.05-15.43.39:411][932]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.43.39:412][932]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.45.15:600][408]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.45.17:763][415]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_77.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_77.exp
+[2024.04.05-15.45.18:126][416]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2024.04.05-15.45.18:629][417]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.45.18:629][417]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.46.12:715][287]LogSlate: Took 0.004466 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.04.05-15.46.12:788][290]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.05-15.46.13:863][387]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/StarterContent/Shapes/Wedge.Wedge
+[2024.04.05-15.46.13:875][387]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.05-15.46.13:875][387]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.05-15.46.14:346][387]LogViewport: Scene viewport resized to 1405x902, mode Windowed.
+[2024.04.05-15.48.19:566][ 39]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.48.22:054][ 47]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_78.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_78.exp
+[2024.04.05-15.48.22:470][ 48]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2024.04.05-15.48.22:974][ 49]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.48.22:974][ 49]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.48.39:798][793]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.48.42:269][801]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_79.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_79.exp
+[2024.04.05-15.48.42:694][802]LogUObjectHash: Compacting FUObjectHashTables data took   1.79ms
+[2024.04.05-15.48.43:148][803]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.48.43:148][803]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.49.27:503][674]LogEditorTransaction: Undo Edit X
+[2024.04.05-15.49.50:246][700]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.49.52:464][707]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_80.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_80.exp
+[2024.04.05-15.49.52:810][708]LogUObjectHash: Compacting FUObjectHashTables data took   1.96ms
+[2024.04.05-15.49.53:304][709]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.49.53:304][709]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.50.32:897][882]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.50.34:223][886]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.50.34:223][886]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2024.04.05-15.50.51:358][ 46]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.50.53:792][ 53]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_81.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_81.exp
+[2024.04.05-15.50.53:997][ 54]LogUObjectHash: Compacting FUObjectHashTables data took   2.34ms
+[2024.04.05-15.50.54:488][ 55]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.50.54:488][ 55]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.51.20:773][208]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.51.23:344][216]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_82.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_82.exp
+[2024.04.05-15.51.23:673][217]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2024.04.05-15.51.24:127][218]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.51.24:127][218]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.52.29:018][928]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.52.31:539][935]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_83.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_83.exp
+[2024.04.05-15.52.31:690][936]LogUObjectHash: Compacting FUObjectHashTables data took   2.14ms
+[2024.04.05-15.52.32:184][937]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.52.32:185][937]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.52.55:186][345]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.52.57:618][353]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_84.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_84.exp
+[2024.04.05-15.52.58:067][354]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2024.04.05-15.52.58:382][355]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.52.58:382][355]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.53.25:636][866]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.53.28:192][874]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_85.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_85.exp
+[2024.04.05-15.53.28:542][875]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2024.04.05-15.53.29:007][876]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.53.29:007][876]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.54.23:298][626]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.54.25:781][653]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_86.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_86.exp
+[2024.04.05-15.54.25:920][655]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2024.04.05-15.54.26:219][656]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.54.26:219][656]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.56.11:635][823]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.56.14:198][831]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_87.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_87.exp
+[2024.04.05-15.56.14:459][832]LogUObjectHash: Compacting FUObjectHashTables data took   1.79ms
+[2024.04.05-15.56.14:954][833]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.56.14:954][833]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.56.47:111][790]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.56.48:820][796]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.56.48:820][796]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2024.04.05-15.56.53:038][808]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.56.55:538][818]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_88.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_88.exp
+[2024.04.05-15.56.55:960][819]LogUObjectHash: Compacting FUObjectHashTables data took   2.07ms
+[2024.04.05-15.56.56:474][820]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.56.56:474][820]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.58.50:961][986]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.58.53:134][993]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_89.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_89.exp
+[2024.04.05-15.58.53:479][994]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2024.04.05-15.58.53:976][995]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.58.53:976][995]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-15.59.50:125][292]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-15.59.52:566][299]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_90.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_90.exp
+[2024.04.05-15.59.52:756][300]LogUObjectHash: Compacting FUObjectHashTables data took   2.30ms
+[2024.04.05-15.59.53:202][301]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-15.59.53:202][301]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.00.07:810][345]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.00.10:288][353]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_91.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_91.exp
+[2024.04.05-16.00.10:742][354]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.04.05-16.00.11:199][355]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.00.11:199][355]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.00.29:067][409]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.00.31:604][417]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_92.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_92.exp
+[2024.04.05-16.00.32:072][418]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2024.04.05-16.00.32:543][419]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.00.32:543][419]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.01.19:115][381]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.01.21:579][389]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_93.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_93.exp
+[2024.04.05-16.01.22:002][390]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
+[2024.04.05-16.01.22:494][391]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.01.22:494][391]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.02.18:487][203]LogSlate: Took 0.000099 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.04.05-16.02.19:536][313]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.19:537][313]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.19:537][313]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/Cascade/BackgroundCube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.21:390][529]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/BackgroundCube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/BackgroundCube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.21:432][534]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.21:490][541]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.23:359][745]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/AnimTreeEd_PreviewFloor.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/AnimTreeEd_PreviewFloor.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.24:160][840]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/TextureBasedWPO/DemoBoxMesh.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/TextureBasedWPO/DemoBoxMesh.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.24:160][840]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/AssetViewer/Floor_Mesh.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorMeshes/AssetViewer/Floor_Mesh.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.02.24:160][840]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/WorldMovementGrid/PlaneMesh.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/WorldMovementGrid/PlaneMesh.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.04.05-16.04.19:757][932]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.20:007][932]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.20:251][932]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.20:493][932]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.21:804][981]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.22:518][ 11]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.22:911][ 19]LogEditorTransaction: Undo Edit Z
+[2024.04.05-16.04.23:416][ 35]LogEditorTransaction: Undo Edit X
+[2024.04.05-16.04.23:942][ 52]LogEditorTransaction: Undo Edit Z
+[2024.04.05-16.04.24:514][ 72]LogEditorTransaction: Undo Edit X
+[2024.04.05-16.04.25:024][ 88]LogEditorTransaction: Undo Edit X
+[2024.04.05-16.04.25:662][104]LogEditorTransaction: Undo Edit X
+[2024.04.05-16.04.26:548][146]LogEditorTransaction: Undo Edit Z
+[2024.04.05-16.04.27:174][170]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.27:524][175]LogEditorTransaction: Undo Edit Y
+[2024.04.05-16.04.27:834][177]LogEditorTransaction: Undo Edit Z
+[2024.04.05-16.04.28:475][202]LogEditorTransaction: Undo Set Vector Property
+[2024.04.05-16.04.29:228][234]LogEditorTransaction: Undo Edit Preview Static Mesh
+[2024.04.05-16.04.32:179][400]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.05-16.04.32:194][400]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/StarterContent/Shapes/Wedge" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Wedge.uasset" SILENT=true
+[2024.04.05-16.04.32:203][400]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.007573 seconds
+[2024.04.05-16.04.32:217][400]LogSavePackage: Moving output files for package: /Game/StarterContent/Shapes/Wedge
+[2024.04.05-16.04.32:218][400]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WedgeA68A711041DB8C828242378E2C8D8CF5.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/StarterContent/Shapes/Wedge.uasset'
+[2024.04.05-16.04.32:221][400]LogFileHelpers: InternalPromptForCheckoutAndSave took 42 ms
+[2024.04.05-16.04.32:222][400]AssetCheck: New page: Asset Save: Wedge
+[2024.04.05-16.04.32:222][400]LogContentValidation: Display: Validating /Script/Engine.StaticMesh /Game/StarterContent/Shapes/Wedge.Wedge
+[2024.04.05-16.04.41:653][493]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:05.150 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 3147 files in 4627 folders with total size 1064 MiB.
+[2024.04.05-16.13.19:803][ 47]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.13.22:388][ 55]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_94.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_94.exp
+[2024.04.05-16.13.22:713][ 56]LogUObjectHash: Compacting FUObjectHashTables data took   2.27ms
+[2024.04.05-16.13.23:219][ 57]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.13.23:219][ 57]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.14.09:380][484]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.14.11:973][491]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_95.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_95.exp
+[2024.04.05-16.14.12:437][493]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2024.04.05-16.14.12:925][494]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.14.12:925][494]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.14.35:410][408]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.14.37:974][416]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_96.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_96.exp
+[2024.04.05-16.14.38:305][417]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2024.04.05-16.14.38:809][418]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.14.38:809][418]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.15.17:261][ 44]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.15.18:065][ 47]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.15.18:065][ 47]LogLiveCoding: Display: Live coding succeeded, no code changes detected
+[2024.04.05-16.17.12:835][117]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.17.14:362][122]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.17.14:362][122]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2024.04.05-16.17.34:570][281]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.17.37:132][288]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_97.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_97.exp
+[2024.04.05-16.17.37:340][289]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
+[2024.04.05-16.17.37:820][290]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.17.37:820][290]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.19.09:588][936]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.19.12:313][958]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_98.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_98.exp
+[2024.04.05-16.19.12:506][959]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2024.04.05-16.19.12:989][960]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.19.12:989][960]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.19.35:003][841]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.19.37:240][872]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_99.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_99.exp
+[2024.04.05-16.19.37:711][873]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2024.04.05-16.19.38:151][874]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.19.38:151][874]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.19.55:026][406]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.19.57:507][421]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_100.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_100.exp
+[2024.04.05-16.19.57:646][423]LogUObjectHash: Compacting FUObjectHashTables data took   1.55ms
+[2024.04.05-16.19.58:165][424]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.19.58:165][424]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.20.21:547][259]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.20.24:012][267]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_101.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_101.exp
+[2024.04.05-16.20.24:452][268]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.04.05-16.20.24:914][269]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.20.24:914][269]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.20.45:907][129]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.20.48:385][136]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_102.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_102.exp
+[2024.04.05-16.20.48:634][137]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2024.04.05-16.20.49:109][138]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.20.49:109][138]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.22.23:374][791]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.22.25:828][798]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_103.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_103.exp
+[2024.04.05-16.22.26:011][799]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
+[2024.04.05-16.22.26:518][800]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.22.26:518][800]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.22.39:631][276]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.22.42:313][284]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_104.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_104.exp
+[2024.04.05-16.22.42:631][285]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2024.04.05-16.22.42:931][286]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.22.42:931][286]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.23.14:087][899]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.23.16:515][906]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_105.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_105.exp
+[2024.04.05-16.23.16:869][907]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2024.04.05-16.23.17:350][908]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.23.17:350][908]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.23.30:893][294]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.23.33:365][302]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_106.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_106.exp
+[2024.04.05-16.23.33:797][303]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2024.04.05-16.23.34:271][304]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.23.34:271][304]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.24.43:132][180]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.24.45:467][187]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_107.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_107.exp
+[2024.04.05-16.24.45:815][188]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2024.04.05-16.24.46:307][189]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.24.46:307][189]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.26.03:171][438]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.05-16.26.03:171][438]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Sandbox
+[2024.04.05-16.26.03:172][438]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.05-16.26.03:179][438]LogWorld: UWorld::CleanupWorld for Sandbox, bSessionEnded=true, bCleanupResources=true
+[2024.04.05-16.26.03:184][438]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.05-16.26.03:188][438]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.05-16.26.03:192][438]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.05-16.26.03:203][438]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2024.04.05-16.26.03:206][438]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.04.05-16.26.03:209][438]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.04.05-16.26.03:249][438]LogUObjectHash: Compacting FUObjectHashTables data took   1.75ms
+[2024.04.05-16.26.03:457][439]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2024.04.05-16.27.14:281][652]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.27.16:899][660]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_108.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_108.exp
+[2024.04.05-16.27.17:231][661]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2024.04.05-16.27.17:752][662]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.27.17:752][662]LogLiveCoding: Display: Live coding succeeded
+[2024.04.05-16.27.20:341][924]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.05-16.27.20:351][924]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.05-16.27.20:351][924]PIE: New page: PIE session: Sandbox (5 Apr 2024, 18:27:20)
+[2024.04.05-16.27.20:358][924]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Sandbox
+[2024.04.05-16.27.20:385][924]LogPlayLevel: PIE: StaticDuplicateObject took: (0.027163s)
+[2024.04.05-16.27.20:385][924]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Sandbox.Sandbox to /Game/UEDPIE_0_Sandbox.Sandbox (0.027240s)
+[2024.04.05-16.27.20:431][924]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.04.05-16.27.20:438][924]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.05-16.27.20:438][924]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.05-16.27.20:438][924]LogAIModule: Creating AISystem for world Sandbox
+[2024.04.05-16.27.20:439][924]LogPlayLevel: PIE: World Init took: (0.001102s)
+[2024.04.05-16.27.20:439][924]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.04.05-16.27.20:439][924]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.05-16.27.20:439][924]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.05-16.27.20:439][924]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.05-16.27.20:439][924]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.05-16.27.20:439][924]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.04.05-16.27.20:439][924]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.05-16.27.20:439][924]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.04.05-16.27.20:439][924]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.05-16.27.20:439][924]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.05-16.27.20:439][924]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.05-16.27.20:440][924]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.05-16.27.20:441][924]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.05-16.27.20:458][924]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.04.05-16.27.20:458][924]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.05-16.27.20:458][924]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.05-16.27.20:458][924]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.05-16.27.20:459][924]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.04.05-16.27.20:459][924]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2024.04.05-16.27.20:460][924]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.04.05-16.27.20:460][924]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.04.05-16.27.20:460][924]LogInit: FAudioDevice initialized with ID 3.
+[2024.04.05-16.27.20:460][924]LogAudio: Display: Audio Device (ID: 3) registered with world 'Sandbox'.
+[2024.04.05-16.27.20:460][924]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2024.04.05-16.27.20:488][924]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.05-16.27.20:488][924]LogLoad: Game class is 'CustomGameMode_C'
+[2024.04.05-16.27.20:498][924]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_BigBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
+[2024.04.05-16.27.20:500][924]LogStaticMesh: Warning: Invalid material [M_Glass] used on Nanite geometry collection [Chaos_MediumBlock] - forcing default material instead. Only opaque blend mode and a shading model that is not SingleLayerWater is currently supported, [BLEND_Translucent] blend mode and [MSM_DefaultLit] shading model was specified.
+[2024.04.05-16.27.20:502][924]LogWorld: Bringing World /Game/UEDPIE_0_Sandbox.Sandbox up for play (max tick rate 0) at 2024.04.05-17.27.20
+[2024.04.05-16.27.20:502][924]LogWorld: Bringing up level for play took: 0.013381
+[2024.04.05-16.27.20:504][924]LogOnline: OSS: Created online subsystem instance for: :Context_9
+[2024.04.05-16.27.20:505][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:505][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:506][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:506][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:506][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:506][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:506][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:506][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:507][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:507][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:507][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:507][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:507][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:508][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:508][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:508][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:508][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:508][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_17 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:509][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_18 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:509][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_19 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:509][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_20 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:509][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_21 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:510][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_22 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:510][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_23 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:510][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_24 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:510][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_25 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:510][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_26 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:511][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_27 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:511][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_28 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:511][924]LogActor: Warning: BP_Thing_C /Game/UEDPIE_0_Sandbox.Sandbox:PersistentLevel.BP_Thing_C_29 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.04.05-16.27.20:516][924]PIE: Server logged in
+[2024.04.05-16.27.20:517][924]PIE: Play in editor total start time 0.167 seconds.
+[2024.04.05-16.27.20:552][924]LogViewport: Scene viewport resized to 1914x1000, mode Windowed.
+[2024.04.05-16.27.49:180][379]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.05-16.27.51:605][387]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_109.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_109.exp
+[2024.04.05-16.27.51:999][388]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.04.05-16.27.52:489][389]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.05-16.27.52:489][389]LogLiveCoding: Display: Live coding succeeded
