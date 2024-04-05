@@ -48,15 +48,13 @@ void AWedgeConnector::ApplyOffset(const ACubeCore* core)
 
 void AWedgeConnector::GhostPlacement()
 {
-	// Print(FString::SanitizeFloat(appliedYaw), .1f);
-	//Print(FString::SanitizeFloat(GetActorUpVector().Z), 2)
 	if(ghostVisible || isAttached) return;
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(false);
 
-	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
 	///////////// Rotation (ISN'T CONSISTENT)
 	///	ONCE THE TARGET CORE IS ROTATED TO A DIFFERENT ORIENTATION... HORIZONTAL PLACEMENT DOESN'T WORK PROPERLY

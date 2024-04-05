@@ -19,6 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execIsSafe); \
 	DECLARE_FUNCTION(execDeactivateHoming); \
 	DECLARE_FUNCTION(execSetHoming); \
 	DECLARE_FUNCTION(execTeleport);

@@ -186,6 +186,7 @@ void APickupableMaster::GhostPlacement()
 void APickupableMaster::ResetGhost()
 {
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
 	ghostVisible = false;
 }
@@ -233,6 +234,8 @@ void APickupableMaster::Detach()
 
 	parentCore->RemoveAttachment(attachedSocket);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetupAttachment(objMesh);
+	
 	objMesh->SetEnableGravity(true);
 	
 	active = false;
