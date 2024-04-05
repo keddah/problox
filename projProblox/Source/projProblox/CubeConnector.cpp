@@ -169,7 +169,6 @@ void ACubeConnector::GhostPlacement()
 	///	ONCE THE TARGET CORE IS ROTATED TO A DIFFERENT ORIENTATION... HORIZONTAL PLACEMENT DOESN'T WORK PROPERLY
 	///
 	// Only allow directional placement of wedges when they're above the cube / wedge and not on a diagonal face.
-	const bool flatFace = tempSocket != "DIAG";
 	const bool above = parentCore->GetActorLocation().Z + parentCore->GetActorRelativeScale3D().X * 100 <= GetActorLocation().Z;	// 100 = the size of the core 
 	
 	float roundedYaw = RoundRotation( {0, appliedYaw, 0}).Yaw;
@@ -204,9 +203,16 @@ void ACubeConnector::GhostPlacement()
 		if(roundedYaw == 0) roundedYaw = 180;
 		else if(roundedYaw == 180) roundedYaw = 0;
 
-		// Add the rotation the wedge had before doing the attachment (if not the hypotenuse side)...
-		// But don't do this if the attached socket is the diagonal face of a wedge
-		silhouette->SetRelativeRotation(relativeRot + FRotator(-roundRot.Pitch,0,roundedYaw));
+		// Since if it's the top of the core... the up/down sockets have a forward axis that point upwards/downwards.
+		const bool actualUp = abs(UKismetMathLibrary::GetUpVector(socketTransform.GetRotation().Rotator()).X) >= .95f;
+
+		FRotator relativeRelativeRot = relativeRot + FRotator(0,0,roundedYaw);
+		relativeRelativeRot.Pitch = 90;
+		
+		silhouette->SetRelativeRotation(relativeRelativeRot);
+
+		PrintRotator(silhouette->GetComponentRotation(), .2f)
+		
 		// if(flatFace) silhouette->SetRelativeRotation({0,0, roundedYaw});
 	}
 
