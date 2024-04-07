@@ -174,8 +174,6 @@ void ACubeConnector::GhostPlacement()
 	const FRotator currentRot = GetActorRotation();
 	const FRotator roundRot = RoundRotation(currentRot);
 
-	const FRotator originParentRot = parentCore->GetActorRotation();
-	const FRotator originSocketRot = parentMesh->GetSocketRotation(tempSocket);
 
 	// Temporarily set the parent core's rotation to the socket so that the orientation problem goes away..
 	// then reset the rotation at the end.
@@ -184,7 +182,15 @@ void ACubeConnector::GhostPlacement()
 	// Attach the actor to the parent with the target socket
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
-	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), originSocketRot));
+	
+	FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
+	if(above)
+	{
+		const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+		socketRot = socketRot.RotateVector(socketForward).Rotation();
+	}
+	
+	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 	
 	// Ensure the static mesh component is valid
 	// Get the transform of the socket relative to the static mesh component

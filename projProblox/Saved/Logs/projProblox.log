@@ -3774,3 +3774,13 @@ Make sure 'Thing' has been compiled for  Is Safe
 [2024.04.07-10.41.06:421][713]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
 [2024.04.07-10.41.06:797][714]Display: Reload/Re-instancing Complete: 1 package changed, 19 classes unchanged, 28 functions remapped
 [2024.04.07-10.41.06:797][714]LogLiveCoding: Display: Live coding succeeded
+[2024.04.07-10.44.56:411][539]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.07-10.44.58:876][547]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_5.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_5.exp
+[2024.04.07-10.44.59:210][548]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2024.04.07-10.44.59:716][549]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.07-10.44.59:716][549]LogLiveCoding: Display: Live coding succeeded
+[2024.04.07-10.48.17:198][ 46]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.07-10.48.19:760][ 54]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_6.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_6.exp
+[2024.04.07-10.48.19:979][ 55]LogUObjectHash: Compacting FUObjectHashTables data took   2.02ms
+[2024.04.07-10.48.20:484][ 56]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.04.07-10.48.20:484][ 56]LogLiveCoding: Display: Live coding succeeded
