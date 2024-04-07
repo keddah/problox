@@ -154,12 +154,12 @@ protected:
 	static FRotator RoundRotation(const FRotator& Rotation, const FRotator& ReferenceRotation)
 	{
 		// Calculate the difference between the rotations
-		const FRotator differnce = Rotation - ReferenceRotation;
+		const FRotator difference = Rotation - ReferenceRotation;
 
 		// Round the differences to the nearest 90 degrees
-		const float pitchDiff = FMath::RoundToFloat(differnce.Pitch / 90.0f) * 90.0f;
-		const float yawDiff = FMath::RoundToFloat(differnce.Yaw / 90.0f) * 90.0f;
-		const float rollDiff = FMath::RoundToFloat(differnce.Roll / 90.0f) * 90.0f;
+		const float pitchDiff = FMath::RoundToFloat(difference.Pitch / 90.0f) * 90.0f;
+		const float yawDiff = FMath::RoundToFloat(difference.Yaw / 90.0f) * 90.0f;
+		const float rollDiff = FMath::RoundToFloat(difference.Roll / 90.0f) * 90.0f;
 
 		// Add the rounded differences to the reference rotation to get the rounded rotation
 		return ReferenceRotation + FRotator(pitchDiff, yawDiff, rollDiff);

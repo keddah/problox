@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "CubeConnector.h"
+
+#include "WedgeConnector.h"
 #include "Wheel.h"
 
 
@@ -162,17 +163,14 @@ void ACubeConnector::GhostPlacement()
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(false);
 
-	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
 	///////////// Rotation (ISN'T CONSISTENT)
 	///	ONCE THE TARGET CORE IS ROTATED TO A DIFFERENT ORIENTATION... HORIZONTAL PLACEMENT DOESN'T WORK PROPERLY
 	///
 	// Only allow directional placement of wedges when they're above the cube / wedge and not on a diagonal face.
-	const bool above = parentCore->GetActorLocation().Z + parentCore->GetActorRelativeScale3D().X * 100 <= GetActorLocation().Z;	// 100 = the size of the core 
+	const bool above = !parentCore->IsA<AWedgeConnector>() && parentCore->GetActorLocation().Z + parentCore->GetActorRelativeScale3D().X * 100 <= GetActorLocation().Z;	// 100 = the size of the core 
 	
-	float roundedYaw = RoundRotation( {0, appliedYaw, 0}).Yaw;
-	const FRotator currentRot = GetActorRotation();
-	const FRotator roundRot = RoundRotation(currentRot);
 
 
 	// Temporarily set the parent core's rotation to the socket so that the orientation problem goes away..
@@ -182,47 +180,17 @@ void ACubeConnector::GhostPlacement()
 	// Attach the actor to the parent with the target socket
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
-	
+	// Have to realign the socket rotation with another axis
 	FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
 	if(above)
 	{
 		const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
 		socketRot = socketRot.RotateVector(socketForward).Rotation();
+		Print("Above", .2)
 	}
 	
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 	
-	// Ensure the static mesh component is valid
-	// Get the transform of the socket relative to the static mesh component
-	const FTransform socketTransform = parentMesh->GetSocketTransform(tempSocket, RTS_Component);
-
-	// Calculate the rotation offset between the static mesh and the socket
-	const FRotator relativeRot = RoundRotation(currentRot - socketTransform.GetRotation().Rotator());
-
-	
-	// Is the wedge trying to attach from a non-hypotenuse side..?
-	// silhouette->SetRelativeRotation(relativeRot);
-
-	// Only allow directional placement of wedges if....
-	// if(above)
-	// {
-	// 	//Fixes the rotation when the wedge is pointing on the forward axis.
-	// 	if(roundedYaw == 0) roundedYaw = 180;
-	// 	else if(roundedYaw == 180) roundedYaw = 0;
-	//
-	// 	// Since if it's the top of the core... the up/down sockets have a forward axis that point upwards/downwards.
-	// 	const bool actualUp = abs(UKismetMathLibrary::GetUpVector(socketTransform.GetRotation().Rotator()).X) >= .95f;
-	//
-	// 	FRotator relativeRelativeRot = relativeRot + FRotator(0,0,roundedYaw);
-	// 	relativeRelativeRot.Pitch = 90;
-	// 	
-	// 	silhouette->SetRelativeRotation(relativeRelativeRot);
-	//
-	// 	PrintRotator(silhouette->GetComponentRotation(), .2f)
-	// 	
-	// 	// if(flatFace) silhouette->SetRelativeRotation({0,0, roundedYaw});
-	// }
-
 	///////////// Location
 	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
 	attachOffset = distance;
