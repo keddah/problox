@@ -160,7 +160,7 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 // Should only be called in the Placement Function at the very end....
 void APickupableMaster::GhostPlacement()
 {
-	if(ghostVisible || isAttached) return;
+	if(!parentCore) return;
 	
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	
@@ -309,9 +309,11 @@ void APickupableMaster::SetSelected(const bool value)
 	if(attachedSocket == NAME_None) return;
 
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	ApplyOffset(parentCore);
 
-	AlignSocketRot();
+	// Using the silhouette's location/rotation to set the actual transform.
+	SetActorRotation(silhouette->GetComponentRotation());
+	SetActorLocation(silhouette->GetComponentLocation());
+	
 	ResetGhost();
 
 	parentCore->AddAttachment(this, attachedSocket);

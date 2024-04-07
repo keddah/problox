@@ -20,6 +20,7 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/WedgeSocketInfo.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Wheel.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Collector.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/CubeConnector.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/CubeSocketInfo.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Glider.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/GrappleHead.cpp"

@@ -55,23 +55,23 @@ void AWedgeConnector::GhostPlacement()
 
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
-	///////////// Rotation 
+	///////////// Rotation
+	///	// WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
+
 	const bool isDiag = raySocket == "DIAG";
 
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
 	// Have to realign the socket rotation with another axis
-	FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
+	const FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
 	FRotator attachRot = RoundRotation(GetActorRotation(), socketRot);
 
 	// When placing on the diagonal face ... can only point in one direction...
-	if(tempSocket == "DIAG") attachRot.Yaw = socketRot.Yaw;  
+	const bool upright = abs(socketRot.Vector().Z) > .95f;
+	if(tempSocket == "DIAG" && !upright) attachRot.Yaw = socketRot.Yaw;  
 	
 	silhouette->SetWorldRotation(attachRot);
 
-	// If the diagonal sides of 2 wedges are trying to attach...
-	if(tempSocket == "DIAG" && isDiag) socketRot = {135,0,0};
-	
 	///////////// Location
 	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
 	attachOffset = isDiag ? distance * .1f : distance;
@@ -185,7 +185,9 @@ void AWedgeConnector::SetSelected(const bool value)
 	// const FRotator roundRot = RoundRotation(currentRot);
 
 	SetActorLocation(silhouette->GetComponentLocation());
-	SetActorRotation(silhouette->GetComponentRotation());
+
+	// WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
+	SetActorRotation(RoundRotation(silhouette->GetComponentRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket)));
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	//
