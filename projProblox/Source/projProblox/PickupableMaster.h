@@ -20,6 +20,8 @@
 #include "PickupableMaster.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+#define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw)); }
+#define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.X) + ", " + "Y: " + FString::SanitizeFloat(x.Y) + ", " + "Z: " + FString::SanitizeFloat(x.Z)); }
 
 class ACubeCore;
 
@@ -109,7 +111,8 @@ protected:
 	/////////////////// FUNCTIONS ///////////////////
 	
 	virtual void Placement();
-
+	FName NearestSocket(const ACubeCore* core, const FHitResult& hit) const;
+	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
 	void ResetGhost();
@@ -148,6 +151,20 @@ protected:
 		return rounded;
 	}
 
+	static FRotator RoundRotation(const FRotator& rotation, const FRotator& referencedRot)
+	{
+		// Calculate the difference between the rotations
+		const FRotator difference = rotation - referencedRot;
+
+		// Round the differences to the nearest 90 degrees
+		const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / 90.0f) * 90.0f;
+		const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / 90.0f) * 90.0f;
+		const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / 90.0f) * 90.0f;
+
+		// Add the rounded differences to the reference rotation to get the rounded rotation
+		return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
+	}
+	
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 
@@ -174,7 +191,7 @@ public:
 	virtual void RemoveVelocity() const;
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
-	virtual void ApplyOffset(ACubeCore* core);
+	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
 	
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
@@ -185,6 +202,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	UStaticMeshComponent* GetMesh() const { return objMesh; }
+	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
 
 	UFUNCTION(BlueprintCallable)
 	virtual void SetSelected(const bool value);

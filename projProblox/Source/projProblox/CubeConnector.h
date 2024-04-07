@@ -19,12 +19,12 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 public:
 	ACubeConnector();
 
-	virtual void ApplyOffset(ACubeCore* core) override;
+	// The parameter is the parentCore
+	virtual void ApplyOffset(const ACubeCore* core) override;
 	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	virtual void Detach() override;
 	virtual void Placement() override;
 	virtual void GhostPlacement() override;
 	virtual void SetHideIndicator(const bool hide) override;

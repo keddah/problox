@@ -14,9 +14,11 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Magnet")
 	bool positive;
 
+	bool magAttached;
+	
 	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* positiveMat;
 	
@@ -28,7 +30,6 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 
 	TArray<AMagnet*> otherMagnets;
 
-	
 public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;

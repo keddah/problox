@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "CubeConnector.h"
+
+#include "WedgeConnector.h"
 #include "Wheel.h"
 
 
@@ -32,7 +33,7 @@ ACubeConnector::ACubeConnector()
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
-void ACubeConnector::ApplyOffset(ACubeCore* core)
+void ACubeConnector::ApplyOffset(const ACubeCore* core)
 {
 	// If it's the actual core use a smaller offset
 	if(core) attachOffset = !core->IsA<ACubeConnector>()? 35 : 50;
@@ -103,7 +104,6 @@ void ACubeConnector::Placement()
 		AActor* hitActor = hit.GetActor();
 		if(!hitActor) continue;
 
-		FName closestSocket = NAME_None;
 
 		if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
 		else
@@ -118,8 +118,6 @@ void ACubeConnector::Placement()
 		if(hitObj->Children.Contains(this)) continue;
 		if(hitObj->IsChildOf(this)) continue;
 		
-		float shortestDistance = 999999;
-
 		// Attempt to cast to the cubecore
 		if(hitObj->IsA<ACubeCore>())
 		{
@@ -127,49 +125,31 @@ void ACubeConnector::Placement()
 
 			// All the previous checks ensure that the cast is valid
 			parentCore = Cast<ACubeCore>(hitObj);
-			const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-
-			for(const auto& socket: coreMesh->GetAllSocketNames())
-			{
-				// If the cube doesn't have an object in its socket...
-				if(parentCore->ObjectInSocket(socket)) continue;
-
-				// Compare the distance between the current socket and this connector's mesh
-				const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
-				
-				// Don't allow the attachment if the socket is out of range.
-				if(distance > placeRange) continue;
-				
-				if(distance < shortestDistance)
-				{
-					shortestDistance = distance;
-					closestSocket = socket;
-				}
-			}
-
+			FName closestSocket = NearestSocket(parentCore, hit);
+			
 			tempSocket = closestSocket;
-			hitObj = nullptr;
+			// hitObj = nullptr;
 			break;
 		}
 
 		// Foreach of the connector's sockets
-		for(const auto& socket: objMesh->GetAllSocketNames())
-		{
-			// If the socket is free...
-			if(ObjectInSocket(socket)) continue;
+		// for(const auto& socket: objMesh->GetAllSocketNames())
+		// {
+		// 	// If the socket is free...
+		// 	if(ObjectInSocket(socket)) continue;
+		//
+		// 	// Compare the distances between the current socket and the impact point
+		// 	const float distance = FVector::Distance(objMesh->GetSocketLocation(socket), hit.ImpactPoint);
+		// 	if(distance < shortestDistance)
+		// 	{
+		// 		shortestDistance = distance;
+		// 		closestSocket = socket;
+		// 	}
+		// }
 
-			// Compare the distances between the current socket and the impact point
-			const float distance = FVector::Distance(objMesh->GetSocketLocation(socket), hit.ImpactPoint);
-			if(distance < shortestDistance)
-			{
-				shortestDistance = distance;
-				closestSocket = socket;
-			}
-		}
-
-		if(closestSocket != NAME_None) tempSocket = closestSocket;
-		parentCore = nullptr;
-		hitObj->SetCore(this);
+		// if(tempSocket != NAME_None) tempSocket = closestSocket;
+		// parentCore = nullptr;
+		// hitObj->SetCore(this);
 		break;
 	}
 
@@ -178,45 +158,33 @@ void ACubeConnector::Placement()
 
 void ACubeConnector::GhostPlacement()
 {
-	if(ghostVisible || isAttached) return;
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	
 	silhouette->SetHiddenInGame(false);
 
-	FRotator alignedRotation = FRotator::ZeroRotator;
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
-	if (raySocket == "FRONT" || raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
-	else if (raySocket == "LEFT") alignedRotation = FRotator(0, -90, 0);
-	else if (raySocket == "RIGHT") alignedRotation = FRotator(0, 90, 0);
-	else if (raySocket == "UP") alignedRotation = FRotator(-90, 180, 0);
-	else if (raySocket == "DOWN") alignedRotation = FRotator(90, 180, 0);
-
-	// Fixes the rotation depending on the orientation of the cube
-	if(abs(parentCore->GetActorUpVector().Z) < .5f)
-	{
-		if(tempSocket == "FRONT" || tempSocket == "BACK") alignedRotation += FRotator(0,0,180);
-		else if (tempSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
-		else if (tempSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
-		else if (tempSocket == "UP" || "DOWN") alignedRotation += FRotator::ZeroRotator;
-	}
-	
-	// Get the current rotation of the actor and round it
-	const FRotator currentRot = {0, appliedYaw, 0};
-	const FRotator roundRot = RoundRotation(currentRot);
+	const bool above = !parentCore->IsA<AWedgeConnector>() && parentCore->GetActorLocation().Z + parentCore->GetActorRelativeScale3D().X * 100 <= GetActorLocation().Z;	// 100 = the size of the core 
 	
 	// Attach the actor to the parent with the target socket
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
-	// The rotation of the socket
-	silhouette->SetRelativeRotation(alignedRotation);
+	// Have to realign the socket rotation with another axis
+	FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
+	if(above)
+	{
+		const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+		socketRot = socketRot.RotateVector(socketForward).Rotation();
+		Print("Above", .2)
+	}
 	
-	attachOffset = !parentCore->IsA<ACubeConnector>()? 35 : 50;
+	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
+	
+	///////////// Location
+	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
+	attachOffset = distance;
 	silhouette->SetRelativeLocation({attachOffset,0,0});
-	
-	// The rotation the cube had before attaching...
-	silhouette->AddWorldRotation({0, roundRot.Yaw + RoundRotation(silhouette->GetComponentRotation()).Yaw, 0});
 }
 
 void ACubeConnector::SetHideIndicator(const bool hide)
@@ -276,12 +244,6 @@ void ACubeConnector::SetupIndicator()
 	SetHideIndicator(true);
 }
 
-void ACubeConnector::Detach()
-{
-	Super::Detach();
-	if(!isAttached) DetachAll(false);
-}
-
 bool ACubeConnector::SetGroupSelected(const bool value)
 {
 	selected = value;
@@ -324,39 +286,12 @@ void ACubeConnector::SetSelected(const bool value)
 	if(!IsValid(parentCore)) return;
 
 	attachedSocket = tempSocket;
-	//////// ROTATION stuff /////////
 	
-	FRotator alignedRotation = FRotator::ZeroRotator;
-
-	if (raySocket == "FRONT" || raySocket == "BACK") alignedRotation = FRotator::ZeroRotator;
-	else if (raySocket == "LEFT") alignedRotation = FRotator(0, -90, 0);
-	else if (raySocket == "RIGHT") alignedRotation = FRotator(0, 90, 0);
-	else if (raySocket == "UP") alignedRotation = FRotator(-90, 180, 0);
-	else if (raySocket == "DOWN") alignedRotation = FRotator(90, 180, 0);
-
-	// Fixes the rotation depending on the orientation of the cube
-	if(abs(parentCore->GetActorUpVector().Z) < .5f)
-	{
-		if(attachedSocket == "FRONT" || attachedSocket == "BACK") alignedRotation += FRotator(0,0,180);
-		else if (attachedSocket == "LEFT") alignedRotation += FRotator(-90,90,0);
-		else if (attachedSocket == "RIGHT") alignedRotation += FRotator(90,90,0);
-		else if (attachedSocket == "UP" || "DOWN") alignedRotation += FRotator::ZeroRotator;
-	}
-	
-	// Get the current rotation of the actor and round it
-	const FRotator currentRot = {0, appliedYaw, 0};
-	const FRotator roundRot = RoundRotation(currentRot);
+	SetActorLocation(silhouette->GetComponentLocation());
+	SetActorRotation(silhouette->GetComponentRotation());
 	
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
-
-	// The rotation of the socket
-	SetActorRelativeRotation(alignedRotation);
-	
-	// The rotation the cube had before attaching...
-	AddActorWorldRotation({0, roundRot.Yaw + RoundRotation(GetActorRotation()).Yaw, 0});
-	
-	ApplyOffset(parentCore);
 	
 	parentCore->AddAttachment(this, attachedSocket);
 }

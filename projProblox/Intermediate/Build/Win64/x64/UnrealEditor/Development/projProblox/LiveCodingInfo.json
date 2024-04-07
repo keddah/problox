@@ -23,7 +23,6 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Collector.cpp.obj",
-			"CubeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
@@ -39,9 +38,10 @@
 			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
-			"Wheel.cpp.obj"
+			"Wheel.cpp.obj",
+			"CubeConnector.cpp.obj",
+			"WedgeConnector.cpp.obj"
 		]
 	}
 }

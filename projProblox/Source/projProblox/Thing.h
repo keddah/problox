@@ -36,6 +36,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	bool IsSafe() const { return safe; }
+	
 private:
 	ACubeCore* core;
 

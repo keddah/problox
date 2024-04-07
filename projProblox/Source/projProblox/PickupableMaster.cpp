@@ -123,30 +123,7 @@ void APickupableMaster::Placement()
 		return;
 	}
 	
-	// objCore has been set to the hit actor.
-	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	
-	float shortestDistance = 9999;
-	FName closestSocket = "None";
-
-	for(int i = 0; i < 2; i++)
-	{
-		for(const auto& socket: coreMesh->GetAllSocketNames())
-		{
-			if(parentCore) if(parentCore->ObjectInSocket(socket)) continue;
-			
-			const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
-
-			// Don't allow the attachment if the socket is out of range.
-			if(distance > placeRange) continue;
-			
-			if(distance < shortestDistance)
-			{
-				shortestDistance = distance;
-				closestSocket = socket;
-			}
-		}
-	}
+	FName closestSocket = NearestSocket(parentCore, hit);
 
 	if(closestSocket != NAME_None) attachedSocket = closestSocket;
 	GhostPlacement();
@@ -155,10 +132,35 @@ void APickupableMaster::Placement()
 	// Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
 }
 
+FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& hit) const
+{
+	float shortestDistance = 999;
+	FName closestSocket;
+	const UStaticMeshComponent* coreMesh = core->GetMesh();
+	
+	for(const auto& socket: coreMesh->GetAllSocketNames())
+	{
+		if(core) if(core->ObjectInSocket(socket)) continue;
+		
+		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+
+		// Don't allow the attachment if the socket is out of range.
+		if(distance > placeRange) continue;
+		
+		if(distance < shortestDistance)
+		{
+			shortestDistance = distance;
+			closestSocket = socket;
+		}
+	}
+
+	return closestSocket;
+}
+
 // Should only be called in the Placement Function at the very end....
 void APickupableMaster::GhostPlacement()
 {
-	if(ghostVisible || isAttached) return;
+	if(!parentCore) return;
 	
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	
@@ -184,6 +186,7 @@ void APickupableMaster::GhostPlacement()
 void APickupableMaster::ResetGhost()
 {
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
 	ghostVisible = false;
 }
@@ -209,6 +212,7 @@ void APickupableMaster::SetupIndicator()
 void APickupableMaster::ResetRotation(const bool resetVelocity)
 {
 	SetActorRotation(defaultRot);
+	appliedYaw = 0;
 	if(resetVelocity) RemoveVelocity();
 }
 
@@ -218,13 +222,10 @@ void APickupableMaster::RemoveVelocity() const
 	objMesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
-void APickupableMaster::ApplyOffset(ACubeCore* core)
-{
-	if(core) SetActorRelativeLocation({attachOffset,0,0});
-}
-
 void APickupableMaster::Detach()
 {
+	ResetGhost();
+	
 	if(!IsValid(parentCore))
 	{
 		Print("Couldnt detach because the core was invalid", 3)
@@ -233,6 +234,8 @@ void APickupableMaster::Detach()
 
 	parentCore->RemoveAttachment(attachedSocket);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetupAttachment(objMesh);
+	
 	objMesh->SetEnableGravity(true);
 	
 	active = false;
@@ -262,9 +265,9 @@ void APickupableMaster::RotateHori(const float axis)
 	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 	appliedYaw += axis * rotSpeed;
 	
-	// Wrap appliedYaw to -360 / 360
-	if (appliedYaw > 360) appliedYaw -= 720;
-	else if (appliedYaw < -360) appliedYaw += 720.0f;
+	// Wrap appliedYaw to -180 / 180
+	if (appliedYaw > 180) appliedYaw -= 360;
+	else if (appliedYaw < -180) appliedYaw += 360;
 }
 
 void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
@@ -279,9 +282,9 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
 		appliedYaw += turn;
 		
-		// Wrap appliedYaw to -360 / 360
-		if (appliedYaw > 360) appliedYaw -= 720;
-		else if (appliedYaw < -360) appliedYaw += 720.0f;
+		// Wrap appliedYaw to -180 / 180
+		if (appliedYaw > 180) appliedYaw -= 360;
+		else if (appliedYaw < -180) appliedYaw += 360;
 		return;
 	}
 
@@ -306,9 +309,11 @@ void APickupableMaster::SetSelected(const bool value)
 	if(attachedSocket == NAME_None) return;
 
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	ApplyOffset(parentCore);
 
-	AlignSocketRot();
+	// Using the silhouette's location/rotation to set the actual transform.
+	SetActorRotation(silhouette->GetComponentRotation());
+	SetActorLocation(silhouette->GetComponentLocation());
+	
 	ResetGhost();
 
 	parentCore->AddAttachment(this, attachedSocket);

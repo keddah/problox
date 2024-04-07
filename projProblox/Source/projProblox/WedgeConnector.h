@@ -14,17 +14,17 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 {
 	GENERATED_BODY()
 	AWedgeConnector();
-	virtual void ApplyOffset(ACubeCore* core) override;
-	
-public:
+	virtual void ApplyOffset(const ACubeCore* core) override;
 	virtual void SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 	virtual void GhostPlacement() override;
-	virtual void Tick(float DeltaSeconds) override;
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupIndicator() override;
 	
+public:
+	
 protected:
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
 	
 };

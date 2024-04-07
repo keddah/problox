@@ -85,7 +85,7 @@ void ACubeCore::DetachAll(const bool push)
 		const float launchForce = obj->GetMass();
 
 		constexpr float maxVelocity = 1000;
-		obj->AddVelocity(launchDir * std::max(launchForce, maxVelocity));
+		obj->AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
 
 	socketInfo->ClearAttachments();
@@ -196,8 +196,12 @@ bool ACubeCore::SetGroupSelected(const bool value)
 float ACubeCore::GetMass() const
 {
 	float mass = objMesh->GetMass();
-	for (const auto& obj : socketInfo->GetAttachments()) mass += obj->GetMass();
 
+	const AActor* self = this;
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for (const auto& obj : children) mass += obj->GetMass();
 	return mass;
 }
 

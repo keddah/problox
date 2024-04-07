@@ -9,16 +9,8 @@ bool UCubeSocketInfo::ObjectInSocket(const FName& socket) const
 {
 	if (socketObjects.IsEmpty()) return false;
 
-	int32 index = 0; // Default to 0 if no match is found
-
 	const FString str_socket = socket.ToString().ToUpper();
-    
-	if (str_socket == sockets[0]) index = 0;
-	else if (str_socket == sockets[1]) index = 1;
-	else if (str_socket == sockets[2]) index = 2;
-	else if (str_socket == sockets[3]) index = 3;
-	else if (str_socket == sockets[4]) index = 4;
-	else if (str_socket == sockets[5]) index = 5;
+	const int index = sockets.Find(FName(str_socket));
 
 	// Check if the index is within bounds and the pointer is valid
 	return socketObjects.IsValidIndex(index) && IsValid(socketObjects[index]);
@@ -54,21 +46,6 @@ FName UCubeSocketInfo::GetOppositeSocket(const FName& origin) const
 // Just hardcode it... 
 FName UCubeSocketInfo::GetOppositeSocket(int index) const
 {
-	//front
-	// if(index == 0) return sockets[3];
-	// //back
-	// if(index == 1) return sockets[2];
-	// //right
-	// if(index == 2) return sockets[0];
-	// //left
-	// if(index == 3) return sockets[1];
-	// //up
-	// if(index == 4) return sockets[5];
-	// //down
-	// if(index == 5) return sockets[4];
-	// return "";
-
-	
 	// if it's the bottom slot....
 	if(sockets.Num() - 1)
 	{
@@ -131,17 +108,8 @@ TArray<FName> UCubeSocketInfo::GetOccupiedSockets() const
 void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 {
 	// Since switches don't work...
-	int32 index;
-
 	const FString str_socket = socket.ToString().ToUpper();
-	
-	if(str_socket == sockets[0]) index = 0;
-	else if(str_socket == sockets[1]) index = 1;
-	else if(str_socket == sockets[2]) index = 2;
-	else if(str_socket == sockets[3]) index = 3;
-	else if(str_socket == sockets[4]) index = 4;
-	else if(str_socket == sockets[5]) index = 5;
-	else index = 0;
+	const int index = sockets.Find(FName(str_socket));
 
 	if(!socketObjects.IsValidIndex(index))
 	{
@@ -154,16 +122,9 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 
 void UCubeSocketInfo::RemoveAttachment(FName socket)
 {
-	int32 index;
 	const FString str_socket = socket.ToString().ToUpper();
+	const int index = sockets.Find(FName(str_socket));
 	
-	if(str_socket == sockets[0]) index = 0;
-	else if(str_socket == sockets[1]) index = 1;
-	else if(str_socket == sockets[2]) index = 2;
-	else if(str_socket == sockets[3]) index = 3;
-	else if(str_socket == sockets[4]) index = 4;
-	else if(str_socket == sockets[5]) index = 5;
-
 	if(!socketObjects.IsValidIndex(index))
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
@@ -205,16 +166,8 @@ APickupableMaster* UCubeSocketInfo::GetObjectInSocket(const FName& name) const
 {
 	if (socketObjects.IsEmpty()) return 0;
 
-	int32 index = 0; // Default to 0 if no match is found
-
-	const FString str_socket = name.ToString().ToUpper();
-    
-	if (str_socket == sockets[0]) index = 0;
-	else if (str_socket == sockets[1]) index = 1;
-	else if (str_socket == sockets[2]) index = 2;
-	else if (str_socket == sockets[3]) index = 3;
-	else if (str_socket == sockets[4]) index = 4;
-	else if (str_socket == sockets[5]) index = 5;
+	const FString socket = name.ToString().ToUpper();
+	const int index = sockets.Find(FName(socket));
 
 	// Check if the index is within bounds and the pointer is valid
 	return socketObjects[index];
