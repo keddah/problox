@@ -84,7 +84,7 @@ void ACubeCore::DetachAll(const bool push)
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
 		const float launchForce = obj->GetMass();
 
-		constexpr float maxVelocity = 1000;
+		constexpr float maxVelocity = 100;
 		obj->AddVelocity(launchDir * std::max(launchForce, maxVelocity));
 	}
 

@@ -151,6 +151,20 @@ protected:
 		return rounded;
 	}
 
+	static FRotator RoundRotation(const FRotator& Rotation, const FRotator& ReferenceRotation)
+	{
+		// Calculate the difference between the rotations
+		const FRotator differnce = Rotation - ReferenceRotation;
+
+		// Round the differences to the nearest 90 degrees
+		const float pitchDiff = FMath::RoundToFloat(differnce.Pitch / 90.0f) * 90.0f;
+		const float yawDiff = FMath::RoundToFloat(differnce.Yaw / 90.0f) * 90.0f;
+		const float rollDiff = FMath::RoundToFloat(differnce.Roll / 90.0f) * 90.0f;
+
+		// Add the rounded differences to the reference rotation to get the rounded rotation
+		return ReferenceRotation + FRotator(pitchDiff, yawDiff, rollDiff);
+	}
+	
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 

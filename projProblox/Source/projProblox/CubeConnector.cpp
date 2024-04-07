@@ -157,7 +157,6 @@ void ACubeConnector::Placement()
 
 void ACubeConnector::GhostPlacement()
 {
-	if(ghostVisible || isAttached) return;
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
@@ -180,11 +179,13 @@ void ACubeConnector::GhostPlacement()
 
 	// Temporarily set the parent core's rotation to the socket so that the orientation problem goes away..
 	// then reset the rotation at the end.
-	parentCore->SetActorRotation(originSocketRot);
+	// parentCore->SetActorRotation(originSocketRot);
 
 	// Attach the actor to the parent with the target socket
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
 
+	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), originSocketRot));
+	
 	// Ensure the static mesh component is valid
 	// Get the transform of the socket relative to the static mesh component
 	const FTransform socketTransform = parentMesh->GetSocketTransform(tempSocket, RTS_Component);
@@ -194,34 +195,34 @@ void ACubeConnector::GhostPlacement()
 
 	
 	// Is the wedge trying to attach from a non-hypotenuse side..?
-	silhouette->SetRelativeRotation(relativeRot);
+	// silhouette->SetRelativeRotation(relativeRot);
 
 	// Only allow directional placement of wedges if....
-	if(above)
-	{
-		//Fixes the rotation when the wedge is pointing on the forward axis.
-		if(roundedYaw == 0) roundedYaw = 180;
-		else if(roundedYaw == 180) roundedYaw = 0;
-
-		// Since if it's the top of the core... the up/down sockets have a forward axis that point upwards/downwards.
-		const bool actualUp = abs(UKismetMathLibrary::GetUpVector(socketTransform.GetRotation().Rotator()).X) >= .95f;
-
-		FRotator relativeRelativeRot = relativeRot + FRotator(0,0,roundedYaw);
-		relativeRelativeRot.Pitch = 90;
-		
-		silhouette->SetRelativeRotation(relativeRelativeRot);
-
-		PrintRotator(silhouette->GetComponentRotation(), .2f)
-		
-		// if(flatFace) silhouette->SetRelativeRotation({0,0, roundedYaw});
-	}
+	// if(above)
+	// {
+	// 	//Fixes the rotation when the wedge is pointing on the forward axis.
+	// 	if(roundedYaw == 0) roundedYaw = 180;
+	// 	else if(roundedYaw == 180) roundedYaw = 0;
+	//
+	// 	// Since if it's the top of the core... the up/down sockets have a forward axis that point upwards/downwards.
+	// 	const bool actualUp = abs(UKismetMathLibrary::GetUpVector(socketTransform.GetRotation().Rotator()).X) >= .95f;
+	//
+	// 	FRotator relativeRelativeRot = relativeRot + FRotator(0,0,roundedYaw);
+	// 	relativeRelativeRot.Pitch = 90;
+	// 	
+	// 	silhouette->SetRelativeRotation(relativeRelativeRot);
+	//
+	// 	PrintRotator(silhouette->GetComponentRotation(), .2f)
+	// 	
+	// 	// if(flatFace) silhouette->SetRelativeRotation({0,0, roundedYaw});
+	// }
 
 	///////////// Location
 	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
 	attachOffset = distance;
 	silhouette->SetRelativeLocation({attachOffset,0,0});
 	
-	parentCore->SetActorRotation(originParentRot);
+	// parentCore->SetActorRotation(originParentRot);
 }
 
 void ACubeConnector::SetHideIndicator(const bool hide)
