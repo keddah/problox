@@ -12,23 +12,27 @@
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_33.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_33.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_34.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_34.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_35.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_35.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_36.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_36.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_37.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_37.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_38.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_38.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_39.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_39.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_40.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_40.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_41.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_41.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_42.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_42.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_43.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_43.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_44.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_44.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_45.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_45.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_46.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_46.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_51.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_51.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_52.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_52.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_53.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_53.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_54.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_54.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_55.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_55.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_56.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_56.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_57.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_57.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_58.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_58.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_59.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_59.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_60.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_60.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_61.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_61.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_62.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_62.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_63.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_63.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_64.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_64.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_65.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_65.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_66.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_66.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_67.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_67.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_68.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_68.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_69.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_69.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Timestamp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Timestamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/projProbloxEditor/Development/projProbloxEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/projProbloxEditor/Development/projProbloxEditor.uhtmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.cpp" afterDir="false" />
@@ -42,8 +46,6 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Makefile.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/CubeCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/CubeCore.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/projProblox/PickupableMaster.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/PickupableMaster.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/projProblox/PickupableMaster.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/PickupableMaster.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/WedgeConnector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/WedgeConnector.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +249,7 @@
       <workItem from="1712152886359" duration="11023000" />
       <workItem from="1712232397037" duration="16063000" />
       <workItem from="1712318593597" duration="17033000" />
-      <workItem from="1712485594767" duration="6515000" />
+      <workItem from="1712485594767" duration="8093000" />
     </task>
     <servers />
   </component>

@@ -196,8 +196,12 @@ bool ACubeCore::SetGroupSelected(const bool value)
 float ACubeCore::GetMass() const
 {
 	float mass = objMesh->GetMass();
-	for (const auto& obj : socketInfo->GetAttachments()) mass += obj->GetMass();
 
+	const AActor* self = this;
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for (const auto& obj : children) mass += obj->GetMass();
 	return mass;
 }
 
