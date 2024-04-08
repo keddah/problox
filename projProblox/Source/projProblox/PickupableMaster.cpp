@@ -23,6 +23,7 @@ APickupableMaster::APickupableMaster()
 	objMesh->SetSimulatePhysics(true);
 	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	objMesh->SetGenerateOverlapEvents(true);
+	objMesh->SetUseCCD(true);
 	// objMesh->SetNotifyRigidBodyCollision(true);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
@@ -90,6 +91,8 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 void APickupableMaster::Placement()
 {
 	if(!selected) return;
+
+	RemoveVelocity();
 	
 	const UWorld* wrld = GetWorld();
 	
@@ -160,8 +163,8 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 // Should only be called in the Placement Function at the very end....
 void APickupableMaster::GhostPlacement()
 {
+	RemoveVelocity();
 	if(!parentCore) return;
-	
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	
 	silhouette->SetHiddenInGame(false);
@@ -237,9 +240,9 @@ void APickupableMaster::Detach()
 	parentCore->RemoveAttachment(attachedSocket);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetupAttachment(objMesh);
-	
+
+	parentCore = 0;
 	objMesh->SetEnableGravity(true);
-	
 	isAttached = false;
 }
 

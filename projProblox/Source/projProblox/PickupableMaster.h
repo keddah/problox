@@ -164,7 +164,7 @@ protected:
 		// Add the rounded differences to the reference rotation to get the rounded rotation
 		return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
 	}
-	
+
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 

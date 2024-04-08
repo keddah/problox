@@ -225,6 +225,8 @@ void ACubeCore::Placement()
 	if(!selected) return;
 	if(ObjectInSocket("Down")) return;
 
+	RemoveVelocity();
+	
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;

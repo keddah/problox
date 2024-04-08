@@ -75,6 +75,8 @@ void AWheel::Detach()
 	wheelAxel->UpdateConstraintFrames();
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	SetParentDominates(false);
+
+	parentCore = 0;
 	isAttached = false;
 }
 

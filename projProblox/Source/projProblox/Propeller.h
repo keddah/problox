@@ -37,6 +37,9 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "The speed the propellers rotate (purely visual)."))
 	float spinSpeed = 22;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "How much the mass of the core affects the force of the propeller (higher number = higher force)."))
+	float massScale = 1000;
 	
 private:
 	virtual void Ability() override;

@@ -48,6 +48,8 @@ void AWedgeConnector::ApplyOffset(const ACubeCore* core)
 
 void AWedgeConnector::GhostPlacement()
 {
+	RemoveVelocity();
+
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);

@@ -27,6 +27,8 @@ void AGlider::Ability()
 
 void AGlider::GhostPlacement()
 {
+	RemoveVelocity();
+
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);

@@ -69,6 +69,8 @@ void ACubeConnector::Placement()
 	if(!canPlace) return;
 	if(!selected) return;
 
+	RemoveVelocity();
+
 	const UWorld* wrld = GetWorld();
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
@@ -158,6 +160,8 @@ void ACubeConnector::Placement()
 
 void ACubeConnector::GhostPlacement()
 {
+	RemoveVelocity();
+	
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
