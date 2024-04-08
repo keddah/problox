@@ -29,7 +29,6 @@
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Magnet.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
@@ -41,7 +40,8 @@
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
-			"Grappler.cpp.obj"
+			"Grappler.cpp.obj",
+			"PickupableMaster.cpp.obj"
 		]
 	}
 }

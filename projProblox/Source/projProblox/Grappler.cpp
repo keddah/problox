@@ -72,6 +72,7 @@ void AGrappler::Ability()
 	// Set the owner and ensure the grapple hook always spawns...
 
 	// Spawn and set the hook
+	//??? CAN'T GET WORLD..
 	UWorld* wrld = GetWorld();
 	hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
