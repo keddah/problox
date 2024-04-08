@@ -99,8 +99,6 @@ projProblox/Saved/*
 *.opendb
 *.opensdf
 *.sdf
-# Solution Files
-*.sln
 
 # VSCode Cache Directory
 .vscode
