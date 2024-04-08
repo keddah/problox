@@ -204,6 +204,16 @@ void APickupableMaster::SetupIndicator()
 {
 	// indicator->SetMaterial(0, Cast<UMaterialInterface>(indicatorMat));
 	indicator->ArrowColor.A = .5f;
+
+	const FVector actorScale = GetActorRelativeScale3D();
+	const FVector indiScale = indicator->GetRelativeScale3D();
+	
+	FVector scale;
+	scale.X = indiScale.X / actorScale.X;
+	scale.Y = indiScale.Y / actorScale.Y;
+	scale.Z = indiScale.Z / actorScale.Z;
+	
+	indicator->SetRelativeScale3D(scale);
 	
 	indicator->ArrowLength = placeRange;
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
