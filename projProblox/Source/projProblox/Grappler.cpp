@@ -22,34 +22,36 @@ AGrappler::AGrappler()
 
 void AGrappler::SetSelected(const bool value)
 {
-	selected = value;
-	SetHideIndicator(!selected);
-
-	if(selected)
-	{
-		Detach();
-		return;
-	}
+	Super::SetSelected(value);
 	
-	if(!IsValid(parentCore)) return;
-	if(attachedSocket == NAME_None) return;
-
-	AttachToActor(parentCore, attachRules, attachedSocket);
-	ApplyOffset(parentCore);
-
-	// The only change from the inherited SetSelected func
-	AlignSocketRot(false);
-	ResetGhost();
-	
-	// The added part.....
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
-	
-	if(!value) return;
-
-	if(!IsValid(hook)) return;
-	hook->Destroy();
-	grappleLine->CableLength = 0;
+	// selected = value;
+	// SetHideIndicator(!selected);
+	//
+	// if(selected)
+	// {
+	// 	Detach();
+	// 	return;
+	// }
+	//
+	// if(!parentCore) return;
+	// if(attachedSocket == NAME_None) return;
+	//
+	// AttachToActor(parentCore, attachRules, attachedSocket);
+	// ApplyOffset(parentCore);
+	//
+	// // The only change from the inherited SetSelected func
+	// AlignSocketRot(false);
+	// ResetGhost();
+	//
+	// // The added part.....
+	// parentCore->AddAttachment(this, attachedSocket);
+	// isAttached = true;
+	//
+	// if(!value) return;
+	//
+	// if(!IsValid(hook)) return;
+	// hook->Destroy();
+	// grappleLine->CableLength = 0;
 }
 
 void AGrappler::Ability()
@@ -70,7 +72,8 @@ void AGrappler::Ability()
 	// Set the owner and ensure the grapple hook always spawns...
 
 	// Spawn and set the hook
-	hook = GetWorld()->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	UWorld* wrld = GetWorld();
+	hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
 
 	// Deactivate so that this doesn't happen repeatedly

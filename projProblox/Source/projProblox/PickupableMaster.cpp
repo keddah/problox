@@ -232,13 +232,14 @@ void APickupableMaster::Detach()
 		return;
 	}
 
+	SetAbilityActive(false);
+	
 	parentCore->RemoveAttachment(attachedSocket);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetupAttachment(objMesh);
 	
 	objMesh->SetEnableGravity(true);
 	
-	active = false;
 	isAttached = false;
 }
 
