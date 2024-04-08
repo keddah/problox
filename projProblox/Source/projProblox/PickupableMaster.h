@@ -220,7 +220,7 @@ public:
 	static void GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray);
 	static void GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray);
 	
-	APickupableMaster* GetParent();
+	virtual APickupableMaster* GetParent();
 	bool IsChildOf(const APickupableMaster* parent);
 
 	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }

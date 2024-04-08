@@ -93,13 +93,10 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	{
 		if(ACubeCore* parentCore = hitCore->GetCore())
 		{
-			Print(parentCore->GetName(), 3)
 			parentCore->DetachAll(true);
 			return;
 		}
 
-		Print("removing", 3)
-		
 		hitCore->DetachAll(true);
 		return;
 	}
@@ -107,7 +104,6 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all.. 
 	if(const APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor()))
 	{
-		Print("pivckuifso", 3)
 		if(ACubeCore* parentCore = obj->GetCore()) parentCore->DetachAll(true);
 	}
 }

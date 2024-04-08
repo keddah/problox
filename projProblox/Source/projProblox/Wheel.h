@@ -20,6 +20,7 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 	virtual void Ability() override;
 	virtual void SetSelected(const bool value) override;
 	virtual void Detach() override;
+	virtual APickupableMaster* GetParent() override;
 	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

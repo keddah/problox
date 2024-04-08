@@ -32,4 +32,7 @@ protected:
 	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "How far the flatHead should extend from the piston shaft."))
 	float pushExtent = 100;
 
+	UPROPERTY(BlueprintReadOnly, Category = "Ability", meta = (ToolTip = "Whether or not the piston head is currently pushing"))
+	bool moving;
+	
 };
