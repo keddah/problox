@@ -28,6 +28,7 @@ PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegat
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_30_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSelectSocket); \
 	DECLARE_FUNCTION(execGetAttachedObjActors); \
 	DECLARE_FUNCTION(execDetachAll); \
 	DECLARE_FUNCTION(execObjectInSocket);

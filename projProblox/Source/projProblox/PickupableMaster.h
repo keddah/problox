@@ -20,6 +20,8 @@
 #include "PickupableMaster.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+#define PrintInt(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::FromInt(x)); }
+#define PrintFloat(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::SanitizeFloat(x)); }
 #define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw)); }
 #define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.X) + ", " + "Y: " + FString::SanitizeFloat(x.Y) + ", " + "Z: " + FString::SanitizeFloat(x.Z)); }
 
@@ -168,7 +170,8 @@ protected:
 	virtual void AlignSocketRot(bool useDirection = true);
 
 	FRotator defaultRot{};
-
+	UMaterial* defaultMat;
+	
 	// Whether or not to use the parent core's socket's forward rotation when attaching...
 	bool snapRot = true;
 	
@@ -217,6 +220,8 @@ public:
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	ACubeCore* GetCore() const { return parentCore; }
 
+	void ResetMaterial() const { objMesh->SetMaterial(0, defaultMat); }
+	
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	TArray<APickupableMaster*> AllObjsInHierarchy();
 

@@ -65,11 +65,7 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 
 void ACubeCore::SetAbilityActive(bool value)
 {
-	const AActor* self = this;
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-	
-	for (const auto& obj : children) obj->SetAbilityActive(value);
+	if(IsValid(selectedObj)) selectedObj->SetAbilityActive(value);
 }
 
 void ACubeCore::DetachAll(const bool push)
@@ -219,6 +215,31 @@ void ACubeCore::AddThing(AActor* _thing) const
 		thing->Teleport(collector->GetCollectPoint());
 		onAddedThing.Broadcast(thing);
 	}
+}
+
+int ACubeCore::SelectSocket(int socket)
+{
+	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	if(objs.IsEmpty()) return -1;
+
+	
+	for (const auto& obj : objs) obj->ResetMaterial();
+	
+	// Set socket to -1 if the first element is the same element
+	if(objs.Find(selectedObj) == socket && socket == 0) socket = objs.Num() - 1;
+	if(!objs.IsValidIndex(socket))
+	{
+		PrintInt(socket, 2)
+		
+		if(socket > objs.Num() - 1) socket = objs.Num() - 1;
+		else socket = 0;
+	}
+
+	if(objs.IsValidIndex(socket)) selectedObj = objs[socket];
+	
+	Print(FString::FromInt(socket), 4)
+	selectedObj->GetMesh()->SetMaterial(0, inactiveMat);
+	return socket;
 }
 
 void ACubeCore::OtherGhostPlacement()

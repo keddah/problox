@@ -32,6 +32,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
+	APickupableMaster* selectedObj;
 	
 protected:
 	ACubeCore();
@@ -109,7 +110,6 @@ public:
 		TArray<AActor*> out;
 		GetDescendentsActors(self, out);
 
-		
 		return out;
 	}
 	TArray<APickupableMaster*> GetAttachedObjects() const
@@ -132,4 +132,7 @@ public:
 	FOnOutOfRange onRangeExceeded;
 	
 	bool CanCollect() const { return canCollect; }
+
+	UFUNCTION(BlueprintCallable)
+	int SelectSocket(int socket);
 };

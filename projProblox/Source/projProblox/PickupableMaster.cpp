@@ -50,6 +50,7 @@ void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
 
+	defaultMat = Cast<UMaterial>(objMesh->GetMaterial(0));
 	SetupIndicator();
 }
 
@@ -258,6 +259,8 @@ void APickupableMaster::Detach()
 	}
 
 	SetAbilityActive(false);
+
+	ResetMaterial();
 	
 	parentCore->RemoveAttachment(attachedSocket);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);

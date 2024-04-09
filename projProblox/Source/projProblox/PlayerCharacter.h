@@ -28,7 +28,7 @@ protected:
 	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	bool holding;
 	
-	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Picking up")
 	bool toggleSelection = false;
 
 	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
