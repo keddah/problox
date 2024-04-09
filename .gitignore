@@ -83,6 +83,7 @@ DerivedDataCache/*
 
 projProblox/Saved/*
 projProblox/Intermediate/*
+projProblox/Intermediate/Build/*
 
 #################################
 # Visual Studio Generated Files #
