@@ -81,7 +81,7 @@ projProblox/[Bb]uilds
 projProblox/Binaries/*
 DerivedDataCache/*
 
-Saved/*
+projProblox/Saved/*
 projProblox/Intermediate/*
 
 #################################
