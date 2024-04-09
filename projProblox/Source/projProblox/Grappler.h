@@ -5,8 +5,6 @@
 #include "CoreMinimal.h"
 #include "PickupableMaster.h"
 #include "CableComponent.h"
-#include "CubeCore.h"
-#include "GrappleHead.h"
 #include "Grappler.generated.h"
 
 /**

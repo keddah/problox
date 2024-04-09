@@ -21,6 +21,7 @@ void APiston::Ability()
 {
     objMesh->SetHiddenInGame(!active);
 	objMesh->SetCollisionResponseToAllChannels(active? ECR_Block:ECR_Ignore);
+	moving = false;
 	
 	if(!active)
 	{
@@ -32,6 +33,8 @@ void APiston::Ability()
 	const float distance = FVector::Distance(flatHead->GetRelativeLocation(), objMesh->GetRelativeLocation());
 	if(distance > pushExtent) return;
 
+	moving = true;
+	
 	const FVector pushDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 	flatHead->AddWorldOffset(pushDir * pushSpeed);
 

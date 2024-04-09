@@ -23,6 +23,7 @@ APickupableMaster::APickupableMaster()
 	objMesh->SetSimulatePhysics(true);
 	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	objMesh->SetGenerateOverlapEvents(true);
+	objMesh->SetUseCCD(true);
 	// objMesh->SetNotifyRigidBodyCollision(true);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
@@ -49,6 +50,7 @@ void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
 
+	defaultMat = Cast<UMaterial>(objMesh->GetMaterial(0));
 	SetupIndicator();
 }
 
@@ -90,6 +92,8 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 void APickupableMaster::Placement()
 {
 	if(!selected) return;
+
+	RemoveVelocity();
 	
 	const UWorld* wrld = GetWorld();
 	
@@ -160,27 +164,40 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 // Should only be called in the Placement Function at the very end....
 void APickupableMaster::GhostPlacement()
 {
+	RemoveVelocity();
+	
 	if(!parentCore) return;
-	
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	
 	silhouette->SetHiddenInGame(false);
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
 	
+	GetAttachOffset(*parentCore);
 	silhouette->SetRelativeLocation({attachOffset,0,0});
-
+	
 	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+	
+	if(snapRot)
+	{
+		const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
-	FRotator rot;
-	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+		FRotator rot;
+		if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+		else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+		else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
-	// Rotate to match the socket rotation
-	silhouette->SetWorldRotation(rot);
+		// Rotate to match the socket rotation
+		silhouette->SetWorldRotation(rot);
+		return;
+	}
 
-	ghostVisible = true;
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	
+	// Have to realign the socket rotation with another axis
+	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
+	const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+	socketRot = socketRot.RotateVector(socketForward).Rotation();
+	
+	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 }
 
 void APickupableMaster::ResetGhost()
@@ -188,7 +205,6 @@ void APickupableMaster::ResetGhost()
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
-	ghostVisible = false;
 }
 
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -201,6 +217,16 @@ void APickupableMaster::SetupIndicator()
 {
 	// indicator->SetMaterial(0, Cast<UMaterialInterface>(indicatorMat));
 	indicator->ArrowColor.A = .5f;
+
+	const FVector actorScale = GetActorRelativeScale3D();
+	const FVector indiScale = indicator->GetRelativeScale3D();
+	
+	FVector scale;
+	scale.X = indiScale.X / actorScale.X;
+	scale.Y = indiScale.Y / actorScale.Y;
+	scale.Z = indiScale.Z / actorScale.Z;
+	
+	indicator->SetRelativeScale3D(scale);
 	
 	indicator->ArrowLength = placeRange;
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
@@ -232,13 +258,16 @@ void APickupableMaster::Detach()
 		return;
 	}
 
+	SetAbilityActive(false);
+
+	ResetMaterial();
+	
 	parentCore->RemoveAttachment(attachedSocket);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetupAttachment(objMesh);
-	
+
+	parentCore = 0;
 	objMesh->SetEnableGravity(true);
-	
-	active = false;
 	isAttached = false;
 }
 
@@ -323,6 +352,8 @@ void APickupableMaster::SetSelected(const bool value)
 bool APickupableMaster::SetGroupSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
+	
 	canPlace = !selected;
 	
 	return true;

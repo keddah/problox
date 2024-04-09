@@ -20,6 +20,8 @@
 #include "PickupableMaster.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+#define PrintInt(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::FromInt(x)); }
+#define PrintFloat(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::SanitizeFloat(x)); }
 #define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw)); }
 #define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.X) + ", " + "Y: " + FString::SanitizeFloat(x.Y) + ", " + "Z: " + FString::SanitizeFloat(x.Z)); }
 
@@ -104,7 +106,6 @@ protected:
 	FName attachedSocket;
 	
 	bool isAttached;
-	bool ghostVisible;
 	
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	
@@ -124,7 +125,7 @@ protected:
 
 	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
 	virtual void SetupIndicator();
-	
+
 	// Used when attaching to sockets of the cube... Rounds the given rotation to right angles (90 degrees)
 	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true)
 	{
@@ -164,11 +165,15 @@ protected:
 		// Add the rounded differences to the reference rotation to get the rounded rotation
 		return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
 	}
-	
+
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 
 	FRotator defaultRot{};
+	UMaterial* defaultMat;
+	
+	// Whether or not to use the parent core's socket's forward rotation when attaching...
+	bool snapRot = true;
 	
 public:	
 	// Called every frame
@@ -190,9 +195,13 @@ public:
 	virtual void ResetRotation(bool resetVelocity = false);
 	virtual void RemoveVelocity() const;
 
+	bool ShouldSnapRotation() const { return snapRot; }
+	FVector GetPlaceDir() const { return placeDir; }
+	
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
-	
+	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
+
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
 	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }
@@ -211,6 +220,8 @@ public:
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	ACubeCore* GetCore() const { return parentCore; }
 
+	void ResetMaterial() const { objMesh->SetMaterial(0, defaultMat); }
+	
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	TArray<APickupableMaster*> AllObjsInHierarchy();
 
@@ -220,7 +231,7 @@ public:
 	static void GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray);
 	static void GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray);
 	
-	APickupableMaster* GetParent();
+	virtual APickupableMaster* GetParent();
 	bool IsChildOf(const APickupableMaster* parent);
 
 	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }

@@ -20,8 +20,12 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 	virtual void GhostPlacement() override;
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupIndicator() override;
-	
-public:
+	virtual float GetAttachOffset(const APickupableMaster& attachee) override
+	{
+		const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
+		attachOffset = raySocket == "DIAG" ? 0 : distance;
+		return attachOffset;
+	}
 	
 protected:
 	virtual void BeginPlay() override;

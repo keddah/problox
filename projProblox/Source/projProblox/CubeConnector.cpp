@@ -36,7 +36,7 @@ ACubeConnector::ACubeConnector()
 void ACubeConnector::ApplyOffset(const ACubeCore* core)
 {
 	// If it's the actual core use a smaller offset
-	if(core) attachOffset = !core->IsA<ACubeConnector>()? 35 : 50;
+	if(core) GetAttachOffset(*core);
 	
 	Super::ApplyOffset(core);
 }
@@ -44,7 +44,6 @@ void ACubeConnector::ApplyOffset(const ACubeCore* core)
 void ACubeConnector::BeginPlay()
 {
 	placeRange = 100;
-	attachOffset = 5;
 	
 	Super::BeginPlay();
 }
@@ -68,6 +67,8 @@ void ACubeConnector::Placement()
 {
 	if(!canPlace) return;
 	if(!selected) return;
+
+	RemoveVelocity();
 
 	const UWorld* wrld = GetWorld();
 	FCollisionQueryParams collisionParams;
@@ -158,6 +159,8 @@ void ACubeConnector::Placement()
 
 void ACubeConnector::GhostPlacement()
 {
+	RemoveVelocity();
+	
 	if(!parentCore) return;
 
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
@@ -182,9 +185,7 @@ void ACubeConnector::GhostPlacement()
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 	
 	///////////// Location
-	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
-	attachOffset = distance;
-	silhouette->SetRelativeLocation({attachOffset,0,0});
+	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});
 }
 
 void ACubeConnector::SetHideIndicator(const bool hide)
@@ -298,7 +299,11 @@ void ACubeConnector::SetSelected(const bool value)
 
 void ACubeConnector::SetAbilityActive(bool value)
 {
-	// if(!IsValid(parentCore)) return;
-
-	Super::SetAbilityActive(value);
+	if(!IsValid(parentCore)) return;
+	
+	const AActor* self = this;
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for (const auto& obj : children) obj->SetAbilityActive(value);
 }

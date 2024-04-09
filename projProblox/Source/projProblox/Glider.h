@@ -14,8 +14,12 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 {
 	GENERATED_BODY()
 
+	AGlider();
+	
 	virtual void Ability() override;
 
+virtual void GhostPlacement() override;
+	
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float glideSpeed = 2000;

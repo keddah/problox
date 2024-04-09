@@ -32,6 +32,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
+	APickupableMaster* selectedObj;
 	
 protected:
 	ACubeCore();
@@ -61,6 +62,12 @@ protected:
 	
 	UPROPERTY(BlueprintAssignable)
 	FOnAddedThing onAddedThing;
+
+	// Ghost placement except the other object's silhouette is affected 
+	void OtherGhostPlacement();
+
+	// Sets rotations depending on the attachee's type / snapRot variable...
+	void OtherRotations(const APickupableMaster& other);
 	
 	virtual void Placement() override;
 	virtual void ResetRotation(bool resetVelocity) override;
@@ -70,10 +77,10 @@ protected:
 
 	APickupableMaster* hitObj;
 	
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "Collection")
 	ACollector* collector;
 	
-	UPROPERTY(BlueprintReadOnly, meta = (ToolTip = "Whether or not 'Things' are allowed to be collected (pairs with canPickup)..."))
+	UPROPERTY(BlueprintReadOnly, Category = "Colletion", meta = (ToolTip = "Whether or not 'Things' are allowed to be collected (pairs with canPickup)..."))
 	bool canCollect;
 	
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
@@ -103,7 +110,6 @@ public:
 		TArray<AActor*> out;
 		GetDescendentsActors(self, out);
 
-		
 		return out;
 	}
 	TArray<APickupableMaster*> GetAttachedObjects() const
@@ -126,4 +132,7 @@ public:
 	FOnOutOfRange onRangeExceeded;
 	
 	bool CanCollect() const { return canCollect; }
+
+	UFUNCTION(BlueprintCallable)
+	int SelectSocket(int socket);
 };

@@ -3,7 +3,9 @@
 
 #include "CubeCore.h"
 
+#include "CubeConnector.h"
 #include "Thing.h"
+#include "WedgeConnector.h"
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -63,11 +65,7 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 
 void ACubeCore::SetAbilityActive(bool value)
 {
-	const AActor* self = this;
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-	
-	for (const auto& obj : children) obj->SetAbilityActive(value);
+	if(IsValid(selectedObj)) selectedObj->SetAbilityActive(value);
 }
 
 void ACubeCore::DetachAll(const bool push)
@@ -163,11 +161,10 @@ void ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return;
 
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(attachedSocket));
-	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
 	// Rotate to match the socket rotation
-	hitObj->SetActorRotation(rot);
+	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
+	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
 	
 	// Syncing the socket info
 	AddAttachment(hitObj, attachedSocket);
@@ -178,7 +175,6 @@ void ACubeCore::SetSelected(const bool value)
 	if(!hitObj->IsA<AWheel>())
 	{
 		hitObj->AttachToActor(this, attachRules, attachedSocket);
-		hitObj->ApplyOffset(this);
 	}
 	else Cast<AWheel>(hitObj)->Attach(this);
 
@@ -219,12 +215,105 @@ void ACubeCore::AddThing(AActor* _thing) const
 	}
 }
 
+int ACubeCore::SelectSocket(int socket)
+{
+	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	if(objs.IsEmpty()) return -1;
+
+	
+	for (const auto& obj : objs) obj->ResetMaterial();
+	
+	// Set socket to -1 if the first element is the same element
+	if(objs.Find(selectedObj) == socket && socket == 0) socket = objs.Num() - 1;
+	if(!objs.IsValidIndex(socket))
+	{
+		PrintInt(socket, 2)
+		
+		if(socket > objs.Num() - 1) socket = objs.Num() - 1;
+		else socket = 0;
+	}
+
+	if(objs.IsValidIndex(socket)) selectedObj = objs[socket];
+	
+	Print(FString::FromInt(socket), 4)
+	selectedObj->GetMesh()->SetMaterial(0, inactiveMat);
+	return socket;
+}
+
+void ACubeCore::OtherGhostPlacement()
+{
+	RemoveVelocity();
+
+	if(!hitObj) return;
+
+	// The cube core uses the silhouette of the other thing since the other thing is being attached to this. 
+	silhouette = hitObj->GetSilhouette();
+	attachOffset = hitObj->GetAttachOffset(*this);
+	
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	
+	silhouette->SetHiddenInGame(false);
+	silhouette->AttachToComponent(objMesh, ghostRules, "DOWN");
+	
+	silhouette->SetRelativeLocation({hitObj->GetAttachOffset(*this),0,0});
+
+	OtherRotations(*hitObj);
+}
+
+void ACubeCore::OtherRotations(const APickupableMaster& other)
+{
+	if(!IsValid(&other)) return;
+	silhouette = other.GetSilhouette();
+	
+	if(other.IsA<ACubeConnector>())
+	{
+		
+	}
+	else if(other.IsA<AWedgeConnector>())
+	{
+		
+	}
+	else
+	{
+		if(other.ShouldSnapRotation())
+		{
+			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation("DOWN"));
+
+			FRotator rot;
+			const FVector otherPlaceDir = other.GetPlaceDir();
+			
+			if(otherPlaceDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+			else if(otherPlaceDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+			else if(otherPlaceDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+			// Rotate to match the socket rotation
+			silhouette->SetWorldRotation(rot);
+			return;
+		}
+
+		FRotator socketRot = objMesh->GetSocketRotation(attachedSocket);
+		const FBox otherBB = other.GetMesh()->Bounds.GetBox();
+		const float otherHeight = otherBB.Max.Z - otherBB.Min.Z;
+		
+		const bool above = other.GetActorLocation().Z + otherHeight <= GetActorLocation().Z;
+		if(above)
+		{
+			const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+			socketRot = socketRot.RotateVector(socketForward).Rotation();
+		}
+	
+		silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
+	}
+}
+
 void ACubeCore::Placement()
 {
 	if(!canPlace) return;
 	if(!selected) return;
 	if(ObjectInSocket("Down")) return;
 
+	RemoveVelocity();
+	
 	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
@@ -244,6 +333,7 @@ void ACubeCore::Placement()
 	if(!hit.bBlockingHit)
 	{
 		hitObj = 0;
+		ResetGhost();
 		return;
 	}
 
@@ -252,6 +342,7 @@ void ACubeCore::Placement()
 	if(!hitActor)
 	{
 		hitObj = 0;
+		ResetGhost();
 		return;
 	}
 	
@@ -261,6 +352,7 @@ void ACubeCore::Placement()
 	
 	if(!IsValid(hitObj)) return;
 
+	OtherGhostPlacement();
 	attachedSocket = "Down";
 }
 

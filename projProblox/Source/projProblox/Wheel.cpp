@@ -33,6 +33,8 @@ AWheel::AWheel()
 
 void AWheel::Ability()
 {
+	if(selected) RemoveVelocity();
+
 	if(!IsValid(parentCore)) return;
 
 	// const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
@@ -44,6 +46,7 @@ void AWheel::Ability()
 void AWheel::SetSelected(const bool value)
 {
 	selected = value; 
+	GravitySelection();
 	SetHideIndicator(!selected);
 	
 	if(selected)
@@ -75,7 +78,34 @@ void AWheel::Detach()
 	wheelAxel->UpdateConstraintFrames();
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	SetParentDominates(false);
+
+	parentCore = 0;
 	isAttached = false;
+}
+
+APickupableMaster* AWheel::GetParent()
+{
+	FName blank;
+	UPrimitiveComponent* compParent = 0;
+	UPrimitiveComponent* self = 0;
+	wheelAxel->GetConstrainedComponents(self, blank, compParent, blank);
+	
+	// Starts with the thing the wheel is attached to rather than itself...
+	if(AActor* current = compParent->GetOwner())
+	{
+		Print(current->GetName(),3)
+		
+		while (current->GetAttachParentActor() != nullptr)
+		{
+			current = current->GetAttachParentActor();
+		}
+
+		if(APickupableMaster* parent = Cast<APickupableMaster>(current)) return parent;
+	}
+
+	// If the cast fails
+	Print("Didn't find a pickupable object at the top.", 5)
+	return 0;
 }
 
 void AWheel::Attach(ACubeCore* core)

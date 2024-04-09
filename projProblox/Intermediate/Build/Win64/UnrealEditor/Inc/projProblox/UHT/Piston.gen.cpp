@@ -45,6 +45,11 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_pushExtent_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_pushExtent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_moving_MetaData[];
+#endif
+		static void NewProp_moving_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_moving;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -101,11 +106,26 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushExtent = { "pushExtent", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushExtent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Piston.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Whether or not the piston head is currently pushing" },
+#endif
+	};
+#endif
+	void Z_Construct_UClass_APiston_Statics::NewProp_moving_SetBit(void* Obj)
+	{
+		((APiston*)Obj)->moving = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_moving = { "moving", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APiston), &Z_Construct_UClass_APiston_Statics::NewProp_moving_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APiston_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_flatHead,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_pushForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_pushExtent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_moving,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APiston_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APiston>::IsAbstract,
@@ -140,15 +160,15 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APiston);
 	APiston::~APiston() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Piston_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APiston, APiston::StaticClass, TEXT("APiston"), &Z_Registration_Info_UClass_APiston, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APiston), 1281567994U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APiston, APiston::StaticClass, TEXT("APiston"), &Z_Registration_Info_UClass_APiston, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APiston), 363985748U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Piston_h_4026442237(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_4169765911(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
