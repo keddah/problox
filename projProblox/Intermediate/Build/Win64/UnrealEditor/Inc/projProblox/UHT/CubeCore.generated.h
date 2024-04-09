@@ -15,26 +15,26 @@ class AActor;
 #endif
 #define PROJPROBLOX_CubeCore_generated_h
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_21_DELEGATE \
+#define FID_projProblox_Source_projProblox_CubeCore_h_21_DELEGATE \
 PROJPROBLOX_API void FOnOutOfRange_DelegateWrapper(const FMulticastScriptDelegate& OnOutOfRange);
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_25_DELEGATE \
+#define FID_projProblox_Source_projProblox_CubeCore_h_25_DELEGATE \
 PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing, AActor* thing);
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetAttachedObjActors); \
 	DECLARE_FUNCTION(execDetachAll); \
 	DECLARE_FUNCTION(execObjectInSocket);
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_ACCESSORS
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_INCLASS_NO_PURE_DECLS \
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_ACCESSORS
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACubeCore(); \
 	friend struct Z_Construct_UClass_ACubeCore_Statics; \
@@ -43,7 +43,7 @@ public: \
 	DECLARE_SERIALIZER(ACubeCore)
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_ENHANCED_CONSTRUCTORS \
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACubeCore(ACubeCore&&); \
@@ -55,17 +55,17 @@ public: \
 	NO_API virtual ~ACubeCore();
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_27_PROLOG
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_GENERATED_BODY \
+#define FID_projProblox_Source_projProblox_CubeCore_h_27_PROLOG
+#define FID_projProblox_Source_projProblox_CubeCore_h_30_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_ACCESSORS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_INCLASS_NO_PURE_DECLS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h_30_ENHANCED_CONSTRUCTORS \
+	FID_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA \
+	FID_projProblox_Source_projProblox_CubeCore_h_30_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_projProblox_Source_projProblox_CubeCore_h_30_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_projProblox_Source_projProblox_CubeCore_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_projProblox_Source_projProblox_CubeCore_h_30_ACCESSORS \
+	FID_projProblox_Source_projProblox_CubeCore_h_30_INCLASS_NO_PURE_DECLS \
+	FID_projProblox_Source_projProblox_CubeCore_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -73,7 +73,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJPROBLOX_API UClass* StaticClass<class ACubeCore>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_GitHub_FMP_problox_projProblox_Source_projProblox_CubeCore_h
+#define CURRENT_FILE_ID FID_projProblox_Source_projProblox_CubeCore_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
