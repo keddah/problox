@@ -3,6 +3,7 @@
 
 #include "Treads.h"
 
+#include "CubeConnector.h"
 #include "CubeCore.h"
 
 
@@ -15,9 +16,9 @@ ATreads::ATreads()
 
 float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 {
-	if(!selected) return Super::GetAttachOffset(attachee);
+	if(selected) return Super::GetAttachOffset(attachee);
 	
-	attachOffset = 0;
+	attachOffset = attachee.IsA<ACubeConnector>()? 25 : 50;
 	return attachOffset;
 }
 

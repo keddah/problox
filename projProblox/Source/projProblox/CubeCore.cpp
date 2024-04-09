@@ -161,11 +161,10 @@ void ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return;
 
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(attachedSocket));
-	const FRotator rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
 	// Rotate to match the socket rotation
-	hitObj->SetActorRotation(rot);
+	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
+	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
 	
 	// Syncing the socket info
 	AddAttachment(hitObj, attachedSocket);
@@ -176,7 +175,6 @@ void ACubeCore::SetSelected(const bool value)
 	if(!hitObj->IsA<AWheel>())
 	{
 		hitObj->AttachToActor(this, attachRules, attachedSocket);
-		hitObj->ApplyOffset(this);
 	}
 	else Cast<AWheel>(hitObj)->Attach(this);
 
