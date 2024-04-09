@@ -36,6 +36,7 @@ public:
 	
 	void AddAttachment(APickupableMaster* attachment, FName socket);
 	void RemoveAttachment(FName socket);
+	void RemoveAttachment(APickupableMaster* obj);
 	void ClearAttachments() { for(const auto& name : sockets) RemoveAttachment(name);}
 
 	// Use these when an array of only valid elements is wanted

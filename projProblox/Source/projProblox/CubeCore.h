@@ -33,6 +33,9 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void SetCanCollect(bool collectable);
 
 	APickupableMaster* selectedObj;
+
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* line;
 	
 protected:
 	ACubeCore();
@@ -48,6 +51,9 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UMaterial* inactiveMat;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Collection")
+	UMaterialInstance* selectedMat;
 	
 	UMaterial* defaultMat;
 	
@@ -92,6 +98,7 @@ protected:
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
+	virtual void RemoveAttachment(APickupableMaster* obj);
 
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
@@ -101,7 +108,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void DetachAll(bool push = true);
-	void DetachFromSocket(const FName& socket) { RemoveAttachment(socket); }
 	
 	UFUNCTION(BlueprintCallable)
 	TArray<AActor*> GetAttachedObjActors()

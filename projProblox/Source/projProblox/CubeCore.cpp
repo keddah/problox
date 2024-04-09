@@ -59,7 +59,19 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 {
 	Super::RemoveAttachment(socket);
 
+	if(!IsValid(socketInfo))
+	{
+		Print("SocketInfo invalid..... couldn't remove",4)
+		return;
+	}
+	
 	socketInfo->RemoveAttachment(socket);
+	objMesh->SetEnableGravity(true);
+}
+
+void ACubeCore::RemoveAttachment(APickupableMaster* obj)
+{
+	socketInfo->RemoveAttachment(obj);
 	objMesh->SetEnableGravity(true);
 }
 
@@ -217,11 +229,16 @@ void ACubeCore::AddThing(AActor* _thing) const
 
 int ACubeCore::SelectSocket(int socket)
 {
+	if(!IsValid(socketInfo))
+	{
+		Print("Socket info invalid...", 5)
+		return -1;
+	}
+	
 	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
 	if(objs.IsEmpty()) return -1;
 
-	
-	for (const auto& obj : objs) obj->ResetMaterial();
+	for (const auto& obj : objs) if(obj) obj->DeactivateOutline();
 	
 	// Set socket to -1 if the first element is the same element
 	if(objs.Find(selectedObj) == socket && socket == 0) socket = objs.Num() - 1;
@@ -236,7 +253,7 @@ int ACubeCore::SelectSocket(int socket)
 	if(objs.IsValidIndex(socket)) selectedObj = objs[socket];
 	
 	Print(FString::FromInt(socket), 4)
-	selectedObj->GetMesh()->SetMaterial(0, inactiveMat);
+	selectedObj->ActivateOutline(selectedMat);
 	return socket;
 }
 

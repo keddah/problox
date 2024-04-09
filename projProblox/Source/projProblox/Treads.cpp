@@ -16,7 +16,12 @@ ATreads::ATreads()
 
 float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 {
-	if(selected) return Super::GetAttachOffset(attachee);
+	if(selected)
+	{
+		// no offset.
+		attachOffset = 0;
+		return Super::GetAttachOffset(attachee);
+	}
 	
 	attachOffset = attachee.IsA<ACubeConnector>()? 25 : 50;
 	return attachOffset;
@@ -25,8 +30,6 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 void ATreads::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	attachOffset = 0;
 }
 
 void ATreads::Ability()

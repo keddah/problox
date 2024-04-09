@@ -60,6 +60,8 @@ protected:
 
 	// UPROPERTY(EditDefaultsOnly)
 	// UMaterial* indicatorMat;
+
+	UMaterial* silhouetteMat;
 	
 	UPROPERTY(BlueprintReadOnly)
 	bool active;
@@ -200,7 +202,7 @@ public:
 	
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
-	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
+	virtual float GetAttachOffset(const APickupableMaster& attachee) { 	PrintFloat(attachOffset, .2) return attachOffset; }
 
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
@@ -220,7 +222,9 @@ public:
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	ACubeCore* GetCore() const { return parentCore; }
 
-	void ResetMaterial() const { objMesh->SetMaterial(0, defaultMat); }
+	void ResetMaterial() const { silhouette->SetMaterial(0, silhouetteMat); }
+	virtual void ActivateOutline(UMaterialInstance* mat) const;
+	void DeactivateOutline();
 	
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	TArray<APickupableMaster*> AllObjsInHierarchy();

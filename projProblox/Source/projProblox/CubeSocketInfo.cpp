@@ -134,6 +134,18 @@ void UCubeSocketInfo::RemoveAttachment(FName socket)
 	socketObjects[index] = nullptr;
 }
 
+void UCubeSocketInfo::RemoveAttachment(APickupableMaster* obj)
+{
+	if(!IsValid(obj)) return;
+	if(!socketObjects.Contains(obj))
+	{
+		Print("Couldnt remove... obj not found", 5)
+		return;
+	}
+
+	socketObjects.Remove(obj);
+}
+
 TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const
 {
 	TArray<AActor*> output;

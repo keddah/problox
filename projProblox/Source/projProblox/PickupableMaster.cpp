@@ -51,6 +51,7 @@ void APickupableMaster::BeginPlay()
 	Super::BeginPlay();
 
 	defaultMat = Cast<UMaterial>(objMesh->GetMaterial(0));
+	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetupIndicator();
 }
 
@@ -395,6 +396,23 @@ bool APickupableMaster::IsChildOf(const APickupableMaster* parent)
 	}
 
 	return false;
+}
+
+void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
+{
+	silhouette->SetHiddenInGame(false);
+	silhouette->SetMaterial(0, mat);
+
+	silhouette->AttachToComponent(objMesh, ghostRules);
+	
+	silhouette->AddRelativeRotation({0,0,0});
+	silhouette->SetRelativeLocation({0,0,0});
+}
+
+void APickupableMaster::DeactivateOutline()
+{
+	ResetGhost();
+	ResetMaterial();
 }
 
 TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()

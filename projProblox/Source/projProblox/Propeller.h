@@ -21,6 +21,7 @@ public:
 
 	// Needed because the place rotation can be set incorrectly sometimes.
 	virtual void SetSelected(const bool value) override;
+	virtual void ActivateOutline(UMaterialInstance* mat) const override;
 	
 protected:
 	UPROPERTY(VisibleDefaultsOnly)

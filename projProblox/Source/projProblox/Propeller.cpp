@@ -44,6 +44,13 @@ void APropeller::SetSelected(const bool value)
 	isAttached = true;
 }
 
+void APropeller::ActivateOutline(UMaterialInstance* mat) const
+{
+	Super::ActivateOutline(mat);
+
+	silhouette->AddRelativeRotation({0,0,90});
+}
+
 void APropeller::Ability()
 {
 	if(!active) return;
