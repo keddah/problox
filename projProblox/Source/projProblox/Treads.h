@@ -15,7 +15,10 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	GENERATED_BODY()
 
 	ATreads();
-
+	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
+	
+virtual void BeginPlay() override;
+	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UBoxComponent* driveTrigger;

@@ -3,7 +3,9 @@
 
 #include "CubeCore.h"
 
+#include "CubeConnector.h"
 #include "Thing.h"
+#include "WedgeConnector.h"
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -219,6 +221,72 @@ void ACubeCore::AddThing(AActor* _thing) const
 	}
 }
 
+void ACubeCore::OtherGhostPlacement()
+{
+	RemoveVelocity();
+
+	if(!hitObj) return;
+
+	// The cube core uses the silhouette of the other thing since the other thing is being attached to this. 
+	silhouette = hitObj->GetSilhouette();
+	attachOffset = hitObj->GetAttachOffset(*this);
+	
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	
+	silhouette->SetHiddenInGame(false);
+	silhouette->AttachToComponent(objMesh, ghostRules, "DOWN");
+	
+	silhouette->SetRelativeLocation({hitObj->GetAttachOffset(*this),0,0});
+
+	OtherRotations(*hitObj);
+}
+
+void ACubeCore::OtherRotations(const APickupableMaster& other)
+{
+	if(!IsValid(&other)) return;
+	silhouette = other.GetSilhouette();
+	
+	if(other.IsA<ACubeConnector>())
+	{
+		
+	}
+	else if(other.IsA<AWedgeConnector>())
+	{
+		
+	}
+	else
+	{
+		if(other.ShouldSnapRotation())
+		{
+			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation("DOWN"));
+
+			FRotator rot;
+			const FVector otherPlaceDir = other.GetPlaceDir();
+			
+			if(otherPlaceDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+			else if(otherPlaceDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+			else if(otherPlaceDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+			// Rotate to match the socket rotation
+			silhouette->SetWorldRotation(rot);
+			return;
+		}
+
+		FRotator socketRot = objMesh->GetSocketRotation(attachedSocket);
+		const FBox otherBB = other.GetMesh()->Bounds.GetBox();
+		const float otherHeight = otherBB.Max.Z - otherBB.Min.Z;
+		
+		const bool above = other.GetActorLocation().Z + otherHeight <= GetActorLocation().Z;
+		if(above)
+		{
+			const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+			socketRot = socketRot.RotateVector(socketForward).Rotation();
+		}
+	
+		silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
+	}
+}
+
 void ACubeCore::Placement()
 {
 	if(!canPlace) return;
@@ -246,6 +314,7 @@ void ACubeCore::Placement()
 	if(!hit.bBlockingHit)
 	{
 		hitObj = 0;
+		ResetGhost();
 		return;
 	}
 
@@ -254,6 +323,7 @@ void ACubeCore::Placement()
 	if(!hitActor)
 	{
 		hitObj = 0;
+		ResetGhost();
 		return;
 	}
 	
@@ -263,6 +333,7 @@ void ACubeCore::Placement()
 	
 	if(!IsValid(hitObj)) return;
 
+	OtherGhostPlacement();
 	attachedSocket = "Down";
 }
 

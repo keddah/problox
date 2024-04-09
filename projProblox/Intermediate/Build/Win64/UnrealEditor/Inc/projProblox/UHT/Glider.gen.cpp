@@ -118,7 +118,6 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 	{
 		return AGlider::StaticClass();
 	}
-	AGlider::AGlider() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGlider);
 	AGlider::~AGlider() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_Statics

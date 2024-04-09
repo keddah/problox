@@ -10,7 +10,22 @@ ATreads::ATreads()
 {
 	driveTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger"));
 	driveTrigger->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	snapRot = false;
+}
+
+float ATreads::GetAttachOffset(const APickupableMaster& attachee)
+{
+	if(!selected) return Super::GetAttachOffset(attachee);
 	
+	attachOffset = 0;
+	return attachOffset;
+}
+
+void ATreads::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	attachOffset = 0;
 }
 
 void ATreads::Ability()

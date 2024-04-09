@@ -164,26 +164,39 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 void APickupableMaster::GhostPlacement()
 {
 	RemoveVelocity();
+	
 	if(!parentCore) return;
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	
 	silhouette->SetHiddenInGame(false);
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
 	
+	GetAttachOffset(*parentCore);
 	silhouette->SetRelativeLocation({attachOffset,0,0});
-
+	
 	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+	
+	if(snapRot)
+	{
+		const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
-	FRotator rot;
-	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+		FRotator rot;
+		if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+		else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+		else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
 
-	// Rotate to match the socket rotation
-	silhouette->SetWorldRotation(rot);
+		// Rotate to match the socket rotation
+		silhouette->SetWorldRotation(rot);
+		return;
+	}
 
-	ghostVisible = true;
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	
+	// Have to realign the socket rotation with another axis
+	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
+	const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+	socketRot = socketRot.RotateVector(socketForward).Rotation();
+	
+	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 }
 
 void APickupableMaster::ResetGhost()
@@ -191,7 +204,6 @@ void APickupableMaster::ResetGhost()
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
-	ghostVisible = false;
 }
 
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -337,6 +349,8 @@ void APickupableMaster::SetSelected(const bool value)
 bool APickupableMaster::SetGroupSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
+	
 	canPlace = !selected;
 	
 	return true;

@@ -104,7 +104,6 @@ protected:
 	FName attachedSocket;
 	
 	bool isAttached;
-	bool ghostVisible;
 	
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	
@@ -124,7 +123,7 @@ protected:
 
 	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
 	virtual void SetupIndicator();
-	
+
 	// Used when attaching to sockets of the cube... Rounds the given rotation to right angles (90 degrees)
 	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true)
 	{
@@ -169,6 +168,9 @@ protected:
 	virtual void AlignSocketRot(bool useDirection = true);
 
 	FRotator defaultRot{};
+
+	// Whether or not to use the parent core's socket's forward rotation when attaching...
+	bool snapRot = true;
 	
 public:	
 	// Called every frame
@@ -190,9 +192,13 @@ public:
 	virtual void ResetRotation(bool resetVelocity = false);
 	virtual void RemoveVelocity() const;
 
+	bool ShouldSnapRotation() const { return snapRot; }
+	FVector GetPlaceDir() const { return placeDir; }
+	
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
-	
+	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
+
 	// Enable/Disable gravity when selected/deselected
 	UFUNCTION(BlueprintCallable)
 	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }

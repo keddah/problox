@@ -33,6 +33,8 @@ AWheel::AWheel()
 
 void AWheel::Ability()
 {
+	if(selected) RemoveVelocity();
+
 	if(!IsValid(parentCore)) return;
 
 	// const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
@@ -44,6 +46,7 @@ void AWheel::Ability()
 void AWheel::SetSelected(const bool value)
 {
 	selected = value; 
+	GravitySelection();
 	SetHideIndicator(!selected);
 	
 	if(selected)

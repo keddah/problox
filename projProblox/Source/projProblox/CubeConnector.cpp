@@ -36,7 +36,7 @@ ACubeConnector::ACubeConnector()
 void ACubeConnector::ApplyOffset(const ACubeCore* core)
 {
 	// If it's the actual core use a smaller offset
-	if(core) attachOffset = !core->IsA<ACubeConnector>()? 35 : 50;
+	if(core) GetAttachOffset(*core);
 	
 	Super::ApplyOffset(core);
 }
@@ -44,7 +44,6 @@ void ACubeConnector::ApplyOffset(const ACubeCore* core)
 void ACubeConnector::BeginPlay()
 {
 	placeRange = 100;
-	attachOffset = 5;
 	
 	Super::BeginPlay();
 }
@@ -186,9 +185,7 @@ void ACubeConnector::GhostPlacement()
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 	
 	///////////// Location
-	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
-	attachOffset = distance;
-	silhouette->SetRelativeLocation({attachOffset,0,0});
+	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});
 }
 
 void ACubeConnector::SetHideIndicator(const bool hide)

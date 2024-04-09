@@ -29,7 +29,6 @@ void AWedgeConnector::BeginPlay()
 	rightArrow->SetHiddenInGame(true);
 	
 	placeRange = 100;
-	attachOffset = 5;
 
 	socketInfo = NewObject<UWedgeSocketInfo>();
 	AdjustRange();
@@ -40,10 +39,7 @@ void AWedgeConnector::ApplyOffset(const ACubeCore* core)
 	// If it's the actual core use a smaller offset
 	if(!core) return;
 
-	const float distance = core->IsA<ACubeConnector>()? 50 : 25;
-	attachOffset = raySocket == "DIAG" ? distance * .1f : distance;
-
-	SetActorRelativeLocation({attachOffset,0,0});
+	SetActorRelativeLocation({GetAttachOffset(*core),0,0});
 }
 
 void AWedgeConnector::GhostPlacement()
@@ -78,9 +74,7 @@ void AWedgeConnector::GhostPlacement()
 	if(tempSocket == "DIAG" && isDiag) silhouette->SetRelativeRotation({135,0,0});
 
 	///////////// Location
-	const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
-	attachOffset = isDiag ? 0 : distance;
-	silhouette->SetRelativeLocation({attachOffset,0,0});
+	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});
 }
 
 void AWedgeConnector::Tick(float DeltaSeconds)

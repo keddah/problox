@@ -14,6 +14,8 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 {
 	GENERATED_BODY()
 
+	AGlider();
+	
 	virtual void Ability() override;
 
 virtual void GhostPlacement() override;
