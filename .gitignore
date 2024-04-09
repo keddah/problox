@@ -49,7 +49,7 @@ SourceArt/**/*.tga
 Binaries/*
 Plugins/*/Binaries/*
 
-Intermediate/*
+
 Plugins/*/Intermediate/*
 
 # Builds
@@ -80,8 +80,9 @@ projProblox/[Bb]uild
 projProblox/[Bb]uilds
 projProblox/Binaries/*
 DerivedDataCache/*
-projProblox/Intermediate/*
-projProblox/Saved/*
+
+Saved/*
+Intermediate/*
 
 #################################
 # Visual Studio Generated Files #
