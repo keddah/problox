@@ -5,6 +5,8 @@
 
 #include "CubeConnector.h"
 #include "Kismet/GameplayStatics.h"
+#include <Camera/CameraActor.h>
+#include <Camera/CameraComponent.h>
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -20,6 +22,7 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
+	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
 	// Print(IsValid(core)? "core is valid" : "core invalid", 3)
 }
 
@@ -202,4 +205,10 @@ void APlayerCharacter::Deselect()
 
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
+}
+
+void APlayerCharacter::EndGame()
+{
+	Print("GAME ENDEDD", 999999999)
+	gameEnded = true;
 }

@@ -42,8 +42,9 @@ protected:
 	
 	UPROPERTY(BlueprintReadOnly)
 	float mouseDistance = 20000;
-
 	
+	UPROPERTY(BlueprintReadOnly)
+	bool gameEnded = false;
 	
 public:	
 	// Called to bind functionality to input
@@ -52,7 +53,6 @@ public:
 	ACubeCore* GetCore() const { return core; }
 	
 private:
-
 	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void SelectObject(const FHitResult& hit);
 
@@ -67,4 +67,7 @@ private:
 
 	UFUNCTION()
 	void Deselect();
+
+	UFUNCTION()
+	void EndGame();
 };

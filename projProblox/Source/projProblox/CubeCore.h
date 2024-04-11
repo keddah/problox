@@ -19,6 +19,7 @@
 
 // Should be broadcasted when the cube goes too far away from the container.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
 
 // Should be broadcasted when a "Thing" collides with any of the things that are attached to the cube.
 // This has been declared so that a Blueprint function can be called.
@@ -95,6 +96,9 @@ protected:
 	// (since the pivot is at the bottom).
 	void RearrangeSockets();
 
+	UFUNCTION(BlueprintCallable)
+	void EndGame();
+	
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
@@ -136,6 +140,9 @@ public:
 	void AddThing(AActor* thing) const;
 
 	FOnOutOfRange onRangeExceeded;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnGameEnd onGameEnd;
 	
 	bool CanCollect() const { return canCollect; }
 
