@@ -67,4 +67,7 @@ private:
 
 	UFUNCTION()
 	void Deselect();
+
+	UFUNCTION()
+	void EndGame();
 };
