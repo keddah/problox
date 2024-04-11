@@ -22,6 +22,8 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 	virtual void SetupIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override
 	{
+		if(!IsValid(&attachee)) return 0;
+		
 		const float distance = parentCore->IsA<ACubeConnector>()? 50 : 25;
 		attachOffset = raySocket == "DIAG" ? 0 : distance;
 		return attachOffset;

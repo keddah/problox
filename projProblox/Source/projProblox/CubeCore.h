@@ -96,6 +96,9 @@ protected:
 	// (since the pivot is at the bottom).
 	void RearrangeSockets();
 
+	UFUNCTION(BlueprintCallable)
+	void EndGame();
+	
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
@@ -138,11 +141,11 @@ public:
 
 	FOnOutOfRange onRangeExceeded;
 
-	//UFUNCTION(BlueprintAssignable)
+	UPROPERTY(BlueprintAssignable)
 	FOnGameEnd onGameEnd;
 	
 	bool CanCollect() const { return canCollect; }
 
-	UPROPERTY(BlueprintCallable)
+	UFUNCTION(BlueprintCallable)
 	int SelectSocket(int socket);
 };

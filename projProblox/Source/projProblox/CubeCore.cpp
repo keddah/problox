@@ -438,6 +438,12 @@ void ACubeCore::RearrangeSockets()
 	attachedSocket = "Up";
 }
 
+void ACubeCore::EndGame()
+{
+	Print("Ending from cube", 5)
+	onGameEnd.Broadcast();
+}
+
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	attachedSocket = socket;

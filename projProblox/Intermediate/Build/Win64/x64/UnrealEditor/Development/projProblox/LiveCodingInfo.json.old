@@ -4,7 +4,6 @@
 		"Module.projProblox.cpp.obj": [
 			"Collector.cpp.obj",
 			"CubeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
@@ -12,7 +11,6 @@
 			"Magnet.cpp.obj",
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thing.cpp.obj",
@@ -41,7 +39,9 @@
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
-			"Wheel.gen.cpp.obj"
+			"Wheel.gen.cpp.obj",
+			"CubeCore.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }
