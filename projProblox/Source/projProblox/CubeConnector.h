@@ -29,12 +29,7 @@ protected:
 	virtual void GhostPlacement() override;
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupIndicator() override;
-	virtual float GetAttachOffset(const APickupableMaster& attachee) override
-	{
-		const float distance = attachee.IsA<ACubeConnector>()? 50 : 25;
-		attachOffset = distance;
-		return attachOffset;
-	}
+	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* backArrow;

@@ -245,6 +245,19 @@ void ACubeConnector::SetupIndicator()
 	SetHideIndicator(true);
 }
 
+float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
+{
+	float distance;
+
+	if(attachee.IsA<ACubeConnector>()) distance = 52.5f; 
+	else if(attachee.IsA<AWedgeConnector>()) distance = 55;
+	else if(attachee.IsA<ACubeCore>()) distance = 35;
+	else distance = 50;
+
+	attachOffset = distance;
+	return attachOffset;
+}
+
 bool ACubeConnector::SetGroupSelected(const bool value)
 {
 	selected = value;
