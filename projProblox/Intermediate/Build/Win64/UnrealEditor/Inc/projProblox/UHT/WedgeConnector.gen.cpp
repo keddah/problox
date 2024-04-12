@@ -82,9 +82,9 @@ void EmptyLinkFunctionForGeneratedCodeWedgeConnector() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeConnector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AWedgeConnector, AWedgeConnector::StaticClass, TEXT("AWedgeConnector"), &Z_Registration_Info_UClass_AWedgeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWedgeConnector), 863308969U) },
+		{ Z_Construct_UClass_AWedgeConnector, AWedgeConnector::StaticClass, TEXT("AWedgeConnector"), &Z_Registration_Info_UClass_AWedgeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWedgeConnector), 139076204U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeConnector_h_2717141319(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeConnector_h_1392910131(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeConnector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeConnector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

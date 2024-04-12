@@ -63,7 +63,13 @@ void FOnStartGame_DelegateWrapper(const FMulticastScriptDelegate& OnStartGame)
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Should be broadcasted whenever an object is added/removed from this cube\n" },
+#endif
 		{ "ModuleRelativePath", "CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Should be broadcasted whenever an object is added/removed from this cube" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnAttachmentChange__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature_Statics::Function_MetaDataParams) };
@@ -833,7 +839,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	};
 #endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments = { "onChangeAttachments", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onChangeAttachments), Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments_MetaData) }; // 1299479074
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments = { "onChangeAttachments", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onChangeAttachments), Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments_MetaData) }; // 2659535253
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onStartGame_MetaData[] = {
 		{ "ModuleRelativePath", "CubeCore.h" },
@@ -915,9 +921,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1588395342U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 701394743U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_2975172343(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_170177533(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
