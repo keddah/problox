@@ -17,8 +17,12 @@
 #include "CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
+
 // Should be broadcasted when the cube goes too far away from the container.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
 
@@ -102,6 +106,9 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void EndGame() { onGameEnd.Broadcast(); }
+
+	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
+	void StartGame() { onStartGame.Broadcast(); }
 	
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
@@ -137,6 +144,9 @@ public:
 		
 		return out;
 	}
+
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
+	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
 	
 	virtual void SetSelected(const bool value) override;
 	virtual bool SetGroupSelected(const bool value) override;
@@ -148,6 +158,12 @@ public:
 
 	FOnOutOfRange onRangeExceeded;
 
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
+	FOnAttachmentChange onChangeAttachments;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
+	FOnStartGame onStartGame;
+	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
 	FOnGameEnd onGameEnd;
 	

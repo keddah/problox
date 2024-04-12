@@ -67,12 +67,16 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	
 	socketInfo->RemoveAttachment(socket);
 	objMesh->SetEnableGravity(true);
+	onChangeAttachments.Broadcast();
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 {
+	if(!IsValid(obj)) return;
+	
 	socketInfo->RemoveAttachment(obj);
 	objMesh->SetEnableGravity(true);
+	onChangeAttachments.Broadcast();
 }
 
 void ACubeCore::SetAbilityActive(bool value)
@@ -456,4 +460,6 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	socketInfo->AddAttachment(attachment, socket);
 	GravitySelection();
 	isAttached = true;
+
+	onChangeAttachments.Broadcast();
 }

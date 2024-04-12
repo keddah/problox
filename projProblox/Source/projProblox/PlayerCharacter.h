@@ -45,6 +45,9 @@ protected:
 	
 	UPROPERTY(BlueprintReadOnly)
 	bool gameEnded = false;
+
+	UPROPERTY(BlueprintReadOnly, meta = (ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
+	bool buildPhase = true;
 	
 public:	
 	// Called to bind functionality to input
