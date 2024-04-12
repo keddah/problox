@@ -80,6 +80,17 @@ void ACubeCore::SetAbilityActive(bool value)
 	if(IsValid(selectedObj)) selectedObj->SetAbilityActive(value);
 }
 
+void ACubeCore::SetAllAbilityActive(bool value) const
+{
+	const AActor* self = this;
+
+	// The get descendents function ensures that every single thing that is attached to the core (even if it's connected in a chain) is set. 
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for (const auto& obj : children) obj->SetAbilityActive(value);
+}
+
 void ACubeCore::DetachAll(const bool push)
 {
 	if(!socketInfo) return;
@@ -436,12 +447,6 @@ void ACubeCore::RearrangeSockets()
 	}
 
 	attachedSocket = "Up";
-}
-
-void ACubeCore::EndGame()
-{
-	Print("Ending from cube", 5)
-	onGameEnd.Broadcast();
 }
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)

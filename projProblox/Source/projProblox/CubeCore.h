@@ -20,6 +20,7 @@
 // Should be broadcasted when the cube goes too far away from the container.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
 
 // Should be broadcasted when a "Thing" collides with any of the things that are attached to the cube.
 // This has been declared so that a Blueprint function can be called.
@@ -37,6 +38,9 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* line;
+
+	UFUNCTION(BlueprintCallable)
+	void StartEndingGame() { onEndingGame.Broadcast(); }
 	
 protected:
 	ACubeCore();
@@ -97,7 +101,7 @@ protected:
 	void RearrangeSockets();
 
 	UFUNCTION(BlueprintCallable)
-	void EndGame();
+	void EndGame() { onGameEnd.Broadcast(); }
 	
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
@@ -109,6 +113,9 @@ public:
 	TArray<FName> GetFreeSlots() const { return socketInfo->GetFreeSockets(); };
 
 	virtual void SetAbilityActive(bool value) override;
+
+	UFUNCTION(BlueprintCallable, Category = "Ablility")
+	void SetAllAbilityActive(bool value) const;
 
 	UFUNCTION(BlueprintCallable)
 	void DetachAll(bool push = true);
@@ -141,8 +148,11 @@ public:
 
 	FOnOutOfRange onRangeExceeded;
 
-	UPROPERTY(BlueprintAssignable)
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
 	FOnGameEnd onGameEnd;
+	
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
+	FOnEndingGame onEndingGame;
 	
 	bool CanCollect() const { return canCollect; }
 
