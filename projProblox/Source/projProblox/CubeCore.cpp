@@ -9,6 +9,36 @@
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
 
+void ACubeCore::TimedObjectActivation(TArray<int> durations)
+{
+	Print("setting timer", 4)
+ 	TArray<APickupableMaster*> objs = GetCloseAttachments();
+
+	if(objs.IsEmpty())
+	{
+		Print("objects array empty", 6)
+		return;
+	}
+
+	for(int i = 0; i < objs.Num(); i++)
+	{
+		FTimerHandle activationHandle;
+		FTimerHandle deactivationHandle;
+        
+		// Activate the things
+		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
+		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
+
+		// Activate...
+		GetWorld()->GetTimerManager().SetTimer(activationHandle, activateDelegate, durations[i] < 1? .1f : durations[i], false);
+
+		// Deactivate 10 seconds after activation...
+		GetWorld()->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (durations[i] < 1? .1f : durations[i]) + 10, false);
+
+		
+	}
+}
+
 ACubeCore::ACubeCore()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -188,7 +218,8 @@ void ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return;
 
-
+	Print("Added from core", 3)
+	
 	// Rotate to match the socket rotation
 	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
 	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());

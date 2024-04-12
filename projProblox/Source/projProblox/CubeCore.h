@@ -45,6 +45,8 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	UFUNCTION(BlueprintCallable)
 	void StartEndingGame() { onEndingGame.Broadcast(); }
+
+	void TimedObjectActivation(TArray<int> durations);
 	
 protected:
 	ACubeCore();
@@ -108,7 +110,18 @@ protected:
 	void EndGame() { onGameEnd.Broadcast(); }
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
-	void StartGame() { onStartGame.Broadcast(); }
+	void StartGame(const TArray<int>& durations)
+	{
+		// Crashes when the objects are rearranged
+		if(durations.IsEmpty())
+		{
+			Print("Couldn't start game... durations empty", 4)
+			return;
+		}
+		
+		onStartGame.Broadcast();
+		TimedObjectActivation(durations);
+	}
 	
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;

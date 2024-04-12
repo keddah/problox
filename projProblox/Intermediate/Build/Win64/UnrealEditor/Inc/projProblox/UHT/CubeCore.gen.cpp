@@ -262,9 +262,10 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	}
 	DEFINE_FUNCTION(ACubeCore::execStartGame)
 	{
+		P_GET_TARRAY_REF(int32,Z_Param_Out_durations);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->StartGame();
+		P_THIS->StartGame(Z_Param_Out_durations);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execEndGame)
@@ -581,10 +582,31 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	}
 	struct Z_Construct_UFunction_ACubeCore_StartGame_Statics
 	{
+		struct CubeCore_eventStartGame_Parms
+		{
+			TArray<int32> durations;
+		};
+		static const UECodeGen_Private::FIntPropertyParams NewProp_durations_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_durations_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_durations;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ACubeCore_StartGame_Statics::NewProp_durations_Inner = { "durations", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_StartGame_Statics::NewProp_durations_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ACubeCore_StartGame_Statics::NewProp_durations = { "durations", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventStartGame_Parms, durations), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::NewProp_durations_MetaData), Z_Construct_UFunction_ACubeCore_StartGame_Statics::NewProp_durations_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartGame_Statics::NewProp_durations_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartGame_Statics::NewProp_durations,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams[] = {
@@ -594,7 +616,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_StartGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "StartGame", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_StartGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "StartGame", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_StartGame_Statics::CubeCore_eventStartGame_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_StartGame_Statics::CubeCore_eventStartGame_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_ACubeCore_StartGame()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -691,7 +715,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{ &Z_Construct_UFunction_ACubeCore_SelectSocket, "SelectSocket" }, // 3328171643
 		{ &Z_Construct_UFunction_ACubeCore_SetAllAbilityActive, "SetAllAbilityActive" }, // 3569012814
 		{ &Z_Construct_UFunction_ACubeCore_StartEndingGame, "StartEndingGame" }, // 1270518088
-		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 3835327328
+		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 936431929
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -875,9 +899,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 321870370U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1901841926U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_3560571758(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_2103329410(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
