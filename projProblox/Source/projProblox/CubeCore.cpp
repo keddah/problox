@@ -9,7 +9,7 @@
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
 
-void ACubeCore::TimedObjectActivation(TArray<int> durations)
+void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 {
 	Print("setting timer", 4)
  	TArray<APickupableMaster*> objs = GetCloseAttachments();
@@ -20,20 +20,22 @@ void ACubeCore::TimedObjectActivation(TArray<int> durations)
 		return;
 	}
 
+	const UWorld* wrld = GetWorld();
+	
 	for(int i = 0; i < objs.Num(); i++)
 	{
 		FTimerHandle activationHandle;
 		FTimerHandle deactivationHandle;
         
-		// Activate the things
+		// Activate/Deactivate the things
 		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
 		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
 
 		// Activate...
-		GetWorld()->GetTimerManager().SetTimer(activationHandle, activateDelegate, durations[i] < 1? .1f : durations[i], false);
+		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delays[i] < 1? .1f : delays[i], false);
 
-		// Deactivate 10 seconds after activation...
-		GetWorld()->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (durations[i] < 1? .1f : durations[i]) + 10, false);
+		// Deactivate after the delay and duration elapses activation...
+		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
 
 		
 	}

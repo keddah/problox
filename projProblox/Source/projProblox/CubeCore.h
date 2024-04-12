@@ -18,6 +18,8 @@
 #include "CubeCore.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
+
+// Should be broadcasted whenever an object is added/removed from this cube
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
 
 // Should be broadcasted when the cube goes too far away from the container.
@@ -46,7 +48,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	UFUNCTION(BlueprintCallable)
 	void StartEndingGame() { onEndingGame.Broadcast(); }
 
-	void TimedObjectActivation(TArray<int> durations);
+	void TimedObjectActivation(TArray<int> delays, TArray<int> durations);
 	
 protected:
 	ACubeCore();
@@ -110,7 +112,7 @@ protected:
 	void EndGame() { onGameEnd.Broadcast(); }
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
-	void StartGame(const TArray<int>& durations)
+	void StartGame(const TArray<int>& delays, const TArray<int>& durations)
 	{
 		// Crashes when the objects are rearranged
 		if(durations.IsEmpty())
@@ -120,7 +122,7 @@ protected:
 		}
 		
 		onStartGame.Broadcast();
-		TimedObjectActivation(durations);
+		TimedObjectActivation(delays, durations);
 	}
 	
 public:
