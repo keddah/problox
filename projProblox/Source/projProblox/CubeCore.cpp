@@ -9,6 +9,38 @@
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
 
+void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
+{
+	Print("setting timer", 4)
+ 	TArray<APickupableMaster*> objs = GetCloseAttachments();
+
+	if(objs.IsEmpty())
+	{
+		Print("objects array empty", 6)
+		return;
+	}
+
+	const UWorld* wrld = GetWorld();
+	
+	for(int i = 0; i < objs.Num(); i++)
+	{
+		FTimerHandle activationHandle;
+		FTimerHandle deactivationHandle;
+        
+		// Activate/Deactivate the things
+		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
+		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
+
+		// Activate...
+		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delays[i] < 1? .1f : delays[i], false);
+
+		// Deactivate after the delay and duration elapses activation...
+		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
+
+		
+	}
+}
+
 ACubeCore::ACubeCore()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -67,12 +99,16 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	
 	socketInfo->RemoveAttachment(socket);
 	objMesh->SetEnableGravity(true);
+	onChangeAttachments.Broadcast();
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 {
+	if(!IsValid(obj)) return;
+	
 	socketInfo->RemoveAttachment(obj);
 	objMesh->SetEnableGravity(true);
+	onChangeAttachments.Broadcast();
 }
 
 void ACubeCore::SetAbilityActive(bool value)
@@ -184,7 +220,8 @@ void ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return;
 
-
+	Print("Added from core", 3)
+	
 	// Rotate to match the socket rotation
 	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
 	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
@@ -456,4 +493,6 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	socketInfo->AddAttachment(attachment, socket);
 	GravitySelection();
 	isAttached = true;
+
+	onChangeAttachments.Broadcast();
 }

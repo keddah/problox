@@ -17,8 +17,14 @@
 #include "CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
+
+// Should be broadcasted whenever an object is added/removed from this cube
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
+
 // Should be broadcasted when the cube goes too far away from the container.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
 
@@ -41,6 +47,8 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	UFUNCTION(BlueprintCallable)
 	void StartEndingGame() { onEndingGame.Broadcast(); }
+
+	void TimedObjectActivation(TArray<int> delays, TArray<int> durations);
 	
 protected:
 	ACubeCore();
@@ -102,6 +110,20 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void EndGame() { onGameEnd.Broadcast(); }
+
+	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
+	void StartGame(const TArray<int>& delays, const TArray<int>& durations)
+	{
+		// Crashes when the objects are rearranged
+		if(durations.IsEmpty())
+		{
+			Print("Couldn't start game... durations empty", 4)
+			return;
+		}
+		
+		onStartGame.Broadcast();
+		TimedObjectActivation(delays, durations);
+	}
 	
 public:
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
@@ -137,6 +159,9 @@ public:
 		
 		return out;
 	}
+
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
+	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
 	
 	virtual void SetSelected(const bool value) override;
 	virtual bool SetGroupSelected(const bool value) override;
@@ -148,6 +173,12 @@ public:
 
 	FOnOutOfRange onRangeExceeded;
 
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
+	FOnAttachmentChange onChangeAttachments;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
+	FOnStartGame onStartGame;
+	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
 	FOnGameEnd onGameEnd;
 	
