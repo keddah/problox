@@ -1,4 +1,13 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Treads - Code
+* 
+* The code file for one of the pickupable objects. Creates the driveTrigger to check for grounded collisions.
+*
+* PROBLEMS:
+*	(NOT CODE RELATED) The friction of the treads causes it to veer to one side and/or spin out...
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "Treads.h"
@@ -11,6 +20,8 @@ ATreads::ATreads()
 {
 	driveTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger"));
 	driveTrigger->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+
+	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = false;
 }
 
@@ -30,22 +41,15 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 void ATreads::BeginPlay()
 {
 	Super::BeginPlay();
+
+	objMesh->SetLinearDamping(drag);
 }
 
 void ATreads::Ability()
 {
-	Drag();
-
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
 	objMesh->AddForce(GetActorForwardVector() * moveSpeed * 1000);
-}
-
-void ATreads::Drag() const
-{
-	const FVector velocity = objMesh->GetComponentVelocity();
-	const FVector drag = sqrt(velocity.Length()) * velocity * -dragScale;  
-	objMesh->AddForce(drag);
 }

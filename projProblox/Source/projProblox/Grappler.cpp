@@ -20,40 +20,6 @@ AGrappler::AGrappler()
 	grappleLine->NumSegments = 128;
 }
 
-void AGrappler::SetSelected(const bool value)
-{
-	Super::SetSelected(value);
-	
-	// selected = value;
-	// SetHideIndicator(!selected);
-	//
-	// if(selected)
-	// {
-	// 	Detach();
-	// 	return;
-	// }
-	//
-	// if(!parentCore) return;
-	// if(attachedSocket == NAME_None) return;
-	//
-	// AttachToActor(parentCore, attachRules, attachedSocket);
-	// ApplyOffset(parentCore);
-	//
-	// // The only change from the inherited SetSelected func
-	// AlignSocketRot(false);
-	// ResetGhost();
-	//
-	// // The added part.....
-	// parentCore->AddAttachment(this, attachedSocket);
-	// isAttached = true;
-	//
-	// if(!value) return;
-	//
-	// if(!IsValid(hook)) return;
-	// hook->Destroy();
-	// grappleLine->CableLength = 0;
-}
-
 void AGrappler::Ability()
 {
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));

@@ -9,13 +9,8 @@ AThruster::AThruster()
 	thruster->SetupAttachment(objMesh);
 }
 
-void AThruster::Ability()
+void AThruster::BeginPlay()
 {
+	Super::BeginPlay();
 	thruster->ThrustStrength = power * 1000;
-	thruster->SetActive(active);
-}
-
-void AThruster::AlignSocketRot(bool useDirection)
-{
-	Super::AlignSocketRot(false);
 }

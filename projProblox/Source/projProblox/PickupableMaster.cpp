@@ -1,9 +1,12 @@
 /**************************************************************************************************************
 * Pickupable Master - Code
 * 
-* The code file for the parent class of all the moveable things in the game. Gives functionality to the declared functions. Most of these base functions can
+* The code file for the parent class of all the movable things in the game. Gives functionality to the declared functions. Most of these base functions can
 * be modified by inherited classes but functions like rotate and remove velocity are universal.
 * Also creates the actor components that all variations of this class will have... Mesh and collider.
+*
+* PROBLEMS:
+*	.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -24,7 +27,6 @@ APickupableMaster::APickupableMaster()
 	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	objMesh->SetGenerateOverlapEvents(true);
 	objMesh->SetUseCCD(true);
-	// objMesh->SetNotifyRigidBodyCollision(true);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
 	silhouette->SetCollisionResponseToAllChannels(ECR_Ignore);
@@ -55,29 +57,13 @@ void APickupableMaster::BeginPlay()
 	SetupIndicator();
 }
 
-void APickupableMaster::AlignSocketRot(const bool useDirection)
+// Called every frame
+void APickupableMaster::Tick(float DeltaTime)
 {
-	if(!IsValid(parentCore)) return;
-	
-	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+	Super::Tick(DeltaTime);
 
-	FRotator rot;
-	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-
-	const FRotator savedRot = RoundRotation(GetActorRotation());
-	
-	// Rotate to match the socket rotation
-	SetActorRotation(rot);
-
-	if(!useDirection) return;
-	
-	// Do this but just around the forward axis of the socket...
-	if(placeDir.X != 0) AddActorWorldRotation(FRotator(0,0,savedRot.Roll));
-	else if(placeDir.Y != 0) AddActorWorldRotation(FRotator(savedRot.Pitch,0,0));
-	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
+	Ability();
+	Placement();
 }
 
 void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
@@ -89,6 +75,32 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 	// Successful cast???
 	if(Cast<AThing>(OtherActor)) parentCore->AddThing(OtherActor);
 }
+
+
+
+void APickupableMaster::SetupIndicator()
+{
+	// indicator->SetMaterial(0, Cast<UMaterialInterface>(indicatorMat));
+	indicator->ArrowColor.A = .5f;
+
+	const FVector actorScale = GetActorRelativeScale3D();
+	const FVector indiScale = indicator->GetRelativeScale3D();
+	
+	FVector scale;
+	scale.X = indiScale.X / actorScale.X;
+	scale.Y = indiScale.Y / actorScale.Y;
+	scale.Z = indiScale.Z / actorScale.Z;
+	
+	indicator->SetRelativeScale3D(scale);
+	
+	indicator->ArrowLength = placeRange;
+	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
+	indicator->SetRelativeRotation(rot);
+
+	SetHideIndicator(true);
+}
+
+
 
 void APickupableMaster::Placement()
 {
@@ -132,34 +144,6 @@ void APickupableMaster::Placement()
 
 	if(closestSocket != NAME_None) attachedSocket = closestSocket;
 	GhostPlacement();
-
-	// FRotator rot = NormalizeRotation(GetActorRotation());
-	// Print(FString::FromInt(rot.Roll) + ", " + FString::FromInt(rot.Pitch) + ", " + FString::FromInt(rot.Yaw))
-}
-
-FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& hit) const
-{
-	float shortestDistance = 999;
-	FName closestSocket;
-	const UStaticMeshComponent* coreMesh = core->GetMesh();
-	
-	for(const auto& socket: coreMesh->GetAllSocketNames())
-	{
-		if(core) if(core->ObjectInSocket(socket)) continue;
-		
-		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
-
-		// Don't allow the attachment if the socket is out of range.
-		if(distance > placeRange) continue;
-		
-		if(distance < shortestDistance)
-		{
-			shortestDistance = distance;
-			closestSocket = socket;
-		}
-	}
-
-	return closestSocket;
 }
 
 // Should only be called in the Placement Function at the very end....
@@ -201,128 +185,6 @@ void APickupableMaster::GhostPlacement()
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 }
 
-void APickupableMaster::ResetGhost()
-{
-	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
-	silhouette->SetHiddenInGame(true);
-}
-
-void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
-{
-	attachedSocket = socket;
-	isAttached = true;
-}
-
-void APickupableMaster::SetupIndicator()
-{
-	// indicator->SetMaterial(0, Cast<UMaterialInterface>(indicatorMat));
-	indicator->ArrowColor.A = .5f;
-
-	const FVector actorScale = GetActorRelativeScale3D();
-	const FVector indiScale = indicator->GetRelativeScale3D();
-	
-	FVector scale;
-	scale.X = indiScale.X / actorScale.X;
-	scale.Y = indiScale.Y / actorScale.Y;
-	scale.Z = indiScale.Z / actorScale.Z;
-	
-	indicator->SetRelativeScale3D(scale);
-	
-	indicator->ArrowLength = placeRange;
-	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
-	indicator->SetRelativeRotation(rot);
-
-	SetHideIndicator(true);
-}
-
-void APickupableMaster::ResetRotation(const bool resetVelocity)
-{
-	SetActorRotation(defaultRot);
-	appliedYaw = 0;
-	if(resetVelocity) RemoveVelocity();
-}
-
-void APickupableMaster::RemoveVelocity() const
-{
-	objMesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
-	objMesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
-}
-
-void APickupableMaster::Detach()
-{
-	ResetGhost();
-	
-	if(!IsValid(parentCore))
-	{
-		Print("Couldnt detach because the core was invalid", 3)
-		return;
-	}
-
-	SetAbilityActive(false);
-
-	ResetMaterial();
-	
-	parentCore->RemoveAttachment(attachedSocket);
-	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	silhouette->SetupAttachment(objMesh);
-
-	parentCore = 0;
-	objMesh->SetEnableGravity(true);
-	isAttached = false;
-}
-
-// Called every frame
-void APickupableMaster::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	Ability();
-	Placement();
-}
-
-void APickupableMaster::RotateVert(const float axis)
-{
-	if(vertAxis.X != 0) AddActorLocalRotation({0,0, axis * rotSpeed});
-	else if(vertAxis.Y != 0) AddActorLocalRotation({axis * rotSpeed, 0, 0});
-	else if(vertAxis.Z != 0) AddActorLocalRotation({0, axis * rotSpeed, 0});
-}
-
-void APickupableMaster::RotateHori(const float axis)
-{
-	if(horiAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
-	else if(horiAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
-	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
-	appliedYaw += axis * rotSpeed;
-	
-	// Wrap appliedYaw to -180 / 180
-	if (appliedYaw > 180) appliedYaw -= 360;
-	else if (appliedYaw < -180) appliedYaw += 360;
-}
-
-void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
-{
-	const float angle = quarter? 45 : 90;
-	const float turn = keypress == "Q" || keypress == "R"? -angle : angle;
-		
-	if(hori)
-	{
-		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
-		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
-		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-		appliedYaw += turn;
-		
-		// Wrap appliedYaw to -180 / 180
-		if (appliedYaw > 180) appliedYaw -= 360;
-		else if (appliedYaw < -180) appliedYaw += 360;
-		return;
-	}
-
-	if(vertAxis.X != 0) AddActorLocalRotation({0,0, turn});
-	else if(vertAxis.Y != 0) AddActorLocalRotation({turn, 0, 0});
-	else if(vertAxis.Z != 0) AddActorLocalRotation({0, turn, 0});
-}
-
 void APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
@@ -360,43 +222,193 @@ bool APickupableMaster::SetGroupSelected(const bool value)
 	return true;
 }
 
-void APickupableMaster::GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray)
+void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
-	if (!child) return;
-
-	if (AActor* parent = child->GetAttachParentActor())
-	{
-		outArray.Add(parent);
-		// Recursively get ascendants of this parent actor
-		GetAscendantsActors(parent, outArray);
-	}
+	attachedSocket = socket;
+	isAttached = true;
 }
 
-APickupableMaster* APickupableMaster::GetParent()
+void APickupableMaster::Detach()
 {
-	AActor* current = this;
-	while (current->GetAttachParentActor() != nullptr)
+	ResetGhost();
+	
+	if(!IsValid(parentCore))
 	{
-		current = current->GetAttachParentActor();
+		Print("Couldnt detach because the core was invalid", 3)
+		return;
 	}
 
-	if(APickupableMaster* parent = Cast<APickupableMaster>(current)) return parent;
-	// If the cast fails
-	Print("Didn't find a pickupable object at the top.", 5)
-	return 0;
+	SetAbilityActive(false);
+
+	ResetMaterial();
+	
+	parentCore->RemoveAttachment(attachedSocket);
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetupAttachment(objMesh);
+
+	parentCore = 0;
+	objMesh->SetEnableGravity(true);
+	isAttached = false;
 }
 
-bool APickupableMaster::IsChildOf(const APickupableMaster* parent)
+
+FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool negate)
 {
-	AActor* current = this;
-	while (current->GetAttachParentActor() != nullptr)
+	// Quantize each component of the Rotator using Frac and Floor
+	FRotator rounded;
+	const float rounder = negate? -90 : 90;
+		
+	// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
+	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
+	rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
+	rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
+
+	return rounded;
+}
+
+FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const float rounder)
+{
+	// Quantize each component of the Rotator using Frac and Floor
+	FRotator rounded;
+		
+	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
+	rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
+	rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
+
+	return rounded;
+}
+
+FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotator& referencedRot)
+{
+	// Calculate the difference between the rotations
+	const FRotator difference = rotation - referencedRot;
+
+	// Round the differences to the nearest 90 degrees
+	const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / 90.0f) * 90.0f;
+	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / 90.0f) * 90.0f;
+	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / 90.0f) * 90.0f;
+
+	// Add the rounded differences to the reference rotation to get the rounded rotation
+	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
+}
+
+void APickupableMaster::AlignSocketRot(const bool useDirection)
+{
+	if(!IsValid(parentCore)) return;
+	
+	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	const FRotator savedRot = RoundRotation(GetActorRotation());
+	
+	// Rotate to match the socket rotation
+	SetActorRotation(rot);
+
+	if(!useDirection) return;
+	
+	// Do this but just around the forward axis of the socket...
+	if(placeDir.X != 0) AddActorWorldRotation(FRotator(0,0,savedRot.Roll));
+	else if(placeDir.Y != 0) AddActorWorldRotation(FRotator(savedRot.Pitch,0,0));
+	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
+}
+
+void APickupableMaster::ResetRotation(const bool resetVelocity)
+{
+	SetActorRotation(defaultRot);
+	appliedYaw = 0;
+	if(resetVelocity) RemoveVelocity();
+}
+
+void APickupableMaster::RotateVert(const float axis, const float rotSpeed)
+{
+	if(vertAxis.X != 0) AddActorLocalRotation({0,0, axis * rotSpeed});
+	else if(vertAxis.Y != 0) AddActorLocalRotation({axis * rotSpeed, 0, 0});
+	else if(vertAxis.Z != 0) AddActorLocalRotation({0, axis * rotSpeed, 0});
+}
+
+void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
+{
+	if(horiAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
+	else if(horiAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
+	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
+	appliedYaw += axis * rotSpeed;
+	
+	// Wrap appliedYaw to -180 / 180
+	if (appliedYaw > 180) appliedYaw -= 360;
+	else if (appliedYaw < -180) appliedYaw += 360;
+}
+
+void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
+{
+	const float angle = quarter? 45 : 90;
+	const float turn = keypress == "Q" || keypress == "R"? -angle : angle;
+		
+	if(hori)
 	{
-		current = current->GetAttachParentActor();
-		if(current == parent) return true;
+		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
+		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
+		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
+		appliedYaw += turn;
+		
+		// Wrap appliedYaw to -180 / 180
+		if (appliedYaw > 180) appliedYaw -= 360;
+		else if (appliedYaw < -180) appliedYaw += 360;
+		return;
 	}
 
-	return false;
+	if(vertAxis.X != 0) AddActorLocalRotation({0,0, turn});
+	else if(vertAxis.Y != 0) AddActorLocalRotation({turn, 0, 0});
+	else if(vertAxis.Z != 0) AddActorLocalRotation({0, turn, 0});
 }
+
+
+
+FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& hit) const
+{
+	float shortestDistance = 999;
+	FName closestSocket;
+	const UStaticMeshComponent* coreMesh = core->GetMesh();
+	
+	for(const auto& socket: coreMesh->GetAllSocketNames())
+	{
+		if(core) if(core->ObjectInSocket(socket)) continue;
+		
+		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+
+		// Don't allow the attachment if the socket is out of range.
+		if(distance > placeRange) continue;
+		
+		if(distance < shortestDistance)
+		{
+			shortestDistance = distance;
+			closestSocket = socket;
+		}
+	}
+
+	return closestSocket;
+}
+
+
+
+void APickupableMaster::RemoveVelocity() const
+{
+	objMesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
+	objMesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
+}
+
+
+void APickupableMaster::ResetGhost() const
+{
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	silhouette->SetHiddenInGame(true);
+}
+
 
 void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
 {
@@ -409,21 +421,10 @@ void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
 	silhouette->SetRelativeLocation({0,0,0});
 }
 
-void APickupableMaster::DeactivateOutline()
+void APickupableMaster::DeactivateOutline() const
 {
 	ResetGhost();
 	ResetMaterial();
-}
-
-TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
-{
-	TArray<APickupableMaster*> all;
-
-	GetDescendents(this, all);
-	GetAscendants(this, all);
-
-	Print(FString::FromInt(all.Num()), 4);
-	return all;
 }
 
 void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray)
@@ -468,9 +469,58 @@ void APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMas
 		if (APickupableMaster* objParent = Cast<APickupableMaster>(parent))
 		{
 			outArray.Add(objParent);
+			
 			// Recursively get ascendants of this parent actor
 			GetAscendants(parent, outArray);
 		}
 	}
 }
 
+void APickupableMaster::GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray)
+{
+	if (!child) return;
+
+	if (AActor* parent = child->GetAttachParentActor())
+	{
+		outArray.Add(parent);
+		// Recursively get ascendants of this parent actor
+		GetAscendantsActors(parent, outArray);
+	}
+}
+
+TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
+{
+	TArray<APickupableMaster*> all;
+
+	GetDescendents(this, all);
+	GetAscendants(this, all);
+
+	Print(FString::FromInt(all.Num()), 4);
+	return all;
+}
+
+APickupableMaster* APickupableMaster::GetParent()
+{
+	AActor* current = this;
+	while (current->GetAttachParentActor() != nullptr)
+	{
+		current = current->GetAttachParentActor();
+	}
+
+	if(APickupableMaster* parent = Cast<APickupableMaster>(current)) return parent;
+	// If the cast fails
+	Print("Didn't find a pickupable object at the top.", 5)
+	return 0;
+}
+
+bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
+{
+	const AActor* current = this;
+	while (current->GetAttachParentActor() != nullptr)
+	{
+		current = current->GetAttachParentActor();
+		if(current == parent) return true;
+	}
+
+	return false;
+}

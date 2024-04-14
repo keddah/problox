@@ -1,4 +1,15 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Treads - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*	GetAttachedOffset
+*
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -6,33 +17,28 @@
 #include "PickupableMaster.h"
 #include "Treads.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API ATreads : public APickupableMaster
 {
 	GENERATED_BODY()
 
 	ATreads();
+	virtual void BeginPlay() override;
+	
+	virtual void Ability() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
-virtual void BeginPlay() override;
-	
-protected:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UBoxComponent* driveTrigger;
-
-	UPROPERTY(BlueprintReadWrite)
+	
+	/////////////// Ability ///////////////
+	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
 	bool grounded;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float moveSpeed = 7500;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float dragScale = 15;
-
-private:
-	virtual void Ability() override;
-	void Drag() const;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "Overrides the 'Linear damping' value of the objMesh."))
+	float drag = .05f;
+	
 };

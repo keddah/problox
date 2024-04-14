@@ -1,4 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Wheel - Code
+* 
+* The code file for one of the pickupable objects. Overrides the SetSelected and Detach functions and creates it's own attach function since the attaching uses physics
+* constraints in order to allow the wheel to roll.
+*
+* PROBLEMS:
+*	Since it doesn't actually attach to the core/connector in the hierarchy, when using GetDescendents() it isn't found... (causes it to be excluded from the exclusions array)
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "Wheel.h"
@@ -31,22 +41,13 @@ AWheel::AWheel()
 	SetParentDominates(false);
 }
 
-void AWheel::Ability()
-{
-	if(selected) RemoveVelocity();
-
-	if(!IsValid(parentCore)) return;
-
-	// const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
-	// wheelAxel->SetAngularVelocityTarget(-coreVelocity);
-}
-
-
 // The same as the normal function except attachments are managed using the physics constraint.
 void AWheel::SetSelected(const bool value)
 {
 	selected = value; 
 	GravitySelection();
+	wheelAxel->SetActive(!selected);
+	
 	SetHideIndicator(!selected);
 	
 	if(selected)
@@ -67,46 +68,6 @@ void AWheel::SetSelected(const bool value)
 	Attach(parentCore);
 }
 
-void AWheel::Detach()
-{
-	ResetGhost();
-	
-	if(!IsValid(parentCore)) return;
-	
-	parentCore->RemoveAttachment(attachedSocket);
-	wheelAxel->BreakConstraint();
-	wheelAxel->UpdateConstraintFrames();
-	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	SetParentDominates(false);
-
-	parentCore = 0;
-	isAttached = false;
-}
-
-APickupableMaster* AWheel::GetParent()
-{
-	FName blank;
-	UPrimitiveComponent* compParent = 0;
-	UPrimitiveComponent* self = 0;
-	wheelAxel->GetConstrainedComponents(self, blank, compParent, blank);
-	
-	// Starts with the thing the wheel is attached to rather than itself...
-	if(AActor* current = compParent->GetOwner())
-	{
-		Print(current->GetName(),3)
-		
-		while (current->GetAttachParentActor() != nullptr)
-		{
-			current = current->GetAttachParentActor();
-		}
-
-		if(APickupableMaster* parent = Cast<APickupableMaster>(current)) return parent;
-	}
-
-	// If the cast fails
-	Print("Didn't find a pickupable object at the top.", 5)
-	return 0;
-}
 
 void AWheel::Attach(ACubeCore* core)
 {
@@ -131,4 +92,51 @@ void AWheel::Attach(ACubeCore* core)
 	parentCore->AddAttachment(this, attachedSocket);
 	SetParentDominates(false);
 	isAttached = true;
+}
+
+void AWheel::Detach()
+{
+	ResetGhost();
+	
+	if(!IsValid(parentCore)) return;
+	
+	parentCore->RemoveAttachment(attachedSocket);
+	wheelAxel->BreakConstraint();
+	wheelAxel->UpdateConstraintFrames();
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	SetParentDominates(false);
+
+	parentCore = nullptr;
+	isAttached = false;
+}
+
+APickupableMaster* AWheel::GetParent()
+{
+	FName blank;
+	UPrimitiveComponent* compParent;
+	UPrimitiveComponent* self;
+	wheelAxel->GetConstrainedComponents(self, blank, compParent, blank);
+
+	if(!IsValid(compParent))
+	{
+		Print("No valid parent...", 5)
+		return nullptr;
+	}
+	
+	// Starts with the thing the wheel is attached to rather than itself...
+	if(AActor* current = compParent->GetOwner())
+	{
+		Print(current->GetName(),3)
+		
+		while (current->GetAttachParentActor() != nullptr)
+		{
+			current = current->GetAttachParentActor();
+		}
+
+		if(APickupableMaster* parent = Cast<APickupableMaster>(current)) return parent;
+	}
+
+	// If the cast fails
+	Print("Didn't find a pickupable object at the top.", 5)
+	return nullptr;
 }

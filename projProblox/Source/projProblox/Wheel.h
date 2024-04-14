@@ -1,4 +1,16 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Wheel - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*	SetSelected
+*	Detach
+*	GetParent
+*
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 #pragma once
 
@@ -17,18 +29,18 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 
 	AWheel();
 
-	virtual void Ability() override;
+	// Just using this to get to the tick function....
+	virtual void Ability() override { if(selected) RemoveVelocity(); }
+	
 	virtual void SetSelected(const bool value) override;
 	virtual void Detach() override;
 	virtual APickupableMaster* GetParent() override;
 	
-protected:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	USceneComponent* pivot;
 
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* wheelAxel;
-
 
 public:
 	void SetParentDominates(const bool dominate) const
