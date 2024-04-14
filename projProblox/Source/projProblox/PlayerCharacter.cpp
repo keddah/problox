@@ -140,17 +140,24 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 	if(APickupableMaster* hitObj = Cast<APickupableMaster>(hitActor))
 	{
 		selectedObj = hitObj->GetParent();
-		
-		// Prevent the core from being picked up if it's out of range
-		if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
+
+		// If the hitObj (which has already successfully been casted to) is valid...
+		if(IsValid(selectedObj))
 		{
-			if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
+			// Prevent the core from being picked up if it's out of range
+			if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
 			{
-				holding = false;
-				selectedObj = 0;
-				return;
+				if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
+				{
+					holding = false;
+					selectedObj = 0;
+					return;
+				}
 			}
 		}
+
+		// Otherwise just select normally
+		else selectedObj = hitObj;
 
 		if(!IsValid(selectedObj)) return;
 
@@ -169,9 +176,7 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 
 	// Add the things that are connected to the core/connector to the things to ignore
 	ACubeCore* obj = Cast<ACubeCore>(selectedObj);
-
 	exclusions.Append(obj->GetAttachedObjActors());
-	Print(FString::FromInt(exclusions.Num()), 3)
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
