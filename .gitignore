@@ -112,5 +112,5 @@ projProblox/Intermediate/Build/*
 # Miscellaneous Generated Files #
 #################################
 # ADD AS NEED BE
-**/.log
+**/*.log
 **/.pdb
