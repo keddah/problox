@@ -97,9 +97,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Collection", BlueprintReadOnly)
 	float fairBounds = 6500;
 	
-	UPROPERTY(BlueprintAssignable)
-	FOnAddedThing onAddedThing;
-
+	UPROPERTY(VisibleAnywhere, Category = "Collection", meta = (ToolTip = "This arrow should be shown when the cube is too far away from the collector"))
+	UArrowComponent* distanceLine;
+	
 	
 	/////////////// Collection ///////////////
 	UPROPERTY(BlueprintReadOnly, Category = "Collection")
@@ -109,9 +109,14 @@ protected:
 	bool canCollect;
 
 	
+	/////////////// Delegates ///////////////
+	UPROPERTY(BlueprintAssignable)
+	FOnAddedThing onAddedThing;
+	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
 	APickupableMaster* hitObj;
+	
 
 
 ///////////////////////////// Functions /////////////////////////////

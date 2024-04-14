@@ -29,6 +29,12 @@ ACubeCore::ACubeCore()
 	thingCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
 	thingCollector->SetupAttachment(objMesh);
 
+	distanceLine = CreateDefaultSubobject<UArrowComponent>("Line");
+	distanceLine->ArrowSize = 1;
+	distanceLine->ArrowLength = 100;
+	distanceLine->SetRelativeScale3D({1,7,7});
+	distanceLine->SetHiddenInGame(true);
+	
 	placeRange = 50;
 }
 
@@ -466,10 +472,25 @@ void ACubeCore::SetCanPickup(bool can)
 	// Only broadcast when there's a change
 	const bool change = can != canPickup;
 	Super::SetCanPickup(can);
-	
 	SetCanCollect(can || !selected);
 
 	if(!canPickup && change) onRangeExceeded.Broadcast();
+
+	distanceLine->SetHiddenInGame(can);
+	
+	if(can) return;
+	distanceLine->SetWorldLocation(objMesh->GetComponentLocation());
+
+	const FVector thisPos = distanceLine->GetComponentLocation();
+	const FVector collectorPos = collector->GetActorLocation() + FVector(0,0,750);
+	
+	const FRotator lookRot = UKismetMathLibrary::FindLookAtRotation(thisPos, collectorPos);
+	distanceLine->SetWorldRotation(lookRot);
+
+	const float distance = FVector::Distance(collectorPos, thisPos);
+	PrintFloat(distance, .2f)
+	const FVector lineSize = distanceLine->GetRelativeScale3D();
+	distanceLine->SetRelativeScale3D({distance * .01f, lineSize.Y, lineSize.Z});
 }
 
 void ACubeCore::SetCanCollect(bool collectable)

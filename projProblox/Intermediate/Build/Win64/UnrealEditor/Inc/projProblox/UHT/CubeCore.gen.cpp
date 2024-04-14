@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterial_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstance_NoRegister();
@@ -698,9 +699,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_fairBounds;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_onAddedThing_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_distanceLine_MetaData[];
 #endif
-		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onAddedThing;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_distanceLine;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_collector_MetaData[];
 #endif
@@ -710,6 +711,10 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 		static void NewProp_canCollect_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_canCollect;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_onAddedThing_MetaData[];
+#endif
+		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onAddedThing;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_onChangeAttachments_MetaData[];
 #endif
@@ -804,11 +809,16 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds = { "fairBounds", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, fairBounds), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine_MetaData[] = {
+		{ "Category", "Collection" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "This arrow should be shown when the cube is too far away from the collector" },
+#endif
 	};
 #endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing = { "onAddedThing", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onAddedThing), Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing_MetaData) }; // 1631994422
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine = { "distanceLine", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, distanceLine), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_collector_MetaData[] = {
 		{ "Category", "Collection" },
@@ -836,6 +846,18 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		((ACubeCore*)Obj)->canCollect = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_canCollect = { "canCollect", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACubeCore), &Z_Construct_UClass_ACubeCore_Statics::NewProp_canCollect_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_canCollect_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_canCollect_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/////////////// Delegates ///////////////\n" },
+#endif
+		{ "ModuleRelativePath", "CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Delegates" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing = { "onAddedThing", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onAddedThing), Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing_MetaData) }; // 1631994422
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments_MetaData[] = {
 		{ "ModuleRelativePath", "CubeCore.h" },
@@ -879,9 +901,10 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_thingCollector,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_thingHomer,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_collector,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_canCollect,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onStartGame,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onGameEnd,
@@ -925,9 +948,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3676013021U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 856557307U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_3381295812(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_1817889232(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
