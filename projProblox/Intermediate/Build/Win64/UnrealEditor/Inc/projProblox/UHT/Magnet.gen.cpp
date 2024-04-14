@@ -30,11 +30,6 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_positive_MetaData[];
-#endif
-		static void NewProp_positive_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_positive;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_positiveMat_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_positiveMat;
@@ -42,6 +37,11 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_negativeMat_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_negativeMat;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_positive_MetaData[];
+#endif
+		static void NewProp_positive_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_positive;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_attractionForce_MetaData[];
 #endif
@@ -65,17 +65,6 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	};
 #endif
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_positive_MetaData[] = {
-		{ "Category", "Magnet" },
-		{ "ModuleRelativePath", "Magnet.h" },
-	};
-#endif
-	void Z_Construct_UClass_AMagnet_Statics::NewProp_positive_SetBit(void* Obj)
-	{
-		((AMagnet*)Obj)->positive = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMagnet_Statics::NewProp_positive = { "positive", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMagnet), &Z_Construct_UClass_AMagnet_Statics::NewProp_positive_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::NewProp_positive_MetaData), Z_Construct_UClass_AMagnet_Statics::NewProp_positive_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_positiveMat_MetaData[] = {
 		{ "Category", "Magnet" },
 		{ "ModuleRelativePath", "Magnet.h" },
@@ -90,16 +79,28 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat = { "negativeMat", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMagnet, negativeMat), Z_Construct_UClass_UMaterialInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat_MetaData), Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_positive_MetaData[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Magnet.h" },
+	};
+#endif
+	void Z_Construct_UClass_AMagnet_Statics::NewProp_positive_SetBit(void* Obj)
+	{
+		((AMagnet*)Obj)->positive = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMagnet_Statics::NewProp_positive = { "positive", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMagnet), &Z_Construct_UClass_AMagnet_Statics::NewProp_positive_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::NewProp_positive_MetaData), Z_Construct_UClass_AMagnet_Statics::NewProp_positive_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce_MetaData[] = {
-		{ "Category", "Magnet" },
+		{ "Category", "Ability" },
+		{ "Delta", "1" },
 		{ "ModuleRelativePath", "Magnet.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce = { "attractionForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMagnet, attractionForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce_MetaData), Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMagnet_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMagnet_Statics::NewProp_positive,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMagnet_Statics::NewProp_positiveMat,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMagnet_Statics::NewProp_positive,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMagnet_Statics::StaticCppClassTypeInfo = {
@@ -141,9 +142,9 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Magnet_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 3374876901U) },
+		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 3145642077U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Magnet_h_1846318892(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Magnet_h_2051743063(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Magnet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Magnet_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

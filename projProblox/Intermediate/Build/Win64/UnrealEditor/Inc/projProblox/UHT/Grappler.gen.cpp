@@ -19,13 +19,6 @@ void EmptyLinkFunctionForGeneratedCodeGrappler() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APickupableMaster();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
-	DEFINE_FUNCTION(AGrappler::execGetSpawnLocation)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(FVector*)Z_Param__Result=P_THIS->GetSpawnLocation();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(AGrappler::execPull)
 	{
 		P_GET_STRUCT_REF(FVector,Z_Param_Out_direction);
@@ -39,45 +32,9 @@ void EmptyLinkFunctionForGeneratedCodeGrappler() {}
 	{
 		UClass* Class = AGrappler::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "GetSpawnLocation", &AGrappler::execGetSpawnLocation },
 			{ "Pull", &AGrappler::execPull },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics
-	{
-		struct Grappler_eventGetSpawnLocation_Parms
-		{
-			FVector ReturnValue;
-		};
-		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Grappler_eventGetSpawnLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Getters" },
-		{ "ModuleRelativePath", "Grappler.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGrappler, nullptr, "GetSpawnLocation", nullptr, nullptr, Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::PropPointers), sizeof(Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::Grappler_eventGetSpawnLocation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::Grappler_eventGetSpawnLocation_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_AGrappler_GetSpawnLocation()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AGrappler_GetSpawnLocation_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AGrappler_Pull_Statics
 	{
@@ -122,7 +79,7 @@ void EmptyLinkFunctionForGeneratedCodeGrappler() {}
 		{ "ModuleRelativePath", "Grappler.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGrappler_Pull_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGrappler, nullptr, "Pull", nullptr, nullptr, Z_Construct_UFunction_AGrappler_Pull_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_Pull_Statics::PropPointers), sizeof(Z_Construct_UFunction_AGrappler_Pull_Statics::Grappler_eventPull_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C20401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_Pull_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGrappler_Pull_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGrappler_Pull_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGrappler, nullptr, "Pull", nullptr, nullptr, Z_Construct_UFunction_AGrappler_Pull_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_Pull_Statics::PropPointers), sizeof(Z_Construct_UFunction_AGrappler_Pull_Statics::Grappler_eventPull_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C40401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_Pull_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGrappler_Pull_Statics::Function_MetaDataParams) };
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AGrappler_Pull_Statics::PropPointers) < 2048);
 	static_assert(sizeof(Z_Construct_UFunction_AGrappler_Pull_Statics::Grappler_eventPull_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_AGrappler_Pull()
@@ -168,42 +125,40 @@ void EmptyLinkFunctionForGeneratedCodeGrappler() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AGrappler_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AGrappler_GetSpawnLocation, "GetSpawnLocation" }, // 247225446
-		{ &Z_Construct_UFunction_AGrappler_Pull, "Pull" }, // 1671866370
+		{ &Z_Construct_UFunction_AGrappler_Pull, "Pull" }, // 1697317091
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappler_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "Grappler.h" },
 		{ "ModuleRelativePath", "Grappler.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Grappler" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Grappler.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn = { "grappleSpawn", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappler, grappleSpawn), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn_MetaData), Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn = { "grappleSpawn", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappler, grappleSpawn), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn_MetaData), Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Grappler" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Grappler.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine = { "grappleLine", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappler, grappleLine), Z_Construct_UClass_UCableComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine_MetaData), Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine = { "grappleLine", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappler, grappleLine), Z_Construct_UClass_UCableComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine_MetaData), Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappler_Statics::NewProp_grappleHeadClass_MetaData[] = {
 		{ "Category", "Grappler" },
 		{ "ModuleRelativePath", "Grappler.h" },
 	};
 #endif
-	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AGrappler_Statics::NewProp_grappleHeadClass = { "grappleHeadClass", nullptr, (EPropertyFlags)0x0024080000010015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappler, grappleHeadClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::NewProp_grappleHeadClass_MetaData), Z_Construct_UClass_AGrappler_Statics::NewProp_grappleHeadClass_MetaData) };
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AGrappler_Statics::NewProp_grappleHeadClass = { "grappleHeadClass", nullptr, (EPropertyFlags)0x0044000000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappler, grappleHeadClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappler_Statics::NewProp_grappleHeadClass_MetaData), Z_Construct_UClass_AGrappler_Statics::NewProp_grappleHeadClass_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGrappler_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappler_Statics::NewProp_grappleSpawn,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappler_Statics::NewProp_grappleLine,
@@ -247,9 +202,9 @@ void EmptyLinkFunctionForGeneratedCodeGrappler() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Grappler_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGrappler, AGrappler::StaticClass, TEXT("AGrappler"), &Z_Registration_Info_UClass_AGrappler, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappler), 2058343257U) },
+		{ Z_Construct_UClass_AGrappler, AGrappler::StaticClass, TEXT("AGrappler"), &Z_Registration_Info_UClass_AGrappler, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappler), 1330887163U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Grappler_h_388446825(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Grappler_h_2173180550(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Grappler_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Grappler_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

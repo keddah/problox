@@ -21,18 +21,17 @@ class UStaticMeshComponent;
 #define FID_projProblox_Source_projProblox_PickupableMaster_h_33_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_projProblox_Source_projProblox_PickupableMaster_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSetCanPickup); \
 	DECLARE_FUNCTION(execGetMass); \
-	DECLARE_FUNCTION(execAscendDescend); \
-	DECLARE_FUNCTION(execAllObjsInHierarchy); \
-	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execGetMesh); \
-	DECLARE_FUNCTION(execGravitySelection); \
+	DECLARE_FUNCTION(execAllObjsInHierarchy); \
+	DECLARE_FUNCTION(execSetAbilityActive); \
+	DECLARE_FUNCTION(execSetCanPickup); \
+	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateHori); \
 	DECLARE_FUNCTION(execRotateVert); \
-	DECLARE_FUNCTION(execSetAbilityActive);
+	DECLARE_FUNCTION(execAscendDescend);
 
 
 #define FID_projProblox_Source_projProblox_PickupableMaster_h_33_ACCESSORS
