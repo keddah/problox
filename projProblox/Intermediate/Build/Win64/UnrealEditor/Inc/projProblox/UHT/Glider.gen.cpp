@@ -51,9 +51,6 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGlider_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "Glider.h" },
 		{ "ModuleRelativePath", "Glider.h" },
 	};
@@ -64,14 +61,14 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 		{ "ModuleRelativePath", "Glider.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed = { "glideSpeed", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, glideSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed = { "glideSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, glideSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData[] = {
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Glider.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount = { "floatAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, floatAmount), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount = { "floatAmount", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, floatAmount), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed_MetaData[] = {
 		{ "Category", "Ability" },
@@ -81,7 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed = { "activationSpeed", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, activationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed = { "activationSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, activationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGlider_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount,
@@ -125,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 3987784250U) },
+		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 994866821U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_3899271385(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_3957187912(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Glider_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

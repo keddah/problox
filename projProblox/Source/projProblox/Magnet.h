@@ -1,4 +1,14 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Magnet - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -14,24 +24,26 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, Category = "Magnet")
-	bool positive;
-
-	bool magAttached;
-	
 	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* positiveMat;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* negativeMat;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere, Category = "Ability")
+	bool positive;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
 	float attractionForce = 30;
+
+	bool magAttached;
 
 	TArray<AMagnet*> otherMagnets;
 
 public:
-	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
+	
+protected:
+	virtual void BeginPlay() override;
 	virtual void Ability() override;
 };

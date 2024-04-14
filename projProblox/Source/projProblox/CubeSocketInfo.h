@@ -1,4 +1,15 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Cube Socket Information - Header
+* 
+* The header file for cube core/connector's socket information. This is used to keep track of all the things that are attached to the cube.
+* Declares several functions related to finding/getting the attached objects as well as functions to add/remove objects.
+*
+* PROBLEMS:
+*	.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -7,9 +18,6 @@
 #include "Engine/DataAsset.h"
 #include "CubeSocketInfo.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API UCubeSocketInfo : public UPrimaryDataAsset
 {

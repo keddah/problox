@@ -1,4 +1,14 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Thruster - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -16,13 +26,12 @@ class PROJPROBLOX_API AThruster : public APickupableMaster
 	GENERATED_BODY()
 	AThruster();
 
-	virtual void Ability() override;
-	virtual void AlignSocketRot(bool useDirection) override;
-	
-protected:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	virtual void BeginPlay() override;
+	virtual void Ability() override { thruster->SetActive(active); }
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UPhysicsThrusterComponent* thruster;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
 	float power = 56;
 };

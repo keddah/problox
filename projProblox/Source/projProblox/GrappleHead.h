@@ -29,20 +29,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	USphereComponent* collider;
 
-	UPROPERTY(BlueprintReadWrite)
-	AGrappler* parent;
-	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	float launchForce = 3;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", BlueprintReadOnly)
 	float pullSpeed = 9;
-
-	UPROPERTY(BlueprintReadWrite, Category = "Ability")
-	bool canPull;
-
-	UPROPERTY(BlueprintReadWrite, Category = "Ability")
-	bool shouldPull;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float cancelDistance;

@@ -1,4 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Piston - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -16,23 +26,21 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 
 	APiston();
 	virtual void Ability() override;
-	
-protected:
 	virtual void BeginPlay() override;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UStaticMeshComponent* flatHead;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "How fast the piston head should push out."))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ability", meta = (AllowPrivateAccess = true, ToolTip = "How fast the piston head should push out."))
 	float pushSpeed = 1;
 	
-	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "How fast the piston head should push out."))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ability", meta = (AllowPrivateAccess = TEXT_TRUE, ToolTip = "How fast the piston head should push out."))
 	float pushForce = 8;
 	
-	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "How far the flatHead should extend from the piston shaft."))
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "How far the flatHead should extend from the piston shaft."))
 	float pushExtent = 100;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Ability", meta = (ToolTip = "Whether or not the piston head is currently pushing"))
+	UPROPERTY(BlueprintReadOnly, Category = "Ability", meta = (AllowPrivateAccess = true, ToolTip = "Whether or not the piston head is currently pushing"))
 	bool moving;
 	
 };

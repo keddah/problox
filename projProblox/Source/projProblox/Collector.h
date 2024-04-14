@@ -21,6 +21,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	/////////////// Components ///////////////
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* scene;
 
@@ -36,6 +37,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UPointLightComponent* light;
 
+
+	/////////////// Things ///////////////
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (ToolTip = "Minimum percentage the player has to get in order to win.", Delta = .01f, ClampMin = .25f, ClampMax = .95f))
 	float minPercentage;
 
@@ -44,7 +47,9 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	int32 thingCount;
+
 	
+	/////////////// Other ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	APlayerCharacter* player;
 

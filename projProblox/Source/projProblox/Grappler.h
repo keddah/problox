@@ -1,4 +1,15 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Grappler - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*	SetAbilityActive
+*
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -7,38 +18,30 @@
 #include "CableComponent.h"
 #include "Grappler.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API AGrappler : public APickupableMaster
 {
 	GENERATED_BODY()
 	AGrappler();
 
-	// If this is called whilst the hook is valid, destroy the hook (this means pressing the ability button after the grapple has been launched destroy the grapple).  
-	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); if(IsValid(hook) && !active) hook->Destroy(); };
-	virtual void Ability() override;
-	virtual void SetSelected(const bool value) override;
-
-protected:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	USceneComponent* grappleSpawn;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UCableComponent* grappleLine;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<AActor> grappleHeadClass;
 
 	AActor* hook;
+
 	
+	// If this is called whilst the hook is valid, destroy the hook (this means pressing the ability button after the grapple has been launched will destroy the grapple).  
+	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); if(IsValid(hook) && !active) hook->Destroy(); };
+	virtual void Ability() override;
+
 	void SetupLine() const { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndTo(hook, ""); }
 
-public:
 	UFUNCTION(BlueprintCallable, Category = "Ability")
 	void Pull(const FVector& direction, const float speed) { objMesh->AddForce(direction * speed * 1000); }
-
-	UFUNCTION(BlueprintPure, Category = "Getters")
-	FVector GetSpawnLocation() const { return grappleSpawn->GetComponentLocation(); }
 };

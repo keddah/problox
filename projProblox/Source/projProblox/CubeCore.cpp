@@ -5,7 +5,7 @@
 * were inherited by the cube core). Also overrides some of the inherited functions so that they work as intended for how this actor is supposed to act.
 *
 * PROBLEMS:
-*	.
+*	Detaching isn't always done correctly - The socket information still thinks that things are in sockets when they're not... (sometimes)
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -379,9 +379,8 @@ void ACubeCore::GravitySelection() const
 	// Disable gravity on this.
 	Super::GravitySelection();
 
-	
 	// Disable gravity on all of the things attached to the core.
-	for(const auto& obj : GetAttachedObjects()) obj->GravitySelection();
+	for(const auto& obj : GetAttachedObjects()) obj->GetMesh()->SetEnableGravity(!selected);
 }
 
 void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)

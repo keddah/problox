@@ -18,38 +18,6 @@ APropeller::APropeller()
 	windBox->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
 }
 
-void APropeller::SetSelected(const bool value)
-{
-	selected = value;
-	SetHideIndicator(!selected);
-
-	if(selected)
-	{
-		Detach();
-		return;
-	}
-
-	if(!IsValid(parentCore)) return;
-	if(attachedSocket == NAME_None) return;
-	
-	// Rotate to match the socket rotation
-	SetActorRotation(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
-	
-	AttachToActor(parentCore, attachRules, attachedSocket);
-	ApplyOffset(parentCore);
-
-	ResetGhost();
-	
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
-}
-
-void APropeller::ActivateOutline(UMaterialInstance* mat) const
-{
-	Super::ActivateOutline(mat);
-
-	silhouette->AddRelativeRotation({0,0,90});
-}
 
 void APropeller::Ability()
 {

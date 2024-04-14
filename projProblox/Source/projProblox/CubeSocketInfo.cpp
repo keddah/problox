@@ -1,4 +1,13 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Cube Socket Information - Code
+* 
+* The code file for cube core/connector's socket information. Gives functionality to the declared functions.
+*
+* PROBLEMS:
+*	.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "CubeSocketInfo.h"

@@ -1,4 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Glider - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -6,9 +16,6 @@
 #include "PickupableMaster.h"
 #include "Glider.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API AGlider : public APickupableMaster
 {
@@ -18,9 +25,6 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 	
 	virtual void Ability() override;
 
-virtual void GhostPlacement() override;
-	
-protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float glideSpeed = 2000;
 

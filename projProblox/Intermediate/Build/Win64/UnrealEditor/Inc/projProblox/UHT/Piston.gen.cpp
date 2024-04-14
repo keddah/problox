@@ -70,14 +70,16 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_flatHead_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Piston" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Piston.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_flatHead = { "flatHead", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, flatHead), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_flatHead_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_flatHead_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_flatHead = { "flatHead", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, flatHead), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_flatHead_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_flatHead_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Piston.h" },
 #if !UE_BUILD_SHIPPING
@@ -85,9 +87,10 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed = { "pushSpeed", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed = { "pushSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData[] = {
+		{ "AllowPrivateAccess", "TEXT_TRUE" },
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Piston.h" },
 #if !UE_BUILD_SHIPPING
@@ -95,19 +98,21 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Delta", "1" },
 		{ "ModuleRelativePath", "Piston.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "How far the flatHead should extend from the piston shaft." },
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushExtent = { "pushExtent", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushExtent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushExtent = { "pushExtent", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushExtent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Piston.h" },
 #if !UE_BUILD_SHIPPING
@@ -119,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 	{
 		((APiston*)Obj)->moving = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_moving = { "moving", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APiston), &Z_Construct_UClass_APiston_Statics::NewProp_moving_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_moving = { "moving", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APiston), &Z_Construct_UClass_APiston_Statics::NewProp_moving_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APiston_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_flatHead,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed,
@@ -165,9 +170,9 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APiston, APiston::StaticClass, TEXT("APiston"), &Z_Registration_Info_UClass_APiston, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APiston), 3535759424U) },
+		{ Z_Construct_UClass_APiston, APiston::StaticClass, TEXT("APiston"), &Z_Registration_Info_UClass_APiston, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APiston), 3130668616U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_4081622672(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_98323899(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Piston_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
