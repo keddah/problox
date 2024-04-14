@@ -38,10 +38,10 @@
 			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
-			"CubeConnector.cpp.obj"
+			"CubeConnector.cpp.obj",
+			"WedgeConnector.cpp.obj"
 		]
 	}
 }
