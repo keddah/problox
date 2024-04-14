@@ -10,7 +10,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterial_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstance_NoRegister();
@@ -235,21 +234,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->GetCloseAttachments();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ACubeCore::execGetAttachedObjActors)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(TArray<AActor*>*)Z_Param__Result=P_THIS->GetAttachedObjActors();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACubeCore::execDetachAll)
-	{
-		P_GET_UBOOL(Z_Param_push);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->DetachAll(Z_Param_push);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ACubeCore::execSetAllAbilityActive)
 	{
 		P_GET_UBOOL(Z_Param_value);
@@ -264,6 +248,21 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(bool*)Z_Param__Result=P_THIS->ObjectInSocket(Z_Param_socketToCheck);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACubeCore::execDetachAll)
+	{
+		P_GET_UBOOL(Z_Param_push);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DetachAll(Z_Param_push);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACubeCore::execGetAttachedObjActors)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<AActor*>*)Z_Param__Result=P_THIS->GetAttachedObjActors();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execStartGame)
@@ -354,10 +353,16 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_EndGame_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/////////////// Game States ///////////////\n" },
+#endif
 		{ "ModuleRelativePath", "CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Game States" },
+#endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_EndGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "EndGame", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_EndGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_EndGame_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_EndGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "EndGame", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_EndGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_EndGame_Statics::Function_MetaDataParams) };
 	UFunction* Z_Construct_UFunction_ACubeCore_EndGame()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -550,7 +555,13 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Ablility" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/////////////// Abilities ///////////////\n" },
+#endif
 		{ "ModuleRelativePath", "CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Abilities" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "SetAllAbilityActive", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::CubeCore_eventSetAllAbilityActive_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::Function_MetaDataParams) };
@@ -638,7 +649,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_StartGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "StartGame", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_StartGame_Statics::CubeCore_eventStartGame_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_StartGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "StartGame", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_StartGame_Statics::CubeCore_eventStartGame_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_StartGame_Statics::Function_MetaDataParams) };
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartGame_Statics::PropPointers) < 2048);
 	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_StartGame_Statics::CubeCore_eventStartGame_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_ACubeCore_StartGame()
@@ -662,10 +673,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_line_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_line;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_socketInfo_MetaData[];
 #endif
@@ -730,14 +737,14 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACubeCore_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACubeCore_DetachAll, "DetachAll" }, // 531213272
-		{ &Z_Construct_UFunction_ACubeCore_EndGame, "EndGame" }, // 3413154252
+		{ &Z_Construct_UFunction_ACubeCore_EndGame, "EndGame" }, // 151726495
 		{ &Z_Construct_UFunction_ACubeCore_GetAttachedObjActors, "GetAttachedObjActors" }, // 626994401
 		{ &Z_Construct_UFunction_ACubeCore_GetCloseAttachments, "GetCloseAttachments" }, // 2453982587
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3382861889
 		{ &Z_Construct_UFunction_ACubeCore_SelectSocket, "SelectSocket" }, // 3328171643
-		{ &Z_Construct_UFunction_ACubeCore_SetAllAbilityActive, "SetAllAbilityActive" }, // 3569012814
+		{ &Z_Construct_UFunction_ACubeCore_SetAllAbilityActive, "SetAllAbilityActive" }, // 2351950642
 		{ &Z_Construct_UFunction_ACubeCore_StartEndingGame, "StartEndingGame" }, // 1270518088
-		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 1340274413
+		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 30573329
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -747,22 +754,14 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	};
 #endif
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_line_MetaData[] = {
-		{ "Category", "CubeCore" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "CubeCore.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_line = { "line", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, line), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_line_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_line_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_socketInfo_MetaData[] = {
 		{ "Category", "CubeCore" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// A data asset that contains an array of things that are attached to each face of the cube.\n" },
+		{ "Comment", "///////////////////////////// PROPERTIES /////////////////////////////\n/////////////// Components ///////////////\n// A data asset that contains an array of things that are attached to each face of the cube.\n" },
 #endif
 		{ "ModuleRelativePath", "CubeCore.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "A data asset that contains an array of things that are attached to each face of the cube." },
+		{ "ToolTip", "PROPERTIES\nComponents\nA data asset that contains an array of things that are attached to each face of the cube." },
 #endif
 	};
 #endif
@@ -813,7 +812,13 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_collector_MetaData[] = {
 		{ "Category", "Collection" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/////////////// Collection ///////////////\n" },
+#endif
 		{ "ModuleRelativePath", "CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Collection" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_collector = { "collector", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, collector), Z_Construct_UClass_ACollector_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_collector_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_collector_MetaData) };
@@ -868,7 +873,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onEndingGame = { "onEndingGame", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onEndingGame), Z_Construct_UDelegateFunction_projProblox_OnEndingGame__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onEndingGame_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onEndingGame_MetaData) }; // 3241867572
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACubeCore_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_line,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_socketInfo,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_inactiveMat,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_selectedMat,
@@ -921,9 +925,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 701394743U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3676013021U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_170177533(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_3381295812(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -1,4 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Cube Connector - Code
+* 
+* The code file for cube connector (one of the connector classes). Gives functionality to the declared functions. Deactivates the collision collection boxes that.
+* were inherited by the cube core). Also overrides some of the inherited functions so that they work as intended for how this actor is supposed to act.
+*
+* PROBLEMS:
+*	The ghost placement isn't always perfect... If the thing it's trying to attach to is slightly at an angle the place rotation is off (ignore the roll/x axis??)
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 #include "CubeConnector.h"
 
@@ -27,18 +37,9 @@ ACubeConnector::ACubeConnector()
 	thingCollector->SetGenerateOverlapEvents(false);
 	thingCollector->SetBoxExtent({});
 	thingCollector->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	
 	thingHomer->SetGenerateOverlapEvents(false);
 	thingHomer->SetBoxExtent({});
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-}
-
-void ACubeConnector::ApplyOffset(const ACubeCore* core)
-{
-	// If it's the actual core use a smaller offset
-	if(core) GetAttachOffset(*core);
-	
-	Super::ApplyOffset(core);
 }
 
 void ACubeConnector::BeginPlay()
@@ -53,15 +54,52 @@ void ACubeConnector::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 }
 
-void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
+
+void ACubeConnector::SetupIndicator()
 {
-	attachedSocket = socket;
+	// indicator->SetMaterial(0, indicatorMat);
+	// backArrow->SetMaterial(0, indicatorMat);
+	// leftArrow->SetMaterial(0, indicatorMat);
+	// rightArrow->SetMaterial(0, indicatorMat);
+	// upArrow->SetMaterial(0, indicatorMat);
+	// downArrow->SetMaterial(0, indicatorMat);
 
-	if(!useDirection) return;
+	indicator->ArrowColor.A = .5f;
+	backArrow->ArrowColor.A = .5f;
+	leftArrow->ArrowColor.A = .5f;
+	rightArrow->ArrowColor.A = .5f;
+	upArrow->ArrowColor.A = .5f;
+	downArrow->ArrowColor.A = .5f;
 
-	RearrangeSockets();
-	AlignSocketRot();
+	
+	indicator->ArrowLength = placeRange;
+	backArrow->ArrowLength = placeRange;
+	leftArrow->ArrowLength = placeRange;
+	rightArrow->ArrowLength = placeRange;
+	upArrow->ArrowLength = placeRange;
+	downArrow->ArrowLength = placeRange;
+	
+	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
+	indicator->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
+	backArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,-1,0});
+	leftArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,1,0});
+	rightArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,0,1});
+	upArrow->SetRelativeRotation(rot);
+
+	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
+	downArrow->SetRelativeRotation(rot);
+
+	SetHideIndicator(true);
 }
+
 
 void ACubeConnector::Placement()
 {
@@ -188,84 +226,7 @@ void ACubeConnector::GhostPlacement()
 	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});
 }
 
-void ACubeConnector::SetHideIndicator(const bool hide)
-{
-	Print(FString::SanitizeFloat(backArrow->ArrowLength), 3)
-	
-	Super::SetHideIndicator(hide);
-	backArrow->SetHiddenInGame(hide);
-	leftArrow->SetHiddenInGame(hide);
-	rightArrow->SetHiddenInGame(hide);
-	upArrow->SetHiddenInGame(hide);
-	downArrow->SetHiddenInGame(hide);
-}
-
-void ACubeConnector::SetupIndicator()
-{
-	// indicator->SetMaterial(0, indicatorMat);
-	// backArrow->SetMaterial(0, indicatorMat);
-	// leftArrow->SetMaterial(0, indicatorMat);
-	// rightArrow->SetMaterial(0, indicatorMat);
-	// upArrow->SetMaterial(0, indicatorMat);
-	// downArrow->SetMaterial(0, indicatorMat);
-
-	indicator->ArrowColor.A = .5f;
-	backArrow->ArrowColor.A = .5f;
-	leftArrow->ArrowColor.A = .5f;
-	rightArrow->ArrowColor.A = .5f;
-	upArrow->ArrowColor.A = .5f;
-	downArrow->ArrowColor.A = .5f;
-
-	
-	indicator->ArrowLength = placeRange;
-	backArrow->ArrowLength = placeRange;
-	leftArrow->ArrowLength = placeRange;
-	rightArrow->ArrowLength = placeRange;
-	upArrow->ArrowLength = placeRange;
-	downArrow->ArrowLength = placeRange;
-	
-	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
-	indicator->SetRelativeRotation(rot);
-
-	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
-	backArrow->SetRelativeRotation(rot);
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,-1,0});
-	leftArrow->SetRelativeRotation(rot);
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,1,0});
-	rightArrow->SetRelativeRotation(rot);
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,1});
-	upArrow->SetRelativeRotation(rot);
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	downArrow->SetRelativeRotation(rot);
-
-	SetHideIndicator(true);
-}
-
-float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
-{
-	float distance;
-
-	if(attachee.IsA<ACubeConnector>()) distance = 52.5f; 
-	else if(attachee.IsA<AWedgeConnector>()) distance = 55;
-	else if(attachee.IsA<ACubeCore>()) distance = 35;
-	else distance = 50;
-
-	attachOffset = distance;
-	return attachOffset;
-}
-
-bool ACubeConnector::SetGroupSelected(const bool value)
-{
-	selected = value;
-	canPlace = !selected;
-	
-	return true;
-}
-
+// The final position when attached is dependent on the silhouette/ghost's position and rotation
 void ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
@@ -300,7 +261,8 @@ void ACubeConnector::SetSelected(const bool value)
 	if(!IsValid(parentCore)) return;
 
 	attachedSocket = tempSocket;
-	
+
+	// Use the silhouettes position/rotation...
 	SetActorLocation(silhouette->GetComponentLocation());
 	SetActorRotation(silhouette->GetComponentRotation());
 	
@@ -310,6 +272,52 @@ void ACubeConnector::SetSelected(const bool value)
 	parentCore->AddAttachment(this, attachedSocket);
 }
 
+bool ACubeConnector::SetGroupSelected(const bool value)
+{
+	selected = value;
+	canPlace = !selected;
+	
+	return true;
+}
+
+
+void ACubeConnector::SetHideIndicator(const bool hide)
+{
+	Print(FString::SanitizeFloat(backArrow->ArrowLength), 3)
+	
+	Super::SetHideIndicator(hide);
+	backArrow->SetHiddenInGame(hide);
+	leftArrow->SetHiddenInGame(hide);
+	rightArrow->SetHiddenInGame(hide);
+	upArrow->SetHiddenInGame(hide);
+	downArrow->SetHiddenInGame(hide);
+}
+
+float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
+{
+	float distance;
+
+	// Different offsets depending on what connector it attaches to...
+	if(attachee.IsA<ACubeConnector>()) distance = 52.5f; 
+	else if(attachee.IsA<AWedgeConnector>()) distance = 55;
+	else if(attachee.IsA<ACubeCore>()) distance = 35;
+	else distance = 50;
+
+	attachOffset = distance;
+	return attachOffset;
+}
+
+void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
+{
+	attachedSocket = socket;
+
+	if(!useDirection) return;
+
+	RearrangeSockets();
+	AlignSocketRot();
+}
+
+// Sets the ability active value for everything that's attached to it
 void ACubeConnector::SetAbilityActive(bool value)
 {
 	if(!IsValid(parentCore)) return;
@@ -319,4 +327,13 @@ void ACubeConnector::SetAbilityActive(bool value)
 	GetDescendents(self, children);
 	
 	for (const auto& obj : children) obj->SetAbilityActive(value);
+}
+
+
+void ACubeConnector::ApplyOffset(const ACubeCore* core)
+{
+	// If it's the actual core use a smaller offset
+	if(core) GetAttachOffset(*core);
+	
+	Super::ApplyOffset(core);
 }

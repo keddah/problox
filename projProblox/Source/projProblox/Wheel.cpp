@@ -1,4 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Wheel - Code
+* 
+* The code file for one of the pickupable objects. Overrides the SetSelected and Detach functions and creates it's own attach function since the attaching uses physics
+* constraints in order to allow the wheel to roll.
+*
+* PROBLEMS:
+*	Since it doesn't actually attach to the core/connector in the hierarchy, when using GetDescendents() it isn't found... (causes it to be excluded from the exclusions array)
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "Wheel.h"
@@ -31,22 +41,13 @@ AWheel::AWheel()
 	SetParentDominates(false);
 }
 
-void AWheel::Ability()
-{
-	if(selected) RemoveVelocity();
-
-	if(!IsValid(parentCore)) return;
-
-	// const FVector coreVelocity = objCore->GetMesh()->GetPhysicsAngularVelocityInRadians();
-	// wheelAxel->SetAngularVelocityTarget(-coreVelocity);
-}
-
-
 // The same as the normal function except attachments are managed using the physics constraint.
 void AWheel::SetSelected(const bool value)
 {
 	selected = value; 
 	GravitySelection();
+	wheelAxel->SetActive(!selected);
+	
 	SetHideIndicator(!selected);
 	
 	if(selected)
@@ -65,6 +66,32 @@ void AWheel::SetSelected(const bool value)
 
 	ResetGhost();
 	Attach(parentCore);
+}
+
+
+void AWheel::Attach(ACubeCore* core)
+{
+	parentCore = core;
+	ResetRotation();
+
+	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	// Rotate to match the socket rotation
+	SetActorRotation(rot);
+	SetActorLocation(coreMesh->GetSocketLocation(attachedSocket));
+	
+	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
+	wheelAxel->UpdateConstraintFrames();
+	
+	parentCore->AddAttachment(this, attachedSocket);
+	SetParentDominates(false);
+	isAttached = true;
 }
 
 void AWheel::Detach()
@@ -106,29 +133,4 @@ APickupableMaster* AWheel::GetParent()
 	// If the cast fails
 	Print("Didn't find a pickupable object at the top.", 5)
 	return 0;
-}
-
-void AWheel::Attach(ACubeCore* core)
-{
-	parentCore = core;
-	ResetRotation();
-
-	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
-
-	FRotator rot;
-	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-
-	// Rotate to match the socket rotation
-	SetActorRotation(rot);
-	SetActorLocation(coreMesh->GetSocketLocation(attachedSocket));
-	
-	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
-	wheelAxel->UpdateConstraintFrames();
-	
-	parentCore->AddAttachment(this, attachedSocket);
-	SetParentDominates(false);
-	isAttached = true;
 }

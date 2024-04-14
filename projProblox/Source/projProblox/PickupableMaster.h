@@ -1,13 +1,11 @@
 /**************************************************************************************************************
 * Pickupable Master - Header
 * 
-* The header file for the parent class of all the moveable things in the game. Declares inherited methods and variables used to make the pickupable objects more
+* The header file for the parent class of all the movable things in the game. Declares inherited methods and variables used to make the pickupable objects more
 * replicable.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
-
-// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -19,11 +17,13 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "PickupableMaster.generated.h"
 
+
+/// .................
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
 #define PrintInt(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::FromInt(x)); }
 #define PrintFloat(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::SanitizeFloat(x)); }
-#define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw)); }
 #define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.X) + ", " + "Y: " + FString::SanitizeFloat(x.Y) + ", " + "Z: " + FString::SanitizeFloat(x.Z)); }
+#define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw)); }
 
 class ACubeCore;
 
@@ -32,8 +32,6 @@ class PROJPROBLOX_API APickupableMaster : public AActor
 {
 	GENERATED_BODY()
 
-	const float rotSpeed = 2;
-	
 public:	
 	// Sets default values for this actor's properties
 	APickupableMaster();
@@ -42,10 +40,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
-	/////////////////// PROPERTIES ///////////////////
-
-	// Blueprint visible components..
+///////////////////////////// PROPERTIES /////////////////////////////
+	/////////////// Components ///////////////
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* objMesh;
 
@@ -58,19 +54,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* indicator;
 
-	// UPROPERTY(EditDefaultsOnly)
-	// UMaterial* indicatorMat;
-
-	UMaterial* silhouetteMat;
-	
-	UPROPERTY(BlueprintReadOnly)
-	bool active;
-
+	/////////////// Selection / Placement ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
 
 	// When group selected, you're unable to place cores...
-	// (everything would work normally but when attaching welding the physics gets awkward...)
 	bool canPlace;
 
 	// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.
@@ -80,6 +68,10 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
 
+	UPROPERTY(EditDefaultsOnly, meta = (SliderExponent = 1))
+	float placeRange = 180;
+	
+	/////////////// Rotations ///////////////
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin horizontally (On the global axis)."))
 	FVector horiAxis {0, 0,1};
 	
@@ -92,170 +84,170 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	float ascensionSpeed = 2.5f;
 	
-	UPROPERTY(EditDefaultsOnly)
-	float placeRange = 180;
+	FRotator defaultRot{};
+	
+	// Whether or not to use the parent core's socket's forward rotation when attaching...
+	bool snapRot = true;
 
+	
+	/////////////// Attachments ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* parentCore;
 
 	const FAttachmentTransformRules attachRules {EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, true};
 	const FAttachmentTransformRules ghostRules {EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, EAttachmentRule::KeepWorld, false};
 
-	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The positional offset for when objects attach to cores."))
+	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "The positional offset for when objects attach to cores."))
 	float attachOffset;
 
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
 	
 	bool isAttached;
+
 	
-	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+	/////////////// Abilties ///////////////
+	UPROPERTY(BlueprintReadOnly)
+	bool active;
+
 	
-	/////////////////// FUNCTIONS ///////////////////
+	/////////////// Other ///////////////
+	UMaterial* defaultMat;
+	UMaterial* silhouetteMat;
+
 	
+///////////////////////////// Functions /////////////////////////////
+
+	/////////////// Selection / Placement ///////////////
 	virtual void Placement();
 	FName NearestSocket(const ACubeCore* core, const FHitResult& hit) const;
 	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
-	void ResetGhost();
+	void ResetGhost() const;
 	
 	virtual void Ability() {}
 
-	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
-	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }
 
+	
+	/////////////// Indicator ///////////////
 	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
 	virtual void SetupIndicator();
 
+	
+	/////////////// Attachments ///////////////
+	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
+	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
+
+
+	/////////////// Rotations ///////////////
 	// Used when attaching to sockets of the cube... Rounds the given rotation to right angles (90 degrees)
-	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true)
-	{
-		// Quantize each component of the Rotator using Frac and Floor
-		FRotator rounded;
-		const float rounder = negate? -90 : 90;
-		
-		// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
-		rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
-		rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
-		rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
-
-		return rounded;
-	}
-	static FRotator RoundRotation(const FRotator& rotation, const float rounder)
-	{
-		// Quantize each component of the Rotator using Frac and Floor
-		FRotator rounded;
-		
-		rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
-		rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
-		rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
-
-		return rounded;
-	}
-
-	static FRotator RoundRotation(const FRotator& rotation, const FRotator& referencedRot)
-	{
-		// Calculate the difference between the rotations
-		const FRotator difference = rotation - referencedRot;
-
-		// Round the differences to the nearest 90 degrees
-		const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / 90.0f) * 90.0f;
-		const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / 90.0f) * 90.0f;
-		const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / 90.0f) * 90.0f;
-
-		// Add the rounded differences to the reference rotation to get the rounded rotation
-		return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
-	}
+	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true);
+	static FRotator RoundRotation(const FRotator& rotation, const float rounder);
+	static FRotator RoundRotation(const FRotator& rotation, const FRotator& referencedRot);
 
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 
-	FRotator defaultRot{};
-	UMaterial* defaultMat;
 	
-	// Whether or not to use the parent core's socket's forward rotation when attaching...
-	bool snapRot = true;
+	/////////////// Other ///////////////
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+
 	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Ability")
-	virtual void SetAbilityActive(const bool value) { active = value; }
-	
+	/////////////// Rotations ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void RotateVert(float axis);
+	void RotateVert(float axis, const float rotSpeed);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void RotateHori(float axis);
+	void RotateHori(float axis, const float rotSpeed);
 	
-	UFUNCTION(BlueprintCallable, Category = "Movement")
+	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
 	void SnapRotateMesh(bool hori, FString keypress, bool quarter = false);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
-	virtual void RemoveVelocity() const;
 
 	bool ShouldSnapRotation() const { return snapRot; }
-	FVector GetPlaceDir() const { return placeDir; }
+
 	
-	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
-	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
-	virtual float GetAttachOffset(const APickupableMaster& attachee) { 	PrintFloat(attachOffset, .2) return attachOffset; }
-
-	// Enable/Disable gravity when selected/deselected
-	UFUNCTION(BlueprintCallable)
-	void GravitySelection() const { objMesh->SetEnableGravity(!selected); }
-
-	FName GetAttachedSocket() const { return attachedSocket; }
-	virtual void Detach();
-	
-	UFUNCTION(BlueprintCallable, Category = "Getters")
-	UStaticMeshComponent* GetMesh() const { return objMesh; }
-	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
-
+	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
 	virtual void SetSelected(const bool value);
 	virtual bool SetGroupSelected(const bool value);
 
-	void SetCore(ACubeCore* _core) { parentCore = _core; }
-	ACubeCore* GetCore() const { return parentCore; }
+	virtual void Detach();
 
-	void ResetMaterial() const { silhouette->SetMaterial(0, silhouetteMat); }
-	virtual void ActivateOutline(UMaterialInstance* mat) const;
-	void DeactivateOutline();
-	
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	TArray<APickupableMaster*> AllObjsInHierarchy();
+	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
+	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
 
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	virtual void SetCanPickup(const bool can) { canPickup = can; }
+
+
+	/////////////// Ability ///////////////
+	UFUNCTION(BlueprintCallable, Category = "Ability")
+	virtual void SetAbilityActive(const bool value) { active = value; }
+
+
+	/////////////// Attachments ///////////////
+	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
+
+
+	/////////////// Hierarchy ///////////////
 	static void GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray);
 	static void GetDescendentsActors(const AActor* parent, TArray<AActor*>& outArray);
 	
 	static void GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray);
 	static void GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray);
 	
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	TArray<APickupableMaster*> AllObjsInHierarchy();
+
+	bool IsChildOf(const APickupableMaster* parent) const;
+
+	
+	/////////////// Getters ///////////////
+	ACubeCore* GetCore() const { return parentCore; }
+
 	virtual APickupableMaster* GetParent();
-	bool IsChildOf(const APickupableMaster* parent);
 
-	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
-
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }
+	FVector GetPlaceDir() const { return placeDir; }
+	
+	virtual float GetAttachOffset(const APickupableMaster& attachee) { 	PrintFloat(attachOffset, .2) return attachOffset; }
+	FName GetAttachedSocket() const { return attachedSocket; }
+	
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	UStaticMeshComponent* GetMesh() const { return objMesh; }
+	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
 
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const { return objMesh->GetMass(); }
+
+	// Returns whether or not the player is able to pick this up.
+	bool GetCanPickup() const { return canPickup; }
+
+	
+	/////////////// Other ///////////////
+	void SetCore(ACubeCore* _core) { parentCore = _core; }
+
+	// Enable/Disable gravity when selected/deselected
+	virtual void GravitySelection() const { objMesh->SetEnableGravity(!selected); }
+	virtual void RemoveVelocity() const;
+	
+	void ResetMaterial() const { silhouette->SetMaterial(0, silhouetteMat); }
+
+	virtual void ActivateOutline(UMaterialInstance* mat) const;
+	void DeactivateOutline() const;
 
 	void AddVelocity(const FVector& velocity) const
 	{
 		const FVector currentVel = GetVelocity();
 		objMesh->SetPhysicsLinearVelocity(FVector(currentVel.X + velocity.X,currentVel.Y + velocity.Y, currentVel.Z + velocity.Z));
 	}
-
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	virtual void SetCanPickup(const bool can) { canPickup = can; }
-
-	// Returns whether or not the player is able to pick this up.
-	bool GetCanPickup() const { return canPickup; }
-
 };

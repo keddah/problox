@@ -1,5 +1,15 @@
-// Created by Dean Atkinson-Walker 2024
-
+/**************************************************************************************************************
+* Wedge Connector - Code
+* 
+* The code file for wedge connector (one of the connector classes). Gives functionality to the declared functions. Deactivates the collision collection boxes that.
+* were inherited by the cube connector class (which was inherited from the cube core). Also overrides some of the inherited functions so that they work as intended
+* for how this actor is supposed to act.
+*
+* PROBLEMS:
+*	The ghost placement isn't always perfect... If the thing it's trying to attach to is slightly at an angle the place rotation is off (ignore the roll/x axis??)
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 #include "WedgeConnector.h"
 #include "WedgeSocketInfo.h"
 #include "Wheel.h"

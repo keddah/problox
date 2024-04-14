@@ -1,4 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Cube Core - Code
+* 
+* The code file for cube core (the main thing that things attach to). Gives functionality to the declared functions. Deactivates the collision collection boxes that.
+* were inherited by the cube core). Also overrides some of the inherited functions so that they work as intended for how this actor is supposed to act.
+*
+* PROBLEMS:
+*	.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "CubeCore.h"
@@ -8,38 +18,6 @@
 #include "WedgeConnector.h"
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
-
-void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
-{
-	Print("setting timer", 4)
- 	TArray<APickupableMaster*> objs = GetCloseAttachments();
-
-	if(objs.IsEmpty())
-	{
-		Print("objects array empty", 6)
-		return;
-	}
-
-	const UWorld* wrld = GetWorld();
-	
-	for(int i = 0; i < objs.Num(); i++)
-	{
-		FTimerHandle activationHandle;
-		FTimerHandle deactivationHandle;
-        
-		// Activate/Deactivate the things
-		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
-		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
-
-		// Activate...
-		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delays[i] < 1? .1f : delays[i], false);
-
-		// Deactivate after the delay and duration elapses activation...
-		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
-
-		
-	}
-}
 
 ACubeCore::ACubeCore()
 {
@@ -52,24 +30,6 @@ ACubeCore::ACubeCore()
 	thingCollector->SetupAttachment(objMesh);
 
 	placeRange = 50;
-}
-
-
-void ACubeCore::SetCanPickup(bool can)
-{
-	// Only broadcast when there's a change
-	const bool change = can != canPickup;
-	Super::SetCanPickup(can);
-	
-	SetCanCollect(can || !selected);
-
-	if(!canPickup && change) onRangeExceeded.Broadcast();
-}
-
-void ACubeCore::SetCanCollect(bool collectable)
-{
-	objMesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
-	canCollect = collectable;
 }
 
 void ACubeCore::BeginPlay()
@@ -87,222 +47,55 @@ void ACubeCore::BeginPlay()
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 }
 
-void ACubeCore::RemoveAttachment(const FName& socket)
-{
-	Super::RemoveAttachment(socket);
 
-	if(!IsValid(socketInfo))
-	{
-		Print("SocketInfo invalid..... couldn't remove",4)
-		return;
-	}
+void ACubeCore::Placement()
+{
+	if(!canPlace) return;
+	if(!selected) return;
+	if(ObjectInSocket("Down")) return;
+
+	RemoveVelocity();
 	
-	socketInfo->RemoveAttachment(socket);
-	objMesh->SetEnableGravity(true);
-	onChangeAttachments.Broadcast();
-}
-
-void ACubeCore::RemoveAttachment(APickupableMaster* obj)
-{
-	if(!IsValid(obj)) return;
+	const UWorld* wrld = GetWorld();
 	
-	socketInfo->RemoveAttachment(obj);
-	objMesh->SetEnableGravity(true);
-	onChangeAttachments.Broadcast();
-}
+	FHitResult hit;
+	FCollisionQueryParams collisionParams;
+	collisionParams.AddIgnoredActor(this);
+	collisionParams.MobilityType = EQueryMobilityType::Any;
+	collisionParams.bDebugQuery = true;
 
-void ACubeCore::SetAbilityActive(bool value)
-{
-	if(IsValid(selectedObj)) selectedObj->SetAbilityActive(value);
-}
-
-void ACubeCore::SetAllAbilityActive(bool value) const
-{
-	const AActor* self = this;
-
-	// The get descendents function ensures that every single thing that is attached to the core (even if it's connected in a chain) is set. 
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
+	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
 	
-	for (const auto& obj : children) obj->SetAbilityActive(value);
-}
+	// Debug Draw
+	const FVector start = GetActorLocation();
+	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
-void ACubeCore::DetachAll(const bool push)
-{
-	if(!socketInfo) return;
-	for(const auto& obj : socketInfo->GetAttachments())
+	AActor* hitActor = hit.GetActor();
+	if(!hit.bBlockingHit)
 	{
-		if(!IsValid(obj)) continue;
-		
-		obj->Detach();
-		obj->RemoveVelocity();
-		
-		if(!push) continue;
-		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
-		const float launchForce = obj->GetMass();
-
-		constexpr float maxVelocity = 1000;
-		obj->AddVelocity(launchDir * std::min(launchForce, maxVelocity));
-	}
-
-	socketInfo->ClearAttachments();
-}
-
-
-// TArray<AActor*> ACubeCore::GetAttachedObjActors(const bool deepGet) const
-// {
-// 	TArray<AActor*> objects = socketInfo->GetAttachmentActors();
-//
-// 	if(!deepGet) return objects;
-// 	
-// 	for(const auto& obj : objects)
-// 	{
-// 		if(const ACubeCore* cube = Cast<ACubeCore>(obj))
-// 		{
-// 			// Don't append if the array is empty (crashes otherwise...)
-// 			if(cube->GetAttachedObjects(true).IsEmpty()) continue;
-//
-// 			objects.Append(cube->GetAttachedObjects(true));
-// 		}
-// 	}
-// 	
-// 	return objects;
-// }
-//
-// TArray<APickupableMaster*> ACubeCore::GetAttachedObjects(bool deepGet) const
-// {
-// 	TArray<APickupableMaster*> objects = socketInfo->GetAttachments();
-//
-// 	if(!deepGet) return objects;
-//
-// 	for(const auto& obj : objects)
-// 	{
-// 		TArray<AActor*> outActors;
-// 		obj->GetAttachedActors(outActors);
-//
-// 		for (const auto& actor : outActors)
-// 		{
-// 			objects.AddUnique(Cast<APickupableMaster>(actor));
-// 		}
-// 		
-// 	}
-// 	
-// 	return objects;
-// }
-
-void ACubeCore::SetSelected(const bool value)
-{
-	// Not allowed to drop the cube if unable to collect 
-	if(canPickup) selected = value;
-	else selected = true;
-	SetHideIndicator(!selected);
-
-	// Make the wheel ignore collisions and not ... fly away
-	for(const auto& obj : socketInfo->GetAttachments())
-	{
-		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
-	}
-
-	if(selected)
-	{
-		canPlace = true;
+		hitObj = 0;
+		ResetGhost();
 		return;
 	}
 
-	indicator->SetHiddenInGame(true);
-	ResetGhost();
+	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 	
-	// Make the wheel go back to normal when it's unselected.
-	for(const auto& obj : socketInfo->GetAttachments())
+	if(!hitActor)
 	{
-		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
+		hitObj = 0;
+		ResetGhost();
+		return;
 	}
+	
+	// If the cast was unsuccessful....
+	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
+	else hitObj = 0;
 	
 	if(!IsValid(hitObj)) return;
 
-	Print("Added from core", 3)
-	
-	// Rotate to match the socket rotation
-	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
-	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
-	
-	// Syncing the socket info
-	AddAttachment(hitObj, attachedSocket);
-	hitObj->SetAttachedSocket(attachedSocket);
-	hitObj->SetCore(this);
-
-	// Since the wheel uses physics constraints instead of normal attachments
-	if(!hitObj->IsA<AWheel>())
-	{
-		hitObj->AttachToActor(this, attachRules, attachedSocket);
-	}
-	else Cast<AWheel>(hitObj)->Attach(this);
-
-	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
-	hitObj = 0;
-}
-
-bool ACubeCore::SetGroupSelected(const bool value)
-{
-	if(!canCollect) return false;
-
-	return Super::SetGroupSelected(value);;
-}
-
-float ACubeCore::GetMass() const
-{
-	float mass = objMesh->GetMass();
-
-	const AActor* self = this;
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-	
-	for (const auto& obj : children) mass += obj->GetMass();
-	return mass;
-}
-
-// Passing an actor to work around the #include dependency loop.....
-void ACubeCore::AddThing(AActor* _thing) const
-{
-	if(!IsValid(collector)) return;
-	if(!IsValid(_thing)) return;
-
-	if(AThing* thing = Cast<AThing>(_thing))
-	{
-		// Using a delegate so that it can send a message to the blueprint (because ui...)
-		thing->Teleport(collector->GetCollectPoint());
-		onAddedThing.Broadcast(thing);
-	}
-}
-
-int ACubeCore::SelectSocket(int socket)
-{
-	if(!IsValid(socketInfo))
-	{
-		Print("Socket info invalid...", 5)
-		return -1;
-	}
-	
-	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
-	if(objs.IsEmpty()) return -1;
-
-	for (const auto& obj : objs) if(obj) obj->DeactivateOutline();
-	
-	// Set socket to -1 if the first element is the same element
-	if(objs.Find(selectedObj) == socket && socket == 0) socket = objs.Num() - 1;
-	if(!objs.IsValidIndex(socket))
-	{
-		PrintInt(socket, 2)
-		
-		if(socket > objs.Num() - 1) socket = objs.Num() - 1;
-		else socket = 0;
-	}
-
-	if(objs.IsValidIndex(socket)) selectedObj = objs[socket];
-	
-	Print(FString::FromInt(socket), 4)
-	selectedObj->ActivateOutline(selectedMat);
-	return socket;
+	OtherGhostPlacement();
+	attachedSocket = "Down";
 }
 
 void ACubeCore::OtherGhostPlacement()
@@ -371,55 +164,195 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 	}
 }
 
-void ACubeCore::Placement()
+void ACubeCore::SetSelected(const bool value)
 {
-	if(!canPlace) return;
-	if(!selected) return;
-	if(ObjectInSocket("Down")) return;
+	// Not allowed to drop the cube if unable to collect 
+	if(canPickup) selected = value;
+	else selected = true;
+	SetHideIndicator(!selected);
 
-	RemoveVelocity();
-	
-	const UWorld* wrld = GetWorld();
-	
-	FHitResult hit;
-	FCollisionQueryParams collisionParams;
-	collisionParams.AddIgnoredActor(this);
-	collisionParams.MobilityType = EQueryMobilityType::Any;
-	collisionParams.bDebugQuery = true;
-
-	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
-	
-	// Debug Draw
-	const FVector start = GetActorLocation();
-	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
-	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
-
-	AActor* hitActor = hit.GetActor();
-	if(!hit.bBlockingHit)
+	// Make the wheel ignore collisions and not ... fly away
+	for(const auto& obj : socketInfo->GetAttachments())
 	{
-		hitObj = 0;
-		ResetGhost();
+		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
+	}
+
+	if(selected)
+	{
+		canPlace = true;
 		return;
 	}
 
-	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+	indicator->SetHiddenInGame(true);
+	ResetGhost();
 	
-	if(!hitActor)
+	// Make the wheel go back to normal when it's unselected.
+	for(const auto& obj : socketInfo->GetAttachments())
 	{
-		hitObj = 0;
-		ResetGhost();
-		return;
+		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
 	}
-	
-	// If the cast was unsuccessful....
-	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
-	else hitObj = 0;
 	
 	if(!IsValid(hitObj)) return;
 
-	OtherGhostPlacement();
-	attachedSocket = "Down";
+	Print("Added from core", 3)
+	
+	// Rotate to match the socket rotation
+	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
+	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
+	
+	// Syncing the socket info
+	AddAttachment(hitObj, attachedSocket);
+	hitObj->SetAttachedSocket(attachedSocket);
+	hitObj->SetCore(this);
+
+	// Since the wheel uses physics constraints instead of normal attachments
+	if(!hitObj->IsA<AWheel>())
+	{
+		hitObj->AttachToActor(this, attachRules, attachedSocket);
+	}
+	else Cast<AWheel>(hitObj)->Attach(this);
+
+	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
+	hitObj = 0;
 }
+
+bool ACubeCore::SetGroupSelected(const bool value)
+{
+	if(!canCollect) return false;
+
+	return Super::SetGroupSelected(value);;
+}
+
+
+void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
+{
+	attachedSocket = socket;
+
+	socketInfo->AddAttachment(attachment, socket);
+	GravitySelection();
+	isAttached = true;
+
+	onChangeAttachments.Broadcast();
+}
+
+void ACubeCore::RemoveAttachment(const FName& socket)
+{
+	Super::RemoveAttachment(socket);
+
+	if(!IsValid(socketInfo))
+	{
+		Print("SocketInfo invalid..... couldn't remove",4)
+		return;
+	}
+	
+	socketInfo->RemoveAttachment(socket);
+	objMesh->SetEnableGravity(true);
+	onChangeAttachments.Broadcast();
+}
+
+void ACubeCore::RemoveAttachment(APickupableMaster* obj)
+{
+	if(!IsValid(obj)) return;
+	
+	socketInfo->RemoveAttachment(obj);
+	objMesh->SetEnableGravity(true);
+	onChangeAttachments.Broadcast();
+}
+
+void ACubeCore::DetachAll(const bool push)
+{
+	if(!socketInfo) return;
+	for(const auto& obj : socketInfo->GetAttachments())
+	{
+		if(!IsValid(obj)) continue;
+		
+		obj->Detach();
+		obj->RemoveVelocity();
+		
+		if(!push) continue;
+		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
+		const float launchForce = obj->GetMass();
+
+		constexpr float maxVelocity = 1000;
+		obj->AddVelocity(launchDir * std::min(launchForce, maxVelocity));
+	}
+
+	socketInfo->ClearAttachments();
+}
+
+
+void ACubeCore::SetAbilityActive(bool value)
+{
+	if(IsValid(selectedObj)) selectedObj->SetAbilityActive(value);
+}
+
+void ACubeCore::SetAllAbilityActive(bool value) const
+{
+	const AActor* self = this;
+
+	// The get descendents function ensures that every single thing that is attached to the core (even if it's connected in a chain) is set. 
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for (const auto& obj : children) obj->SetAbilityActive(value);
+}
+
+float ACubeCore::GetMass() const
+{
+	float mass = objMesh->GetMass();
+
+	const AActor* self = this;
+	TArray<APickupableMaster*> children;
+	GetDescendents(self, children);
+	
+	for (const auto& obj : children) mass += obj->GetMass();
+	return mass;
+}
+
+// Passing an actor to work around the #include dependency loop.....
+void ACubeCore::AddThing(AActor* _thing) const
+{
+	if(!IsValid(collector)) return;
+	if(!IsValid(_thing)) return;
+
+	if(AThing* thing = Cast<AThing>(_thing))
+	{
+		// Using a delegate so that it can send a message to the blueprint (because ui...)
+		thing->Teleport(collector->GetCollectPoint());
+		onAddedThing.Broadcast(thing);
+	}
+}
+
+int ACubeCore::SelectSocket(int socket)
+{
+	if(!IsValid(socketInfo))
+	{
+		Print("Socket info invalid...", 5)
+		return -1;
+	}
+	
+	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	if(objs.IsEmpty()) return -1;
+
+	for (const auto& obj : objs) if(obj) obj->DeactivateOutline();
+	
+	// Set socket to -1 if the first element is the same element
+	if(objs.Find(selectedObj) == socket && socket == 0) socket = objs.Num() - 1;
+	if(!objs.IsValidIndex(socket))
+	{
+		PrintInt(socket, 2)
+		
+		if(socket > objs.Num() - 1) socket = objs.Num() - 1;
+		else socket = 0;
+	}
+
+	if(objs.IsValidIndex(socket)) selectedObj = objs[socket];
+	
+	Print(FString::FromInt(socket), 4)
+	selectedObj->ActivateOutline(selectedMat);
+	return socket;
+}
+
 
 void ACubeCore::ResetRotation(bool resetVelocity)
 {
@@ -439,6 +372,16 @@ void ACubeCore::RemoveVelocity() const
 	GetDescendents(self, children);
 	
 	for(const auto& obj : children) obj->RemoveVelocity();
+}
+
+void ACubeCore::GravitySelection() const
+{
+	// Disable gravity on this.
+	Super::GravitySelection();
+
+	
+	// Disable gravity on all of the things attached to the core.
+	for(const auto& obj : GetAttachedObjects()) obj->GravitySelection();
 }
 
 void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
@@ -486,13 +429,52 @@ void ACubeCore::RearrangeSockets()
 	attachedSocket = "Up";
 }
 
-void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
+
+void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 {
-	attachedSocket = socket;
+	Print("setting timer", 4)
+	 TArray<APickupableMaster*> objs = GetCloseAttachments();
 
-	socketInfo->AddAttachment(attachment, socket);
-	GravitySelection();
-	isAttached = true;
+	if(objs.IsEmpty())
+	{
+		Print("objects array empty", 6)
+		return;
+	}
 
-	onChangeAttachments.Broadcast();
+	const UWorld* wrld = GetWorld();
+	
+	for(int i = 0; i < objs.Num(); i++)
+	{
+		FTimerHandle activationHandle;
+		FTimerHandle deactivationHandle;
+        
+		// Activate/Deactivate the things
+		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
+		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
+
+		// Activate...
+		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delays[i] < 1? .1f : delays[i], false);
+
+		// Deactivate after the delay and duration elapses activation...
+		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
+
+		
+	}
+}
+
+void ACubeCore::SetCanPickup(bool can)
+{
+	// Only broadcast when there's a change
+	const bool change = can != canPickup;
+	Super::SetCanPickup(can);
+	
+	SetCanCollect(can || !selected);
+
+	if(!canPickup && change) onRangeExceeded.Broadcast();
+}
+
+void ACubeCore::SetCanCollect(bool collectable)
+{
+	objMesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
+	canCollect = collectable;
 }
