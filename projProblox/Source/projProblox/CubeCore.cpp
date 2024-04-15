@@ -235,8 +235,8 @@ void ACubeCore::ResetToStart()
 	SetActorTransform(resetTransform);
 	RemoveVelocity();
 
-	onReset.Broadcast();
 	attempts++;
+	onReset.Broadcast(attempts);
 }
 
 // When the start button is pressed....

@@ -41,7 +41,7 @@ PROJPROBLOX_API void FOnAttemptEnding_DelegateWrapper(const FMulticastScriptDele
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_36_DELEGATE \
-PROJPROBLOX_API void FOnReset_DelegateWrapper(const FMulticastScriptDelegate& OnReset);
+PROJPROBLOX_API void FOnReset_DelegateWrapper(const FMulticastScriptDelegate& OnReset, int32 tries);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_40_DELEGATE \

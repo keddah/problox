@@ -208,10 +208,20 @@ void FOnAttemptEnding_DelegateWrapper(const FMulticastScriptDelegate& OnAttemptE
 }
 	struct Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics
 	{
+		struct _Script_projProblox_eventOnReset_Parms
+		{
+			int32 tries;
+		};
+		static const UECodeGen_Private::FIntPropertyParams NewProp_tries;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::NewProp_tries = { "tries", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_projProblox_eventOnReset_Parms, tries), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::NewProp_tries,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::Function_MetaDataParams[] = {
@@ -224,7 +234,9 @@ void FOnAttemptEnding_DelegateWrapper(const FMulticastScriptDelegate& OnAttemptE
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnReset__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnReset__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::_Script_projProblox_eventOnReset_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics::_Script_projProblox_eventOnReset_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -234,9 +246,15 @@ void FOnAttemptEnding_DelegateWrapper(const FMulticastScriptDelegate& OnAttemptE
 		}
 		return ReturnFunction;
 	}
-void FOnReset_DelegateWrapper(const FMulticastScriptDelegate& OnReset)
+void FOnReset_DelegateWrapper(const FMulticastScriptDelegate& OnReset, int32 tries)
 {
-	OnReset.ProcessMulticastDelegate<UObject>(NULL);
+	struct _Script_projProblox_eventOnReset_Parms
+	{
+		int32 tries;
+	};
+	_Script_projProblox_eventOnReset_Parms Parms;
+	Parms.tries=tries;
+	OnReset.ProcessMulticastDelegate<UObject>(&Parms);
 }
 	struct Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature_Statics
 	{
@@ -1047,7 +1065,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	};
 #endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset = { "onReset", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onReset), Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset_MetaData) }; // 2949278909
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset = { "onReset", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onReset), Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset_MetaData) }; // 3673695132
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACubeCore_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_resetTimer,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_resetDelay,
@@ -1106,9 +1124,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 783092582U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1844250667U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_1536230919(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_3303703345(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
