@@ -68,10 +68,10 @@ void AWedgeConnector::GhostPlacement()
 
 	const bool isDiag = raySocket == "DIAG";
 
-	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
 
 	// Have to realign the socket rotation with another axis
-	const FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
+	const FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
 	FRotator attachRot = RoundRotation(GetActorRotation(), socketRot, isDiag? -45 : 90.0f);
 
 	// Ignore if the X and Y vectors aren't low...
@@ -79,7 +79,7 @@ void AWedgeConnector::GhostPlacement()
 	const bool upright = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
 
 	// When placing on the diagonal face ... can only point in one direction...
-	if(tempSocket == "DIAG" && !upright) attachRot.Yaw = socketRot.Yaw;
+	if(attachedSocket == "DIAG" && !upright) attachRot.Yaw = socketRot.Yaw;
 
 	silhouette->SetWorldRotation(attachRot);
 	if(isDiag && upright)
@@ -95,7 +95,7 @@ void AWedgeConnector::GhostPlacement()
 	if(!parentCore->IsA<AWedgeConnector>() && !isDiag) silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation()));
 	
 	// If the diagonal sides of 2 wedges are trying to attach...
-	if(tempSocket == "DIAG" && isDiag) silhouette->SetRelativeRotation({135,0,0});
+	if(attachedSocket == "DIAG" && isDiag) silhouette->SetRelativeRotation({135,0,0});
 
 
 	///////////// Location
@@ -146,50 +146,46 @@ void AWedgeConnector::SetupIndicator()
 
 void AWedgeConnector::SetSelected(const bool value)
 {
-	selected = value;
-	SetHideIndicator(!selected);
-
-	const AActor* self = this;
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-	
-	// Detach from its components if selected
-	if(selected)
-	{
-		canPlace = true;
-		Detach();
-		
-		for(const auto& obj : children)
-		{
-			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
-		}
-		return;
-	}
-
-	// When unselected....
-	ResetGhost();
-	
-	for(const auto& obj : children)
-	{
-		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
-	}
-	
-	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return;
-
-	const bool isDiag = raySocket == "DIAG";
-	attachedSocket = tempSocket;
-
-
-	SetActorLocation(silhouette->GetComponentLocation());
-
-	// WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
-	SetActorRotation(silhouette->GetComponentRotation());
-	
-	AttachToActor(parentCore, attachRules, attachedSocket);
-
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
+	Super::SetSelected(value);
+	// selected = value;
+	// SetHideIndicator(!selected);
+	//
+	// const AActor* self = this;
+	// TArray<APickupableMaster*> children;
+	// GetDescendents(self, children);
+	//
+	// // Detach from its components if selected
+	// if(selected)
+	// {
+	// 	canPlace = true;
+	// 	Detach();
+	// 	
+	// 	for(const auto& obj : children)
+	// 	{
+	// 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
+	// 	}
+	// 	return;
+	// }
+	//
+	// // When unselected....
+	// ResetGhost();
+	//
+	// for(const auto& obj : children)
+	// {
+	// 	if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
+	// }
+	//
+	// // Rotate/Manipulate self when it hits the core
+	// if(!IsValid(parentCore)) return;
+	//
+	// // WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
+	// SetActorLocation(silhouette->GetComponentLocation());
+	// SetActorRotation(silhouette->GetComponentRotation());
+	//
+	// AttachToActor(parentCore, attachRules, attachedSocket);
+	//
+	// parentCore->AddAttachment(this, attachedSocket);
+	// isAttached = true;
 }
 
 void AWedgeConnector::SetAbilityActive(bool value)

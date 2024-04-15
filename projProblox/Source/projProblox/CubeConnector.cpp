@@ -166,7 +166,7 @@ void ACubeConnector::Placement()
 			parentCore = Cast<ACubeCore>(hitObj);
 			FName closestSocket = NearestSocket(parentCore, hit);
 			
-			tempSocket = closestSocket;
+			attachedSocket = closestSocket;
 			// hitObj = nullptr;
 			break;
 		}
@@ -207,10 +207,10 @@ void ACubeConnector::GhostPlacement()
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
 	// Attach the actor to the parent with the target socket
-	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
 
 	// Have to realign the socket rotation with another axis
-	FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
+	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
 
 	// Ignore if the X and Y vectors aren't low...
 	constexpr float aboveThreshold = .075f;
@@ -227,7 +227,7 @@ void ACubeConnector::GhostPlacement()
 	else socketRot = RoundRotation(GetActorRotation(), socketRot);
 
 	// Whether or not the attached socket is the diagonal side of a wedge...
-	const bool isDiag = tempSocket == "DIAG";
+	const bool isDiag = attachedSocket == "DIAG";
 	
 	silhouette->SetWorldRotation(socketRot);
 	silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), isDiag? -45.0f : -90));
@@ -269,8 +269,6 @@ void ACubeConnector::SetSelected(const bool value)
 	
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(parentCore)) return;
-
-	attachedSocket = tempSocket;
 
 	// Use the silhouettes position/rotation...
 	SetActorLocation(silhouette->GetComponentLocation());
