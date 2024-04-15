@@ -12,7 +12,6 @@
 ***************************************************************************************************************/
 #include "WedgeConnector.h"
 #include "WedgeSocketInfo.h"
-#include "Wheel.h"
 
 
 AWedgeConnector::AWedgeConnector()
@@ -142,50 +141,6 @@ void AWedgeConnector::SetupIndicator()
 	downArrow->SetRelativeRotation(rot);
 
 	SetHideIndicator(true);
-}
-
-void AWedgeConnector::SetSelected(const bool value)
-{
-	Super::SetSelected(value);
-	// selected = value;
-	// SetHideIndicator(!selected);
-	//
-	// const AActor* self = this;
-	// TArray<APickupableMaster*> children;
-	// GetDescendents(self, children);
-	//
-	// // Detach from its components if selected
-	// if(selected)
-	// {
-	// 	canPlace = true;
-	// 	Detach();
-	// 	
-	// 	for(const auto& obj : children)
-	// 	{
-	// 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
-	// 	}
-	// 	return;
-	// }
-	//
-	// // When unselected....
-	// ResetGhost();
-	//
-	// for(const auto& obj : children)
-	// {
-	// 	if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
-	// }
-	//
-	// // Rotate/Manipulate self when it hits the core
-	// if(!IsValid(parentCore)) return;
-	//
-	// // WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
-	// SetActorLocation(silhouette->GetComponentLocation());
-	// SetActorRotation(silhouette->GetComponentRotation());
-	//
-	// AttachToActor(parentCore, attachRules, attachedSocket);
-	//
-	// parentCore->AddAttachment(this, attachedSocket);
-	// isAttached = true;
 }
 
 void AWedgeConnector::SetAbilityActive(bool value)

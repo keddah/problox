@@ -6,9 +6,6 @@
 #include "CubeConnector.h"
 #include "WedgeConnector.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 {
@@ -16,7 +13,6 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 	
 	AWedgeConnector();
 	virtual void ApplyOffset(const ACubeCore* core) override;
-	virtual void SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 	virtual void GhostPlacement() override;
 	virtual void SetHideIndicator(const bool hide) override;

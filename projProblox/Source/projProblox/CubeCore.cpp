@@ -403,7 +403,11 @@ void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
 void ACubeCore::RearrangeSockets()
 {
 	// This only needs to happen if there's an object in the bottom slot when trying to attach to a cube..
-	if(!ObjectInSocket("down")) return;
+	if(!ObjectInSocket("down"))
+	{
+		Print("down is blocked.", 4)
+		return;
+	}
 
 	TArray<APickupableMaster*> objects = socketInfo->GetObjectsArray();
 	TArray<FName> sockets = socketInfo->GetSockets();
@@ -462,7 +466,7 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 
 		// Deactivate after the delay and duration elapses activation...
 		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
-
+		
 		
 	}
 }
