@@ -69,6 +69,8 @@ private:
 	short maxAttempts = 5;
 
 	float longestDuration;
+
+	bool buildPhase = true;
 	
 	UFUNCTION()
 	void Start();

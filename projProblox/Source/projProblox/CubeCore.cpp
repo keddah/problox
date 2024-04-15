@@ -236,6 +236,7 @@ void ACubeCore::ResetToStart()
 	RemoveVelocity();
 
 	attempts++;
+	buildPhase = true;
 	onReset.Broadcast(attempts);
 }
 
@@ -244,6 +245,7 @@ void ACubeCore::Start()
 {
 	// Save the transform...
 	resetTransform = GetActorTransform();
+	buildPhase = false;
 }
 
 
@@ -500,9 +502,11 @@ void ACubeCore::SetCanPickup(bool can)
 
 	if(!canPickup && change) onRangeExceeded.Broadcast();
 
-	distanceLine->SetHiddenInGame(can);
+	distanceLine->SetHiddenInGame(true);
 	
 	if(can) return;
+	distanceLine->SetHiddenInGame(!buildPhase);
+	
 	distanceLine->SetWorldLocation(objMesh->GetComponentLocation());
 
 	const FVector thisPos = distanceLine->GetComponentLocation();
