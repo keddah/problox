@@ -43,6 +43,10 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_moveSpeed;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_defaultFriction_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_defaultFriction;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_drag_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_drag;
@@ -93,6 +97,13 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed = { "moveSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, moveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_defaultFriction_MetaData[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Treads.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_defaultFriction = { "defaultFriction", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, defaultFriction), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_defaultFriction_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_defaultFriction_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_drag_MetaData[] = {
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Treads.h" },
@@ -106,6 +117,7 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_grounded,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_defaultFriction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_drag,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATreads_Statics::StaticCppClassTypeInfo = {
@@ -146,9 +158,9 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Treads_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 294075985U) },
+		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 2590316984U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Treads_h_2391294063(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Treads_h_2750710739(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Treads_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Treads_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
