@@ -48,8 +48,6 @@ protected:
 	
 	// The socket that the placement ray from this object is firing from
 	FName raySocket;
-	
-	FName tempSocket;
 
 public:
 	virtual void Tick(float DeltaSeconds) override;

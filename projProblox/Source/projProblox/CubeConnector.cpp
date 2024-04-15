@@ -166,7 +166,7 @@ void ACubeConnector::Placement()
 			parentCore = Cast<ACubeCore>(hitObj);
 			FName closestSocket = NearestSocket(parentCore, hit);
 			
-			tempSocket = closestSocket;
+			attachedSocket = closestSocket;
 			// hitObj = nullptr;
 			break;
 		}
@@ -206,21 +206,31 @@ void ACubeConnector::GhostPlacement()
 
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 
-	const bool above = !parentCore->IsA<AWedgeConnector>() && parentCore->GetActorLocation().Z + parentCore->GetActorRelativeScale3D().X * 100 <= GetActorLocation().Z;	// 100 = the size of the core 
-	
 	// Attach the actor to the parent with the target socket
-	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
 
 	// Have to realign the socket rotation with another axis
-	FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
+	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
+
+	// Ignore if the X and Y vectors aren't low...
+	constexpr float aboveThreshold = .075f;
+	const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
+	
+	PrintVector(socketRot.Vector(), .2)
 	if(above)
 	{
+		// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
 		const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
 		socketRot = socketRot.RotateVector(socketForward).Rotation();
 		Print("Above", .2)
 	}
+	else socketRot = RoundRotation(GetActorRotation(), socketRot);
+
+	// Whether or not the attached socket is the diagonal side of a wedge...
+	const bool isDiag = attachedSocket == "DIAG";
 	
-	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
+	silhouette->SetWorldRotation(socketRot);
+	silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), isDiag? -45.0f : -90));
 	
 	///////////// Location
 	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});
@@ -259,8 +269,6 @@ void ACubeConnector::SetSelected(const bool value)
 	
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(parentCore)) return;
-
-	attachedSocket = tempSocket;
 
 	// Use the silhouettes position/rotation...
 	SetActorLocation(silhouette->GetComponentLocation());

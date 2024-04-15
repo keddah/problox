@@ -68,20 +68,35 @@ void AWedgeConnector::GhostPlacement()
 
 	const bool isDiag = raySocket == "DIAG";
 
-	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, tempSocket);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
 
 	// Have to realign the socket rotation with another axis
-	const FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
-	FRotator attachRot = RoundRotation(GetActorRotation(), socketRot);
+	const FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
+	FRotator attachRot = RoundRotation(GetActorRotation(), socketRot, isDiag? -45 : 90.0f);
+
+	// Ignore if the X and Y vectors aren't low...
+	constexpr float aboveThreshold = .075f;
+	const bool upright = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
 
 	// When placing on the diagonal face ... can only point in one direction...
-	const bool upright = abs(socketRot.Vector().Z) > .95f;
-	if(tempSocket == "DIAG" && !upright) attachRot.Yaw = socketRot.Yaw;
-	
+	if(attachedSocket == "DIAG" && !upright) attachRot.Yaw = socketRot.Yaw;
+
 	silhouette->SetWorldRotation(attachRot);
+	if(isDiag && upright)
+	{
+		// Basically just used to round the hypotenuse side...
+		const FRotator roundRot = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), -45);
+		
+		const FRotator roundYaw = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation());
+		silhouette->SetWorldRotation({roundRot.Pitch, roundYaw.Yaw, roundRot.Roll});
+	}
+	
+	// Fixes the rotation if it is off...
+	if(!parentCore->IsA<AWedgeConnector>() && !isDiag) silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation()));
 	
 	// If the diagonal sides of 2 wedges are trying to attach...
-	if(tempSocket == "DIAG" && isDiag) silhouette->SetRelativeRotation({135,0,0});
+	if(attachedSocket == "DIAG" && isDiag) silhouette->SetRelativeRotation({135,0,0});
+
 
 	///////////// Location
 	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});
@@ -131,50 +146,46 @@ void AWedgeConnector::SetupIndicator()
 
 void AWedgeConnector::SetSelected(const bool value)
 {
-	selected = value;
-	SetHideIndicator(!selected);
-
-	const AActor* self = this;
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-	
-	// Detach from its components if selected
-	if(selected)
-	{
-		canPlace = true;
-		Detach();
-		
-		for(const auto& obj : children)
-		{
-			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
-		}
-		return;
-	}
-
-	// When unselected....
-	ResetGhost();
-	
-	for(const auto& obj : children)
-	{
-		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
-	}
-	
-	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return;
-
-	const bool isDiag = raySocket == "DIAG";
-	attachedSocket = tempSocket;
-
-
-	SetActorLocation(silhouette->GetComponentLocation());
-
-	// WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
-	SetActorRotation(silhouette->GetComponentRotation());
-	
-	AttachToActor(parentCore, attachRules, attachedSocket);
-
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
+	Super::SetSelected(value);
+	// selected = value;
+	// SetHideIndicator(!selected);
+	//
+	// const AActor* self = this;
+	// TArray<APickupableMaster*> children;
+	// GetDescendents(self, children);
+	//
+	// // Detach from its components if selected
+	// if(selected)
+	// {
+	// 	canPlace = true;
+	// 	Detach();
+	// 	
+	// 	for(const auto& obj : children)
+	// 	{
+	// 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
+	// 	}
+	// 	return;
+	// }
+	//
+	// // When unselected....
+	// ResetGhost();
+	//
+	// for(const auto& obj : children)
+	// {
+	// 	if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
+	// }
+	//
+	// // Rotate/Manipulate self when it hits the core
+	// if(!IsValid(parentCore)) return;
+	//
+	// // WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
+	// SetActorLocation(silhouette->GetComponentLocation());
+	// SetActorRotation(silhouette->GetComponentRotation());
+	//
+	// AttachToActor(parentCore, attachRules, attachedSocket);
+	//
+	// parentCore->AddAttachment(this, attachedSocket);
+	// isAttached = true;
 }
 
 void AWedgeConnector::SetAbilityActive(bool value)
