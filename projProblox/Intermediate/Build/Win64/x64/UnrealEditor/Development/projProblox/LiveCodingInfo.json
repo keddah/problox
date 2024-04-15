@@ -2,6 +2,23 @@
 	"RemapUnityFiles": 
 	{
 		"Module.projProblox.cpp.obj": [
+			"Collector.cpp.obj",
+			"CubeCore.cpp.obj",
+			"CubeSocketInfo.cpp.obj",
+			"Glider.cpp.obj",
+			"GrappleHead.cpp.obj",
+			"Grappler.cpp.obj",
+			"Magnet.cpp.obj",
+			"Piston.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"projProblox.cpp.obj",
+			"Propeller.cpp.obj",
+			"Thing.cpp.obj",
+			"ThingSpawner.cpp.obj",
+			"Thruster.cpp.obj",
+			"Treads.cpp.obj",
+			"WedgeSocketInfo.cpp.obj",
+			"Wheel.cpp.obj",
 			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
@@ -22,26 +39,9 @@
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
-			"Collector.cpp.obj",
 			"CubeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
-			"CubeSocketInfo.cpp.obj",
-			"Glider.cpp.obj",
-			"GrappleHead.cpp.obj",
-			"Grappler.cpp.obj",
-			"Magnet.cpp.obj",
 			"PickupableMaster.cpp.obj",
-			"Piston.cpp.obj",
-			"PlayerCharacter.cpp.obj",
-			"projProblox.cpp.obj",
-			"Propeller.cpp.obj",
-			"Thing.cpp.obj",
-			"ThingSpawner.cpp.obj",
-			"Thruster.cpp.obj",
-			"Treads.cpp.obj",
-			"WedgeConnector.cpp.obj",
-			"WedgeSocketInfo.cpp.obj",
-			"Wheel.cpp.obj"
+			"WedgeConnector.cpp.obj"
 		]
 	}
 }

@@ -57,19 +57,21 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThruster_Statics::NewProp_thruster_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Thruster" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Thruster.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_thruster = { "thruster", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, thruster), Z_Construct_UClass_UPhysicsThrusterComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_thruster_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_thruster_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_thruster = { "thruster", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, thruster), Z_Construct_UClass_UPhysicsThrusterComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_thruster_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_thruster_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData[] = {
-		{ "Category", "Thruster" },
+		{ "Category", "Ability" },
+		{ "Delta", "1" },
 		{ "ModuleRelativePath", "Thruster.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_power = { "power", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, power), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_power = { "power", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, power), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AThruster_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThruster_Statics::NewProp_thruster,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThruster_Statics::NewProp_power,
@@ -107,15 +109,15 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AThruster);
 	AThruster::~AThruster() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Thruster_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AThruster, AThruster::StaticClass, TEXT("AThruster"), &Z_Registration_Info_UClass_AThruster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThruster), 3326972179U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AThruster, AThruster::StaticClass, TEXT("AThruster"), &Z_Registration_Info_UClass_AThruster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThruster), 1554667327U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Thruster_h_3713853256(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_3057320468(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -8,8 +8,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnEndingGame__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnGameEnd__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnOutOfRange__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnStartGame__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_projProblox;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_projProblox()
 	{
@@ -17,21 +20,24 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnEndingGame__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnGameEnd__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnOutOfRange__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnStartGame__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
 				"/Script/projProblox",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xEAE7EF33,
-				0xC688B337,
+				0x3F46BB76,
+				0xD9C3E73F,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xEAE7EF33, 0xC688B337));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x3F46BB76, 0xD9C3E73F));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

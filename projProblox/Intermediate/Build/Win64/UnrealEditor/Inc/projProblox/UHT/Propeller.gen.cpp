@@ -80,46 +80,50 @@ void EmptyLinkFunctionForGeneratedCodePropeller() {}
 		{ "ModuleRelativePath", "Propeller.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_windBox = { "windBox", nullptr, (EPropertyFlags)0x00200800000b0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, windBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_windBox_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_windBox_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_windBox = { "windBox", nullptr, (EPropertyFlags)0x00400000000b0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, windBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_windBox_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_windBox_MetaData) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_Inner = { "pushedObjs", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Propeller" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Propeller.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs = { "pushedObjs", nullptr, (EPropertyFlags)0x002008800000000c, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, pushedObjs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_MetaData) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs = { "pushedObjs", nullptr, (EPropertyFlags)0x004000800000000c, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, pushedObjs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Delta", "0.500000" },
 		{ "ModuleRelativePath", "Propeller.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The amount of force to apply to the thing that it's attached to" },
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_propelForce = { "propelForce", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, propelForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_propelForce = { "propelForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, propelForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_propelForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Delta", "1" },
 		{ "ModuleRelativePath", "Propeller.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The amount of force to apply to things that are inside the windCollider while active" },
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_pushForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData[] = {
 		{ "Category", "Ability" },
+		{ "Delta", "1" },
 		{ "ModuleRelativePath", "Propeller.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The speed the propellers rotate (purely visual)." },
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed = { "spinSpeed", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, spinSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed = { "spinSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, spinSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_spinSpeed_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APropeller_Statics::NewProp_massScale_MetaData[] = {
 		{ "Category", "Ability" },
@@ -129,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodePropeller() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_massScale = { "massScale", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, massScale), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_massScale_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_massScale_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APropeller_Statics::NewProp_massScale = { "massScale", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APropeller, massScale), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APropeller_Statics::NewProp_massScale_MetaData), Z_Construct_UClass_APropeller_Statics::NewProp_massScale_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APropeller_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_windBox,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APropeller_Statics::NewProp_pushedObjs_Inner,
@@ -172,15 +176,15 @@ void EmptyLinkFunctionForGeneratedCodePropeller() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APropeller);
 	APropeller::~APropeller() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Propeller_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APropeller, APropeller::StaticClass, TEXT("APropeller"), &Z_Registration_Info_UClass_APropeller, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APropeller), 2412674099U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APropeller, APropeller::StaticClass, TEXT("APropeller"), &Z_Registration_Info_UClass_APropeller, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APropeller), 3251184557U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Propeller_h_466032194(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_518342940(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Propeller_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

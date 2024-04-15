@@ -38,9 +38,6 @@ void EmptyLinkFunctionForGeneratedCodeWedgeSocketInfo() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWedgeSocketInfo_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWedgeSocketInfo_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "WedgeSocketInfo.h" },
 		{ "ModuleRelativePath", "WedgeSocketInfo.h" },
 	};
@@ -77,15 +74,15 @@ void EmptyLinkFunctionForGeneratedCodeWedgeSocketInfo() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UWedgeSocketInfo);
 	UWedgeSocketInfo::~UWedgeSocketInfo() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UWedgeSocketInfo, UWedgeSocketInfo::StaticClass, TEXT("UWedgeSocketInfo"), &Z_Registration_Info_UClass_UWedgeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWedgeSocketInfo), 2879570706U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UWedgeSocketInfo, UWedgeSocketInfo::StaticClass, TEXT("UWedgeSocketInfo"), &Z_Registration_Info_UClass_UWedgeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWedgeSocketInfo), 3104775173U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_WedgeSocketInfo_h_2420391676(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeSocketInfo_h_2180692953(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_WedgeSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

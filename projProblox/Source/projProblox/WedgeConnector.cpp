@@ -72,16 +72,31 @@ void AWedgeConnector::GhostPlacement()
 
 	// Have to realign the socket rotation with another axis
 	const FRotator socketRot = parentMesh->GetSocketRotation(tempSocket);
-	FRotator attachRot = RoundRotation(GetActorRotation(), socketRot);
+	FRotator attachRot = RoundRotation(GetActorRotation(), socketRot, isDiag? -45 : 90.0f);
+
+	// Ignore if the X and Y vectors aren't low...
+	constexpr float aboveThreshold = .075f;
+	const bool upright = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
 
 	// When placing on the diagonal face ... can only point in one direction...
-	const bool upright = abs(socketRot.Vector().Z) > .95f;
 	if(tempSocket == "DIAG" && !upright) attachRot.Yaw = socketRot.Yaw;
-	
+
 	silhouette->SetWorldRotation(attachRot);
+	if(isDiag && upright)
+	{
+		// Basically just used to round the hypotenuse side...
+		const FRotator roundRot = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), -45);
+		
+		const FRotator roundYaw = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation());
+		silhouette->SetWorldRotation({roundRot.Pitch, roundYaw.Yaw, roundRot.Roll});
+	}
+	
+	// Fixes the rotation if it is off...
+	if(!parentCore->IsA<AWedgeConnector>() && !isDiag) silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation()));
 	
 	// If the diagonal sides of 2 wedges are trying to attach...
 	if(tempSocket == "DIAG" && isDiag) silhouette->SetRelativeRotation({135,0,0});
+
 
 	///////////// Location
 	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});

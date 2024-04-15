@@ -278,15 +278,15 @@ FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const float 
 	return rounded;
 }
 
-FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotator& referencedRot)
+FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder)
 {
 	// Calculate the difference between the rotations
 	const FRotator difference = rotation - referencedRot;
 
 	// Round the differences to the nearest 90 degrees
-	const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / 90.0f) * 90.0f;
-	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / 90.0f) * 90.0f;
-	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / 90.0f) * 90.0f;
+	const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / rounder) * rounder;
+	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / rounder) * rounder;
+	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / rounder) * rounder;
 
 	// Add the rounded differences to the reference rotation to get the rounded rotation
 	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
