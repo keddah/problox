@@ -34,7 +34,7 @@ ACubeCore::ACubeCore()
 	distanceLine->ArrowLength = 100;
 	distanceLine->SetRelativeScale3D({1,7,7});
 	distanceLine->SetHiddenInGame(true);
-	
+
 	placeRange = 50;
 }
 
@@ -49,7 +49,8 @@ void ACubeCore::BeginPlay()
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
 	AdjustRange();
-	
+
+	onStartGame.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 }
 
@@ -229,6 +230,22 @@ bool ACubeCore::SetGroupSelected(const bool value)
 	return Super::SetGroupSelected(value);;
 }
 
+void ACubeCore::ResetToStart()
+{
+	SetActorTransform(resetTransform);
+	RemoveVelocity();
+
+	onReset.Broadcast();
+	attempts++;
+}
+
+// When the start button is pressed....
+void ACubeCore::Start()
+{
+	// Save the transform...
+	resetTransform = GetActorTransform();
+}
+
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
@@ -346,15 +363,12 @@ int ACubeCore::SelectSocket(int socket)
 	if(objs.Find(selectedObj) == socket && socket == 0) socket = objs.Num() - 1;
 	if(!objs.IsValidIndex(socket))
 	{
-		PrintInt(socket, 2)
-		
 		if(socket > objs.Num() - 1) socket = objs.Num() - 1;
 		else socket = 0;
 	}
 
 	if(objs.IsValidIndex(socket)) selectedObj = objs[socket];
 	
-	Print(FString::FromInt(socket), 4)
 	selectedObj->ActivateOutline(selectedMat);
 	return socket;
 }
@@ -441,7 +455,6 @@ void ACubeCore::RearrangeSockets()
 
 void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 {
-	Print("setting timer", 4)
 	 TArray<APickupableMaster*> objs = GetCloseAttachments();
 
 	if(objs.IsEmpty())
@@ -451,7 +464,6 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 	}
 
 	const UWorld* wrld = GetWorld();
-	
 	for(int i = 0; i < objs.Num(); i++)
 	{
 		FTimerHandle activationHandle;
@@ -466,9 +478,17 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 
 		// Deactivate after the delay and duration elapses activation...
 		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
-		
-		
+
+		// If the current duration is bigger than "longestDuration" set the new longest duration... otherwise.. same.
+		longestDuration = (delays[i] < 1? .1f : delays[i]) + durations[i] > longestDuration? (delays[i] < 1? .1f : delays[i]) + durations[i] : longestDuration;
 	}
+
+	FTimerHandle startResetHandle;
+	const FTimerDelegate startResetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::InitiateReset);
+	wrld->GetTimerManager().SetTimer(startResetHandle, startResetDelegate, longestDuration, false);
+
+	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
+	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration + resetDelay, false);
 }
 
 void ACubeCore::SetCanPickup(bool can)
@@ -492,7 +512,6 @@ void ACubeCore::SetCanPickup(bool can)
 	distanceLine->SetWorldRotation(lookRot);
 
 	const float distance = FVector::Distance(collectorPos, thisPos);
-	PrintFloat(distance, .2f)
 	const FVector lineSize = distanceLine->GetRelativeScale3D();
 	distanceLine->SetRelativeScale3D({distance * .01f, lineSize.Y, lineSize.Z});
 }

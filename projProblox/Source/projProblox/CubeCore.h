@@ -29,6 +29,12 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
 
+// Should be broadcasted when the reset delay + longest duration has elapsed.. 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttemptEnding);
+
+// Should be broadcasted when the reset timer has elapsed.. 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnReset);
+
 // Should be broadcasted when a "Thing" collides with any of the things that are attached to the cube.
 // This has been declared so that a Blueprint function can be called.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAddedThing, AActor*, thing);
@@ -49,6 +55,24 @@ private:
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
+	
+	/////////////// Turn System ///////////////
+	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+	FTimerHandle resetTimer;
+
+	FTransform resetTransform;
+	
+	UPROPERTY(EditDefaultsOnly)
+	float resetDelay = 5;
+
+	short attempts = 1;
+	short maxAttempts = 5;
+
+	float longestDuration;
+	
+	UFUNCTION()
+	void Start();
+	
 	
 	/////////////// Game States ///////////////
 	UFUNCTION(BlueprintCallable)
@@ -162,6 +186,12 @@ public:
 	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
 	FOnEndingGame onEndingGame;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
+	FOnAttemptEnding onAttemptEnding;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
+	FOnReset onReset;
 	
 	
 	/////////////// Attachments ///////////////
@@ -216,6 +246,12 @@ public:
 	virtual bool SetGroupSelected(const bool value) override;
 
 	
+	/////////////// Turn System ///////////////
+	void SetMaxAttempts(const short& max) { maxAttempts = max; }
+	void ResetToStart();
+	void InitiateReset() const { onAttemptEnding.Broadcast(); }
+	FTransform GetResetTransform() const { return resetTransform; }
+
 	/////////////// Getters ///////////////
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
 	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
@@ -229,4 +265,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	int SelectSocket(int socket);
+
+
 };
