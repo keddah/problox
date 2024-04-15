@@ -4,6 +4,7 @@
 * The header file for one of the pickupable objects.
 * OVERRIDES:
 *	GetAttachedOffset
+*	SetAbilityActive
 *
 * PROBLEMS:
 *
@@ -24,7 +25,8 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	ATreads();
 	virtual void BeginPlay() override;
-	
+
+	virtual void SetAbilityActive(const bool value) override;
 	virtual void Ability() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
@@ -37,6 +39,9 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float moveSpeed = 7500;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Ability")
+	float defaultFriction = .6f;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "Overrides the 'Linear damping' value of the objMesh."))
 	float drag = .05f;

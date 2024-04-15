@@ -4,7 +4,6 @@
 * The code file for one of the pickupable objects. Creates the driveTrigger to check for grounded collisions.
 *
 * PROBLEMS:
-*	(NOT CODE RELATED) The friction of the treads causes it to veer to one side and/or spin out...
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -45,11 +44,29 @@ void ATreads::BeginPlay()
 	objMesh->SetLinearDamping(drag);
 }
 
+void ATreads::SetAbilityActive(const bool value)
+{
+	Super::SetAbilityActive(value);
+
+	UPhysicalMaterial* physMat = objMesh->GetMaterial(0)->GetPhysicalMaterial();
+	if(active)
+	{
+		physMat->Friction = 0;
+		physMat->FrictionCombineMode = EFrictionCombineMode::Min;
+	}
+	else
+	{
+		objMesh->GetMaterial(0)->GetPhysicalMaterial()->Friction = defaultFriction;
+		physMat->FrictionCombineMode = EFrictionCombineMode::Average;
+	}
+}
+
 void ATreads::Ability()
 {
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
+	
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
 	objMesh->AddForce(GetActorForwardVector() * moveSpeed * 1000);
 }
