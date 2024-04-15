@@ -6,8 +6,7 @@
 /NAME:"UnrealEditor-projProblox.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\projProbloxEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Module.projProblox.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Treads.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
-/OUT:"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox.lib"
+"C:\GitHub\FMP\problox\projProblox\Intermediate\Build\Win64\x64\projProbloxEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\GitHub\FMP\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Module.projProblox.cpp.obj"
+"C:\GitHub\FMP\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
+/OUT:"C:\GitHub\FMP\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox.lib"

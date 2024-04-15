@@ -9,9 +9,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnEndingGame__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnGameEnd__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnOutOfRange__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnStartGame__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_projProblox;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_projProblox()
@@ -21,9 +23,11 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnEndingGame__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnGameEnd__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnOutOfRange__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnStartGame__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
@@ -31,13 +35,13 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x4D4FEBC1,
-				0xD9C3E73F,
+				0x806C21ED,
+				0x5DF15AE1,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x4D4FEBC1, 0xD9C3E73F));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x806C21ED, 0x5DF15AE1));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
