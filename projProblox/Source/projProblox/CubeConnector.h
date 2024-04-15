@@ -15,6 +15,17 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 	GENERATED_BODY()
 
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
+
+
+private:
+	UPROPERTY(EditDefaultsOnly, meta = (AllowPrivateAccess = true))
+	UArrowComponent* leftArrow;
+	
+	UPROPERTY(EditDefaultsOnly, meta = (AllowPrivateAccess = true))
+	UArrowComponent* rightArrow;
+	
+	UPROPERTY(EditDefaultsOnly, meta = (AllowPrivateAccess = true))
+	UArrowComponent* upArrow;
 	
 public:
 	ACubeConnector();
@@ -34,14 +45,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* backArrow;
 	
-	UPROPERTY(EditDefaultsOnly)
-	UArrowComponent* leftArrow;
-	
-	UPROPERTY(EditDefaultsOnly)
-	UArrowComponent* rightArrow;
-	
-	UPROPERTY(EditDefaultsOnly)
-	UArrowComponent* upArrow;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* downArrow;

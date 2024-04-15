@@ -32,11 +32,6 @@ void AWedgeConnector::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	// Don't use the up, right, left arrows...
-	upArrow->SetHiddenInGame(true);
-	leftArrow->SetHiddenInGame(true);
-	rightArrow->SetHiddenInGame(true);
-	
 	placeRange = 100;
 
 	socketInfo = NewObject<UWedgeSocketInfo>();
