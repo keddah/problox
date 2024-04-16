@@ -42,27 +42,19 @@ void ATreads::BeginPlay()
 	Super::BeginPlay();
 
 	objMesh->SetLinearDamping(drag);
+	objMesh->SetAngularDamping(active? 0 : 1);
 }
 
 void ATreads::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
 
-	UPhysicalMaterial* physMat = objMesh->GetMaterial(0)->GetPhysicalMaterial();
-	if(active)
-	{
-		physMat->Friction = 0;
-		physMat->FrictionCombineMode = EFrictionCombineMode::Min;
-	}
-	else
-	{
-		objMesh->GetMaterial(0)->GetPhysicalMaterial()->Friction = defaultFriction;
-		physMat->FrictionCombineMode = EFrictionCombineMode::Average;
-	}
+	objMesh->SetLinearDamping(active? drag : drag * 2);
 }
 
 void ATreads::Ability()
 {
+	PrintFloat(objMesh->GetLinearDamping(), .1)
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 

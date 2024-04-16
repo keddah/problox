@@ -45,5 +45,5 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "Overrides the 'Linear damping' value of the objMesh."))
 	float drag = .05f;
-	
+		
 };
