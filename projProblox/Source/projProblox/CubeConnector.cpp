@@ -240,6 +240,8 @@ void ACubeConnector::GhostPlacement()
 void ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
+
 	SetHideIndicator(!selected);
 
 	const AActor* self = this;
@@ -283,6 +285,8 @@ void ACubeConnector::SetSelected(const bool value)
 bool ACubeConnector::SetGroupSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
+	
 	canPlace = !selected;
 	
 	return true;

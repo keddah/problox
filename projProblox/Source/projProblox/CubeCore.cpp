@@ -176,6 +176,8 @@ void ACubeCore::SetSelected(const bool value)
 	// Not allowed to drop the cube if unable to collect 
 	if(canPickup) selected = value;
 	else selected = true;
+
+	GravitySelection();
 	SetHideIndicator(!selected);
 
 	// Make the wheel ignore collisions and not ... fly away
@@ -382,7 +384,10 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 
 	if(!resetVelocity) return;
 
-	for(const auto& obj : socketInfo->GetAttachments()) obj->RemoveVelocity();
+	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	if(objs.IsEmpty()) return;
+	
+	for(const auto& obj : objs) obj->RemoveVelocity();
 }
 
 void ACubeCore::RemoveVelocity() const

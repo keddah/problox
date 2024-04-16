@@ -159,7 +159,6 @@ protected:
 	void OtherRotations(const APickupableMaster& other);
 
 	virtual void ResetRotation(bool resetVelocity) override;
-
 	
 	/////////////// Attachments ///////////////
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
