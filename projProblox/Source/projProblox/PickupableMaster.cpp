@@ -188,6 +188,7 @@ void APickupableMaster::GhostPlacement()
 void APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
+	GravitySelection();
 	SetHideIndicator(!selected);
 
 	if(selected)

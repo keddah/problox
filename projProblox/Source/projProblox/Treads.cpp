@@ -55,7 +55,6 @@ void ATreads::SetAbilityActive(const bool value)
 
 void ATreads::Ability()
 {
-	PrintFloat(objMesh->GetLinearDamping(), .1)
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 

@@ -22,8 +22,13 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
+	if(!IsValid(core))
+	{
+		Print("Core Invalid... ~ player", 5);
+		return;
+	}
+	
 	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
-	// Print(IsValid(core)? "core is valid" : "core invalid", 3)
 }
 
 // Called to bind functionality to input
@@ -66,8 +71,6 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
-		selectedObj->RemoveVelocity();
-		selectedObj->GravitySelection();
 	}
 	else holding = false;
 	
@@ -161,9 +164,7 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 
 		if(!IsValid(selectedObj)) return;
 
-		selectedObj->RemoveVelocity();
 		selectedObj->SetGroupSelected(true);
-		selectedObj->GravitySelection();
 	}
 	else holding = false;
 
@@ -205,7 +206,7 @@ void APlayerCharacter::Deselect()
 	holding = false;
 	
 	selectedObj->SetSelected(false);
-	selectedObj->GravitySelection();
+	// selectedObj->GravitySelection();
 	selectedObj = nullptr;
 
 	// Clear things to ignore once not selecting anything.
@@ -214,6 +215,5 @@ void APlayerCharacter::Deselect()
 
 void APlayerCharacter::EndGame()
 {
-	Print("GAME ENDEDD", 999999999)
 	gameEnded = true;
 }

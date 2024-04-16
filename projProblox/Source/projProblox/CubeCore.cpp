@@ -176,6 +176,8 @@ void ACubeCore::SetSelected(const bool value)
 	// Not allowed to drop the cube if unable to collect 
 	if(canPickup) selected = value;
 	else selected = true;
+
+	GravitySelection();
 	SetHideIndicator(!selected);
 
 	// Make the wheel ignore collisions and not ... fly away
@@ -246,6 +248,15 @@ void ACubeCore::Start()
 	// Save the transform...
 	resetTransform = GetActorTransform();
 	buildPhase = false;
+}
+
+void ACubeCore::CalculateRating()
+{
+	if(attempts <= moveRatings[3]) rating = 3;
+	else if(attempts > moveRatings[3] && attempts <= moveRatings[2]) rating = 2;
+	else if(attempts > moveRatings[2] && attempts <= moveRatings[1]) rating = 1;
+	
+	else if(attempts >= moveRatings[0]) rating = 0;
 }
 
 
@@ -382,7 +393,10 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 
 	if(!resetVelocity) return;
 
-	for(const auto& obj : socketInfo->GetAttachments()) obj->RemoveVelocity();
+	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	if(objs.IsEmpty()) return;
+	
+	for(const auto& obj : objs) obj->RemoveVelocity();
 }
 
 void ACubeCore::RemoveVelocity() const
