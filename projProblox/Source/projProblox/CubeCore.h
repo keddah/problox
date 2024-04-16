@@ -65,8 +65,13 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	float resetDelay = 5;
 
-	short attempts = 1;
-	short maxAttempts = 5;
+	unsigned short rating;
+
+	UPROPERTY(EditInstanceOnly, EditFixedSize, meta = (TitleProperty = "Soimets", AllowPrivateAccess = true, ToolTip = "Index 0 = no stars.\n index 3 = three stars."))
+	TArray<unsigned int> moveRatings { 4,3,2,1 };
+	
+	unsigned short attempts = 1;
+	unsigned short maxAttempts = 5;
 
 	float longestDuration;
 
@@ -74,11 +79,13 @@ private:
 	
 	UFUNCTION()
 	void Start();
+
+	void CalculateRating();
 	
 	
 	/////////////// Game States ///////////////
 	UFUNCTION(BlueprintCallable)
-	void EndGame() { onGameEnd.Broadcast(); }
+	void EndGame() { CalculateRating(); onGameEnd.Broadcast(); } // Calculate rating before broadcasting...
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
 	void StartGame(const TArray<int>& delays, const TArray<int>& durations)
@@ -139,6 +146,21 @@ protected:
 	UPROPERTY(BlueprintAssignable)
 	FOnAddedThing onAddedThing;
 	
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
+	FOnAttachmentChange onChangeAttachments;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
+	FOnStartGame onStartGame;
+	
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
+	FOnEndingGame onEndingGame;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
+	FOnAttemptEnding onAttemptEnding;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
+	FOnReset onReset;
+	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
 	APickupableMaster* hitObj;
@@ -173,28 +195,6 @@ protected:
 	virtual void GravitySelection() const override;
 	
 public:
-	/////////////// Delegates ///////////////
-	FOnOutOfRange onRangeExceeded;
-
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
-	FOnAttachmentChange onChangeAttachments;
-
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
-	FOnStartGame onStartGame;
-	
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
-	FOnGameEnd onGameEnd;
-	
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
-	FOnEndingGame onEndingGame;
-
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
-	FOnAttemptEnding onAttemptEnding;
-
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
-	FOnReset onReset;
-	
-	
 	/////////////// Attachments ///////////////
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
 	virtual void RemoveAttachment(const FName& socket) override;
@@ -253,6 +253,7 @@ public:
 	void InitiateReset() const { onAttemptEnding.Broadcast(); }
 	FTransform GetResetTransform() const { return resetTransform; }
 
+
 	/////////////// Getters ///////////////
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
 	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
@@ -260,6 +261,20 @@ public:
 	virtual float GetMass() const override;
 	bool CanCollect() const { return canCollect; }
 
+	UFUNCTION(BlueprintCallable)
+	int GetAttempts() const { return attempts; }
+
+	UFUNCTION(BlueprintCallable)
+	int GetRating() const { return rating; }
+
+
+	/////////////// Delegates ///////////////
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
+	FOnGameEnd onGameEnd;
+	
+	FOnOutOfRange onRangeExceeded;
+
+	
 
 	/////////////// Other ///////////////
 	void AddThing(AActor* thing) const;

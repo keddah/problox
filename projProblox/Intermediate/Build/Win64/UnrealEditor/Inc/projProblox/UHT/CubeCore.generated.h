@@ -54,6 +54,8 @@ PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegat
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CubeCore_h_45_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSelectSocket); \
+	DECLARE_FUNCTION(execGetRating); \
+	DECLARE_FUNCTION(execGetAttempts); \
 	DECLARE_FUNCTION(execGetCloseAttachments); \
 	DECLARE_FUNCTION(execSetAllAbilityActive); \
 	DECLARE_FUNCTION(execObjectInSocket); \

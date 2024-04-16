@@ -250,6 +250,15 @@ void ACubeCore::Start()
 	buildPhase = false;
 }
 
+void ACubeCore::CalculateRating()
+{
+	if(attempts <= moveRatings[3]) rating = 3;
+	else if(attempts > moveRatings[3] && attempts <= moveRatings[2]) rating = 2;
+	else if(attempts > moveRatings[2] && attempts <= moveRatings[1]) rating = 1;
+	
+	else if(attempts >= moveRatings[0]) rating = 0;
+}
+
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {

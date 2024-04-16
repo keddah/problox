@@ -215,6 +215,5 @@ void APlayerCharacter::Deselect()
 
 void APlayerCharacter::EndGame()
 {
-	Print("GAME ENDEDD", 999999999)
 	gameEnded = true;
 }
