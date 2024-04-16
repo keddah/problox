@@ -48,8 +48,9 @@ void ATreads::BeginPlay()
 void ATreads::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-
-	objMesh->SetLinearDamping(active? drag : drag * 2);
+	
+	if (grounded)objMesh->SetLinearDamping(active? drag : drag * 2);
+	else objMesh->SetLinearDamping(drag);
 }
 
 void ATreads::Ability()
