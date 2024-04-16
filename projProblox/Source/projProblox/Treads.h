@@ -39,11 +39,8 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float moveSpeed = 7500;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float defaultFriction = .6f;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "Overrides the 'Linear damping' value of the objMesh."))
-	float drag = .05f;
-		
+	float defaultFriction = .05f;
+
 };

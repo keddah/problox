@@ -59,7 +59,7 @@ void ACubeCore::Placement()
 {
 	if(!canPlace) return;
 	if(!selected) return;
-	if(ObjectInSocket("Down")) return;
+	if(ObjectInSocket("DOWN")) return;
 
 	RemoveVelocity();
 	
@@ -102,7 +102,7 @@ void ACubeCore::Placement()
 	if(!IsValid(hitObj)) return;
 
 	OtherGhostPlacement();
-	attachedSocket = "Down";
+	attachedSocket = "DOWN";
 }
 
 void ACubeCore::OtherGhostPlacement()
@@ -110,7 +110,7 @@ void ACubeCore::OtherGhostPlacement()
 	RemoveVelocity();
 
 	if(!hitObj) return;
-
+	
 	// The cube core uses the silhouette of the other thing since the other thing is being attached to this. 
 	silhouette = hitObj->GetSilhouette();
 	attachOffset = hitObj->GetAttachOffset(*this);
@@ -128,17 +128,36 @@ void ACubeCore::OtherGhostPlacement()
 void ACubeCore::OtherRotations(const APickupableMaster& other)
 {
 	if(!IsValid(&other)) return;
+
 	silhouette = other.GetSilhouette();
+	FRotator socketRot = objMesh->GetSocketRotation("DOWN");
+
+	// Need to start with the class at the bottom of the inheritance chain and go up from there... 
+	if(other.IsA<AWedgeConnector>())
+	{
+		silhouette->SetRelativeRotation({135,0,0});
+		silhouette->SetRelativeLocation({0,0,0});
+	}
+	else if(other.IsA<ACubeConnector>())
+	{
+		// Ignore if the X and Y vectors aren't low...
+		constexpr float aboveThreshold = .075f;
+		const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
 	
-	if(other.IsA<ACubeConnector>())
-	{
-		
+		if(above)
+		{
+			// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
+			const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+			socketRot = socketRot.RotateVector(socketForward).Rotation();
+		}
+		else socketRot = RoundRotation(other.GetActorRotation(), socketRot);
+
+		silhouette->SetWorldRotation(socketRot);
+
+		// Ensure that it's aligned with this core.
+		silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), GetActorRotation(), -90));
 	}
-	else if(other.IsA<AWedgeConnector>())
-	{
-		
-	}
-	else
+	else if(!other.IsA<ACubeCore>())
 	{
 		if(other.ShouldSnapRotation())
 		{
@@ -156,18 +175,22 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 			return;
 		}
 
-		FRotator socketRot = objMesh->GetSocketRotation(attachedSocket);
-		const FBox otherBB = other.GetMesh()->Bounds.GetBox();
-		const float otherHeight = otherBB.Max.Z - otherBB.Min.Z;
+		// Ignore if the X and Y vectors aren't low...
+		constexpr float aboveThreshold = .075f;
+		const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
 		
-		const bool above = other.GetActorLocation().Z + otherHeight <= GetActorLocation().Z;
 		if(above)
 		{
+			// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
 			const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
 			socketRot = socketRot.RotateVector(socketForward).Rotation();
 		}
-	
-		silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
+		else socketRot = RoundRotation(GetActorRotation(), socketRot);
+
+		silhouette->SetWorldRotation(socketRot);
+
+		const FRotator relativeRot = silhouette->GetComponentTransform().GetRelativeTransform(GetTransform()).Rotator();
+		silhouette->SetRelativeRotation({above? -90.0f : 90, relativeRot.Yaw, relativeRot.Roll});
 	}
 }
 
@@ -421,7 +444,7 @@ void ACubeCore::GravitySelection() const
 
 void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
 {
-	if(socket != "Down")
+	if(socket != "DOWN")
 	{
 		attachedSocket = socket;
 		return;
@@ -433,7 +456,7 @@ void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
 void ACubeCore::RearrangeSockets()
 {
 	// This only needs to happen if there's an object in the bottom slot when trying to attach to a cube..
-	if(!ObjectInSocket("down"))
+	if(!ObjectInSocket("DOWN"))
 	{
 		Print("down is blocked.", 4)
 		return;

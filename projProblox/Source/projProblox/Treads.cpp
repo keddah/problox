@@ -41,16 +41,22 @@ void ATreads::BeginPlay()
 {
 	Super::BeginPlay();
 
-	objMesh->SetLinearDamping(drag);
-	objMesh->SetAngularDamping(active? 0 : 1);
+	objMesh->SetAngularDamping(1);
 }
 
 void ATreads::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-	
-	if (grounded)objMesh->SetLinearDamping(active? drag : drag * 2);
-	else objMesh->SetLinearDamping(drag);
+
+	UPhysicalMaterial* physMat = objMesh->GetMaterial(0)->GetPhysicalMaterial();
+
+	physMat->Friction = active? 0 : defaultFriction;
+	physMat->FrictionCombineMode = active? EFrictionCombineMode::Min: EFrictionCombineMode::Average;
+	physMat->bOverrideFrictionCombineMode = true;
+
+	objMesh->SetMaterial(0, objMesh->GetMaterial(0));
+
+	// objMesh->SetPhysMaterialOverride(physMat);
 }
 
 void ATreads::Ability()
@@ -58,7 +64,6 @@ void ATreads::Ability()
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
-	
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
 	objMesh->AddForce(GetActorForwardVector() * moveSpeed * 1000);
 }
