@@ -18,8 +18,64 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APickupableMaster_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APlayerCharacter();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APlayerCharacter_NoRegister();
+	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_EOperations();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
+	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EOperations;
+	static UEnum* EOperations_StaticEnum()
+	{
+		if (!Z_Registration_Info_UEnum_EOperations.OuterSingleton)
+		{
+			Z_Registration_Info_UEnum_EOperations.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_projProblox_EOperations, (UObject*)Z_Construct_UPackage__Script_projProblox(), TEXT("EOperations"));
+		}
+		return Z_Registration_Info_UEnum_EOperations.OuterSingleton;
+	}
+	template<> PROJPROBLOX_API UEnum* StaticEnum<EOperations>()
+	{
+		return EOperations_StaticEnum();
+	}
+	struct Z_Construct_UEnum_projProblox_EOperations_Statics
+	{
+		static const UECodeGen_Private::FEnumeratorParam Enumerators[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FEnumParams EnumParams;
+	};
+	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_projProblox_EOperations_Statics::Enumerators[] = {
+		{ "EOperations::Attach", (int64)EOperations::Attach },
+		{ "EOperations::Detach", (int64)EOperations::Detach },
+		{ "EOperations::Move", (int64)EOperations::Move },
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_projProblox_EOperations_Statics::Enum_MetaDataParams[] = {
+		{ "Attach.Name", "EOperations::Attach" },
+		{ "BlueprintType", "true" },
+		{ "Detach.Name", "EOperations::Detach" },
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+		{ "Move.Name", "EOperations::Move" },
+	};
+#endif
+	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_projProblox_EOperations_Statics::EnumParams = {
+		(UObject*(*)())Z_Construct_UPackage__Script_projProblox,
+		nullptr,
+		"EOperations",
+		"EOperations",
+		Z_Construct_UEnum_projProblox_EOperations_Statics::Enumerators,
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		UE_ARRAY_COUNT(Z_Construct_UEnum_projProblox_EOperations_Statics::Enumerators),
+		EEnumFlags::None,
+		(uint8)UEnum::ECppForm::EnumClass,
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_projProblox_EOperations_Statics::Enum_MetaDataParams), Z_Construct_UEnum_projProblox_EOperations_Statics::Enum_MetaDataParams)
+	};
+	UEnum* Z_Construct_UEnum_projProblox_EOperations()
+	{
+		if (!Z_Registration_Info_UEnum_EOperations.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EOperations.InnerSingleton, Z_Construct_UEnum_projProblox_EOperations_Statics::EnumParams);
+		}
+		return Z_Registration_Info_UEnum_EOperations.InnerSingleton;
+	}
 	DEFINE_FUNCTION(APlayerCharacter::execEndGame)
 	{
 		P_FINISH;
@@ -546,13 +602,17 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	APlayerCharacter::~APlayerCharacter() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics
 	{
+		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
+	};
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
+		{ EOperations_StaticEnum, TEXT("EOperations"), &Z_Registration_Info_UEnum_EOperations, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2172287260U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1745803233U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3412631810(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_2910033349(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
-		nullptr, 0);
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

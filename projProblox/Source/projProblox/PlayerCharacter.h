@@ -7,6 +7,13 @@
 #include "PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
 
+UENUM(BlueprintType)
+enum class EOperations : uint8
+{
+	Attach,
+	Detach,
+	Move
+};
 
 UCLASS()
 class PROJPROBLOX_API APlayerCharacter : public ACharacter
@@ -48,6 +55,10 @@ private:
 
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
 	bool buildPhase = true;
+
+	
+	/////////////// Undo/Redo ///////////////
+
 	
 protected:
 	// Called when the game starts or when spawned

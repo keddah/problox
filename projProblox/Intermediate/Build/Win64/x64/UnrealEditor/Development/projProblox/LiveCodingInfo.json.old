@@ -10,10 +10,10 @@
 			"GrappleHead.gen.cpp.obj",
 			"Grappler.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
+			"OperationsTable.gen.cpp.obj",
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
-			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
+			"PlayerTask.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Thing.gen.cpp.obj",
 			"ThingSpawner.gen.cpp.obj",
@@ -32,16 +32,20 @@
 			"Magnet.cpp.obj",
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thing.cpp.obj",
 			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
+			"Treads.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
-			"Treads.cpp.obj"
+			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
+			"OperationsTable.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"PlayerTask.cpp.obj"
 		]
 	}
 }
