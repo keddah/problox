@@ -36,6 +36,8 @@ void UActionHistory::NewAction(const FTask& task)
 	tasks.Add(task);
 	currentTask++;
 	
+	if(tasks.Num() > tasksLimit) tasks.RemoveAt(0);
+	
 	Print(task.taskName.ToString(), 4)
 }
 

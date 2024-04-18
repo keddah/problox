@@ -49,6 +49,9 @@ class PROJPROBLOX_API UActionHistory : public UObject
 
 	unsigned short currentTask;
 
+	// The max number of tasks allowed to be saved
+	unsigned short tasksLimit = 25;
+
 	void Overwrite();
 	void Clear() {tasks.Empty(); currentTask = 0; }
 

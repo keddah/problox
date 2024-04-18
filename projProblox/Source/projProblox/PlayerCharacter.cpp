@@ -19,7 +19,6 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::Undo() const
 {
 	const FTask task = history->Undo();
-	
 	if(task.taskName == NAME_None)
 	{
 		Print("There aren't any tasks to undo...", 5);
@@ -56,7 +55,13 @@ void APlayerCharacter::Undo() const
 
 void APlayerCharacter::Redo()
 {
-	const FTask task = history->Undo();
+	const FTask task = history->Redo();
+	if(task.taskName == NAME_None)
+	{
+		Print("There aren't any tasks to redo...", 5);
+		return;
+	}
+	
 	APickupableMaster* changedObj = task.obj;
 
 	// The end transform will always be used whenever redoing something...

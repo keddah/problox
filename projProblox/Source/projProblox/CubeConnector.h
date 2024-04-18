@@ -41,6 +41,7 @@ protected:
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
+	virtual void Reattach(const FTransform& transform) override;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* backArrow;

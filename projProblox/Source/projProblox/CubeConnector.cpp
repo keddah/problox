@@ -322,6 +322,22 @@ float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
+void ACubeConnector::Reattach(const FTransform& transform)
+{
+	parentCore = Cast<ACubeCore>(previousObj);
+	if(!IsValid(parentCore))
+	{
+		Print("couldnt cast to core - Reattaching...", 5)
+		return;
+	}
+	
+	AttachToActor(parentCore, attachRules, removedSocket);
+
+	SetActorTransform(transform);
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
+}
+
 void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
 {
 	attachedSocket = socket;
