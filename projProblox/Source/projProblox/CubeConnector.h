@@ -55,7 +55,7 @@ protected:
 public:
 	virtual void Tick(float DeltaSeconds) override;
 
-	virtual void SetSelected(const bool value) override;
+	virtual EOperations SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 
 private:

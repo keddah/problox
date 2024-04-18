@@ -4,16 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "ActionHistory.h"
 #include "PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
-
-UENUM(BlueprintType)
-enum class EOperations : uint8
-{
-	Attach,
-	Detach,
-	Move
-};
 
 UCLASS()
 class PROJPROBLOX_API APlayerCharacter : public ACharacter
@@ -58,7 +51,16 @@ private:
 
 	
 	/////////////// Undo/Redo ///////////////
+	UActionHistory* history;
 
+	// The transform of the selected object (should be set when picking up/dropping an object)
+	FTransform selectedTransform;
+
+	UFUNCTION(BlueprintCallable)
+	void Undo() const;
+	UFUNCTION(BlueprintCallable)
+	void Redo();
+	
 	
 protected:
 	// Called when the game starts or when spawned

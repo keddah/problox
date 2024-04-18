@@ -42,7 +42,7 @@ AWheel::AWheel()
 }
 
 // The same as the normal function except attachments are managed using the physics constraint.
-void AWheel::SetSelected(const bool value)
+EOperations AWheel::SetSelected(const bool value)
 {
 	selected = value; 
 	GravitySelection();
@@ -53,19 +53,21 @@ void AWheel::SetSelected(const bool value)
 	if(selected)
 	{
 		Detach();
-		return;
+		return EOperations::Detach;
 	}
 	
 	// If the wheel is unselected whilst the objCore isn't valid
 	if(!IsValid(parentCore))
 	{
 		Detach();
-		return;
+		return {EOperations::Move};
 	}
-	if(attachedSocket == NAME_None) return;
+	if(attachedSocket == NAME_None) return {EOperations::Move};
 
 	ResetGhost();
 	Attach(parentCore);
+
+	return {EOperations::Attach};
 }
 
 
@@ -94,6 +96,23 @@ void AWheel::Attach(ACubeCore* core)
 	isAttached = true;
 }
 
+void AWheel::Reattach(const FTransform& transform)
+{
+	parentCore = Cast<ACubeCore>(previousObj);
+	if(!IsValid(parentCore))
+	{
+		Print("couldnt cast to core - Reattaching...", 5)
+		return;
+	}
+	
+	SetActorTransform(transform);
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
+	
+	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
+	wheelAxel->UpdateConstraintFrames();
+}
+
 void AWheel::Detach()
 {
 	ResetGhost();
@@ -106,6 +125,7 @@ void AWheel::Detach()
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	SetParentDominates(false);
 
+	previousObj = parentCore;
 	parentCore = nullptr;
 	isAttached = false;
 }

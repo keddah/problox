@@ -30,6 +30,12 @@
     <Filter Include="Source\projProblox">
       <UniqueIdentifier>{EF8B8155-4D92-329C-8C65-A60DE3C5D0D3}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\projProblox\ActionHistory.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\ActionHistory.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Collector.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
@@ -76,12 +82,6 @@
       <Filter>Source\projProblox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Magnet.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\OperationsTable.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\OperationsTable.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\PickupableMaster.cpp">

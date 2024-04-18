@@ -194,7 +194,7 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 	}
 }
 
-void ACubeCore::SetSelected(const bool value)
+EOperations ACubeCore::SetSelected(const bool value)
 {
 	// Not allowed to drop the cube if unable to collect 
 	if(canPickup) selected = value;
@@ -212,7 +212,7 @@ void ACubeCore::SetSelected(const bool value)
 	if(selected)
 	{
 		canPlace = true;
-		return;
+		return {EOperations::Move};
 	}
 
 	indicator->SetHiddenInGame(true);
@@ -224,7 +224,7 @@ void ACubeCore::SetSelected(const bool value)
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
 	}
 	
-	if(!IsValid(hitObj)) return;
+	if(!IsValid(hitObj)) return {EOperations::Move};
 
 	Print("Added from core", 3)
 	
@@ -246,6 +246,7 @@ void ACubeCore::SetSelected(const bool value)
 
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
+	return {EOperations::Attach};
 }
 
 bool ACubeCore::SetGroupSelected(const bool value)
@@ -561,4 +562,11 @@ void ACubeCore::SetCanCollect(bool collectable)
 {
 	objMesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
 	canCollect = collectable;
+}
+
+void ACubeCore::Reattach(const FTransform& transform)
+{
+	hitObj = previousObj;
+	hitObj->Reattach(transform);
+	
 }

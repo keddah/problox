@@ -16,6 +16,66 @@ APlayerCharacter::APlayerCharacter()
 
 }
 
+void APlayerCharacter::Undo() const
+{
+	const FTask task = history->Undo();
+	APickupableMaster* changedObj = task.obj;
+
+	// The start transform will always be used whenever undoing something...
+	changedObj->SetActorTransform(task.startTransform);
+
+	// Depending on the operation... Move back, Reattach or Detach
+	switch (task.operation)
+	{
+		// Undo the attach operation
+		case EOperations::Attach:
+			changedObj->Detach();
+			break;
+		
+		// Undo the detach operation
+		case EOperations::Detach:
+			changedObj->Reattach(task.startTransform);
+			break;
+		
+		// Undo the move operation
+		case EOperations::Move:
+			// Don't need to do anything since the object's transform has already been set to the start/end transform.
+			break;
+	}
+
+	Print("Undoing...", 4)
+}
+
+void APlayerCharacter::Redo()
+{
+	const FTask task = history->Undo();
+	APickupableMaster* changedObj = task.obj;
+
+	// The end transform will always be used whenever redoing something...
+	changedObj->SetActorTransform(task.endTransform);
+
+	// Depending on the operation... Move back, Reattach or Detach
+	switch (task.operation)
+	{
+		// Redo the attach operation
+	case EOperations::Attach:
+		changedObj->Reattach(task.endTransform);
+		break;
+		
+		// Redo the detach operation
+	case EOperations::Detach:
+		changedObj->Detach();
+		break;
+		
+		// Redo the move operation
+	case EOperations::Move:
+		// Don't need to do anything since the object's transform has already been set to the start/end transform.
+		break;
+	}
+
+	Print("Redoing...", 4)
+}
+
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
@@ -29,6 +89,8 @@ void APlayerCharacter::BeginPlay()
 	}
 	
 	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
+
+	history = NewObject<UActionHistory>();
 }
 
 // Called to bind functionality to input
@@ -71,6 +133,10 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
+
+		// Need to set the start position...
+		// Only add a new action after deselecting since that's what confirms the task.
+		selectedTransform = selectedObj->GetTransform();
 	}
 	else holding = false;
 	
@@ -79,6 +145,8 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		holding = false;
 		return;
 	}
+
+	selectedTransform = selectedObj->GetTransform();
 	
 	// Includes if the selected object is the core
 	exclusions.Add(selectedObj);
@@ -204,9 +272,28 @@ void APlayerCharacter::Deselect()
 	}
 
 	holding = false;
+	const EOperations operation = selectedObj->SetSelected(false);
+	FName opName;
 	
-	selectedObj->SetSelected(false);
-	// selectedObj->GravitySelection();
+	switch (operation)
+	{
+		case EOperations::Attach:
+			opName = "ATTACH";
+			break;
+		
+		case EOperations::Detach:
+			opName = "DETACH";
+			break;
+		
+		case EOperations::Move:
+			opName = "MOVE";
+			break;
+	}
+	
+	// Adding new action history entry.
+	const FTask newTask {opName, selectedObj, selectedTransform, selectedObj->GetTransform(),operation};
+	history->NewAction(newTask);
+	
 	selectedObj = nullptr;
 
 	// Clear things to ignore once not selecting anything.

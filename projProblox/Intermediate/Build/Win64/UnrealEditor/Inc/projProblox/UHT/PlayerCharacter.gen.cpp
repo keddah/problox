@@ -18,64 +18,8 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APickupableMaster_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APlayerCharacter();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APlayerCharacter_NoRegister();
-	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_EOperations();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
-	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EOperations;
-	static UEnum* EOperations_StaticEnum()
-	{
-		if (!Z_Registration_Info_UEnum_EOperations.OuterSingleton)
-		{
-			Z_Registration_Info_UEnum_EOperations.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_projProblox_EOperations, (UObject*)Z_Construct_UPackage__Script_projProblox(), TEXT("EOperations"));
-		}
-		return Z_Registration_Info_UEnum_EOperations.OuterSingleton;
-	}
-	template<> PROJPROBLOX_API UEnum* StaticEnum<EOperations>()
-	{
-		return EOperations_StaticEnum();
-	}
-	struct Z_Construct_UEnum_projProblox_EOperations_Statics
-	{
-		static const UECodeGen_Private::FEnumeratorParam Enumerators[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FEnumParams EnumParams;
-	};
-	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_projProblox_EOperations_Statics::Enumerators[] = {
-		{ "EOperations::Attach", (int64)EOperations::Attach },
-		{ "EOperations::Detach", (int64)EOperations::Detach },
-		{ "EOperations::Move", (int64)EOperations::Move },
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_projProblox_EOperations_Statics::Enum_MetaDataParams[] = {
-		{ "Attach.Name", "EOperations::Attach" },
-		{ "BlueprintType", "true" },
-		{ "Detach.Name", "EOperations::Detach" },
-		{ "ModuleRelativePath", "PlayerCharacter.h" },
-		{ "Move.Name", "EOperations::Move" },
-	};
-#endif
-	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_projProblox_EOperations_Statics::EnumParams = {
-		(UObject*(*)())Z_Construct_UPackage__Script_projProblox,
-		nullptr,
-		"EOperations",
-		"EOperations",
-		Z_Construct_UEnum_projProblox_EOperations_Statics::Enumerators,
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		UE_ARRAY_COUNT(Z_Construct_UEnum_projProblox_EOperations_Statics::Enumerators),
-		EEnumFlags::None,
-		(uint8)UEnum::ECppForm::EnumClass,
-		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_projProblox_EOperations_Statics::Enum_MetaDataParams), Z_Construct_UEnum_projProblox_EOperations_Statics::Enum_MetaDataParams)
-	};
-	UEnum* Z_Construct_UEnum_projProblox_EOperations()
-	{
-		if (!Z_Registration_Info_UEnum_EOperations.InnerSingleton)
-		{
-			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EOperations.InnerSingleton, Z_Construct_UEnum_projProblox_EOperations_Statics::EnumParams);
-		}
-		return Z_Registration_Info_UEnum_EOperations.InnerSingleton;
-	}
 	DEFINE_FUNCTION(APlayerCharacter::execEndGame)
 	{
 		P_FINISH;
@@ -122,6 +66,20 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->SelectObject(Z_Param_Out_hit);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APlayerCharacter::execRedo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Redo();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APlayerCharacter::execUndo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Undo();
+		P_NATIVE_END;
+	}
 	void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 	{
 		UClass* Class = APlayerCharacter::StaticClass();
@@ -131,7 +89,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "EndGame", &APlayerCharacter::execEndGame },
 			{ "GroupSelect", &APlayerCharacter::execGroupSelect },
 			{ "MoveSelection", &APlayerCharacter::execMoveSelection },
+			{ "Redo", &APlayerCharacter::execRedo },
 			{ "SelectObject", &APlayerCharacter::execSelectObject },
+			{ "Undo", &APlayerCharacter::execUndo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -313,6 +273,28 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_APlayerCharacter_Redo_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Redo_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_Redo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "Redo", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Redo_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_Redo_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_APlayerCharacter_Redo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Redo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_APlayerCharacter_SelectObject_Statics
 	{
 		struct PlayerCharacter_eventSelectObject_Parms
@@ -359,6 +341,28 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_SelectObject_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_APlayerCharacter_Undo_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Undo_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_Undo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "Undo", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Undo_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_Undo_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_APlayerCharacter_Undo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Undo_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -431,7 +435,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
 		{ &Z_Construct_UFunction_APlayerCharacter_GroupSelect, "GroupSelect" }, // 2137927514
 		{ &Z_Construct_UFunction_APlayerCharacter_MoveSelection, "MoveSelection" }, // 767853428
+		{ &Z_Construct_UFunction_APlayerCharacter_Redo, "Redo" }, // 2675371083
 		{ &Z_Construct_UFunction_APlayerCharacter_SelectObject, "SelectObject" }, // 1727888823
+		{ &Z_Construct_UFunction_APlayerCharacter_Undo, "Undo" }, // 1511259009
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -602,17 +608,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	APlayerCharacter::~APlayerCharacter() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics
 	{
-		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
-		{ EOperations_StaticEnum, TEXT("EOperations"), &Z_Registration_Info_UEnum_EOperations, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2172287260U) },
-	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1745803233U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 783633967U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_2910033349(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_1334875204(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
+		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

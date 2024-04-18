@@ -55,6 +55,7 @@ private:
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
+	virtual void Reattach(const FTransform& transform) override;
 	
 	/////////////// Turn System ///////////////
 	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
@@ -243,7 +244,7 @@ public:
 
 	
 	/////////////// Selection/Placement ///////////////
-	virtual void SetSelected(const bool value) override;
+	virtual EOperations SetSelected(const bool value) override;
 	virtual bool SetGroupSelected(const bool value) override;
 
 	

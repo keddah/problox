@@ -10,6 +10,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ActionHistory.h"
 #include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
@@ -115,6 +116,13 @@ protected:
 	UMaterial* defaultMat;
 	UMaterial* silhouetteMat;
 
+
+	/////////////// Undo/Redo ///////////////
+	// The socket that this has been removed from
+	FName removedSocket;
+
+	APickupableMaster* previousObj;
+
 	
 ///////////////////////////// Functions /////////////////////////////
 
@@ -178,7 +186,7 @@ public:
 	
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
-	virtual void SetSelected(const bool value);
+	virtual EOperations SetSelected(const bool value);
 	virtual bool SetGroupSelected(const bool value);
 
 	virtual void Detach();
@@ -189,6 +197,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetCanPickup(const bool can) { canPickup = can; }
 
+	
 
 	/////////////// Ability ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Ability")
@@ -212,8 +221,13 @@ public:
 	bool IsChildOf(const APickupableMaster* parent) const;
 
 	
+	/////////////// Undo/Redo ///////////////
+	virtual void Reattach(const FTransform& transform);
+
+	
 	/////////////// Getters ///////////////
 	ACubeCore* GetCore() const { return parentCore; }
+	APickupableMaster* GetPreviousObj() const { return previousObj; }
 
 	virtual APickupableMaster* GetParent();
 

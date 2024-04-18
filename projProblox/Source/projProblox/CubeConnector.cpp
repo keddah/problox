@@ -187,7 +187,6 @@ void ACubeConnector::Placement()
 		// }
 
 		// if(tempSocket != NAME_None) tempSocket = closestSocket;
-		// parentCore = nullptr;
 		// hitObj->SetCore(this);
 		break;
 	}
@@ -237,7 +236,7 @@ void ACubeConnector::GhostPlacement()
 }
 
 // The final position when attached is dependent on the silhouette/ghost's position and rotation
-void ACubeConnector::SetSelected(const bool value)
+EOperations ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
 	GravitySelection();
@@ -258,7 +257,7 @@ void ACubeConnector::SetSelected(const bool value)
 		{
 			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 		}
-		return;
+		return {EOperations::Detach};
 	}
 	
 	// When unselected....
@@ -270,7 +269,7 @@ void ACubeConnector::SetSelected(const bool value)
 	}
 	
 	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return;
+	if(!IsValid(parentCore)) return {EOperations::Move};
 
 	// Use the silhouettes position/rotation...
 	SetActorLocation(silhouette->GetComponentLocation());
@@ -280,6 +279,7 @@ void ACubeConnector::SetSelected(const bool value)
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	
 	parentCore->AddAttachment(this, attachedSocket);
+	return {EOperations::Attach};
 }
 
 bool ACubeConnector::SetGroupSelected(const bool value)

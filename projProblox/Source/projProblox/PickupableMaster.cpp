@@ -185,7 +185,7 @@ void APickupableMaster::GhostPlacement()
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 }
 
-void APickupableMaster::SetSelected(const bool value)
+EOperations APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
 	GravitySelection();
@@ -195,11 +195,11 @@ void APickupableMaster::SetSelected(const bool value)
 	{
 		canPlace = true;
 		Detach();
-		return;
+		return {EOperations::Detach};
 	}
 
-	if(!IsValid(parentCore)) return;
-	if(attachedSocket == NAME_None) return;
+	if(!IsValid(parentCore)) return {EOperations::Move};
+	if(attachedSocket == NAME_None) return {EOperations::Move};
 
 	AttachToActor(parentCore, attachRules, attachedSocket);
 
@@ -211,6 +211,8 @@ void APickupableMaster::SetSelected(const bool value)
 
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
+	
+	return {EOperations::Attach};
 }
 
 bool APickupableMaster::SetGroupSelected(const bool value)
@@ -247,6 +249,7 @@ void APickupableMaster::Detach()
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetupAttachment(objMesh);
 
+	previousObj = parentCore;
 	parentCore = 0;
 	objMesh->SetEnableGravity(true);
 	isAttached = false;
@@ -524,4 +527,20 @@ bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
 	}
 
 	return false;
+}
+
+void APickupableMaster::Reattach(const FTransform& transform)
+{
+	parentCore = Cast<ACubeCore>(previousObj);
+	if(!IsValid(parentCore))
+	{
+		Print("couldnt cast to core - Reattaching...", 5)
+		return;
+	}
+	
+	AttachToActor(parentCore, attachRules, removedSocket);
+
+	SetActorTransform(transform);
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
 }
