@@ -49,9 +49,13 @@ EOperations AWheel::SetSelected(const bool value)
 	wheelAxel->SetActive(!selected);
 	
 	SetHideIndicator(!selected);
+
+
 	
 	if(selected)
 	{
+		wasDetached = isAttached;
+		
 		Detach();
 		return EOperations::Detach;
 	}
@@ -60,9 +64,9 @@ EOperations AWheel::SetSelected(const bool value)
 	if(!IsValid(parentCore))
 	{
 		Detach();
-		return {EOperations::Move};
+		return {wasDetached? EOperations::Detach : EOperations::Move};
 	}
-	if(attachedSocket == NAME_None) return {EOperations::Move};
+	if(attachedSocket == NAME_None) return {wasDetached? EOperations::Detach : EOperations::Move};
 
 	ResetGhost();
 	Attach(parentCore);

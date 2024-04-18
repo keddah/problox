@@ -19,11 +19,19 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::Undo() const
 {
 	const FTask task = history->Undo();
+	
+	if(task.taskName == NAME_None)
+	{
+		Print("There aren't any tasks to undo...", 5);
+		return;
+	}
+	
 	APickupableMaster* changedObj = task.obj;
 
 	// The start transform will always be used whenever undoing something...
 	changedObj->SetActorTransform(task.startTransform);
-
+	changedObj->RemoveVelocity();
+	
 	// Depending on the operation... Move back, Reattach or Detach
 	switch (task.operation)
 	{
@@ -53,6 +61,7 @@ void APlayerCharacter::Redo()
 
 	// The end transform will always be used whenever redoing something...
 	changedObj->SetActorTransform(task.endTransform);
+	changedObj->RemoveVelocity();
 
 	// Depending on the operation... Move back, Reattach or Detach
 	switch (task.operation)
@@ -168,9 +177,18 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 		if(ACubeCore* parentCore = hitCore->GetCore())
 		{
 			parentCore->DetachAll(true);
+			const FTransform coreTransform = parentCore->GetTransform();
+
+			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
+			history->NewAction(newTask);
 			return;
 		}
+		
+		const FTransform coreTransform = hitCore->GetTransform();
 
+		const FTask newTask = {"DETACH", hitCore, coreTransform, coreTransform, EOperations::Detach};
+		history->NewAction(newTask);
+		
 		hitCore->DetachAll(true);
 		return;
 	}
@@ -178,8 +196,18 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all.. 
 	if(const APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor()))
 	{
-		if(ACubeCore* parentCore = obj->GetCore()) parentCore->DetachAll(true);
+		if(ACubeCore* parentCore = obj->GetCore())
+		{
+			parentCore->DetachAll(true);
+
+			const FTransform coreTransform = parentCore->GetTransform();
+
+			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
+			history->NewAction(newTask);
+		}
+
 	}
+
 }
 
 void APlayerCharacter::GroupSelect(const FHitResult& hit)

@@ -51,6 +51,7 @@ private:
 
 	
 	/////////////// Undo/Redo ///////////////
+	UPROPERTY(VisibleAnywhere)
 	UActionHistory* history;
 
 	// The transform of the selected object (should be set when picking up/dropping an object)

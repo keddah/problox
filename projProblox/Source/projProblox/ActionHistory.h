@@ -6,6 +6,8 @@
 #include "Engine/DataTable.h"
 #include "ActionHistory.generated.h"
 
+#define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+
 UENUM(BlueprintType)
 enum class EOperations : uint8
 {
@@ -19,19 +21,19 @@ struct FTask
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	FName taskName;
 	
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	class APickupableMaster* obj;
 	
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	FTransform startTransform;
 	
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	FTransform endTransform;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	EOperations operation;
 };
 
@@ -42,11 +44,10 @@ class PROJPROBLOX_API UActionHistory : public UObject
 
 	UActionHistory();
 
-	UPROPERTY(meta = (ToolTip = "An array of things that the player has done.\n The max number of tasks is 25 - includes moving, attaching and detaching."))
+	UPROPERTY(VisibleAnywhere, meta = (ToolTip = "An array of things that the player has done.\n The max number of tasks is 25 - includes moving, attaching and detaching."))
 	TArray<FTask> tasks;
 
 	unsigned short currentTask;
-	
 
 	void Overwrite();
 	void Clear() {tasks.Empty(); currentTask = 0; }

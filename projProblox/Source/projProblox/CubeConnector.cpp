@@ -246,10 +246,12 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
+
 	
 	// Detach from its components if selected
 	if(selected)
 	{
+		wasDetached = isAttached;
 		canPlace = true;
 		Detach();
 
@@ -269,7 +271,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	}
 	
 	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return {EOperations::Move};
+	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
 
 	// Use the silhouettes position/rotation...
 	SetActorLocation(silhouette->GetComponentLocation());
@@ -277,7 +279,8 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	
+
+	isAttached = true;
 	parentCore->AddAttachment(this, attachedSocket);
 	return {EOperations::Attach};
 }

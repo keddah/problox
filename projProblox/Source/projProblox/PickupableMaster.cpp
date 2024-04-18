@@ -193,13 +193,15 @@ EOperations APickupableMaster::SetSelected(const bool value)
 
 	if(selected)
 	{
-		canPlace = true;
+		wasDetached = isAttached;
 		Detach();
+		
+		canPlace = true;
 		return {EOperations::Detach};
 	}
 
-	if(!IsValid(parentCore)) return {EOperations::Move};
-	if(attachedSocket == NAME_None) return {EOperations::Move};
+	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
+	if(attachedSocket == NAME_None) return {wasDetached? EOperations::Detach : EOperations::Move};
 
 	AttachToActor(parentCore, attachRules, attachedSocket);
 

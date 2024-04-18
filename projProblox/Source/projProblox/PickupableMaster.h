@@ -120,7 +120,8 @@ protected:
 	/////////////// Undo/Redo ///////////////
 	// The socket that this has been removed from
 	FName removedSocket;
-
+	bool wasDetached;
+	
 	APickupableMaster* previousObj;
 
 	
