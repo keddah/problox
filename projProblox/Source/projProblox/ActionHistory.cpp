@@ -36,14 +36,14 @@ FTask UActionHistory::Redo()
 
 void UActionHistory::NewAction(const FTask& task)
 {
-	// Don't overwrite if there aren't any tasks or if the current task is the latest task
-	bool overwrote = false;
-	Print(tasks.IsEmpty()? "empty" : "not empry", 4)
-	if (!tasks.IsEmpty() && currentTask != tasks.Num() - 1) overwrote = Overwrite();
-	if(!overwrote) currentTask++;
-	
 	tasks.Add(task);
 	Print("Adedd tast", 5)
+	
+	// Don't overwrite if there aren't any tasks or if the current task is the latest task
+	bool overwrote = false;
+	if (currentTask > -1 && currentTask + 1 != tasks.Num() - 1) overwrote = Overwrite();
+	if(!overwrote) currentTask++;
+	
 
 	// Check if the number of tasks exceeds the limit..
 	if (tasksLimit > 0 && tasks.Num() > tasksLimit)
@@ -56,8 +56,24 @@ void UActionHistory::NewAction(const FTask& task)
 
 bool UActionHistory::Overwrite()
 {
-	Print("overwriting because of task length..." + FString::FromInt(tasks.Num() - 1), 4)
+	Print("OVERWRITE CALLED", 5)
+	
+	// Remove tasks after the current task
+	const short removeCount = tasks.Num() - currentTask - 1;
+	tasks.RemoveAt(currentTask + 1, removeCount);
+
+	// If tasks have been removed, adjust the current task index
+	if (removeCount > 0)
+	{
+		currentTask = FMath::Clamp(currentTask, 0, tasks.Num() - 1);
+		return true;
+	}
+
+	// Nothing got overwrote...
+	Print("nothing overwrote...", 5)
+	return false;
+	
 	tasks.RemoveAt(currentTask + 1, tasks.Num() - currentTask - 1);
-	Print("OVERWROTE", 4)
+	currentTask = tasks.Num() - 1;
 	return true;
 }

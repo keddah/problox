@@ -54,12 +54,12 @@ class PROJPROBLOX_API UActionHistory : public UObject
 	unsigned short tasksLimit = 25;
 
 	bool Overwrite();
-	void Clear() {tasks.Empty(); currentTask = 0; }
 
 public:
 	void NewAction(const FTask& task);
 	
 	FTask Undo();
 	FTask Redo();
+	void Clear() {tasks.Empty(); currentTask = 0; }
 	
 };
