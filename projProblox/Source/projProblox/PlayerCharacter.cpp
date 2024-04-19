@@ -5,8 +5,6 @@
 
 #include "CubeConnector.h"
 #include "Kismet/GameplayStatics.h"
-#include <Camera/CameraActor.h>
-#include <Camera/CameraComponent.h>
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -16,7 +14,7 @@ APlayerCharacter::APlayerCharacter()
 
 }
 
-void APlayerCharacter::Undo() const
+void APlayerCharacter::Undo()
 {
 	const FTask task = history->Undo();
 	if(task.taskName == NAME_None)
@@ -26,7 +24,15 @@ void APlayerCharacter::Undo() const
 	}
 	
 	APickupableMaster* changedObj = task.obj;
+	changedObj->ManualSetSelected(false);
 
+	//Deselect()
+	holding = false;
+	selectedObj = nullptr;
+
+	// Clear things to ignore once not selecting anything.
+	exclusions.Empty();
+	
 	// The start transform will always be used whenever undoing something...
 	changedObj->SetActorTransform(task.startTransform);
 	changedObj->RemoveVelocity();
@@ -63,7 +69,17 @@ void APlayerCharacter::Redo()
 	}
 	
 	APickupableMaster* changedObj = task.obj;
+	changedObj->ManualSetSelected(false);
 
+	// Is the selected object a core?
+	holding = false;
+	selectedObj = nullptr;
+
+	
+
+	// Clear things to ignore once not selecting anything.
+	exclusions.Empty();
+	
 	// The end transform will always be used whenever redoing something...
 	changedObj->SetActorTransform(task.endTransform);
 	changedObj->RemoveVelocity();
@@ -170,7 +186,6 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
 		exclusions.Append(obj->GetAttachedObjActors());
-		Print(FString::FromInt(exclusions.Num()), 3)
 	}
 }
 

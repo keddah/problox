@@ -188,6 +188,7 @@ public:
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
 	virtual EOperations SetSelected(const bool value);
+	void ManualSetSelected(const bool value) { selected = value; };
 	virtual bool SetGroupSelected(const bool value);
 
 	virtual void Detach();
@@ -234,7 +235,7 @@ public:
 
 	FVector GetPlaceDir() const { return placeDir; }
 	
-	virtual float GetAttachOffset(const APickupableMaster& attachee) { 	PrintFloat(attachOffset, .2) return attachOffset; }
+	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
 	FName GetAttachedSocket() const { return attachedSocket; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")

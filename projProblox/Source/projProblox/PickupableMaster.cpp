@@ -237,11 +237,7 @@ void APickupableMaster::Detach()
 {
 	ResetGhost();
 	
-	if(!IsValid(parentCore))
-	{
-		Print("Couldnt detach because the core was invalid", 3)
-		return;
-	}
+	if(!IsValid(parentCore)) return;
 
 	SetAbilityActive(false);
 
@@ -500,8 +496,6 @@ TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
 
 	GetDescendents(this, all);
 	GetAscendants(this, all);
-
-	Print(FString::FromInt(all.Num()), 4);
 	return all;
 }
 

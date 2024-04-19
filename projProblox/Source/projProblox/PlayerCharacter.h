@@ -58,7 +58,7 @@ private:
 	FTransform selectedTransform;
 
 	UFUNCTION(BlueprintCallable)
-	void Undo() const;
+	void Undo();
 	UFUNCTION(BlueprintCallable)
 	void Redo();
 	

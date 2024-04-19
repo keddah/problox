@@ -298,8 +298,6 @@ bool ACubeConnector::SetGroupSelected(const bool value)
 
 void ACubeConnector::SetHideIndicator(const bool hide)
 {
-	Print(FString::SanitizeFloat(backArrow->ArrowLength), 3)
-	
 	Super::SetHideIndicator(hide);
 	backArrow->SetHiddenInGame(hide);
 	leftArrow->SetHiddenInGame(hide);

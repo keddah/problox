@@ -48,18 +48,12 @@ class PROJPROBLOX_API UActionHistory : public UObject
 	UPROPERTY(VisibleAnywhere, meta = (ToolTip = "An array of things that the player has done.\n The max number of tasks is 25 - includes moving, attaching and detaching."))
 	TArray<FTask> tasks;
 
-	short currentTask;
+	short currentTask = -1;
 
 	// The max number of tasks allowed to be saved
 	unsigned short tasksLimit = 25;
 
-	bool Overwrite()
-	{
-		if (currentTask == tasks.Num() - 1) return false;
-		
-		tasks.RemoveAt(currentTask + 1, tasks.Num() - currentTask - 1);
-		return true;
-	}
+	bool Overwrite();
 	void Clear() {tasks.Empty(); currentTask = 0; }
 
 public:
