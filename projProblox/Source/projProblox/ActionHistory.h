@@ -7,6 +7,7 @@
 #include "ActionHistory.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+#define PrintInt(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::FromInt(x)); }
 
 UENUM(BlueprintType)
 enum class EOperations : uint8
@@ -47,12 +48,18 @@ class PROJPROBLOX_API UActionHistory : public UObject
 	UPROPERTY(VisibleAnywhere, meta = (ToolTip = "An array of things that the player has done.\n The max number of tasks is 25 - includes moving, attaching and detaching."))
 	TArray<FTask> tasks;
 
-	unsigned short currentTask;
+	short currentTask;
 
 	// The max number of tasks allowed to be saved
 	unsigned short tasksLimit = 25;
 
-	void Overwrite();
+	bool Overwrite()
+	{
+		if (currentTask == tasks.Num() - 1) return false;
+		
+		tasks.RemoveAt(currentTask + 1, tasks.Num() - currentTask - 1);
+		return true;
+	}
 	void Clear() {tasks.Empty(); currentTask = 0; }
 
 public:

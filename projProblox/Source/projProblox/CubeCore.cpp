@@ -226,8 +226,6 @@ EOperations ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return {EOperations::Move};
 
-	Print("Added from core", 3)
-	
 	// Rotate to match the socket rotation
 	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
 	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
@@ -245,6 +243,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	else Cast<AWheel>(hitObj)->Attach(this);
 
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
+	previousObj = hitObj;
 	hitObj = 0;
 	return {EOperations::Attach};
 }
