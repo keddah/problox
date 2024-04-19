@@ -161,6 +161,10 @@ protected:
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnReset onReset;
+
+	/////////////// Undo/Redo ///////////////
+	TArray<APickupableMaster*> previousAttachments;
+
 	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
@@ -230,7 +234,7 @@ public:
 	}
 	
 	UFUNCTION(BlueprintCallable)
-	void DetachAll(bool push = true);
+	bool DetachAll(bool push = true);
 	
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
@@ -275,6 +279,11 @@ public:
 	
 	FOnOutOfRange onRangeExceeded;
 
+	
+	/////////////// Undo/Redo ///////////////
+	// If something was attached to this core, when undoing/redoing, it detaches the objects that weren't there before the change
+	// THIS SHOULDN'T BE NEEDED BUT THE OVERWRITE FUNCTION ISN'T WORKING PROPERLY...
+	void RevertAttachments();
 	
 
 	/////////////// Other ///////////////

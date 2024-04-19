@@ -292,6 +292,7 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	isAttached = true;
 
 	onChangeAttachments.Broadcast();
+	previousAttachments = GetAttachedObjects();
 }
 
 void ACubeCore::RemoveAttachment(const FName& socket)
@@ -306,7 +307,9 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	
 	socketInfo->RemoveAttachment(socket);
 	objMesh->SetEnableGravity(true);
+
 	onChangeAttachments.Broadcast();
+	previousAttachments = GetAttachedObjects();
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
@@ -315,13 +318,20 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	
 	socketInfo->RemoveAttachment(obj);
 	objMesh->SetEnableGravity(true);
+
 	onChangeAttachments.Broadcast();
+	previousAttachments = GetAttachedObjects();
 }
 
-void ACubeCore::DetachAll(const bool push)
+bool ACubeCore::DetachAll(const bool push)
 {
-	if(!socketInfo) return;
-	for(const auto& obj : socketInfo->GetAttachments())
+	if(!socketInfo) return false;
+
+	// Return false if there weren't any things to detach
+	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	if(objs.IsEmpty()) return false;
+	
+	for(const auto& obj : objs)
 	{
 		if(!IsValid(obj)) continue;
 		
@@ -337,6 +347,7 @@ void ACubeCore::DetachAll(const bool push)
 	}
 
 	socketInfo->ClearAttachments();
+	return true;
 }
 
 
@@ -366,6 +377,20 @@ float ACubeCore::GetMass() const
 	
 	for (const auto& obj : children) mass += obj->GetMass();
 	return mass;
+}
+
+void ACubeCore::RevertAttachments()
+{
+	TArray<APickupableMaster*> currentAttachments = GetAttachedObjects();
+
+	for (auto& obj : currentAttachments)
+	{
+		if(!previousAttachments.Contains(obj))
+		{
+			obj->Detach();
+			RemoveAttachment(obj);
+		}
+	}
 }
 
 // Passing an actor to work around the #include dependency loop.....

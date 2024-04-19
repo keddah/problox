@@ -10,15 +10,23 @@ UActionHistory::UActionHistory()
 FTask UActionHistory::Undo()
 {
 	// Don't do anything if no tasks have been done...
-	if (tasks.Num() == 0 || currentTask <= 0)
+	if (tasks.IsEmpty())
 	{
 		Print("Couldnt undo because of a bad index", 5)
 		return {};
 	}
-    
-	currentTask--;
+
+	// If there's a change but it's the first change...
+	if(currentTask == 0)
+	{
+		currentTask = 0;
+		Print("The first change....", 5)
+		return tasks[currentTask];
+	}
+	
 	Print("Current Task: " + FString::FromInt(currentTask), 6);
-	return tasks[currentTask];
+	currentTask--;
+	return tasks[currentTask + 1];
 }
 
 FTask UActionHistory::Redo()
@@ -29,9 +37,9 @@ FTask UActionHistory::Redo()
 		return {};
 	}
 
-	currentTask++;
 	Print("Current Task: " + FString::FromInt(currentTask), 6);
-	return tasks[currentTask];
+	currentTask++;
+	return tasks[currentTask - 1];
 }
 
 void UActionHistory::NewAction(const FTask& task)
@@ -72,8 +80,4 @@ bool UActionHistory::Overwrite()
 	// Nothing got overwrote...
 	Print("nothing overwrote...", 5)
 	return false;
-	
-	tasks.RemoveAt(currentTask + 1, tasks.Num() - currentTask - 1);
-	currentTask = tasks.Num() - 1;
-	return true;
 }

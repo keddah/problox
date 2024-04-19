@@ -196,8 +196,10 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	{
 		if(ACubeCore* parentCore = hitCore->GetCore())
 		{
-			parentCore->DetachAll(true);
 			const FTransform coreTransform = parentCore->GetTransform();
+
+			// Don't create a new action if nothing was detached...
+			if(!parentCore->DetachAll(true)) return;
 
 			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
 			history->NewAction(newTask);
@@ -205,11 +207,10 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 		}
 		
 		const FTransform coreTransform = hitCore->GetTransform();
+		if(!hitCore->DetachAll(true)) return;
 
 		const FTask newTask = {"DETACH", hitCore, coreTransform, coreTransform, EOperations::Detach};
 		history->NewAction(newTask);
-		
-		hitCore->DetachAll(true);
 		return;
 	}
 
@@ -218,9 +219,9 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	{
 		if(ACubeCore* parentCore = obj->GetCore())
 		{
-			parentCore->DetachAll(true);
-
 			const FTransform coreTransform = parentCore->GetTransform();
+			if(!parentCore->DetachAll(true)) return;
+
 
 			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
 			history->NewAction(newTask);
