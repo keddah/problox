@@ -45,21 +45,6 @@ void ATreads::BeginPlay()
 	objMesh->SetAngularDamping(1);
 }
 
-void ATreads::SetAbilityActive(const bool value)
-{
-	Super::SetAbilityActive(value);
-
-	UPhysicalMaterial* physMat = objMesh->GetMaterial(0)->GetPhysicalMaterial();
-
-	physMat->Friction = active? 0 : defaultFriction;
-	physMat->FrictionCombineMode = active? EFrictionCombineMode::Min: EFrictionCombineMode::Average;
-	physMat->bOverrideFrictionCombineMode = true;
-
-	objMesh->SetMaterial(0, objMesh->GetMaterial(0));
-
-	// objMesh->SetPhysMaterialOverride(physMat);
-}
-
 void ATreads::Ability()
 {
 	Drag();
@@ -76,7 +61,6 @@ void ATreads::Drag() const
 	const FVector velocity = objMesh->GetPhysicsLinearVelocity();
 	const FVector2d vel = {velocity.X, velocity.Y};
 	const float magnitude = vel.Length();
-	PrintFloat(magnitude, .1)
 	
 	objMesh->AddForce(FVector(vel.X, vel.Y, 0) * (magnitude < 60? magnitude * -magnitude : -magnitude * dragMultiplier));
 }

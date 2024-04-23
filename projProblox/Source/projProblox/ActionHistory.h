@@ -53,7 +53,7 @@ class PROJPROBLOX_API UActionHistory : public UObject
 	// The max number of tasks allowed to be saved
 	unsigned short tasksLimit = 25;
 
-	bool Overwrite();
+	void Overwrite();
 
 public:
 	void NewAction(const FTask& task);

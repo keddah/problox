@@ -26,9 +26,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	ATreads();
 	virtual void BeginPlay() override;
 
-	virtual void SetAbilityActive(const bool value) override;
 	virtual void Ability() override;
-
 	void Drag() const;
 	
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;

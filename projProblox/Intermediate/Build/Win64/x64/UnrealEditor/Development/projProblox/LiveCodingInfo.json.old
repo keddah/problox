@@ -24,14 +24,15 @@
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
-			"ActionHistory.cpp.obj",
 			"Collector.cpp.obj",
 			"CubeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
 			"Magnet.cpp.obj",
+			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"PlayerTask.cpp.obj",
@@ -43,8 +44,7 @@
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
-			"CubeCore.cpp.obj",
-			"PickupableMaster.cpp.obj",
+			"ActionHistory.cpp.obj",
 			"Treads.cpp.obj"
 		]
 	}

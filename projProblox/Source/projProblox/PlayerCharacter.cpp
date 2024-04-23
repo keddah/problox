@@ -75,12 +75,11 @@ void APlayerCharacter::Redo()
 	holding = false;
 	selectedObj = nullptr;
 
-	
-
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 	
 	// The end transform will always be used whenever redoing something...
+	PrintVector(changedObj->GetActorLocation(), 3);
 	changedObj->SetActorTransform(task.endTransform);
 	changedObj->RemoveVelocity();
 
@@ -88,21 +87,20 @@ void APlayerCharacter::Redo()
 	switch (task.operation)
 	{
 		// Redo the attach operation
-	case EOperations::Attach:
-		changedObj->Reattach(task.endTransform);
-		break;
-		
+		case EOperations::Attach:
+			changedObj->Reattach(task.endTransform);
+			break;
+			
 		// Redo the detach operation
-	case EOperations::Detach:
-		changedObj->Detach();
-		break;
-		
+		case EOperations::Detach:
+			changedObj->Detach();
+			break;
+			
 		// Redo the move operation
-	case EOperations::Move:
-		// Don't need to do anything since the object's transform has already been set to the start/end transform.
+		case EOperations::Move:
+			// Don't need to do anything since the object's transform has already been set to the start/end transform.
 		break;
 	}
-
 	Print("Redoing...", 4)
 }
 
@@ -176,8 +174,6 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		return;
 	}
 
-	selectedTransform = selectedObj->GetTransform();
-	
 	// Includes if the selected object is the core
 	exclusions.Add(selectedObj);
 	if(!selectedObj->IsA<ACubeCore>()) return;

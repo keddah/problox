@@ -54,7 +54,7 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	UActionHistory* history;
 
-	// The transform of the selected object (should be set when picking up/dropping an object)
+	// The transform of the selected object (should be set when picking up an object)
 	FTransform selectedTransform;
 
 	UFUNCTION(BlueprintCallable)
