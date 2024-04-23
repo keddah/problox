@@ -55,6 +55,10 @@ private:
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
+
+	/////////////// Undo/Redo ///////////////
+	virtual void Reattach(const FTransform& transform) override;
+
 	
 	/////////////// Turn System ///////////////
 	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
@@ -160,6 +164,10 @@ protected:
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnReset onReset;
+
+	/////////////// Undo/Redo ///////////////
+	TArray<APickupableMaster*> previousAttachments;
+
 	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
@@ -229,7 +237,7 @@ public:
 	}
 	
 	UFUNCTION(BlueprintCallable)
-	void DetachAll(bool push = true);
+	bool DetachAll(bool push = true);
 	
 	UFUNCTION(BlueprintCallable)
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
@@ -243,7 +251,7 @@ public:
 
 	
 	/////////////// Selection/Placement ///////////////
-	virtual void SetSelected(const bool value) override;
+	virtual EOperations SetSelected(const bool value) override;
 	virtual bool SetGroupSelected(const bool value) override;
 
 	
@@ -275,6 +283,10 @@ public:
 	FOnOutOfRange onRangeExceeded;
 
 	
+	/////////////// Undo/Redo ///////////////
+	// If something was attached to this core, when undoing/redoing, it detaches the objects that weren't there before the change
+	// THIS SHOULDN'T BE NEEDED BUT THE OVERWRITE FUNCTION ISN'T WORKING PROPERLY...
+	void RevertAttachments();
 
 	/////////////// Other ///////////////
 	void AddThing(AActor* thing) const;

@@ -190,11 +190,11 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 		silhouette->SetWorldRotation(socketRot);
 
 		const FRotator relativeRot = silhouette->GetComponentTransform().GetRelativeTransform(GetTransform()).Rotator();
-		silhouette->SetRelativeRotation({above? -90.0f : 90, relativeRot.Yaw, relativeRot.Roll});
+		silhouette->SetRelativeRotation(relativeRot + other.GetRotOffset());
 	}
 }
 
-void ACubeCore::SetSelected(const bool value)
+EOperations ACubeCore::SetSelected(const bool value)
 {
 	// Not allowed to drop the cube if unable to collect 
 	if(canPickup) selected = value;
@@ -212,7 +212,7 @@ void ACubeCore::SetSelected(const bool value)
 	if(selected)
 	{
 		canPlace = true;
-		return;
+		return {EOperations::Move};
 	}
 
 	indicator->SetHiddenInGame(true);
@@ -224,10 +224,8 @@ void ACubeCore::SetSelected(const bool value)
 		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
 	}
 	
-	if(!IsValid(hitObj)) return;
+	if(!IsValid(hitObj)) return {EOperations::Move};
 
-	Print("Added from core", 3)
-	
 	// Rotate to match the socket rotation
 	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
 	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
@@ -245,7 +243,9 @@ void ACubeCore::SetSelected(const bool value)
 	else Cast<AWheel>(hitObj)->Attach(this);
 
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
+	previousObj = hitObj;
 	hitObj = 0;
+	return {EOperations::Attach};
 }
 
 bool ACubeCore::SetGroupSelected(const bool value)
@@ -292,6 +292,7 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	isAttached = true;
 
 	onChangeAttachments.Broadcast();
+	previousAttachments = GetAttachedObjects();
 }
 
 void ACubeCore::RemoveAttachment(const FName& socket)
@@ -306,7 +307,9 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	
 	socketInfo->RemoveAttachment(socket);
 	objMesh->SetEnableGravity(true);
+
 	onChangeAttachments.Broadcast();
+	previousAttachments = GetAttachedObjects();
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
@@ -315,13 +318,20 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	
 	socketInfo->RemoveAttachment(obj);
 	objMesh->SetEnableGravity(true);
+
 	onChangeAttachments.Broadcast();
+	previousAttachments = GetAttachedObjects();
 }
 
-void ACubeCore::DetachAll(const bool push)
+bool ACubeCore::DetachAll(const bool push)
 {
-	if(!socketInfo) return;
-	for(const auto& obj : socketInfo->GetAttachments())
+	if(!socketInfo) return false;
+
+	// Return false if there weren't any things to detach
+	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	if(objs.IsEmpty()) return false;
+	
+	for(const auto& obj : objs)
 	{
 		if(!IsValid(obj)) continue;
 		
@@ -337,6 +347,7 @@ void ACubeCore::DetachAll(const bool push)
 	}
 
 	socketInfo->ClearAttachments();
+	return true;
 }
 
 
@@ -366,6 +377,20 @@ float ACubeCore::GetMass() const
 	
 	for (const auto& obj : children) mass += obj->GetMass();
 	return mass;
+}
+
+void ACubeCore::RevertAttachments()
+{
+	TArray<APickupableMaster*> currentAttachments = GetAttachedObjects();
+
+	for (auto& obj : currentAttachments)
+	{
+		if(!previousAttachments.Contains(obj))
+		{
+			obj->Detach();
+			RemoveAttachment(obj);
+		}
+	}
 }
 
 // Passing an actor to work around the #include dependency loop.....
@@ -561,4 +586,11 @@ void ACubeCore::SetCanCollect(bool collectable)
 {
 	objMesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
 	canCollect = collectable;
+}
+
+void ACubeCore::Reattach(const FTransform& transform)
+{
+	hitObj = previousObj;
+	hitObj->Reattach(transform);
+	RevertAttachments();
 }

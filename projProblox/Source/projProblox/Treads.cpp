@@ -22,6 +22,7 @@ ATreads::ATreads()
 
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = false;
+	rotOffset = {90,0,180};
 }
 
 float ATreads::GetAttachOffset(const APickupableMaster& attachee)
@@ -44,26 +45,22 @@ void ATreads::BeginPlay()
 	objMesh->SetAngularDamping(1);
 }
 
-void ATreads::SetAbilityActive(const bool value)
-{
-	Super::SetAbilityActive(value);
-
-	UPhysicalMaterial* physMat = objMesh->GetMaterial(0)->GetPhysicalMaterial();
-
-	physMat->Friction = active? 0 : defaultFriction;
-	physMat->FrictionCombineMode = active? EFrictionCombineMode::Min: EFrictionCombineMode::Average;
-	physMat->bOverrideFrictionCombineMode = true;
-
-	objMesh->SetMaterial(0, objMesh->GetMaterial(0));
-
-	// objMesh->SetPhysMaterialOverride(physMat);
-}
-
 void ATreads::Ability()
 {
+	Drag();
+	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
 	objMesh->AddForce(GetActorForwardVector() * moveSpeed * 1000);
+}
+
+void ATreads::Drag() const
+{
+	const FVector velocity = objMesh->GetPhysicsLinearVelocity();
+	const FVector2d vel = {velocity.X, velocity.Y};
+	const float magnitude = vel.Length();
+	
+	objMesh->AddForce(FVector(vel.X, vel.Y, 0) * (magnitude < 60? magnitude * -magnitude : -magnitude * dragMultiplier));
 }

@@ -5,8 +5,6 @@
 
 #include "CubeConnector.h"
 #include "Kismet/GameplayStatics.h"
-#include <Camera/CameraActor.h>
-#include <Camera/CameraComponent.h>
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -14,6 +12,98 @@ APlayerCharacter::APlayerCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+}
+
+void APlayerCharacter::Undo()
+{
+	const FTask task = history->Undo();
+	APickupableMaster* changedObj = task.obj;
+
+	// If the task.object wasn't set... the task struct is invalid.
+	if(!IsValid(changedObj))
+	{
+		Print("There aren't any tasks to undo...", 5);
+		return;
+	}
+	
+	changedObj->ManualSetSelected(false);
+
+	//Deselect()
+	holding = false;
+	selectedObj = nullptr;
+
+	// Clear things to ignore once not selecting anything.
+	exclusions.Empty();
+	
+	// Depending on the operation... Move back, Reattach or Detach
+	switch (task.operation)
+	{
+		// Undo the attach operation
+		case EOperations::Attach:
+			changedObj->Detach();
+			break;
+		
+		// Undo the detach operation
+		case EOperations::Detach:
+			changedObj->Reattach(task.startTransform);
+			break;
+		
+		// Undo the move operation
+		case EOperations::Move:
+			// Don't need to do anything since the object's transform will be elsewhere.
+			break;
+	}
+
+	// The start transform will always be used whenever undoing something...
+	changedObj->SetActorLocation(task.startTransform.GetLocation());
+	changedObj->SetActorRotation(task.startTransform.Rotator());
+	changedObj->RemoveVelocity();
+	Print("Undoing...", 4)
+}
+
+void APlayerCharacter::Redo()
+{
+	const FTask task = history->Redo();
+	if(!IsValid(task.obj))
+	{
+		Print("There aren't any tasks to redo...", 5);
+		return;
+	}
+	
+	APickupableMaster* changedObj = task.obj;
+	changedObj->ManualSetSelected(false);
+
+	// Is the selected object a core?
+	holding = false;
+	selectedObj = nullptr;
+
+	// Clear things to ignore once not selecting anything.
+	exclusions.Empty();
+	
+	// Depending on the operation... Move back, Reattach or Detach
+	switch (task.operation)
+	{
+		// Redo the attach operation
+		case EOperations::Attach:
+			changedObj->Reattach(task.endTransform);
+			break;
+			
+		// Redo the detach operation
+		case EOperations::Detach:
+			changedObj->Detach();
+			break;
+			
+		// Redo the move operation
+		case EOperations::Move:
+			// Don't need to do anything since the object's transform will be elsewhere.
+		break;
+	}
+	
+	// The end transform will always be used whenever redoing something...
+	changedObj->SetActorLocation(task.endTransform.GetLocation());
+	changedObj->SetActorRotation(task.endTransform.Rotator());
+	changedObj->RemoveVelocity();
+	Print("Redoing...", 4)
 }
 
 // Called when the game starts or when spawned
@@ -29,6 +119,15 @@ void APlayerCharacter::BeginPlay()
 	}
 	
 	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
+
+	history = NewObject<UActionHistory>();
+}
+
+void APlayerCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	// if(history) history->PrintTaskIndex(.1);
 }
 
 // Called to bind functionality to input
@@ -71,6 +170,10 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		
 		selectedObj = obj;
 		selectedObj->SetSelected(true);
+
+		// Need to set the start position...
+		// Only add a new action after deselecting since that's what confirms the task.
+		selectedTransform = selectedObj->GetTransform();
 	}
 	else holding = false;
 	
@@ -79,7 +182,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		holding = false;
 		return;
 	}
-	
+
 	// Includes if the selected object is the core
 	exclusions.Add(selectedObj);
 	if(!selectedObj->IsA<ACubeCore>()) return;
@@ -88,7 +191,6 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
 		exclusions.Append(obj->GetAttachedObjActors());
-		Print(FString::FromInt(exclusions.Num()), 3)
 	}
 }
 
@@ -99,19 +201,39 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	{
 		if(ACubeCore* parentCore = hitCore->GetCore())
 		{
-			parentCore->DetachAll(true);
+			const FTransform coreTransform = parentCore->GetTransform();
+
+			// Don't create a new action if nothing was detached...
+			if(!parentCore->DetachAll(true)) return;
+
+			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
+			history->NewAction(newTask);
 			return;
 		}
+		
+		const FTransform coreTransform = hitCore->GetTransform();
+		if(!hitCore->DetachAll(true)) return;
 
-		hitCore->DetachAll(true);
+		const FTask newTask = {"DETACH", hitCore, coreTransform, coreTransform, EOperations::Detach};
+		history->NewAction(newTask);
 		return;
 	}
 
 	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all.. 
 	if(const APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor()))
 	{
-		if(ACubeCore* parentCore = obj->GetCore()) parentCore->DetachAll(true);
+		if(ACubeCore* parentCore = obj->GetCore())
+		{
+			const FTransform coreTransform = parentCore->GetTransform();
+			if(!parentCore->DetachAll(true)) return;
+
+
+			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
+			history->NewAction(newTask);
+		}
+
 	}
+
 }
 
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
@@ -204,16 +326,30 @@ void APlayerCharacter::Deselect()
 	}
 
 	holding = false;
+	const EOperations operation = selectedObj->SetSelected(false);
+	FName opName;
 	
-	selectedObj->SetSelected(false);
-	// selectedObj->GravitySelection();
+	switch (operation)
+	{
+		case EOperations::Attach:
+			opName = "ATTACH";
+			break;
+		
+		case EOperations::Detach:
+			opName = "DETACH";
+			break;
+		
+		case EOperations::Move:
+			opName = "MOVE";
+			break;
+	}
+	
+	// Adding new action history entry.
+	const FTask newTask {opName, selectedObj, selectedTransform, selectedObj->GetTransform(),operation};
+	history->NewAction(newTask);
+	
 	selectedObj = nullptr;
 
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
-}
-
-void APlayerCharacter::EndGame()
-{
-	gameEnded = true;
 }

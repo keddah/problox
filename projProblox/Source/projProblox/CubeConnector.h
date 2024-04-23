@@ -41,6 +41,7 @@ protected:
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
+	virtual void Reattach(const FTransform& transform) override;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* backArrow;
@@ -55,7 +56,7 @@ protected:
 public:
 	virtual void Tick(float DeltaSeconds) override;
 
-	virtual void SetSelected(const bool value) override;
+	virtual EOperations SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 
 private:

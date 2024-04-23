@@ -10,6 +10,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ActionHistory.h"
 #include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
@@ -100,6 +101,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "The positional offset for when objects attach to cores."))
 	float attachOffset;
 
+	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "The rotational offset for when the core attaches itself to the object."))
+	FRotator rotOffset;
+
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
 	
@@ -115,6 +119,14 @@ protected:
 	UMaterial* defaultMat;
 	UMaterial* silhouetteMat;
 
+
+	/////////////// Undo/Redo ///////////////
+	// The socket that this has been removed from
+	FName removedSocket;
+	bool wasDetached;
+	
+	APickupableMaster* previousObj;
+
 	
 ///////////////////////////// Functions /////////////////////////////
 
@@ -124,7 +136,7 @@ protected:
 	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
-	void ResetGhost() const;
+	void ResetGhost(bool resetRot = true) const;
 	
 	virtual void Ability() {}
 
@@ -178,7 +190,8 @@ public:
 	
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
-	virtual void SetSelected(const bool value);
+	virtual EOperations SetSelected(const bool value);
+	void ManualSetSelected(const bool value) { selected = value; };
 	virtual bool SetGroupSelected(const bool value);
 
 	virtual void Detach();
@@ -189,6 +202,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetCanPickup(const bool can) { canPickup = can; }
 
+	
 
 	/////////////// Ability ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Ability")
@@ -212,14 +226,21 @@ public:
 	bool IsChildOf(const APickupableMaster* parent) const;
 
 	
+	/////////////// Undo/Redo ///////////////
+	virtual void Reattach(const FTransform& transform);
+
+	
 	/////////////// Getters ///////////////
 	ACubeCore* GetCore() const { return parentCore; }
+	APickupableMaster* GetPreviousObj() const { return previousObj; }
 
 	virtual APickupableMaster* GetParent();
 
 	FVector GetPlaceDir() const { return placeDir; }
 	
-	virtual float GetAttachOffset(const APickupableMaster& attachee) { 	PrintFloat(attachOffset, .2) return attachOffset; }
+	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
+	FRotator GetRotOffset() const { return rotOffset; }
+	
 	FName GetAttachedSocket() const { return attachedSocket; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")

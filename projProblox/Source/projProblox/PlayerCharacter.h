@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "ActionHistory.h"
 #include "PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
-
 
 UCLASS()
 class PROJPROBLOX_API APlayerCharacter : public ACharacter
@@ -48,11 +48,26 @@ private:
 
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
 	bool buildPhase = true;
+
+	
+	/////////////// Undo/Redo ///////////////
+	UPROPERTY(VisibleAnywhere)
+	UActionHistory* history;
+
+	// The transform of the selected object (should be set when picking up an object)
+	FTransform selectedTransform;
+
+	UFUNCTION(BlueprintCallable)
+	void Undo();
+	UFUNCTION(BlueprintCallable)
+	void Redo();
+	
 	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void Tick(float DeltaSeconds) override;
 	
 public:	
 	// Called to bind functionality to input
@@ -79,5 +94,5 @@ private:
 	
 	/////////////// Game States ///////////////
 	UFUNCTION()
-	void EndGame();
+	void EndGame() { gameEnded = true; }
 };

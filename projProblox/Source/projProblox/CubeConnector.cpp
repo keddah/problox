@@ -187,7 +187,6 @@ void ACubeConnector::Placement()
 		// }
 
 		// if(tempSocket != NAME_None) tempSocket = closestSocket;
-		// parentCore = nullptr;
 		// hitObj->SetCore(this);
 		break;
 	}
@@ -237,7 +236,7 @@ void ACubeConnector::GhostPlacement()
 }
 
 // The final position when attached is dependent on the silhouette/ghost's position and rotation
-void ACubeConnector::SetSelected(const bool value)
+EOperations ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
 	GravitySelection();
@@ -247,10 +246,12 @@ void ACubeConnector::SetSelected(const bool value)
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
+
 	
 	// Detach from its components if selected
 	if(selected)
 	{
+		wasDetached = isAttached;
 		canPlace = true;
 		Detach();
 
@@ -258,11 +259,11 @@ void ACubeConnector::SetSelected(const bool value)
 		{
 			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
 		}
-		return;
+		return {EOperations::Detach};
 	}
 	
 	// When unselected....
-	ResetGhost();
+	ResetGhost(false);
 	
 	for(const auto& obj : children)
 	{
@@ -270,16 +271,21 @@ void ACubeConnector::SetSelected(const bool value)
 	}
 	
 	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return;
+	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
 
 	// Use the silhouettes position/rotation...
 	SetActorLocation(silhouette->GetComponentLocation());
 	SetActorRotation(silhouette->GetComponentRotation());
+
+	// Reset the ghost's rotation
+	ResetGhost();
 	
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
-	
+
+	isAttached = true;
 	parentCore->AddAttachment(this, attachedSocket);
+	return {EOperations::Attach};
 }
 
 bool ACubeConnector::SetGroupSelected(const bool value)
@@ -295,8 +301,6 @@ bool ACubeConnector::SetGroupSelected(const bool value)
 
 void ACubeConnector::SetHideIndicator(const bool hide)
 {
-	Print(FString::SanitizeFloat(backArrow->ArrowLength), 3)
-	
 	Super::SetHideIndicator(hide);
 	backArrow->SetHiddenInGame(hide);
 	leftArrow->SetHiddenInGame(hide);
@@ -317,6 +321,22 @@ float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
 
 	attachOffset = distance;
 	return attachOffset;
+}
+
+void ACubeConnector::Reattach(const FTransform& transform)
+{
+	parentCore = Cast<ACubeCore>(previousObj);
+	if(!IsValid(parentCore))
+	{
+		Print("couldnt cast to core - Reattaching...", 5)
+		return;
+	}
+	
+	AttachToActor(parentCore, attachRules, removedSocket);
+
+	SetActorTransform(transform);
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
 }
 
 void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)

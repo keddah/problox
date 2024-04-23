@@ -32,7 +32,7 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 	// Just using this to get to the tick function....
 	virtual void Ability() override { if(selected) RemoveVelocity(); }
 	
-	virtual void SetSelected(const bool value) override;
+	virtual EOperations SetSelected(const bool value) override;
 	virtual void Detach() override;
 	virtual APickupableMaster* GetParent() override;
 	
@@ -50,4 +50,5 @@ public:
 	}
 
 	void Attach(ACubeCore* core);
+	virtual void Reattach(const FTransform& transform) override;
 };

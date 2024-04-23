@@ -30,5 +30,5 @@ public:
 	void BeginSpawn() const;
 
 private:
-	void Spawn(UWorld* wrld, const FVector& spawn, const FActorSpawnParameters& params) const { wrld->SpawnActor<AThing>(thingClass, spawn, {}, params); }
+	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const { wrld->SpawnActor<AThing>(thingClass, spawn, rot, params); }
 };

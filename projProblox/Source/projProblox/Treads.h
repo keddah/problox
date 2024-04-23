@@ -26,8 +26,9 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	ATreads();
 	virtual void BeginPlay() override;
 
-	virtual void SetAbilityActive(const bool value) override;
 	virtual void Ability() override;
+	void Drag() const;
+	
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
@@ -39,8 +40,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float moveSpeed = 7500;
-	
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "Overrides the 'Linear damping' value of the objMesh."))
-	float defaultFriction = .05f;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Ability")
+	float dragMultiplier = 3;
 };
