@@ -17,13 +17,15 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::Undo()
 {
 	const FTask task = history->Undo();
-	if(task.taskName == NAME_None)
+	APickupableMaster* changedObj = task.obj;
+
+	// If the task.object wasn't set... the task struct is invalid.
+	if(!IsValid(changedObj))
 	{
 		Print("There aren't any tasks to undo...", 5);
 		return;
 	}
 	
-	APickupableMaster* changedObj = task.obj;
 	changedObj->ManualSetSelected(false);
 
 	//Deselect()
@@ -32,10 +34,6 @@ void APlayerCharacter::Undo()
 
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
-	
-	// The start transform will always be used whenever undoing something...
-	changedObj->SetActorTransform(task.startTransform);
-	changedObj->RemoveVelocity();
 	
 	// Depending on the operation... Move back, Reattach or Detach
 	switch (task.operation)
@@ -52,17 +50,21 @@ void APlayerCharacter::Undo()
 		
 		// Undo the move operation
 		case EOperations::Move:
-			// Don't need to do anything since the object's transform has already been set to the start/end transform.
+			// Don't need to do anything since the object's transform will be elsewhere.
 			break;
 	}
 
+	// The start transform will always be used whenever undoing something...
+	changedObj->SetActorLocation(task.startTransform.GetLocation());
+	changedObj->SetActorRotation(task.startTransform.Rotator());
+	changedObj->RemoveVelocity();
 	Print("Undoing...", 4)
 }
 
 void APlayerCharacter::Redo()
 {
 	const FTask task = history->Redo();
-	if(task.taskName == NAME_None)
+	if(!IsValid(task.obj))
 	{
 		Print("There aren't any tasks to redo...", 5);
 		return;
@@ -78,11 +80,6 @@ void APlayerCharacter::Redo()
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 	
-	// The end transform will always be used whenever redoing something...
-	PrintVector(changedObj->GetActorLocation(), 3);
-	changedObj->SetActorTransform(task.endTransform);
-	changedObj->RemoveVelocity();
-
 	// Depending on the operation... Move back, Reattach or Detach
 	switch (task.operation)
 	{
@@ -98,9 +95,14 @@ void APlayerCharacter::Redo()
 			
 		// Redo the move operation
 		case EOperations::Move:
-			// Don't need to do anything since the object's transform has already been set to the start/end transform.
+			// Don't need to do anything since the object's transform will be elsewhere.
 		break;
 	}
+	
+	// The end transform will always be used whenever redoing something...
+	changedObj->SetActorLocation(task.endTransform.GetLocation());
+	changedObj->SetActorRotation(task.endTransform.Rotator());
+	changedObj->RemoveVelocity();
 	Print("Redoing...", 4)
 }
 
@@ -119,6 +121,13 @@ void APlayerCharacter::BeginPlay()
 	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
 
 	history = NewObject<UActionHistory>();
+}
+
+void APlayerCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	// if(history) history->PrintTaskIndex(.1);
 }
 
 // Called to bind functionality to input
@@ -343,9 +352,4 @@ void APlayerCharacter::Deselect()
 
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
-}
-
-void APlayerCharacter::EndGame()
-{
-	gameEnded = true;
 }

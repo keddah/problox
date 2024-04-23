@@ -32,7 +32,6 @@
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
 			"Magnet.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerTask.cpp.obj",
 			"projProblox.cpp.obj",
@@ -40,12 +39,13 @@
 			"Thing.cpp.obj",
 			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
+			"Treads.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"PlayerCharacter.cpp.obj",
-			"Treads.cpp.obj"
+			"PickupableMaster.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }

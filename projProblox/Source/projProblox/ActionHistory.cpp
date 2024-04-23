@@ -9,52 +9,53 @@ UActionHistory::UActionHistory()
 
 FTask UActionHistory::Undo()
 {
-	// Don't do anything if no tasks have been done...
-	if (tasks.IsEmpty())
+	if (tasks.IsEmpty() || !tasks.IsValidIndex(currentTask))
 	{
-		Print("Couldnt undo because of a bad index", 5)
+		if(currentTask < 0 && !tasks.IsEmpty())
+		{
+			currentTask = 0;
+			return tasks[currentTask];
+		}
+		
+		Print("Couldnt undo because of a bad index: " + FString::FromInt(currentTask), 5)
 		return {};
 	}
 
-	// If there's a change but it's the first change...
-	if(currentTask == 0)
-	{
-		currentTask = 0;
-		return tasks[currentTask];
-	}
-	
-	Print("Current Task: " + FString::FromInt(currentTask), 6);
-	currentTask--;
-	return tasks[currentTask + 1];
+	// WHEN YOU REACH THE START/END OF THE HISTORY YOU GO OVER BY 1. FIXES ITSELF WHEN YOU REDO/UNDO AGAIN
+	--currentTask;
+	Print("Returned Task: " + FString::FromInt(currentTask + 1), 5);
+	return tasks.IsValidIndex(currentTask + 1)? tasks[currentTask + 1] : FTask();
 }
 
 FTask UActionHistory::Redo()
 {
-	if (currentTask >= tasks.Num() - 1)
+	// Return the last task if already up to date...
+	if(currentTask >= tasks.Num())
 	{
-		Print("Couldnt redo because of a bad index", 5)
-		return {};
+		currentTask = tasks.Num() - 1;
+		
+		Print("end of tasks list... " + FString::FromInt(currentTask), 3)
+		return tasks[currentTask];
 	}
 
-	Print("Current Task: " + FString::FromInt(currentTask), 6);
-	currentTask++;
-	return tasks[currentTask];
+
+	// WHEN YOU REACH THE START/END OF THE HISTORY YOU GO OVER BY 1. FIXES ITSELF WHEN YOU REDO/UNDO AGAIN
+	++currentTask;
+	Print("Returned Task: " + FString::FromInt(currentTask - 1), 5);
+	return tasks.IsValidIndex(currentTask - 1)? tasks[currentTask - 1] : FTask();
 }
+
 
 void UActionHistory::NewAction(const FTask& task)
 {
 	tasks.Add(task);
 	Print("Addedd task", 5)
 	
-	// Don't overwrite if there aren't any tasks or if the current task is the latest task
+	// Don't overwrite if there aren't any tasks or if the current task is the latest task.
 	bool overwrite = true;
 
-	// if there is only one task and its the current task OR
-	// if the tasks array is empty OR
-	// if the tasks array isn't empty but the current task is the last task...
-	// Don't Overwrite
-
-	// +1 to consider the next task (since a new task is added at the start of this function)
+	// +1 to consider the next task (since a new task is added at the start of this function).
+	// if the current task is the last task...
 	if(currentTask + 1 == tasks.Num() - 1) overwrite = false;
 
 	if(overwrite) Overwrite();
@@ -78,12 +79,5 @@ void UActionHistory::Overwrite()
 	tasks.RemoveAt(currentTask + 1, removeCount);
 
 	// If tasks have been removed, adjust the current task index
-	if (removeCount > 0)
-	{
-		currentTask = FMath::Clamp(currentTask, 0, tasks.Num() - 1);
-		return;
-	}
-
-	// Nothing got overwrote...
-	Print("nothing overwrote...", 5)
+	if (removeCount > 0) currentTask = FMath::Clamp(currentTask, 0, tasks.Num() - 1);
 }

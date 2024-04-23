@@ -203,6 +203,8 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
 	if(attachedSocket == NAME_None) return {wasDetached? EOperations::Detach : EOperations::Move};
 
+	if(!previousObj) previousObj = parentCore;
+	
 	AttachToActor(parentCore, attachRules, attachedSocket);
 
 	// Using the silhouette's location/rotation to set the actual transform.
@@ -236,20 +238,31 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 void APickupableMaster::Detach()
 {
 	ResetGhost();
-	
-	if(!IsValid(parentCore)) return;
+
+	if(!IsValid(parentCore) && !IsValid(previousObj))
+	{
+		Print("Couldn't detach... parent was invalid..", 4)
+		return;
+	}
 
 	SetAbilityActive(false);
 
 	ResetMaterial();
 	
-	parentCore->RemoveAttachment(attachedSocket);
+	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	else previousObj->RemoveAttachment(attachedSocket);
+	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetupAttachment(objMesh);
 
-	previousObj = parentCore;
-	parentCore = 0;
+	if(parentCore)
+	{
+		previousObj = parentCore;
+		parentCore = nullptr;
+	}
+	
 	objMesh->SetEnableGravity(true);
+	objMesh->SetPhysicsLinearVelocity({0,0,-5});
 	isAttached = false;
 }
 

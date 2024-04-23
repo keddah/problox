@@ -61,5 +61,6 @@ public:
 	FTask Undo();
 	FTask Redo();
 	void Clear() {tasks.Empty(); currentTask = 0; }
+	void PrintTaskIndex(const float duration = 4) const { Print("Current Task: " + FString::FromInt(currentTask), duration)}
 	
 };
