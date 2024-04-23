@@ -101,6 +101,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "The positional offset for when objects attach to cores."))
 	float attachOffset;
 
+	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "The rotational offset for when the core attaches itself to the object."))
+	FRotator rotOffset;
+
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
 	
@@ -236,6 +239,8 @@ public:
 	FVector GetPlaceDir() const { return placeDir; }
 	
 	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
+	FRotator GetRotOffset() const { return rotOffset; }
+	
 	FName GetAttachedSocket() const { return attachedSocket; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")

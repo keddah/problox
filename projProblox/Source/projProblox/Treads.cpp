@@ -22,6 +22,7 @@ ATreads::ATreads()
 
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = false;
+	rotOffset = {90,0,180};
 }
 
 float ATreads::GetAttachOffset(const APickupableMaster& attachee)
@@ -61,9 +62,21 @@ void ATreads::SetAbilityActive(const bool value)
 
 void ATreads::Ability()
 {
+	Drag();
+	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
 	objMesh->AddForce(GetActorForwardVector() * moveSpeed * 1000);
+}
+
+void ATreads::Drag() const
+{
+	const FVector velocity = objMesh->GetPhysicsLinearVelocity();
+	const FVector2d vel = {velocity.X, velocity.Y};
+	const float magnitude = vel.Length();
+	PrintFloat(magnitude, .1)
+	
+	objMesh->AddForce(FVector(vel.X, vel.Y, 0) * (magnitude < 60? magnitude * -magnitude : -magnitude * dragMultiplier));
 }

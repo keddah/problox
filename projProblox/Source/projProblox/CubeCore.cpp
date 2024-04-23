@@ -190,7 +190,7 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 		silhouette->SetWorldRotation(socketRot);
 
 		const FRotator relativeRot = silhouette->GetComponentTransform().GetRelativeTransform(GetTransform()).Rotator();
-		silhouette->SetRelativeRotation({above? -90.0f : 90, relativeRot.Yaw, relativeRot.Roll});
+		silhouette->SetRelativeRotation(relativeRot + other.GetRotOffset());
 	}
 }
 
