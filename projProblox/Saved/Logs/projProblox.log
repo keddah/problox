@@ -1389,3 +1389,6 @@ Script Stack (0 frames) :
 [2024.04.23-15.13.02:029][831]LogFileHelpers: InternalPromptForCheckoutAndSave took 174 ms
 [2024.04.23-15.13.02:031][831]AssetCheck: New page: Asset Save: Sandbox
 [2024.04.23-15.13.02:031][831]LogContentValidation: Display: Validating /Script/Engine.World /Game/Sandbox.Sandbox
+[2024.04.23-15.13.38:925][878]LogSlate: External Image Picker: DecompressImage failed
+[2024.04.23-15.13.39:192][884]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.23-15.13.55:127][711]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:06.130 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 3844 files in 5633 folders with total size 228 MiB.
