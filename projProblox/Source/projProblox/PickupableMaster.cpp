@@ -32,9 +32,11 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetCollisionResponseToAllChannels(ECR_Ignore);
 	silhouette->SetStaticMesh(objMesh->GetStaticMesh());
 	silhouette->SetupAttachment(objMesh);
-	silhouette->SetRelativeLocation({50,0,0});
+	silhouette->SetMassOverrideInKg("", 0);
+	silhouette->SetSimulatePhysics(false);
+	silhouette->SetEnableGravity(false);
 	silhouette->SetHiddenInGame(true);
-
+	
 	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
 	indicator->SetupAttachment(objMesh);
 	
@@ -417,11 +419,13 @@ void APickupableMaster::RemoveVelocity() const
 }
 
 
-void APickupableMaster::ResetGhost() const
+void APickupableMaster::ResetGhost(const bool resetRot) const
 {
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
+
+	if(resetRot) silhouette->SetWorldRotation({0,0,0});
 }
 
 

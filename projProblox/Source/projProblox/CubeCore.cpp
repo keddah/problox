@@ -592,5 +592,5 @@ void ACubeCore::Reattach(const FTransform& transform)
 {
 	hitObj = previousObj;
 	hitObj->Reattach(transform);
-	
+	RevertAttachments();
 }

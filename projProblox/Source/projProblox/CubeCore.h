@@ -55,7 +55,10 @@ private:
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
+
+	/////////////// Undo/Redo ///////////////
 	virtual void Reattach(const FTransform& transform) override;
+
 	
 	/////////////// Turn System ///////////////
 	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
@@ -284,7 +287,6 @@ public:
 	// If something was attached to this core, when undoing/redoing, it detaches the objects that weren't there before the change
 	// THIS SHOULDN'T BE NEEDED BUT THE OVERWRITE FUNCTION ISN'T WORKING PROPERLY...
 	void RevertAttachments();
-	
 
 	/////////////// Other ///////////////
 	void AddThing(AActor* thing) const;

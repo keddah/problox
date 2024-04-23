@@ -263,7 +263,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	}
 	
 	// When unselected....
-	ResetGhost();
+	ResetGhost(false);
 	
 	for(const auto& obj : children)
 	{
@@ -276,6 +276,9 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	// Use the silhouettes position/rotation...
 	SetActorLocation(silhouette->GetComponentLocation());
 	SetActorRotation(silhouette->GetComponentRotation());
+
+	// Reset the ghost's rotation
+	ResetGhost();
 	
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);

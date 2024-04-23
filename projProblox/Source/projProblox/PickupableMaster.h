@@ -136,7 +136,7 @@ protected:
 	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
-	void ResetGhost() const;
+	void ResetGhost(bool resetRot = true) const;
 	
 	virtual void Ability() {}
 
