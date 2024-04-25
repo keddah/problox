@@ -39,9 +39,6 @@
     <ClCompile Include="..\..\Source\projProblox\BouncyThing.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\BouncyThing.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Collector.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
@@ -88,6 +85,12 @@
       <Filter>Source\projProblox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Magnet.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\MyThing.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\MyThing.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\PickupableMaster.cpp">

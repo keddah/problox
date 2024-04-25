@@ -14,6 +14,8 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ABouncyThing();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ABouncyThing_NoRegister();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_AHoverThing();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_AHoverThing_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AThing();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AThing_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
@@ -407,6 +409,67 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	ABouncyThing::ABouncyThing() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABouncyThing);
 	ABouncyThing::~ABouncyThing() {}
+	void AHoverThing::StaticRegisterNativesAHoverThing()
+	{
+	}
+	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AHoverThing);
+	UClass* Z_Construct_UClass_AHoverThing_NoRegister()
+	{
+		return AHoverThing::StaticClass();
+	}
+	struct Z_Construct_UClass_AHoverThing_Statics
+	{
+		static UObject* (*const DependentSingletons[])();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
+#endif
+		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+		static const UECodeGen_Private::FClassParams ClassParams;
+	};
+	UObject* (*const Z_Construct_UClass_AHoverThing_Statics::DependentSingletons[])() = {
+		(UObject* (*)())Z_Construct_UClass_AThing,
+		(UObject* (*)())Z_Construct_UPackage__Script_projProblox,
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AHoverThing_Statics::DependentSingletons) < 16);
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHoverThing_Statics::Class_MetaDataParams[] = {
+		{ "IncludePath", "Thing.h" },
+		{ "ModuleRelativePath", "Thing.h" },
+	};
+#endif
+	const FCppClassTypeInfoStatic Z_Construct_UClass_AHoverThing_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<AHoverThing>::IsAbstract,
+	};
+	const UECodeGen_Private::FClassParams Z_Construct_UClass_AHoverThing_Statics::ClassParams = {
+		&AHoverThing::StaticClass,
+		"Engine",
+		&StaticCppClassTypeInfo,
+		DependentSingletons,
+		nullptr,
+		nullptr,
+		nullptr,
+		UE_ARRAY_COUNT(DependentSingletons),
+		0,
+		0,
+		0,
+		0x009000A4u,
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AHoverThing_Statics::Class_MetaDataParams), Z_Construct_UClass_AHoverThing_Statics::Class_MetaDataParams)
+	};
+	UClass* Z_Construct_UClass_AHoverThing()
+	{
+		if (!Z_Registration_Info_UClass_AHoverThing.OuterSingleton)
+		{
+			UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_AHoverThing.OuterSingleton, Z_Construct_UClass_AHoverThing_Statics::ClassParams);
+		}
+		return Z_Registration_Info_UClass_AHoverThing.OuterSingleton;
+	}
+	template<> PROJPROBLOX_API UClass* StaticClass<AHoverThing>()
+	{
+		return AHoverThing::StaticClass();
+	}
+	AHoverThing::AHoverThing() {}
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AHoverThing);
+	AHoverThing::~AHoverThing() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
@@ -414,8 +477,9 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_AThing, AThing::StaticClass, TEXT("AThing"), &Z_Registration_Info_UClass_AThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThing), 2087417035U) },
 		{ Z_Construct_UClass_ABouncyThing, ABouncyThing::StaticClass, TEXT("ABouncyThing"), &Z_Registration_Info_UClass_ABouncyThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyThing), 4236447517U) },
+		{ Z_Construct_UClass_AHoverThing, AHoverThing::StaticClass, TEXT("AHoverThing"), &Z_Registration_Info_UClass_AHoverThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverThing), 2425925738U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_3001877585(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_2917775962(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

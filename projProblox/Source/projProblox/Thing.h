@@ -33,7 +33,7 @@ private:
 	ACubeCore* core;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
-	float attractionForce;
+	float attractionForce = 2;
 	
 	FVector goal;
 	
@@ -76,4 +76,14 @@ class PROJPROBLOX_API ABouncyThing : public AThing
 	
 public:
 	virtual void Tick(float DeltaSeconds) override;
+};
+
+
+UCLASS()
+class PROJPROBLOX_API AHoverThing : public AThing
+{
+	GENERATED_BODY()
+
+	virtual void Tick(float DeltaSeconds) override;
+	
 };

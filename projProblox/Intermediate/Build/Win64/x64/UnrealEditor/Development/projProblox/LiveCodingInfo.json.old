@@ -3,7 +3,6 @@
 	{
 		"Module.projProblox.cpp.obj": [
 			"ActionHistory.gen.cpp.obj",
-			"BouncyThing.gen.cpp.obj",
 			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
@@ -17,6 +16,7 @@
 			"PlayerCharacter.gen.cpp.obj",
 			"PlayerTask.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
+			"ThingSpawner.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
@@ -37,6 +37,7 @@
 			"PlayerTask.cpp.obj",
 			"projProblox.cpp.obj",
 			"Propeller.cpp.obj",
+			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"WedgeConnector.cpp.obj",
@@ -44,10 +45,9 @@
 			"Wheel.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
 			"Thing.gen.cpp.obj",
-			"ThingSpawner.gen.cpp.obj",
 			"BouncyThing.cpp.obj",
-			"Thing.cpp.obj",
-			"ThingSpawner.cpp.obj"
+			"MyThing.cpp.obj",
+			"Thing.cpp.obj"
 		]
 	}
 }

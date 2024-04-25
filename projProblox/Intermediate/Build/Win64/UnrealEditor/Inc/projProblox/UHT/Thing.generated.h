@@ -109,6 +109,51 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 template<> PROJPROBLOX_API UClass* StaticClass<class ABouncyThing>();
 
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_SPARSE_DATA
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesAHoverThing(); \
+	friend struct Z_Construct_UClass_AHoverThing_Statics; \
+public: \
+	DECLARE_CLASS(AHoverThing, AThing, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/projProblox"), NO_API) \
+	DECLARE_SERIALIZER(AHoverThing)
+
+
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API AHoverThing(); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API AHoverThing(AHoverThing&&); \
+	NO_API AHoverThing(const AHoverThing&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AHoverThing); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AHoverThing); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AHoverThing) \
+	NO_API virtual ~AHoverThing();
+
+
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_82_PROLOG
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_SPARSE_DATA \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_INCLASS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_85_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> PROJPROBLOX_API UClass* StaticClass<class AHoverThing>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h
 
