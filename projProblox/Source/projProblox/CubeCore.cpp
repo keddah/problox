@@ -200,6 +200,9 @@ EOperations ACubeCore::SetSelected(const bool value)
 	if(canPickup) selected = value;
 	else selected = true;
 
+	// Only use continuous collisions while selected (to prevent objects from going through objects).
+	objMesh->SetUseCCD(selected);
+	
 	GravitySelection();
 	SetHideIndicator(!selected);
 

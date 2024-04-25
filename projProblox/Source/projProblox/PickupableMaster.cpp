@@ -26,7 +26,6 @@ APickupableMaster::APickupableMaster()
 	objMesh->SetSimulatePhysics(true);
 	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	objMesh->SetGenerateOverlapEvents(true);
-	objMesh->SetUseCCD(true);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
 	silhouette->SetCollisionResponseToAllChannels(ECR_Ignore);
@@ -189,6 +188,10 @@ void APickupableMaster::GhostPlacement()
 EOperations APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
+
+	// Only use continuous collisions while selected (to prevent objects from going through objects).
+	objMesh->SetUseCCD(selected);
+	
 	GravitySelection();
 	SetHideIndicator(!selected);
 

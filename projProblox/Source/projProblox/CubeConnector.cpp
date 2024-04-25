@@ -239,7 +239,10 @@ EOperations ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
 	GravitySelection();
-
+	
+	// Only use continuous collisions while selected (to prevent objects from going through objects).
+	objMesh->SetUseCCD(selected);
+	
 	SetHideIndicator(!selected);
 
 	const AActor* self = this;
