@@ -28,7 +28,6 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/GrappleHead.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Grappler.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Magnet.cpp"
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/PickupableMaster.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Piston.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/PlayerCharacter.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/PlayerTask.cpp"

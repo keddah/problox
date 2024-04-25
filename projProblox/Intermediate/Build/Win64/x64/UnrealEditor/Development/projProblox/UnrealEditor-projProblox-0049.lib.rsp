@@ -8,6 +8,10 @@
 /NODEFAULTLIB
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\projProbloxEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Module.projProblox.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Treads.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\BouncyThing.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\HoverThing.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\PickupableMaster.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\StickyThing.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Thing.cpp.obj"
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
 /OUT:"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox-0049.lib"

@@ -33,7 +33,7 @@ private:
 	ACubeCore* core;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
-	float attractionForce = 2;
+	float attractionForce = 1.2f;
 	
 	FVector goal;
 	
@@ -63,7 +63,7 @@ public:
 };
 
 
-// The bouncy variant of the Thing
+// The BOUNCE variant of the Thing
 UCLASS()
 class PROJPROBLOX_API ABouncyThing : public AThing
 {
@@ -79,6 +79,7 @@ public:
 };
 
 
+// The HOVER variant of the Thing
 UCLASS()
 class PROJPROBLOX_API AHoverThing : public AThing
 {
@@ -86,4 +87,23 @@ class PROJPROBLOX_API AHoverThing : public AThing
 
 	virtual void Tick(float DeltaSeconds) override;
 	
+};
+
+
+// The STICKY variant of the Thing
+UCLASS()
+class PROJPROBLOX_API AStickyThing : public AThing
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The amount of force required to make the Thing unstick."))
+	float stickThreshold = 1;
+
+	bool stuck;
+	FVector previousVelocity;
+	
+	void Unstick(float deltaTime) const;
+	
+	virtual void Tick(float DeltaSeconds) override;
+	virtual void NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 };

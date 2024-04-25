@@ -16,6 +16,7 @@
 			"PlayerCharacter.gen.cpp.obj",
 			"PlayerTask.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
+			"Thing.gen.cpp.obj",
 			"ThingSpawner.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
@@ -31,7 +32,6 @@
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
 			"Magnet.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"PlayerTask.cpp.obj",
@@ -44,9 +44,10 @@
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
-			"Thing.gen.cpp.obj",
 			"BouncyThing.cpp.obj",
-			"MyThing.cpp.obj",
+			"HoverThing.cpp.obj",
+			"PickupableMaster.cpp.obj",
+			"StickyThing.cpp.obj",
 			"Thing.cpp.obj"
 		]
 	}

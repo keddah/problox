@@ -72,7 +72,6 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 	if(!IsValid(parentCore)) return;
-	// if(!IsValid(OtherActor)) return
 
 	// Successful cast???
 	if(Cast<AThing>(OtherActor)) parentCore->AddThing(OtherActor);
