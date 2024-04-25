@@ -6,7 +6,12 @@
 /NAME:"UnrealEditor-projProblox.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\problox\projProblox\Intermediate\Build\Win64\x64\projProbloxEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"D:\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Module.projProblox.cpp.obj"
-"D:\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
-/OUT:"D:\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox.lib"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\projProbloxEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Module.projProblox.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\BouncyThing.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Thing.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\ThingSpawner.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\projProblox.init.gen.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Thing.gen.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
+/OUT:"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox.lib"

@@ -2,6 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.projProblox.cpp.obj": [
+			"ActionHistory.gen.cpp.obj",
+			"BouncyThing.gen.cpp.obj",
 			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
@@ -13,15 +15,14 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
+			"PlayerTask.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
-			"Thing.gen.cpp.obj",
-			"ThingSpawner.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
+			"ActionHistory.cpp.obj",
 			"Collector.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
@@ -33,15 +34,20 @@
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"PlayerTask.cpp.obj",
 			"projProblox.cpp.obj",
 			"Propeller.cpp.obj",
-			"Thing.cpp.obj",
-			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
+			"Treads.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
 			"Wheel.cpp.obj",
-			"Treads.cpp.obj"
+			"projProblox.init.gen.cpp.obj",
+			"Thing.gen.cpp.obj",
+			"ThingSpawner.gen.cpp.obj",
+			"BouncyThing.cpp.obj",
+			"Thing.cpp.obj",
+			"ThingSpawner.cpp.obj"
 		]
 	}
 }

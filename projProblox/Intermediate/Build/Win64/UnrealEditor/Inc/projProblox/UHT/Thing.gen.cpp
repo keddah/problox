@@ -12,6 +12,8 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_ABouncyThing();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_ABouncyThing_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AThing();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AThing_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
@@ -163,6 +165,7 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AThing_SetHoming_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Collection" },
 		{ "ModuleRelativePath", "Thing.h" },
 	};
 #endif
@@ -205,6 +208,7 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AThing_Teleport_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Collection" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Sets default values for this actor's properties\n" },
 #endif
@@ -242,6 +246,10 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_body_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_body;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_attractionForce_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_attractionForce;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -254,8 +262,8 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AThing_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AThing_DeactivateHoming, "DeactivateHoming" }, // 2619689621
 		{ &Z_Construct_UFunction_AThing_IsSafe, "IsSafe" }, // 2608591578
-		{ &Z_Construct_UFunction_AThing_SetHoming, "SetHoming" }, // 2850878498
-		{ &Z_Construct_UFunction_AThing_Teleport, "Teleport" }, // 801236856
+		{ &Z_Construct_UFunction_AThing_SetHoming, "SetHoming" }, // 3442748117
+		{ &Z_Construct_UFunction_AThing_Teleport, "Teleport" }, // 1493629200
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AThing_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -271,9 +279,17 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 		{ "ModuleRelativePath", "Thing.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThing_Statics::NewProp_body = { "body", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThing, body), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThing_Statics::NewProp_body_MetaData), Z_Construct_UClass_AThing_Statics::NewProp_body_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThing_Statics::NewProp_body = { "body", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThing, body), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThing_Statics::NewProp_body_MetaData), Z_Construct_UClass_AThing_Statics::NewProp_body_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThing_Statics::NewProp_attractionForce_MetaData[] = {
+		{ "Category", "Collection" },
+		{ "ModuleRelativePath", "Thing.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AThing_Statics::NewProp_attractionForce = { "attractionForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThing, attractionForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThing_Statics::NewProp_attractionForce_MetaData), Z_Construct_UClass_AThing_Statics::NewProp_attractionForce_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AThing_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThing_Statics::NewProp_body,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThing_Statics::NewProp_attractionForce,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AThing_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AThing>::IsAbstract,
@@ -308,14 +324,98 @@ void EmptyLinkFunctionForGeneratedCodeThing() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AThing);
 	AThing::~AThing() {}
+	void ABouncyThing::StaticRegisterNativesABouncyThing()
+	{
+	}
+	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABouncyThing);
+	UClass* Z_Construct_UClass_ABouncyThing_NoRegister()
+	{
+		return ABouncyThing::StaticClass();
+	}
+	struct Z_Construct_UClass_ABouncyThing_Statics
+	{
+		static UObject* (*const DependentSingletons[])();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
+#endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bounciness_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_bounciness;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+		static const UECodeGen_Private::FClassParams ClassParams;
+	};
+	UObject* (*const Z_Construct_UClass_ABouncyThing_Statics::DependentSingletons[])() = {
+		(UObject* (*)())Z_Construct_UClass_AThing,
+		(UObject* (*)())Z_Construct_UPackage__Script_projProblox,
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABouncyThing_Statics::DependentSingletons) < 16);
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABouncyThing_Statics::Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// The bouncy variant of the Thing\n" },
+#endif
+		{ "IncludePath", "Thing.h" },
+		{ "ModuleRelativePath", "Thing.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The bouncy variant of the Thing" },
+#endif
+	};
+#endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABouncyThing_Statics::NewProp_bounciness_MetaData[] = {
+		{ "Category", "BouncyThing" },
+		{ "ModuleRelativePath", "Thing.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABouncyThing_Statics::NewProp_bounciness = { "bounciness", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABouncyThing, bounciness), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABouncyThing_Statics::NewProp_bounciness_MetaData), Z_Construct_UClass_ABouncyThing_Statics::NewProp_bounciness_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABouncyThing_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABouncyThing_Statics::NewProp_bounciness,
+	};
+	const FCppClassTypeInfoStatic Z_Construct_UClass_ABouncyThing_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<ABouncyThing>::IsAbstract,
+	};
+	const UECodeGen_Private::FClassParams Z_Construct_UClass_ABouncyThing_Statics::ClassParams = {
+		&ABouncyThing::StaticClass,
+		"Engine",
+		&StaticCppClassTypeInfo,
+		DependentSingletons,
+		nullptr,
+		Z_Construct_UClass_ABouncyThing_Statics::PropPointers,
+		nullptr,
+		UE_ARRAY_COUNT(DependentSingletons),
+		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ABouncyThing_Statics::PropPointers),
+		0,
+		0x009000A4u,
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABouncyThing_Statics::Class_MetaDataParams), Z_Construct_UClass_ABouncyThing_Statics::Class_MetaDataParams)
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABouncyThing_Statics::PropPointers) < 2048);
+	UClass* Z_Construct_UClass_ABouncyThing()
+	{
+		if (!Z_Registration_Info_UClass_ABouncyThing.OuterSingleton)
+		{
+			UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_ABouncyThing.OuterSingleton, Z_Construct_UClass_ABouncyThing_Statics::ClassParams);
+		}
+		return Z_Registration_Info_UClass_ABouncyThing.OuterSingleton;
+	}
+	template<> PROJPROBLOX_API UClass* StaticClass<ABouncyThing>()
+	{
+		return ABouncyThing::StaticClass();
+	}
+	ABouncyThing::ABouncyThing() {}
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ABouncyThing);
+	ABouncyThing::~ABouncyThing() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AThing, AThing::StaticClass, TEXT("AThing"), &Z_Registration_Info_UClass_AThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThing), 1605249333U) },
+		{ Z_Construct_UClass_AThing, AThing::StaticClass, TEXT("AThing"), &Z_Registration_Info_UClass_AThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThing), 2087417035U) },
+		{ Z_Construct_UClass_ABouncyThing, ABouncyThing::StaticClass, TEXT("ABouncyThing"), &Z_Registration_Info_UClass_ABouncyThing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyThing), 4236447517U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_1253191622(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_3001877585(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thing_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

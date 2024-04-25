@@ -15,10 +15,7 @@
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
 			"PlayerTask.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
-			"Thing.gen.cpp.obj",
-			"ThingSpawner.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
@@ -39,13 +36,17 @@
 			"PlayerTask.cpp.obj",
 			"projProblox.cpp.obj",
 			"Propeller.cpp.obj",
-			"Thing.cpp.obj",
-			"ThingSpawner.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"WedgeSocketInfo.cpp.obj",
-			"Wheel.cpp.obj"
+			"Wheel.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
+			"Thing.gen.cpp.obj",
+			"ThingSpawner.gen.cpp.obj",
+			"BouncyThing.cpp.obj",
+			"Thing.cpp.obj",
+			"ThingSpawner.cpp.obj"
 		]
 	}
 }
