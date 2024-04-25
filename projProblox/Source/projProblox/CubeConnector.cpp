@@ -210,20 +210,19 @@ void ACubeConnector::GhostPlacement()
 
 	// Have to realign the socket rotation with another axis
 	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
-
+		
 	// Ignore if the X and Y vectors aren't low...
-	constexpr float aboveThreshold = .075f;
-	const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
-	
-	PrintVector(socketRot.Vector(), .2)
-	if(above)
-	{
-		// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
-		const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
-		socketRot = socketRot.RotateVector(socketForward).Rotation();
-		Print("Above", .2)
-	}
-	else socketRot = RoundRotation(GetActorRotation(), socketRot);
+	// constexpr float aboveThreshold = .075f;
+	// const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
+	//
+	// if(above)
+	// {
+	// 	// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
+	// 	// const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+	// 	// socketRot = socketRot.RotateVector(socketForward).Rotation();
+	// 	Print("Above", .2)
+	// }
+	socketRot = RoundRotation(GetActorRotation(), socketRot);
 
 	// Whether or not the attached socket is the diagonal side of a wedge...
 	const bool isDiag = attachedSocket == "DIAG";
