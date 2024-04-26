@@ -14,7 +14,7 @@ FTask UActionHistory::Undo()
 		if(currentTask < 0 && !tasks.IsEmpty())
 		{
 			currentTask = 0;
-			return tasks[currentTask];
+			return tasks.IsValidIndex(currentTask)? tasks[currentTask] : FTask();
 		}
 		
 		Print("Couldnt undo because of a bad index: " + FString::FromInt(currentTask), 5)
@@ -35,7 +35,7 @@ FTask UActionHistory::Redo()
 		currentTask = tasks.Num() - 1;
 		
 		Print("end of tasks list... " + FString::FromInt(currentTask), 3)
-		return tasks[currentTask];
+		return tasks.IsValidIndex(currentTask)? tasks[currentTask] : FTask();
 	}
 
 

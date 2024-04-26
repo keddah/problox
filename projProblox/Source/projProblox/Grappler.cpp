@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "Grappler.h"
+#include "Kismet/GameplayStatics.h"
 
 AGrappler::AGrappler()
 {
@@ -38,7 +38,7 @@ void AGrappler::Ability()
 	// Set the owner and ensure the grapple hook always spawns...
 
 	// Spawn and set the hook
-	//??? CAN'T GET WORLD..
+	//??? CAN'T GET WORLD.. 
 	UWorld* wrld = GetWorld();
 
 	if(!IsValid(wrld)) return;

@@ -7,6 +7,18 @@
 #include "GameFramework/Actor.h"
 #include "ThingSpawner.generated.h"
 
+
+UENUM(BlueprintType)
+enum class EThingType : uint8
+{
+	Normal,
+	Bouncy,
+	Slippery,
+	Hover,
+	Sticky
+};
+
+
 UCLASS()
 class PROJPROBLOX_API AThingSpawner : public AActor
 {
@@ -21,14 +33,27 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<AThing> thingClass;
+	TSubclassOf<AThing> normalThing;
 	
-	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "Index corresponds with the index of the spawn locations..."))
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AThing> bouncyThing;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AThing> slipperyThing;
+	
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AThing> hoverThing;
+	
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AThing> stickyThing;
+	
+	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
+	EThingType thingType = EThingType::Normal;
+	
+	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "Index corresponds with the index of the spawn locations..."))
 	int32 spawnAmounts = 10;
 
 public:	
 	void BeginSpawn() const;
-
-private:
-	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const { wrld->SpawnActor<AThing>(thingClass, spawn, rot, params); }
+	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 };
