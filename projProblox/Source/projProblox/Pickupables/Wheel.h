@@ -6,8 +6,8 @@
 *	SetSelected
 *	Detach
 *	GetParent
-*
-* PROBLEMS:
+*	Reattach
+*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -19,9 +19,6 @@
 #include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "Wheel.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API AWheel : public APickupableMaster
 {

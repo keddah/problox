@@ -1,4 +1,10 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Cell Spawner - Code
+* 
+* The code file for a spawner that creates cells. Creates the functions that were declared in the cell spawner header file. 
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "CellSpawner.h"

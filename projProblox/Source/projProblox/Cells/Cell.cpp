@@ -1,5 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/**************************************************************************************************************
+* Cell - Code
+* 
+* The code file for the base cell. Gives functionality to the homing function and adds delegates at the start of the game.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 #include "Cell.h"
 

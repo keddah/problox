@@ -4,7 +4,7 @@
 * The header file for wedge connector's socket information. This inherits from the cubeSocketInfo data asset. This was required since
 * the wedge's slots aren't the same as the cubes (it only has 3). This just resizes the 2 arrays it inherits and changes the names of the sockets... 
 *
-* PROBLEMS:
+* OVERRIDES:
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

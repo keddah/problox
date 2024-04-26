@@ -1,4 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Grapple Head - Header
+* 
+* Declares all of the components that the grapple head blueprint needs as well as its variables. 
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -6,8 +13,6 @@
 #include "Components/SphereComponent.h"
 #include "GameFramework/Actor.h"
 #include "GrappleHead.generated.h"
-
-class AGrappler;
 
 UCLASS()
 class PROJPROBLOX_API AGrappleHead : public AActor
@@ -34,7 +39,7 @@ protected:
 	float pullSpeed = 9;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float cancelDistance;
+	float cancelDistance = 500;
 	
 public:	
 	UStaticMeshComponent* GetMesh() const { return mesh; }

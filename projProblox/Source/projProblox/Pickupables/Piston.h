@@ -3,8 +3,7 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*
-* PROBLEMS:
+*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -16,9 +15,6 @@
 #include "PickupableMaster.h"
 #include "Piston.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API APiston : public APickupableMaster
 {

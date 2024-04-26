@@ -3,8 +3,7 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*
-* PROBLEMS:
+*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

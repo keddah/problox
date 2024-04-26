@@ -3,6 +3,7 @@
 * 
 * The header file for the parent class of all the movable things in the game. Declares inherited methods and variables used to make the pickupable objects more
 * replicable.
+* Also creates the actor components that all variations of this class will have... Mesh and collider.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

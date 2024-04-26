@@ -1,8 +1,7 @@
 /**************************************************************************************************************
 * Cell Spawner - Header
 * 
-* The header file for the parent class of all the movable things in the game. Declares inherited methods and variables used to make the pickupable objects more
-* replicable.
+* The header file for a spawner that creates cells. This file also declares an enum for the type of cells to spawn.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

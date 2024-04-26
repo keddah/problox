@@ -1,5 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
-
+/**************************************************************************************************************
+* Magnet - Code
+* 
+* The code file for one of the pickupable objects.
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 #include "Magnet.h"
 

@@ -6,6 +6,7 @@
 *
 * PROBLEMS:
 *	Since it doesn't actually attach to the core/connector in the hierarchy, when using GetDescendents() it isn't found... (causes it to be excluded from the exclusions array)
+*	Not easy to use
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

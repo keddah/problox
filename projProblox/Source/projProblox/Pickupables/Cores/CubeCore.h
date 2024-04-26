@@ -2,9 +2,22 @@
 * Cube core - Header
 * 
 * The header file for the core class (the main cube). This class inherits from the Pickupable Master class.
-* Delegates are declared for when 
-* be modified by inherited classes but functions like rotate and remove velocity are universal.
-* Also creates the actor components that all variations of this class will have... Mesh and collider.
+* Also declares delegates that need to be broadcast to essential parts of levels (like the player, collector and cells). 
+*
+* OVERRIDES:
+*	SetCanPickup
+*	Reattach
+*	Placement
+*	ResetRotation
+*	SetAttachedSocket
+*	RemoveVelocity
+*	ToggleGravity
+*	AddAttachment
+*	RemoveAttachment
+*	RemoveAttachment
+*	SetAbilityActive
+*	SetSelected
+*	SetGroupSelected
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -20,22 +33,22 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
 
-// Should be broadcasted whenever an object is added/removed from this cube
+// Should be broadcast whenever an object is added/removed from this cube
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
 
-// Should be broadcasted when the cube goes too far away from the container.
+// Should be broadcast when the cube goes too far away from the container.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
 
-// Should be broadcasted when the reset delay + longest duration has elapsed.. 
+// Should be broadcast when the reset delay + longest duration has elapsed.. 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttemptEnding);
 
-// Should be broadcasted when the reset timer has elapsed.. 
+// Should be broadcast when the reset timer has elapsed.. 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnReset, int, tries);
 
-// Should be broadcasted when a "Thing" collides with any of the things that are attached to the cube.
+// Should be broadcast when a "Thing" collides with any of the things that are attached to the cube.
 // This has been declared so that a Blueprint function can be called.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAddedThing, AActor*, thing);
 
@@ -293,6 +306,4 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	int SelectSocket(int socket);
-
-
 };

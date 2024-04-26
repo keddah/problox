@@ -3,8 +3,7 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*
-* PROBLEMS:
+*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -17,9 +16,6 @@
 #include "PhysicsEngine/PhysicsThrusterComponent.h"
 #include "Thruster.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API AThruster : public APickupableMaster
 {

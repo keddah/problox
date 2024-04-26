@@ -1,4 +1,19 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Wedge Connector - Header
+* 
+* The header file for weedge connector (one of the connector classes). overrides some of the essential functions that were created in the Connector Core header file.
+*
+* OVERRIDES:
+*	ApplyOffset
+*	SetAbilityActive
+*	GhostPlacement
+*	SetHideIndicator
+*	SetupIndicator
+*	GetAttachOffset
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 

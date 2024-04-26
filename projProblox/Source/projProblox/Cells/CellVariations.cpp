@@ -1,5 +1,10 @@
-// Created by Dean Atkinson-Walker 2024
-
+/**************************************************************************************************************
+* Cell Variations - Code
+* 
+* The code file that gives functionality to the different cell types. Uses the cell variant classes that were created in the cell header file.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 #include "Cell.h"
 

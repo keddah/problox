@@ -2,7 +2,8 @@
 * Cell - Header
 * 
 * The header file for the collectible cells. Creates the classes for each of its variations and declares their needed variables and functions.
-* The 
+* A slippery cell variant is made in the editor...
+* The variant cells all inherit from the base cell (ACell)
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

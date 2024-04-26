@@ -1,5 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
-
+/**************************************************************************************************************
+* Glider - Code
+* 
+* The code file for one of the pickupable objects.
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 #include "Thruster.h"
 

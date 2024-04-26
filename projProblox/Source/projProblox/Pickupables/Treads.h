@@ -5,8 +5,7 @@
 * OVERRIDES:
 *	GetAttachedOffset
 *	SetAbilityActive
-*
-* PROBLEMS:
+*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

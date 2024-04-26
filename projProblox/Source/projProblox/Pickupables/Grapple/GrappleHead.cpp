@@ -1,4 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Grapple Head - Code
+* 
+* Creates all of the components that the grapple head blueprint needs as well as its variables. 
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 
 #include "GrappleHead.h"

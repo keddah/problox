@@ -1,4 +1,28 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Cube Connector - Header
+* 
+* The header file for cube connector (one of the connector classes). overrides some of the essential functions that were created in the Cube Core header file.
+* Also creates a protected variable "raySocket" to store the socket which the placement line trace is currently on.
+*
+* OVERRIDES:
+*	SetAttachedSocket
+*	ApplyOffset
+*	Placement
+*	GhostPlacement
+*	SetHideIndicator
+*	SetupIndicator
+*	GetAttachOffset
+*	Reattach
+*	SetSelect
+*	SetAbilityActive
+*	SetGroupSelected
+*
+* PROBLEMS:
+*	The ghost placement isn't always perfect... If the thing it's trying to attach to is slightly at an angle the place rotation is off
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -45,7 +69,6 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* backArrow;
-	
 	
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* downArrow;

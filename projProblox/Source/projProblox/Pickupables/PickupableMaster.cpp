@@ -6,7 +6,6 @@
 * Also creates the actor components that all variations of this class will have... Mesh and collider.
 *
 * PROBLEMS:
-*	.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

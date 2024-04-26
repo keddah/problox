@@ -1,7 +1,16 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Grappler - Code
+* 
+* The code file for one of the pickupable objects.
+*
+* PROBLEMS:
+*	A rare crash whenever the grapple is fired - occurs because the world is invalid when using GetWorld()
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #include "Grappler.h"
-#include "Kismet/GameplayStatics.h"
 
 AGrappler::AGrappler()
 {
@@ -25,7 +34,6 @@ void AGrappler::Ability()
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
 
 	if(!active) return;
-	Print("start", 2)
 	FActorSpawnParameters params;
 	params.Owner = this;
 	params.bNoFail = true;
@@ -35,12 +43,7 @@ void AGrappler::Ability()
 	// Destroy the hook if one is already valid.
 	if(IsValid(hook)) hook->Destroy();
 
-	// Set the owner and ensure the grapple hook always spawns...
-
 	// Spawn and set the hook
-	//??? CAN'T GET WORLD.. 
-	UWorld* wrld = GetWorld();
-
 	if(!IsValid(wrld)) return;
 
 	hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
@@ -48,7 +51,4 @@ void AGrappler::Ability()
 
 	// Deactivate so that this doesn't happen repeatedly
 	active = false;
-
-	// Give the hook the launch direction so it can go...
-	// if(hook && grappleSpawn) hook->Launch(grappleSpawn->GetForwardVector());
 }

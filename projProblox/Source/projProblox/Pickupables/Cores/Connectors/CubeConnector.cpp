@@ -5,7 +5,7 @@
 * were inherited by the cube core). Also overrides some of the inherited functions so that they work as intended for how this actor is supposed to act.
 *
 * PROBLEMS:
-*	The ghost placement isn't always perfect... If the thing it's trying to attach to is slightly at an angle the place rotation is off (ignore the roll/x axis??)
+*	The ghost placement isn't always perfect... If the thing it's trying to attach to is slightly at an angle the place rotation is off
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

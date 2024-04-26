@@ -4,9 +4,7 @@
 * The header file for one of the pickupable objects.
 * OVERRIDES:
 *	SetSelected
-*	ActivateOutline
-*
-* PROBLEMS:
+*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -18,9 +16,6 @@
 #include "PickupableMaster.h"
 #include "Propeller.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API APropeller : public APickupableMaster
 {

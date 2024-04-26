@@ -1,4 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Glider - Code
+* 
+* The code file for one of the pickupable objects.
+* PROBLEMS:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 
 #include "Glider.h"

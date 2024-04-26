@@ -4,9 +4,6 @@
 * The header file for cube core/connector's socket information. This is used to keep track of all the things that are attached to the cube.
 * Declares several functions related to finding/getting the attached objects as well as functions to add/remove objects.
 *
-* PROBLEMS:
-*	.
-*
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
 
