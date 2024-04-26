@@ -20,6 +20,8 @@ ATreads::ATreads()
 	driveTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger"));
 	driveTrigger->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
 
+	objMesh->SetAngularDamping(1);
+	
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = false;
 	rotOffset = {90,0,180};
@@ -36,13 +38,6 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 	
 	attachOffset = attachee.IsA<ACubeConnector>()? 25 : 50;
 	return attachOffset;
-}
-
-void ATreads::BeginPlay()
-{
-	Super::BeginPlay();
-
-	objMesh->SetAngularDamping(1);
 }
 
 void ATreads::Ability()

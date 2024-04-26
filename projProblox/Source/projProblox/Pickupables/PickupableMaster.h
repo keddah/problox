@@ -259,24 +259,17 @@ public:
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 
 	// Enable/Disable gravity when selected/deselected
-	virtual void ToggleGravity() const;
+	virtual void ToggleGravity() const
+	{
+		objMesh->SetEnableGravity(!selected);
+		RemoveVelocity();
+	}
 	virtual void ToggleGravity(bool gravityOn)
 	{
-		if(gravityOn)
-		{
-			// enable gravity
-			objMesh->SetEnableGravity(true);
-			
-			// Slightly push the object downwards too..
-			objMesh->SetPhysicsLinearVelocity({0,0,-5});
-		}
-		else
-		{
-			// disable gravity
-			objMesh->SetEnableGravity(false);
-			RemoveVelocity();
-		}
+		objMesh->SetEnableGravity(gravityOn);
+		RemoveVelocity();
 	}
+	
 	virtual void RemoveVelocity() const;
 	
 	void ResetMaterial() const { silhouette->SetMaterial(0, silhouetteMat); }

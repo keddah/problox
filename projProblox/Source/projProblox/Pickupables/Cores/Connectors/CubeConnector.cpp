@@ -10,7 +10,6 @@
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
 
-// WedgeConnector includes CubeConnector...
 #include "CubeConnector.h"
 #include "WedgeConnector.h"
 
@@ -211,23 +210,32 @@ void ACubeConnector::GhostPlacement()
 	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
 		
 	// Ignore if the X and Y vectors aren't low...
-	// constexpr float aboveThreshold = .075f;
-	// const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
-	//
-	// if(above)
-	// {
-	// 	// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
-	// 	// const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
-	// 	// socketRot = socketRot.RotateVector(socketForward).Rotation();
-	// 	Print("Above", .2)
-	// }
+	constexpr float aboveThreshold = .075f;
+	const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
+	
+	if(above)
+	{
+		// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
+		const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+		socketRot = socketRot.RotateVector(socketForward).Rotation();
+		Print("Above", .2)
+	}
 	socketRot = RoundRotation(GetActorRotation(), socketRot);
 
 	// Whether or not the attached socket is the diagonal side of a wedge...
 	const bool isDiag = attachedSocket == "DIAG";
 	
 	silhouette->SetWorldRotation(socketRot);
-	silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), isDiag? -45.0f : -90));
+	const FRotator relativeRot = objMesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
+
+	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
+	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % 45 == 0 && FMath::RoundToInt(relativeRot.Pitch) % 45 == 0 && FMath::RoundToInt(relativeRot.Yaw) % 45 == 0;  
+	
+	if(rounded)
+	{
+		Print("not round", .2)
+		silhouette->SetWorldRotation(RoundRotation(silhouette->GetRelativeRotation(), relativeRot, isDiag? -45.0f : -90));
+	}
 	
 	///////////// Location
 	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});

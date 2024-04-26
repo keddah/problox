@@ -57,9 +57,6 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "Pickupables/Magnet.h" },
 		{ "ModuleRelativePath", "Pickupables/Magnet.h" },
 	};
@@ -142,9 +139,9 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 4028174273U) },
+		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 2239632863U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_2544893058(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_3033613661(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -23,7 +23,6 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	GENERATED_BODY()
 
 	ATreads();
-	virtual void BeginPlay() override;
 
 	virtual void Ability() override;
 	void Drag() const;

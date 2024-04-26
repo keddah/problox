@@ -49,9 +49,6 @@ void EmptyLinkFunctionForGeneratedCodeWheel() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWheel_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWheel_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "Pickupables/Wheel.h" },
 		{ "ModuleRelativePath", "Pickupables/Wheel.h" },
 	};
@@ -115,9 +112,9 @@ void EmptyLinkFunctionForGeneratedCodeWheel() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Wheel_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AWheel, AWheel::StaticClass, TEXT("AWheel"), &Z_Registration_Info_UClass_AWheel, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWheel), 2510199113U) },
+		{ Z_Construct_UClass_AWheel, AWheel::StaticClass, TEXT("AWheel"), &Z_Registration_Info_UClass_AWheel, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWheel), 1760703722U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Wheel_h_604519629(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Wheel_h_3990580587(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Wheel_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Wheel_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

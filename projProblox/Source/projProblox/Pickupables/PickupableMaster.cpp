@@ -410,25 +410,6 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 	return closestSocket;
 }
 
-
-void APickupableMaster::ToggleGravity() const
-{
-	// disable gravity if deselected
-	if(selected)
-	{
-		objMesh->SetEnableGravity(false);
-		RemoveVelocity();
-	}
-	else
-	{
-		// enable gravity if deselected
-		objMesh->SetEnableGravity(true);
-
-		// Slightly push the object downwards too
-		objMesh->SetPhysicsLinearVelocity({0,0,-5});
-	}
-}
-
 void APickupableMaster::RemoveVelocity() const
 {
 	objMesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
