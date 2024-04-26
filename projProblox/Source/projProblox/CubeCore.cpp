@@ -14,7 +14,7 @@
 #include "CubeCore.h"
 
 #include "CubeConnector.h"
-#include "Thing.h"
+#include "Cell.h"
 #include "WedgeConnector.h"
 #include "Wheel.h"
 #include "Kismet/GameplayStatics.h"
@@ -402,7 +402,7 @@ void ACubeCore::AddThing(AActor* _thing) const
 	if(!IsValid(collector)) return;
 	if(!IsValid(_thing)) return;
 
-	if(AThing* thing = Cast<AThing>(_thing))
+	if(ACell* thing = Cast<ACell>(_thing))
 	{
 		// Using a delegate so that it can send a message to the blueprint (because ui...)
 		thing->Teleport(collector->GetCollectPoint());

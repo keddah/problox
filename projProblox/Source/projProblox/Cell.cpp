@@ -1,0 +1,56 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "Cell.h"
+
+#include "Kismet/GameplayStatics.h"
+
+// Sets default values
+ACell::ACell()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
+	body->SetRelativeScale3D({.7f, .7f,.7f});
+	body->SetSimulatePhysics(true);
+}
+
+// Called when the game starts or when spawned
+void ACell::BeginPlay()
+{
+	Super::BeginPlay();
+
+	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
+	core->onRangeExceeded.AddDynamic(this, &ACell::DeactivateHoming);
+}
+
+// Called every frame
+void ACell::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	Drag();
+	GoHome();
+}
+
+void ACell::Drag() const
+{
+	const FVector velocity = body->GetComponentVelocity();
+	const FVector drag = sqrt(velocity.Length()) * velocity * -.1f;  
+	body->AddForce(drag);
+}
+
+void ACell::GoHome() const
+{
+	if(safe) return;
+	if(!isHoming) return;
+
+	const FVector thisPos = GetActorLocation();
+	const FVector corePos = core->GetActorLocation();
+	
+	const FVector direction = corePos - thisPos;
+	const float squareDist = FVector::DistSquared(corePos, thisPos);
+	
+	body->AddForce(direction * (attractionForce * 1000) / squareDist);
+}

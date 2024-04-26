@@ -66,7 +66,7 @@ private:
 
 	FTransform resetTransform;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The time in seconds before the attempt is reset (This timer starts after the highest intiation delay + duration)."))
 	float resetDelay = 5;
 
 	unsigned short rating;

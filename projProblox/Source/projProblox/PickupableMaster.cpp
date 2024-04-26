@@ -14,7 +14,7 @@
 #include "PickupableMaster.h"
 
 #include "CubeCore.h"
-#include "Thing.h"
+#include "Cell.h"
 
 // Sets default values
 APickupableMaster::APickupableMaster()
@@ -73,7 +73,7 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 	if(!IsValid(parentCore)) return;
 
 	// Successful cast???
-	if(Cast<AThing>(OtherActor)) parentCore->AddThing(OtherActor);
+	if(Cast<ACell>(OtherActor)) parentCore->AddThing(OtherActor);
 }
 
 
