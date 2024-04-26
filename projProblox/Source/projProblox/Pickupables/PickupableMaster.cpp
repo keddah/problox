@@ -309,6 +309,26 @@ FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotat
 	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
 }
 
+FRotator APickupableMaster::DiagRoundRot(const FRotator& rotation, const FRotator& referencedRot, const bool isDiag)
+{
+	constexpr float rounder = -90;
+	
+	// Calculate the difference between the rotations
+	const FRotator difference = rotation - referencedRot;
+
+	// If diag... the pitch needs to round to 45 instead of 90.
+	float pitchDiff;
+	if(isDiag) pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / -45) * -45;
+	else pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / rounder) * rounder;
+		
+	// Round the differences to the nearest 90 degrees
+	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / rounder) * rounder;
+	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / rounder) * rounder;
+
+	// Add the rounded differences to the reference rotation to get the rounded rotation
+	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
+}
+
 void APickupableMaster::AlignSocketRot(const bool useDirection)
 {
 	if(!IsValid(parentCore)) return;

@@ -194,48 +194,6 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	}
 }
 
-void APlayerCharacter::Detach(const FHitResult& hit)
-{
-	// if the cast is successful...
-	if(ACubeCore* hitCore = Cast<ACubeCore>(hit.GetActor()))
-	{
-		if(ACubeCore* parentCore = hitCore->GetCore())
-		{
-			const FTransform coreTransform = parentCore->GetTransform();
-
-			// Don't create a new action if nothing was detached...
-			if(!parentCore->DetachAll(true)) return;
-
-			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
-			history->NewAction(newTask);
-			return;
-		}
-		
-		const FTransform coreTransform = hitCore->GetTransform();
-		if(!hitCore->DetachAll(true)) return;
-
-		const FTask newTask = {"DETACH", hitCore, coreTransform, coreTransform, EOperations::Detach};
-		history->NewAction(newTask);
-		return;
-	}
-
-	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all.. 
-	if(const APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor()))
-	{
-		if(ACubeCore* parentCore = obj->GetCore())
-		{
-			const FTransform coreTransform = parentCore->GetTransform();
-			if(!parentCore->DetachAll(true)) return;
-
-
-			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
-			history->NewAction(newTask);
-		}
-
-	}
-
-}
-
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
 {
 	if(!holding)
@@ -300,6 +258,48 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 	// Add the things that are connected to the core/connector to the things to ignore
 	ACubeCore* obj = Cast<ACubeCore>(selectedObj);
 	exclusions.Append(obj->GetAttachedObjActors());
+}
+
+void APlayerCharacter::Detach(const FHitResult& hit)
+{
+	// if the cast is successful...
+	if(ACubeCore* hitCore = Cast<ACubeCore>(hit.GetActor()))
+	{
+		if(ACubeCore* parentCore = hitCore->GetCore())
+		{
+			const FTransform coreTransform = parentCore->GetTransform();
+
+			// Don't create a new action if nothing was detached...
+			if(!parentCore->DetachAll(true)) return;
+
+			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
+			history->NewAction(newTask);
+			return;
+		}
+		
+		const FTransform coreTransform = hitCore->GetTransform();
+		if(!hitCore->DetachAll(true)) return;
+
+		const FTask newTask = {"DETACH", hitCore, coreTransform, coreTransform, EOperations::Detach};
+		history->NewAction(newTask);
+		return;
+	}
+
+	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all.. 
+	if(const APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor()))
+	{
+		if(ACubeCore* parentCore = obj->GetCore())
+		{
+			const FTransform coreTransform = parentCore->GetTransform();
+			if(!parentCore->DetachAll(true)) return;
+
+
+			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
+			history->NewAction(newTask);
+		}
+
+	}
+
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
