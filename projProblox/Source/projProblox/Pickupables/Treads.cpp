@@ -11,8 +11,8 @@
 
 #include "Treads.h"
 
-#include "CubeConnector.h"
-#include "CubeCore.h"
+#include "Cores/Connectors/CubeConnector.h"
+#include "Cores/CubeCore.h"
 
 
 ATreads::ATreads()

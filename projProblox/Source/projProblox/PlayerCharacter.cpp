@@ -3,7 +3,7 @@
 
 #include "PlayerCharacter.h"
 
-#include "CubeConnector.h"
+#include "Pickupables/Cores/Connectors/CubeConnector.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values

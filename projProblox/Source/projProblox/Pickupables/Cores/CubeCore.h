@@ -13,9 +13,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Collector.h"
-#include "CubeSocketInfo.h"
-#include "Wheel.h"
+#include "./projProblox/Collector.h"
+#include "SocketInfo/CubeSocketInfo.h"
+#include "./projProblox/Pickupables/Wheel.h"
 #include "CubeCore.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
@@ -200,7 +200,7 @@ protected:
 	
 	/////////////// Other ///////////////
 	virtual void RemoveVelocity() const override;
-	virtual void GravitySelection() const override;
+	virtual void ToggleGravity() const override;
 	
 public:
 	/////////////// Attachments ///////////////

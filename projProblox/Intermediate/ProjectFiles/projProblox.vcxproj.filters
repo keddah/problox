@@ -30,97 +30,16 @@
     <Filter Include="Source\projProblox">
       <UniqueIdentifier>{EF8B8155-4D92-329C-8C65-A60DE3C5D0D3}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\projProblox\ActionHistory.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\ActionHistory.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Cell.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Cell.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\CellSpawner.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\CellSpawner.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\CellVariations.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\projProblox\Collector.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Collector.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\CubeConnector.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\CubeConnector.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\CubeCore.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\CubeCore.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\CubeSocketInfo.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\CubeSocketInfo.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Glider.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Glider.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\GrappleHead.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\GrappleHead.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Grappler.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Grappler.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Magnet.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Magnet.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\PickupableMaster.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\PickupableMaster.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Piston.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Piston.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\PlayerCharacter.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\PlayerCharacter.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\PlayerTask.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\PlayerTask.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
     <None Include="..\..\Source\projProblox\projProblox.Build.cs">
@@ -132,41 +51,137 @@
     <ClInclude Include="..\..\Source\projProblox\projProblox.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Propeller.cpp">
-      <Filter>Source\projProblox</Filter>
+    <Filter Include="Source\projProblox\Cells">
+      <UniqueIdentifier>{1F734C2A-6BA2-31F9-9263-8C1D3A11CBED}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Cells\Cell.cpp">
+      <Filter>Source\projProblox\Cells</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Propeller.h">
-      <Filter>Source\projProblox</Filter>
+    <ClInclude Include="..\..\Source\projProblox\Cells\Cell.h">
+      <Filter>Source\projProblox\Cells</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Thruster.cpp">
-      <Filter>Source\projProblox</Filter>
+    <ClCompile Include="..\..\Source\projProblox\Cells\CellSpawner.cpp">
+      <Filter>Source\projProblox\Cells</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Thruster.h">
-      <Filter>Source\projProblox</Filter>
+    <ClInclude Include="..\..\Source\projProblox\Cells\CellSpawner.h">
+      <Filter>Source\projProblox\Cells</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Treads.cpp">
-      <Filter>Source\projProblox</Filter>
+    <ClCompile Include="..\..\Source\projProblox\Cells\CellVariations.cpp">
+      <Filter>Source\projProblox\Cells</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Treads.h">
-      <Filter>Source\projProblox</Filter>
+    <Filter Include="Source\projProblox\Pickupables">
+      <UniqueIdentifier>{01147432-667D-3141-9486-95D146DFE5E7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Glider.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Glider.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\WedgeConnector.cpp">
-      <Filter>Source\projProblox</Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Magnet.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\WedgeConnector.h">
-      <Filter>Source\projProblox</Filter>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Magnet.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\WedgeSocketInfo.cpp">
-      <Filter>Source\projProblox</Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\PickupableMaster.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\WedgeSocketInfo.h">
-      <Filter>Source\projProblox</Filter>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\PickupableMaster.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Wheel.cpp">
-      <Filter>Source\projProblox</Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Piston.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Wheel.h">
-      <Filter>Source\projProblox</Filter>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Piston.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Propeller.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Propeller.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Thruster.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Thruster.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Treads.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Treads.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Wheel.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Wheel.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <Filter Include="Source\projProblox\Pickupables\Cores">
+      <UniqueIdentifier>{CA37DEA1-665E-32ED-A1CE-145E16AF8A5F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\CubeCore.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\CubeCore.h">
+      <Filter>Source\projProblox\Pickupables\Cores</Filter>
+    </ClInclude>
+    <Filter Include="Source\projProblox\Pickupables\Cores\Connectors">
+      <UniqueIdentifier>{B7A5C79A-AADE-3A7F-B09F-08F3C24FB514}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CubeConnector.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CubeConnector.h">
+      <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\WedgeConnector.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\WedgeConnector.h">
+      <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
+    </ClInclude>
+    <Filter Include="Source\projProblox\Pickupables\Cores\SocketInfo">
+      <UniqueIdentifier>{CF08F4C1-F352-3634-9DB4-34BCFEFB9DF7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\CubeSocketInfo.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\CubeSocketInfo.h">
+      <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\WedgeSocketInfo.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\WedgeSocketInfo.h">
+      <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
+    </ClInclude>
+    <Filter Include="Source\projProblox\Pickupables\Grapple">
+      <UniqueIdentifier>{2A435BE5-CA19-39C3-9C08-5AA2308D1F5D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Grapple\GrappleHead.cpp">
+      <Filter>Source\projProblox\Pickupables\Grapple</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Grapple\GrappleHead.h">
+      <Filter>Source\projProblox\Pickupables\Grapple</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Grapple\Grappler.cpp">
+      <Filter>Source\projProblox\Pickupables\Grapple</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Grapple\Grappler.h">
+      <Filter>Source\projProblox\Pickupables\Grapple</Filter>
+    </ClInclude>
+    <Filter Include="Source\projProblox\UndoRedo">
+      <UniqueIdentifier>{F8B987BD-3186-3753-A227-1399F32FA508}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\UndoRedo\ActionHistory.cpp">
+      <Filter>Source\projProblox\UndoRedo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\UndoRedo\ActionHistory.h">
+      <Filter>Source\projProblox\UndoRedo</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

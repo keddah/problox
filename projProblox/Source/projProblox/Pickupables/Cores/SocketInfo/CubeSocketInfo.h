@@ -14,7 +14,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PickupableMaster.h"
+#include "./projProblox/Pickupables/PickupableMaster.h"
 #include "Engine/DataAsset.h"
 #include "CubeSocketInfo.generated.h"
 

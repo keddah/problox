@@ -10,8 +10,10 @@
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
+
+
 #include "WedgeConnector.h"
-#include "WedgeSocketInfo.h"
+#include "./projProblox/Pickupables/Cores/SocketInfo/WedgeSocketInfo.h"
 
 
 AWedgeConnector::AWedgeConnector()

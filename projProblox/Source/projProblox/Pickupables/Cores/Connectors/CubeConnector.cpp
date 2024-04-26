@@ -10,10 +10,9 @@
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
 
+// WedgeConnector includes CubeConnector...
 #include "CubeConnector.h"
-
 #include "WedgeConnector.h"
-#include "Wheel.h"
 
 
 ACubeConnector::ACubeConnector()
@@ -238,7 +237,7 @@ void ACubeConnector::GhostPlacement()
 EOperations ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
-	GravitySelection();
+	ToggleGravity();
 	
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	objMesh->SetUseCCD(selected);
@@ -293,7 +292,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 bool ACubeConnector::SetGroupSelected(const bool value)
 {
 	selected = value;
-	GravitySelection();
+	ToggleGravity();
 	
 	canPlace = !selected;
 	

@@ -12,7 +12,7 @@
 
 #include "CubeSocketInfo.h"
 
-#include "CubeCore.h"
+#include "./projProblox/Pickupables/Cores/CubeCore.h"
 
 bool UCubeSocketInfo::ObjectInSocket(const FName& socket) const 
 {

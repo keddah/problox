@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/Thruster.h"
+#include "projProblox/Pickupables/Thruster.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeThruster() {}
 // Cross Module References
@@ -51,8 +51,8 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "Thruster.h" },
-		{ "ModuleRelativePath", "Thruster.h" },
+		{ "IncludePath", "Pickupables/Thruster.h" },
+		{ "ModuleRelativePath", "Pickupables/Thruster.h" },
 	};
 #endif
 #if WITH_METADATA
@@ -60,7 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Thruster" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Thruster.h" },
+		{ "ModuleRelativePath", "Pickupables/Thruster.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_thruster = { "thruster", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, thruster), Z_Construct_UClass_UPhysicsThrusterComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_thruster_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_thruster_MetaData) };
@@ -68,7 +68,7 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData[] = {
 		{ "Category", "Ability" },
 		{ "Delta", "1" },
-		{ "ModuleRelativePath", "Thruster.h" },
+		{ "ModuleRelativePath", "Pickupables/Thruster.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_power = { "power", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, power), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData) };
@@ -109,15 +109,15 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AThruster);
 	AThruster::~AThruster() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AThruster, AThruster::StaticClass, TEXT("AThruster"), &Z_Registration_Info_UClass_AThruster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThruster), 2528964213U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AThruster, AThruster::StaticClass, TEXT("AThruster"), &Z_Registration_Info_UClass_AThruster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThruster), 580895600U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_1054478364(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Thruster_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_826491557(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

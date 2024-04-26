@@ -12,7 +12,7 @@
 
 
 #include "Wheel.h"
-#include "CubeCore.h"
+#include "Cores/CubeCore.h"
 
 
 AWheel::AWheel()
@@ -45,7 +45,7 @@ AWheel::AWheel()
 EOperations AWheel::SetSelected(const bool value)
 {
 	selected = value; 
-	GravitySelection();
+	ToggleGravity();
 	wheelAxel->SetActive(!selected);
 	
 	SetHideIndicator(!selected);
@@ -129,6 +129,8 @@ void AWheel::Detach()
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	SetParentDominates(false);
 
+	ToggleGravity(true);
+	
 	previousObj = parentCore;
 	parentCore = nullptr;
 	isAttached = false;

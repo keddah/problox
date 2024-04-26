@@ -10,7 +10,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ActionHistory.h"
+#include "./projProblox/UndoRedo/ActionHistory.h"
 #include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
@@ -258,10 +258,23 @@ public:
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 
 	// Enable/Disable gravity when selected/deselected
-	virtual void GravitySelection() const
+	virtual void ToggleGravity() const;
+	virtual void ToggleGravity(bool gravityOn)
 	{
-		objMesh->SetEnableGravity(!selected);
-		if(!selected) objMesh->SetPhysicsLinearVelocity({0,0,-5});
+		if(gravityOn)
+		{
+			// enable gravity
+			objMesh->SetEnableGravity(true);
+			
+			// Slightly push the object downwards too..
+			objMesh->SetPhysicsLinearVelocity({0,0,-5});
+		}
+		else
+		{
+			// disable gravity
+			objMesh->SetEnableGravity(false);
+			RemoveVelocity();
+		}
 	}
 	virtual void RemoveVelocity() const;
 	

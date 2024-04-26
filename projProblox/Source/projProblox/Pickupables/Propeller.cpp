@@ -3,7 +3,7 @@
 
 #include "Propeller.h"
 
-#include "CubeCore.h"
+#include "Cores/CubeCore.h"
 
 void APropeller::BeginPlay()
 {

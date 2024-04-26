@@ -14,7 +14,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PickupableMaster.h"
+#include "./projProblox/Pickupables/PickupableMaster.h"
 #include "CableComponent.h"
 #include "Grappler.generated.h"
 

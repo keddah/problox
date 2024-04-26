@@ -3,10 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PickupableMaster.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/Actor.h"
-#include "GameFramework/ProjectileMovementComponent.h"
 #include "GrappleHead.generated.h"
 
 class AGrappler;

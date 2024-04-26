@@ -2,8 +2,7 @@
 
 
 #include "Piston.h"
-
-#include "CubeCore.h"
+#include "Cores/CubeCore.h"
 
 APiston::APiston()
 {

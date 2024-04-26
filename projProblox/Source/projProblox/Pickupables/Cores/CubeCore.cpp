@@ -13,10 +13,9 @@
 
 #include "CubeCore.h"
 
-#include "CubeConnector.h"
-#include "Cell.h"
-#include "WedgeConnector.h"
-#include "Wheel.h"
+#include "./projProblox/Cells/Cell.h"
+#include "Connectors/WedgeConnector.h"
+#include "./projProblox/Pickupables/Wheel.h"
 #include "Kismet/GameplayStatics.h"
 
 ACubeCore::ACubeCore()
@@ -203,7 +202,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	objMesh->SetUseCCD(selected);
 	
-	GravitySelection();
+	ToggleGravity();
 	SetHideIndicator(!selected);
 
 	// Make the wheel ignore collisions and not ... fly away
@@ -291,7 +290,7 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	attachedSocket = socket;
 
 	socketInfo->AddAttachment(attachment, socket);
-	GravitySelection();
+	ToggleGravity();
 	isAttached = true;
 
 	onChangeAttachments.Broadcast();
@@ -461,10 +460,10 @@ void ACubeCore::RemoveVelocity() const
 	for(const auto& obj : children) obj->RemoveVelocity();
 }
 
-void ACubeCore::GravitySelection() const
+void ACubeCore::ToggleGravity() const
 {
 	// Disable gravity on this.
-	Super::GravitySelection();
+	Super::ToggleGravity();
 
 	// Disable gravity on all of the things attached to the core.
 	for(const auto& obj : GetAttachedObjects()) obj->GetMesh()->SetEnableGravity(!selected);

@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "ActionHistory.h"
-#include "PickupableMaster.h"
+#include "UndoRedo/ActionHistory.h"
+#include "Pickupables/PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
 
 UCLASS()

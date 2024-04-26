@@ -11,7 +11,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CubeCore.h"
+#include "./projProblox/Pickupables/Cores/CubeCore.h"
 #include "GameFramework/Actor.h"
 #include "Cell.generated.h"
 

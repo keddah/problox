@@ -13,8 +13,8 @@
 
 #include "PickupableMaster.h"
 
-#include "CubeCore.h"
-#include "Cell.h"
+#include "Cores/CubeCore.h"
+#include "./projProblox/Cells/Cell.h"
 
 // Sets default values
 APickupableMaster::APickupableMaster()
@@ -192,7 +192,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	objMesh->SetUseCCD(selected);
 	
-	GravitySelection();
+	ToggleGravity();
 	SetHideIndicator(!selected);
 
 	if(selected)
@@ -226,7 +226,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 bool APickupableMaster::SetGroupSelected(const bool value)
 {
 	selected = value;
-	GravitySelection();
+	ToggleGravity();
 	
 	canPlace = !selected;
 	
@@ -264,9 +264,8 @@ void APickupableMaster::Detach()
 		previousObj = parentCore;
 		parentCore = nullptr;
 	}
-	
-	objMesh->SetEnableGravity(true);
-	objMesh->SetPhysicsLinearVelocity({0,0,-5});
+
+	ToggleGravity(true);
 	isAttached = false;
 }
 
@@ -413,6 +412,23 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 }
 
 
+void APickupableMaster::ToggleGravity() const
+{
+	// disable gravity if deselected
+	if(selected)
+	{
+		objMesh->SetEnableGravity(false);
+		RemoveVelocity();
+	}
+	else
+	{
+		// enable gravity if deselected
+		objMesh->SetEnableGravity(true);
+
+		// Slightly push the object downwards too
+		objMesh->SetPhysicsLinearVelocity({0,0,-5});
+	}
+}
 
 void APickupableMaster::RemoveVelocity() const
 {
