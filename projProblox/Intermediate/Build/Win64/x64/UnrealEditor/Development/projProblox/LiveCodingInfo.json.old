@@ -33,7 +33,6 @@
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
 			"Magnet.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
@@ -43,6 +42,7 @@
 			"ActionHistory.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"PickupableMaster.cpp.obj",
 			"PlayerCharacter.cpp.obj"
 		]
 	}
