@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\projProblox.sln.DotSettings.user" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -120,6 +121,12 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Wheel.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Wheels.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Wheels.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
     <Filter Include="Source\projProblox\Pickupables\Cores">
       <UniqueIdentifier>{CA37DEA1-665E-32ED-A1CE-145E16AF8A5F}</UniqueIdentifier>
     </Filter>
@@ -153,9 +160,6 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\CubeSocketInfo.h">
       <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\WedgeSocketInfo.cpp">
-      <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
-    </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\WedgeSocketInfo.h">
       <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
     </ClInclude>

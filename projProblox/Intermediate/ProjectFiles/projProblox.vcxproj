@@ -110,6 +110,7 @@
     <None Include="..\..\Source\projProblox.Target.cs"/>
     <None Include="..\..\Source\projProbloxEditor.Target.cs"/>
     <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\projProblox.sln.DotSettings.user"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
@@ -198,6 +199,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Wheel.h"/>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Wheels.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Wheels.h"/>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\CubeCore.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>

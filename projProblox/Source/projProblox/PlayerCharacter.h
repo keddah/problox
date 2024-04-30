@@ -8,6 +8,15 @@
 #include "Pickupables/PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
 
+UENUM(BlueprintType)
+enum class EGameMode : uint8
+{
+	Story,
+	Wave,
+	Assault,
+	Creative
+};
+
 UCLASS()
 class PROJPROBLOX_API APlayerCharacter : public ACharacter
 {
@@ -49,6 +58,9 @@ private:
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
 	bool buildPhase = true;
 
+	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess))
+	EGameMode currentMode = EGameMode::Story;
+
 	
 	/////////////// Undo/Redo ///////////////
 	UPROPERTY(VisibleAnywhere)
@@ -68,11 +80,13 @@ protected:
 	virtual void BeginPlay() override;
 
 	virtual void Tick(float DeltaSeconds) override;
-	
+
 public:	
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable)
+	void SetGameMode(EGameMode mode) { currentMode = mode; }
 	
 private:
 	/////////////// Selection / Placement ///////////////
@@ -95,4 +109,7 @@ private:
 	/////////////// Game States ///////////////
 	UFUNCTION()
 	void EndGame() { gameEnded = true; }
+
+	UFUNCTION(BlueprintCallable)
+	EGameMode GetGameMode() const { return currentMode; }
 };
