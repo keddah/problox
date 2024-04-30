@@ -22,6 +22,9 @@ APropeller::APropeller()
 {
 	windBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Wind Collider"));
 	windBox->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+
+	// Don't allow cells to be collected from this collider.
+	Tags.Add("NO");
 }
 
 
@@ -33,12 +36,27 @@ void APropeller::Ability()
 
 	if(!parentCore) return;
 
+	const bool vertical = GetActorForwardVector().Z >= .85f;
+
+	// Push the things that are inside the wind box
+    if(!pushedObjs.IsEmpty())
+    {
+		for	(const auto& obj : pushedObjs)
+		{
+    		if(obj)
+    		{
+    			const float power = (pushForce * 1000) / sqrt(FVector::DistSquared(GetActorLocation(), obj->GetComponentLocation())) ;
+				obj->AddForce(objMesh->GetForwardVector() * power);
+    		}
+		}
+    }
+
+	if(!vertical) return;
+
 	const float power = sqrt(parentCore->GetMass()) * propelForce * 1000; 
 	const FVector force = power * objMesh->GetForwardVector();
 	
 	parentCore->GetMesh()->AddForceAtLocation(force, objMesh->GetComponentLocation());
 
-	// Push the things that are inside the wind box
-	if(pushedObjs.IsEmpty()) return;
-	for (const auto& obj : pushedObjs) if(obj) obj->AddForce(objMesh->GetForwardVector() * pushForce * 1000);
+	
 }
