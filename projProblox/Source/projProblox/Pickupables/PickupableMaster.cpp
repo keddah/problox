@@ -71,6 +71,9 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 	Super::NotifyActorBeginOverlap(OtherActor);
 	if(!IsValid(parentCore)) return;
 
+	// Don't allow cells to be collected from this collider.
+	if(!Tags.IsEmpty()) return;
+
 	// Successful cast???
 	if(Cast<ACell>(OtherActor)) parentCore->AddThing(OtherActor);
 }
