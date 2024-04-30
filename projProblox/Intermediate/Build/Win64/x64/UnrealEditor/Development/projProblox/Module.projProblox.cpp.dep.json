@@ -84,6 +84,8 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\piston.gen.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\piston.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\piston.generated.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\playercharacter.gen.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\projproblox.init.gen.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\propeller.gen.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\propeller.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\propeller.generated.h",
@@ -133,6 +135,8 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\thruster.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\treads.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\wheel.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\wheels.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\playercharacter.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\undoredo\\actionhistory.cpp"

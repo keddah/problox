@@ -1238,3 +1238,48 @@ Make sure 'PlayerCharacter' has been compiled for  Set Game Mode
 [2024.04.30-10.35.53:552][315]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_HUD.uasset: [Compiler] Can't connect pins  Return Value  and  Mode : Game Mode Base Object Reference is not compatible with Byte.
 [2024.04.30-10.35.53:587][315]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
 [2024.04.30-10.35.57:710][763]LogSelectionDetails: Warning: NavigateToFunctionSource:  Unable to find source file and line number for 'UGameplayStatics::GetGameMode' [The specified module could not be found.]
+[2024.04.30-10.37.14:107][341]LogSlate: Took 0.000165 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.04.30-10.37.15:340][488]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.30-10.37.15:347][488]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_HUD.uasset: [Compiler] COMPILER ERROR: failed building connection with 'BP Player Character Object Reference is not compatible with Gameplay Statics Object Reference.' at  Set player
+[2024.04.30-10.37.15:347][488]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_HUD.uasset: [Compiler] Can't connect pins  Mode  and  Return Value : Byte is not compatible with Game Mode Base Object Reference.
+[2024.04.30-10.37.15:347][488]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_HUD.uasset: [Compiler] Can't connect pins  Return Value  and  Mode : Game Mode Base Object Reference is not compatible with Byte.
+[2024.04.30-10.37.15:396][488]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.04.30-10.37.24:043][567]LogHotReload: New module detected: UnrealEditor-projProblox-0128.dll
+[2024.04.30-10.37.24:715][570]LogHotReload: Starting Hot-Reload from IDE
+[2024.04.30-10.37.24:743][570]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.04.30-10.37.24:773][570]LogClass: UPackage /Script/projProblox Reload.
+[2024.04.30-10.37.24:773][570]LogClass: UClass PlayerCharacter Reload.
+[2024.04.30-10.37.24:795][570]LogClass: Could not find existing class PlayerCharacter in package /Script/projProblox for reload, assuming new or modified class
+[2024.04.30-10.37.24:795][570]LogClass: Function Deselect is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function Detach is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function GroupSelect is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function MoveSelection is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function Redo is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function SelectObject is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function SetGameMode is new or belongs to a modified class.
+[2024.04.30-10.37.24:795][570]LogClass: Function Undo is new or belongs to a modified class.
+[2024.04.30-10.37.24:805][570]LogClass: Could not find existing class Wheels in package /Script/projProblox for reload, assuming new or modified class
+[2024.04.30-10.37.24:848][570]Re-instancing PlayerCharacter after reload.
+[2024.04.30-10.37.24:959][570]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.04.30-10.37.25:064][570]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.04.30-10.37.25:105][570]Display: HotReload took  0.4s.
+[2024.04.30-10.37.25:105][570]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 1 class changed, 22 classes unchanged, 1 enum new, 2 enums unchanged, 1 scriptstruct unchanged, 30 functions remapped, 1 scriptstruct remapped
+[2024.04.30-10.37.28:331][744]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.30-10.37.28:340][744]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_HUD.uasset: [Compiler] COMPILER ERROR: failed building connection with 'BP Player Character Object Reference is not compatible with Gameplay Statics Object Reference.' at  Set player
+[2024.04.30-10.37.28:341][744]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_HUD.uasset: [Compiler] Can't connect pins  Mode  and  Return Value : Byte is not compatible with Game Mode Base Object Reference.
+[2024.04.30-10.37.28:341][744]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_HUD.uasset: [Compiler] Can't connect pins  Return Value  and  Mode : Game Mode Base Object Reference is not compatible with Byte.
+[2024.04.30-10.37.28:421][744]LogUObjectHash: Compacting FUObjectHashTables data took   1.60ms
+[2024.04.30-10.37.38:984][896]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.30-10.37.39:059][896]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2024.04.30-10.37.39:155][896]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.30-10.37.39:186][896]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset" SILENT=true
+[2024.04.30-10.37.39:195][896]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.008667 seconds
+[2024.04.30-10.37.39:249][896]LogSavePackage: Moving output files for package: /Game/UI/WBP_HUD
+[2024.04.30-10.37.39:250][896]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUDBDED63174B332F247D8D919181FA373C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset'
+[2024.04.30-10.37.39:257][896]LogFileHelpers: InternalPromptForCheckoutAndSave took 101 ms
+[2024.04.30-10.37.39:259][896]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.04.30-10.37.39:259][896]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD
+[2024.04.30-10.37.45:345][603]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.04.30-10.37.47:407][734]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:07.142 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 4219 files in 6100 folders with total size 248 MiB.
