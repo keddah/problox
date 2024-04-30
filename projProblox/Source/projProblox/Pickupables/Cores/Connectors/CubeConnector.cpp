@@ -334,8 +334,9 @@ void ACubeConnector::Reattach(const FTransform& transform)
 	}
 	
 	AttachToActor(parentCore, attachRules, removedSocket);
-
-	SetActorTransform(transform);
+	SetActorLocation(transform.GetLocation());
+	SetActorRotation(transform.GetRotation());
+	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }
