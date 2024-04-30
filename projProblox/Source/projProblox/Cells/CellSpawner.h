@@ -30,6 +30,8 @@ UCLASS()
 class PROJPROBLOX_API ACellSpawner : public AActor
 {
 	GENERATED_BODY()
+
+	bool active;
 	
 public:	
 	// Sets default values for this actor's properties
@@ -70,6 +72,12 @@ protected:
 	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 
 public:
+	UFUNCTION(BlueprintCallable)
+	bool IsActive() const { return active; }
+
+	UFUNCTION(BlueprintCallable)
+	void Activate() { active = true; }
+	
 	UFUNCTION(BlueprintCallable)
 	void BeginSpawn();
 

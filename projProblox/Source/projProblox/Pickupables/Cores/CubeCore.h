@@ -34,7 +34,7 @@
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
 
 // Should be broadcast whenever all the cells have been collected whilst in wave mode.
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnNewWave);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNewWave, int, wave);
 
 // Should be broadcast whenever an object is added/removed from this cube.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);

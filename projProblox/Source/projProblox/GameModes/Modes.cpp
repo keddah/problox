@@ -5,8 +5,6 @@
 
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/PlayerCharacter.h"
-#include "projProblox/Cells/CellSpawner.h"
-#include "projProblox/Pickupables/Cores/CubeCore.h"
 
 void AMode_Story::BeginPlay()
 {
@@ -28,10 +26,35 @@ void AMode_Wave::BeginPlay()
 		return;
 	}
 
+	ActivateSpawner();
 	core->onNewWave.AddDynamic(this, &AMode_Wave::IncreaseSpawns);
 }
 
-void AMode_Wave::IncreaseSpawns()
+bool AMode_Wave::ActivateSpawner()
+{
+	TArray<AActor*> spawnActors;
+	TArray<ACellSpawner*> spawners;
+
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), spawnActors);
+
+	// Don't do anything if all the spawners are already active.
+	if(spawnActors.Num() < activeSpawners.Num()) return true;
+	
+	for (const auto& actor : spawnActors) spawners.Add(Cast<ACellSpawner>(actor));
+
+	for (const auto& spawner : spawners)
+	{
+		if(spawner->IsActive()) continue;
+
+		spawner->Activate();
+		activeSpawners.Add(spawner);
+		break; // Don't continue to do all of them.
+	}
+
+	return spawnActors.Num() == activeSpawners.Num();
+}
+
+void AMode_Wave::IncreaseSpawns(const int _wave)
 {
 	TArray<AActor*> spawnActors;
 	TArray<AActor*> cells;
@@ -50,11 +73,14 @@ void AMode_Wave::IncreaseSpawns()
 	}
 	
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), spawnActors);
-	for (const auto& actor : spawnActors) Cast<ACellSpawner>(actor)->IncreaseSpawnCount(waveAdditions);
 	wave++;
 
+	// Don't do the next part if all the spawners aren't active 
+	if(!ActivateSpawner()) return;
+	
 	// Every 5 rounds...
 	if(wave % waveFrequency != 0) return;
+	for (const auto& actor : spawnActors) Cast<ACellSpawner>(actor)->IncreaseSpawnCount(waveAdditions);
 	
 	// Increase the wave amounts
 	waveAdditions += waveAdditionIncrease;

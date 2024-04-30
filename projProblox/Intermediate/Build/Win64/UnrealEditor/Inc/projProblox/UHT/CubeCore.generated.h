@@ -22,7 +22,7 @@ PROJPROBLOX_API void FOnStartGame_DelegateWrapper(const FMulticastScriptDelegate
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_37_DELEGATE \
-PROJPROBLOX_API void FOnNewWave_DelegateWrapper(const FMulticastScriptDelegate& OnNewWave);
+PROJPROBLOX_API void FOnNewWave_DelegateWrapper(const FMulticastScriptDelegate& OnNewWave, int32 wave);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_40_DELEGATE \

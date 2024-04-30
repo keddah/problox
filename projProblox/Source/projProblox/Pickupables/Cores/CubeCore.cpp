@@ -419,7 +419,7 @@ void ACubeCore::AddThing(AActor* _thing) const
 void ACubeCore::NextWave()
 {
 	attempts++;
-	onNewWave.Broadcast();
+	onNewWave.Broadcast(attempts);
 }
 
 int ACubeCore::SelectSocket(int socket)

@@ -30,6 +30,7 @@ void ACellSpawner::BeginPlay()
 	// If the current gamemode successfully casts to story mode...
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
 	{
+		active = true;
 		BeginSpawn();
 		return;
 	}
@@ -72,12 +73,10 @@ void ACellSpawner::Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot
 
 void ACellSpawner::BeginSpawn()
 {
+	if(!active) return;
+	
 	UWorld* wrld = GetWorld();
 
-	if(AMode_Wave* gm = Cast<AMode_Wave>(UGameplayStatics::GetGameMode(wrld)))
-	{
-	}
-	
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 

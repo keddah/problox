@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "projProblox/Cells/CellSpawner.h"
 #include "Modes.generated.h"
 
 
@@ -28,24 +29,28 @@ class PROJPROBLOX_API AMode_Wave : public AGameModeBase
 	unsigned int waveAdditions = 2;
 
 	UPROPERTY(EditDefaultsOnly, meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How many waves need to pass in order for the game to change (the additions increase or new cell types)"))
-	unsigned int waveFrequency = 5;
+	unsigned int waveFrequency = 2;
 
 	UPROPERTY(EditDefaultsOnly, meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How much should the wave additions increase by every x waves (5 waves)"))
 	unsigned int waveAdditionIncrease = 1;
 
 	unsigned int wave = 1;
 	
-	class ACubeCore* core = 0;
+	ACubeCore* core = 0;
+	TArray<ACellSpawner*> activeSpawners {0};
 
-	UFUNCTION(BlueprintCallable)
-	void IncreaseSpawns();
+	// Activates the next spawner (only does one) - Returns whether or not all spawners are active
+	bool ActivateSpawner();
+	
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The parameter is just there so that the delegate works. It doesn't do anything."))
+	void IncreaseSpawns(int _wave);
 
 public:
 	UFUNCTION(BlueprintCallable)
 	int GetWave() const { return wave; }
 };
 
-
+//
 UCLASS()
 class PROJPROBLOX_API AMode_Assault : public AGameModeBase
 {
