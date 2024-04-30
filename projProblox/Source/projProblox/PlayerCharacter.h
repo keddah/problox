@@ -26,42 +26,6 @@ public:
 	APlayerCharacter();
 
 private:
-	/////////////// Selection / Placement ///////////////
-	UPROPERTY(BlueprintReadOnly, Category = "Picking up", meta = (AllowPrivateAccess = true))
-	APickupableMaster* selectedObj;
-
-	UPROPERTY(BlueprintReadWrite, Category = "Picking up", meta = (AllowPrivateAccess = true))
-	bool groupSelection = false;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls", meta = (AllowPrivateAccess = true))
-	bool toggleSelection = false;
-
-	UPROPERTY(BlueprintReadWrite, Category = "Picking up", meta = (AllowPrivateAccess = true))
-	TArray<AActor*> exclusions;
-
-	
-	/////////////// Other ///////////////
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
-	ACubeCore* core;
-
-	UPROPERTY(BlueprintReadWrite, Category = "Controls", meta = (AllowPrivateAccess = true))
-	bool holding;
-	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls", meta = (AllowPrivateAccess = true))
-	float mouseDistance = 20000;
-
-	
-	/////////////// Game States ///////////////
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
-	bool gameEnded = false;
-
-	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
-	bool buildPhase = true;
-
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess))
-	EGameMode currentMode = EGameMode::Story;
-
-	
 	/////////////// Undo/Redo ///////////////
 	UPROPERTY(VisibleAnywhere)
 	UActionHistory* history;
@@ -78,9 +42,44 @@ private:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
 	virtual void Tick(float DeltaSeconds) override;
 
+	
+	/////////////// Selection / Placement ///////////////
+	UPROPERTY(BlueprintReadOnly, Category = "Picking up", meta = (AllowPrivateAccess = true))
+	APickupableMaster* selectedObj;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up", meta = (AllowPrivateAccess = true))
+	bool groupSelection = false;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls", meta = (AllowPrivateAccess = true))
+	bool toggleSelection = false;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up", meta = (AllowPrivateAccess = true))
+	TArray<AActor*> exclusions;
+
+	
+	/////////////// Other ///////////////
+	UPROPERTY(BlueprintReadOnly)
+	ACubeCore* core;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Controls")
+	bool holding;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
+	float mouseDistance = 20000;
+
+	
+	/////////////// Game States ///////////////
+	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+	bool gameEnded = false;
+
+	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
+	bool buildPhase = true;
+	
+	UPROPERTY(BlueprintReadOnly)
+	EGameMode currentMode = EGameMode::Story;
+	
 public:	
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;

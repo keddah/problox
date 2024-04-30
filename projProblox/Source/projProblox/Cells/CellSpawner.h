@@ -60,7 +60,12 @@ protected:
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "Index corresponds with the index of the spawn locations..."))
 	int32 spawnAmount = 10;
 
-public:	
-	void BeginSpawn() const;
+	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
+	unsigned int spawnRadius = 0;
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void BeginSpawn();
+	
 	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 };

@@ -138,6 +138,9 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerCharacter::SelectObject(const FHitResult& hit)
 {
+	// Can't select anything whilst not in the build phase...
+	if(!buildPhase) return;
+	
 	// When the hold button is let go
 	if(!holding)
 	{
@@ -196,6 +199,9 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
 {
+	// Can't select anything whilst not in the build phase...
+	if(!buildPhase) return;
+	
 	if(!holding)
 	{
 		Deselect();
@@ -304,6 +310,13 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
 {
+	// Can't move anything whilst not in the build phase...
+	if(!buildPhase)
+	{
+		if(selectedObj) Deselect();
+		return;
+	}
+	
 	if(selectedObj->IsA<ACubeCore>()) exclusions.AddUnique(selectedObj);
 	else exclusions.AddUnique(selectedObj);
 

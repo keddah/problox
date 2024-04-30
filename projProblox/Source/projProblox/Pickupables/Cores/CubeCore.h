@@ -105,8 +105,13 @@ private:
 	void EndGame() { CalculateRating(); onGameEnd.Broadcast(); } // Calculate rating before broadcasting...
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
-	void StartGame(const TArray<int>& delays, const TArray<int>& durations)
+	void StartGame() { onStartGame.Broadcast(); } 
+
+	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
+	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations)
 	{
+		StartGame();
+		
 		// Crashes when the objects are rearranged
 		if(durations.IsEmpty())
 		{
@@ -114,7 +119,6 @@ private:
 			return;
 		}
 		
-		onStartGame.Broadcast();
 		TimedObjectActivation(delays, durations);
 	}
 	
@@ -166,9 +170,6 @@ protected:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
 	FOnAttachmentChange onChangeAttachments;
 
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
-	FOnStartGame onStartGame;
-	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
 	FOnEndingGame onEndingGame;
 
@@ -295,6 +296,8 @@ public:
 	
 	FOnOutOfRange onRangeExceeded;
 
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
+	FOnStartGame onStartGame;
 	
 	/////////////// Undo/Redo ///////////////
 	// If something was attached to this core, when undoing/redoing, it detaches the objects that weren't there before the change
