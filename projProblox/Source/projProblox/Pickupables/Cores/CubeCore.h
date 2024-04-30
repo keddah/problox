@@ -33,7 +33,10 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
 
-// Should be broadcast whenever an object is added/removed from this cube
+// Should be broadcast whenever all the cells have been collected whilst in wave mode.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnNewWave);
+
+// Should be broadcast whenever an object is added/removed from this cube.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
 
 // Should be broadcast when the cube goes too far away from the container.
@@ -87,23 +90,23 @@ private:
 	UPROPERTY(EditInstanceOnly, EditFixedSize, meta = (TitleProperty = "Soimets", AllowPrivateAccess = true, ToolTip = "Index 0 = no stars.\n index 3 = three stars."))
 	TArray<unsigned int> moveRatings { 4,3,2,1 };
 	
-	unsigned short attempts = 1;
+	unsigned short attempts = 0;
 	unsigned short maxAttempts = 5;
 
 	float longestDuration;
-
-	bool buildPhase = true;
-	
-	UFUNCTION()
-	void Start();
 
 	void CalculateRating();
 	
 	
 	/////////////// Game States ///////////////
+	bool buildPhase = true;
+
 	UFUNCTION(BlueprintCallable)
 	void EndGame() { CalculateRating(); onGameEnd.Broadcast(); } // Calculate rating before broadcasting...
 
+	UFUNCTION()
+	void Start();
+	
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
 	void StartGame() { onStartGame.Broadcast(); } 
 
@@ -186,9 +189,13 @@ protected:
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
 	APickupableMaster* hitObj;
+
+
+	/////////////// Game States ///////////////
+	UPROPERTY(BlueprintReadOnly)
+	EGameMode currentMode;
+
 	
-
-
 ///////////////////////////// Functions /////////////////////////////
 	/////////////// Selection/Placement ///////////////
 	// Ghost placement except the other object's silhouette is affected 
@@ -290,6 +297,10 @@ public:
 	int GetRating() const { return rating; }
 
 
+	UFUNCTION(BlueprintCallable)
+	EGameMode GetGameMode() const { return currentMode; }
+		
+	
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
 	FOnGameEnd onGameEnd;
@@ -298,15 +309,22 @@ public:
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
 	FOnStartGame onStartGame;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the all the cells have been collected (in wave mode)."))
+	FOnNewWave onNewWave;
 	
 	/////////////// Undo/Redo ///////////////
 	// If something was attached to this core, when undoing/redoing, it detaches the objects that weren't there before the change
 	// THIS SHOULDN'T BE NEEDED BUT THE OVERWRITE FUNCTION ISN'T WORKING PROPERLY...
 	void RevertAttachments();
 
+	
 	/////////////// Other ///////////////
 	void AddThing(AActor* thing) const;
 
+	UFUNCTION(BlueprintCallable)
+	void NextWave();
+	
 	UFUNCTION(BlueprintCallable)
 	int SelectSocket(int socket);
 };

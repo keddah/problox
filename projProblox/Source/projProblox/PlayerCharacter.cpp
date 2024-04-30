@@ -14,6 +14,37 @@ APlayerCharacter::APlayerCharacter()
 
 }
 
+// Called when the game starts or when spawned
+void APlayerCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
+	if(!IsValid(core))
+	{
+		Print("Core Invalid... ~ player", 5);
+		return;
+	}
+	
+	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
+
+	history = NewObject<UActionHistory>();
+	buildPhase = true;
+}
+
+void APlayerCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	// if(history) history->PrintTaskIndex(.1);
+}
+
+// Called to bind functionality to input
+void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+}
+
 void APlayerCharacter::Undo()
 {
 	const FTask task = history->Undo();
@@ -106,47 +137,17 @@ void APlayerCharacter::Redo()
 	Print("Redoing...", 4)
 }
 
-// Called when the game starts or when spawned
-void APlayerCharacter::BeginPlay()
-{
-	Super::BeginPlay();
-	
-	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
-	if(!IsValid(core))
-	{
-		Print("Core Invalid... ~ player", 5);
-		return;
-	}
-	
-	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
-
-	history = NewObject<UActionHistory>();
-}
-
-void APlayerCharacter::Tick(float DeltaSeconds)
-{
-	Super::Tick(DeltaSeconds);
-
-	// if(history) history->PrintTaskIndex(.1);
-}
-
-// Called to bind functionality to input
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
-
 void APlayerCharacter::SelectObject(const FHitResult& hit)
 {
-	// Can't select anything whilst not in the build phase...
-	if(!buildPhase) return;
-	
 	// When the hold button is let go
 	if(!holding)
 	{
 		Deselect();
 		return;
 	}
+	
+	// Can't select anything whilst not in the build phase...
+	if(!buildPhase) return;
 
 	// Don't do anything if the selected object is already valid
 	if(IsValid(selectedObj)) return;
@@ -199,14 +200,14 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
 {
-	// Can't select anything whilst not in the build phase...
-	if(!buildPhase) return;
-	
 	if(!holding)
 	{
 		Deselect();
 		return;
 	}
+	
+	// Can't select anything whilst not in the build phase...
+	if(!buildPhase) return;
 
 	// Don't do anything if there's already something selected.
 	if(IsValid(selectedObj)) return;

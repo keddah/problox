@@ -3,6 +3,7 @@
 
 #include "Collector.h"
 
+#include "Cells/Cell.h"
 #include "Components/LightComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -42,12 +43,34 @@ void ACollector::BeginPlay()
 	Super::BeginPlay();
 
 	if(APlayerCharacter* rPlayer = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass()))) player = rPlayer;
+	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
+
+	if(!core) return;
+
+	core->onStartGame.AddDynamic(this, &ACollector::CalculateCellCount);
 }
 
 // Called every frame
 void ACollector::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
+void ACollector::CalculateCellCount()
+{
+	TArray<AActor*> countArr;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACell::StaticClass(), countArr);
+
+	// Only count the cells that aren't captured
+	cellsInLevel = 0;
+	cellCount = 0;
+	
+	for (const auto& Acell: countArr)
+	{
+		if(ACell* cell = Cast<ACell>(Acell))
+		{
+			if(!cell->IsSafe()) cellsInLevel++;
+		}
+	}
+	Print("Things in level: " + FString::FromInt(cellsInLevel), 4)
+}

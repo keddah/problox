@@ -36,7 +36,6 @@ void ACellSpawner::BeginPlay()
 
 	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
 	core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
-	
 }
 
 void ACellSpawner::Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
@@ -74,6 +73,11 @@ void ACellSpawner::Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot
 void ACellSpawner::BeginSpawn()
 {
 	UWorld* wrld = GetWorld();
+
+	if(AMode_Wave* gm = Cast<AMode_Wave>(UGameplayStatics::GetGameMode(wrld)))
+	{
+	}
+	
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
@@ -82,7 +86,7 @@ void ACellSpawner::BeginSpawn()
 
 	// If spawn radius isn't set, the spawn position will be this position.
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
-	
+
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++) Spawn(wrld, spawn, rot, params);
 }

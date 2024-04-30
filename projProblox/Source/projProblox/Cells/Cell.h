@@ -42,7 +42,6 @@ private:
 	bool isHoming;
 	bool safe;
 	
-	void Drag() const;
 	void GoHome() const;
 
 public:	

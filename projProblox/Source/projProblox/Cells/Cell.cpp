@@ -35,15 +35,7 @@ void ACell::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	Drag();
 	GoHome();
-}
-
-void ACell::Drag() const
-{
-	const FVector velocity = body->GetComponentVelocity();
-	const FVector drag = sqrt(velocity.Length()) * velocity * -.1f;  
-	body->AddForce(drag);
 }
 
 void ACell::GoHome() const
@@ -57,5 +49,5 @@ void ACell::GoHome() const
 	const FVector direction = corePos - thisPos;
 	const float squareDist = FVector::DistSquared(corePos, thisPos);
 	
-	body->AddForce(direction * (attractionForce * 1000) / squareDist);
+	body->AddForce(direction * (attractionForce * 10000) / squareDist);
 }

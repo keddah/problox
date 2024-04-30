@@ -79,6 +79,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return Z_Registration_Info_UEnum_EGameMode.InnerSingleton;
 	}
+	DEFINE_FUNCTION(APlayerCharacter::execGetCore)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(ACubeCore**)Z_Param__Result=P_THIS->GetCore();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APlayerCharacter::execGetGameMode)
 	{
 		P_FINISH;
@@ -161,6 +168,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "Deselect", &APlayerCharacter::execDeselect },
 			{ "Detach", &APlayerCharacter::execDetach },
 			{ "EndGame", &APlayerCharacter::execEndGame },
+			{ "GetCore", &APlayerCharacter::execGetCore },
 			{ "GetGameMode", &APlayerCharacter::execGetGameMode },
 			{ "GroupSelect", &APlayerCharacter::execGroupSelect },
 			{ "MoveSelection", &APlayerCharacter::execMoveSelection },
@@ -260,6 +268,40 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_EndGame_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_APlayerCharacter_GetCore_Statics
+	{
+		struct PlayerCharacter_eventGetCore_Parms
+		{
+			ACubeCore* ReturnValue;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventGetCore_Parms, ReturnValue), Z_Construct_UClass_ACubeCore_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "GetCore", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::PlayerCharacter_eventGetCore_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::PlayerCharacter_eventGetCore_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_GetCore()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_GetCore_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -592,6 +634,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 959344020
 		{ &Z_Construct_UFunction_APlayerCharacter_Detach, "Detach" }, // 1541612637
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
+		{ &Z_Construct_UFunction_APlayerCharacter_GetCore, "GetCore" }, // 344276006
 		{ &Z_Construct_UFunction_APlayerCharacter_GetGameMode, "GetGameMode" }, // 4117543127
 		{ &Z_Construct_UFunction_APlayerCharacter_GroupSelect, "GroupSelect" }, // 2137927514
 		{ &Z_Construct_UFunction_APlayerCharacter_MoveSelection, "MoveSelection" }, // 767853428
@@ -623,7 +666,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_history = { "history", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, history), Z_Construct_UClass_UActionHistory_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_history_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_history_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_selectedObj_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Picking up" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/////////////// Selection / Placement ///////////////\n" },
@@ -637,7 +679,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_selectedObj = { "selectedObj", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, selectedObj), Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_selectedObj_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_selectedObj_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_groupSelection_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Picking up" },
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
@@ -649,7 +690,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_groupSelection = { "groupSelection", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APlayerCharacter), &Z_Construct_UClass_APlayerCharacter_Statics::NewProp_groupSelection_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_groupSelection_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_groupSelection_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_toggleSelection_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Controls" },
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
@@ -662,7 +702,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_exclusions_Inner = { "exclusions", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_exclusions_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Picking up" },
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
@@ -701,7 +740,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_mouseDistance = { "mouseDistance", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, mouseDistance), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_mouseDistance_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_mouseDistance_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_gameEnded_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "PlayerCharacter" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/////////////// Game States ///////////////\n" },
@@ -719,7 +757,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_gameEnded = { "gameEnded", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APlayerCharacter), &Z_Construct_UClass_APlayerCharacter_Statics::NewProp_gameEnded_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_gameEnded_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_gameEnded_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_buildPhase_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "PlayerCharacter" },
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 #if !UE_BUILD_SHIPPING
@@ -797,9 +834,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 616461896U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 981622544U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1002071715U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3659676363(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_862053891(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

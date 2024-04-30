@@ -57,15 +57,26 @@ protected:
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
 	ECellType thingType = ECellType::Normal;
 	
-	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "Index corresponds with the index of the spawn locations..."))
+	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
 	int32 spawnAmount = 10;
 
-	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
-	unsigned int spawnRadius = 0;
+	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "The maximum amount of cells that can spawn from this spawner..."))
+	int32 maxSpawnAmount = 50;
+
+	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
+	unsigned int spawnRadius = 50;
+
+	
+	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 
 public:
 	UFUNCTION(BlueprintCallable)
 	void BeginSpawn();
+
+	void IncreaseSpawnCount(unsigned short additions)
+	{
+		spawnAmount += additions;
+		spawnAmount = FMath::Clamp(spawnAmount, 1, maxSpawnAmount);
+	}
 	
-	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 };

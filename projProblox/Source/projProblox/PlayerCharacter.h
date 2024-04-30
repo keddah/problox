@@ -46,16 +46,16 @@ protected:
 
 	
 	/////////////// Selection / Placement ///////////////
-	UPROPERTY(BlueprintReadOnly, Category = "Picking up", meta = (AllowPrivateAccess = true))
+	UPROPERTY(BlueprintReadOnly, Category = "Picking up")
 	APickupableMaster* selectedObj;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Picking up", meta = (AllowPrivateAccess = true))
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	bool groupSelection = false;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls", meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	bool toggleSelection = false;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Picking up", meta = (AllowPrivateAccess = true))
+	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	TArray<AActor*> exclusions;
 
 	
@@ -71,11 +71,11 @@ protected:
 
 	
 	/////////////// Game States ///////////////
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+	UPROPERTY(BlueprintReadOnly)
 	bool gameEnded = false;
 
-	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
-	bool buildPhase = true;
+	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
+	bool buildPhase;
 	
 	UPROPERTY(BlueprintReadOnly)
 	EGameMode currentMode = EGameMode::Story;
@@ -111,4 +111,7 @@ private:
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
+
+	UFUNCTION(BlueprintCallable)
+	ACubeCore* GetCore() const { return core; }
 };

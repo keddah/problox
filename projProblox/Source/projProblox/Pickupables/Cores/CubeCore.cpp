@@ -17,6 +17,7 @@
 #include "Connectors/WedgeConnector.h"
 #include "./projProblox/Pickupables/Wheel.h"
 #include "Kismet/GameplayStatics.h"
+#include "projProblox/GameModes/Modes.h"
 
 ACubeCore::ACubeCore()
 {
@@ -51,6 +52,12 @@ void ACubeCore::BeginPlay()
 
 	onStartGame.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
+
+	UWorld* wrld = GetWorld();
+	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Story;
+	else if(Cast<AMode_Wave>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Wave;
+	else if(Cast<AMode_Assault>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Assault;
+	else if(Cast<AMode_Creative>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Creative;
 }
 
 
@@ -409,6 +416,12 @@ void ACubeCore::AddThing(AActor* _thing) const
 	}
 }
 
+void ACubeCore::NextWave()
+{
+	attempts++;
+	onNewWave.Broadcast();
+}
+
 int ACubeCore::SelectSocket(int socket)
 {
 	if(!IsValid(socketInfo))
@@ -562,6 +575,7 @@ void ACubeCore::SetCanPickup(bool can)
 	// Only broadcast when there's a change
 	const bool change = can != canPickup;
 	Super::SetCanPickup(can);
+
 	SetCanCollect(can || !selected);
 
 	if(!canPickup && change) onRangeExceeded.Broadcast();
