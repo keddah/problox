@@ -35,7 +35,7 @@ class PROJPROBLOX_API APropeller : public APickupableMaster
 	float propelForce = 50;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "The amount of force to apply to things that are inside the windCollider while active"))
-	float pushForce = 10;
+	float pushForce = 100;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "The speed the propellers rotate (purely visual)."))
 	float spinSpeed = 22;
