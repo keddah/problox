@@ -58,6 +58,8 @@ void ACubeCore::BeginPlay()
 	else if(Cast<AMode_Wave>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Wave;
 	else if(Cast<AMode_Assault>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Assault;
 	else if(Cast<AMode_Creative>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Creative;
+
+	resetTransform = GetActorTransform();
 }
 
 
@@ -277,9 +279,12 @@ void ACubeCore::ResetToStart()
 // When the start button is pressed....
 void ACubeCore::Start()
 {
+	if(currentMode == EGameMode::Wave) SetActorTransform(resetTransform);
+	
 	// Save the transform...
 	resetTransform = GetActorTransform();
 	buildPhase = false;
+
 }
 
 void ACubeCore::CalculateRating()

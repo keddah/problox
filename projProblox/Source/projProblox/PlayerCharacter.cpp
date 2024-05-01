@@ -137,6 +137,29 @@ void APlayerCharacter::Redo()
 	Print("Redoing...", 4)
 }
 
+void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
+{
+	if(!IsValid(obj)) return;
+	
+	holding = true;
+	selectedObj = obj;
+	selectedObj->SetSelected(true);
+
+	// Need to set the start position...
+	// Only add a new action after deselecting since that's what confirms the task.
+	selectedTransform = selectedObj->GetTransform();
+	
+	// Includes if the selected object is the core
+	exclusions.Add(selectedObj);
+	if(!selectedObj->IsA<ACubeCore>()) return;
+
+	// Add the things that are connected to the core/connector to the things to ignore
+	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
+	{
+		exclusions.Append(obj->GetAttachedObjActors());
+	}
+}
+
 void APlayerCharacter::SelectObject(const FHitResult& hit)
 {
 	// When the hold button is let go

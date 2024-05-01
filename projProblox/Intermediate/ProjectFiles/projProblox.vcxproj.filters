@@ -73,22 +73,10 @@
     <Filter Include="Source\projProblox\GameModes">
       <UniqueIdentifier>{87017875-58AA-3A5C-AC65-DD4BEAB7B0F3}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\projProblox\GameModes\Mode_Creative.cpp">
+    <ClCompile Include="..\..\Source\projProblox\GameModes\Modes.cpp">
       <Filter>Source\projProblox\GameModes</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\GameModes\Mode_Creative.h">
-      <Filter>Source\projProblox\GameModes</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\GameModes\Mode_Story.cpp">
-      <Filter>Source\projProblox\GameModes</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\GameModes\Mode_Story.h">
-      <Filter>Source\projProblox\GameModes</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\GameModes\Mode_Wave.cpp">
-      <Filter>Source\projProblox\GameModes</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\GameModes\Mode_Wave.h">
+    <ClInclude Include="..\..\Source\projProblox\GameModes\Modes.h">
       <Filter>Source\projProblox\GameModes</Filter>
     </ClInclude>
     <Filter Include="Source\projProblox\Pickupables">

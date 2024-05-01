@@ -72,14 +72,18 @@ void AMode_Wave::IncreaseSpawns(const int _wave)
 		}
 	}
 	
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), spawnActors);
+	// Go to the next wave...
 	wave++;
+
+	// Give the player an extra attachment to choose from
+	attachmentsAvailable++;
 
 	// Don't do the next part if all the spawners aren't active 
 	if(!ActivateSpawner()) return;
 	
 	// Every 5 rounds...
 	if(wave % waveFrequency != 0) return;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), spawnActors);
 	for (const auto& actor : spawnActors) Cast<ACellSpawner>(actor)->IncreaseSpawnCount(waveAdditions);
 	
 	// Increase the wave amounts

@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ACubeCore;
+class APickupableMaster;
 enum class EGameMode : uint8;
 struct FHitResult;
 #ifdef PROJPROBLOX_PlayerCharacter_generated_h
@@ -30,6 +31,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execMoveSelection); \
 	DECLARE_FUNCTION(execGroupSelect); \
 	DECLARE_FUNCTION(execSelectObject); \
+	DECLARE_FUNCTION(execManualSelectObject); \
 	DECLARE_FUNCTION(execSetGameMode); \
 	DECLARE_FUNCTION(execRedo); \
 	DECLARE_FUNCTION(execUndo);

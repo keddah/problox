@@ -86,6 +86,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetGameMode(EGameMode mode) { currentMode = mode; }
+
+	UFUNCTION(BlueprintCallable)
+	void ManualSelectObject(APickupableMaster* obj);
 	
 private:
 	/////////////// Selection / Placement ///////////////

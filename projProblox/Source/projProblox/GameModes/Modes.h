@@ -25,15 +25,17 @@ class PROJPROBLOX_API AMode_Wave : public AGameModeBase
 
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly, meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How many MORE cells should be spawned in at the end of the wave"))
+	UPROPERTY(EditDefaultsOnly, meta = (ClampMax = 10, ClampMin = 1, ToolTip = "The number of attachments the player is allowed to choose..."))
+	unsigned int attachmentsAvailable = 2;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Waves", meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How many MORE cells should be spawned in at the end of the wave"))
 	unsigned int waveAdditions = 2;
 
-	UPROPERTY(EditDefaultsOnly, meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How many waves need to pass in order for the game to change (the additions increase or new cell types)"))
+	UPROPERTY(EditDefaultsOnly, Category = "Waves", meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How many waves need to pass in order for the game to change (the additions increase or new cell types)"))
 	unsigned int waveFrequency = 2;
 
-	UPROPERTY(EditDefaultsOnly, meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How much should the wave additions increase by every x waves (5 waves)"))
+	UPROPERTY(EditDefaultsOnly, Category = "Waves", meta = (ClampMax = 10, ClampMin = 1, ToolTip = "How much should the wave additions increase by every x waves (5 waves)"))
 	unsigned int waveAdditionIncrease = 1;
-
 	unsigned int wave = 1;
 	
 	ACubeCore* core = 0;
@@ -42,12 +44,18 @@ class PROJPROBLOX_API AMode_Wave : public AGameModeBase
 	// Activates the next spawner (only does one) - Returns whether or not all spawners are active
 	bool ActivateSpawner();
 	
-	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The parameter is just there so that the delegate works. It doesn't do anything."))
+	UFUNCTION(BlueprintCallable, Category = "Waves", meta = (ToolTip = "The parameter is just there so that the delegate works. It doesn't do anything."))
 	void IncreaseSpawns(int _wave);
 
 public:
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Waves")
 	int GetWave() const { return wave; }
+
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Returns the amount of attachments the player is allowed to get."))
+	int GetAvailabliity() const { return attachmentsAvailable; }
+	
+	UFUNCTION(BlueprintCallable)
+	void DeductAvailability() { attachmentsAvailable--;}
 };
 
 //
