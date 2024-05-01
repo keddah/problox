@@ -18,6 +18,8 @@ protected:
 	virtual void BeginPlay() override;
 };
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnCoreChanged, ACubeCore*, newCore);
+
 UCLASS()
 class PROJPROBLOX_API AMode_Wave : public AGameModeBase
 {
@@ -52,10 +54,12 @@ public:
 	int GetWave() const { return wave; }
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Returns the amount of attachments the player is allowed to get."))
-	int GetAvailabliity() const { return attachmentsAvailable; }
+	int GetAvailability() const { return attachmentsAvailable; }
 	
 	UFUNCTION(BlueprintCallable)
 	void DeductAvailability() { attachmentsAvailable--;}
+
+	FOnCoreChanged onCoreChanged;
 };
 
 //

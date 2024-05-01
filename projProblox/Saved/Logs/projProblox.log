@@ -2912,3 +2912,33 @@ Script Stack (0 frames) :
 [2024.05.01-15.29.25:059][612]LogD3D12RHI: Warning: Descriptor cache ran out of sub allocated descriptor blocks! Moving to Context local View heap strategy
 [2024.05.01-15.29.25:059][612]LogD3D12RHI: This should only happen in the Editor where it doesn't matter as much. If it happens in game you should increase the device global heap size!
 [2024.05.01-15.29.59:218][710]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2024.05.01-15.32.10:233][779]LogHotReload: New module detected: UnrealEditor-projProblox-0074.dll
+[2024.05.01-15.32.11:257][783]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.01-15.32.11:300][783]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.05.01-15.32.11:345][783]LogClass: UPackage /Script/projProblox Reload.
+[2024.05.01-15.32.11:352][783]LogClass: UClass Mode_Wave Reload.
+[2024.05.01-15.32.11:400][783]LogClass: Could not find existing class Mode_Wave in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.01-15.32.11:400][783]LogClass: Function DeductAvailability is new or belongs to a modified class.
+[2024.05.01-15.32.11:401][783]LogClass: Function GetAvailabliity is new or belongs to a modified class.
+[2024.05.01-15.32.11:401][783]LogClass: Function GetWave is new or belongs to a modified class.
+[2024.05.01-15.32.11:401][783]LogClass: Function IncreaseSpawns is new or belongs to a modified class.
+[2024.05.01-15.32.11:490][783]Re-instancing Mode_Wave after reload.
+[2024.05.01-15.32.11:533][783]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.01-15.32.11:655][783]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.05.01-15.32.11:712][783]Display: HotReload took  0.5s.
+[2024.05.01-15.32.11:712][783]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 31 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 50 functions remapped, 1 scriptstruct remapped
+[2024.05.01-15.38.24:368][900]LogHotReload: New module detected: UnrealEditor-projProblox-0075.dll
+[2024.05.01-15.38.25:376][904]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.01-15.38.25:466][904]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2024.05.01-15.38.25:499][904]LogClass: UPackage /Script/projProblox Reload.
+[2024.05.01-15.38.25:502][904]LogClass: UClass Mode_Wave Reload.
+[2024.05.01-15.38.25:529][904]LogClass: Could not find existing class Mode_Wave in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.01-15.38.25:529][904]LogClass: Function DeductAvailability is new or belongs to a modified class.
+[2024.05.01-15.38.25:529][904]LogClass: Function GetAvailability is new or belongs to a modified class.
+[2024.05.01-15.38.25:529][904]LogClass: Function GetWave is new or belongs to a modified class.
+[2024.05.01-15.38.25:529][904]LogClass: Function IncreaseSpawns is new or belongs to a modified class.
+[2024.05.01-15.38.25:587][904]Re-instancing Mode_Wave after reload.
+[2024.05.01-15.38.25:617][904]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.01-15.38.25:755][904]LogUObjectHash: Compacting FUObjectHashTables data took   1.85ms
+[2024.05.01-15.38.25:801][904]Display: HotReload took  0.4s.
+[2024.05.01-15.38.25:801][904]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 31 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 50 functions remapped, 1 scriptstruct remapped
