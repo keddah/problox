@@ -18,8 +18,17 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	if(ACubeCore* cubeCore = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()))) core = cubeCore;
+
+	TArray<AActor*> coreActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), coreActors);
+
+	// Since the connectors inherit from the core and are technically cube cores...
+	for (const auto& coreObj: coreActors)
+	{
+		if(coreObj->IsA<ACubeConnector>()) continue;
+
+		core = Cast<ACubeCore>(coreObj);
+	}
 	if(!IsValid(core))
 	{
 		Print("Core Invalid... ~ player", 5);

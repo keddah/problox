@@ -34,7 +34,7 @@ void ACuboidCore::Placement()
 		const FName socket = i == 0? "DOWN1" : "DOWN2";
 		
 		const FVector start = objMesh->GetSocketLocation(socket);
-		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 		AActor* hitActor = hit.GetActor();
@@ -45,7 +45,7 @@ void ACuboidCore::Placement()
 			continue;
 		}
 
-		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 	
 		if(!hitActor)
 		{
@@ -62,6 +62,7 @@ void ACuboidCore::Placement()
 
 		OtherGhostPlacement();
 		attachedSocket = socket;
+		raySocket = socket;
 		break;
 	}
 }

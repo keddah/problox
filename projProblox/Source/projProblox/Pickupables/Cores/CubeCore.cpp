@@ -67,7 +67,7 @@ void ACubeCore::Placement()
 {
 	if(!canPlace) return;
 	if(!selected) return;
-	if(ObjectInSocket("DOWN")) return;
+	if(ObjectInSocket(raySocket)) return;
 
 	RemoveVelocity();
 	
@@ -82,8 +82,8 @@ void ACubeCore::Placement()
 	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
 	
 	// Debug Draw
-	const FVector start = GetActorLocation();
-	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+	const FVector start = objMesh->GetSocketLocation(raySocket);
+	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 	AActor* hitActor = hit.GetActor();
@@ -94,7 +94,7 @@ void ACubeCore::Placement()
 		return;
 	}
 
-	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 	
 	if(!hitActor)
 	{
@@ -126,7 +126,7 @@ void ACubeCore::OtherGhostPlacement()
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	
 	silhouette->SetHiddenInGame(false);
-	silhouette->AttachToComponent(objMesh, ghostRules, "DOWN");
+	silhouette->AttachToComponent(objMesh, ghostRules, raySocket);
 	
 	silhouette->SetRelativeLocation({hitObj->GetAttachOffset(*this),0,0});
 
@@ -138,7 +138,7 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 	if(!IsValid(&other)) return;
 
 	silhouette = other.GetSilhouette();
-	FRotator socketRot = objMesh->GetSocketRotation("DOWN");
+	FRotator socketRot = objMesh->GetSocketRotation(raySocket);
 
 	// Need to start with the class at the bottom of the inheritance chain and go up from there... 
 	if(other.IsA<AWedgeConnector>())
@@ -169,7 +169,7 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 	{
 		if(other.ShouldSnapRotation())
 		{
-			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation("DOWN"));
+			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(raySocket));
 
 			FRotator rot;
 			const FVector otherPlaceDir = other.GetPlaceDir();
@@ -489,7 +489,7 @@ void ACubeCore::ToggleGravity() const
 
 void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
 {
-	if(socket != "DOWN")
+	if(socket != raySocket)
 	{
 		attachedSocket = socket;
 		return;
@@ -501,7 +501,7 @@ void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
 void ACubeCore::RearrangeSockets()
 {
 	// This only needs to happen if there's an object in the bottom slot when trying to attach to a cube..
-	if(!ObjectInSocket("DOWN"))
+	if(!ObjectInSocket(raySocket))
 	{
 		Print("down is blocked.", 4)
 		return;

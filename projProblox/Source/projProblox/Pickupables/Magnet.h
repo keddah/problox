@@ -36,8 +36,12 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 
 	TArray<AMagnet*> otherMagnets;
 
+	void ConfigureCharge() const { objMesh->SetMaterial(0, positive? positiveMat : negativeMat); }
+	void AddMagnet(AMagnet* mag) { otherMagnets.AddUnique(mag); }
+	
 public:
-	virtual void Tick(float DeltaSeconds) override;
+	UFUNCTION(BlueprintCallable)
+	void SetCharge(const bool pos) { positive = pos; ConfigureCharge(); }
 	
 protected:
 	virtual void BeginPlay() override;

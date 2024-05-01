@@ -72,9 +72,6 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* downArrow;
-	
-	// The socket that the placement ray from this object is firing from
-	FName raySocket;
 
 public:
 	virtual void Tick(float DeltaSeconds) override;

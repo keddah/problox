@@ -156,6 +156,11 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere, Category = "Collection", meta = (ToolTip = "This arrow should be shown when the cube is too far away from the collector"))
 	UArrowComponent* distanceLine;
+
+
+	/////////////// Selection/Placement ///////////////
+	// The socket that the placement ray from this object is firing from
+	FName raySocket = "DOWN";
 	
 	
 	/////////////// Collection ///////////////
