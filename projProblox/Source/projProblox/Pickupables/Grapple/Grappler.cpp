@@ -29,7 +29,7 @@ AGrappler::AGrappler()
 	grappleLine->NumSegments = 128;
 }
 
-void AGrappler::Ability()
+void AGrappler::Ability(const float deltaTime)
 {
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
 

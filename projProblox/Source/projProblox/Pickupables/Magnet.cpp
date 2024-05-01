@@ -30,9 +30,8 @@ void AMagnet::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 }
 
-void AMagnet::Ability()
+void AMagnet::Ability(const float deltaTime)
 {
-	Super::Ability();
 	// if(!active) return;
 
 	const FVector thisPos = GetActorLocation();

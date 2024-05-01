@@ -62,7 +62,7 @@ void APickupableMaster::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	Ability();
+	Ability(DeltaTime);
 	Placement();
 }
 
@@ -185,6 +185,12 @@ void APickupableMaster::GhostPlacement()
 	socketRot = socketRot.RotateVector(socketForward).Rotation();
 	
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
+
+	// Whether or not the attached socket is the diagonal side of a wedge...
+	const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90; 
+	
+	// Ensures that the final rotation is always aligned.
+	silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
 }
 
 EOperations APickupableMaster::SetSelected(const bool value)

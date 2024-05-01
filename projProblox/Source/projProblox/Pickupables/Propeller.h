@@ -23,7 +23,7 @@ class PROJPROBLOX_API APropeller : public APickupableMaster
 
 	APropeller();
 	virtual void BeginPlay() override;
-	virtual void Ability() override;
+	virtual void Ability(float deltaTime) override;
 	
 	UPROPERTY(VisibleDefaultsOnly)
 	UBoxComponent* windBox;

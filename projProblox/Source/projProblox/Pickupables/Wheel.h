@@ -27,7 +27,7 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 	AWheel();
 
 	// Just using this to get to the tick function....
-	virtual void Ability() override { if(selected) RemoveVelocity(); }
+	virtual void Ability(float deltaTime) override { if(selected) RemoveVelocity(); }
 	
 	virtual EOperations SetSelected(const bool value) override;
 	virtual void Detach() override;

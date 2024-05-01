@@ -17,7 +17,7 @@ AGlider::AGlider()
 	snapRot = false;
 }
 
-void AGlider::Ability()
+void AGlider::Ability(const float deltaTime)
 {
 	// Doesn't need to be "active" in order to work
 	if(!isAttached) return;

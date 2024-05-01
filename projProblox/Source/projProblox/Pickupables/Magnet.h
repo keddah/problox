@@ -41,5 +41,5 @@ public:
 	
 protected:
 	virtual void BeginPlay() override;
-	virtual void Ability() override;
+	virtual void Ability(float deltaTime) override;
 };

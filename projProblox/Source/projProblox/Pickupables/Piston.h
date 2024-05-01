@@ -21,7 +21,7 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 	GENERATED_BODY()
 
 	APiston();
-	virtual void Ability() override;
+	virtual void Ability(float deltaTime) override;
 	virtual void BeginPlay() override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))

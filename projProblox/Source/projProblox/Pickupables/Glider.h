@@ -22,7 +22,7 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 
 	AGlider();
 	
-	virtual void Ability() override;
+	virtual void Ability(float deltaTime) override;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float glideSpeed = 2000;

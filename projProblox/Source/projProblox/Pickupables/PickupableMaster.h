@@ -139,7 +139,7 @@ protected:
 	virtual void GhostPlacement();
 	void ResetGhost(bool resetRot = true) const;
 	
-	virtual void Ability() {}
+	virtual void Ability(float deltaTime) {}
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }
@@ -236,6 +236,7 @@ public:
 	ACubeCore* GetCore() const { return parentCore; }
 	APickupableMaster* GetPreviousObj() const { return previousObj; }
 
+	// Returns the APickupable at the top of this hierarchy
 	virtual APickupableMaster* GetParent();
 
 	FVector GetPlaceDir() const { return placeDir; }

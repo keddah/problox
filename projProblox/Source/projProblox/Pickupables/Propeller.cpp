@@ -28,7 +28,7 @@ APropeller::APropeller()
 }
 
 
-void APropeller::Ability()
+void APropeller::Ability(const float deltaTime)
 {
 	if(!active) return;
 

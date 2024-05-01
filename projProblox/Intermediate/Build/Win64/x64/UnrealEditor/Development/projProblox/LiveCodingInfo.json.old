@@ -29,11 +29,17 @@
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
+			"Modes.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
-			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
+			"Wheels.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"projProblox.cpp.obj",
+			"ActionHistory.cpp.obj",
+			"Glider.cpp.obj",
 			"Grappler.cpp.obj",
 			"Magnet.cpp.obj",
 			"PickupableMaster.cpp.obj",
@@ -41,13 +47,7 @@
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"Wheel.cpp.obj",
-			"Wheels.cpp.obj",
-			"projProblox.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"Modes.cpp.obj",
-			"CubeCore.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"Wheel.cpp.obj"
 		]
 	}
 }

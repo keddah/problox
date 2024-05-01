@@ -24,7 +24,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	ATreads();
 
-	virtual void Ability() override;
+	virtual void Ability(float deltaTime) override;
 	void Drag() const;
 	
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
@@ -36,8 +36,8 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
 	bool grounded;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float moveSpeed = 7500;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
+	float moveSpeed = 500;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float dragMultiplier = 3;

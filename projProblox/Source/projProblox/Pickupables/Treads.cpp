@@ -11,8 +11,8 @@
 
 #include "Treads.h"
 
-#include "Cores/Connectors/CubeConnector.h"
 #include "Cores/CubeCore.h"
+#include "Cores/Connectors/WedgeConnector.h"
 
 
 ATreads::ATreads()
@@ -31,8 +31,7 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 {
 	if(selected)
 	{
-		// no offset.
-		attachOffset = 0;
+		attachOffset = attachee.IsA<ACubeConnector>() && !attachee.IsA<AWedgeConnector>()? 50 : 0;
 		return Super::GetAttachOffset(attachee);
 	}
 	
@@ -40,15 +39,15 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
-void ATreads::Ability()
+void ATreads::Ability(const float deltaTime)
 {
-	Drag();
-	
+	// Drag();
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
+	
 	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
-	objMesh->AddForce(GetActorForwardVector() * moveSpeed * 1000);
+	GetParent()->AddActorWorldOffset(GetActorForwardVector() * moveSpeed * deltaTime);
 }
 
 void ATreads::Drag() const
