@@ -22,7 +22,7 @@ class PROJPROBLOX_API UCubeSocketInfo : public UPrimaryDataAsset
 
 protected:
 	UPROPERTY(VisibleDefaultsOnly)
-	TArray<FName> sockets { "FRONT", "BACK", "RIGHT", "LEFT", "UP", "DOWN"};
+	TArray<FName> sockets { "FRONT", "BACK", "RIGHT", "LEFT", "UP", "DOWN" };
 
 	UPROPERTY(VisibleDefaultsOnly, meta = (ArrayClamp = "sockets"))
 	TArray<APickupableMaster*> socketObjects { 0, 0, 0, 0, 0, 0 };

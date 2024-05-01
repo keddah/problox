@@ -165,6 +165,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Colletion", meta = (ToolTip = "Whether or not 'Things' are allowed to be collected (pairs with canPickup)..."))
 	bool canCollect;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
+	float thingAttraction = 42000;
+	
 	
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable)
@@ -190,7 +193,10 @@ protected:
 	UMaterial* defaultMat;
 	APickupableMaster* hitObj;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
+	float levelEndDelay = 5;
 
+	
 	/////////////// Game States ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	EGameMode currentMode;

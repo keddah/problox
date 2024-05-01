@@ -145,6 +145,18 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\CubeCore.h">
       <Filter>Source\projProblox\Pickupables\Cores</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\CuboidCore.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\CuboidCore.h">
+      <Filter>Source\projProblox\Pickupables\Cores</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\HexCore.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\HexCore.h">
+      <Filter>Source\projProblox\Pickupables\Cores</Filter>
+    </ClInclude>
     <Filter Include="Source\projProblox\Pickupables\Cores\Connectors">
       <UniqueIdentifier>{B7A5C79A-AADE-3A7F-B09F-08F3C24FB514}</UniqueIdentifier>
     </Filter>
@@ -167,6 +179,12 @@
       <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\CubeSocketInfo.h">
+      <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\CuboidSocketInfo.h">
+      <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\HexagonSocketInfo.h">
       <Filter>Source\projProblox\Pickupables\Cores\SocketInfo</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\WedgeSocketInfo.h">

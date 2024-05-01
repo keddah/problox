@@ -217,6 +217,18 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\CubeCore.h"/>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\CuboidCore.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\CuboidCore.h"/>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\HexCore.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\HexCore.h"/>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CubeConnector.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -235,6 +247,8 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\CubeSocketInfo.h"/>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\CuboidSocketInfo.h"/>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\HexagonSocketInfo.h"/>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\SocketInfo\WedgeSocketInfo.h"/>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Grapple\GrappleHead.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
