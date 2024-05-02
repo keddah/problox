@@ -2093,3 +2093,31 @@ Script Stack (0 frames) :
 [2024.05.02-09.41.25:240][583]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13
 [2024.05.02-09.41.25:247][583]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
 [2024.05.02-09.41.25:312][584]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2024.05.02-09.41.47:791][124]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.05.02-09.41.47:849][124]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Sandbox1_Auto2
+[2024.05.02-09.41.47:850][124]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1_Auto2B00E87A64BB65BE9242ACE82AE8826FF.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto2.umap'
+[2024.05.02-09.41.47:852][124]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto2.umap is in the /Temp path, will not scan.
+[2024.05.02-09.41.47:852][124]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.073
+[2024.05.02-09.41.47:852][124]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.073
+[2024.05.02-09.41.47:852][124]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/Pickupables/Cores/BP_HexCore] ([2] browsable assets)...
+[2024.05.02-09.41.47:852][124]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.02-09.41.47:858][124]LogActor: Warning: BP_HexCore_C /Engine/Transient.World_20:PersistentLevel.BP_HexCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.02-09.41.47:916][124]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_HexCore.BP_HexCore_C]
+[2024.05.02-09.41.47:922][124]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexCore.BP_HexCore]
+[2024.05.02-09.41.47:922][124]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/Cores/BP_HexCore]
+[2024.05.02-09.41.47:937][124]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/Cores/BP_HexCore_Auto2
+[2024.05.02-09.41.47:937][124]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexCore_Auto2C21708E642ACE56A853059BB89EF2C3A.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/Cores/BP_HexCore_Auto2.uasset'
+[2024.05.02-09.41.47:938][124]LogFileHelpers: Auto-saving content packages took 0.086
+[2024.05.02-09.42.27:805][999]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2024.05.02-09.42.27:934][999]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.02-09.42.27:950][999]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.02-09.42.27:993][999]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.05.02-09.42.28:045][999]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.02-09.42.28:046][999]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1009210554D034CB406B937AB32C9E10D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.02-09.42.28:056][999]LogFileHelpers: Saving map 'Sandbox1' took 0.107
+[2024.05.02-09.42.28:071][999]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_HexCore
+[2024.05.02-09.42.28:072][999]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexCoreE99A0B0C4569379DF21C9CB57C217020.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_HexCore.uasset'
+[2024.05.02-09.42.28:080][999]LogFileHelpers: InternalPromptForCheckoutAndSave took 145 ms (total: 352 ms)
+[2024.05.02-09.42.28:082][999]AssetCheck: New page: Asset Save: multiple assets
+[2024.05.02-09.42.28:082][999]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.02-09.42.28:082][999]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexCore.BP_HexCore
