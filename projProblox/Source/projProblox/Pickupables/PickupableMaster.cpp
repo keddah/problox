@@ -212,8 +212,8 @@ EOperations APickupableMaster::SetSelected(const bool value)
 		return {EOperations::Detach};
 	}
 
-	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
-	if(attachedSocket == NAME_None) return {wasDetached? EOperations::Detach : EOperations::Move};
+	if(!IsValid(parentCore)) return { wasDetached? EOperations::Detach : EOperations::Move};
+	if(attachedSocket == NAME_None) return { wasDetached? EOperations::Detach : EOperations::Move};
 
 	if(!previousObj) previousObj = parentCore;
 	

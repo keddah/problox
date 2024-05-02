@@ -44,7 +44,7 @@ void AGrappler::Ability(const float deltaTime)
 	if(IsValid(hook)) hook->Destroy();
 
 	// Spawn and set the hook
-	if(!IsValid(wrld)) return;
+	if(wrld) return;
 
 	hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();

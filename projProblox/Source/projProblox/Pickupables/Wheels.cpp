@@ -2,26 +2,208 @@
 
 
 #include "Wheels.h"
+#include "Cores/CubeCore.h"
 
-// Sets default values
 AWheels::AWheels()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	coreConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>("Constraint");
+	coreConstraint->SetupAttachment(objMesh);
 
+	coreConstraint->SetLinearXLimit(LCM_Locked, 0);
+	coreConstraint->SetLinearYLimit(LCM_Locked, 0);
+	coreConstraint->SetLinearZLimit(LCM_Locked, 0);
+	
+	coreConstraint->SetAngularSwing1Limit(ACM_Locked, 45);
+	coreConstraint->SetAngularSwing2Limit(ACM_Locked,45);
+	coreConstraint->SetAngularTwistLimit(ACM_Locked,45);
+
+	coreConstraint->SetDisableCollision(true);
+	
+	leftWheel = CreateDefaultSubobject<UStaticMeshComponent>("Left Wheel");
+	rightWheel = CreateDefaultSubobject<UStaticMeshComponent>("Right Wheel");
+	
+	leftAxel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Left Axel");
+	rightAxel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Right Axel");
+
+	SetupAttachments();
+	placeRange = 300;
+	snapRot = false;
 }
 
-// Called when the game starts or when spawned
 void AWheels::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	attachOffset = 15;
 }
 
-// Called every frame
-void AWheels::Tick(float DeltaTime)
+void AWheels::SetupAttachments() const
 {
-	Super::Tick(DeltaTime);
+	if(!leftWheel || !leftAxel || !rightWheel || !rightAxel)
+	{
+		Print("Couldn't setup wheel attachments... one of the things were invalid.", 5)		
+		return;
+	}
+
+	leftWheel->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	leftWheel->SetSimulatePhysics(true);	// Needs to simulate physics (otherwise it'll crash)
+	
+	rightWheel->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	rightWheel->SetSimulatePhysics(true);	// Needs to simulate physics (otherwise it'll crash)
+	
+	leftAxel->AttachToComponent(leftWheel, FAttachmentTransformRules::KeepWorldTransform);
+	leftAxel->SetDisableCollision(true);
+	
+	leftAxel->SetLinearXLimit(LCM_Locked, 0);
+	leftAxel->SetLinearYLimit(LCM_Locked, 0);
+	leftAxel->SetLinearZLimit(LCM_Limited, suspensionDistance);
+	
+	leftAxel->SetAngularSwing1Limit(ACM_Free, 45);
+	leftAxel->SetAngularSwing2Limit(ACM_Locked,45);
+	leftAxel->SetAngularTwistLimit(ACM_Locked,45);
+	
+	leftAxel->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
+	leftAxel->SetAngularVelocityDriveTwistAndSwing(false, true);
+
+	rightAxel->AttachToComponent(rightWheel, FAttachmentTransformRules::KeepWorldTransform);
+	rightAxel->SetDisableCollision(true);
+	
+	rightAxel->SetLinearXLimit(LCM_Locked, 0);
+	rightAxel->SetLinearYLimit(LCM_Locked, 0);
+	rightAxel->SetLinearZLimit(LCM_Limited, suspensionDistance);
+
+	rightAxel->SetAngularSwing1Limit(ACM_Free, 45);
+	rightAxel->SetAngularSwing2Limit(ACM_Locked,45);
+	rightAxel->SetAngularTwistLimit(ACM_Locked,45);
+	
+	rightAxel->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
+	rightAxel->SetAngularVelocityDriveTwistAndSwing(false, true);
+
+	leftAxel->SetConstrainedComponents(leftWheel, "", objMesh, "");
+	rightAxel->SetConstrainedComponents(rightWheel, "", objMesh, "");
+}
+
+EOperations AWheels::SetSelected(const bool value)
+{
+	selected = value;
+	objMesh->SetAngularDamping(selected? 10000000000 : 0);
+	SetConstraintsActive(!selected);
+	
+	// Only use continuous collisions while selected (to prevent objects from going through objects).
+	objMesh->SetUseCCD(selected);
+	
+	ToggleGravity();
+	SetHideIndicator(!selected);
+
+	if(selected)
+	{
+		wasDetached = isAttached;
+		Detach();
+		
+		canPlace = true;
+		return {EOperations::Detach};
+	}
+	
+	if(!IsValid(parentCore)) return { wasDetached? EOperations::Detach : EOperations::Move};
+	if(attachedSocket == NAME_None) return { wasDetached? EOperations::Detach : EOperations::Move};
+
+	if(!previousObj) previousObj = parentCore;
+
+	const FVector prevPos = GetActorLocation();
+	
+	// Using the silhouette's location/rotation to set the actual transform.
+	SetActorRotation(silhouette->GetComponentRotation());
+	SetActorLocation(silhouette->GetComponentLocation());
+
+	const FVector relativePos = prevPos - GetActorLocation();
+
+	PrintVector(relativePos, 4);
+	leftWheel->AddWorldOffset(relativePos);
+	rightWheel->AddWorldOffset(relativePos);
+	
+	Attach();
+	ResetGhost();
+
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
+	
+	return {EOperations::Attach};
+}
+
+void AWheels::Detach()
+{
+	ResetGhost();
+
+	if(!IsValid(parentCore) && !IsValid(previousObj))
+	{
+		Print("Couldn't detach... parent was invalid..", 4)
+		return;
+	}
+
+	SetAbilityActive(false);
+
+	ResetMaterial();
+	
+	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	else previousObj->RemoveAttachment(attachedSocket);
+
+	coreConstraint->BreakConstraint();
+	coreConstraint->UpdateConstraintFrames();
+	silhouette->SetupAttachment(objMesh);
+
+	if(parentCore)
+	{
+		previousObj = parentCore;
+		parentCore = nullptr;
+	}
+
+	ToggleGravity();
+	isAttached = false;
+}
+
+void AWheels::Reattach(const FTransform& transform)
+{
+	parentCore = Cast<ACubeCore>(previousObj);
+	if(!IsValid(parentCore))
+	{
+		Print("couldnt cast to core - Reattaching...", 5)
+		return;
+	}
+
+	SetActorTransform(transform);
+	Attach();
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
+}
+
+void AWheels::ToggleGravity() const
+{
+	Super::ToggleGravity();
+
+	leftWheel->SetEnableGravity(!selected);
+	rightWheel->SetEnableGravity(!selected);
+}
+
+void AWheels::RemoveVelocity() const
+{
+	Super::RemoveVelocity();
+
+	leftWheel->SetPhysicsLinearVelocity({});
+	rightWheel->SetPhysicsLinearVelocity({});
+	
+	leftWheel->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
+	rightWheel->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 
 }
 
+void AWheels::Attach() const
+{
+	coreConstraint->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
+	coreConstraint->UpdateConstraintFrames();
+
+	leftAxel->ConstraintInstance.Pos1 = {};
+	leftAxel->ConstraintInstance.Pos2 = {};
+	
+	rightAxel->ConstraintInstance.Pos1 = {};
+	rightAxel->ConstraintInstance.Pos2 = {};
+}

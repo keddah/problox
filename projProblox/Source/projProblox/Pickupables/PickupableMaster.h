@@ -152,7 +152,6 @@ protected:
 	
 	/////////////// Attachments ///////////////
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
-	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
 
 	/////////////// Rotations ///////////////
@@ -213,6 +212,7 @@ public:
 
 	/////////////// Attachments ///////////////
 	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
+	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
 
 	/////////////// Hierarchy ///////////////

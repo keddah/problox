@@ -51,8 +51,6 @@ EOperations AWheel::SetSelected(const bool value)
 	
 	SetHideIndicator(!selected);
 
-
-	
 	if(selected)
 	{
 		wasDetached = isAttached;
