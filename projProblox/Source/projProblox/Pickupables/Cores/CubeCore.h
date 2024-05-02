@@ -60,7 +60,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 {
 	GENERATED_BODY()
 
-private:
 	// The object that is attached to this cube and selected...
 	APickupableMaster* selectedObj;
 
@@ -124,7 +123,11 @@ private:
 		
 		TimedObjectActivation(delays, durations);
 	}
-	
+
+
+	/////////////// Other ///////////////
+	virtual void SetupIndicator() override;
+
 	
 protected:
 	ACubeCore();
@@ -240,7 +243,33 @@ public:
 	virtual void RemoveAttachment(const FName& socket) override;
 	virtual void RemoveAttachment(APickupableMaster* obj);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Socket")
+	bool DetachAll(bool push = true);
+	
+	UFUNCTION(BlueprintCallable, Category = "Socket")
+	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
+
+	
+	/////////////// Abilities ///////////////
+	UFUNCTION(BlueprintCallable, Category = "Ablility")
+	void SetAllAbilityActive(bool value) const;
+	virtual void SetAbilityActive(bool value) override;
+
+	
+	/////////////// Selection/Placement ///////////////
+	virtual EOperations SetSelected(const bool value) override;
+	virtual bool SetGroupSelected(const bool value) override;
+
+	
+	/////////////// Turn System ///////////////
+	void SetMaxAttempts(const short& max) { maxAttempts = max; }
+	void ResetToStart();
+	void InitiateReset() const { onAttemptEnding.Broadcast(); }
+	FTransform GetResetTransform() const { return resetTransform; }
+
+
+	/////////////// Getters ///////////////
+	UFUNCTION(BlueprintCallable, Category = "Socket")
 	TArray<AActor*> GetAttachedObjActors()
 	{
 		TArray<AActor*> out;
@@ -267,35 +296,13 @@ public:
 		
 		return out;
 	}
-	
-	UFUNCTION(BlueprintCallable)
-	bool DetachAll(bool push = true);
-	
-	UFUNCTION(BlueprintCallable)
-	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
+
 	TArray<FName> GetFreeSlots() const { return socketInfo->GetFreeSockets(); };
 
+	UFUNCTION(BlueprintCallable, Category = "Socket")
+	int GetSocketCount() const { return socketInfo->GetSockets().Num(); };
 	
-	/////////////// Abilities ///////////////
-	UFUNCTION(BlueprintCallable, Category = "Ablility")
-	void SetAllAbilityActive(bool value) const;
-	virtual void SetAbilityActive(bool value) override;
-
-	
-	/////////////// Selection/Placement ///////////////
-	virtual EOperations SetSelected(const bool value) override;
-	virtual bool SetGroupSelected(const bool value) override;
-
-	
-	/////////////// Turn System ///////////////
-	void SetMaxAttempts(const short& max) { maxAttempts = max; }
-	void ResetToStart();
-	void InitiateReset() const { onAttemptEnding.Broadcast(); }
-	FTransform GetResetTransform() const { return resetTransform; }
-
-
-	/////////////// Getters ///////////////
-	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
+	UFUNCTION(BlueprintCallable, Category = "Socket", meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
 	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
 
 	virtual float GetMass() const override;
@@ -306,7 +313,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	int GetRating() const { return rating; }
-
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
@@ -336,6 +342,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void NextWave();
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Socket")
 	int SelectSocket(int socket);
 };

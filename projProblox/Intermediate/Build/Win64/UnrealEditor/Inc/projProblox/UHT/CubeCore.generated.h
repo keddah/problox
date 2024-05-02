@@ -64,10 +64,11 @@ PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegat
 	DECLARE_FUNCTION(execGetRating); \
 	DECLARE_FUNCTION(execGetAttempts); \
 	DECLARE_FUNCTION(execGetCloseAttachments); \
+	DECLARE_FUNCTION(execGetSocketCount); \
+	DECLARE_FUNCTION(execGetAttachedObjActors); \
 	DECLARE_FUNCTION(execSetAllAbilityActive); \
 	DECLARE_FUNCTION(execObjectInSocket); \
 	DECLARE_FUNCTION(execDetachAll); \
-	DECLARE_FUNCTION(execGetAttachedObjActors); \
 	DECLARE_FUNCTION(execStartStoryGame); \
 	DECLARE_FUNCTION(execStartGame); \
 	DECLARE_FUNCTION(execStart); \

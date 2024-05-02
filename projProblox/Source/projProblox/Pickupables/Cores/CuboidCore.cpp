@@ -3,6 +3,31 @@
 
 #include "CuboidCore.h"
 
+ACuboidCore::ACuboidCore()
+{
+	otherIndicator = CreateDefaultSubobject<UArrowComponent>("2nd Place Indicator");
+	otherIndicator->SetupAttachment(objMesh);
+}
+
+void ACuboidCore::SetupIndicator()
+{
+	indicator->ArrowColor.A = .5f;
+	otherIndicator->ArrowColor.A = .5f;
+
+	const float length = placeRange * 2;
+	indicator->ArrowLength = length;
+	otherIndicator->ArrowLength = length;
+
+	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
+	indicator->SetRelativeRotation(rot);
+	otherIndicator->SetRelativeRotation(rot);
+
+	indicator->SetWorldLocation(objMesh->GetSocketLocation("DOWN1"));
+	otherIndicator->SetWorldLocation(objMesh->GetSocketLocation("DOWN2"));
+
+	SetHideIndicator(true);
+}
+
 void ACuboidCore::BeginPlay()
 {
 	Super::BeginPlay();
@@ -32,6 +57,16 @@ void ACuboidCore::Placement()
 	{
 		// If the first iteration use the first down slot...
 		const FName socket = i == 0? "DOWN1" : "DOWN2";
+
+		// Unhide both indicators...
+		SetHideIndicator(false);
+		if(ObjectInSocket(socket))
+		{
+			// Hide the correct indicator depending on the blocked socket.
+			if(socket == "DOWN1") indicator->SetHiddenInGame(true);
+			else otherIndicator->SetHiddenInGame(true);
+			continue;
+		}
 		
 		const FVector start = objMesh->GetSocketLocation(socket);
 		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	

@@ -55,13 +55,6 @@ void ACubeConnector::Tick(float DeltaSeconds)
 
 void ACubeConnector::SetupIndicator()
 {
-	// indicator->SetMaterial(0, indicatorMat);
-	// backArrow->SetMaterial(0, indicatorMat);
-	// leftArrow->SetMaterial(0, indicatorMat);
-	// rightArrow->SetMaterial(0, indicatorMat);
-	// upArrow->SetMaterial(0, indicatorMat);
-	// downArrow->SetMaterial(0, indicatorMat);
-
 	indicator->ArrowColor.A = .5f;
 	backArrow->ArrowColor.A = .5f;
 	leftArrow->ArrowColor.A = .5f;

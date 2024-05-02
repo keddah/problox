@@ -14,6 +14,11 @@ class PROJPROBLOX_API AHexCore : public ACubeCore
 {
 	GENERATED_BODY()
 
+	AHexCore();
+	
+    UPROPERTY(EditDefaultsOnly)
+    UStaticMeshComponent* topper;
+
 protected:
 	virtual void BeginPlay() override;
 };

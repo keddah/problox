@@ -38,7 +38,7 @@ APickupableMaster::APickupableMaster()
 	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
 	indicator->SetupAttachment(objMesh);
 	
-	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collision"));
+	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
 	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
 	collider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 	collider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);

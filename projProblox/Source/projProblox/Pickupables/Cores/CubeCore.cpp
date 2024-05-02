@@ -19,6 +19,20 @@
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/GameModes/Modes.h"
 
+void ACubeCore::SetupIndicator()
+{
+	indicator->ArrowColor.A = .5f;
+
+	const float length = placeRange * 2;
+	indicator->ArrowLength = length;
+
+	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
+	indicator->SetRelativeRotation(rot);
+
+	indicator->SetWorldLocation(objMesh->GetSocketLocation("DOWN"));
+	SetHideIndicator(true);
+}
+
 ACubeCore::ACubeCore()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -67,7 +81,15 @@ void ACubeCore::Placement()
 {
 	if(!canPlace) return;
 	if(!selected) return;
-	if(ObjectInSocket(raySocket)) return;
+
+	// Unhide the indicator...
+	SetHideIndicator(false);
+	if(ObjectInSocket(raySocket))
+	{
+		// Hide it if blocked...
+		SetHideIndicator(true);
+		return;
+	}
 
 	RemoveVelocity();
 	
