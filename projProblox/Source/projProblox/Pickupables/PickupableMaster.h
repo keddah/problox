@@ -59,6 +59,7 @@ protected:
 	/////////////// Selection / Placement ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
+	bool groupSelected;
 
 	// When group selected, you're unable to place cores...
 	bool canPlace;

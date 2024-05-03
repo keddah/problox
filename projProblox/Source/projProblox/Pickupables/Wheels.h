@@ -49,7 +49,10 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 		leftAxel->SetActive(constrained);
 		rightAxel->SetActive(constrained);
 	}
-	
+
+	FVector leftOffset;
+	FVector rightOffset;
+
 public:
 	void SetParentDominates(const bool dominate) const
 	{

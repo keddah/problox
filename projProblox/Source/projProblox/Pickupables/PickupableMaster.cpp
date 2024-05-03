@@ -230,10 +230,10 @@ EOperations APickupableMaster::SetSelected(const bool value)
 
 bool APickupableMaster::SetGroupSelected(const bool value)
 {
-	selected = value;
-	ToggleGravity();
+	groupSelected = value;
+	ToggleGravity(!groupSelected);
 	
-	canPlace = !selected;
+	canPlace = !groupSelected;
 	return true;
 }
 

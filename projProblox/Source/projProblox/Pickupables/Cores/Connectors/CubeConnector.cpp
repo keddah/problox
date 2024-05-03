@@ -284,10 +284,10 @@ EOperations ACubeConnector::SetSelected(const bool value)
 
 bool ACubeConnector::SetGroupSelected(const bool value)
 {
-	selected = value;
-	ToggleGravity();
+	groupSelected = value;
+	ToggleGravity(!groupSelected);
 	
-	canPlace = !selected;
+	canPlace = !groupSelected;
 	
 	return true;
 }

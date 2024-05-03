@@ -236,6 +236,7 @@ protected:
 	/////////////// Other ///////////////
 	virtual void RemoveVelocity() const override;
 	virtual void ToggleGravity() const override;
+	virtual void ToggleGravity(bool gravityOn) override { Super::ToggleGravity(gravityOn); };
 	
 public:
 	/////////////// Attachments ///////////////

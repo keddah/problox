@@ -22,6 +22,10 @@ void AWheels::BeginPlay()
 	Super::BeginPlay();
 
 	attachOffset = 15;
+
+	const FVector objPos = objMesh->GetComponentLocation();
+	leftOffset = (objPos - leftWheel->GetComponentLocation()) - 5; 
+	rightOffset = (objPos - rightWheel->GetComponentLocation()) - 5.5f;
 }
 
 void AWheels::SetupAttachments() const
@@ -95,19 +99,22 @@ EOperations AWheels::SetSelected(const bool value)
 
 	if(!previousObj) previousObj = parentCore;
 
-	
 	// Using the silhouette's location/rotation to set the actual transform.
 	SetActorRotation(silhouette->GetComponentRotation());
 	SetActorLocation(silhouette->GetComponentLocation());
 
-	const FTransform relativeLeft = leftWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetComponentTransform());
-	const FTransform relativeRight = rightWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetComponentTransform());
+	FRotator leftRot = leftWheel->GetComponentRotation();
+	FRotator rightRot = rightWheel->GetComponentRotation();
 	
 	const FVector pos = GetActorLocation();
-	const FVector leftOffset = objMesh->GetRightVector() * -relativeLeft.GetLocation() * relativeLeft.GetScale3D() + objMesh->GetUpVector() * -25;
-	const FVector rightOffset = objMesh->GetRightVector() * relativeRight.GetLocation() * relativeRight.GetScale3D() + objMesh->GetUpVector() * -25;
 	leftWheel->SetWorldLocation(pos + leftOffset);
 	rightWheel->SetWorldLocation(pos + rightOffset);
+
+	leftRot = RoundRotation(leftRot, objMesh->GetComponentRotation());
+	rightRot = RoundRotation(rightRot, objMesh->GetComponentRotation());
+	
+	leftWheel->SetWorldRotation({0, rightRot.Yaw, leftRot.Roll});
+	rightWheel->SetWorldRotation({0, rightRot.Yaw, rightRot.Roll});
 
 	Attach();
 	ResetGhost();
@@ -127,12 +134,6 @@ void AWheels::Attach() const
 
 	objMesh->AttachToComponent(parentCore->GetMesh(), attachRules, attachedSocket);
 
-	const FRotator relativeLeft = leftWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetRelativeTransform()).Rotator();
-	leftWheel->SetWorldRotation(leftWheel->GetComponentRotation() + relativeLeft);
-
-	const FRotator relativeRight = rightWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetRelativeTransform()).Rotator();
-	rightWheel->SetWorldRotation(rightWheel->GetComponentRotation() + relativeRight);
-	
 	leftAxel->ConstraintInstance.Pos1 = {};
 	leftAxel->ConstraintInstance.Pos2 = {};
 	
@@ -222,8 +223,8 @@ void AWheels::GhostPlacement()
 	
 	// silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 
-	const FRotator relativeRot = RoundRotation(silhouette->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).Rotator());
-	silhouette->SetRelativeRotation({0, 0, relativeRot.Roll});
+	const FRotator relativeRot = RoundRotation(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket));
+	silhouette->SetWorldRotation(relativeRot);
 }
 
 float AWheels::GetAttachOffset(const APickupableMaster& attachee)
