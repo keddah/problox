@@ -506,7 +506,7 @@ void ACubeCore::ToggleGravity() const
 	Super::ToggleGravity();
 
 	// Disable gravity on all of the things attached to the core.
-	for(const auto& obj : GetAttachedObjects()) obj->GetMesh()->SetEnableGravity(!selected);
+	for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(!selected);
 }
 
 void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)

@@ -264,12 +264,13 @@ public:
 	virtual void ToggleGravity() const
 	{
 		objMesh->SetEnableGravity(!selected);
-		RemoveVelocity();
+		if(selected) RemoveVelocity();
 	}
 	virtual void ToggleGravity(bool gravityOn)
 	{
+		Print("unmodifges", 3)
 		objMesh->SetEnableGravity(gravityOn);
-		RemoveVelocity();
+		if(!gravityOn) RemoveVelocity();	
 	}
 	
 	virtual void RemoveVelocity() const;

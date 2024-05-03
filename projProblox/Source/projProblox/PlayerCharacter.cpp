@@ -98,7 +98,6 @@ void APlayerCharacter::Undo()
 	changedObj->SetActorLocation(task.startTransform.GetLocation());
 	changedObj->SetActorRotation(task.startTransform.Rotator());
 	changedObj->RemoveVelocity();
-	Print("Undoing...", 4)
 }
 
 void APlayerCharacter::Redo()
@@ -143,7 +142,6 @@ void APlayerCharacter::Redo()
 	changedObj->SetActorLocation(task.endTransform.GetLocation());
 	changedObj->SetActorRotation(task.endTransform.Rotator());
 	changedObj->RemoveVelocity();
-	Print("Redoing...", 4)
 }
 
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)

@@ -44,9 +44,10 @@ public:
 	void RemoveAttachment(APickupableMaster* obj);
 	void ClearAttachments() { for(const auto& name : sockets) RemoveAttachment(name);}
 
-	// Use these when an array of only valid elements is wanted
+	// Use this when an array of only valid elements is wanted
 	TArray<AActor*> GetAttachmentActors() const;
-	// Use these when an array of only valid elements is wanted
+	
+	// Use this when an array of only valid elements is wanted
 	TArray<APickupableMaster*> GetAttachments() const;
 
 	

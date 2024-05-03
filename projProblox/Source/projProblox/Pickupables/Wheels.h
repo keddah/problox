@@ -41,10 +41,16 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	virtual void Reattach(const FTransform& transform) override;
 	
 	virtual void ToggleGravity() const override;
+	virtual void ToggleGravity(bool gravityOn) override;
 	virtual void RemoveVelocity() const override;
 
 	void SetupAttachments() const;
-	void SetConstraintsActive(const bool constrained) const { leftAxel->SetActive(constrained); rightAxel->SetActive(constrained); coreConstraint->SetActive(constrained); }
+	void SetConstraintsActive(const bool constrained) const
+	{
+		leftAxel->SetActive(constrained);
+		rightAxel->SetActive(constrained);
+		coreConstraint->SetActive(constrained);
+	}
 	
 public:
 	void SetParentDominates(const bool dominate) const

@@ -86,7 +86,6 @@ void AWheels::SetupAttachments() const
 EOperations AWheels::SetSelected(const bool value)
 {
 	selected = value;
-	objMesh->SetAngularDamping(selected? 10000000000 : 0);
 	SetConstraintsActive(!selected);
 	
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
@@ -116,8 +115,6 @@ EOperations AWheels::SetSelected(const bool value)
 	SetActorLocation(silhouette->GetComponentLocation());
 
 	const FVector relativePos = prevPos - GetActorLocation();
-
-	PrintVector(relativePos, 4);
 	leftWheel->AddWorldOffset(relativePos);
 	rightWheel->AddWorldOffset(relativePos);
 	
@@ -126,7 +123,7 @@ EOperations AWheels::SetSelected(const bool value)
 
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
-	
+
 	return {EOperations::Attach};
 }
 
@@ -178,14 +175,26 @@ void AWheels::Reattach(const FTransform& transform)
 
 void AWheels::ToggleGravity() const
 {
+	// Does the same for objMesh... Also calls RemoveVelocity
 	Super::ToggleGravity();
 
 	leftWheel->SetEnableGravity(!selected);
 	rightWheel->SetEnableGravity(!selected);
+	SetParentDominates(selected);
+}
+
+void AWheels::ToggleGravity(bool gravityOn)
+{
+	Super::ToggleGravity(gravityOn);
+
+	leftWheel->SetEnableGravity(gravityOn);
+	rightWheel->SetEnableGravity(gravityOn);
+	SetParentDominates(!gravityOn);
 }
 
 void AWheels::RemoveVelocity() const
 {
+	// Does the same for objMesh...
 	Super::RemoveVelocity();
 
 	leftWheel->SetPhysicsLinearVelocity({});

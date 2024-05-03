@@ -49,7 +49,6 @@ FTask UActionHistory::Redo()
 void UActionHistory::NewAction(const FTask& task)
 {
 	tasks.Add(task);
-	Print("Addedd task", 5)
 	
 	// Don't overwrite if there aren't any tasks or if the current task is the latest task.
 	bool overwrite = true;
@@ -67,7 +66,7 @@ void UActionHistory::NewAction(const FTask& task)
 		tasks.RemoveAt(0);
 		currentTask--;
 	}
-	Print("Current Task: " + FString::FromInt(currentTask), 6);
+	Print("Current Task: " + FString::FromInt(currentTask), 2);
 }
 
 void UActionHistory::Overwrite()
