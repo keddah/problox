@@ -217,9 +217,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	AttachToActor(parentCore, attachRules, attachedSocket);
 
 	// Using the silhouette's location/rotation to set the actual transform.
-	SetActorRotation(silhouette->GetComponentRotation());
-	SetActorLocation(silhouette->GetComponentLocation());
-	
+	UseSilhouetteTransform();
 	ResetGhost();
 
 	parentCore->AddAttachment(this, attachedSocket);

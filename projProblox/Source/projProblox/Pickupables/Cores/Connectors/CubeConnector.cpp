@@ -268,8 +268,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
 
 	// Use the silhouettes position/rotation...
-	SetActorLocation(silhouette->GetComponentLocation());
-	SetActorRotation(silhouette->GetComponentRotation());
+	UseSilhouetteTransform();
 
 	// Reset the ghost's rotation
 	ResetGhost();

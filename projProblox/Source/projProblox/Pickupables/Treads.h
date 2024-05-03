@@ -23,7 +23,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	GENERATED_BODY()
 
 	ATreads();
-
+	
 	virtual void Ability(float deltaTime) override;
 	void Drag() const;
 	

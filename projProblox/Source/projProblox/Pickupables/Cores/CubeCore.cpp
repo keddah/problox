@@ -105,7 +105,7 @@ void ACubeCore::Placement()
 	
 	// Debug Draw
 	const FVector start = objMesh->GetSocketLocation(raySocket);
-	DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
+	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
 	AActor* hitActor = hit.GetActor();
@@ -116,7 +116,7 @@ void ACubeCore::Placement()
 		return;
 	}
 
-	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
+	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
 	
 	if(!hitActor)
 	{
@@ -259,9 +259,8 @@ EOperations ACubeCore::SetSelected(const bool value)
 	
 	if(!IsValid(hitObj)) return {EOperations::Move};
 
-	// Rotate to match the socket rotation
-	hitObj->SetActorRotation(hitObj->GetSilhouette()->GetComponentRotation());
-	hitObj->SetActorLocation(hitObj->GetSilhouette()->GetComponentLocation());
+	// Teleport the hit object to the silhouette
+	hitObj->UseSilhouetteTransform(silhouette);
 	
 	// Syncing the socket info
 	AddAttachment(hitObj, attachedSocket);

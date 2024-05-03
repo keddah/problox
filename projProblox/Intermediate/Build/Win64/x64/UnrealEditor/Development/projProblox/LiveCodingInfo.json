@@ -45,7 +45,6 @@
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
-			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
@@ -53,6 +52,7 @@
 			"CubeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
 			"PickupableMaster.cpp.obj",
+			"Treads.cpp.obj",
 			"Wheels.cpp.obj"
 		]
 	}

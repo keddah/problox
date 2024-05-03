@@ -211,6 +211,21 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetCanPickup(const bool can) { canPickup = can; }
 
+	// Since this is used a lot...
+	void UseSilhouetteTransform(const UStaticMeshComponent* ghost = 0)
+	{
+		if(!ghost)
+		{
+			const FTransform silhouetteTransform = silhouette->GetComponentTransform();
+			SetActorLocation(silhouetteTransform.GetLocation());
+			SetActorRotation(silhouetteTransform.GetRotation());
+			return;
+		}
+		
+		const FTransform silhouetteTransform = ghost->GetComponentTransform();
+		SetActorLocation(silhouetteTransform.GetLocation());
+		SetActorRotation(silhouetteTransform.GetRotation());
+	}
 	
 
 	/////////////// Ability ///////////////

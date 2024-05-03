@@ -34,8 +34,8 @@
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
+			"CubeConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -46,13 +46,13 @@
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
-			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"CubeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"PickupableMaster.cpp.obj",
+			"Treads.cpp.obj",
 			"Wheels.cpp.obj"
 		]
 	}
