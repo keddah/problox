@@ -2,23 +2,10 @@
 
 
 #include "Wheels.h"
-#include "Cores/CubeCore.h"
+#include "Cores/Connectors/CubeConnector.h"
 
 AWheels::AWheels()
 {
-	coreConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>("Constraint");
-	coreConstraint->SetupAttachment(objMesh);
-
-	coreConstraint->SetLinearXLimit(LCM_Locked, 0);
-	coreConstraint->SetLinearYLimit(LCM_Locked, 0);
-	coreConstraint->SetLinearZLimit(LCM_Locked, 0);
-	
-	coreConstraint->SetAngularSwing1Limit(ACM_Locked, 45);
-	coreConstraint->SetAngularSwing2Limit(ACM_Locked,45);
-	coreConstraint->SetAngularTwistLimit(ACM_Locked,45);
-
-	coreConstraint->SetDisableCollision(true);
-	
 	leftWheel = CreateDefaultSubobject<UStaticMeshComponent>("Left Wheel");
 	rightWheel = CreateDefaultSubobject<UStaticMeshComponent>("Right Wheel");
 	
@@ -108,16 +95,20 @@ EOperations AWheels::SetSelected(const bool value)
 
 	if(!previousObj) previousObj = parentCore;
 
-	const FVector prevPos = GetActorLocation();
 	
 	// Using the silhouette's location/rotation to set the actual transform.
 	SetActorRotation(silhouette->GetComponentRotation());
 	SetActorLocation(silhouette->GetComponentLocation());
 
-	const FVector relativePos = prevPos - GetActorLocation();
-	leftWheel->AddWorldOffset(relativePos);
-	rightWheel->AddWorldOffset(relativePos);
+	const FTransform relativeLeft = leftWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetComponentTransform());
+	const FTransform relativeRight = rightWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetComponentTransform());
 	
+	const FVector pos = GetActorLocation();
+	const FVector leftOffset = objMesh->GetRightVector() * -relativeLeft.GetLocation() * relativeLeft.GetScale3D() + objMesh->GetUpVector() * -25;
+	const FVector rightOffset = objMesh->GetRightVector() * relativeRight.GetLocation() * relativeRight.GetScale3D() + objMesh->GetUpVector() * -25;
+	leftWheel->SetWorldLocation(pos + leftOffset);
+	rightWheel->SetWorldLocation(pos + rightOffset);
+
 	Attach();
 	ResetGhost();
 
@@ -125,6 +116,28 @@ EOperations AWheels::SetSelected(const bool value)
 	isAttached = true;
 
 	return {EOperations::Attach};
+}
+
+void AWheels::Attach() const
+{
+	leftAxel->SetConstrainedComponents(leftWheel, "", parentCore->GetMesh(), "");
+	rightAxel->SetConstrainedComponents(rightWheel, "", parentCore->GetMesh(), "");
+	leftAxel->UpdateConstraintFrames();
+	rightAxel->UpdateConstraintFrames();
+
+	objMesh->AttachToComponent(parentCore->GetMesh(), attachRules, attachedSocket);
+
+	const FRotator relativeLeft = leftWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetRelativeTransform()).Rotator();
+	leftWheel->SetWorldRotation(leftWheel->GetComponentRotation() + relativeLeft);
+
+	const FRotator relativeRight = rightWheel->GetComponentTransform().GetRelativeTransform(objMesh->GetRelativeTransform()).Rotator();
+	rightWheel->SetWorldRotation(rightWheel->GetComponentRotation() + relativeRight);
+	
+	leftAxel->ConstraintInstance.Pos1 = {};
+	leftAxel->ConstraintInstance.Pos2 = {};
+	
+	rightAxel->ConstraintInstance.Pos1 = {};
+	rightAxel->ConstraintInstance.Pos2 = {};
 }
 
 void AWheels::Detach()
@@ -138,14 +151,26 @@ void AWheels::Detach()
 	}
 
 	SetAbilityActive(false);
-
 	ResetMaterial();
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
 	else previousObj->RemoveAttachment(attachedSocket);
 
-	coreConstraint->BreakConstraint();
-	coreConstraint->UpdateConstraintFrames();
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+
+	leftAxel->SetConstrainedComponents(leftWheel, "", objMesh, "");
+	rightAxel->SetConstrainedComponents(rightWheel, "", objMesh, "");
+	leftAxel->UpdateConstraintFrames();
+	rightAxel->UpdateConstraintFrames();
+	
+	leftAxel->ConstraintInstance.Pos1 = {};
+	leftAxel->ConstraintInstance.Pos2 = {};
+	rightAxel->ConstraintInstance.Pos1 = {};
+	rightAxel->ConstraintInstance.Pos2 = {};
+
+	leftAxel->SetRelativeRotation({0,0,0});
+	rightAxel->SetRelativeRotation({0,0,0});
+	
 	silhouette->SetupAttachment(objMesh);
 
 	if(parentCore)
@@ -172,6 +197,42 @@ void AWheels::Reattach(const FTransform& transform)
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }
+
+void AWheels::GhostPlacement()
+{
+	RemoveVelocity();
+	
+	if(!parentCore) return;
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetHiddenInGame(false);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
+	
+	GetAttachOffset(*parentCore);
+	silhouette->SetRelativeLocation({attachOffset,0,0});
+	
+	// Have to realign the socket rotation with another axis
+	FRotator socketRot = parentCore->GetMesh()->GetSocketRotation(attachedSocket);
+	const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
+	socketRot = socketRot.RotateVector(socketForward).Rotation();
+
+	const FRotator rot = UKismetMathLibrary::MakeRotFromX(socketForward);
+
+	// Rotate to match the socket rotation
+	silhouette->SetWorldRotation(rot);
+	
+	// silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
+
+	const FRotator relativeRot = RoundRotation(silhouette->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).Rotator());
+	silhouette->SetRelativeRotation({0, 0, relativeRot.Roll});
+}
+
+float AWheels::GetAttachOffset(const APickupableMaster& attachee)
+{
+	// If the attachee is a cube core, reduce the offset
+	attachOffset = !attachee.IsA<ACubeConnector>() && attachee.IsA<ACubeCore>()? 10 : 15;
+	return Super::GetAttachOffset(attachee);
+}
+
 
 void AWheels::ToggleGravity() const
 {
@@ -202,17 +263,4 @@ void AWheels::RemoveVelocity() const
 	
 	leftWheel->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 	rightWheel->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
-
-}
-
-void AWheels::Attach() const
-{
-	coreConstraint->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
-	coreConstraint->UpdateConstraintFrames();
-
-	leftAxel->ConstraintInstance.Pos1 = {};
-	leftAxel->ConstraintInstance.Pos2 = {};
-	
-	rightAxel->ConstraintInstance.Pos1 = {};
-	rightAxel->ConstraintInstance.Pos2 = {};
 }

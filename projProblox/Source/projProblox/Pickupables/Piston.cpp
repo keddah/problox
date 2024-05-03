@@ -25,6 +25,8 @@ void APiston::BeginPlay()
 
 void APiston::Ability(const float deltaTime)
 {
+	Super::Ability(deltaTime);
+	
     objMesh->SetHiddenInGame(!active);
 	objMesh->SetCollisionResponseToAllChannels(active? ECR_Block:ECR_Ignore);
 	moving = false;

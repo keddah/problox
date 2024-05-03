@@ -19,6 +19,8 @@ AGlider::AGlider()
 
 void AGlider::Ability(const float deltaTime)
 {
+	Super::Ability(deltaTime);
+		
 	// Doesn't need to be "active" in order to work
 	if(!isAttached) return;
 	if(selected)

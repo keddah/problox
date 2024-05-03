@@ -30,6 +30,8 @@ APropeller::APropeller()
 
 void APropeller::Ability(const float deltaTime)
 {
+	Super::Ability(deltaTime);
+	
 	if(!active) return;
 
 	objMesh->AddLocalRotation({0, 0, spinSpeed});

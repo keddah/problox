@@ -15,9 +15,6 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	AWheels();
 	virtual void BeginPlay() override;
 	
-	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "Used to attach cores to this wheel platform."))
-	UPhysicsConstraintComponent* coreConstraint;
-
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* leftAxel;
 
@@ -39,6 +36,8 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	virtual EOperations SetSelected(const bool value) override;
 	virtual void Detach() override;
 	virtual void Reattach(const FTransform& transform) override;
+	virtual void GhostPlacement() override;
+	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
 	virtual void ToggleGravity() const override;
 	virtual void ToggleGravity(bool gravityOn) override;
@@ -49,7 +48,6 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	{
 		leftAxel->SetActive(constrained);
 		rightAxel->SetActive(constrained);
-		coreConstraint->SetActive(constrained);
 	}
 	
 public:

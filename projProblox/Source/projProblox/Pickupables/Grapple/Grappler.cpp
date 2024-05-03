@@ -31,6 +31,8 @@ AGrappler::AGrappler()
 
 void AGrappler::Ability(const float deltaTime)
 {
+	Super::Ability(deltaTime);
+	
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
 
 	if(!active) return;

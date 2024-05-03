@@ -139,7 +139,14 @@ protected:
 	virtual void GhostPlacement();
 	void ResetGhost(bool resetRot = true) const;
 	
-	virtual void Ability(float deltaTime) {}
+	virtual void Ability(float deltaTime)
+	{
+		if(active)
+		{
+			silhouette->SetWorldRotation(objMesh->GetComponentRotation());
+			silhouette->SetWorldLocation(objMesh->GetComponentLocation());
+		}
+	}
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }
@@ -268,7 +275,6 @@ public:
 	}
 	virtual void ToggleGravity(bool gravityOn)
 	{
-		Print("unmodifges", 3)
 		objMesh->SetEnableGravity(gravityOn);
 		if(!gravityOn) RemoveVelocity();	
 	}

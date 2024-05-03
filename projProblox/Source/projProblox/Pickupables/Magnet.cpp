@@ -32,6 +32,8 @@ void AMagnet::BeginPlay()
 
 void AMagnet::Ability(const float deltaTime)
 {
+	Super::Ability(deltaTime);
+	
 	// if(!active) return;
 	const FVector thisPos = GetActorLocation();
 	for (const auto& mag : otherMagnets)

@@ -285,7 +285,7 @@ bool ACubeCore::SetGroupSelected(const bool value)
 {
 	if(!canCollect) return false;
 
-	return Super::SetGroupSelected(value);;
+	return Super::SetGroupSelected(value);
 }
 
 void ACubeCore::ResetToStart()
@@ -633,6 +633,8 @@ void ACubeCore::SetCanCollect(bool collectable)
 
 void ACubeCore::Reattach(const FTransform& transform)
 {
+	if(!hitObj) return;
+	
 	hitObj = previousObj;
 	hitObj->Reattach(transform);
 	RevertAttachments();

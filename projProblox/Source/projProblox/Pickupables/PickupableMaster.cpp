@@ -158,14 +158,13 @@ void APickupableMaster::GhostPlacement()
 	silhouette->SetHiddenInGame(false);
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
 	
-	GetAttachOffset(*parentCore);
 	silhouette->SetRelativeLocation({attachOffset,0,0});
 	
-	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	
 	if(snapRot)
 	{
-		const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
+		const FVector forwardVec = UKismetMathLibrary::GetForwardVector(parentMesh->GetSocketRotation(attachedSocket));
 
 		FRotator rot;
 		if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
@@ -177,8 +176,6 @@ void APickupableMaster::GhostPlacement()
 		return;
 	}
 
-	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	
 	// Have to realign the socket rotation with another axis
 	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
 	const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
@@ -237,7 +234,6 @@ bool APickupableMaster::SetGroupSelected(const bool value)
 	ToggleGravity();
 	
 	canPlace = !selected;
-	
 	return true;
 }
 
@@ -462,9 +458,8 @@ void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
 	silhouette->SetMaterial(0, mat);
 
 	silhouette->AttachToComponent(objMesh, ghostRules);
-	
-	silhouette->AddRelativeRotation({0,0,0});
-	silhouette->SetRelativeLocation({0,0,0});
+	silhouette->SetWorldRotation(objMesh->GetComponentRotation());
+	silhouette->SetWorldLocation(objMesh->GetComponentLocation());
 }
 
 void APickupableMaster::DeactivateOutline() const

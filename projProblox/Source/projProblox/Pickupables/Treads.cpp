@@ -41,6 +41,8 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 
 void ATreads::Ability(const float deltaTime)
 {
+	Super::Ability(deltaTime);
+
 	// Drag();
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
