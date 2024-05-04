@@ -236,7 +236,11 @@ protected:
 	/////////////// Other ///////////////
 	virtual void RemoveVelocity() const override;
 	virtual void ToggleGravity() const override;
-	virtual void ToggleGravity(bool gravityOn) override { Super::ToggleGravity(gravityOn); };
+	virtual void ToggleGravity(bool gravityOn) override
+	{
+		Super::ToggleGravity(gravityOn);
+		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(gravityOn);
+	}
 	
 public:
 	/////////////// Attachments ///////////////

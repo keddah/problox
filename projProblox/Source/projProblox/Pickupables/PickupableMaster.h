@@ -214,6 +214,7 @@ public:
 	// Since this is used a lot...
 	void UseSilhouetteTransform(const UStaticMeshComponent* ghost = 0)
 	{
+		// If a silhouette wasn't given, use this one.
 		if(!ghost)
 		{
 			const FTransform silhouetteTransform = silhouette->GetComponentTransform();

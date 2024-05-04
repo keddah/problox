@@ -14,6 +14,7 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 
 	AWheels();
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* leftAxel;
@@ -21,6 +22,12 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* rightAxel;
 
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "Used so that the transform for the wheel can be set correctly."))
+	USceneComponent* leftPivot;
+	
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "Used so that the transform for the wheel can be set correctly."))
+	USceneComponent* rightPivot;
+	
 	UPROPERTY(EditDefaultsOnly)
 	UStaticMeshComponent* leftWheel;
 	
@@ -30,6 +37,9 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "The maximum both wheels are allowed to go up/down"))
 	float suspensionDistance = 25;
 
+	// Both wheels follow the objMesh
+	bool follow;
+	
 	// Just using this to get to the tick function....
 	virtual void Ability(float deltaTime) override { if(selected) RemoveVelocity(); }
 
@@ -48,10 +58,9 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	{
 		leftAxel->SetActive(constrained);
 		rightAxel->SetActive(constrained);
+		leftWheel->SetSimulatePhysics(constrained);
+		rightWheel->SetSimulatePhysics(constrained);
 	}
-
-	FVector leftOffset;
-	FVector rightOffset;
 
 public:
 	void SetParentDominates(const bool dominate) const

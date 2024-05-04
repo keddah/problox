@@ -12,6 +12,11 @@ AWheels::AWheels()
 	leftAxel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Left Axel");
 	rightAxel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Right Axel");
 
+	leftPivot = CreateDefaultSubobject<USceneComponent>("Left Pivot");
+	rightPivot = CreateDefaultSubobject<USceneComponent>("Right Pivot");
+	leftPivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	rightPivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	
 	SetupAttachments();
 	placeRange = 300;
 	snapRot = false;
@@ -22,10 +27,18 @@ void AWheels::BeginPlay()
 	Super::BeginPlay();
 
 	attachOffset = 15;
+}
 
-	const FVector objPos = objMesh->GetComponentLocation();
-	leftOffset = (objPos - leftWheel->GetComponentLocation()) - 5; 
-	rightOffset = (objPos - rightWheel->GetComponentLocation()) - 5.5f;
+void AWheels::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	if(!(follow || groupSelected)) return;
+	leftWheel->SetWorldLocation(leftPivot->GetComponentLocation());
+	leftWheel->SetWorldRotation(leftPivot->GetComponentRotation());
+
+	rightWheel->SetWorldLocation(rightPivot->GetComponentLocation());
+	rightWheel->SetWorldRotation(rightPivot->GetComponentRotation());
 }
 
 void AWheels::SetupAttachments() const
@@ -77,6 +90,8 @@ void AWheels::SetupAttachments() const
 EOperations AWheels::SetSelected(const bool value)
 {
 	selected = value;
+	follow = selected;
+	
 	SetConstraintsActive(!selected);
 	
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
@@ -89,7 +104,6 @@ EOperations AWheels::SetSelected(const bool value)
 	{
 		wasDetached = isAttached;
 		Detach();
-		
 		canPlace = true;
 		return {EOperations::Detach};
 	}
@@ -102,26 +116,22 @@ EOperations AWheels::SetSelected(const bool value)
 	// Using the silhouette's location/rotation to set the actual transform.
 	UseSilhouetteTransform();
 
-	FRotator leftRot = leftWheel->GetComponentRotation();
-	FRotator rightRot = rightWheel->GetComponentRotation();
+	leftWheel->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	rightWheel->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 
-	// leftWheel->AttachToComponent(objMesh, ghostRules);
-	// leftWheel->SetRelativeLocation({-150, -53.75f, 0});
-	// leftWheel->SetRelativeRotation({0,0,90});
-	// leftWheel->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	//
-	// rightWheel->AttachToComponent(objMesh, ghostRules);
-	// rightWheel->SetRelativeLocation({-150, 50, 0});
-	// rightWheel->SetRelativeRotation({0,0,90});
-	// rightWheel->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	SetParentDominates(true);
+	leftAxel->SetActive(false);
+	rightAxel->SetActive(false);
+	leftWheel->SetSimulatePhysics(false);
+	rightWheel->SetSimulatePhysics(false);
 
-	leftRot = RoundRotation(leftRot, objMesh->GetComponentRotation());
-	rightRot = RoundRotation(rightRot, objMesh->GetComponentRotation());
-	
-	// leftWheel->SetWorldRotation({0, rightRot.Yaw, leftRot.Roll});
-	// rightWheel->SetWorldRotation({0, rightRot.Yaw, rightRot.Roll});
+	leftWheel->SetWorldLocation(leftPivot->GetComponentLocation());
+	leftWheel->SetWorldRotation(leftPivot->GetComponentRotation());
+	rightWheel->SetWorldLocation(rightPivot->GetComponentLocation());
+	rightWheel->SetWorldRotation(rightPivot->GetComponentRotation());
 	
 	Attach();
+
 	ResetGhost();
 
 	parentCore->AddAttachment(this, attachedSocket);
@@ -132,11 +142,18 @@ EOperations AWheels::SetSelected(const bool value)
 
 void AWheels::Attach() const
 {
+	leftWheel->SetSimulatePhysics(true);
+	rightWheel->SetSimulatePhysics(true);
+	leftAxel->SetActive(true);
+	rightAxel->SetActive(true);
+	
 	leftAxel->SetConstrainedComponents(leftWheel, "", parentCore->GetMesh(), "");
 	rightAxel->SetConstrainedComponents(rightWheel, "", parentCore->GetMesh(), "");
 	leftAxel->UpdateConstraintFrames();
 	rightAxel->UpdateConstraintFrames();
-
+	
+	SetParentDominates(false);
+	
 	objMesh->AttachToComponent(parentCore->GetMesh(), attachRules, attachedSocket);
 }
 
@@ -210,8 +227,29 @@ void AWheels::GhostPlacement()
 	GetAttachOffset(*parentCore);
 	silhouette->SetRelativeLocation({attachOffset,0,0});
 
-	const FRotator relativeRot = RoundRotation(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket));
-	silhouette->SetWorldRotation(relativeRot);
+	// const FRotator relativeRot = RoundRotation(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket));
+	// silhouette->SetWorldRotation(relativeRot);
+
+	const bool attachDiag = attachedSocket == "DIAG";
+
+	// Have to realign the socket rotation with another axis
+	const FRotator socketRot = DiagRoundRot(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket), attachDiag);
+
+	silhouette->SetWorldRotation(socketRot);
+
+	// All this to fix the rotation....
+	const FRotator relativeRot = objMesh->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
+	
+	// Whether the attached socket is the diagonal side of a wedge...
+	const unsigned short rounder = attachDiag? 45 : 90; 
+	
+	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
+	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % rounder == 0 && FMath::RoundToInt(relativeRot.Pitch) % rounder == 0 && FMath::RoundToInt(relativeRot.Yaw) % rounder == 0;  
+
+	// If the current rotation isn't aligned with the socket rotation (the relative rotation since it's already attached)...
+	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
+	// Ensures that the final rotation is always aligned.
+	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
 }
 
 float AWheels::GetAttachOffset(const APickupableMaster& attachee)
@@ -226,7 +264,7 @@ void AWheels::ToggleGravity() const
 {
 	// Does the same for objMesh... Also calls RemoveVelocity
 	Super::ToggleGravity();
-
+	
 	leftWheel->SetEnableGravity(!selected);
 	rightWheel->SetEnableGravity(!selected);
 	SetParentDominates(selected);
@@ -238,6 +276,8 @@ void AWheels::ToggleGravity(bool gravityOn)
 
 	leftWheel->SetEnableGravity(gravityOn);
 	rightWheel->SetEnableGravity(gravityOn);
+	leftWheel->SetSimulatePhysics(gravityOn);
+	rightWheel->SetSimulatePhysics(gravityOn);
 	SetParentDominates(!gravityOn);
 }
 
