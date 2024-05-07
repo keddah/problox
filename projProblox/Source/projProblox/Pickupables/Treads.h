@@ -4,7 +4,6 @@
 * The header file for one of the pickupable objects.
 * OVERRIDES:
 *	GetAttachedOffset
-*	SetAbilityActive
 *	Ability
 *
 * Created by Dean Atkinson-Walker 2024
@@ -25,7 +24,6 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	ATreads();
 	
 	virtual void Ability(float deltaTime) override;
-	void Drag() const;
 	
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
@@ -38,7 +36,4 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
 	float moveSpeed = 500;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float dragMultiplier = 3;
 };

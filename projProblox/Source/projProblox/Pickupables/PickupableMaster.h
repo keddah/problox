@@ -112,7 +112,7 @@ protected:
 	bool isAttached;
 
 	
-	/////////////// Abilties ///////////////
+	/////////////// Abilities ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	bool active;
 
@@ -269,6 +269,7 @@ public:
 	FRotator GetRotOffset() const { return rotOffset; }
 	
 	FName GetAttachedSocket() const { return attachedSocket; }
+	virtual bool GetIsAttached() const { return isAttached; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	UStaticMeshComponent* GetMesh() const { return objMesh; }

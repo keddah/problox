@@ -48,15 +48,6 @@ void ATreads::Ability(const float deltaTime)
 	if(!IsValid(parentCore)) return;
 
 	
-	// 1000 is the mass of the core (Will take into account of the other attached things .. just not the core.)
+	// Disregards the mass...
 	GetParent()->AddActorWorldOffset(GetActorForwardVector() * moveSpeed * deltaTime);
-}
-
-void ATreads::Drag() const
-{
-	const FVector velocity = objMesh->GetPhysicsLinearVelocity();
-	const FVector2d vel = {velocity.X, velocity.Y};
-	const float magnitude = vel.Length();
-	
-	objMesh->AddForce(FVector(vel.X, vel.Y, 0) * (magnitude < 60? magnitude * -magnitude : -magnitude * dragMultiplier));
 }
