@@ -35,7 +35,6 @@
 			"Modes.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -52,6 +51,7 @@
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
+			"CubeCore.cpp.obj",
 			"PickupableMaster.cpp.obj",
 			"Wheels.cpp.obj"
 		]
