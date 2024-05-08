@@ -1,0 +1,109 @@
+// Created by Dean Atkinson-Walker 2024
+
+
+#include "Hoverer.h"
+#include "Cores/CubeCore.h"
+
+AHoverer::AHoverer()
+{
+	topLeft = CreateDefaultSubobject<USceneComponent>("Top Left");
+	topLeft->SetupAttachment(objMesh);
+
+	topRight = CreateDefaultSubobject<USceneComponent>("Top Right");
+	topRight->SetupAttachment(objMesh);
+
+	bottomLeft = CreateDefaultSubobject<USceneComponent>("Bottom Left");
+	bottomLeft->SetupAttachment(objMesh);
+
+	bottomRight = CreateDefaultSubobject<USceneComponent>("Bottom Right");
+	bottomRight->SetupAttachment(objMesh);
+
+	sideUp = CreateDefaultSubobject<USceneComponent>("Side Up");
+	sideUp->SetupAttachment(objMesh);
+
+	sideDown = CreateDefaultSubobject<USceneComponent>("Side Down");
+	sideDown->SetupAttachment(objMesh);
+
+	sideLeft = CreateDefaultSubobject<USceneComponent>("Sided Left");
+	sideLeft->SetupAttachment(objMesh);
+
+	sideRight = CreateDefaultSubobject<USceneComponent>("Side Right");
+	sideRight->SetupAttachment(objMesh);
+	
+	// topLeft.Init(objMesh);
+	// topRight.Init(objMesh);
+	// bottomLeft.Init(objMesh);
+	// bottomRight.Init(objMesh);
+}
+
+void AHoverer::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+void AHoverer::Ability(float deltaTime)
+{
+	Super::Ability(deltaTime);
+
+	if(!active) return;
+
+	const FRotator rot = GetActorRotation();
+	UWorld* wrld = GetWorld();
+
+	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is 45 degrees, only need one distance (the minFloorDistance))
+	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));;
+
+	TArray<USceneComponent*> points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };
+
+	for(const auto& point : points)
+	{
+		for(int i = 0; i < 5; i++)
+		{
+			FHitResult hit;
+			FCollisionQueryParams collisionParams;
+			collisionParams.AddIgnoredActor(this);
+			collisionParams.AddIgnoredActor(parentCore);
+
+			// Vertical
+			if(i==0) point->SetRelativeRotation({90,0,0});
+
+			// Forward
+			else if(i==1) point->SetRelativeRotation({45,0,0});
+
+			// Backward
+			else if(i==2) point->SetRelativeRotation({45,180,0});
+
+			// Left
+			else if(i==3) point->SetRelativeRotation({45,-90,0});
+
+			// Right
+			else if(i==4) point->SetRelativeRotation({45,90,0});
+
+			const FRotator pointRot = point->GetRelativeRotation();
+			const float distance = pointRot.Pitch < 90 ? hypDistance : hoverDistance;
+			FVector forwardVec = UKismetMathLibrary::GetForwardVector(pointRot);
+			forwardVec = rot.RotateVector(forwardVec);
+		
+			const FVector start = point->GetComponentLocation();
+			const FVector end = start + forwardVec * distance;
+			DrawDebugLine(wrld, start, end, FColor::Red);
+		
+			if(wrld->LineTraceSingleByChannel(hit, start, end, ECC_Visibility, collisionParams))
+			{
+				const float distanceSquared = FMath::Max(FVector::Dist(hit.Location, start) / distanceMultiplier, .5f);
+				PrintFloat(distanceSquared, .1)
+			
+				const float power = (hoverStrength * -1000) / distanceSquared;
+				objMesh->AddForceAtLocation(forwardVec * power, end);
+	
+				DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+			}
+		}
+	}
+}
+
+void AHoverer::SetAbilityActive(const bool value)
+{
+	Super::SetAbilityActive(value);
+	if(parentCore) parentCore->GetMesh()->SetAngularDamping(active? 5 : 0);
+}

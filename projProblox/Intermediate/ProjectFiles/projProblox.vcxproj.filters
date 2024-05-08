@@ -88,6 +88,18 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Glider.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Hoverer.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Hoverer.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\HoverPoint.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\HoverPoint.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Magnet.cpp">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
