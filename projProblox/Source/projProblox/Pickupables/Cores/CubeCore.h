@@ -304,6 +304,8 @@ public:
 
 	TArray<FName> GetFreeSlots() const { return socketInfo->GetFreeSockets(); };
 
+	virtual bool GetIsAttached() const override { return parentCore || isAttached; }
+	
 	UFUNCTION(BlueprintCallable, Category = "Socket")
 	int GetSocketCount() const { return socketInfo->GetSockets().Num(); };
 	

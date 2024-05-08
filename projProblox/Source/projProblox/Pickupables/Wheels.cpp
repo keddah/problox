@@ -33,7 +33,10 @@ void AWheels::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
-	if(!(follow || groupSelected)) return;
+	if(!(selected || groupSelected)) return;
+	
+	RemoveVelocity();
+	
 	leftWheel->SetWorldLocation(leftPivot->GetComponentLocation());
 	leftWheel->SetWorldRotation(leftPivot->GetComponentRotation());
 
@@ -87,10 +90,46 @@ void AWheels::SetupAttachments() const
 	rightAxel->SetConstrainedComponents(rightWheel, "", objMesh, "");
 }
 
+void AWheels::GhostPlacement()
+{
+	RemoveVelocity();
+	
+	if(!parentCore) return;
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetHiddenInGame(false);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
+	
+	GetAttachOffset(*parentCore);
+	silhouette->SetRelativeLocation({attachOffset,0,0});
+
+	// const FRotator relativeRot = RoundRotation(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket));
+	// silhouette->SetWorldRotation(relativeRot);
+
+	const bool attachDiag = attachedSocket == "DIAG";
+
+	// Have to realign the socket rotation with another axis
+	const FRotator socketRot = DiagRoundRot(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket), attachDiag);
+
+	silhouette->SetWorldRotation(socketRot);
+
+	// All this to fix the rotation....
+	const FRotator relativeRot = objMesh->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
+	
+	// Whether the attached socket is the diagonal side of a wedge...
+	const unsigned short rounder = attachDiag? 45 : 90; 
+	
+	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
+	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % rounder == 0 && FMath::RoundToInt(relativeRot.Pitch) % rounder == 0 && FMath::RoundToInt(relativeRot.Yaw) % rounder == 0;  
+
+	// If the current rotation isn't aligned with the socket rotation (the relative rotation since it's already attached)...
+	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
+	// Ensures that the final rotation is always aligned.
+	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
+}
+
 EOperations AWheels::SetSelected(const bool value)
 {
 	selected = value;
-	follow = selected;
 	
 	SetConstraintsActive(!selected);
 	
@@ -129,9 +168,8 @@ EOperations AWheels::SetSelected(const bool value)
 	leftWheel->SetWorldRotation(leftPivot->GetComponentRotation());
 	rightWheel->SetWorldLocation(rightPivot->GetComponentLocation());
 	rightWheel->SetWorldRotation(rightPivot->GetComponentRotation());
-	
-	Attach();
 
+	Attach();
 	ResetGhost();
 
 	parentCore->AddAttachment(this, attachedSocket);
@@ -155,6 +193,7 @@ void AWheels::Attach() const
 	SetParentDominates(false);
 	
 	objMesh->AttachToComponent(parentCore->GetMesh(), attachRules, attachedSocket);
+	RemoveVelocity();
 }
 
 void AWheels::Detach()
@@ -213,43 +252,6 @@ void AWheels::Reattach(const FTransform& transform)
 	Attach();
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
-}
-
-void AWheels::GhostPlacement()
-{
-	RemoveVelocity();
-	
-	if(!parentCore) return;
-	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	silhouette->SetHiddenInGame(false);
-	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
-	
-	GetAttachOffset(*parentCore);
-	silhouette->SetRelativeLocation({attachOffset,0,0});
-
-	// const FRotator relativeRot = RoundRotation(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket));
-	// silhouette->SetWorldRotation(relativeRot);
-
-	const bool attachDiag = attachedSocket == "DIAG";
-
-	// Have to realign the socket rotation with another axis
-	const FRotator socketRot = DiagRoundRot(GetActorRotation(), parentCore->GetMesh()->GetSocketRotation(attachedSocket), attachDiag);
-
-	silhouette->SetWorldRotation(socketRot);
-
-	// All this to fix the rotation....
-	const FRotator relativeRot = objMesh->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
-	
-	// Whether the attached socket is the diagonal side of a wedge...
-	const unsigned short rounder = attachDiag? 45 : 90; 
-	
-	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
-	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % rounder == 0 && FMath::RoundToInt(relativeRot.Pitch) % rounder == 0 && FMath::RoundToInt(relativeRot.Yaw) % rounder == 0;  
-
-	// If the current rotation isn't aligned with the socket rotation (the relative rotation since it's already attached)...
-	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
-	// Ensures that the final rotation is always aligned.
-	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
 }
 
 float AWheels::GetAttachOffset(const APickupableMaster& attachee)

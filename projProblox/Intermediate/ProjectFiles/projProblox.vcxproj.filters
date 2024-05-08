@@ -88,10 +88,22 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Glider.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Hoverer.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Hoverer.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Magnet.cpp">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Magnet.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\MagPole.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\MagPole.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\PickupableMaster.cpp">

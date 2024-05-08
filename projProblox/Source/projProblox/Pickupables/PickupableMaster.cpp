@@ -69,7 +69,7 @@ void APickupableMaster::Tick(float DeltaTime)
 void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
-	if(!IsValid(parentCore)) return;
+	if(!parentCore) return;
 
 	// Don't allow cells to be collected from this collider.
 	if(!Tags.IsEmpty()) return;
@@ -136,7 +136,7 @@ void APickupableMaster::Placement()
 	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
 	else parentCore = nullptr;
 	
-	if(!IsValid(parentCore))
+	if(!parentCore)
 	{
 		ResetGhost();
 		return;
@@ -209,7 +209,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 		return {EOperations::Detach};
 	}
 
-	if(!IsValid(parentCore)) return { wasDetached? EOperations::Detach : EOperations::Move};
+	if(!parentCore) return { wasDetached? EOperations::Detach : EOperations::Move};
 	if(attachedSocket == NAME_None) return { wasDetached? EOperations::Detach : EOperations::Move};
 
 	if(!previousObj) previousObj = parentCore;
@@ -245,7 +245,7 @@ void APickupableMaster::Detach()
 {
 	ResetGhost();
 
-	if(!IsValid(parentCore) && !IsValid(previousObj))
+	if(!parentCore && !previousObj)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
@@ -334,7 +334,7 @@ FRotator APickupableMaster::DiagRoundRot(const FRotator& rotation, const FRotato
 
 void APickupableMaster::AlignSocketRot(const bool useDirection)
 {
-	if(!IsValid(parentCore)) return;
+	if(!parentCore) return;
 	
 	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
@@ -410,6 +410,8 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 
 FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& hit) const
 {
+	if(!parentCore) return NAME_None;
+	
 	float shortestDistance = 999;
 	FName closestSocket;
 	const UStaticMeshComponent* coreMesh = core->GetMesh();
@@ -565,7 +567,7 @@ bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
 void APickupableMaster::Reattach(const FTransform& transform)
 {
 	parentCore = Cast<ACubeCore>(previousObj);
-	if(!IsValid(parentCore))
+	if(!parentCore)
 	{
 		Print("couldnt cast to core - Reattaching...", 5)
 		return;

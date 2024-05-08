@@ -37,9 +37,6 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "The maximum both wheels are allowed to go up/down"))
 	float suspensionDistance = 25;
 
-	// Both wheels follow the objMesh
-	bool follow;
-	
 	// Just using this to get to the tick function....
 	virtual void Ability(float deltaTime) override { if(selected) RemoveVelocity(); }
 
@@ -56,6 +53,7 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 	void SetupAttachments() const;
 	void SetConstraintsActive(const bool constrained) const
 	{
+		// Need to deactivate first before disabling physics
 		leftAxel->SetActive(constrained);
 		rightAxel->SetActive(constrained);
 		leftWheel->SetSimulatePhysics(constrained);
