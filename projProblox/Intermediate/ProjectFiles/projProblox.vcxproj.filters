@@ -94,18 +94,6 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Hoverer.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Pickupables\Magnet.cpp">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Pickupables\Magnet.h">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Pickupables\MagPole.cpp">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Pickupables\MagPole.h">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\PickupableMaster.cpp">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
@@ -122,6 +110,12 @@
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Propeller.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Spring.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Spring.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Thruster.cpp">
@@ -216,6 +210,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Grapple\Grappler.h">
       <Filter>Source\projProblox\Pickupables\Grapple</Filter>
+    </ClInclude>
+    <Filter Include="Source\projProblox\Pickupables\Magnet">
+      <UniqueIdentifier>{D0013D03-9BBA-3336-863A-FFEBF79B0336}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Magnet\Magnet.cpp">
+      <Filter>Source\projProblox\Pickupables\Magnet</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Magnet\Magnet.h">
+      <Filter>Source\projProblox\Pickupables\Magnet</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Magnet\MagPole.cpp">
+      <Filter>Source\projProblox\Pickupables\Magnet</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Magnet\MagPole.h">
+      <Filter>Source\projProblox\Pickupables\Magnet</Filter>
     </ClInclude>
     <Filter Include="Source\projProblox\UndoRedo">
       <UniqueIdentifier>{F8B987BD-3186-3753-A227-1399F32FA508}</UniqueIdentifier>
