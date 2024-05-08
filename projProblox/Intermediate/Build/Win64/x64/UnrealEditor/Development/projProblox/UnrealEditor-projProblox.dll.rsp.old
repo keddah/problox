@@ -36,10 +36,7 @@
 /FUNCTIONPADMIN:6
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\projProbloxEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Module.projProblox.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Hoverer.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Magnet.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\MagPole.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\projProblox.init.gen.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Glider.cpp.obj"
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
 "..\Plugins\Runtime\CableComponent\Intermediate\Build\Win64\x64\UnrealEditor\Development\CableComponent\UnrealEditor-CableComponent.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
