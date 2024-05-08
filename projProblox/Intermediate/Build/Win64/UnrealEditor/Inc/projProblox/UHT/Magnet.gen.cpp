@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/Pickupables/Magnet.h"
+#include "projProblox/Pickupables/Magnet/Magnet.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 // Cross Module References
@@ -63,7 +63,7 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMagnet_SetCharge_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickupables/Magnet.h" },
+		{ "ModuleRelativePath", "Pickupables/Magnet/Magnet.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMagnet_SetCharge_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMagnet, nullptr, "SetCharge", nullptr, nullptr, Z_Construct_UFunction_AMagnet_SetCharge_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMagnet_SetCharge_Statics::PropPointers), sizeof(Z_Construct_UFunction_AMagnet_SetCharge_Statics::Magnet_eventSetCharge_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMagnet_SetCharge_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMagnet_SetCharge_Statics::Function_MetaDataParams) };
@@ -117,33 +117,33 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMagnet_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMagnet_SetCharge, "SetCharge" }, // 1567120824
+		{ &Z_Construct_UFunction_AMagnet_SetCharge, "SetCharge" }, // 4204285088
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "Pickupables/Magnet.h" },
-		{ "ModuleRelativePath", "Pickupables/Magnet.h" },
+		{ "IncludePath", "Pickupables/Magnet/Magnet.h" },
+		{ "ModuleRelativePath", "Pickupables/Magnet/Magnet.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_positiveMat_MetaData[] = {
 		{ "Category", "Magnet" },
-		{ "ModuleRelativePath", "Pickupables/Magnet.h" },
+		{ "ModuleRelativePath", "Pickupables/Magnet/Magnet.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMagnet_Statics::NewProp_positiveMat = { "positiveMat", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMagnet, positiveMat), Z_Construct_UClass_UMaterialInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::NewProp_positiveMat_MetaData), Z_Construct_UClass_AMagnet_Statics::NewProp_positiveMat_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat_MetaData[] = {
 		{ "Category", "Magnet" },
-		{ "ModuleRelativePath", "Pickupables/Magnet.h" },
+		{ "ModuleRelativePath", "Pickupables/Magnet/Magnet.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat = { "negativeMat", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMagnet, negativeMat), Z_Construct_UClass_UMaterialInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat_MetaData), Z_Construct_UClass_AMagnet_Statics::NewProp_negativeMat_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_positive_MetaData[] = {
 		{ "Category", "Ability" },
-		{ "ModuleRelativePath", "Pickupables/Magnet.h" },
+		{ "ModuleRelativePath", "Pickupables/Magnet/Magnet.h" },
 	};
 #endif
 	void Z_Construct_UClass_AMagnet_Statics::NewProp_positive_SetBit(void* Obj)
@@ -155,7 +155,7 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce_MetaData[] = {
 		{ "Category", "Ability" },
 		{ "Delta", "1" },
-		{ "ModuleRelativePath", "Pickupables/Magnet.h" },
+		{ "ModuleRelativePath", "Pickupables/Magnet/Magnet.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce = { "attractionForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMagnet, attractionForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce_MetaData), Z_Construct_UClass_AMagnet_Statics::NewProp_attractionForce_MetaData) };
@@ -199,15 +199,15 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	AMagnet::AMagnet() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AMagnet);
 	AMagnet::~AMagnet() {}
-	struct Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 603873512U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 3956438942U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_1636731504(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_3087942953(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
