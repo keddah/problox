@@ -29,11 +29,6 @@ AHoverer::AHoverer()
 
 	sideRight = CreateDefaultSubobject<USceneComponent>("Side Right");
 	sideRight->SetupAttachment(objMesh);
-	
-	// topLeft.Init(objMesh);
-	// topRight.Init(objMesh);
-	// bottomLeft.Init(objMesh);
-	// bottomRight.Init(objMesh);
 }
 
 void AHoverer::BeginPlay()

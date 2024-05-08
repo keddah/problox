@@ -17,8 +17,8 @@
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
-			"HoverPoint.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
+			"MagPole.gen.cpp.obj",
 			"Modes.gen.cpp.obj",
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
@@ -44,7 +44,6 @@
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
-			"Magnet.cpp.obj",
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
@@ -57,7 +56,8 @@
 			"ActionHistory.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
 			"Hoverer.cpp.obj",
-			"HoverPoint.cpp.obj"
+			"Magnet.cpp.obj",
+			"MagPole.cpp.obj"
 		]
 	}
 }

@@ -21,6 +21,10 @@ void AMagnet::BeginPlay()
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), StaticClass(), magActors);
 	for (const auto& magActor : magActors) otherMagnets.Add(Cast<AMagnet>(magActor));
 
+	magActors.Empty();
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagPole::StaticClass(), magActors);
+	for (const auto& magActor : magActors) poles.Add(Cast<AMagPole>(magActor));
+
 	// Ignore self...
 	otherMagnets.Remove(this);
 
@@ -33,9 +37,27 @@ void AMagnet::BeginPlay()
 void AMagnet::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
-	
-	// if(!active) return;
+	if(!active) return;
+
 	const FVector thisPos = GetActorLocation();
+
+
+	for (const auto& mag : poles)
+	{
+		if(!IsValid(mag)) continue;
+		
+		const FVector otherPos = mag->GetActorLocation();
+		const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
+		const FVector direction = otherPos - thisPos;
+		
+		// If the charges aren't matching
+		const bool attract = mag->GetPositiveCharge() != positive;
+		
+		// Scale the force by the distance of the involved blocks
+		PrintVector(direction, 1)
+		objMesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
+	}
+	
 	for (const auto& mag : otherMagnets)
 	{
 		if(!IsValid(mag)) continue;
@@ -48,6 +70,7 @@ void AMagnet::Ability(const float deltaTime)
 		const bool attract = mag->positive != positive;
 		
 		// Scale the force by the distance of the involved blocks 
-		objMesh->AddForce((attract? direction : -direction) * ((attractionForce * 1000) / distanceSquared));
+		objMesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 	}
+	
 }

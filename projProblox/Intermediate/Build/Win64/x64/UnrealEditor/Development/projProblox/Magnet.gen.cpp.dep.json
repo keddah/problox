@@ -6,7 +6,9 @@
         "PCH": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\projprobloxeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projproblox\\definitions.projproblox.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet\\magnet.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet\\magpole.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\magpole.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\pickupablemaster.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\undoredo\\actionhistory.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\actionhistory.generated.h",

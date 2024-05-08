@@ -12,11 +12,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PickupableMaster.h"
+#include "MagPole.h"
+#include "./projProblox/Pickupables/PickupableMaster.h"
 #include "Magnet.generated.h"
 
 UCLASS()
-class PROJPROBLOX_API AMagnet : public APickupableMaster
+class PROJPROBLOX_API AMagnet : public APickupableMaster	
 {
 	GENERATED_BODY()
 
@@ -30,11 +31,12 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	bool positive;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
-	float attractionForce = 30;
+	float attractionForce = 15;
 
 	bool magAttached;
 
 	TArray<AMagnet*> otherMagnets;
+	TArray<AMagPole*> poles;
 
 	void ConfigureCharge() const { objMesh->SetMaterial(0, positive? positiveMat : negativeMat); }
 	void AddMagnet(AMagnet* mag) { otherMagnets.AddUnique(mag); }
@@ -42,6 +44,7 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 public:
 	UFUNCTION(BlueprintCallable)
 	void SetCharge(const bool pos) { positive = pos; ConfigureCharge(); }
+	float GetAttraction() const { return attractionForce; } 
 	
 protected:
 	virtual void BeginPlay() override;
