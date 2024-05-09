@@ -4512,3 +4512,18 @@ Script Stack (0 frames) :
 [2024.05.09-14.23.39:007][811]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=39
 [2024.05.09-14.23.39:014][811]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
 [2024.05.09-14.23.39:077][812]LogPlayLevel: Display: Destroying online subsystem :Context_44
+[2024.05.09-14.23.51:987][370]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.09-14.23.53:600][525]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.09-14.23.54:871][634]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.09-14.23.56:794][818]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.09-14.23.58:404][967]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.09-14.24.00:585][181]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.05.09-14.24.00:672][181]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.09-14.24.00:698][181]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.09-14.24.00:743][181]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2024.05.09-14.24.00:806][181]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.09-14.24.00:807][181]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1A54DFDE04104273C4C3B838FA2ED76AF.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.09-14.24.00:817][181]LogFileHelpers: Saving map 'Sandbox1' took 0.120
+[2024.05.09-14.24.00:823][181]LogFileHelpers: InternalPromptForCheckoutAndSave took 151 ms (total: 4.83 sec)
+[2024.05.09-14.24.00:826][181]AssetCheck: New page: Asset Save: Sandbox1
+[2024.05.09-14.24.00:826][181]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
