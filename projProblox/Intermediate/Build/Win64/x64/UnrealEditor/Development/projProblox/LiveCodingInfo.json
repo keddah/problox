@@ -23,6 +23,7 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Spring.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
@@ -35,6 +36,7 @@
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
+			"Modes.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
@@ -57,8 +59,6 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
-			"Modes.cpp.obj",
 			"Spring.cpp.obj"
 		]
 	}
