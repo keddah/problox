@@ -351,7 +351,7 @@ void APlayerCharacter::MoveSelection(const FVector& mousePos)
 	if(selectedObj->IsA<ACubeCore>()) exclusions.AddUnique(selectedObj);
 	else exclusions.AddUnique(selectedObj);
 
-	selectedObj->GetMesh()->SetWorldLocation({mousePos.X, mousePos.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
+	selectedObj->SetActorLocation({mousePos.X, mousePos.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
 }
 
 void APlayerCharacter::Deselect()

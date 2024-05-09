@@ -9,6 +9,7 @@
 
 #include "Magnet.h"
 
+#include "MagPole.h"
 #include "Kismet/GameplayStatics.h"
 
 void AMagnet::BeginPlay()
@@ -41,28 +42,33 @@ void AMagnet::Ability(const float deltaTime)
 
 	const FVector thisPos = GetActorLocation();
 
-
 	for (const auto& mag : poles)
 	{
 		if(!IsValid(mag)) continue;
+		const FVector otherPos = mag->GetMagPosition(this);
+
+		// Go to the next iteration if it's out of range
+		if(FVector::Distance(otherPos, thisPos) > fieldRange) continue;
 		
-		const FVector otherPos = mag->GetActorLocation();
-		const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
 		const FVector direction = otherPos - thisPos;
+		
+		const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
 		
 		// If the charges aren't matching
 		const bool attract = mag->GetPositiveCharge() != positive;
 		
 		// Scale the force by the distance of the involved blocks
-		PrintVector(direction, 1)
 		objMesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 	}
 	
 	for (const auto& mag : otherMagnets)
 	{
 		if(!IsValid(mag)) continue;
-		
 		const FVector otherPos = mag->GetActorLocation();
+
+		// Go to the next iteration if it's out of range
+		if(FVector::Distance(otherPos, thisPos) > fieldRange) continue;
+		
 		const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
 		const FVector direction = otherPos - thisPos;
 		

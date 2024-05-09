@@ -12,9 +12,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MagPole.h"
 #include "./projProblox/Pickupables/PickupableMaster.h"
 #include "Magnet.generated.h"
+
+class AMagPole;
 
 UCLASS()
 class PROJPROBLOX_API AMagnet : public APickupableMaster	
@@ -32,6 +33,9 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
 	float attractionForce = 15;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
+	float fieldRange = 1500000;
 
 	bool magAttached;
 

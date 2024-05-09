@@ -7,19 +7,36 @@
 
 ASpring::ASpring()
 {
-	spring = CreateDefaultSubobject<UPhysicsConstraintComponent>("Actual Spring");
-	spring->SetupAttachment(objMesh);
+	springConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>("Actual Spring");
+	springConstraint->SetupAttachment(objMesh);
 
 	springEnd = CreateDefaultSubobject<UStaticMeshComponent>("End");
 	springEnd->SetupAttachment(objMesh);
+	springEnd->SetSimulatePhysics(true);
 
-	spring->SetConstrainedComponents(springEnd, "", 0, "");
+	springConstraint->SetConstrainedComponents(springEnd, "", objMesh, "");
+
+	springConstraint->SetLinearXLimit(LCM_Limited, compressionAmount);
+	springConstraint->SetLinearYLimit(LCM_Limited, compressionAmount);
+	springConstraint->SetLinearZLimit(LCM_Limited, compressionAmount);
+
+	springConstraint->SetAngularSwing1Limit(ACM_Limited, 30);
+	springConstraint->SetAngularSwing2Limit(ACM_Limited, 30);
+	springConstraint->SetAngularTwistLimit(ACM_Limited, 30);
+
+	springConstraint->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
 }
 
 void ASpring::Ability(float deltaTime)
 {
 	Super::Ability(deltaTime);
-	spring->SetActive(IsValid(parentCore));
+
+	if(!(selected || groupSelected)) return;
+
+	// springStart->SetWorldLocation(springStart->GetComponentLocation() - GetActorLocation());
+	// springEnd->SetWorldLocation(springEnd->GetComponentLocation() - GetActorLocation());
+	
+	// spring->SetActive(IsValid(parentCore));
 	if(!wrld) return;
 	// if(!isAttached) return;
 
@@ -39,47 +56,35 @@ void ASpring::Ability(float deltaTime)
 	// objMesh->AddForce(hit.Normal * GetSpringEnergy(start, hit.Location) * GetMass());
 }
 
-float ASpring::GetSpringEnergy(const FVector& start, const FVector& end) const
+void ASpring::ToggleGravity() const
 {
-	const float change = (end - start).Length();
-	return .5f * springConstant * (change * change);
+	// Does the same for objMesh... Also calls RemoveVelocity
+	Super::ToggleGravity();
+
+	springEnd->SetEnableGravity(!selected);
+	SetParentDominates(selected);
 }
 
-EOperations ASpring::SetSelected(const bool value)
+void ASpring::ToggleGravity(bool gravityOn)
 {
-	selected = value;
+	Super::ToggleGravity(gravityOn);
 
-	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	objMesh->SetUseCCD(selected);
-	
-	ToggleGravity();
-	SetHideIndicator(!selected);
+	springEnd->SetEnableGravity(gravityOn);
+	SetParentDominates(!gravityOn);
+}
 
-	if(selected)
-	{
-		wasDetached = isAttached;
-		Detach();
-		
-		canPlace = true;
-		return {EOperations::Detach};
-	}
+void ASpring::RemoveVelocity() const
+{
+	Super::RemoveVelocity();
 
-	if(!parentCore) return { wasDetached? EOperations::Detach : EOperations::Move};
-	if(attachedSocket == NAME_None) return { wasDetached? EOperations::Detach : EOperations::Move};
+	springEnd->SetPhysicsLinearVelocity(FVector::ZeroVector);
+	springEnd->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
+}
 
-	if(!previousObj) previousObj = parentCore;
-	
-	AttachToActor(parentCore, attachRules, attachedSocket);
-	spring->SetConstrainedComponents(springEnd, "", parentCore->GetMesh(), attachedSocket);
-
-	// Using the silhouette's location/rotation to set the actual transform.
-	UseSilhouetteTransform();
-	ResetGhost();
-
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
-	
-	return {EOperations::Attach};
+float ASpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos) const
+{
+	const float change = (endPos - startPos).Length();
+	return .5f * springConstant * (change * change);
 }
 
 void ASpring::Attach()
