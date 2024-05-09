@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PickupableMaster.h"
+#include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "Spring.generated.h"
 
 UCLASS()
@@ -11,11 +12,15 @@ class PROJPROBLOX_API ASpring : public APickupableMaster
 {
 	GENERATED_BODY()
 	ASpring();
+	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); }
 	
 	virtual void Ability(float deltaTime) override;
+	virtual EOperations SetSelected(const bool value) override;
 
-	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); }
+	void Attach();
 
+	UPROPERTY(EditDefaultsOnly)
+	UPhysicsConstraintComponent* spring;
 
 	UWorld* wrld;
 	bool contracting;
@@ -25,13 +30,8 @@ class PROJPROBLOX_API ASpring : public APickupableMaster
 
 	float GetSpringEnergy(const FVector& start, const FVector& end) const;
 
+	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	USceneComponent* springStart;
-	
-	UPROPERTY(BlueprintReadOnly)
-	FVector splineStart;
-	
-	UPROPERTY(BlueprintReadOnly)
-	FVector splineEnd;
+	UStaticMeshComponent* springEnd;
 };
