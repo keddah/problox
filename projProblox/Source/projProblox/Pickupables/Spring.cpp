@@ -13,8 +13,6 @@ ASpring::ASpring()
 	end = CreateDefaultSubobject<UStaticMeshComponent>("End");
 	end->SetupAttachment(objMesh);
 	end->SetSimulatePhysics(false);
-
-	defaultRot = {180,0,0};
 }
 
 void ASpring::Ability(float deltaTime)
@@ -40,7 +38,7 @@ void ASpring::Ability(float deltaTime)
 	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
 
 	collider->SetWorldLocation(end->GetComponentLocation());
-	
+
 	if(!springHit.bBlockingHit)
 	{
 		springLength = FMath::Lerp(springLength, minSpringLength, compressionSpeed * deltaTime);
@@ -49,7 +47,7 @@ void ASpring::Ability(float deltaTime)
 		return;
 	}
 	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
-	end->SetWorldLocation(springHit.Location);
+	end->SetWorldLocation(springHit.Location.GetClampedToSize(minSpringLength, maxSpringLength));
 	
 	DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
 
