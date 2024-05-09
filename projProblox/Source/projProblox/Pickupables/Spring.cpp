@@ -32,33 +32,30 @@ void ASpring::Ability(float deltaTime)
 	const FVector direction = start->GetForwardVector(); 
 	const FVector endPos = startPos + direction * springLength;
 	
-	FHitResult hit;
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
 	collisionParams.AddIgnoredActor(parentCore);
 	
 	DrawDebugLine(wrld, startPos, endPos, FColor::Red);
-	wrld->LineTraceSingleByChannel(hit, startPos, endPos, ECC_Visibility, collisionParams);
+	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
 
 	collider->SetWorldLocation(end->GetComponentLocation());
 	
-	if(!hit.bBlockingHit)
+	if(!springHit.bBlockingHit)
 	{
 		springLength = FMath::Lerp(springLength, minSpringLength, compressionSpeed * deltaTime);
 		springLength = FMath::Clamp(springLength, 0, maxSpringLength);
 		end->SetWorldLocation(endPos);
 		return;
 	}
-	springLength = FVector::Distance(hit.Location, start->GetComponentLocation()) + 10;
-	end->SetWorldLocation(hit.Location);
+	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
+	end->SetWorldLocation(springHit.Location);
 	
-	if(hit.GetComponent()) Print(hit.GetComponent()->GetName(), .1)
-	
-	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+	DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
 	
-	objMesh->AddForce(hit.Normal * GetSpringEnergy(startPos, hit.Location, velocity) * GetMass());
+	objMesh->AddForce(springHit.Normal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass());
 }
 
 void ASpring::ToggleGravity() const

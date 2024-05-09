@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "PickupableMaster.h"
-#include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "Spring.generated.h"
 
 UCLASS()
@@ -44,6 +43,9 @@ class PROJPROBLOX_API ASpring : public APickupableMaster
 	float GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const;
 
 protected:
+	UPROPERTY(BlueprintReadOnly)
+	FHitResult springHit;
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ability")
 	USceneComponent* start;
 	
