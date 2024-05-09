@@ -12,7 +12,7 @@ class PROJPROBLOX_API ASpring : public APickupableMaster
 {
 	GENERATED_BODY()
 	ASpring();
-	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); }
+	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); damping *= .001f; }
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void ToggleGravity() const override;
@@ -20,28 +20,33 @@ class PROJPROBLOX_API ASpring : public APickupableMaster
 	virtual void RemoveVelocity() const override;
 	
 	void Attach();
-	void SetParentDominates(const bool dominate) const
-	{
-		if(dominate) springConstraint->ConstraintInstance.EnableParentDominates();
-		else springConstraint->ConstraintInstance.DisableParentDominates();
-	}
-
-	
-	UPROPERTY(EditDefaultsOnly)
-	UPhysicsConstraintComponent* springConstraint;
 
 	UWorld* wrld;
 	bool contracting;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float compressionAmount = 1500;
+	UPROPERTY(EditDefaultsOnly, Category = "Spring", meta = (Delta = 1, ToolTip = "The maximum amount the spring is allowed to stretch."))
+	float maxSpringLength = 3000;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Spring", meta = (Delta = 1, ToolTip = "The length of the spring when its fully compressed."))
+	float minSpringLength = maxSpringLength * .05f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Spring", meta = (Delta = .01f, ToolTip = "The speed of compression when not pressing against an object (while airborne)."))
+	float compressionSpeed = .5f;
+
+	float springLength = maxSpringLength;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float springConstant = 2;
 
-	float GetSpringEnergy(const FVector& startPos, const FVector& endPos) const;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .01f))
+	float damping = .01f;
+
+	float GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const;
 
 protected:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ability")
+	USceneComponent* start;
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UStaticMeshComponent* springEnd;
+	UStaticMeshComponent* end;
 };

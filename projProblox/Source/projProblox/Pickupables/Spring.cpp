@@ -7,53 +7,58 @@
 
 ASpring::ASpring()
 {
-	springConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>("Actual Spring");
-	springConstraint->SetupAttachment(objMesh);
+	start = CreateDefaultSubobject<USceneComponent>("Start");
+	start->SetupAttachment(objMesh);
+	
+	end = CreateDefaultSubobject<UStaticMeshComponent>("End");
+	end->SetupAttachment(objMesh);
+	end->SetSimulatePhysics(false);
 
-	springEnd = CreateDefaultSubobject<UStaticMeshComponent>("End");
-	springEnd->SetupAttachment(objMesh);
-	springEnd->SetSimulatePhysics(true);
-
-	springConstraint->SetConstrainedComponents(springEnd, "", objMesh, "");
-
-	springConstraint->SetLinearXLimit(LCM_Limited, compressionAmount);
-	springConstraint->SetLinearYLimit(LCM_Limited, compressionAmount);
-	springConstraint->SetLinearZLimit(LCM_Limited, compressionAmount);
-
-	springConstraint->SetAngularSwing1Limit(ACM_Limited, 30);
-	springConstraint->SetAngularSwing2Limit(ACM_Limited, 30);
-	springConstraint->SetAngularTwistLimit(ACM_Limited, 30);
-
-	springConstraint->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
+	defaultRot = {180,0,0};
 }
 
 void ASpring::Ability(float deltaTime)
 {
 	Super::Ability(deltaTime);
-
-	if(!(selected || groupSelected)) return;
-
-	// springStart->SetWorldLocation(springStart->GetComponentLocation() - GetActorLocation());
-	// springEnd->SetWorldLocation(springEnd->GetComponentLocation() - GetActorLocation());
 	
-	// spring->SetActive(IsValid(parentCore));
-	if(!wrld) return;
+	if(!wrld)
+	{
+		Print("Bad world ~ Spring", 5)
+		return;
+	}
 	// if(!isAttached) return;
 
-	// const FVector start = springEnd->GetComponentLocation();
-	// const FVector direction = springEnd->GetForwardVector(); 
-	// const float length = 100 * objMesh->GetRelativeScale3D().Z;
-	//
-	// FHitResult hit;
-	// FCollisionQueryParams collisionParams;
-	// collisionParams.AddIgnoredActor(this);
-	// collisionParams.AddIgnoredActor(parentCore);
-	//
-	// DrawDebugLine(wrld, start, start + direction * length, FColor::Red);
-	// if(!wrld->LineTraceSingleByChannel(hit, start, start + direction * length, ECC_Visibility, collisionParams)) return;
-	//
-	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
-	// objMesh->AddForce(hit.Normal * GetSpringEnergy(start, hit.Location) * GetMass());
+	const FVector startPos = start->GetComponentLocation();
+	const FVector direction = start->GetForwardVector(); 
+	const FVector endPos = startPos + direction * springLength;
+	
+	FHitResult hit;
+	FCollisionQueryParams collisionParams;
+	collisionParams.AddIgnoredActor(this);
+	collisionParams.AddIgnoredActor(parentCore);
+	
+	DrawDebugLine(wrld, startPos, endPos, FColor::Red);
+	wrld->LineTraceSingleByChannel(hit, startPos, endPos, ECC_Visibility, collisionParams);
+
+	collider->SetWorldLocation(end->GetComponentLocation());
+	
+	if(!hit.bBlockingHit)
+	{
+		springLength = FMath::Lerp(springLength, minSpringLength, compressionSpeed * deltaTime);
+		springLength = FMath::Clamp(springLength, 0, maxSpringLength);
+		end->SetWorldLocation(endPos);
+		return;
+	}
+	springLength = FVector::Distance(hit.Location, start->GetComponentLocation()) + 10;
+	end->SetWorldLocation(hit.Location);
+	
+	if(hit.GetComponent()) Print(hit.GetComponent()->GetName(), .1)
+	
+	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+
+	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
+	
+	objMesh->AddForce(hit.Normal * GetSpringEnergy(startPos, hit.Location, velocity) * GetMass());
 }
 
 void ASpring::ToggleGravity() const
@@ -61,30 +66,38 @@ void ASpring::ToggleGravity() const
 	// Does the same for objMesh... Also calls RemoveVelocity
 	Super::ToggleGravity();
 
-	springEnd->SetEnableGravity(!selected);
-	SetParentDominates(selected);
+	end->SetEnableGravity(!selected);
 }
 
 void ASpring::ToggleGravity(bool gravityOn)
 {
 	Super::ToggleGravity(gravityOn);
 
-	springEnd->SetEnableGravity(gravityOn);
-	SetParentDominates(!gravityOn);
+	end->SetEnableGravity(gravityOn);
 }
 
 void ASpring::RemoveVelocity() const
 {
 	Super::RemoveVelocity();
 
-	springEnd->SetPhysicsLinearVelocity(FVector::ZeroVector);
-	springEnd->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
+	end->SetPhysicsLinearVelocity(FVector::ZeroVector);
+	end->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
-float ASpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos) const
+float ASpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const
 {
 	const float change = (endPos - startPos).Length();
-	return .5f * springConstant * (change * change);
+
+	// Damping is proportional to velocity
+	const float dampingForce = damping * velocity.Length();
+
+	// Spring energy with damping
+	const float springEnergy = 0.5f * springConstant * change * change;
+
+	// Damping energy
+	const float dampingEnergy = dampingForce * change;
+
+	return springEnergy + dampingEnergy;
 }
 
 void ASpring::Attach()

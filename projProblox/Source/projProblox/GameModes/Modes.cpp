@@ -98,6 +98,11 @@ void AMode_Assault::BeginPlay()
 
 void AMode_Creative::BeginPlay()
 {
-	APlayerCharacter* player = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass()));
-	player->SetGameMode(EGameMode::Creative);
+	if(APlayerCharacter* player = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass())))
+	{
+		player->SetGameMode(EGameMode::Creative);
+		return;
+	}
+
+	Print("Gamemode couldnt cast to player (BeginPlay)", 5)
 }
