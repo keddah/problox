@@ -23,7 +23,6 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Spring.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
@@ -52,6 +51,7 @@
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
+			"Spring.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
@@ -59,7 +59,7 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"Spring.cpp.obj"
+			"projProblox.init.gen.cpp.obj"
 		]
 	}
 }
