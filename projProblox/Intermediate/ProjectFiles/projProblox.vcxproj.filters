@@ -82,6 +82,12 @@
     <Filter Include="Source\projProblox\Pickupables">
       <UniqueIdentifier>{01147432-667D-3141-9486-95D146DFE5E7}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Balloon.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Balloon.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Glider.cpp">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
