@@ -51,7 +51,7 @@ protected:
 	UStaticMeshComponent* silhouette;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UBoxComponent* collider;
+	UBoxComponent* pickupCollider;
 
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* indicator;
@@ -276,7 +276,11 @@ public:
 	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
 
 	UFUNCTION(BlueprintPure, Category = "Getters")
-	virtual float GetMass() const { return objMesh->GetMass(); }
+	virtual float GetMass() const
+	{
+		if(objMesh->IsSimulatingPhysics()) return objMesh->GetMass();
+		return objMesh->CalculateMass();
+	}
 
 	// Returns whether or not the player is able to pick this up.
 	bool GetCanPickup() const { return canPickup; }

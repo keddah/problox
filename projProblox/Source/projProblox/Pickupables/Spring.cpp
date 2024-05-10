@@ -37,7 +37,7 @@ void ASpring::Ability(float deltaTime)
 	DrawDebugLine(wrld, startPos, endPos, FColor::Red);
 	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
 
-	collider->SetWorldLocation(end->GetComponentLocation());
+	pickupCollider->SetWorldLocation(end->GetComponentLocation());
 
 	if(!springHit.bBlockingHit)
 	{
@@ -52,8 +52,9 @@ void ASpring::Ability(float deltaTime)
 	DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
-	
-	objMesh->AddForce(springHit.Normal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass());
+	DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
+
+	objMesh->AddForce(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass());
 }
 
 void ASpring::ToggleGravity() const

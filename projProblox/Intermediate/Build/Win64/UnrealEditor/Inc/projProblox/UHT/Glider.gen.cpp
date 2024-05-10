@@ -122,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 467738544U) },
+		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 3882343991U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_705813882(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_260294614(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

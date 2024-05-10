@@ -38,6 +38,10 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_pushSpeed;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_selfPropelForce_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_selfPropelForce;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_pushForce_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_pushForce;
@@ -45,6 +49,11 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_pushExtent_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_pushExtent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_canPush_MetaData[];
+#endif
+		static void NewProp_canPush_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_canPush;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_moving_MetaData[];
 #endif
@@ -76,7 +85,6 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_flatHead = { "flatHead", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, flatHead), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_flatHead_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_flatHead_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Pickupables/Piston.h" },
 #if !UE_BUILD_SHIPPING
@@ -84,18 +92,27 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed = { "pushSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed = { "pushSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_selfPropelForce_MetaData[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Pickupables/Piston.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The force to be applied to this object when it pushes against something immoveable." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_selfPropelForce = { "selfPropelForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, selfPropelForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_selfPropelForce_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_selfPropelForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData[] = {
-		{ "AllowPrivateAccess", "TEXT_TRUE" },
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Pickupables/Piston.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "How fast the piston head should push out." },
+		{ "ToolTip", "The force to be applied to the other object." },
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushForce = { "pushForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData[] = {
 		{ "Category", "Ability" },
@@ -108,8 +125,18 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_pushExtent = { "pushExtent", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APiston, pushExtent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_pushExtent_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_canPush_MetaData[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Pickupables/Piston.h" },
+	};
+#endif
+	void Z_Construct_UClass_APiston_Statics::NewProp_canPush_SetBit(void* Obj)
+	{
+		((APiston*)Obj)->canPush = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_canPush = { "canPush", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APiston), &Z_Construct_UClass_APiston_Statics::NewProp_canPush_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_canPush_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_canPush_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Ability" },
 		{ "ModuleRelativePath", "Pickupables/Piston.h" },
 #if !UE_BUILD_SHIPPING
@@ -121,12 +148,14 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 	{
 		((APiston*)Obj)->moving = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_moving = { "moving", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APiston), &Z_Construct_UClass_APiston_Statics::NewProp_moving_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APiston_Statics::NewProp_moving = { "moving", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APiston), &Z_Construct_UClass_APiston_Statics::NewProp_moving_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData), Z_Construct_UClass_APiston_Statics::NewProp_moving_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APiston_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_flatHead,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_pushSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_selfPropelForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_pushForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_pushExtent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_canPush,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APiston_Statics::NewProp_moving,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APiston_Statics::StaticCppClassTypeInfo = {
@@ -167,9 +196,9 @@ void EmptyLinkFunctionForGeneratedCodePiston() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Piston_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APiston, APiston::StaticClass, TEXT("APiston"), &Z_Registration_Info_UClass_APiston, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APiston), 3984694967U) },
+		{ Z_Construct_UClass_APiston, APiston::StaticClass, TEXT("APiston"), &Z_Registration_Info_UClass_APiston, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APiston), 3684158416U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Piston_h_274032613(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Piston_h_576892943(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Piston_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Piston_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

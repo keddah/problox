@@ -30,19 +30,22 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetCollisionResponseToAllChannels(ECR_Ignore);
 	silhouette->SetStaticMesh(objMesh->GetStaticMesh());
 	silhouette->SetupAttachment(objMesh);
+	silhouette->SetHiddenInGame(true);
+	
 	silhouette->SetMassOverrideInKg("", 0);
 	silhouette->SetSimulatePhysics(false);
+	silhouette->UnWeldFromParent();
+	silhouette->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	silhouette->SetEnableGravity(false);
-	silhouette->SetHiddenInGame(true);
 	
 	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
 	indicator->SetupAttachment(objMesh);
 	
-	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
-	collider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
-	collider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	collider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
-	collider->AddRelativeLocation({0,0,50});
+	pickupCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
+	pickupCollider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	pickupCollider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	pickupCollider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	pickupCollider->AddRelativeLocation({0,0,50});
 	
 	defaultRot = objMesh->GetRelativeRotation();
 }

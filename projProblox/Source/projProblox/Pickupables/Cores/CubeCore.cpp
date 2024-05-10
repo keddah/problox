@@ -49,7 +49,7 @@ ACubeCore::ACubeCore()
 	distanceLine->SetRelativeScale3D({1,7,7});
 	distanceLine->SetHiddenInGame(true);
 
-	collider->SetBoxExtent({});
+	pickupCollider->SetBoxExtent({});
 	
 	placeRange = 50;
 }
