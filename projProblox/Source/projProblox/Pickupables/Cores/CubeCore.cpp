@@ -251,7 +251,6 @@ EOperations ACubeCore::SetSelected(const bool value)
 	}
 
 	indicator->SetHiddenInGame(true);
-	ResetGhost();
 	
 	// Make the wheel go back to normal when it's unselected.
 	for(const auto& obj : socketInfo->GetAttachments())
@@ -263,6 +262,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Teleport the hit object to the silhouette
 	hitObj->UseSilhouetteTransform(silhouette);
+	ResetGhost();
 	
 	// Syncing the socket info
 	AddAttachment(hitObj, attachedSocket);

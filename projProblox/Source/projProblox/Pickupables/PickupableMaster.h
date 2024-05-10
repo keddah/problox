@@ -212,16 +212,10 @@ public:
 	virtual void SetCanPickup(const bool can) { canPickup = can; }
 
 	// Since this is used a lot...
-	void UseSilhouetteTransform(const UStaticMeshComponent* ghost = 0)
+	void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr)
 	{
 		// If a silhouette wasn't given, use this one.
-		if(!ghost)
-		{
-			const FTransform silhouetteTransform = silhouette->GetComponentTransform();
-			SetActorLocation(silhouetteTransform.GetLocation());
-			SetActorRotation(silhouetteTransform.GetRotation());
-			return;
-		}
+		if(!ghost) ghost = silhouette;
 		
 		const FTransform silhouetteTransform = ghost->GetComponentTransform();
 		SetActorLocation(silhouetteTransform.GetLocation());
