@@ -44,5 +44,5 @@ class PROJPROBLOX_API AGrappler : public APickupableMaster
 	void SetupLine() const { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndTo(hook, ""); }
 
 	UFUNCTION(BlueprintCallable, Category = "Ability")
-	void Pull(const FVector& direction, const float speed) { objMesh->AddForce(direction * speed * 1000); }
+	void Pull(const FVector& direction, const float speed) { mesh->AddForce(direction * speed * 1000); }
 };

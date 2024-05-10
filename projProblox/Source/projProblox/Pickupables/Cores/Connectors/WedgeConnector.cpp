@@ -104,7 +104,7 @@ void AWedgeConnector::GhostPlacement()
 
 	// Whether or not the attached socket is the diagonal side of a wedge...
 	const unsigned short rounder = attachDiag? 45 : 90; 
-	const FRotator relativeRot = objMesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
+	const FRotator relativeRot = mesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
 	
 	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
 	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % rounder == 0 && FMath::RoundToInt(relativeRot.Pitch) % rounder == 0 && FMath::RoundToInt(relativeRot.Yaw) % rounder == 0;  

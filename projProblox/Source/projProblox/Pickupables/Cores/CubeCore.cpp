@@ -29,7 +29,7 @@ void ACubeCore::SetupIndicator()
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
 	indicator->SetRelativeRotation(rot);
 
-	indicator->SetWorldLocation(objMesh->GetSocketLocation("DOWN"));
+	indicator->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
 	SetHideIndicator(true);
 }
 
@@ -39,9 +39,9 @@ ACubeCore::ACubeCore()
 	PrimaryActorTick.bCanEverTick = true;
 
 	thingHomer = CreateDefaultSubobject<UBoxComponent>("Bigger Collider");
-	thingHomer->SetupAttachment(objMesh);
+	thingHomer->SetupAttachment(mesh);
 	thingCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
-	thingCollector->SetupAttachment(objMesh);
+	thingCollector->SetupAttachment(mesh);
 
 	distanceLine = CreateDefaultSubobject<UArrowComponent>("Line");
 	distanceLine->ArrowSize = 1;
@@ -57,7 +57,7 @@ ACubeCore::ACubeCore()
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
-	defaultMat = Cast<UMaterial>(objMesh->GetMaterial(0));
+	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 
 	SetupIndicator();
 	
@@ -103,10 +103,10 @@ void ACubeCore::Placement()
 	collisionParams.MobilityType = EQueryMobilityType::Any;
 	collisionParams.bDebugQuery = true;
 
-	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
+	const FVector direction = mesh->GetComponentRotation().RotateVector(placeDir);
 	
 	// Debug Draw
-	const FVector start = objMesh->GetSocketLocation(raySocket);
+	const FVector start = mesh->GetSocketLocation(raySocket);
 	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 
@@ -150,7 +150,7 @@ void ACubeCore::OtherGhostPlacement()
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	
 	silhouette->SetHiddenInGame(false);
-	silhouette->AttachToComponent(objMesh, ghostRules, raySocket);
+	silhouette->AttachToComponent(mesh, ghostRules, raySocket);
 	
 	silhouette->SetRelativeLocation({hitObj->GetAttachOffset(*this),0,0});
 
@@ -162,7 +162,7 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 	if(!IsValid(&other)) return;
 
 	silhouette = other.GetSilhouette();
-	FRotator socketRot = objMesh->GetSocketRotation(raySocket);
+	FRotator socketRot = mesh->GetSocketRotation(raySocket);
 
 	// Need to start with the class at the bottom of the inheritance chain and go up from there... 
 	if(other.IsA<AWedgeConnector>())
@@ -193,7 +193,7 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 	{
 		if(other.ShouldSnapRotation())
 		{
-			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(raySocket));
+			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(raySocket));
 
 			FRotator rot;
 			const FVector otherPlaceDir = other.GetPlaceDir();
@@ -233,7 +233,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	else selected = true;
 
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	objMesh->SetUseCCD(selected);
+	mesh->SetUseCCD(selected);
 	
 	ToggleGravity();
 	SetHideIndicator(!selected);
@@ -343,7 +343,7 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	}
 	
 	socketInfo->RemoveAttachment(socket);
-	objMesh->SetEnableGravity(true);
+	mesh->SetEnableGravity(true);
 
 	onChangeAttachments.Broadcast();
 	previousAttachments = GetAttachedObjects();
@@ -354,7 +354,7 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	if(!IsValid(obj)) return;
 	
 	socketInfo->RemoveAttachment(obj);
-	objMesh->SetEnableGravity(true);
+	mesh->SetEnableGravity(true);
 
 	onChangeAttachments.Broadcast();
 	previousAttachments = GetAttachedObjects();
@@ -376,7 +376,7 @@ bool ACubeCore::DetachAll(const bool push)
 		obj->RemoveVelocity();
 		
 		if(!push) continue;
-		const FVector launchDir = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(obj->GetAttachedSocket()));
+		const FVector launchDir = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(obj->GetAttachedSocket()));
 		const float launchForce = obj->GetMass();
 
 		constexpr float maxVelocity = 1000;
@@ -406,7 +406,7 @@ void ACubeCore::SetAllAbilityActive(bool value) const
 
 float ACubeCore::GetMass() const
 {
-	float mass = objMesh->GetMass();
+	float mass = mesh->GetMass();
 
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
@@ -613,7 +613,7 @@ void ACubeCore::SetCanPickup(bool can)
 	if(can) return;
 	distanceLine->SetHiddenInGame(!buildPhase);
 	
-	distanceLine->SetWorldLocation(objMesh->GetComponentLocation());
+	distanceLine->SetWorldLocation(mesh->GetComponentLocation());
 
 	const FVector thisPos = distanceLine->GetComponentLocation();
 	const FVector collectorPos = collector->GetActorLocation() + FVector(0,0,750);
@@ -628,7 +628,7 @@ void ACubeCore::SetCanPickup(bool can)
 
 void ACubeCore::SetCanCollect(bool collectable)
 {
-	objMesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
+	mesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
 	canCollect = collectable;
 }
 

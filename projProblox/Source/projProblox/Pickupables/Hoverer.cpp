@@ -7,28 +7,28 @@
 AHoverer::AHoverer()
 {
 	topLeft = CreateDefaultSubobject<USceneComponent>("Top Left");
-	topLeft->SetupAttachment(objMesh);
+	topLeft->SetupAttachment(mesh);
 
 	topRight = CreateDefaultSubobject<USceneComponent>("Top Right");
-	topRight->SetupAttachment(objMesh);
+	topRight->SetupAttachment(mesh);
 
 	bottomLeft = CreateDefaultSubobject<USceneComponent>("Bottom Left");
-	bottomLeft->SetupAttachment(objMesh);
+	bottomLeft->SetupAttachment(mesh);
 
 	bottomRight = CreateDefaultSubobject<USceneComponent>("Bottom Right");
-	bottomRight->SetupAttachment(objMesh);
+	bottomRight->SetupAttachment(mesh);
 
 	sideUp = CreateDefaultSubobject<USceneComponent>("Side Up");
-	sideUp->SetupAttachment(objMesh);
+	sideUp->SetupAttachment(mesh);
 
 	sideDown = CreateDefaultSubobject<USceneComponent>("Side Down");
-	sideDown->SetupAttachment(objMesh);
+	sideDown->SetupAttachment(mesh);
 
 	sideLeft = CreateDefaultSubobject<USceneComponent>("Sided Left");
-	sideLeft->SetupAttachment(objMesh);
+	sideLeft->SetupAttachment(mesh);
 
 	sideRight = CreateDefaultSubobject<USceneComponent>("Side Right");
-	sideRight->SetupAttachment(objMesh);
+	sideRight->SetupAttachment(mesh);
 }
 
 void AHoverer::BeginPlay()
@@ -89,7 +89,7 @@ void AHoverer::Ability(float deltaTime)
 				PrintFloat(distanceSquared, .1)
 			
 				const float power = (hoverStrength * -1000) / distanceSquared;
-				objMesh->AddForceAtLocation(forwardVec * power, end);
+				mesh->AddForceAtLocation(forwardVec * power, end);
 	
 				DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 			}

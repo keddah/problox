@@ -11,12 +11,14 @@
 
 AThruster::AThruster()
 {
-	thruster = CreateDefaultSubobject<UPhysicsThrusterComponent>("Thruster");
-	thruster->SetupAttachment(objMesh);
+	thrusterComp = CreateDefaultSubobject<UPhysicsThrusterComponent>("Thruster");
+	thrusterComp->SetupAttachment(mesh);
+
+	snapRot = false;
 }
 
 void AThruster::BeginPlay()
 {
 	Super::BeginPlay();
-	thruster->ThrustStrength = power * 1000;
+	thrusterComp->ThrustStrength = power * 1000;
 }

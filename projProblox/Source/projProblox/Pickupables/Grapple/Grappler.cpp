@@ -15,7 +15,7 @@
 AGrappler::AGrappler()
 {
 	grappleSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Location"));
-	grappleSpawn->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	grappleSpawn->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 
 	grappleLine = CreateDefaultSubobject<UCableComponent>(TEXT("Line"));
 	grappleLine->AttachToComponent(grappleSpawn, FAttachmentTransformRules::KeepRelativeTransform);

@@ -6,7 +6,7 @@
 ACuboidCore::ACuboidCore()
 {
 	otherIndicator = CreateDefaultSubobject<UArrowComponent>("2nd Place Indicator");
-	otherIndicator->SetupAttachment(objMesh);
+	otherIndicator->SetupAttachment(mesh);
 }
 
 void ACuboidCore::SetupIndicator()
@@ -22,8 +22,8 @@ void ACuboidCore::SetupIndicator()
 	indicator->SetRelativeRotation(rot);
 	otherIndicator->SetRelativeRotation(rot);
 
-	indicator->SetWorldLocation(objMesh->GetSocketLocation("DOWN1"));
-	otherIndicator->SetWorldLocation(objMesh->GetSocketLocation("DOWN2"));
+	indicator->SetWorldLocation(mesh->GetSocketLocation("DOWN1"));
+	otherIndicator->SetWorldLocation(mesh->GetSocketLocation("DOWN2"));
 
 	SetHideIndicator(true);
 }
@@ -51,7 +51,7 @@ void ACuboidCore::Placement()
 	collisionParams.MobilityType = EQueryMobilityType::Any;
 	collisionParams.bDebugQuery = true;
 
-	const FVector direction = objMesh->GetComponentRotation().RotateVector(placeDir);
+	const FVector direction = mesh->GetComponentRotation().RotateVector(placeDir);
 
 	for(int i = 0; i < 2; i++)
 	{
@@ -68,7 +68,7 @@ void ACuboidCore::Placement()
 			continue;
 		}
 		
-		const FVector start = objMesh->GetSocketLocation(socket);
+		const FVector start = mesh->GetSocketLocation(socket);
 		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 

@@ -45,7 +45,7 @@ protected:
 ///////////////////////////// PROPERTIES /////////////////////////////
 	/////////////// Components ///////////////
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	UStaticMeshComponent* objMesh;
+	UStaticMeshComponent* mesh;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* silhouette;
@@ -144,8 +144,8 @@ protected:
 	{
 		if(active)
 		{
-			silhouette->SetWorldRotation(objMesh->GetComponentRotation());
-			silhouette->SetWorldLocation(objMesh->GetComponentLocation());
+			silhouette->SetWorldRotation(mesh->GetComponentRotation());
+			silhouette->SetWorldLocation(mesh->GetComponentLocation());
 		}
 	}
 
@@ -272,14 +272,14 @@ public:
 	virtual bool GetIsAttached() const { return isAttached; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")
-	UStaticMeshComponent* GetMesh() const { return objMesh; }
+	UStaticMeshComponent* GetMesh() const { return mesh; }
 	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
 
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const
 	{
-		if(objMesh->IsSimulatingPhysics()) return objMesh->GetMass();
-		return objMesh->CalculateMass();
+		if(mesh->IsSimulatingPhysics()) return mesh->GetMass();
+		return mesh->CalculateMass();
 	}
 
 	// Returns whether or not the player is able to pick this up.
@@ -292,12 +292,12 @@ public:
 	// Enable/Disable gravity when selected/deselected
 	virtual void ToggleGravity() const
 	{
-		objMesh->SetEnableGravity(!selected);
+		mesh->SetEnableGravity(!selected);
 		if(selected) RemoveVelocity();
 	}
 	virtual void ToggleGravity(bool gravityOn)
 	{
-		objMesh->SetEnableGravity(gravityOn);
+		mesh->SetEnableGravity(gravityOn);
 		if(!gravityOn) RemoveVelocity();	
 	}
 	
@@ -311,6 +311,6 @@ public:
 	void AddVelocity(const FVector& velocity) const
 	{
 		const FVector currentVel = GetVelocity();
-		objMesh->SetPhysicsLinearVelocity(FVector(currentVel.X + velocity.X,currentVel.Y + velocity.Y, currentVel.Z + velocity.Z));
+		mesh->SetPhysicsLinearVelocity(FVector(currentVel.X + velocity.X,currentVel.Y + velocity.Y, currentVel.Z + velocity.Z));
 	}
 };

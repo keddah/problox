@@ -19,11 +19,11 @@
 AWheel::AWheel()
 {
 	pivot = CreateDefaultSubobject<USceneComponent>("Center");
-	pivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	pivot->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	pivot->AddRelativeLocation({0,0,50});
 	
 	wheelAxel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Wheel Axel");
-	wheelAxel->SetupAttachment(objMesh);
+	wheelAxel->SetupAttachment(mesh);
 	wheelAxel->SetDisableCollision(true);
 	
 	wheelAxel->SetLinearXLimit(LCM_Locked, 0);
@@ -91,7 +91,7 @@ void AWheel::Attach(ACubeCore* core)
 	SetActorRotation(rot);
 	SetActorLocation(coreMesh->GetSocketLocation(attachedSocket));
 	
-	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
+	wheelAxel->SetConstrainedComponents(mesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
 	wheelAxel->UpdateConstraintFrames();
 	
 	parentCore->AddAttachment(this, attachedSocket);
@@ -112,7 +112,7 @@ void AWheel::Reattach(const FTransform& transform)
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 	
-	wheelAxel->SetConstrainedComponents(objMesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
+	wheelAxel->SetConstrainedComponents(mesh, attachedSocket, parentCore->GetMesh(), attachedSocket);
 	wheelAxel->UpdateConstraintFrames();
 }
 

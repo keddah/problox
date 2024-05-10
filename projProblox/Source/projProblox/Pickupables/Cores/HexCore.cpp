@@ -7,7 +7,7 @@
 AHexCore::AHexCore()
 {
 	topper = CreateDefaultSubobject<UStaticMeshComponent>("Top");
-	topper->SetupAttachment(objMesh);
+	topper->SetupAttachment(mesh);
 	topper->SetRelativeLocation({0,0,100});	
 }
 

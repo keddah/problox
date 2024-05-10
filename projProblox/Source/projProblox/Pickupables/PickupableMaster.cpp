@@ -21,15 +21,15 @@ APickupableMaster::APickupableMaster()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	objMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	objMesh->SetSimulatePhysics(true);
-	objMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	objMesh->SetGenerateOverlapEvents(true);
+	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	mesh->SetSimulatePhysics(true);
+	mesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	mesh->SetGenerateOverlapEvents(true);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
 	silhouette->SetCollisionResponseToAllChannels(ECR_Ignore);
-	silhouette->SetStaticMesh(objMesh->GetStaticMesh());
-	silhouette->SetupAttachment(objMesh);
+	silhouette->SetStaticMesh(mesh->GetStaticMesh());
+	silhouette->SetupAttachment(mesh);
 	silhouette->SetHiddenInGame(true);
 	
 	silhouette->SetMassOverrideInKg("", 0);
@@ -39,15 +39,15 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetEnableGravity(false);
 	
 	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
-	indicator->SetupAttachment(objMesh);
+	indicator->SetupAttachment(mesh);
 	
 	pickupCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
-	pickupCollider->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	pickupCollider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 	pickupCollider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 	pickupCollider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
 	pickupCollider->AddRelativeLocation({0,0,50});
 	
-	defaultRot = objMesh->GetRelativeRotation();
+	defaultRot = mesh->GetRelativeRotation();
 }
 
 // Called when the game starts or when spawned
@@ -55,7 +55,7 @@ void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
 
-	defaultMat = Cast<UMaterial>(objMesh->GetMaterial(0));
+	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetupIndicator();
 }
@@ -198,7 +198,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	selected = value;
 
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	objMesh->SetUseCCD(selected);
+	mesh->SetUseCCD(selected);
 	
 	ToggleGravity();
 	SetHideIndicator(!selected);
@@ -262,7 +262,7 @@ void APickupableMaster::Detach()
 	else previousObj->RemoveAttachment(attachedSocket);
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	silhouette->SetupAttachment(objMesh);
+	silhouette->SetupAttachment(mesh);
 
 	if(parentCore)
 	{
@@ -440,15 +440,15 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 
 void APickupableMaster::RemoveVelocity() const
 {
-	objMesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
-	objMesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
+	mesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
+	mesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
 
 void APickupableMaster::ResetGhost(const bool resetRot) const
 {
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	silhouette->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	silhouette->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
 
 	if(resetRot) silhouette->SetWorldRotation({0,0,0});
@@ -460,9 +460,9 @@ void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
 	silhouette->SetHiddenInGame(false);
 	silhouette->SetMaterial(0, mat);
 
-	silhouette->AttachToComponent(objMesh, ghostRules);
-	silhouette->SetWorldRotation(objMesh->GetComponentRotation());
-	silhouette->SetWorldLocation(objMesh->GetComponentLocation());
+	silhouette->AttachToComponent(mesh, ghostRules);
+	silhouette->SetWorldRotation(mesh->GetComponentRotation());
+	silhouette->SetWorldLocation(mesh->GetComponentLocation());
 }
 
 void APickupableMaster::DeactivateOutline() const

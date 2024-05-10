@@ -18,9 +18,9 @@
 ATreads::ATreads()
 {
 	driveTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger"));
-	driveTrigger->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	driveTrigger->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 
-	objMesh->SetAngularDamping(1);
+	mesh->SetAngularDamping(1);
 	
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = false;

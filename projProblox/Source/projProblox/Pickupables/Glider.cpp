@@ -24,14 +24,14 @@ void AGlider::Ability(const float deltaTime)
 	if(!active) return;
 	if(selected)
 	{
-		objMesh->SetAllPhysicsLinearVelocity({});
+		mesh->SetAllPhysicsLinearVelocity({});
 		return;
 	}
 
 	// Only activate when falling fast enough
-	if(objMesh->GetPhysicsLinearVelocity().Z > -activationSpeed) return;
+	if(mesh->GetPhysicsLinearVelocity().Z > -activationSpeed) return;
 
 	// 1000 is the mass of the core (The mass of the other attached objects will be considered... just not the core.)
-	objMesh->AddForce(GetActorForwardVector() * glideSpeed * 1000);
-	objMesh->AddForce(GetActorUpVector() * floatAmount * 1000);
+	mesh->AddForce(GetActorForwardVector() * glideSpeed * 1000);
+	mesh->AddForce(GetActorUpVector() * floatAmount * 1000);
 }

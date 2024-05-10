@@ -14,7 +14,7 @@
 APiston::APiston()
 {
 	flatHead = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Push Pad"));
-	flatHead->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	flatHead->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	flatHead->SetUseCCD(true);
 }
 
@@ -81,13 +81,13 @@ void APiston::Ability(const float deltaTime)
 	// Push self
 	Print("pushing self", 5)
 	const FVector outputForce = pushDir * selfPropelForce * -1000 * sqrt(parentCore->GetMass());
-	objMesh->AddForceAtLocation(outputForce, hit.Location);
+	mesh->AddForceAtLocation(outputForce, hit.Location);
 }
 
 void APiston::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-	objMesh->SetHiddenInGame(!active);
+	mesh->SetHiddenInGame(!active);
 
 	// So that you can't push yourself by activating whilst the piston is fully extended..
 	canPush = flatHead->GetRelativeLocation().Length() < 20;

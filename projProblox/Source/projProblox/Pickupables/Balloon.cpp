@@ -1,7 +1,4 @@
 // Created by Dean Atkinson-Walker 2024
-#include "Components/StaticMeshComponent.h"
-
-
 #include "Balloon.h"
 
 #include "Cores/CubeCore.h"
@@ -9,7 +6,7 @@
 ABalloon::ABalloon()
 {
 	string = CreateDefaultSubobject<UCableComponent>("String");
-	string->SetupAttachment(objMesh);
+	string->SetupAttachment(mesh);
 
 	constraint = CreateDefaultSubobject<UPhysicsConstraintComponent>("Constraint");
 	constraint->SetupAttachment(string);
@@ -39,12 +36,12 @@ void ABalloon::Ability(float deltaTime)
 
 	if(!parentCore || !isAttached) return;
 	
-	FVector velocity = objMesh->GetPhysicsLinearVelocity();
+	FVector velocity = mesh->GetPhysicsLinearVelocity();
 	velocity.Z *= -deltaTime;
 	velocity.Z -= sqrt(parentCore->GetMass());
 	velocity.Z += floatiness; 
 	
-	objMesh->SetPhysicsLinearVelocity(velocity);
+	mesh->SetPhysicsLinearVelocity(velocity);
 }
 
 EOperations ABalloon::SetSelected(const bool value)
@@ -52,7 +49,7 @@ EOperations ABalloon::SetSelected(const bool value)
 	selected = value;
 
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	objMesh->SetUseCCD(selected);
+	mesh->SetUseCCD(selected);
 	
 	ToggleGravity();
 	SetHideIndicator(!selected);
@@ -101,7 +98,7 @@ void ABalloon::Detach()
 	constraint->BreakConstraint();
 	string->SetAttachEndToComponent(nullptr);
 	
-	silhouette->SetupAttachment(objMesh);
+	silhouette->SetupAttachment(mesh);
 
 	if(parentCore)
 	{
@@ -116,6 +113,6 @@ void ABalloon::Detach()
 void ABalloon::Attach() const
 {
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	constraint->SetConstrainedComponents(parentMesh,"", objMesh, "");
+	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);
 }

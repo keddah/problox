@@ -42,7 +42,7 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	TArray<AMagnet*> otherMagnets;
 	TArray<AMagPole*> poles;
 
-	void ConfigureCharge() const { objMesh->SetMaterial(0, positive? positiveMat : negativeMat); }
+	void ConfigureCharge() const { mesh->SetMaterial(0, positive? positiveMat : negativeMat); }
 	void AddMagnet(AMagnet* mag) { otherMagnets.AddUnique(mag); }
 	
 public:

@@ -21,7 +21,7 @@ void APropeller::BeginPlay()
 APropeller::APropeller()
 {
 	windBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Wind Collider"));
-	windBox->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	windBox->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 
 	// Don't allow cells to be collected from this collider.
 	Tags.Add("NO");
@@ -34,7 +34,7 @@ void APropeller::Ability(const float deltaTime)
 	
 	if(!active) return;
 
-	objMesh->AddLocalRotation({0, 0, spinSpeed});
+	mesh->AddLocalRotation({0, 0, spinSpeed});
 
 	if(!parentCore) return;
 
@@ -48,7 +48,7 @@ void APropeller::Ability(const float deltaTime)
     		if(obj)
     		{
     			const float power = (pushForce * 1000) / sqrt(FVector::DistSquared(GetActorLocation(), obj->GetComponentLocation())) ;
-				obj->AddForce(objMesh->GetForwardVector() * power);
+				obj->AddForce(mesh->GetForwardVector() * power);
     		}
 		}
     }
@@ -56,9 +56,9 @@ void APropeller::Ability(const float deltaTime)
 	if(!vertical) return;
 
 	const float power = sqrt(parentCore->GetMass()) * propelForce * 1000; 
-	const FVector force = power * objMesh->GetForwardVector();
+	const FVector force = power * mesh->GetForwardVector();
 	
-	parentCore->GetMesh()->AddForceAtLocation(force, objMesh->GetComponentLocation());
+	parentCore->GetMesh()->AddForceAtLocation(force, mesh->GetComponentLocation());
 
 	
 }

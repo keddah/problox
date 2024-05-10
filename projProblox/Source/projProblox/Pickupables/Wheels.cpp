@@ -14,8 +14,8 @@ AWheels::AWheels()
 
 	leftPivot = CreateDefaultSubobject<USceneComponent>("Left Pivot");
 	rightPivot = CreateDefaultSubobject<USceneComponent>("Right Pivot");
-	leftPivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
-	rightPivot->AttachToComponent(objMesh, FAttachmentTransformRules::KeepRelativeTransform);
+	leftPivot->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
+	rightPivot->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 	
 	SetupAttachments();
 	placeRange = 300;
@@ -52,10 +52,10 @@ void AWheels::SetupAttachments() const
 		return;
 	}
 
-	leftWheel->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	leftWheel->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	leftWheel->SetSimulatePhysics(true);	// Needs to simulate physics (otherwise it'll crash)
 	
-	rightWheel->AttachToComponent(objMesh, FAttachmentTransformRules::KeepWorldTransform);
+	rightWheel->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	rightWheel->SetSimulatePhysics(true);	// Needs to simulate physics (otherwise it'll crash)
 	
 	leftAxel->AttachToComponent(leftWheel, FAttachmentTransformRules::KeepWorldTransform);
@@ -86,8 +86,8 @@ void AWheels::SetupAttachments() const
 	rightAxel->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
 	rightAxel->SetAngularVelocityDriveTwistAndSwing(false, true);
 
-	leftAxel->SetConstrainedComponents(leftWheel, "", objMesh, "");
-	rightAxel->SetConstrainedComponents(rightWheel, "", objMesh, "");
+	leftAxel->SetConstrainedComponents(leftWheel, "", mesh, "");
+	rightAxel->SetConstrainedComponents(rightWheel, "", mesh, "");
 }
 
 void AWheels::GhostPlacement()
@@ -113,7 +113,7 @@ void AWheels::GhostPlacement()
 	silhouette->SetWorldRotation(socketRot);
 
 	// All this to fix the rotation....
-	const FRotator relativeRot = objMesh->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
+	const FRotator relativeRot = mesh->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
 	
 	// Whether the attached socket is the diagonal side of a wedge...
 	const unsigned short rounder = attachDiag? 45 : 90; 
@@ -134,7 +134,7 @@ EOperations AWheels::SetSelected(const bool value)
 	SetConstraintsActive(!selected);
 	
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	objMesh->SetUseCCD(selected);
+	mesh->SetUseCCD(selected);
 	
 	ToggleGravity();
 	SetHideIndicator(!selected);
@@ -192,7 +192,7 @@ void AWheels::Attach() const
 	
 	SetParentDominates(false);
 	
-	objMesh->AttachToComponent(parentCore->GetMesh(), attachRules, attachedSocket);
+	mesh->AttachToComponent(parentCore->GetMesh(), attachRules, attachedSocket);
 	RemoveVelocity();
 }
 
@@ -214,8 +214,8 @@ void AWheels::Detach()
 
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 
-	leftAxel->SetConstrainedComponents(leftWheel, "", objMesh, "");
-	rightAxel->SetConstrainedComponents(rightWheel, "", objMesh, "");
+	leftAxel->SetConstrainedComponents(leftWheel, "", mesh, "");
+	rightAxel->SetConstrainedComponents(rightWheel, "", mesh, "");
 	leftAxel->UpdateConstraintFrames();
 	rightAxel->UpdateConstraintFrames();
 	
@@ -227,7 +227,7 @@ void AWheels::Detach()
 	leftAxel->SetRelativeRotation({0,0,0});
 	rightAxel->SetRelativeRotation({0,0,0});
 	
-	silhouette->SetupAttachment(objMesh);
+	silhouette->SetupAttachment(mesh);
 
 	if(parentCore)
 	{

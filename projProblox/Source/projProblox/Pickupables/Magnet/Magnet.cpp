@@ -32,7 +32,7 @@ void AMagnet::BeginPlay()
 	// Telling the other magnets in the level that this one was made...
 	for (const auto& mag : otherMagnets) mag->AddMagnet(this);
 
-	objMesh->SetMaterial(0, positive? positiveMat : negativeMat);
+	mesh->SetMaterial(0, positive? positiveMat : negativeMat);
 }
 
 void AMagnet::Ability(const float deltaTime)
@@ -58,7 +58,7 @@ void AMagnet::Ability(const float deltaTime)
 		const bool attract = mag->GetPositiveCharge() != positive;
 		
 		// Scale the force by the distance of the involved blocks
-		objMesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
+		mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 	}
 	
 	for (const auto& mag : otherMagnets)
@@ -76,7 +76,7 @@ void AMagnet::Ability(const float deltaTime)
 		const bool attract = mag->positive != positive;
 		
 		// Scale the force by the distance of the involved blocks 
-		objMesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
+		mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 	}
 	
 }

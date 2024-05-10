@@ -17,19 +17,19 @@
 ACubeConnector::ACubeConnector()
 {
 	backArrow = CreateDefaultSubobject<UArrowComponent>("Backwards Arrow");
-	backArrow->SetupAttachment(objMesh);
+	backArrow->SetupAttachment(mesh);
 
 	leftArrow = CreateDefaultSubobject<UArrowComponent>("Left Arrow");
-	leftArrow->SetupAttachment(objMesh);
+	leftArrow->SetupAttachment(mesh);
 
 	rightArrow = CreateDefaultSubobject<UArrowComponent>("Right Arrow");
-	rightArrow->SetupAttachment(objMesh);
+	rightArrow->SetupAttachment(mesh);
 
 	upArrow = CreateDefaultSubobject<UArrowComponent>("Upwards Arrow");
-	upArrow->SetupAttachment(objMesh);
+	upArrow->SetupAttachment(mesh);
 
 	downArrow = CreateDefaultSubobject<UArrowComponent>("Downwards Arrow");
-	downArrow->SetupAttachment(objMesh);
+	downArrow->SetupAttachment(mesh);
 
 	// Disable anything to do with Thing collection
 	thingCollector->SetGenerateOverlapEvents(false);
@@ -112,8 +112,8 @@ void ACubeConnector::Placement()
 		if(socketInfo->ObjectInSocket(i)) continue;
 
 		FHitResult hit;
-		const FVector direction = UKismetMathLibrary::GetForwardVector(objMesh->GetSocketRotation(socketInfo->GetSockets()[i]));
-		const FVector start = objMesh->GetSocketLocation(socketInfo->GetSockets()[i]);
+		const FVector direction = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(socketInfo->GetSockets()[i]));
+		const FVector start = mesh->GetSocketLocation(socketInfo->GetSockets()[i]);
 
 		// Debug Draw
 		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
@@ -212,7 +212,7 @@ void ACubeConnector::GhostPlacement()
 	silhouette->SetWorldRotation(socketRot);
 
 	// All this to fix the rotation....
-	const FRotator relativeRot = objMesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
+	const FRotator relativeRot = mesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
 	
 	// Whether or not the attached socket is the diagonal side of a wedge...
 	const unsigned short rounder = attachDiag? 45 : 90; 
@@ -233,7 +233,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	ToggleGravity();
 	
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	objMesh->SetUseCCD(selected);
+	mesh->SetUseCCD(selected);
 	
 	SetHideIndicator(!selected);
 

@@ -27,7 +27,7 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	{
 		// Need to deactivate first before disabling physics
 		constraint->SetActive(constrained);
-		objMesh->SetSimulatePhysics(constrained);
+		mesh->SetSimulatePhysics(constrained);
 	}
 	void Attach() const;
 	
