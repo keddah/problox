@@ -40,7 +40,6 @@
 			"Modes.cpp.obj",
 			"Balloon.cpp.obj",
 			"CubeConnector.cpp.obj",
-			"WedgeConnector.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -52,7 +51,6 @@
 			"MagPole.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
-			"Spring.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
@@ -60,8 +58,10 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
+			"WedgeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
-			"PickupableMaster.cpp.obj"
+			"PickupableMaster.cpp.obj",
+			"Spring.cpp.obj"
 		]
 	}
 }

@@ -58,10 +58,6 @@ void AWedgeConnector::GhostPlacement()
 	silhouette->SetHiddenInGame(false);
 
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-
-	///////////// Rotation
-	///	// WHEN THE OBJECT IS SLIGHTLY KNOCKED.... THE ROUND ROTATION IS SLIGHTLY OFF..... (ONLY FOR WEDGES?)
-
 	const bool isDiag = raySocket == "DIAG";
 	const bool attachDiag = attachedSocket == "DIAG";
 
@@ -82,32 +78,40 @@ void AWedgeConnector::GhostPlacement()
 
 	const FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
 	FRotator attachRot = DiagRoundRot(GetActorRotation(), socketRot, isDiag);
+	silhouette->SetWorldRotation(attachRot);
 
 	// Ignore if the X and Y vectors aren't low...
 	constexpr float aboveThreshold = .075f;
 	const bool upright = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
 
-	// When placing on the diagonal face ... can only point in one direction...
+	// Whether the attached socket is the diagonal side of a wedge...
+	const unsigned short rounder = attachDiag? 45 : 90; 
+	const FRotator relativeRot = mesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
+	
+	// Rounded is true if the xyz relative rotations are factors of the rounder (45/90)
+	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % rounder == 0 && FMath::RoundToInt(relativeRot.Pitch) % rounder == 0 && FMath::RoundToInt(relativeRot.Yaw) % rounder == 0;  
+	// if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
+
 	if(attachDiag && !upright) attachRot.Yaw = socketRot.Yaw;
-
 	silhouette->SetWorldRotation(attachRot);
-
+	
 	// Ensure that when above an object and the raySocket is the hypotenuse side, the hyp side always faces the bottom but the other axis can still be used..
 	if(isDiag && upright)
 	{
 		// Basically just used to round the hypotenuse side...
-		const FRotator roundRot = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), -45);
-		
+		FRotator roundRot = RoundAxis(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), {-45,90,90});
+		roundRot.Pitch = FMath::Clamp(roundRot.Pitch, -45, 0);
+
 		const FRotator roundYaw = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation());
 		silhouette->SetWorldRotation({roundRot.Pitch, roundYaw.Yaw, roundRot.Roll});
+		return;
 	}
 
-	// Whether or not the attached socket is the diagonal side of a wedge...
-	const unsigned short rounder = attachDiag? 45 : 90; 
-	const FRotator relativeRot = mesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
-	
-	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
-	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % rounder == 0 && FMath::RoundToInt(relativeRot.Pitch) % rounder == 0 && FMath::RoundToInt(relativeRot.Yaw) % rounder == 0;  
+	else if(isDiag)
+	{
+		silhouette->SetRelativeRotation({135,0,0});
+		return;
+	}
 
 	// If the current rotation isn't aligned with the socket rotation (the relative rotation since it's already attached)...
 	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.

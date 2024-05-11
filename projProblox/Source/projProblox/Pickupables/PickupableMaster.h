@@ -167,7 +167,13 @@ protected:
 	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true);
 	static FRotator RoundRotation(const FRotator& rotation, const float rounder);
 	static FRotator RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder = -90);
+
 	static FRotator DiagRoundRot(const FRotator& rotation, const FRotator& referencedRot, const bool isDiag);
+
+	// Set the "axis" so that the angle is the value you want to round to.  
+	static FRotator RoundAxis(const FRotator& rotation, const FRotator& axis = {90,90,90});
+	static FRotator RoundAxis(const FRotator& rotation, const FRotator& referenceRot, const FRotator& axis);
+
 
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);

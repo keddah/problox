@@ -47,7 +47,7 @@ void ASpring::Ability(float deltaTime)
 		return;
 	}
 	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
-	end->SetWorldLocation(springHit.Location.GetClampedToSize(minSpringLength, maxSpringLength));
+	end->SetWorldLocation(springHit.Location);
 	
 	DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
 

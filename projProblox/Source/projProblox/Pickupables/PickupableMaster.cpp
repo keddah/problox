@@ -291,7 +291,6 @@ FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool n
 
 FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const float rounder)
 {
-	// Quantize each component of the Rotator using Frac and Floor
 	FRotator rounded;
 		
 	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
@@ -303,10 +302,9 @@ FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const float 
 
 FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder)
 {
-	// Calculate the difference between the rotations
 	const FRotator difference = rotation - referencedRot;
 
-	// Round the differences to the nearest 90 degrees
+	// Round the differences to the rounder
 	const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / rounder) * rounder;
 	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / rounder) * rounder;
 	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / rounder) * rounder;
@@ -314,6 +312,31 @@ FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotat
 	// Add the rounded differences to the reference rotation to get the rounded rotation
 	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
 }
+
+FRotator APickupableMaster::RoundAxis(const FRotator& rotation, const FRotator& axis)
+{
+	FRotator rot = rotation;
+	if(axis.Roll != 0) rot.Roll = FMath::RoundHalfFromZero(rot.Roll / axis.Roll) * axis.Roll;
+	if(axis.Pitch != 0) rot.Pitch = FMath::RoundHalfFromZero(rot.Pitch / axis.Pitch) * axis.Pitch;
+	if(axis.Yaw != 0) rot.Yaw = FMath::RoundHalfFromZero(rot.Yaw / axis.Yaw) * axis.Yaw;
+
+	PrintRotator(rot, 1)
+	return rot;
+}
+
+FRotator APickupableMaster::RoundAxis(const FRotator& rotation, const FRotator& referenceRot, const FRotator& axis)
+{
+	FRotator difference = rotation - referenceRot;
+
+	// Round the differences to the specified axis rounder
+	if(axis.Roll != 0) difference.Roll = FMath::RoundHalfFromZero(difference.Roll / axis.Roll) * axis.Roll;
+	if(axis.Pitch != 0) difference.Pitch = FMath::RoundHalfFromZero(difference.Pitch / axis.Pitch) * axis.Pitch;
+	if(axis.Yaw != 0) difference.Yaw = FMath::RoundHalfFromZero(difference.Yaw / axis.Yaw) * axis.Yaw;
+
+	// Add the rounded differences to the reference rotation to get the rounded rotation
+	return referenceRot + difference;
+}
+
 
 FRotator APickupableMaster::DiagRoundRot(const FRotator& rotation, const FRotator& referencedRot, const bool isDiag)
 {

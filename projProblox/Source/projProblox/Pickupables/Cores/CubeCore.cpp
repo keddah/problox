@@ -262,6 +262,8 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Teleport the hit object to the silhouette
 	hitObj->UseSilhouetteTransform(silhouette);
+
+	// Reset the silhouette after using its transform
 	ResetGhost();
 	
 	// Syncing the socket info
