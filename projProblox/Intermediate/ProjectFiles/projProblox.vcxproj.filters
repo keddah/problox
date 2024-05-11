@@ -178,6 +178,12 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CubeConnector.h">
       <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CuboidConnector.cpp">
+      <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CuboidConnector.h">
+      <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\WedgeConnector.cpp">
       <Filter>Source\projProblox\Pickupables\Cores\Connectors</Filter>
     </ClCompile>

@@ -69,7 +69,9 @@ void ACubeConnector::SetupIndicator()
 	rightArrow->ArrowLength = placeRange;
 	upArrow->ArrowLength = placeRange;
 	downArrow->ArrowLength = placeRange;
-	
+
+
+	// Setting the orientation
 	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
 	indicator->SetRelativeRotation(rot);
 
@@ -88,6 +90,18 @@ void ACubeConnector::SetupIndicator()
 	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
 	downArrow->SetRelativeRotation(rot);
 
+	// Setting the position
+	TArray<UArrowComponent*> arrows;
+	GetComponents<UArrowComponent>(arrows);
+
+	if(!socketInfo) return;
+	const TArray<FName> sockets = socketInfo->GetSockets(); 
+	
+	for(int i = 0; i < arrows.Num(); i++)
+	{
+		arrows[i]->SetWorldLocation(mesh->GetSocketLocation(sockets[i]));
+	}
+	
 	SetHideIndicator(true);
 }
 
@@ -116,7 +130,7 @@ void ACubeConnector::Placement()
 		const FVector start = mesh->GetSocketLocation(socketInfo->GetSockets()[i]);
 
 		// Debug Draw
-		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
+		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 		
 		// Go to the next ray if it didn't hit anything...
@@ -128,7 +142,7 @@ void ACubeConnector::Placement()
 			continue;
 		}
 
-		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();

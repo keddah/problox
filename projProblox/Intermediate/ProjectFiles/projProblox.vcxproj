@@ -193,12 +193,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Propeller.h"/>
-    <ClCompile Include="..\..\Source\projProblox\Pickupables\Spring.cpp">
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\BounceSpring.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Pickupables\Spring.h"/>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\BounceSpring.h" />
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Thruster.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -247,6 +247,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CubeConnector.h"/>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CuboidConnector.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\CuboidConnector.h"/>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Cores\Connectors\WedgeConnector.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>

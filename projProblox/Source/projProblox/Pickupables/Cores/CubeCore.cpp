@@ -59,13 +59,13 @@ void ACubeCore::BeginPlay()
 	Super::BeginPlay();
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 
-	SetupIndicator();
-	
 	// Create a socket info for each cube (also inherited to connectors)
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
+	
 	AdjustRange();
-
+	// SetupIndicator();
+	
 	onStartGame.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 

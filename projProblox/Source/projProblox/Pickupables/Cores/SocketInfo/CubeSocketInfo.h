@@ -53,7 +53,7 @@ public:
 	
 	// Use these when the entire array of objects is wanted (even invalid ones)
 	TArray<APickupableMaster*> GetObjectsArray() const { return socketObjects; }
-	TArray<FName> GetSockets() const { return sockets; }
+	const TArray<FName>& GetSockets() const { return sockets; }
 	
 	APickupableMaster* GetObjectInSocket(const int index) const { return socketObjects[index]; }
 	APickupableMaster* GetObjectInSocket(const FName& name) const;
