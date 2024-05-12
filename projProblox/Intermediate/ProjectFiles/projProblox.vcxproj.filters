@@ -88,6 +88,12 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Balloon.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Pickupables\BounceSpring.cpp">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Pickupables\BounceSpring.h">
+      <Filter>Source\projProblox\Pickupables</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Glider.cpp">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
@@ -116,12 +122,6 @@
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Propeller.h">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Pickupables\Spring.cpp">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Pickupables\Spring.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Thruster.cpp">

@@ -34,14 +34,14 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_driveTrigger;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_moveSpeed_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_moveSpeed;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_grounded_MetaData[];
 #endif
 		static void NewProp_grounded_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_grounded;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_moveSpeed_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_moveSpeed;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -67,8 +67,21 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger = { "driveTrigger", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, driveTrigger), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData[] = {
+		{ "Category", "Ability" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/////////////// Ability ///////////////\n" },
+#endif
+		{ "Delta", "0.100000" },
+		{ "ModuleRelativePath", "Pickupables/Treads.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Ability" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed = { "moveSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, moveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_grounded_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Treads" },
 		{ "ModuleRelativePath", "Pickupables/Treads.h" },
 #if !UE_BUILD_SHIPPING
@@ -80,19 +93,11 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 	{
 		((ATreads*)Obj)->grounded = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_grounded = { "grounded", nullptr, (EPropertyFlags)0x0040000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ATreads), &Z_Construct_UClass_ATreads_Statics::NewProp_grounded_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_grounded_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_grounded_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData[] = {
-		{ "Category", "Ability" },
-		{ "Delta", "0.100000" },
-		{ "ModuleRelativePath", "Pickupables/Treads.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed = { "moveSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, moveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed_MetaData) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_grounded = { "grounded", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ATreads), &Z_Construct_UClass_ATreads_Statics::NewProp_grounded_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_grounded_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_grounded_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATreads_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_grounded,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_moveSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATreads_Statics::NewProp_grounded,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATreads_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATreads>::IsAbstract,
@@ -132,9 +137,9 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 1577171888U) },
+		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 3163501171U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_1200880006(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_161453637(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -9,7 +9,7 @@ ACuboidCore::ACuboidCore()
 	otherIndicator->SetupAttachment(mesh);
 }
 
-void ACuboidCore::SetupIndicator()
+void ACuboidCore::ScaleIndicator()
 {
 	indicator->ArrowColor.A = .5f;
 	otherIndicator->ArrowColor.A = .5f;

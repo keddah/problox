@@ -44,67 +44,40 @@ void ACubeConnector::BeginPlay()
 {
 	placeRange = 100;
 	
+	distanceLine->DestroyComponent();
 	Super::BeginPlay();
 }
 
-void ACubeConnector::Tick(float DeltaSeconds)
+void ACubeConnector::SetupPlaceIndicator()
 {
-	Super::Tick(DeltaSeconds);
-}
-
-
-void ACubeConnector::SetupIndicator()
-{
-	indicator->ArrowColor.A = .5f;
-	backArrow->ArrowColor.A = .5f;
-	leftArrow->ArrowColor.A = .5f;
-	rightArrow->ArrowColor.A = .5f;
-	upArrow->ArrowColor.A = .5f;
-	downArrow->ArrowColor.A = .5f;
-
-	
-	indicator->ArrowLength = placeRange;
-	backArrow->ArrowLength = placeRange;
-	leftArrow->ArrowLength = placeRange;
-	rightArrow->ArrowLength = placeRange;
-	upArrow->ArrowLength = placeRange;
-	downArrow->ArrowLength = placeRange;
-
-
-	// Setting the orientation
+	// Setting the position and orientation
 	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
 	indicator->SetRelativeRotation(rot);
+	indicator->SetWorldLocation(mesh->GetSocketLocation("FRONT"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
 	backArrow->SetRelativeRotation(rot);
+	backArrow->SetWorldLocation(mesh->GetSocketLocation("BACK"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({0,-1,0});
 	leftArrow->SetRelativeRotation(rot);
+	leftArrow->SetWorldLocation(mesh->GetSocketLocation("LEFT"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({0,1,0});
 	rightArrow->SetRelativeRotation(rot);
+	rightArrow->SetWorldLocation(mesh->GetSocketLocation("RIGHT"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({0,0,1});
 	upArrow->SetRelativeRotation(rot);
+	upArrow->SetWorldLocation(mesh->GetSocketLocation("UP"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
 	downArrow->SetRelativeRotation(rot);
-
-	// Setting the position
-	TArray<UArrowComponent*> arrows;
-	GetComponents<UArrowComponent>(arrows);
-
-	if(!socketInfo) return;
-	const TArray<FName> sockets = socketInfo->GetSockets(); 
+	downArrow->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
 	
-	for(int i = 0; i < arrows.Num(); i++)
-	{
-		arrows[i]->SetWorldLocation(mesh->GetSocketLocation(sockets[i]));
-	}
-	
+	ScaleIndicator();
 	SetHideIndicator(true);
 }
-
 
 void ACubeConnector::Placement()
 {
@@ -130,7 +103,7 @@ void ACubeConnector::Placement()
 		const FVector start = mesh->GetSocketLocation(socketInfo->GetSockets()[i]);
 
 		// Debug Draw
-		DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
+		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
 		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
 		
 		// Go to the next ray if it didn't hit anything...
@@ -142,7 +115,7 @@ void ACubeConnector::Placement()
 			continue;
 		}
 
-		DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 		// Go to the next ray if it didn't hit an actor...
 		AActor* hitActor = hit.GetActor();

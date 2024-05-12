@@ -14,14 +14,23 @@ class PROJPROBLOX_API ACuboidConnector : public ACubeConnector
 {
 	GENERATED_BODY()
 
-	UArrowComponent* leftArrow2;
-	UArrowComponent* rightArrow2;
-	UArrowComponent* upwardsArrow2;
-	UArrowComponent* downwardsArrow2;
-	
-	virtual void SetupIndicator() override;
-	virtual void SetHideIndicator(const bool hide) override;
-	
 	ACuboidConnector();
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* leftArrow2;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* rightArrow2;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* upArrow2;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* downArrow2;
+	
+	virtual void GhostPlacement() override;
+	virtual void SetupPlaceIndicator() override;
+	virtual void SetHideIndicator(const bool hide) override;
+	
 };

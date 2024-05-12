@@ -69,31 +69,28 @@ void EmptyLinkFunctionForGeneratedCodeCubeConnector() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeConnector_Statics::NewProp_leftArrow_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "CubeConnector" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/Cores/Connectors/CubeConnector.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeConnector_Statics::NewProp_leftArrow = { "leftArrow", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeConnector, leftArrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeConnector_Statics::NewProp_leftArrow_MetaData), Z_Construct_UClass_ACubeConnector_Statics::NewProp_leftArrow_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeConnector_Statics::NewProp_leftArrow = { "leftArrow", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeConnector, leftArrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeConnector_Statics::NewProp_leftArrow_MetaData), Z_Construct_UClass_ACubeConnector_Statics::NewProp_leftArrow_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeConnector_Statics::NewProp_rightArrow_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "CubeConnector" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/Cores/Connectors/CubeConnector.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeConnector_Statics::NewProp_rightArrow = { "rightArrow", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeConnector, rightArrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeConnector_Statics::NewProp_rightArrow_MetaData), Z_Construct_UClass_ACubeConnector_Statics::NewProp_rightArrow_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeConnector_Statics::NewProp_rightArrow = { "rightArrow", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeConnector, rightArrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeConnector_Statics::NewProp_rightArrow_MetaData), Z_Construct_UClass_ACubeConnector_Statics::NewProp_rightArrow_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeConnector_Statics::NewProp_upArrow_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "CubeConnector" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/Cores/Connectors/CubeConnector.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeConnector_Statics::NewProp_upArrow = { "upArrow", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeConnector, upArrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeConnector_Statics::NewProp_upArrow_MetaData), Z_Construct_UClass_ACubeConnector_Statics::NewProp_upArrow_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeConnector_Statics::NewProp_upArrow = { "upArrow", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeConnector, upArrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeConnector_Statics::NewProp_upArrow_MetaData), Z_Construct_UClass_ACubeConnector_Statics::NewProp_upArrow_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeConnector_Statics::NewProp_backArrow_MetaData[] = {
 		{ "Category", "CubeConnector" },
@@ -155,9 +152,9 @@ void EmptyLinkFunctionForGeneratedCodeCubeConnector() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_CubeConnector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeConnector, ACubeConnector::StaticClass, TEXT("ACubeConnector"), &Z_Registration_Info_UClass_ACubeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeConnector), 998599408U) },
+		{ Z_Construct_UClass_ACubeConnector, ACubeConnector::StaticClass, TEXT("ACubeConnector"), &Z_Registration_Info_UClass_ACubeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeConnector), 149283965U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_CubeConnector_h_3195731024(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_CubeConnector_h_736716437(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_CubeConnector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_CubeConnector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

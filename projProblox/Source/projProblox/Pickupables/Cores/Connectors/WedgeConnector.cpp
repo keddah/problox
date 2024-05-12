@@ -32,12 +32,15 @@ AWedgeConnector::AWedgeConnector()
 
 void AWedgeConnector::BeginPlay()
 {
-	Super::BeginPlay();
+	leftArrow->DestroyComponent();
+	rightArrow->DestroyComponent();
+	upArrow->DestroyComponent();
 	
 	placeRange = 100;
-
-	socketInfo = NewObject<UWedgeSocketInfo>();
 	AdjustRange();
+	Super::BeginPlay();
+	
+	socketInfo = NewObject<UWedgeSocketInfo>();
 }
 
 void AWedgeConnector::ApplyOffset(const ACubeCore* core)
@@ -130,35 +133,50 @@ void AWedgeConnector::SetHideIndicator(const bool hide)
 	downArrow->SetHiddenInGame(hide);
 }
 
-void AWedgeConnector::SetupIndicator()
+void AWedgeConnector::SetupPlaceIndicator()
 {
-	// indicator->SetMaterial(0, indicatorMat);
-	// backArrow->SetMaterial(0, indicatorMat);
-	// downArrow->SetMaterial(0, indicatorMat);
-
-	indicator->ArrowColor.A = .5f;
-	backArrow->ArrowColor.A = .5f;
-	downArrow->ArrowColor.A = .5f;
-
-	
-	indicator->ArrowLength = placeRange;
-	backArrow->ArrowLength = placeRange;
-	downArrow->ArrowLength = placeRange;
-
-	// diag
-	FRotator rot = UKismetMathLibrary::MakeRotFromX({.5f,0,.5f});
+	// Setting the position and orientation
+	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,1});
 	indicator->SetRelativeRotation(rot);
+	indicator->SetWorldLocation(mesh->GetSocketLocation("DIAG"));
 
-	// back
 	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
 	backArrow->SetRelativeRotation(rot);
-
-	// down
+	backArrow->SetWorldLocation(mesh->GetSocketLocation("BACK"));
+	
 	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
 	downArrow->SetRelativeRotation(rot);
+	downArrow->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
 
+	ScaleIndicator();
 	SetHideIndicator(true);
 }
+
+// void AWedgeConnector::ScaleIndicator()
+// {
+// 	indicator->ArrowColor.A = .5f;
+// 	backArrow->ArrowColor.A = .5f;
+// 	downArrow->ArrowColor.A = .5f;
+//
+// 	
+// 	indicator->ArrowLength = placeRange;
+// 	backArrow->ArrowLength = placeRange;
+// 	downArrow->ArrowLength = placeRange;
+//
+// 	// diag
+// 	FRotator rot = UKismetMathLibrary::MakeRotFromX({.5f,0,.5f});
+// 	indicator->SetRelativeRotation(rot);
+//
+// 	// back
+// 	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
+// 	backArrow->SetRelativeRotation(rot);
+//
+// 	// down
+// 	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
+// 	downArrow->SetRelativeRotation(rot);
+//
+// 	SetHideIndicator(true);
+// }
 
 void AWedgeConnector::SetAbilityActive(bool value)
 {

@@ -57,7 +57,7 @@ void APickupableMaster::BeginPlay()
 
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
-	SetupIndicator();
+	SetPlaceIndicator();
 }
 
 // Called every frame
@@ -83,9 +83,8 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 
 
 
-void APickupableMaster::SetupIndicator()
+void APickupableMaster::ScaleIndicator()
 {
-	// indicator->SetMaterial(0, Cast<UMaterialInterface>(indicatorMat));
 	indicator->ArrowColor.A = .5f;
 
 	const FVector actorScale = GetActorRelativeScale3D();
@@ -95,16 +94,18 @@ void APickupableMaster::SetupIndicator()
 	scale.X = indiScale.X / actorScale.X;
 	scale.Y = indiScale.Y / actorScale.Y;
 	scale.Z = indiScale.Z / actorScale.Z;
-	
-	indicator->SetRelativeScale3D(scale);
-	
-	indicator->ArrowLength = placeRange;
-	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
-	indicator->SetRelativeRotation(rot);
 
-	SetHideIndicator(true);
+	// Removes the scale relativity so that the place range is accurate... 
+	indicator->SetRelativeScale3D(scale);
+	indicator->ArrowLength = placeRange;
 }
 
+void APickupableMaster::SetPlaceIndicator()
+{
+	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
+	indicator->SetRelativeRotation(rot);
+	ScaleIndicator();
+}
 
 
 void APickupableMaster::Placement()
@@ -123,7 +124,7 @@ void APickupableMaster::Placement()
 	collisionParams.MobilityType = EQueryMobilityType::Any;
 	
 	// Debug Draw
-	const FVector start = GetActorLocation();
+	const FVector start = indicator->GetComponentLocation();
 	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
 

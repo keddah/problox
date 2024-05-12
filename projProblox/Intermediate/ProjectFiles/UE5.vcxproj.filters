@@ -150826,6 +150826,45 @@
     <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd\string_view.hpp">
       <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd</Filter>
     </None>
+    <Filter Include="Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp">
+      <UniqueIdentifier>{0EF72543-D9DB-338C-9D0D-C89BFC79966E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\LICENSE.md">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\README.md">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp</Filter>
+    </None>
+    <Filter Include="Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include">
+      <UniqueIdentifier>{8B5CD008-B257-34D8-B2CF-D4C188F8B99C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898">
+      <UniqueIdentifier>{4D50D2CE-7A2C-3B1A-B09F-205E4A57E543}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\cp_utf16.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\cp_utf32.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\cp_utf8.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\cp_utfw.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\utf_config.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\utf_converters.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\utf_selector.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898\utf_sizes.hpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\utf-cpp\include\ww898</Filter>
+    </None>
     <Filter Include="Plugins\Marketplace\Developer\RiderLink\Source\RD\thirdparty\variant">
       <UniqueIdentifier>{2C3FB9BF-7CEF-3BB6-8CE4-4A6D8D92536B}</UniqueIdentifier>
     </Filter>
@@ -150886,6 +150925,42 @@
     <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderBlueprint\Public\RiderBlueprint.hpp">
       <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderBlueprint\Public</Filter>
     </None>
+    <Filter Include="Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport">
+      <UniqueIdentifier>{B43601B6-BBDE-3244-BF0A-2A391E8250F8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\RiderDebuggerSupport.Build.cs">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport</Filter>
+    </None>
+    <Filter Include="Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private">
+      <UniqueIdentifier>{2EB7576A-C731-360D-B37D-701865932FA7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\BlueprintStackGetter.cpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\DebugLogger.cpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\DebugLogger.h">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\RiderDebuggerSupport.cpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\RiderDebuggerSupport.h">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\UnrealFunctions.cpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\UnrealFunctions.h">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\WideStringWrapper.cpp">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private\WideStringWrapper.h">
+      <Filter>Plugins\Marketplace\Developer\RiderLink\Source\RiderDebuggerSupport\Private</Filter>
+    </ClInclude>
     <Filter Include="Plugins\Marketplace\Developer\RiderLink\Source\RiderGameControl">
       <UniqueIdentifier>{D4DBFEBA-9BAE-3ECE-9322-53D01C95B01E}</UniqueIdentifier>
     </Filter>

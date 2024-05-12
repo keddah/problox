@@ -19,20 +19,6 @@
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/GameModes/Modes.h"
 
-void ACubeCore::SetupIndicator()
-{
-	indicator->ArrowColor.A = .5f;
-
-	const float length = placeRange * 2;
-	indicator->ArrowLength = length;
-
-	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	indicator->SetRelativeRotation(rot);
-
-	indicator->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
-	SetHideIndicator(true);
-}
-
 ACubeCore::ACubeCore()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -64,7 +50,7 @@ void ACubeCore::BeginPlay()
 	socketInfo = NewObject<UCubeSocketInfo>();
 	
 	AdjustRange();
-	// SetupIndicator();
+	SetupPlaceIndicator();
 	
 	onStartGame.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
@@ -78,6 +64,45 @@ void ACubeCore::BeginPlay()
 	resetTransform = GetActorTransform();
 }
 
+void ACubeCore::SetupPlaceIndicator()
+{
+	if(!indicator) return;
+
+	ScaleIndicator();
+	
+	indicator->ArrowColor.A = .5f;
+
+	const float length = placeRange * 2;
+	indicator->ArrowLength = length;
+
+	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
+	indicator->SetRelativeRotation(rot);
+
+	indicator->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
+	SetHideIndicator(true);
+}
+
+void ACubeCore::ScaleIndicator()
+{
+	TArray<UArrowComponent*> arrows;
+	GetComponents<UArrowComponent>(arrows);
+
+	const FVector meshScale = mesh->GetRelativeScale3D();
+	for(int i = 0; i < arrows.Num(); i++)
+	{
+		if(arrows.IsValidIndex(i))
+		{
+			arrows[i]->ArrowColor.A = .5f;
+
+			const FVector indiScale = arrows[i]->GetRelativeScale3D();
+			const FVector scale = meshScale / indiScale;
+
+			// Removes the scale relativity so that the place range is accurate... 
+			arrows[i]->SetRelativeScale3D(scale);
+			arrows[i]->ArrowLength = placeRange / meshScale.Z;
+		}
+	} 
+}
 
 void ACubeCore::Placement()
 {

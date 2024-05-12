@@ -155,7 +155,8 @@ protected:
 	
 	/////////////// Indicator ///////////////
 	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
-	virtual void SetupIndicator();
+	virtual void ScaleIndicator();
+	virtual void SetPlaceIndicator();
 
 	
 	/////////////// Attachments ///////////////

@@ -31,7 +31,7 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 	virtual void SetAbilityActive(bool value) override;
 	virtual void GhostPlacement() override;
 	virtual void SetHideIndicator(const bool hide) override;
-	virtual void SetupIndicator() override;
+	virtual void SetupPlaceIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override
 	{
 		if(!IsValid(&attachee)) return 0;

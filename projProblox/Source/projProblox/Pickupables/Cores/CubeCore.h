@@ -126,11 +126,12 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 
 	/////////////// Other ///////////////
-	virtual void SetupIndicator() override;
 
 	
 protected:
 	ACubeCore();
+	virtual void SetupPlaceIndicator();
+	virtual void ScaleIndicator() override;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

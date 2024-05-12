@@ -24,16 +24,17 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	ATreads();
 	
 	virtual void Ability(float deltaTime) override;
-	
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UBoxComponent* driveTrigger;
 	
 	/////////////// Ability ///////////////
-	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true, ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
-	bool grounded;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
 	float moveSpeed = 500;
+
+protected:
+	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
+	bool grounded;
 };

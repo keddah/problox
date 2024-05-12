@@ -20,7 +20,7 @@ class PROJPROBLOX_API ACuboidCore : public ACubeCore
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* otherIndicator;
 
-	virtual void SetupIndicator() override;
+	virtual void ScaleIndicator() override;
 	virtual void SetHideIndicator(const bool hide) override { Super::SetHideIndicator(hide); otherIndicator->SetHiddenInGame(hide); }
 	
 protected:
