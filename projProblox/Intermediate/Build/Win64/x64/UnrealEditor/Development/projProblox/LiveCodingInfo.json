@@ -40,10 +40,10 @@
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
 			"Balloon.cpp.obj",
-			"BounceSpring.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -63,7 +63,7 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"CubeCore.cpp.obj"
+			"BounceSpring.cpp.obj"
 		]
 	}
 }

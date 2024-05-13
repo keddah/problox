@@ -54,7 +54,7 @@ void ABounceSpring::Ability(float deltaTime)
 	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
 	DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
 
-	mesh->AddForce(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass());
+	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
 }
 
 void ABounceSpring::ToggleGravity() const
