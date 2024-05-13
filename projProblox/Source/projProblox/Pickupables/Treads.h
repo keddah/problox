@@ -22,6 +22,8 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	GENERATED_BODY()
 
 	ATreads();
+	virtual void BeginPlay() override { Super::BeginPlay(); }
+
 	
 	virtual void Ability(float deltaTime) override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;

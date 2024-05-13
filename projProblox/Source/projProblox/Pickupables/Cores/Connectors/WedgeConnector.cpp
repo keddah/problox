@@ -35,9 +35,7 @@ void AWedgeConnector::BeginPlay()
 	leftArrow->DestroyComponent();
 	rightArrow->DestroyComponent();
 	upArrow->DestroyComponent();
-	
-	placeRange = 100;
-	AdjustRange();
+
 	Super::BeginPlay();
 	
 	socketInfo = NewObject<UWedgeSocketInfo>();

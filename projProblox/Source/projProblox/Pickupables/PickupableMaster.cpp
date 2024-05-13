@@ -55,6 +55,10 @@ void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
 
+	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
+	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
+	else if(placeDir.Z != 0) placeRange *= mesh->GetRelativeScale3D().Z;
+	
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetPlaceIndicator();

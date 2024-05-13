@@ -42,8 +42,6 @@ ACubeConnector::ACubeConnector()
 
 void ACubeConnector::BeginPlay()
 {
-	placeRange = 100;
-	
 	distanceLine->DestroyComponent();
 	Super::BeginPlay();
 }

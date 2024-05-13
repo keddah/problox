@@ -217,9 +217,6 @@ protected:
 	void OtherGhostPlacement();
 	virtual void Placement() override;
 
-	void AdjustRange() { placeRange *= GetActorScale().Length(); }
-
-	
 	/////////////// Rotations ///////////////
 	// Sets rotations depending on the attachee's type / snapRot variable...
 	void OtherRotations(const APickupableMaster& other);

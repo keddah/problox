@@ -71,7 +71,7 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
 
-	UPROPERTY(EditDefaultsOnly, meta = (SliderExponent = 1))
+	UPROPERTY(EditDefaultsOnly, meta = (Delta = 1))
 	float placeRange = 180;
 	
 	/////////////// Rotations ///////////////

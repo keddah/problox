@@ -20,7 +20,7 @@ AGlider::AGlider()
 void AGlider::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
-
+	PrintFloat(placeRange, .1)
 	if(!active) return;
 	if(selected)
 	{

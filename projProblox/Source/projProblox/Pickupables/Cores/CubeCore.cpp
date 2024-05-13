@@ -49,7 +49,6 @@ void ACubeCore::BeginPlay()
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
 	
-	AdjustRange();
 	SetupPlaceIndicator();
 	
 	onStartGame.AddDynamic(this, &ACubeCore::Start);
