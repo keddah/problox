@@ -32,5 +32,10 @@ class PROJPROBLOX_API ACuboidConnector : public ACubeConnector
 	virtual void GhostPlacement() override;
 	virtual void SetupPlaceIndicator() override;
 	virtual void SetHideIndicator(const bool hide) override;
+	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	
+	TArray<FVector> socketDifferences;
+	
+	void SetDifferenceFromSockets();
+	const FVector& GetSocketDifference(const FName& socket);
 };

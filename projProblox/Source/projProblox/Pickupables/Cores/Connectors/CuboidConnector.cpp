@@ -3,6 +3,7 @@
 
 #include "CuboidConnector.h"
 
+#include "WedgeConnector.h"
 #include "./projProblox/Pickupables/Cores/SocketInfo/CuboidSocketInfo.h"
 
 ACuboidConnector::ACuboidConnector()
@@ -23,24 +24,7 @@ ACuboidConnector::ACuboidConnector()
 void ACuboidConnector::BeginPlay()
 {
 	Super::BeginPlay();
-}
-
-void ACuboidConnector::GhostPlacement()
-{
-	// Keep all the rotations stuff the same...
-	Super::GhostPlacement();
-	if(!parentCore) return;
-	
-	// Compensate for the extra length (it thinks it's a cube)... 
-	FVector relativePos = mesh->GetSocketLocation(raySocket) - GetActorLocation();
-	
-	// The relative position of the raySocket to the mesh's position
-	PrintVector(relativePos, .1)
-
-	silhouette->AddWorldOffset(-relativePos);
-
-	relativePos = silhouette->GetRelativeLocation();
-	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore), relativePos.Y,relativePos.Z});
+	SetDifferenceFromSockets();
 }
 
 void ACuboidConnector::SetupPlaceIndicator()
@@ -100,4 +84,65 @@ void ACuboidConnector::SetHideIndicator(const bool hide)
 	rightArrow2->SetHiddenInGame(hide);
 	upArrow2->SetHiddenInGame(hide);
 	downArrow2->SetHiddenInGame(hide);
+}
+
+float ACuboidConnector::GetAttachOffset(const APickupableMaster& attachee)
+{
+	float distance;
+
+	// Different offsets depending on what connector it attaches to...
+	if(attachee.IsA<ACubeConnector>()) distance = 52.5f; 
+	else if(attachee.IsA<AWedgeConnector>()) distance = 55;
+	else if(attachee.IsA<ACubeCore>()) distance = raySocket == "FRONT" || raySocket == "BACK"? 18.5f : 35;
+	else distance = 50;
+
+	attachOffset = distance;
+	return attachOffset;
+}
+
+void ACuboidConnector::GhostPlacement()
+{
+	// Keep all the rotations stuff the same...
+	Super::GhostPlacement();
+
+	if(!parentCore) return;
+	
+	// Compensate for the extra length (it uses its center)...
+	silhouette->AddRelativeLocation(GetSocketDifference(raySocket) - GetSocketDifference(raySocket) * 1.5f);
+
+	// If the ray socket is the front or back add half the size of the cuboid...
+	const bool addOffset = (raySocket == "FRONT" || raySocket == "BACK");
+	const float offset = addOffset? GetAttachOffset(*parentCore) + 50 : GetAttachOffset(*parentCore);
+	const FVector relativePos = silhouette->GetRelativeLocation();
+
+	silhouette->SetRelativeLocation({offset, relativePos.Y,relativePos.Z});
+}
+
+// Call at beginPlay after socketInfo has been made.....
+void ACuboidConnector::SetDifferenceFromSockets()
+{
+	const FVector thisPos = mesh->GetComponentLocation();
+	
+	// Sets the default offsets for each raysocket
+	for (const auto& socket : socketInfo->GetSockets())
+	{
+		socketDifferences.Add( thisPos - mesh->GetSocketLocation(socket));
+	}
+}
+
+const FVector& ACuboidConnector::GetSocketDifference(const FName& socket)
+{
+	TArray<FName> sockets = socketInfo->GetSockets();
+	for(int i = 0; i < sockets.Num(); i++)
+	{
+		if(socket == sockets[i])
+		{
+			PrintVector(socketDifferences[i], 5)
+			return socketDifferences[i];
+		}
+	}
+
+	// Return empty vector if something went wrong...
+	Print("Couldn't get the right socket differences... ~ cuboid connector", 5)
+	return {};
 }
