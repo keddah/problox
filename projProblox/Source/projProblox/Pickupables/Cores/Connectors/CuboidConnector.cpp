@@ -32,17 +32,15 @@ void ACuboidConnector::GhostPlacement()
 	if(!parentCore) return;
 	
 	// Compensate for the extra length (it thinks it's a cube)... 
-	FVector relativePos = mesh->GetSocketTransform(raySocket).GetRelativeTransform(GetActorTransform()).GetLocation();
+	FVector relativePos = mesh->GetSocketLocation(raySocket) - GetActorLocation();
 	
 	// The relative position of the raySocket to the mesh's position
 	PrintVector(relativePos, .1)
 
-	silhouette->AddRelativeLocation(relativePos);
-	
-	relativePos = silhouette->GetComponentTransform().GetRelativeTransform(parentCore->GetActorTransform()).GetLocation();
-	relativePos += UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket)) * -100;
-	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore), relativePos.Y, relativePos.Z});
+	silhouette->AddWorldOffset(-relativePos);
 
+	relativePos = silhouette->GetRelativeLocation();
+	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore), relativePos.Y,relativePos.Z});
 }
 
 void ACuboidConnector::SetupPlaceIndicator()
