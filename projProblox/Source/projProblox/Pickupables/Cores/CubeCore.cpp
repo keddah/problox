@@ -635,7 +635,7 @@ void ACubeCore::SetCanPickup(bool can)
 
 	if(!canPickup && change) onRangeExceeded.Broadcast();
 
-	distanceLine->SetHiddenInGame(true);
+	distanceLine->SetHiddenInGame(selected || groupSelected);
 	
 	if(can) return;
 	distanceLine->SetHiddenInGame(!buildPhase);
