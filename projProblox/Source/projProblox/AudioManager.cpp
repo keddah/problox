@@ -21,6 +21,5 @@ void UAudioManager::PlayConnect()
 {
 	player->SetSound(sounds[0]);
 	player->Play();
-	sounds[0].
 }
 
