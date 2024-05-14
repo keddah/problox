@@ -28,7 +28,6 @@
 #include "CoreMinimal.h"
 #include "./projProblox/Collector.h"
 #include "SocketInfo/CubeSocketInfo.h"
-#include "./projProblox/Pickupables/Wheel.h"
 #include "CubeCore.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
@@ -72,7 +71,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 
 	/////////////// Undo/Redo ///////////////
-	virtual void Reattach(const FTransform& transform) override;
+	virtual void Reattach() override;
 
 	
 	/////////////// Turn System ///////////////
@@ -261,8 +260,8 @@ public:
 	
 	/////////////// Selection/Placement ///////////////
 	virtual EOperations SetSelected(const bool value) override;
-	virtual bool SetGroupSelected(const bool value) override;
-
+	virtual EOperations SetGroupSelected(const bool value) override;
+	virtual void Detach() override;
 	
 	/////////////// Turn System ///////////////
 	void SetMaxAttempts(const short& max) { maxAttempts = max; }
@@ -276,12 +275,6 @@ public:
 	TArray<AActor*> GetAttachedObjActors()
 	{
 		TArray<AActor*> out;
-		for (const auto& obj : socketInfo->GetAttachmentActors())
-		{
-			// Add the wheels manually since they're aren't actually attached to the actor.
-			// (will only work for direct connections).
-			if(obj->IsA<AWheel>()) out.Add(obj);
-		}
 		GetDescendentsActors(this, out);
 
 		return out;
@@ -289,12 +282,6 @@ public:
 	TArray<APickupableMaster*> GetAttachedObjects() const
 	{
 		TArray<APickupableMaster*> out;
-		for (const auto& obj : socketInfo->GetAttachments())
-		{
-			// Add the wheels manually since they're aren't actually attached to the actor.
-			// (will only work for direct connections).
-			if(obj->IsA<AWheel>()) out.Add(obj);
-		}
 		GetDescendents(this, out);
 		
 		return out;

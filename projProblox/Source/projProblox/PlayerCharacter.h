@@ -37,6 +37,8 @@ private:
 	void Undo();
 	UFUNCTION(BlueprintCallable)
 	void Redo();
+
+	void CreateTaskHistory(const FName& task, APickupableMaster* obj, const FTransform& startTransform, const FTransform& endTransform) const;
 	
 	
 protected:

@@ -239,7 +239,7 @@ void AWheels::Detach()
 	isAttached = false;
 }
 
-void AWheels::Reattach(const FTransform& transform)
+void AWheels::Reattach()
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!IsValid(parentCore))
@@ -248,8 +248,10 @@ void AWheels::Reattach(const FTransform& transform)
 		return;
 	}
 
-	SetActorTransform(transform);
 	Attach();
+	SetActorRelativeLocation(savedTransform.GetLocation());
+	SetActorRelativeRotation(savedTransform.Rotator());
+
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }
@@ -260,7 +262,6 @@ float AWheels::GetAttachOffset(const APickupableMaster& attachee)
 	attachOffset = !attachee.IsA<ACubeConnector>() && attachee.IsA<ACubeCore>()? 7.5 : 15;
 	return Super::GetAttachOffset(attachee);
 }
-
 
 void AWheels::ToggleGravity() const
 {

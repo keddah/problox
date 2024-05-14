@@ -158,7 +158,7 @@ void ACubeCore::Placement()
 	if(!IsValid(hitObj)) return;
 
 	OtherGhostPlacement();
-	attachedSocket = "DOWN";
+	attachedSocket = raySocket;
 }
 
 void ACubeCore::OtherGhostPlacement()
@@ -262,57 +262,55 @@ EOperations ACubeCore::SetSelected(const bool value)
 	ToggleGravity();
 	SetHideIndicator(!selected);
 
-	// Make the wheel ignore collisions and not ... fly away
-	for(const auto& obj : socketInfo->GetAttachments())
-	{
-		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
-	}
-
+	// If selected, don't need to do any of the attachment stuff
 	if(selected)
 	{
 		canPlace = true;
-		return {EOperations::Move};
+		return EOperations::Detach;
 	}
 
 	indicator->SetHiddenInGame(true);
-	
-	// Make the wheel go back to normal when it's unselected.
-	for(const auto& obj : socketInfo->GetAttachments())
-	{
-		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
-	}
-	
-	if(!IsValid(hitObj)) return {EOperations::Move};
 
+	// If there is no hit object.
+	if(!IsValid(hitObj)) return EOperations::Move;
+
+	// Attach to the thing to this.
+	hitObj->AttachToComponent(mesh, attachRules, raySocket);
+
+	// Syncing the socket info
+	AddAttachment(hitObj, raySocket);
+	hitObj->SetAttachedSocket(raySocket);
+	hitObj->SetCore(this);
+	
 	// Teleport the hit object to the silhouette
 	hitObj->UseSilhouetteTransform(silhouette);
 
 	// Reset the silhouette after using its transform
 	ResetGhost();
 	
-	// Syncing the socket info
-	AddAttachment(hitObj, attachedSocket);
-	hitObj->SetAttachedSocket(attachedSocket);
-	hitObj->SetCore(this);
-
-	// Since the wheel uses physics constraints instead of normal attachments
-	if(!hitObj->IsA<AWheel>())
-	{
-		hitObj->AttachToActor(this, attachRules, attachedSocket);
-	}
-	else Cast<AWheel>(hitObj)->Attach(this);
+	// Set the previous object (for undo/redo) before getting rid of hit object.
+	previousObj = hitObj;
 
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
-	previousObj = hitObj;
 	hitObj = 0;
-	return {EOperations::Attach};
+	return EOperations::Attach;
 }
 
-bool ACubeCore::SetGroupSelected(const bool value)
+EOperations ACubeCore::SetGroupSelected(const bool value)
 {
-	if(!canCollect) return false;
+	if(!canCollect) return {};
 
 	return Super::SetGroupSelected(value);
+}
+
+void ACubeCore::Detach()
+{
+	if(!ObjectInSocket(raySocket)) return;
+
+	APickupableMaster* obj = socketInfo->GetObjectInSocket(raySocket);
+	if(!obj) return;
+
+	obj->Detach();
 }
 
 void ACubeCore::ResetToStart()
@@ -658,11 +656,10 @@ void ACubeCore::SetCanCollect(bool collectable)
 	canCollect = collectable;
 }
 
-void ACubeCore::Reattach(const FTransform& transform)
+void ACubeCore::Reattach()
 {
-	if(!hitObj) return;
-	
 	hitObj = previousObj;
-	hitObj->Reattach(transform);
+	hitObj->SetCore(this);
+	hitObj->Reattach();
 	RevertAttachments();
 }

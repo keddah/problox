@@ -1,16 +1,13 @@
-// Created by Dean Atkinson-Walker 2024
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "CableComponent.h"
 #include "PickupableMaster.h"
+#include "Cores/CubeCore.h"
 #include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "Balloon.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API ABalloon : public APickupableMaster
 {
@@ -22,14 +19,17 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	
 	virtual void Ability(float deltaTime) override;
 	virtual EOperations SetSelected(const bool value) override;
+	
+	void Attach() const;
 	virtual void Detach() override;
+	virtual void Reattach() override;
+	
 	void SetConstraintsActive(const bool constrained) const
 	{
 		// Need to deactivate first before disabling physics
 		constraint->SetActive(constrained);
 		mesh->SetSimulatePhysics(constrained);
 	}
-	void Attach() const;
 	
 	UWorld* wrld;
 

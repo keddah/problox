@@ -46,9 +46,9 @@ void AHoverer::Ability(float deltaTime)
 	UWorld* wrld = GetWorld();
 
 	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is 45 degrees, only need one distance (the minFloorDistance))
-	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));;
+	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));
 
-	TArray<USceneComponent*> points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };
+	TArray points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };
 
 	for(const auto& point : points)
 	{
@@ -86,7 +86,6 @@ void AHoverer::Ability(float deltaTime)
 			if(wrld->LineTraceSingleByChannel(hit, start, end, ECC_Visibility, collisionParams))
 			{
 				const float distanceSquared = FMath::Max(FVector::Dist(hit.Location, start) / distanceMultiplier, .5f);
-				PrintFloat(distanceSquared, .1)
 			
 				const float power = (hoverStrength * -1000) / distanceSquared;
 				mesh->AddForceAtLocation(forwardVec * power, end);

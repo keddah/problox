@@ -214,33 +214,35 @@ EOperations APickupableMaster::SetSelected(const bool value)
 		Detach();
 		
 		canPlace = true;
-		return {EOperations::Detach};
+		return wasDetached? EOperations::Detach : EOperations::Move;
 	}
 
-	if(!parentCore) return { wasDetached? EOperations::Detach : EOperations::Move};
-	if(attachedSocket == NAME_None) return { wasDetached? EOperations::Detach : EOperations::Move};
+	if(!parentCore) return  wasDetached? EOperations::Detach : EOperations::Move;
+	if(attachedSocket == NAME_None) return wasDetached? EOperations::Detach : EOperations::Move;
 
 	if(!previousObj) previousObj = parentCore;
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
 
 	// Using the silhouette's location/rotation to set the actual transform.
 	UseSilhouetteTransform();
 	ResetGhost();
-
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
 	
-	return {EOperations::Attach};
+	return EOperations::Attach;
 }
 
-bool APickupableMaster::SetGroupSelected(const bool value)
+EOperations APickupableMaster::SetGroupSelected(const bool value)
 {
 	groupSelected = value;
+
 	ToggleGravity(!groupSelected);
 	
 	canPlace = !groupSelected;
-	return true;
+
+	// If the player has unselected... the operation is move
+	return EOperations::Move;
 }
 
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -277,6 +279,12 @@ void APickupableMaster::Detach()
 
 	ToggleGravity(true);
 	isAttached = false;
+}
+
+void APickupableMaster::SetSavedTransform()
+{
+	if(parentCore)
+	savedTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
 }
 
 
@@ -572,10 +580,7 @@ TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
 APickupableMaster* APickupableMaster::GetParent()
 {
 	AActor* current = this;
-	while (current->GetAttachParentActor() != nullptr)
-	{
-		current = current->GetAttachParentActor();
-	}
+	while (AActor* potParent = current->GetAttachParentActor()) current = potParent;
 
 	if(APickupableMaster* parent = Cast<APickupableMaster>(current)) return parent;
 	// If the cast fails
@@ -586,16 +591,16 @@ APickupableMaster* APickupableMaster::GetParent()
 bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
 {
 	const AActor* current = this;
-	while (current->GetAttachParentActor() != nullptr)
+	while (AActor* toCheck = current->GetAttachParentActor())
 	{
-		current = current->GetAttachParentActor();
+		current = toCheck;
 		if(current == parent) return true;
 	}
 
 	return false;
 }
 
-void APickupableMaster::Reattach(const FTransform& transform)
+void APickupableMaster::Reattach()
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!parentCore)
@@ -603,10 +608,13 @@ void APickupableMaster::Reattach(const FTransform& transform)
 		Print("couldnt cast to core - Reattaching...", 5)
 		return;
 	}
-	
-	AttachToActor(parentCore, attachRules, removedSocket);
 
-	SetActorTransform(transform);
+	AttachToActor(parentCore, attachRules, removedSocket);
+	PrintVector(savedTransform.GetLocation(), 5)
+	PrintRotator(savedTransform.Rotator(), 5)
+	SetActorRelativeLocation(savedTransform.GetLocation());
+	SetActorRelativeRotation(savedTransform.Rotator());
+	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }

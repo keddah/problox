@@ -47,5 +47,5 @@ public:
 	}
 
 	void Attach(ACubeCore* core);
-	virtual void Reattach(const FTransform& transform) override;
+	virtual void Reattach() override;
 };

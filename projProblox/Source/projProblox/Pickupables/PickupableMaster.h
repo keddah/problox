@@ -126,6 +126,9 @@ protected:
 	// The socket that this has been removed from
 	FName removedSocket;
 	bool wasDetached;
+
+	// The relative transform that should be saved whenever attaching...
+	FTransform savedTransform;
 	
 	APickupableMaster* previousObj;
 
@@ -208,7 +211,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	virtual EOperations SetSelected(const bool value);
 	void ManualSetSelected(const bool value) { selected = value; };
-	virtual bool SetGroupSelected(const bool value);
+	virtual EOperations SetGroupSelected(const bool value);
 
 	virtual void Detach();
 
@@ -227,16 +230,20 @@ public:
 		const FTransform silhouetteTransform = ghost->GetComponentTransform();
 		SetActorLocation(silhouetteTransform.GetLocation());
 		SetActorRotation(silhouetteTransform.GetRotation());
+		SetSavedTransform();
 	}
-	
 
+	// Saves the relative transform from the parent (should be called while the parentCore is valid)
+	void SetSavedTransform();
+
+	
 	/////////////// Ability ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Ability")
 	virtual void SetAbilityActive(const bool value) { active = value; }
 
 
 	/////////////// Attachments ///////////////
-	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); }
+	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); isAttached = true; }
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
 
@@ -254,7 +261,7 @@ public:
 
 	
 	/////////////// Undo/Redo ///////////////
-	virtual void Reattach(const FTransform& transform);
+	virtual void Reattach();
 
 	
 	/////////////// Getters ///////////////
@@ -276,6 +283,9 @@ public:
 	UStaticMeshComponent* GetMesh() const { return mesh; }
 	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
 
+	// Returns the relative transform to the parent core.
+	FTransform GetRelativeTransform() const { return mesh->GetRelativeTransform(); }
+	
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const
 	{

@@ -225,7 +225,6 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
-
 	
 	// Detach from its components if selected
 	if(selected)
@@ -234,20 +233,11 @@ EOperations ACubeConnector::SetSelected(const bool value)
 		canPlace = true;
 		Detach();
 
-		for(const auto& obj : children)
-		{
-			if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(true);
-		}
-		return {EOperations::Detach};
+		return wasDetached? EOperations::Detach : EOperations::Move;
 	}
 	
 	// When unselected....
 	ResetGhost(false);
-	
-	for(const auto& obj : children)
-	{
-		if(obj->IsA<AWheel>()) Cast<AWheel>(obj)->SetParentDominates(false);
-	}
 	
 	// Rotate/Manipulate self when it hits the core
 	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
@@ -266,14 +256,14 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	return {EOperations::Attach};
 }
 
-bool ACubeConnector::SetGroupSelected(const bool value)
+EOperations ACubeConnector::SetGroupSelected(const bool value)
 {
 	groupSelected = value;
 	ToggleGravity(!groupSelected);
 	
 	canPlace = !groupSelected;
 	
-	return true;
+	return EOperations::Move;
 }
 
 
@@ -301,7 +291,7 @@ float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
-void ACubeConnector::Reattach(const FTransform& transform)
+void ACubeConnector::Reattach()
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!IsValid(parentCore))
@@ -311,11 +301,41 @@ void ACubeConnector::Reattach(const FTransform& transform)
 	}
 	
 	AttachToActor(parentCore, attachRules, removedSocket);
-	SetActorLocation(transform.GetLocation());
-	SetActorRotation(transform.GetRotation());
+	SetActorRelativeLocation(savedTransform.GetLocation());
+	SetActorRelativeRotation(savedTransform.Rotator());
 	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
+}
+
+void ACubeConnector::Detach()
+{
+	ResetGhost();
+
+	if(!parentCore && !previousObj)
+	{
+		Print("Couldn't detach... parent was invalid..", 4)
+		return;
+	}
+
+	SetAbilityActive(false);
+
+	ResetMaterial();
+	
+	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	else previousObj->RemoveAttachment(attachedSocket);
+	
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetupAttachment(mesh);
+
+	if(parentCore)
+	{
+		previousObj = parentCore;
+		parentCore = nullptr;
+	}
+
+	ToggleGravity(true);
+	isAttached = false;
 }
 
 void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)

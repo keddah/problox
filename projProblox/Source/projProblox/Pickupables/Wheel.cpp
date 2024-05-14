@@ -99,7 +99,7 @@ void AWheel::Attach(ACubeCore* core)
 	isAttached = true;
 }
 
-void AWheel::Reattach(const FTransform& transform)
+void AWheel::Reattach()
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!IsValid(parentCore))
@@ -108,7 +108,9 @@ void AWheel::Reattach(const FTransform& transform)
 		return;
 	}
 	
-	SetActorTransform(transform);
+	SetActorRelativeLocation(savedTransform.GetLocation());
+	SetActorRelativeRotation(savedTransform.Rotator());
+	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 	

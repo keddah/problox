@@ -43,7 +43,7 @@ public:
 	
 private:
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
-	virtual bool SetGroupSelected(const bool value) override;
+	virtual EOperations SetGroupSelected(const bool value) override;
 
 public:
 	virtual EOperations SetSelected(const bool value) override;
@@ -75,5 +75,6 @@ protected:
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupPlaceIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
-	virtual void Reattach(const FTransform& transform) override;
+	virtual void Reattach() override;
+	virtual void Detach() override;
 };

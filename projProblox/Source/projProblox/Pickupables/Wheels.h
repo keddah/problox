@@ -42,7 +42,7 @@ class PROJPROBLOX_API AWheels : public APickupableMaster
 
 	virtual EOperations SetSelected(const bool value) override;
 	virtual void Detach() override;
-	virtual void Reattach(const FTransform& transform) override;
+	virtual void Reattach() override;
 	virtual void GhostPlacement() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	

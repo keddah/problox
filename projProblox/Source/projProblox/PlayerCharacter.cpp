@@ -45,7 +45,7 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
-	// if(history) history->PrintTaskIndex(.1);
+	// if(selectedObj) Print(selectedObj->GetName(),.1);
 }
 
 // Called to bind functionality to input
@@ -65,15 +65,17 @@ void APlayerCharacter::Undo()
 		Print("There aren't any tasks to undo...", 5);
 		return;
 	}
-	
+
+	// Manually deselect the object...
 	changedObj->ManualSetSelected(false);
 
-	//Deselect()
 	holding = false;
 	selectedObj = nullptr;
 
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
+
+	Print(task.taskName.ToString(), 5)
 	
 	// Depending on the operation... Move back, Reattach or Detach
 	switch (task.operation)
@@ -85,18 +87,16 @@ void APlayerCharacter::Undo()
 		
 		// Undo the detach operation
 		case EOperations::Detach:
-			changedObj->Reattach(task.startTransform);
+			changedObj->Reattach();
 			break;
 		
 		// Undo the move operation
 		case EOperations::Move:
-			// Don't need to do anything since the object's transform will be elsewhere.
+			changedObj->SetActorLocation(task.startTransform.GetLocation());
+			changedObj->SetActorRotation(task.startTransform.Rotator());
 			break;
 	}
 
-	// The start transform will always be used whenever undoing something...
-	changedObj->SetActorLocation(task.startTransform.GetLocation());
-	changedObj->SetActorRotation(task.startTransform.Rotator());
 	changedObj->RemoveVelocity();
 }
 
@@ -124,7 +124,7 @@ void APlayerCharacter::Redo()
 	{
 		// Redo the attach operation
 		case EOperations::Attach:
-			changedObj->Reattach(task.endTransform);
+			changedObj->Reattach();
 			break;
 			
 		// Redo the detach operation
@@ -134,14 +134,22 @@ void APlayerCharacter::Redo()
 			
 		// Redo the move operation
 		case EOperations::Move:
-			// Don't need to do anything since the object's transform will be elsewhere.
+			changedObj->SetActorLocation(task.endTransform.GetLocation());
+			changedObj->SetActorRotation(task.endTransform.Rotator());
 		break;
 	}
 	
-	// The end transform will always be used whenever redoing something...
-	changedObj->SetActorLocation(task.endTransform.GetLocation());
-	changedObj->SetActorRotation(task.endTransform.Rotator());
 	changedObj->RemoveVelocity();
+}
+
+void APlayerCharacter::CreateTaskHistory(const FName& task, APickupableMaster* obj, const FTransform& startTransform, const FTransform& endTransform) const
+{
+	FTask newTask;
+	if(task == "ATTACH") newTask = {task, obj, startTransform, endTransform, EOperations::Attach};
+	if(task == "DETACH") newTask = {task, obj, startTransform, endTransform, EOperations::Detach};
+	if(task == "MOVE") newTask = {task, obj, startTransform, endTransform, EOperations::Move};
+	
+	history->NewAction(newTask);
 }
 
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
@@ -154,7 +162,7 @@ void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
 
 	// Need to set the start position...
 	// Only add a new action after deselecting since that's what confirms the task.
-	selectedTransform = selectedObj->GetTransform();
+	selectedTransform = selectedObj->GetActorTransform();
 	
 	// Includes if the selected object is the core
 	exclusions.Add(selectedObj);
@@ -203,11 +211,11 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 		if(!obj->GetCanPickup() && (obj->IsA<ACubeCore>() && !obj->IsA<ACubeConnector>()) ) return;
 		
 		selectedObj = obj;
+		selectedTransform = selectedObj->GetActorTransform();
 		selectedObj->SetSelected(true);
 
 		// Need to set the start position...
 		// Only add a new action after deselecting since that's what confirms the task.
-		selectedTransform = selectedObj->GetTransform();
 	}
 	else holding = false;
 	
@@ -250,25 +258,31 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 	}
 
 	AActor* hitActor = hit.GetActor();
-	
+
+	// If the hit actor is invalid exit the function...
 	if(!IsValid(hitActor))
 	{
 		holding = false;
 		return;
 	}
-	
+
+	// Try to cast to an object
 	if(APickupableMaster* hitObj = Cast<APickupableMaster>(hitActor))
 	{
+		// If the cast is successful... Try to get its parent
 		selectedObj = hitObj->GetParent();
 
-		// If the hitObj (which has already successfully been casted to) is valid...
+		// If the object's parent is valid...
 		if(IsValid(selectedObj))
 		{
+			Print("ParentValid", 5)
+			// Its parent is always a core.
 			// Prevent the core from being picked up if it's out of range
 			if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
 			{
 				if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
 				{
+					// Return if can't pickup
 					holding = false;
 					selectedObj = 0;
 					return;
@@ -276,7 +290,7 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 			}
 		}
 
-		// Otherwise just select normally
+		// If the object doesn't have a parent....
 		else selectedObj = hitObj;
 
 		if(!IsValid(selectedObj)) return;
@@ -286,6 +300,9 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 	else holding = false;
 
 	if(!IsValid(selectedObj)) return;
+
+	// Setting the undo/redo transform
+	selectedTransform = selectedObj->GetActorTransform();
 	
 	// Setup mouse hit exclusions
 	exclusions.Add(selectedObj);
@@ -309,16 +326,14 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 			// Don't create a new action if nothing was detached...
 			if(!parentCore->DetachAll(true)) return;
 
-			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
-			history->NewAction(newTask);
+			CreateTaskHistory("DETACH", parentCore, coreTransform, coreTransform);
 			return;
 		}
 		
 		const FTransform coreTransform = hitCore->GetTransform();
 		if(!hitCore->DetachAll(true)) return;
 
-		const FTask newTask = {"DETACH", hitCore, coreTransform, coreTransform, EOperations::Detach};
-		history->NewAction(newTask);
+		CreateTaskHistory("DETACH", hitCore, coreTransform, coreTransform);
 		return;
 	}
 
@@ -330,13 +345,9 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 			const FTransform coreTransform = parentCore->GetTransform();
 			if(!parentCore->DetachAll(true)) return;
 
-
-			const FTask newTask = {"DETACH", parentCore, coreTransform, coreTransform, EOperations::Detach};
-			history->NewAction(newTask);
+			CreateTaskHistory("DETACH", parentCore, coreTransform, coreTransform);
 		}
-
 	}
-
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
@@ -368,8 +379,11 @@ void APlayerCharacter::Deselect()
 			return;
 		}
 	}
-
+	
+	// Clear things to ignore.
+	exclusions.Empty();
 	holding = false;
+
 	const EOperations operation = selectedObj->SetSelected(false);
 	FName opName;
 	
@@ -389,11 +403,6 @@ void APlayerCharacter::Deselect()
 	}
 	
 	// Adding new action history entry.
-	const FTask newTask {opName, selectedObj, selectedTransform, selectedObj->GetTransform(),operation};
-	history->NewAction(newTask);
-	
+	CreateTaskHistory(opName, selectedObj, selectedTransform, selectedObj->GetActorTransform());
 	selectedObj = nullptr;
-
-	// Clear things to ignore once not selecting anything.
-	exclusions.Empty();
 }

@@ -30,12 +30,18 @@ FTask UActionHistory::Undo()
 FTask UActionHistory::Redo()
 {
 	// Return the last task if already up to date...
-	if(currentTask >= tasks.Num())
+	if (tasks.IsEmpty() || !tasks.IsValidIndex(currentTask))
 	{
-		currentTask = tasks.Num() - 1;
+		if(currentTask >= tasks.Num())
+		{
+			currentTask = tasks.Num() - 1;
+			
+			Print("end of tasks list... " + FString::FromInt(currentTask), 3)
+			return tasks.IsValidIndex(currentTask)? tasks[currentTask] : FTask();
+		}
 		
-		Print("end of tasks list... " + FString::FromInt(currentTask), 3)
-		return tasks.IsValidIndex(currentTask)? tasks[currentTask] : FTask();
+		Print("Couldnt undo because of a bad index: " + FString::FromInt(currentTask), 5)
+		return {};
 	}
 
 

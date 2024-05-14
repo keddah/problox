@@ -116,3 +116,20 @@ void ABalloon::Attach() const
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);
 }
+
+void ABalloon::Reattach()
+{
+	parentCore = Cast<ACubeCore>(previousObj);
+	if(!parentCore)
+	{
+		Print("couldnt cast to core - Reattaching...", 5)
+		return;
+	}
+	
+	Attach();
+	SetActorRelativeLocation(savedTransform.GetLocation());
+	SetActorRelativeRotation(savedTransform.Rotator());
+	
+	parentCore->AddAttachment(this, attachedSocket);
+	isAttached = true;
+}
