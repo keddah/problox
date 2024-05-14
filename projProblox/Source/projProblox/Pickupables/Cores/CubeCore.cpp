@@ -98,6 +98,7 @@ void ACubeCore::Placement()
 	if(blockedSilhouette)
 	{
 		silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
+		hitObj = 0;
 		return;
 	}
 
@@ -434,6 +435,7 @@ void ACubeCore::RevertAttachments()
 {
 	TArray<APickupableMaster*> currentAttachments = GetAttachedObjects();
 
+	// Removes all the attachments that weren't there before the undo/redo
 	for (auto& obj : currentAttachments)
 	{
 		if(!previousAttachments.Contains(obj))
@@ -648,8 +650,14 @@ void ACubeCore::SetCanCollect(bool collectable)
 
 void ACubeCore::Reattach()
 {
+	// The previous object needs to be valid
+	if(!previousObj) return;
+	
 	hitObj = previousObj;
 	hitObj->SetCore(this);
 	hitObj->Reattach();
 	RevertAttachments();
+	
+	const FTransform objTransform = hitObj->GetActorTransform();
+	silhouette->SetWorldLocationAndRotation(objTransform.GetLocation(), objTransform.Rotator());
 }
