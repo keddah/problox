@@ -107,15 +107,8 @@ void ACuboidConnector::GhostPlacement()
 
 	if(!parentCore) return;
 	
-	// Compensate for the extra length (it uses its center)...
-	silhouette->AddRelativeLocation(GetSocketDifference(raySocket) - GetSocketDifference(raySocket) * 1.5f);
-
-	// If the ray socket is the front or back add half the size of the cuboid...
-	const bool addOffset = (raySocket == "FRONT" || raySocket == "BACK");
-	const float offset = addOffset? GetAttachOffset(*parentCore) + 50 : GetAttachOffset(*parentCore);
-	const FVector relativePos = silhouette->GetRelativeLocation();
-
-	silhouette->SetRelativeLocation({offset, relativePos.Y,relativePos.Z});
+	AlignSockets(raySocket);
+	SetGhostBlocked();
 }
 
 // Call at beginPlay after socketInfo has been made.....
@@ -145,4 +138,19 @@ const FVector& ACuboidConnector::GetSocketDifference(const FName& socket)
 	// Return empty vector if something went wrong...
 	Print("Couldn't get the right socket differences... ~ cuboid connector", 5)
 	return {};
+}
+
+void ACuboidConnector::AlignSockets(const FName& socket, ACubeCore* parent)
+{
+	if(!parent) parent = parentCore; 
+	
+	// Compensate for the extra length (it uses its center)...
+	silhouette->AddRelativeLocation(GetSocketDifference(socket) - GetSocketDifference(socket) * 1.5f);
+
+	// If the ray socket is the front or back add half the size of the cuboid...
+	const bool addOffset = (socket == "FRONT" || socket == "BACK");
+	const float offset = addOffset? GetAttachOffset(*parent) + 50 : GetAttachOffset(*parent);
+	const FVector relativePos = silhouette->GetRelativeLocation();
+
+	silhouette->SetRelativeLocation({offset, relativePos.Y,relativePos.Z});
 }

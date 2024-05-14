@@ -95,7 +95,12 @@ void ACubeConnector::Placement()
 	{
 		// Don't do anything if there's already something in the current direction slot.
 		if(socketInfo->ObjectInSocket(i)) continue;
-
+		if(blockedSilhouette)
+		{
+			silhouette->SetRelativeLocationAndRotation({0,0,0,}, {0,0,0});
+			continue;
+		}
+		
 		FHitResult hit;
 		const FVector direction = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(socketInfo->GetSockets()[i]));
 		const FVector start = mesh->GetSocketLocation(socketInfo->GetSockets()[i]);
@@ -140,7 +145,7 @@ void ACubeConnector::Placement()
 
 			// All the previous checks ensure that the cast is valid
 			parentCore = Cast<ACubeCore>(hitObj);
-			FName closestSocket = NearestSocket(parentCore, hit);
+			FName closestSocket = NearestSocket(parentCore, hit.Location);
 			
 			attachedSocket = closestSocket;
 			// hitObj = nullptr;
@@ -209,6 +214,7 @@ void ACubeConnector::GhostPlacement()
 	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
 	// Ensures that the final rotation is always aligned.
 	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
+	SetGhostBlocked();
 }
 
 // The final position when attached is dependent on the silhouette/ghost's position and rotation

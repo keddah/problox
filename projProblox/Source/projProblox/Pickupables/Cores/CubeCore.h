@@ -130,7 +130,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 protected:
 	ACubeCore();
 	virtual void SetupPlaceIndicator();
-	virtual void ScaleIndicator() override;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -218,7 +217,7 @@ protected:
 
 	/////////////// Rotations ///////////////
 	// Sets rotations depending on the attachee's type / snapRot variable...
-	void OtherRotations(const APickupableMaster& other);
+	void OtherRotations(APickupableMaster* other);
 
 	virtual void ResetRotation(bool resetVelocity) override;
 	

@@ -150,7 +150,7 @@ void APickupableMaster::Placement()
 		return;
 	}
 	
-	FName closestSocket = NearestSocket(parentCore, hit);
+	FName closestSocket = NearestSocket(parentCore, hit.Location);
 
 	if(closestSocket != NAME_None) attachedSocket = closestSocket;
 	GhostPlacement();
@@ -181,6 +181,7 @@ void APickupableMaster::GhostPlacement()
 
 		// Rotate to match the socket rotation
 		silhouette->SetWorldRotation(rot);
+		SetGhostBlocked();
 		return;
 	}
 
@@ -195,7 +196,7 @@ void APickupableMaster::GhostPlacement()
 	const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90; 
 	
 	// Ensures that the final rotation is always aligned.
-	silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
+	SetGhostBlocked();
 }
 
 EOperations APickupableMaster::SetSelected(const bool value)
@@ -447,7 +448,7 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 
 
 
-FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& hit) const
+FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hitPos) const
 {
 	if(!parentCore) return NAME_None;
 	
@@ -458,8 +459,13 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FHitResult& 
 	for(const auto& socket: coreMesh->GetAllSocketNames())
 	{
 		if(core) if(core->ObjectInSocket(socket)) continue;
+		if(blockedSilhouette)
+		{
+			silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
+			continue;
+		}
 		
-		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hit.ImpactPoint);
+		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hitPos);
 
 		// Don't allow the attachment if the socket is out of range.
 		if(distance > placeRange) continue;
@@ -488,6 +494,37 @@ void APickupableMaster::ResetGhost(const bool resetRot) const
 	silhouette->SetHiddenInGame(true);
 
 	if(resetRot) silhouette->SetWorldRotation({0,0,0});
+}
+
+void APickupableMaster::SetGhostBlocked()
+{
+	TArray<UPrimitiveComponent*> overlaps;
+	silhouette->GetOverlappingComponents(overlaps);
+
+	TArray<AActor*> owners;
+	
+	for(const auto& obj: overlaps)
+	{
+		AActor* owner = obj->GetOwner();
+		if(owner == this) continue;
+
+		// only include things that are solid (ignores triggers)
+		if(obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Overlap || obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Ignore) continue;
+		owners.Add(owner);
+	}
+
+	for(const auto& obj : owners)
+	{
+		// If there is a successful cast, there is a collision with another pickupable
+		if(Cast<APickupableMaster>(obj))
+		{
+			blockedSilhouette = true;
+			return;
+		}
+	}
+
+	// There are no blockages since it didn't return.
+	blockedSilhouette = false;
 }
 
 

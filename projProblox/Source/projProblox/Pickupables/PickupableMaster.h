@@ -64,6 +64,9 @@ protected:
 	// When group selected, you're unable to place cores...
 	bool canPlace;
 
+	// Whether the silhouette is colliding with the parent core or any of its objects.
+	bool blockedSilhouette;
+	
 	// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.
 	UPROPERTY(BlueprintReadWrite)
 	bool canPickup = true;
@@ -137,11 +140,14 @@ protected:
 
 	/////////////// Selection / Placement ///////////////
 	virtual void Placement();
-	FName NearestSocket(const ACubeCore* core, const FHitResult& hit) const;
+	FName NearestSocket(const ACubeCore* core, const FVector& hitPos) const;
 	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
 	void ResetGhost(bool resetRot = true) const;
+
+	// Should be ran at the end of GhostPlacement (+ before returns)
+	void SetGhostBlocked();
 	
 	virtual void Ability(float deltaTime)
 	{

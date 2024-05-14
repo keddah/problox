@@ -13,6 +13,7 @@
 
 #include "CubeCore.h"
 
+#include "Connectors/CuboidConnector.h"
 #include "./projProblox/Cells/Cell.h"
 #include "Connectors/WedgeConnector.h"
 #include "./projProblox/Pickupables/Wheel.h"
@@ -67,7 +68,7 @@ void ACubeCore::SetupPlaceIndicator()
 {
 	if(!indicator) return;
 
-	ScaleIndicator();
+	// ScaleIndicator();
 	
 	indicator->ArrowColor.A = .5f;
 
@@ -81,28 +82,6 @@ void ACubeCore::SetupPlaceIndicator()
 	SetHideIndicator(true);
 }
 
-void ACubeCore::ScaleIndicator()
-{
-	TArray<UArrowComponent*> arrows;
-	GetComponents<UArrowComponent>(arrows);
-
-	const FVector meshScale = mesh->GetRelativeScale3D();
-	for(int i = 0; i < arrows.Num(); i++)
-	{
-		if(arrows.IsValidIndex(i))
-		{
-			arrows[i]->ArrowColor.A = .5f;
-
-			const FVector indiScale = arrows[i]->GetRelativeScale3D();
-			const FVector scale = meshScale / indiScale;
-
-			// Removes the scale relativity so that the place range is accurate... 
-			arrows[i]->SetRelativeScale3D(scale);
-			arrows[i]->ArrowLength = placeRange / meshScale.Z;
-		}
-	} 
-}
-
 void ACubeCore::Placement()
 {
 	if(!canPlace) return;
@@ -114,6 +93,11 @@ void ACubeCore::Placement()
 	{
 		// Hide it if blocked...
 		SetHideIndicator(true);
+		return;
+	}
+	if(blockedSilhouette)
+	{
+		silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
 		return;
 	}
 
@@ -178,23 +162,29 @@ void ACubeCore::OtherGhostPlacement()
 	
 	silhouette->SetRelativeLocation({hitObj->GetAttachOffset(*this),0,0});
 
-	OtherRotations(*hitObj);
+	OtherRotations(hitObj);
 }
 
-void ACubeCore::OtherRotations(const APickupableMaster& other)
+void ACubeCore::OtherRotations(APickupableMaster* other)
 {
-	if(!IsValid(&other)) return;
+	if(!IsValid(other)) return;
 
-	silhouette = other.GetSilhouette();
+	silhouette = other->GetSilhouette();
 	FRotator socketRot = mesh->GetSocketRotation(raySocket);
 
 	// Need to start with the class at the bottom of the inheritance chain and go up from there... 
-	if(other.IsA<AWedgeConnector>())
+	if(other->IsA<AWedgeConnector>())
 	{
 		silhouette->SetRelativeRotation({135,0,0});
 		silhouette->SetRelativeLocation({0,0,0});
 	}
-	else if(other.IsA<ACubeConnector>())
+	if(other->IsA<ACuboidConnector>())
+	{
+		ACuboidConnector* cuboid = Cast<ACuboidConnector>(other);
+		const FName closestSocket = NearestSocket(cuboid, mesh->GetSocketLocation(raySocket));
+		cuboid->AlignSockets(closestSocket, this);
+	}
+	else if(other->IsA<ACubeConnector>())
 	{
 		// Ignore if the X and Y vectors aren't low...
 		constexpr float aboveThreshold = .075f;
@@ -206,21 +196,21 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 			const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
 			socketRot = socketRot.RotateVector(socketForward).Rotation();
 		}
-		else socketRot = RoundRotation(other.GetActorRotation(), socketRot);
+		else socketRot = RoundRotation(other->GetActorRotation(), socketRot);
 
 		silhouette->SetWorldRotation(socketRot);
 
 		// Ensure that it's aligned with this core.
 		silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), GetActorRotation(), -90));
 	}
-	else if(!other.IsA<ACubeCore>())
+	else if(!other->IsA<ACubeCore>())
 	{
-		if(other.ShouldSnapRotation())
+		if(other->ShouldSnapRotation())
 		{
 			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(raySocket));
 
 			FRotator rot;
-			const FVector otherPlaceDir = other.GetPlaceDir();
+			const FVector otherPlaceDir = other->GetPlaceDir();
 			
 			if(otherPlaceDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
 			else if(otherPlaceDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
@@ -246,7 +236,7 @@ void ACubeCore::OtherRotations(const APickupableMaster& other)
 		silhouette->SetWorldRotation(socketRot);
 
 		const FRotator relativeRot = silhouette->GetComponentTransform().GetRelativeTransform(GetTransform()).Rotator();
-		silhouette->SetRelativeRotation(relativeRot + other.GetRotOffset());
+		silhouette->SetRelativeRotation(relativeRot + other->GetRotOffset());
 	}
 }
 

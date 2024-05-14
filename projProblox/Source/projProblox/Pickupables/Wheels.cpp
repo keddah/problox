@@ -125,6 +125,7 @@ void AWheels::GhostPlacement()
 	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
 	// Ensures that the final rotation is always aligned.
 	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
+	SetGhostBlocked();
 }
 
 EOperations AWheels::SetSelected(const bool value)

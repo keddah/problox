@@ -74,6 +74,7 @@ void AWedgeConnector::GhostPlacement()
 	{
 		// Always make the slopes touch each other.
 		silhouette->SetRelativeRotation({135,0,0});
+		SetGhostBlocked();
 		return;
 	}
 
@@ -105,18 +106,21 @@ void AWedgeConnector::GhostPlacement()
 
 		const FRotator roundYaw = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation());
 		silhouette->SetWorldRotation({roundRot.Pitch, roundYaw.Yaw, roundRot.Roll});
+		SetGhostBlocked();
 		return;
 	}
 
 	else if(isDiag)
 	{
 		silhouette->SetRelativeRotation({135,0,0});
+		SetGhostBlocked();
 		return;
 	}
 
 	// If the current rotation isn't aligned with the socket rotation (the relative rotation since it's already attached)...
 	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
 	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
+	SetGhostBlocked();
 }
 
 void AWedgeConnector::Tick(float DeltaSeconds)
