@@ -17,6 +17,7 @@
 #include "GameFramework/Actor.h"
 #include "Math/Rotator.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "projProblox/AudioManager.h"
 #include "PickupableMaster.generated.h"
 
 
@@ -55,6 +56,10 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* indicator;
+
+	UPROPERTY(EditDefaultsOnly)
+	UAudioManager* soundPlayer;
+
 
 	/////////////// Selection / Placement ///////////////
 	UPROPERTY(BlueprintReadOnly)

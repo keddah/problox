@@ -48,6 +48,8 @@ APickupableMaster::APickupableMaster()
 	pickupCollider->AddRelativeLocation({0,0,50});
 	
 	defaultRot = mesh->GetRelativeRotation();
+	
+	soundPlayer = CreateDefaultSubobject<UAudioManager>("Sound Player");
 }
 
 // Called when the game starts or when spawned
@@ -230,7 +232,8 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	// Using the silhouette's location/rotation to set the actual transform.
 	UseSilhouetteTransform();
 	ResetGhost();
-	
+
+	soundPlayer->PlayConnect();
 	return EOperations::Attach;
 }
 
