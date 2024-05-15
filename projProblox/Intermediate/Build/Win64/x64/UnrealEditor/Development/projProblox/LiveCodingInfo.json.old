@@ -35,7 +35,6 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
-			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
@@ -65,7 +64,8 @@
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"ActionHistory.cpp.obj"
+			"ActionHistory.cpp.obj",
+			"AudioManager.cpp.obj"
 		]
 	}
 }

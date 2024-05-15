@@ -40,6 +40,9 @@ APickupableMaster::APickupableMaster()
 	
 	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
 	indicator->SetupAttachment(mesh);
+
+	centerMass = CreateDefaultSubobject<USceneComponent>("Center of Gravity");
+	centerMass->SetupAttachment(mesh);
 	
 	pickupCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
 	pickupCollider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
@@ -64,6 +67,8 @@ void APickupableMaster::BeginPlay()
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetPlaceIndicator();
+
+	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
 }
 
 // Called every frame

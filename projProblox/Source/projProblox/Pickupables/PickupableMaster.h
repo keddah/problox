@@ -55,6 +55,9 @@ protected:
 	UBoxComponent* pickupCollider;
 
 	UPROPERTY(EditDefaultsOnly)
+	USceneComponent* centerMass;
+	
+	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* indicator;
 
 	UPROPERTY(EditDefaultsOnly)
