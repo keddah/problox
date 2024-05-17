@@ -9,80 +9,106 @@ UActionHistory::UActionHistory()
 
 FTask UActionHistory::Undo()
 {
-	if (tasks.IsEmpty() || !tasks.IsValidIndex(currentTask))
+	// if(atEnd) return {};
+	if (tasks.IsEmpty())
 	{
-		if(currentTask < 0 && !tasks.IsEmpty())
-		{
-			currentTask = 0;
-			return tasks.IsValidIndex(currentTask)? tasks[currentTask] : FTask();
-		}
-		
-		Print("Couldnt undo because of a bad index: " + FString::FromInt(currentTask), 5)
+		Print("The task history is empty.", 5);
 		return {};
 	}
 
-	// WHEN YOU REACH THE START/END OF THE HISTORY YOU GO OVER BY 1. FIXES ITSELF WHEN YOU REDO/UNDO AGAIN
+	// If currentTask index is invalid return
+	if(!tasks.IsValidIndex(currentTask))
+	{
+		Print("Couldnt undo because of a bad index: " + FString::FromInt(currentTask), 5);
+		return {};
+	}
+
+	// Decrement currentTask to point to the previous task
 	--currentTask;
-	Print("Returned Task: " + FString::FromInt(currentTask + 1), 5);
-	return tasks.IsValidIndex(currentTask + 1)? tasks[currentTask + 1] : FTask();
+	atEnd = currentTask == 0;
+
+	// Check if the currentTask is still a valid index after decrement
+	if(!tasks.IsValidIndex(currentTask))
+	{
+		// This means we have undone all tasks, and we're at the beginning
+		currentTask = 0; // Reset to the first index
+		atEnd = true; 
+		Print("at end set to true", 5)
+		return tasks[currentTask];
+	}
+
+	// Return the task that was undone
+	Print("At end = " + atEnd? "True" : "False", 5)
+	Print("Returned Task: " + FString::FromInt(currentTask), 5);
+	return tasks[currentTask];
 }
+
 
 FTask UActionHistory::Redo()
 {
-	// Return the last task if already up to date...
-	if (tasks.IsEmpty() || !tasks.IsValidIndex(currentTask))
+	// if(atEnd) return {};
+	if (tasks.IsEmpty())
 	{
-		if(currentTask >= tasks.Num())
-		{
-			currentTask = tasks.Num() - 1;
-			
-			Print("end of tasks list... " + FString::FromInt(currentTask), 3)
-			return tasks.IsValidIndex(currentTask)? tasks[currentTask] : FTask();
-		}
-		
-		Print("Couldnt undo because of a bad index: " + FString::FromInt(currentTask), 5)
+		Print("The task history is empty.", 5);
 		return {};
 	}
 
+	// If currentTask index is invalid return
+	if(!tasks.IsValidIndex(currentTask))
+	{
+		Print("Couldnt undo because of a bad index: " + FString::FromInt(currentTask), 5);
+		return {};
+	}
 
-	// WHEN YOU REACH THE START/END OF THE HISTORY YOU GO OVER BY 1. FIXES ITSELF WHEN YOU REDO/UNDO AGAIN
+	// Decrement currentTask to point to the previous task
 	++currentTask;
-	Print("Returned Task: " + FString::FromInt(currentTask - 1), 5);
-	return tasks.IsValidIndex(currentTask - 1)? tasks[currentTask - 1] : FTask();
+	atEnd = currentTask == tasks.Num();
+
+	// Check if the currentTask is still a valid index after decrement
+	if(!tasks.IsValidIndex(currentTask))
+	{
+		// This means we have undone all tasks, and we're at the beginning
+		currentTask = tasks.Num() - 1; // Reset to the last index
+		atEnd = true;
+		Print("at end set to true", 5)
+		return tasks[currentTask];
+	}
+
+	// Return the task that was undone
+	Print("At end = " + atEnd? "True" : "False", 5)
+	Print("Returned Task: " + FString::FromInt(currentTask), 5);
+	return tasks[currentTask];
 }
 
 
 void UActionHistory::NewAction(const FTask& task)
 {
+	// If it's in the middle of the history and a new action is added... 
+	// overwrite before adding the new task.
+	if (currentTask < tasks.Num() - 1) Overwrite();
+
+	// Add the new task to the history
 	tasks.Add(task);
-	
-	// Don't overwrite if there aren't any tasks or if the current task is the latest task.
-	bool overwrite = true;
 
-	// +1 to consider the next task (since a new task is added at the start of this function).
-	// if the current task is the last task...
-	if(currentTask + 1 == tasks.Num() - 1) overwrite = false;
-
-	if(overwrite) Overwrite();
-	else currentTask++;
+	// Update the current task index to the latest task
+	currentTask = tasks.Num() - 1;
+	Print("Current Task: " + FString::FromInt(currentTask), 5);
 	
-	// Check if the number of tasks exceeds the limit..
-	if (tasksLimit > 0 && tasks.Num() > tasksLimit)
+	// Check if the number of tasks exceeds the limit
+	if (tasks.Num() > tasksLimit)
 	{
 		tasks.RemoveAt(0);
-		currentTask--;
+		currentTask--; // Adjust the current task index as the list shrinks
+		Print("Removed task since there are too many...", 5);
 	}
-	Print("Current Task: " + FString::FromInt(currentTask), 2);
 }
 
 void UActionHistory::Overwrite()
 {
-	Print("OVERWRITE CALLED", 5)
-	
-	// Remove tasks after the current task
-	const short removeCount = tasks.Num() - currentTask - 1;
-	tasks.RemoveAt(currentTask + 1, removeCount);
+	Print("OVERWRITE CALLED", 5);
 
-	// If tasks have been removed, adjust the current task index
-	if (removeCount > 0) currentTask = FMath::Clamp(currentTask, 0, tasks.Num() - 1);
+	// Remove tasks after the current task
+	const unsigned int tasksToRemove = tasks.Num() - (currentTask + 1) + 1;
+	PrintInt(tasksToRemove, 4)
+	if (tasksToRemove > 0) tasks.RemoveAt(currentTask, tasksToRemove);
 }

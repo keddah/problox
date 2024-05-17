@@ -3,6 +3,7 @@
 	{
 		"Module.projProblox.cpp.obj": [
 			"ActionHistory.gen.cpp.obj",
+			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
@@ -34,6 +35,7 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
+			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
@@ -44,6 +46,7 @@
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -59,11 +62,10 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"CubeCore.cpp.obj",
-			"PickupableMaster.cpp.obj"
+			"PickupableMaster.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"ActionHistory.cpp.obj"
 		]
 	}
 }

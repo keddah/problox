@@ -50,6 +50,9 @@ class PROJPROBLOX_API UActionHistory : public UObject
 
 	short currentTask = -1;
 
+	// Whether at the start or end of the task history.
+	bool atEnd;
+	
 	// The max number of tasks allowed to be saved
 	unsigned short tasksLimit = 25;
 

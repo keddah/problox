@@ -40,6 +40,9 @@ APickupableMaster::APickupableMaster()
 	
 	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
 	indicator->SetupAttachment(mesh);
+
+	centerMass = CreateDefaultSubobject<USceneComponent>("Center of Gravity");
+	centerMass->SetupAttachment(mesh);
 	
 	pickupCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
 	pickupCollider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
@@ -48,6 +51,8 @@ APickupableMaster::APickupableMaster()
 	pickupCollider->AddRelativeLocation({0,0,50});
 	
 	defaultRot = mesh->GetRelativeRotation();
+	
+	soundPlayer = CreateDefaultSubobject<UAudioManager>("Sound Player");
 }
 
 // Called when the game starts or when spawned
@@ -62,6 +67,8 @@ void APickupableMaster::BeginPlay()
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetPlaceIndicator();
+
+	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
 }
 
 // Called every frame
@@ -230,7 +237,8 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	// Using the silhouette's location/rotation to set the actual transform.
 	UseSilhouetteTransform();
 	ResetGhost();
-	
+
+	soundPlayer->PlayConnect();
 	return EOperations::Attach;
 }
 
@@ -423,10 +431,9 @@ void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
 	else if (appliedYaw < -180) appliedYaw += 360;
 }
 
-void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
+void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 {
-	const float angle = quarter? 45 : 90;
-	const float turn = keypress == "Q" || keypress == "R"? -angle : angle;
+	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
 		
 	if(hori)
 	{
@@ -441,9 +448,9 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 		return;
 	}
 
-	if(vertAxis.X != 0) AddActorLocalRotation({0,0, turn});
-	else if(vertAxis.Y != 0) AddActorLocalRotation({turn, 0, 0});
-	else if(vertAxis.Z != 0) AddActorLocalRotation({0, turn, 0});
+	if(vertAxis.X != 0) AddActorWorldRotation({0,0, turn});
+	else if(vertAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
+	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
 }
 
 

@@ -284,6 +284,8 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
+
+	soundPlayer->PlayConnect();
 	return EOperations::Attach;
 }
 

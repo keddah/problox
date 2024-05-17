@@ -123,6 +123,30 @@ void AWedgeConnector::GhostPlacement()
 	SetGhostBlocked();
 }
 
+void AWedgeConnector::SnapRotateMesh(bool hori, FString keypress)
+{
+	// If rotating horizontally use 90 degree turns.
+	const float angle = hori? 90 : 45;
+	const float turn = keypress == "Q" || keypress == "R"? -angle : angle;
+		
+	if(hori)
+	{
+		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
+		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
+		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
+		appliedYaw += turn;
+		
+		// Wrap appliedYaw to -180 / 180
+		if (appliedYaw > 180) appliedYaw -= 360;
+		else if (appliedYaw < -180) appliedYaw += 360;
+		return;
+	}
+
+	if(vertAxis.X != 0) AddActorWorldRotation({0,0, turn});
+	else if(vertAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
+	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
+}
+
 void AWedgeConnector::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
@@ -177,10 +201,4 @@ void AWedgeConnector::SetupPlaceIndicator()
 // 	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
 // 	downArrow->SetRelativeRotation(rot);
 //
-// 	SetHideIndicator(true);
-// }
-
-void AWedgeConnector::SetAbilityActive(bool value)
-{
-	Super::SetAbilityActive(value);
-}
+// 	SetHide

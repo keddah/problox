@@ -40,7 +40,6 @@ private:
 
 	void CreateTaskHistory(const FName& task, APickupableMaster* obj, const FTransform& startTransform, const FTransform& endTransform) const;
 	
-	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

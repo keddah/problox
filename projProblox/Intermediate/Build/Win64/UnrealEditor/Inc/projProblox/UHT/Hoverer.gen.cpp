@@ -223,15 +223,15 @@ void EmptyLinkFunctionForGeneratedCodeHoverer() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AHoverer);
 	AHoverer::~AHoverer() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AHoverer, AHoverer::StaticClass, TEXT("AHoverer"), &Z_Registration_Info_UClass_AHoverer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverer), 3373119610U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AHoverer, AHoverer::StaticClass, TEXT("AHoverer"), &Z_Registration_Info_UClass_AHoverer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverer), 4038324411U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Hoverer_h_258129106(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_3141192693(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
