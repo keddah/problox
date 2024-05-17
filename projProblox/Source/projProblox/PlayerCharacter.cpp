@@ -62,7 +62,8 @@ void APlayerCharacter::Undo()
 	// If the task.object wasn't set... the task struct is invalid.
 	if(!IsValid(changedObj))
 	{
-		Print("There aren't any tasks to undo...", 5);
+		Print("There aren't any tasks to undo...", 2);
+		history->PrintTaskIndex();
 		return;
 	}
 
@@ -75,8 +76,6 @@ void APlayerCharacter::Undo()
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 
-	Print(task.taskName.ToString(), 5)
-	
 	// Depending on the operation... Move back, Reattach or Detach
 	switch (task.operation)
 	{
@@ -105,7 +104,8 @@ void APlayerCharacter::Redo()
 	const FTask task = history->Redo();
 	if(!IsValid(task.obj))
 	{
-		Print("There aren't any tasks to redo...", 5);
+		Print("There aren't any tasks to redo...", 2);
+		history->PrintTaskIndex();
 		return;
 	}
 	
@@ -275,7 +275,6 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 		// If the object's parent is valid...
 		if(IsValid(selectedObj))
 		{
-			Print("ParentValid", 5)
 			// Its parent is always a core.
 			// Prevent the core from being picked up if it's out of range
 			if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
