@@ -5,7 +5,6 @@
 *
 * OVERRIDES:
 *	ApplyOffset
-*	SetAbilityActive
 *	GhostPlacement
 *	SetHideIndicator
 *	SetupIndicator
@@ -28,8 +27,8 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 	
 	AWedgeConnector();
 	virtual void ApplyOffset(const ACubeCore* core) override;
-	virtual void SetAbilityActive(bool value) override;
 	virtual void GhostPlacement() override;
+	virtual void SnapRotateMesh(bool hori, FString keypress) override;
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupPlaceIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override

@@ -213,7 +213,7 @@ public:
 	void RotateHori(float axis, const float rotSpeed);
 	
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
-	void SnapRotateMesh(bool hori, FString keypress, bool quarter = false);
+	virtual void SnapRotateMesh(bool hori, FString keypress);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);

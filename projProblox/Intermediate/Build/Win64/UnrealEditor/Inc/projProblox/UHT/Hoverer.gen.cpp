@@ -228,9 +228,9 @@ void EmptyLinkFunctionForGeneratedCodeHoverer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AHoverer, AHoverer::StaticClass, TEXT("AHoverer"), &Z_Registration_Info_UClass_AHoverer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverer), 1696986096U) },
+		{ Z_Construct_UClass_AHoverer, AHoverer::StaticClass, TEXT("AHoverer"), &Z_Registration_Info_UClass_AHoverer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverer), 4038324411U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_2560912077(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_3141192693(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Hoverer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

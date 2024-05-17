@@ -431,10 +431,9 @@ void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
 	else if (appliedYaw < -180) appliedYaw += 360;
 }
 
-void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, const bool quarter)
+void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 {
-	const float angle = quarter? 45 : 90;
-	const float turn = keypress == "Q" || keypress == "R"? -angle : angle;
+	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
 		
 	if(hori)
 	{
@@ -449,9 +448,9 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress, 
 		return;
 	}
 
-	if(vertAxis.X != 0) AddActorLocalRotation({0,0, turn});
-	else if(vertAxis.Y != 0) AddActorLocalRotation({turn, 0, 0});
-	else if(vertAxis.Z != 0) AddActorLocalRotation({0, turn, 0});
+	if(vertAxis.X != 0) AddActorWorldRotation({0,0, turn});
+	else if(vertAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
+	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
 }
 
 
