@@ -63,8 +63,8 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
-			"projProblox.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj"
 		]
 	}

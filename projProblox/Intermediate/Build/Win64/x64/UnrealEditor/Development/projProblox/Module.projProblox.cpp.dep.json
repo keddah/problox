@@ -193,8 +193,10 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\treads.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\wheel.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\wheels.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\playercharacter.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.cpp",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.h"
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\undoredo\\actionhistory.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
