@@ -45,6 +45,15 @@
 SourceArt/**/*.png
 SourceArt/**/*.tga
 
+# Binary Files
+Binaries/*
+Plugins/*/Binaries/*
+
+
+Plugins/*/Intermediate/*
+
+# Builds
+
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
 !Build/*/PakBlacklist*.txt
@@ -65,8 +74,14 @@ DerivedDataCache/*
 #################################
 # Unreal Engine Generated Files #
 #################################
+projProblox/[Bb]uild
+projProblox/[Bb]uilds
+projProblox/Binaries/*
 DerivedDataCache/*
+
 projProblox/Saved/*
+projProblox/Intermediate/*
+projProblox/Intermediate/Build/*
 
 #################################
 # Visual Studio Generated Files #

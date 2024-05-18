@@ -122,7 +122,7 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 
 	if(!socketObjects.IsValidIndex(index))
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
+		Print("SocketInfo Adding ~ Bad index", 5)
 		return;
 	}
 	
@@ -136,7 +136,7 @@ void UCubeSocketInfo::RemoveAttachment(FName socket)
 	
 	if(!socketObjects.IsValidIndex(index))
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Cyan, "Bad Index");
+		Print("SocketInfo Removing ~ Bad index", 5)
 		return;
 	}
 
