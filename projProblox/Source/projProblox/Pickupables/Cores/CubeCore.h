@@ -260,7 +260,7 @@ public:
 	/////////////// Selection/Placement ///////////////
 	virtual EOperations SetSelected(const bool value) override;
 	virtual EOperations SetGroupSelected(const bool value) override;
-	virtual void Detach() override;
+	virtual void Detach(bool push) override;
 	
 	/////////////// Turn System ///////////////
 	void SetMaxAttempts(const short& max) { maxAttempts = max; }

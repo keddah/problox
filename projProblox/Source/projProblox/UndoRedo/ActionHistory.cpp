@@ -3,9 +3,6 @@
 
 #include "ActionHistory.h"
 
-UActionHistory::UActionHistory()
-{
-}
 
 FTask UActionHistory::Undo()
 {
@@ -33,13 +30,11 @@ FTask UActionHistory::Undo()
 		// This means we have undone all tasks, and we're at the beginning
 		currentTask = 0; // Reset to the first index
 		atEnd = true; 
-		Print("at end set to true", 5)
 		return tasks[currentTask];
 	}
 
 	// Return the task that was undone
-	Print("At end = " + atEnd? "True" : "False", 5)
-	Print("Returned Task: " + FString::FromInt(currentTask), 5);
+	if(tasks.IsValidIndex(currentTask + 1)) return tasks[currentTask + 1];
 	return tasks[currentTask];
 }
 
@@ -70,22 +65,20 @@ FTask UActionHistory::Redo()
 		// This means we have undone all tasks, and we're at the beginning
 		currentTask = tasks.Num() - 1; // Reset to the last index
 		atEnd = true;
-		Print("at end set to true", 5)
 		return tasks[currentTask];
 	}
 
 	// Return the task that was undone
-	Print("At end = " + atEnd? "True" : "False", 5)
-	Print("Returned Task: " + FString::FromInt(currentTask), 5);
+	if(tasks.IsValidIndex(currentTask - 1)) return tasks[currentTask - 1];
 	return tasks[currentTask];
 }
 
 
 void UActionHistory::NewAction(const FTask& task)
 {
-	if(!task.obj)
+	if(task.modifiedObjs.IsEmpty())
 	{
-		Print("The task's object is invalid.... ~ action history" , 5)
+		Print("The task objects are invalid.... ~ action history" , 5)
 		return;
 	}
 	
@@ -98,7 +91,6 @@ void UActionHistory::NewAction(const FTask& task)
 
 	// Update the current task index to the latest task
 	currentTask = tasks.Num() - 1;
-	Print("Current Task: " + FString::FromInt(currentTask), 5);
 	
 	// Check if the number of tasks exceeds the limit
 	if (tasks.Num() > tasksLimit)

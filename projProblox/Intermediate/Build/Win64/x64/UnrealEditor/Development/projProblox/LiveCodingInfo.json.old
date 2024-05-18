@@ -2,7 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.projProblox.cpp.obj": [
-			"ActionHistory.gen.cpp.obj",
 			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
@@ -27,7 +26,6 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
@@ -35,13 +33,13 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
+			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
 			"BounceSpring.cpp.obj",
-			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
@@ -56,16 +54,18 @@
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
+			"projProblox.cpp.obj",
+			"ActionHistory.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
+			"Balloon.cpp.obj",
+			"CubeConnector.cpp.obj",
+			"CuboidConnector.cpp.obj",
+			"CubeCore.cpp.obj",
+			"PickupableMaster.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
-			"projProblox.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"AudioManager.cpp.obj",
-			"Balloon.cpp.obj",
-			"CubeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
-			"PickupableMaster.cpp.obj"
+			"ActionHistory.cpp.obj"
 		]
 	}
 }

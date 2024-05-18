@@ -21,7 +21,7 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	virtual EOperations SetSelected(const bool value) override;
 	
 	void Attach() const;
-	virtual void Detach() override;
+	virtual void Detach(bool push = false) override;
 	virtual void Reattach() override;
 	
 	void SetConstraintsActive(const bool constrained) const

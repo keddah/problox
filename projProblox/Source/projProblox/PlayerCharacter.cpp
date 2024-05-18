@@ -57,18 +57,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 void APlayerCharacter::Undo()
 {
 	const FTask task = history->Undo();
-	APickupableMaster* changedObj = task.obj;
-
-	// If the task.object wasn't set... the task struct is invalid.
-	if(!IsValid(changedObj))
-	{
-		Print("There aren't any tasks to undo...", 2);
-		history->PrintTaskIndex();
-		return;
-	}
-
-	// Manually deselect the object...
-	changedObj->ManualSetSelected(false);
+	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
 	selectedObj = nullptr;
@@ -76,78 +65,103 @@ void APlayerCharacter::Undo()
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 
-	// Depending on the operation... Move back, Reattach or Detach
-	switch (task.operation)
+	Print("Number of changed things: " + FString::FromInt(changedObjs.Num()), 5)
+	Print(task.taskName.ToString(), 5)
+	for (auto& obj : changedObjs)
 	{
-		// Undo the attach operation
-		case EOperations::Attach:
-			changedObj->Detach();
-			break;
-		
-		// Undo the detach operation
-		case EOperations::Detach:
-			changedObj->Reattach();
-			break;
-		
-		// Undo the move operation
-		case EOperations::Move:
-			changedObj->SetActorLocation(task.startTransform.GetLocation());
-			changedObj->SetActorRotation(task.startTransform.Rotator());
-			break;
-	}
+		// If the task.object wasn't set... the task struct is invalid.
+		if(!IsValid(obj))
+		{
+			Print("There aren't any tasks to undo...", 2);
+			history->PrintTaskIndex();
+			continue;
+		}
 
-	changedObj->RemoveVelocity();
+		// Manually deselect the object...
+		obj->ManualSetSelected(false);
+
+		// Depending on the operation... Move back, Reattach or Detach
+		switch (task.operation)
+		{
+			// Undo the attach operation
+			case EOperations::Attach:
+				obj->Detach(true);
+				// obj->UseSavedTransform();
+				break;
+			
+			// Undo the detach operation
+			case EOperations::Detach:
+				obj->Reattach();
+				Print("Reattaching", 4)
+				break;
+			
+			// Undo the move operation
+			case EOperations::Move:
+				obj->SetActorLocation(task.startTransform.GetLocation());
+				obj->SetActorRotation(task.startTransform.Rotator());
+				break;
+		}
+
+		obj->RemoveVelocity();
+	}
 }
 
 void APlayerCharacter::Redo()
 {
 	const FTask task = history->Redo();
-	if(!IsValid(task.obj))
-	{
-		Print("There aren't any tasks to redo...", 2);
-		history->PrintTaskIndex();
-		return;
-	}
-	
-	APickupableMaster* changedObj = task.obj;
-	changedObj->ManualSetSelected(false);
+	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
-	// Is the selected object a core?
 	holding = false;
 	selectedObj = nullptr;
 
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 	
-	// Depending on the operation... Move back, Reattach or Detach
-	switch (task.operation)
+	for (auto& obj : changedObjs)
 	{
-		// Redo the attach operation
+		// If the task.object wasn't set... the task struct is invalid.
+		if(!IsValid(obj))
+		{
+			Print("There aren't any tasks to redo...", 2);
+			history->PrintTaskIndex();
+			continue;
+		}
+
+		// Manually deselect the object...
+		obj->ManualSetSelected(false);
+
+		// Depending on the operation... Move back, Reattach or Detach
+		switch (task.operation)
+		{
+			// Redo the attach operation
 		case EOperations::Attach:
-			changedObj->Reattach();
+			obj->Reattach();
+			Print("Reattaching", 4)
 			break;
 			
-		// Redo the detach operation
+			// Redo the detach operation
 		case EOperations::Detach:
-			changedObj->Detach();
+			obj->Detach(true);
+			// obj->UseSavedTransform();
 			break;
 			
-		// Redo the move operation
+			// Redo the move operation
 		case EOperations::Move:
-			changedObj->SetActorLocation(task.endTransform.GetLocation());
-			changedObj->SetActorRotation(task.endTransform.Rotator());
-		break;
+			obj->SetActorLocation(task.endTransform.GetLocation());
+			obj->SetActorRotation(task.endTransform.Rotator());
+			break;
+		}
+
+		obj->RemoveVelocity();
 	}
-	
-	changedObj->RemoveVelocity();
 }
 
-void APlayerCharacter::CreateTaskHistory(const FName& task, APickupableMaster* obj, const FTransform& startTransform, const FTransform& endTransform) const
+void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform) const
 {
 	FTask newTask;
-	if(task == "ATTACH") newTask = {task, obj, startTransform, endTransform, EOperations::Attach};
-	if(task == "DETACH") newTask = {task, obj, startTransform, endTransform, EOperations::Detach};
-	if(task == "MOVE") newTask = {task, obj, startTransform, endTransform, EOperations::Move};
+	if(task == "ATTACH") newTask = {task, objs, startTransform, endTransform, EOperations::Attach};
+	if(task == "DETACH") newTask = {task, objs, startTransform, endTransform, EOperations::Detach};
+	if(task == "MOVE") newTask = {task, objs, startTransform, endTransform, EOperations::Move};
 	
 	history->NewAction(newTask);
 }
@@ -158,15 +172,31 @@ void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj) const
 	{
 		TArray<APickupableMaster*> detachedObjects = objCore->DetachAll();
 		if(detachedObjects.IsEmpty()) return;
-
-		for (auto* detachedObj  : detachedObjects)
-		{
-			if(!detachedObj) continue;
-			const FTransform objTransform = detachedObj->GetTransform();
-			CreateTaskHistory("DETACH", detachedObj, objTransform, objTransform);
-		}
+		CreateTaskHistory("DETACH", detachedObjects, FTransform::Identity, FTransform::Identity);
 		
+		// for (auto* detachedObj  : detachedObjects)
+		// {
+		// 	if(!detachedObj) continue;
+		// 	const FTransform objTransform = detachedObj->GetTransform();
+		// 	CreateTaskHistory("DETACH", detachedObj, objTransform, objTransform);
+		// }
+		return;
 	}
+	
+	if(ACubeCore* parentCore = obj->GetCore())
+	{
+		TArray<APickupableMaster*> detachedObjects = parentCore->DetachAll();
+		if(detachedObjects.IsEmpty()) return;
+		CreateTaskHistory("DETACH", detachedObjects, FTransform::Identity, FTransform::Identity);
+		
+		// for (auto* detachedObj  : detachedObjects)
+		// {
+		// 	if(!detachedObj) continue;
+		// 	const FTransform objTransform = detachedObj->GetTransform();
+		// 	CreateTaskHistory("DETACH", detachedObj, objTransform, objTransform);
+		// }
+	}
+	
 }
 
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
@@ -405,6 +435,6 @@ void APlayerCharacter::Deselect()
 	}
 	
 	// Adding new action history entry.
-	CreateTaskHistory(opName, selectedObj, selectedTransform, selectedObj->GetActorTransform());
+	CreateTaskHistory(opName, {selectedObj}, selectedTransform, selectedObj->GetActorTransform());
 	selectedObj = nullptr;
 }

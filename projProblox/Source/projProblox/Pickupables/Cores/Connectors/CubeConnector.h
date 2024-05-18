@@ -76,5 +76,5 @@ protected:
 	virtual void SetupPlaceIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	virtual void Reattach() override;
-	virtual void Detach() override;
+	virtual void Detach(bool push = false) override;
 };

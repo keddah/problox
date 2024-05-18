@@ -17,6 +17,7 @@ enum class EOperations : uint8
 	Move,
 };
 
+class APickupableMaster;
 USTRUCT(BlueprintType)
 struct FTask
 {
@@ -25,8 +26,8 @@ struct FTask
 	UPROPERTY(VisibleAnywhere)
 	FName taskName;
 	
-	UPROPERTY(VisibleAnywhere)
-	class APickupableMaster* obj;
+	UPROPERTY(VisibleAnywhere, meta = (ToolTip = "Made to be an array just for detaching from cores (when detaching all)"))
+	TArray<APickupableMaster*> modifiedObjs;
 	
 	UPROPERTY(VisibleAnywhere)
 	FTransform startTransform;
@@ -42,8 +43,6 @@ UCLASS()
 class PROJPROBLOX_API UActionHistory : public UObject
 {
 	GENERATED_BODY()
-
-	UActionHistory();
 
 	UPROPERTY(VisibleAnywhere, meta = (ToolTip = "An array of things that the player has done.\n The max number of tasks is 25 - includes moving, attaching and detaching."))
 	TArray<FTask> tasks;

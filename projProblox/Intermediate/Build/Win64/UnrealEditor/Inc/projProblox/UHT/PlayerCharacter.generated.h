@@ -33,6 +33,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execSelectObject); \
 	DECLARE_FUNCTION(execManualSelectObject); \
 	DECLARE_FUNCTION(execSetGameMode); \
+	DECLARE_FUNCTION(execCreateDetachHistory); \
 	DECLARE_FUNCTION(execRedo); \
 	DECLARE_FUNCTION(execUndo);
 

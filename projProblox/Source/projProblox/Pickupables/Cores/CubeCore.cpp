@@ -296,14 +296,14 @@ EOperations ACubeCore::SetGroupSelected(const bool value)
 	return Super::SetGroupSelected(value);
 }
 
-void ACubeCore::Detach()
+void ACubeCore::Detach(const bool push)
 {
 	if(!ObjectInSocket(raySocket)) return;
 
 	APickupableMaster* obj = socketInfo->GetObjectInSocket(raySocket);
 	if(!obj) return;
 
-	obj->Detach();
+	obj->Detach(push);
 }
 
 void ACubeCore::ResetToStart()
@@ -389,15 +389,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 	{
 		if(!IsValid(obj)) continue;
 		
-		obj->Detach();
-		obj->RemoveVelocity();
-		
-		if(!push) continue;
-		const FVector launchDir = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(obj->GetAttachedSocket()));
-		const float launchForce = obj->GetMass();
-
-		constexpr float maxVelocity = 1000;
-		obj->AddVelocity(launchDir * std::min(launchForce, maxVelocity));
+		obj->Detach(push);
 	}
 
 	socketInfo->ClearAttachments();
@@ -442,7 +434,7 @@ void ACubeCore::RevertAttachments()
 	{
 		if(!previousAttachments.Contains(obj))
 		{
-			obj->Detach();
+			obj->Detach(false);
 			RemoveAttachment(obj);
 		}
 	}
@@ -561,7 +553,7 @@ void ACubeCore::RearrangeSockets()
 		// Kick out the thing that's in the opposite socket if there's something there....
 		if(socketInfo->ObjectInSocket(oppSocket))
 		{
-			socketInfo->GetObjectInSocket(oppSocket)->Detach();
+			socketInfo->GetObjectInSocket(oppSocket)->Detach(false);
 			RemoveAttachment(oppSocket);
 		}
 

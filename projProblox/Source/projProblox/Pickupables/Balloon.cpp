@@ -57,7 +57,7 @@ EOperations ABalloon::SetSelected(const bool value)
 	if(selected)
 	{
 		wasDetached = isAttached;
-		Detach();
+		Detach(false);
 		
 		canPlace = true;
 		return {EOperations::Detach};
@@ -78,7 +78,7 @@ EOperations ABalloon::SetSelected(const bool value)
 	return {EOperations::Attach};
 }
 
-void ABalloon::Detach()
+void ABalloon::Detach(const bool push)
 {
 	ResetGhost();
 
@@ -91,12 +91,21 @@ void ABalloon::Detach()
 	SetAbilityActive(false);
 
 	ResetMaterial();
+	RemoveVelocity();
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
 	else previousObj->RemoveAttachment(attachedSocket);
 
 	constraint->BreakConstraint();
 	string->SetAttachEndToComponent(nullptr);
+	if(push)
+	{
+		const FVector launchDir = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(attachedSocket));
+		const float launchForce = GetMass();
+
+		constexpr float maxVelocity = 1000;
+		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
+	}
 	
 	silhouette->SetupAttachment(mesh);
 

@@ -155,6 +155,14 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->SetGameMode(EGameMode(Z_Param_mode));
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APlayerCharacter::execCreateDetachHistory)
+	{
+		P_GET_OBJECT(APickupableMaster,Z_Param_obj);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->CreateDetachHistory(Z_Param_obj);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APlayerCharacter::execRedo)
 	{
 		P_FINISH;
@@ -173,6 +181,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	{
 		UClass* Class = APlayerCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "CreateDetachHistory", &APlayerCharacter::execCreateDetachHistory },
 			{ "Deselect", &APlayerCharacter::execDeselect },
 			{ "Detach", &APlayerCharacter::execDetach },
 			{ "EndGame", &APlayerCharacter::execEndGame },
@@ -187,6 +196,46 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "Undo", &APlayerCharacter::execUndo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics
+	{
+		struct PlayerCharacter_eventCreateDetachHistory_Parms
+		{
+			APickupableMaster* obj;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_obj;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::NewProp_obj = { "obj", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventCreateDetachHistory_Parms, obj), Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::NewProp_obj,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Detaches everything from the inputted core or the pickupable's parent then creates task histories for each thing that was detached.  \n" },
+#endif
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Detaches everything from the inputted core or the pickupable's parent then creates task histories for each thing that was detached." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "CreateDetachHistory", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::PlayerCharacter_eventCreateDetachHistory_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::PlayerCharacter_eventCreateDetachHistory_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_APlayerCharacter_Deselect_Statics
 	{
@@ -674,6 +723,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory, "CreateDetachHistory" }, // 1604047289
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 959344020
 		{ &Z_Construct_UFunction_APlayerCharacter_Detach, "Detach" }, // 1541612637
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
@@ -878,9 +928,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 616461896U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2615148560U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2185243366U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3733312201(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3753954893(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

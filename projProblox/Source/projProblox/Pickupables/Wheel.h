@@ -30,7 +30,7 @@ class PROJPROBLOX_API AWheel : public APickupableMaster
 	virtual void Ability(float deltaTime) override { Super::Ability(deltaTime); if(selected) RemoveVelocity(); }
 	
 	virtual EOperations SetSelected(const bool value) override;
-	virtual void Detach() override;
+	virtual void Detach(bool push = false) override;
 	virtual APickupableMaster* GetParent() override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))

@@ -96,10 +96,11 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FTask>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_taskName_MetaData[];
 #endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_taskName;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_modifiedObjs_Inner;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_obj_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_modifiedObjs_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_obj;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_modifiedObjs;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_startTransform_MetaData[];
 #endif
@@ -133,13 +134,17 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FTask>()
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FTask_Statics::NewProp_taskName = { "taskName", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTask, taskName), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTask_Statics::NewProp_taskName_MetaData), Z_Construct_UScriptStruct_FTask_Statics::NewProp_taskName_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FTask_Statics::NewProp_modifiedObjs_Inner = { "modifiedObjs", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FTask_Statics::NewProp_obj_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FTask_Statics::NewProp_modifiedObjs_MetaData[] = {
 		{ "Category", "Task" },
 		{ "ModuleRelativePath", "UndoRedo/ActionHistory.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Made to be an array just for detaching from cores (when detaching all)" },
+#endif
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FTask_Statics::NewProp_obj = { "obj", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTask, obj), Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTask_Statics::NewProp_obj_MetaData), Z_Construct_UScriptStruct_FTask_Statics::NewProp_obj_MetaData) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FTask_Statics::NewProp_modifiedObjs = { "modifiedObjs", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTask, modifiedObjs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTask_Statics::NewProp_modifiedObjs_MetaData), Z_Construct_UScriptStruct_FTask_Statics::NewProp_modifiedObjs_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FTask_Statics::NewProp_startTransform_MetaData[] = {
 		{ "Category", "Task" },
@@ -164,7 +169,8 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FTask>()
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FTask_Statics::NewProp_operation = { "operation", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTask, operation), Z_Construct_UEnum_projProblox_EOperations, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTask_Statics::NewProp_operation_MetaData), Z_Construct_UScriptStruct_FTask_Statics::NewProp_operation_MetaData) }; // 3289855557
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FTask_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTask_Statics::NewProp_taskName,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTask_Statics::NewProp_obj,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTask_Statics::NewProp_modifiedObjs_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTask_Statics::NewProp_modifiedObjs,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTask_Statics::NewProp_startTransform,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTask_Statics::NewProp_endTransform,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTask_Statics::NewProp_operation_Underlying,
@@ -226,7 +232,7 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FTask>()
 		{ "ModuleRelativePath", "UndoRedo/ActionHistory.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_Inner = { "tasks", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FTask, METADATA_PARAMS(0, nullptr) }; // 2175692533
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_Inner = { "tasks", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FTask, METADATA_PARAMS(0, nullptr) }; // 1631608919
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_MetaData[] = {
 		{ "Category", "ActionHistory" },
@@ -236,7 +242,7 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FTask>()
 #endif
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks = { "tasks", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UActionHistory, tasks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_MetaData), Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_MetaData) }; // 2175692533
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks = { "tasks", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UActionHistory, tasks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_MetaData), Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_MetaData) }; // 1631608919
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UActionHistory_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UActionHistory_Statics::NewProp_tasks,
@@ -272,6 +278,7 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FTask>()
 	{
 		return UActionHistory::StaticClass();
 	}
+	UActionHistory::UActionHistory(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UActionHistory);
 	UActionHistory::~UActionHistory() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics
@@ -284,12 +291,12 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FTask>()
 		{ EOperations_StaticEnum, TEXT("EOperations"), &Z_Registration_Info_UEnum_EOperations, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3289855557U) },
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::ScriptStructInfo[] = {
-		{ FTask::StaticStruct, Z_Construct_UScriptStruct_FTask_Statics::NewStructOps, TEXT("Task"), &Z_Registration_Info_UScriptStruct_Task, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTask), 2175692533U) },
+		{ FTask::StaticStruct, Z_Construct_UScriptStruct_FTask_Statics::NewStructOps, TEXT("Task"), &Z_Registration_Info_UScriptStruct_Task, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTask), 1631608919U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UActionHistory, UActionHistory::StaticClass, TEXT("UActionHistory"), &Z_Registration_Info_UClass_UActionHistory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UActionHistory), 3409631882U) },
+		{ Z_Construct_UClass_UActionHistory, UActionHistory::StaticClass, TEXT("UActionHistory"), &Z_Registration_Info_UClass_UActionHistory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UActionHistory), 2126072901U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_902906544(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_3250128366(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_UndoRedo_ActionHistory_h_Statics::EnumInfo));

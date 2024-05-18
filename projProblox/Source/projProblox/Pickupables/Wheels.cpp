@@ -197,7 +197,7 @@ void AWheels::Attach() const
 	RemoveVelocity();
 }
 
-void AWheels::Detach()
+void AWheels::Detach(const bool push)
 {
 	ResetGhost();
 

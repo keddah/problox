@@ -128,11 +128,7 @@ const FVector& ACuboidConnector::GetSocketDifference(const FName& socket)
 	TArray<FName> sockets = socketInfo->GetSockets();
 	for(int i = 0; i < sockets.Num(); i++)
 	{
-		if(socket == sockets[i])
-		{
-			PrintVector(socketDifferences[i], 5)
-			return socketDifferences[i];
-		}
+		if(socket == sockets[i]) return socketDifferences[i];
 	}
 
 	// Return empty vector if something went wrong...

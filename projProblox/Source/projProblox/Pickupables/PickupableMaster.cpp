@@ -219,7 +219,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	if(selected)
 	{
 		wasDetached = isAttached;
-		Detach();
+		Detach(false);
 		
 		canPlace = true;
 		return wasDetached? EOperations::Detach : EOperations::Move;
@@ -260,7 +260,7 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 	isAttached = true;
 }
 
-void APickupableMaster::Detach()
+void APickupableMaster::Detach(const bool push)
 {
 	ResetGhost();
 
@@ -273,13 +273,22 @@ void APickupableMaster::Detach()
 	SetAbilityActive(false);
 
 	ResetMaterial();
+	RemoveVelocity();
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
 	else previousObj->RemoveAttachment(attachedSocket);
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetupAttachment(mesh);
+	if(push)
+	{
+		const FVector launchDir = -UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(attachedSocket));
+		const float launchForce = GetMass();
 
+		constexpr float maxVelocity = 1000;
+		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
+	}
+	
 	if(parentCore)
 	{
 		previousObj = parentCore;
@@ -654,10 +663,7 @@ void APickupableMaster::Reattach()
 	}
 
 	AttachToActor(parentCore, attachRules, removedSocket);
-	PrintVector(savedTransform.GetLocation(), 5)
-	PrintRotator(savedTransform.Rotator(), 5)
-	SetActorRelativeLocation(savedTransform.GetLocation());
-	SetActorRelativeRotation(savedTransform.Rotator());
+	UseSavedTransform();
 	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;

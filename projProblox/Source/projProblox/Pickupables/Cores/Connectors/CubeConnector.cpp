@@ -237,7 +237,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	{
 		wasDetached = isAttached;
 		canPlace = true;
-		Detach();
+		Detach(false);
 
 		return wasDetached? EOperations::Detach : EOperations::Move;
 	}
@@ -315,7 +315,7 @@ void ACubeConnector::Reattach()
 	isAttached = true;
 }
 
-void ACubeConnector::Detach()
+void ACubeConnector::Detach(const bool push)
 {
 	ResetGhost();
 
@@ -328,11 +328,21 @@ void ACubeConnector::Detach()
 	SetAbilityActive(false);
 
 	ResetMaterial();
+	RemoveVelocity();
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
 	else previousObj->RemoveAttachment(attachedSocket);
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	if(push)
+	{
+		const FVector launchDir = -UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(attachedSocket));
+		const float launchForce = GetMass();
+
+		constexpr float maxVelocity = 1000;
+		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
+	}
+	
 	silhouette->SetupAttachment(mesh);
 
 	if(parentCore)

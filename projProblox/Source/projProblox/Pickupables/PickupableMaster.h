@@ -227,7 +227,7 @@ public:
 	void ManualSetSelected(const bool value) { selected = value; };
 	virtual EOperations SetGroupSelected(const bool value);
 
-	virtual void Detach();
+	virtual void Detach(bool push = false);
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
@@ -247,8 +247,14 @@ public:
 		SetSavedTransform();
 	}
 
+	
 	// Saves the relative transform from the parent (should be called while the parentCore is valid)
 	void SetSavedTransform();
+	void UseSavedTransform()
+	{
+		SetActorRelativeLocation(savedTransform.GetLocation());
+		SetActorRelativeRotation(savedTransform.Rotator());
+	}
 
 	
 	/////////////// Ability ///////////////

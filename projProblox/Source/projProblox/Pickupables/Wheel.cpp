@@ -118,7 +118,7 @@ void AWheel::Reattach()
 	wheelAxel->UpdateConstraintFrames();
 }
 
-void AWheel::Detach()
+void AWheel::Detach(const bool push)
 {
 	ResetGhost();
 	
@@ -131,7 +131,7 @@ void AWheel::Detach()
 	SetParentDominates(false);
 
 	ToggleGravity(true);
-	
+
 	previousObj = parentCore;
 	parentCore = nullptr;
 	isAttached = false;
