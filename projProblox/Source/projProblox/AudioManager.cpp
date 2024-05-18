@@ -19,7 +19,7 @@ void UAudioManager::LoadSoundFiles()
 
 void UAudioManager::PlayConnect()
 {
-	player->SetSound(sounds[0]);
+	if(sounds.IsValidIndex(0)) player->SetSound(sounds[0]);
 	player->Play();
 }
 

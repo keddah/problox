@@ -259,7 +259,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 
 	isAttached = true;
 	parentCore->AddAttachment(this, attachedSocket);
-	soundPlayer->PlayConnect();
+	soundManager->PlayConnect();
 	return {EOperations::Attach};
 }
 

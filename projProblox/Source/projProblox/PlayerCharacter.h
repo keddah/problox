@@ -39,6 +39,9 @@ private:
 	void Redo();
 
 	void CreateTaskHistory(const FName& task, APickupableMaster* obj, const FTransform& startTransform, const FTransform& endTransform) const;
+
+	// Detaches everything from the inputted core or the pickupable's parent then creates task histories for each thing that was detached.  
+	void CreateDetachHistory(APickupableMaster* obj) const;
 	
 protected:
 	// Called when the game starts or when spawned

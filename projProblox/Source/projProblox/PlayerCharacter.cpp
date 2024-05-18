@@ -152,6 +152,23 @@ void APlayerCharacter::CreateTaskHistory(const FName& task, APickupableMaster* o
 	history->NewAction(newTask);
 }
 
+void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj) const
+{
+	if(ACubeCore* objCore = Cast<ACubeCore>(obj))
+	{
+		TArray<APickupableMaster*> detachedObjects = objCore->DetachAll();
+		if(detachedObjects.IsEmpty()) return;
+
+		for (auto* detachedObj  : detachedObjects)
+		{
+			if(!detachedObj) continue;
+			const FTransform objTransform = detachedObj->GetTransform();
+			CreateTaskHistory("DETACH", detachedObj, objTransform, objTransform);
+		}
+		
+	}
+}
+
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
 {
 	if(!IsValid(obj)) return;
@@ -318,35 +335,21 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	// if the cast is successful...
 	if(ACubeCore* hitCore = Cast<ACubeCore>(hit.GetActor()))
 	{
+		// When middle clicking a core... check if it has a parent core...
+		// If it has a parent core...
 		if(ACubeCore* parentCore = hitCore->GetCore())
 		{
-			const FTransform coreTransform = parentCore->GetTransform();
-
-			// Don't create a new action if nothing was detached...
-			if(!parentCore->DetachAll(true)) return;
-
-			CreateTaskHistory("DETACH", parentCore, coreTransform, coreTransform);
+			CreateDetachHistory(parentCore);
 			return;
 		}
-		
-		const FTransform coreTransform = hitCore->GetTransform();
-		if(!hitCore->DetachAll(true)) return;
 
-		CreateTaskHistory("DETACH", hitCore, coreTransform, coreTransform);
+		// Otherwise just detach everything on the hit core.
+		CreateDetachHistory(hitCore);
 		return;
 	}
 
-	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all.. 
-	if(const APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor()))
-	{
-		if(ACubeCore* parentCore = obj->GetCore())
-		{
-			const FTransform coreTransform = parentCore->GetTransform();
-			if(!parentCore->DetachAll(true)) return;
-
-			CreateTaskHistory("DETACH", parentCore, coreTransform, coreTransform);
-		}
-	}
+	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all..
+	if(APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor())) CreateDetachHistory(obj);
 }
 
 void APlayerCharacter::MoveSelection(const FVector& mousePos)

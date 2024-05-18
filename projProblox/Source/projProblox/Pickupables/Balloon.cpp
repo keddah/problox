@@ -115,7 +115,7 @@ void ABalloon::Attach() const
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);
-	soundPlayer->PlayConnect();
+	soundManager->PlayConnect();
 }
 
 void ABalloon::Reattach()

@@ -35,18 +35,14 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
-			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
-			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
-			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -62,10 +58,14 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
-			"projProblox.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"PlayerCharacter.cpp.obj",
-			"ActionHistory.cpp.obj"
+			"projProblox.cpp.obj",
+			"ActionHistory.cpp.obj",
+			"AudioManager.cpp.obj",
+			"Balloon.cpp.obj",
+			"CubeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
+			"PickupableMaster.cpp.obj"
 		]
 	}
 }

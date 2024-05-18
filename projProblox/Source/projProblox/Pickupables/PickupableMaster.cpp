@@ -52,7 +52,7 @@ APickupableMaster::APickupableMaster()
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
-	soundPlayer = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	soundManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
 }
 
 // Called when the game starts or when spawned
@@ -238,7 +238,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	UseSilhouetteTransform();
 	ResetGhost();
 
-	soundPlayer->PlayConnect();
+	soundManager->PlayConnect();
 	return EOperations::Attach;
 }
 

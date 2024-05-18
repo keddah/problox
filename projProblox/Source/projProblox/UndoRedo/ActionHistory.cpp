@@ -83,6 +83,12 @@ FTask UActionHistory::Redo()
 
 void UActionHistory::NewAction(const FTask& task)
 {
+	if(!task.obj)
+	{
+		Print("The task's object is invalid.... ~ action history" , 5)
+		return;
+	}
+	
 	// If it's in the middle of the history and a new action is added... 
 	// overwrite before adding the new task.
 	if (currentTask < tasks.Num() - 1) Overwrite();

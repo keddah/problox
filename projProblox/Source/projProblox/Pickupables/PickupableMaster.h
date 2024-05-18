@@ -61,7 +61,7 @@ protected:
 	UArrowComponent* indicator;
 
 	UPROPERTY(EditDefaultsOnly)
-	UAudioManager* soundPlayer;
+	UAudioManager* soundManager;
 
 
 	/////////////// Selection / Placement ///////////////

@@ -244,8 +244,8 @@ public:
 	virtual void RemoveAttachment(const FName& socket) override;
 	virtual void RemoveAttachment(APickupableMaster* obj);
 
-	UFUNCTION(BlueprintCallable, Category = "Socket")
-	bool DetachAll(bool push = true);
+	UFUNCTION(BlueprintCallable, Category = "Socket", meta = (ToolTip = "Returns an array of all the attachments that were detached."))
+	TArray<APickupableMaster*> DetachAll(bool push = true);
 	
 	UFUNCTION(BlueprintCallable, Category = "Socket")
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };

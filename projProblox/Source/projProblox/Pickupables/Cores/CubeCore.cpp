@@ -285,7 +285,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
 
-	soundPlayer->PlayConnect();
+	soundManager->PlayConnect();
 	return EOperations::Attach;
 }
 
@@ -377,13 +377,13 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	previousAttachments = GetAttachedObjects();
 }
 
-bool ACubeCore::DetachAll(const bool push)
+TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 {
-	if(!socketInfo) return false;
+	if(!socketInfo) return {};
 
 	// Return false if there weren't any things to detach
 	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
-	if(objs.IsEmpty()) return false;
+	if(objs.IsEmpty()) return {};
 	
 	for(const auto& obj : objs)
 	{
@@ -401,7 +401,7 @@ bool ACubeCore::DetachAll(const bool push)
 	}
 
 	socketInfo->ClearAttachments();
-	return true;
+	return objs;
 }
 
 
