@@ -44,4 +44,5 @@ public:
 	void SetFloatParam(const FName& key, const float value) const { player->SetFloatParameter(key, value); }
 	void SetIntParam(const FName& key, const int value) const { player->SetIntParameter(key, value); }
 	void SetBoolParam(const FName& key, const bool value) const { player->SetBoolParameter(key, value); }
+	void RunAudioFunction(const FName& key) const { player->SetTriggerParameter(key); }
 };

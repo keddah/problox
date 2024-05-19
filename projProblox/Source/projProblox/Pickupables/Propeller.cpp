@@ -32,6 +32,7 @@ void APropeller::Ability(const float deltaTime)
 {
 	if(audioManager) audioManager->SetFloatParam("roll", mesh->GetRelativeRotation().Roll);
 	Super::Ability(deltaTime);
+	audioManager->RunAudioFunction("print");
 	
 	if(!active) return;
 
