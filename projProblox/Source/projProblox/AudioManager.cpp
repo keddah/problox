@@ -17,7 +17,6 @@ void UAudioManager::LoadSoundFiles()
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_attach.MS_attach'")));
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_detach.MS_detach'")));
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_ejection.MS_ejection'")));
-	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_propeller.MS_propeller'")));
 }
 
 void UAudioManager::PlaySound(const int index, const float startTime)

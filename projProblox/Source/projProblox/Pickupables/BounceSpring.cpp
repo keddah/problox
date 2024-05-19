@@ -13,6 +13,8 @@ ABounceSpring::ABounceSpring()
 	end = CreateDefaultSubobject<UStaticMeshComponent>("End");
 	end->SetupAttachment(mesh);
 	end->SetSimulatePhysics(false);
+
+	audioManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
 }
 
 void ABounceSpring::Ability(float deltaTime)
@@ -55,6 +57,7 @@ void ABounceSpring::Ability(float deltaTime)
 	DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
 
 	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
+	if(!audioManager->IsPlaying()) audioManager->PlayAbility();
 }
 
 void ABounceSpring::ToggleGravity() const

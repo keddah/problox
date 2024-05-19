@@ -29,6 +29,13 @@ private:
 	
 public:
 	void Attach(UPrimitiveComponent* parent) const { player->AttachToComponent(parent, FAttachmentTransformRules::SnapToTargetNotIncludingScale); }
+
+	// Would mean that the sound effect is the last element (since the universal sounds are all created in the constructor).
+	// Call in the pickupable's constructor...
+	void AddAbilitySFX(const TCHAR* reference)
+	{
+		sounds.Add(LoadObject<USoundWave>(0,reference));
+	}
 	
 	bool IsPlaying() const { return player->IsPlaying(); }
 
@@ -37,9 +44,9 @@ public:
 	void PlayDetachAll(const float startTime = 0) { PlaySound(2, startTime); }
 
 	UFUNCTION(BlueprintCallable)
-	void PlayPropeller() { PlaySound(3); }
+	void PlayAbility() { PlaySound(sounds.Num() - 1); }
 	UFUNCTION(BlueprintCallable)
-	void StopPropeller() { if(player->Sound == sounds[3]) StopSound(); }
+	void StopAbility() { if(player->Sound == sounds.Last()) StopSound(); }
 
 	void SetFloatParam(const FName& key, const float value) const { player->SetFloatParameter(key, value); }
 	void SetIntParam(const FName& key, const int value) const { player->SetIntParameter(key, value); }

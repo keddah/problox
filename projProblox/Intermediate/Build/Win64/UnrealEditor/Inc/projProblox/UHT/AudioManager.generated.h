@@ -19,8 +19,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_14_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execStopPropeller); \
-	DECLARE_FUNCTION(execPlayPropeller);
+	DECLARE_FUNCTION(execStopAbility); \
+	DECLARE_FUNCTION(execPlayAbility);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_14_ACCESSORS

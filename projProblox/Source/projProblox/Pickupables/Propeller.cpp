@@ -23,6 +23,8 @@ APropeller::APropeller()
 	windBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Wind Collider"));
 	windBox->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 
+	audioManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_propeller.MS_propeller'"));
+	
 	// Don't allow cells to be collected from this collider.
 	Tags.Add("NO");
 }
@@ -68,6 +70,6 @@ void APropeller::Ability(const float deltaTime)
 void APropeller::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-	if(value) audioManager->PlayPropeller();
-	else audioManager->StopPropeller();
+	if(value) audioManager->PlayAbility();
+	else audioManager->StopAbility();
 }
