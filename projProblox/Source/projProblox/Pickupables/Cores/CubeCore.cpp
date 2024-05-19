@@ -95,12 +95,13 @@ void ACubeCore::Placement()
 		SetHideIndicator(true);
 		return;
 	}
-	if(blockedSilhouette)
-	{
-		silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
-		hitObj = 0;
-		return;
-	}
+	// if(blockedSilhouette)
+	// {
+	// 	silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
+	// 	hitObj = 0;
+	// 	Print("Silhouette blocked...", 1)
+	// 	return;
+	// }
 
 	RemoveVelocity();
 	
@@ -392,6 +393,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 		obj->Detach(push);
 	}
 
+	soundManager->PlayDetachAll();
 	socketInfo->ClearAttachments();
 	return objs;
 }

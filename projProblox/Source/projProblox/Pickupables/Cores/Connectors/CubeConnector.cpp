@@ -95,11 +95,6 @@ void ACubeConnector::Placement()
 	{
 		// Don't do anything if there's already something in the current direction slot.
 		if(socketInfo->ObjectInSocket(i)) continue;
-		if(blockedSilhouette)
-		{
-			silhouette->SetRelativeLocationAndRotation({0,0,0,}, {0,0,0});
-			continue;
-		}
 		
 		FHitResult hit;
 		const FVector direction = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(socketInfo->GetSockets()[i]));
@@ -124,7 +119,6 @@ void ACubeConnector::Placement()
 		AActor* hitActor = hit.GetActor();
 		if(!hitActor) continue;
 
-
 		if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
 		else
 		{
@@ -135,9 +129,9 @@ void ACubeConnector::Placement()
 		if(!IsValid(hitObj)) continue;
 
 		// Don't do anything if the hit object is anywhere in this actor's hierarchy
-		if(hitObj->Children.Contains(this)) continue;
+		if(IsChildOf(hitObj)) continue;
 		if(hitObj->IsChildOf(this)) continue;
-		
+
 		// Attempt to cast to the cubecore
 		if(hitObj->IsA<ACubeCore>())
 		{
@@ -145,10 +139,9 @@ void ACubeConnector::Placement()
 
 			// All the previous checks ensure that the cast is valid
 			parentCore = Cast<ACubeCore>(hitObj);
-			FName closestSocket = NearestSocket(parentCore, hit.Location);
 			
+			FName closestSocket = NearestSocket(parentCore, hit.Location);
 			attachedSocket = closestSocket;
-			// hitObj = nullptr;
 			break;
 		}
 
@@ -242,12 +235,10 @@ EOperations ACubeConnector::SetSelected(const bool value)
 		return wasDetached? EOperations::Detach : EOperations::Move;
 	}
 	
-	// When unselected....
-	ResetGhost(false);
-	
 	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return {wasDetached? EOperations::Detach : EOperations::Move};
-
+	if(!IsValid(parentCore)) return wasDetached? EOperations::Detach : EOperations::Move;
+	if(attachedSocket == NAME_None) return wasDetached? EOperations::Detach : EOperations::Move;
+	
 	// Use the silhouettes position/rotation...
 	UseSilhouetteTransform();
 
@@ -260,7 +251,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	isAttached = true;
 	parentCore->AddAttachment(this, attachedSocket);
 	soundManager->PlayConnect();
-	return {EOperations::Attach};
+	return EOperations::Attach;
 }
 
 EOperations ACubeConnector::SetGroupSelected(const bool value)

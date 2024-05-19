@@ -35,7 +35,7 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 	{
 		if(!IsValid(&attachee)) return 0;
 		
-		const float distance = attachee.IsA<ACubeConnector>()? 50 : 25;
+		const float distance = attachee.IsA<ACubeConnector>()? 50 : 35;
 		attachOffset = raySocket == "DIAG" ? 0 : distance;
 		return attachOffset;
 	}

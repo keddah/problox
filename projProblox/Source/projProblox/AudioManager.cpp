@@ -15,11 +15,18 @@ UAudioManager::UAudioManager()
 void UAudioManager::LoadSoundFiles()
 {
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_connection1.MS_connection1'")));
+	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_ejection.MS_ejection'")));
 }
 
-void UAudioManager::PlayConnect()
+void UAudioManager::PlayConnect(const float startTime)
 {
 	if(sounds.IsValidIndex(0)) player->SetSound(sounds[0]);
-	player->Play();
+	player->Play(startTime);
+}
+
+void UAudioManager::PlayDetachAll(const float startTime)
+{
+	if(sounds.IsValidIndex(1)) player->SetSound(sounds[1]);
+	player->Play(startTime);
 }
 

@@ -27,6 +27,6 @@ private:
 	void LoadSoundFiles();
 	
 public:	
-	void PlayConnect();
-		
+	void PlayConnect(float startTime = 0);
+	void PlayDetachAll(float startTime = 0);
 };
