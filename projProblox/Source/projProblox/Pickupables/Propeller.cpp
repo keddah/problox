@@ -30,12 +30,13 @@ APropeller::APropeller()
 
 void APropeller::Ability(const float deltaTime)
 {
+	if(audioManager) audioManager->SetFloatParam("roll", mesh->GetRelativeRotation().Roll);
 	Super::Ability(deltaTime);
 	
 	if(!active) return;
 
 	mesh->AddLocalRotation({0, 0, spinSpeed});
-
+	
 	if(!parentCore) return;
 
 	const bool vertical = GetActorForwardVector().Z >= .85f;
@@ -61,4 +62,11 @@ void APropeller::Ability(const float deltaTime)
 	parentCore->GetMesh()->AddForceAtLocation(force, mesh->GetComponentLocation());
 
 	
+}
+
+void APropeller::SetAbilityActive(const bool value)
+{
+	Super::SetAbilityActive(value);
+	if(value) audioManager->PlayPropeller();
+	else audioManager->StopPropeller();
 }

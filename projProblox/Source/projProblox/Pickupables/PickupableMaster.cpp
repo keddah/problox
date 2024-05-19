@@ -52,13 +52,15 @@ APickupableMaster::APickupableMaster()
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
-	soundManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	audioManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	audioManager->Attach(mesh);
 }
 
 // Called when the game starts or when spawned
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
+	// audioManager->Attach(mesh);
 
 	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
@@ -238,7 +240,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	UseSilhouetteTransform();
 	ResetGhost();
 
-	soundManager->PlayConnect();
+	audioManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -293,6 +295,9 @@ void APickupableMaster::Detach(const bool push)
 	{
 		previousObj = parentCore;
 		parentCore = nullptr;
+		
+		// Only play the detach sound if there was a parent core
+		audioManager->PlayDetach();
 	}
 
 	ToggleGravity(true);
@@ -423,9 +428,9 @@ void APickupableMaster::ResetRotation(const bool resetVelocity)
 
 void APickupableMaster::RotateVert(const float axis, const float rotSpeed)
 {
-	if(vertAxis.X != 0) AddActorLocalRotation({0,0, axis * rotSpeed});
-	else if(vertAxis.Y != 0) AddActorLocalRotation({axis * rotSpeed, 0, 0});
-	else if(vertAxis.Z != 0) AddActorLocalRotation({0, axis * rotSpeed, 0});
+	if(vertAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
+	else if(vertAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
+	else if(vertAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 }
 
 void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
@@ -653,6 +658,7 @@ void APickupableMaster::Reattach()
 	}
 
 	AttachToActor(parentCore, attachRules, removedSocket);
+	audioManager->PlayAttach();
 	UseSavedTransform();
 	
 	parentCore->AddAttachment(this, attachedSocket);

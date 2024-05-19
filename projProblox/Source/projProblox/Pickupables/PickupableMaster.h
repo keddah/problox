@@ -60,8 +60,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* indicator;
 
-	UPROPERTY(EditDefaultsOnly)
-	UAudioManager* soundManager;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UAudioManager* audioManager;
 
 
 	/////////////// Selection / Placement ///////////////

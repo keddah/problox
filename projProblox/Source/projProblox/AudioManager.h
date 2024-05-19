@@ -23,10 +23,25 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	TArray<USoundWave*> sounds;
 
-
+	void PlaySound(int index, float startTime = 0);
+	void StopSound(const float delay = 0) const { player->StopDelayed(delay); }
 	void LoadSoundFiles();
 	
-public:	
-	void PlayConnect(float startTime = 0);
-	void PlayDetachAll(float startTime = 0);
+public:
+	void Attach(UPrimitiveComponent* parent) const { player->AttachToComponent(parent, FAttachmentTransformRules::SnapToTargetNotIncludingScale); }
+	
+	bool IsPlaying() const { return player->IsPlaying(); }
+
+	void PlayAttach(float startTime = 0) { PlaySound(0, startTime); }
+	void PlayDetach(float startTime = 0) { PlaySound(1, startTime); }
+	void PlayDetachAll(const float startTime = 0) { PlaySound(2, startTime); }
+
+	UFUNCTION(BlueprintCallable)
+	void PlayPropeller() { PlaySound(3); }
+	UFUNCTION(BlueprintCallable)
+	void StopPropeller() { if(player->Sound == sounds[3]) StopSound(); }
+
+	void SetFloatParam(const FName& key, const float value) const { player->SetFloatParameter(key, value); }
+	void SetIntParam(const FName& key, const int value) const { player->SetIntParameter(key, value); }
+	void SetBoolParam(const FName& key, const bool value) const { player->SetBoolParameter(key, value); }
 };
