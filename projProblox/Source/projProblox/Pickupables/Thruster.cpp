@@ -15,10 +15,19 @@ AThruster::AThruster()
 	thrusterComp->SetupAttachment(mesh);
 
 	snapRot = false;
+	audioManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_thruster.MS_thruster'"));
 }
 
 void AThruster::BeginPlay()
 {
 	Super::BeginPlay();
 	thrusterComp->ThrustStrength = power * 1000;
+}
+
+void AThruster::SetAbilityActive(const bool value)
+{
+	Super::SetAbilityActive(value);
+
+	if(value) audioManager->PlayAbility();
+	else audioManager->StopAbility();
 }

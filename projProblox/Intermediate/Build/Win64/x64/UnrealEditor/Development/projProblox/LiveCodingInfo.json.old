@@ -3,6 +3,7 @@
 	{
 		"Module.projProblox.cpp.obj": [
 			"ActionHistory.gen.cpp.obj",
+			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
@@ -26,6 +27,7 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
@@ -33,6 +35,7 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
+			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
@@ -55,17 +58,14 @@
 			"MagPole.cpp.obj",
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
-			"Thruster.cpp.obj",
+			"Propeller.cpp.obj",
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"AudioManager.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
-			"AudioManager.cpp.obj",
-			"Propeller.cpp.obj"
+			"Thruster.cpp.obj"
 		]
 	}
 }

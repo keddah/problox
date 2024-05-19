@@ -24,7 +24,8 @@ class PROJPROBLOX_API AThruster : public APickupableMaster
 
 	virtual void BeginPlay() override;
 	virtual void Ability(float deltaTime) override { Super::Ability(deltaTime); thrusterComp->SetActive(active); }
-
+	virtual void SetAbilityActive(const bool value) override;
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UPhysicsThrusterComponent* thrusterComp;
 	

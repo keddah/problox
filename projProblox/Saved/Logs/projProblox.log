@@ -8086,3 +8086,538 @@ Script Stack (0 frames) :
 [2024.05.19-19.14.18:563][503]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
 [2024.05.19-19.14.18:595][503]Display: HotReload took  0.3s.
 [2024.05.19-19.14.18:595][503]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 85 functions remapped, 1 scriptstruct remapped
+[2024.05.19-19.16.06:403][862]LogContentBrowser: Deferred new asset file creation: MS_spring1
+[2024.05.19-19.16.06:411][862]LogContentBrowser: Creating deferred item: MS_spring1
+[2024.05.19-19.16.06:424][863]LogContentBrowser: Renaming the item being created (Deferred Item: MS_spring1).
+[2024.05.19-19.16.09:857][270]LogContentBrowser: Attempting asset rename: MS_spring1 -> MS_Thruster
+[2024.05.19-19.16.10:006][270]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.19-19.16.10:026][270]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Audio/MetaSounds/MS_Thruster" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_Thruster.uasset" SILENT=true
+[2024.05.19-19.16.10:034][270]LogSavePackage: Moving output files for package: /Game/Audio/MetaSounds/MS_Thruster
+[2024.05.19-19.16.10:034][270]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/MS_Thruster7987B5F94DB15E4F84CC45B65C875C5D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_Thruster.uasset'
+[2024.05.19-19.16.10:169][270]LogFileHelpers: InternalPromptForCheckoutAndSave took 162 ms (total: 4.88 sec)
+[2024.05.19-19.16.10:323][270]LogContentBrowser: End creating deferred item MS_spring1
+[2024.05.19-19.16.10:324][270]AssetCheck: New page: Asset Save: MS_Thruster
+[2024.05.19-19.16.10:324][270]LogContentValidation: Display: Validating /Script/MetasoundEngine.MetaSoundSource /Game/Audio/MetaSounds/MS_Thruster.MS_Thruster
+[2024.05.19-19.16.10:732][310]LogAssetEditorSubsystem: Opening Asset editor for MetaSoundSource /Game/Audio/MetaSounds/MS_Thruster.MS_Thruster
+[2024.05.19-19.17.01:977][218]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.05.19-19.17.02:599][218]LogSlate: Window 'Delete Assets' being destroyed
+[2024.05.19-19.17.02:733][218]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.19-19.17.02:748][218]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.19-19.17.02:760][218]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.05.19-19.17.02:870][218]SourceControl: rm 'projProblox/Content/Audio/MetaSounds/MS_Thruster.uasset'
+[2024.05.19-19.17.14:973][639]LogMetaSound: Warning: Mismatched transaction entries with keys 'External_None.B995ED6F4A78B26658CDAB8D61D9E59A_1.0' and 'External_None.B995ED6F4A78B26658CDAB8D61D9E59A_1.0' and transaction types 'NodeUnregistration' and 'NodeRegistration' in a search engine query.							Transactions should be registration and unregistration pairs except for the last entry.
+[2024.05.19-19.17.16:332][789]LogAssetEditorSubsystem: Opening Asset editor for MetaSoundSource /Game/Audio/MetaSounds/MS_detach_Preset.MS_detach_Preset
+[2024.05.19-19.17.34:012][876]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.05.19-19.17.34:706][876]LogSlate: Window 'Delete Assets' being destroyed
+[2024.05.19-19.17.34:732][876]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.19-19.17.34:744][876]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2024.05.19-19.17.34:756][876]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.05.19-19.17.44:962][ 84]LogContentBrowser: Deferred new asset file creation: MS_propeller1
+[2024.05.19-19.17.44:968][ 84]LogContentBrowser: Creating deferred item: MS_propeller1
+[2024.05.19-19.17.44:978][ 85]LogContentBrowser: Renaming the item being created (Deferred Item: MS_propeller1).
+[2024.05.19-19.17.49:689][651]LogContentBrowser: Attempting asset rename: MS_propeller1 -> MS_thruster
+[2024.05.19-19.17.49:782][651]LogMetaSound: Warning: Mismatched transaction entries with keys 'External_None.C2B89967455E749C5C7F11B0AAD871D7_1.0' and 'External_None.C2B89967455E749C5C7F11B0AAD871D7_1.0' and transaction types 'NodeUnregistration' and 'NodeRegistration' in a search engine query.							Transactions should be registration and unregistration pairs except for the last entry.
+[2024.05.19-19.17.49:858][651]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.19-19.17.49:882][651]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Audio/MetaSounds/MS_thruster" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset" SILENT=true
+[2024.05.19-19.17.49:897][651]LogSavePackage: Moving output files for package: /Game/Audio/MetaSounds/MS_thruster
+[2024.05.19-19.17.49:897][651]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/MS_thrusterD06293424AAACE9A73E573AA09EF795C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset'
+[2024.05.19-19.17.50:030][651]LogFileHelpers: InternalPromptForCheckoutAndSave took 172 ms (total: 5.05 sec)
+[2024.05.19-19.17.50:169][651]LogContentBrowser: End creating deferred item MS_propeller1
+[2024.05.19-19.17.50:170][651]AssetCheck: New page: Asset Save: MS_thruster
+[2024.05.19-19.17.50:170][651]LogContentValidation: Display: Validating /Script/MetasoundEngine.MetaSoundSource /Game/Audio/MetaSounds/MS_thruster.MS_thruster
+[2024.05.19-19.17.51:029][748]LogAssetEditorSubsystem: Opening Asset editor for MetaSoundSource /Game/Audio/MetaSounds/MS_thruster.MS_thruster
+[2024.05.19-19.17.51:035][748]LogMetaSound: Warning: Mismatched transaction entries with keys 'External_None.C2B89967455E749C5C7F11B0AAD871D7_1.0' and 'External_None.C2B89967455E749C5C7F11B0AAD871D7_1.0' and transaction types 'NodeUnregistration' and 'NodeRegistration' in a search engine query.							Transactions should be registration and unregistration pairs except for the last entry.
+[2024.05.19-19.18.36:166][985]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.19-19.18.36:241][985]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.19-19.18.36:262][985]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Audio/MetaSounds/MS_thruster" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset" SILENT=true
+[2024.05.19-19.18.36:300][985]LogSavePackage: Moving output files for package: /Game/Audio/MetaSounds/MS_thruster
+[2024.05.19-19.18.36:300][985]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/MS_thrusterBE5A49C1458EFD150A8DEA9B7A72207C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset'
+[2024.05.19-19.18.36:307][985]LogFileHelpers: InternalPromptForCheckoutAndSave took 66 ms (total: 5.12 sec)
+[2024.05.19-19.18.36:308][985]AssetCheck: New page: Asset Save: MS_thruster
+[2024.05.19-19.18.36:308][985]LogContentValidation: Display: Validating /Script/MetasoundEngine.MetaSoundSource /Game/Audio/MetaSounds/MS_thruster.MS_thruster
+[2024.05.19-19.21.07:215][698]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.05.19-19.21.07:306][698]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.19-19.21.07:332][698]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Audio/MetaSounds/MS_thruster" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset" SILENT=true
+[2024.05.19-19.21.07:373][698]LogSavePackage: Moving output files for package: /Game/Audio/MetaSounds/MS_thruster
+[2024.05.19-19.21.07:374][698]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/MS_thrusterC03A6D6647AE1C838FAC24B66790FA43.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset'
+[2024.05.19-19.21.07:381][698]LogFileHelpers: InternalPromptForCheckoutAndSave took 73 ms (total: 5.19 sec)
+[2024.05.19-19.21.07:381][698]AssetCheck: New page: Asset Save: MS_thruster
+[2024.05.19-19.21.07:381][698]LogContentValidation: Display: Validating /Script/MetasoundEngine.MetaSoundSource /Game/Audio/MetaSounds/MS_thruster.MS_thruster
+[2024.05.19-19.21.44:992][742]LogHotReload: New module detected: UnrealEditor-projProblox-0092.dll
+[2024.05.19-19.21.45:665][745]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.19-19.21.45:706][745]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2024.05.19-19.21.45:842][745]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.19-19.21.45:933][745]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.19-19.21.45:969][745]Display: HotReload took  0.3s.
+[2024.05.19-19.21.45:969][745]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 85 functions remapped, 1 scriptstruct remapped
+[2024.05.19-19.21.53:366][502]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Thruster.BP_Thruster
+[2024.05.19-19.21.53:366][502]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.19-19.21.53:366][502]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.19-19.21.53:513][502]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_23:PersistentLevel.BP_Thruster_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.19-19.21.56:156][798]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.19-19.21.56:167][798]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.19-19.21.56:167][798]PIE: New page: PIE session: Sandbox1 (19 May 2024, 21:21:56)
+[2024.05.19-19.21.56:167][798]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.19-19.21.56:195][798]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028226s)
+[2024.05.19-19.21.56:195][798]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.028257s)
+[2024.05.19-19.21.56:245][798]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2024.05.19-19.21.56:246][798]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.19-19.21.56:247][798]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.19-19.21.56:247][798]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.19-19.21.56:247][798]LogPlayLevel: PIE: World Init took: (0.000726s)
+[2024.05.19-19.21.56:247][798]LogAudio: Display: Creating Audio Device:                 Id: 65, Scope: Unique, Realtime: True
+[2024.05.19-19.21.56:247][798]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.19-19.21.56:247][798]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.19-19.21.56:247][798]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.19-19.21.56:247][798]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.19-19.21.56:247][798]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.19-19.21.56:247][798]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.19-19.21.56:247][798]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.19-19.21.56:247][798]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.19-19.21.56:248][798]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.19-19.21.56:248][798]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.19-19.21.56:248][798]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.19-19.21.56:249][798]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.19-19.21.56:273][798]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.19-19.21.56:273][798]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.19-19.21.56:273][798]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.19-19.21.56:273][798]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.19-19.21.56:273][798]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=65
+[2024.05.19-19.21.56:273][798]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=65
+[2024.05.19-19.21.56:275][798]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=65
+[2024.05.19-19.21.56:275][798]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=65
+[2024.05.19-19.21.56:275][798]LogInit: FAudioDevice initialized with ID 65.
+[2024.05.19-19.21.56:275][798]LogAudio: Display: Audio Device (ID: 65) registered with world 'Sandbox1'.
+[2024.05.19-19.21.56:275][798]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 65
+[2024.05.19-19.21.56:299][798]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.19-19.21.56:299][798]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.19-19.21.56:300][798]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.19-19.21.56:300][798]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.19-19.21.56:308][798]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.19-20.21.56
+[2024.05.19-19.21.56:308][798]LogWorld: Bringing up level for play took: 0.009251
+[2024.05.19-19.21.56:310][798]LogOnline: OSS: Created online subsystem instance for: :Context_88
+[2024.05.19-19.21.56:311][798]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.19-19.21.56:311][798]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.19-19.21.56:315][798]PIE: Server logged in
+[2024.05.19-19.21.56:316][798]PIE: Play in editor total start time 0.15 seconds.
+[2024.05.19-19.21.56:328][798]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.19-19.21.56:480][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onEndingGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Ending Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.21.56:480][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.21.56:480][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onAttemptEnding'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Attempt Ending Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.21.56:480][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.21.56:480][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onGameEnd'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Game End Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.21.56:480][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On New Wave Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.21.56:482][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.21.56:482][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onChangeAttachments'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On Change Attachments Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.21.56:482][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.21.56:482][801]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On New Wave Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.22.04:339][556]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.19-19.22.04:339][556]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.19-19.22.04:339][556]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.19-19.22.04:343][556]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.19-19.22.04:345][556]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.19-19.22.04:348][556]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.19-19.22.04:353][556]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.19-19.22.04:374][556]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 65
+[2024.05.19-19.22.04:374][556]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=65
+[2024.05.19-19.22.04:375][556]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=65
+[2024.05.19-19.22.04:391][556]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_9.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Treads_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_11.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_12.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_9.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_10.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:398][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:399][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:399][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheels_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:399][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_10.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:399][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:399][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:399][556]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.22.04:480][557]LogPlayLevel: Display: Destroying online subsystem :Context_88
+[2024.05.19-19.22.05:502][649]LogSlate: Window 'Message Log' being destroyed
+[2024.05.19-19.22.05:507][649]LogSlate: Window 'Message Log' being destroyed
+[2024.05.19-19.22.38:160][ 79]LogHotReload: New module detected: UnrealEditor-projProblox-0093.dll
+[2024.05.19-19.22.38:939][171]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.19-19.22.38:976][171]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.19-19.22.39:124][171]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.19-19.22.39:222][171]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.19-19.22.39:254][171]Display: HotReload took  0.3s.
+[2024.05.19-19.22.39:254][171]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 85 functions remapped, 1 scriptstruct remapped
+[2024.05.19-19.22.39:851][201]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.19-19.22.39:861][201]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.19-19.22.39:861][201]PIE: New page: PIE session: Sandbox1 (19 May 2024, 21:22:39)
+[2024.05.19-19.22.39:898][201]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.19-19.22.39:926][201]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028556s)
+[2024.05.19-19.22.39:926][201]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.028587s)
+[2024.05.19-19.22.39:971][201]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2024.05.19-19.22.39:973][201]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.19-19.22.39:973][201]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.19-19.22.39:973][201]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.19-19.22.39:973][201]LogPlayLevel: PIE: World Init took: (0.000730s)
+[2024.05.19-19.22.39:973][201]LogAudio: Display: Creating Audio Device:                 Id: 66, Scope: Unique, Realtime: True
+[2024.05.19-19.22.39:973][201]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.19-19.22.39:973][201]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.19-19.22.39:973][201]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.19-19.22.39:973][201]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.19-19.22.39:973][201]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.19-19.22.39:973][201]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.19-19.22.39:973][201]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.19-19.22.39:973][201]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.19-19.22.39:974][201]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.19-19.22.39:974][201]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.19-19.22.39:974][201]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.19-19.22.39:975][201]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.19-19.22.39:998][201]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.19-19.22.39:998][201]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.19-19.22.39:998][201]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.19-19.22.39:998][201]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.19-19.22.39:998][201]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=66
+[2024.05.19-19.22.39:998][201]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=66
+[2024.05.19-19.22.40:000][201]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=66
+[2024.05.19-19.22.40:000][201]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=66
+[2024.05.19-19.22.40:000][201]LogInit: FAudioDevice initialized with ID 66.
+[2024.05.19-19.22.40:000][201]LogAudio: Display: Audio Device (ID: 66) registered with world 'Sandbox1'.
+[2024.05.19-19.22.40:000][201]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 66
+[2024.05.19-19.22.40:026][201]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.19-19.22.40:026][201]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.19-19.22.40:028][201]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.19-19.22.40:028][201]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.19-19.22.40:036][201]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.19-20.22.40
+[2024.05.19-19.22.40:036][201]LogWorld: Bringing up level for play took: 0.009497
+[2024.05.19-19.22.40:038][201]LogOnline: OSS: Created online subsystem instance for: :Context_89
+[2024.05.19-19.22.40:040][201]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.19-19.22.40:040][201]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.19-19.22.40:043][201]PIE: Server logged in
+[2024.05.19-19.22.40:044][201]PIE: Play in editor total start time 0.184 seconds.
+[2024.05.19-19.22.40:056][201]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.19-19.22.40:172][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onEndingGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Ending Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.22.40:172][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.22.40:172][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onAttemptEnding'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Attempt Ending Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.22.40:172][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.22.40:172][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onGameEnd'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Game End Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.22.40:172][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On New Wave Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.22.40:174][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.22.40:174][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onChangeAttachments'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On Change Attachments Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.22.40:174][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.22.40:174][203]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On New Wave Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.23.06:968][882]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.19-19.23.06:968][882]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.19-19.23.06:968][882]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.19-19.23.06:972][882]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.19-19.23.06:973][882]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.19-19.23.06:977][882]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.19-19.23.06:981][882]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.19-19.23.06:994][882]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.19-19.23.06:994][882]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 66
+[2024.05.19-19.23.06:994][882]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=66
+[2024.05.19-19.23.06:996][882]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=66
+[2024.05.19-19.23.07:003][882]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:007][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_9.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Treads_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_11.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_12.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_9.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_10.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheels_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_10.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:008][882]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.23.07:084][883]LogPlayLevel: Display: Destroying online subsystem :Context_89
+[2024.05.19-19.23.08:165][981]LogSlate: Window 'Message Log' being destroyed
+[2024.05.19-19.23.08:170][981]LogSlate: Window 'Message Log' being destroyed
+[2024.05.19-19.23.38:736][149]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2024.05.19-19.23.38:811][149]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.19-19.23.38:840][149]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Audio/MetaSounds/MS_thruster" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset" SILENT=true
+[2024.05.19-19.23.38:882][149]LogSavePackage: Moving output files for package: /Game/Audio/MetaSounds/MS_thruster
+[2024.05.19-19.23.38:882][149]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/MS_thruster7A4368524397C10D650E94AB5FB13D2E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Audio/MetaSounds/MS_thruster.uasset'
+[2024.05.19-19.23.38:889][149]LogFileHelpers: InternalPromptForCheckoutAndSave took 77 ms (total: 5.27 sec)
+[2024.05.19-19.23.38:890][149]AssetCheck: New page: Asset Save: MS_thruster
+[2024.05.19-19.23.38:890][149]LogContentValidation: Display: Validating /Script/MetasoundEngine.MetaSoundSource /Game/Audio/MetaSounds/MS_thruster.MS_thruster
+[2024.05.19-19.23.40:063][266]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.19-19.23.40:072][266]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.19-19.23.40:072][266]PIE: New page: PIE session: Sandbox1 (19 May 2024, 21:23:40)
+[2024.05.19-19.23.40:072][266]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.19-19.23.40:100][266]LogPlayLevel: PIE: StaticDuplicateObject took: (0.027487s)
+[2024.05.19-19.23.40:100][266]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.027516s)
+[2024.05.19-19.23.40:111][266]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.05.19-19.23.40:113][266]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.19-19.23.40:113][266]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.19-19.23.40:114][266]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.19-19.23.40:114][266]LogPlayLevel: PIE: World Init took: (0.000756s)
+[2024.05.19-19.23.40:114][266]LogAudio: Display: Creating Audio Device:                 Id: 67, Scope: Unique, Realtime: True
+[2024.05.19-19.23.40:114][266]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.19-19.23.40:114][266]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.19-19.23.40:114][266]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.19-19.23.40:114][266]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.19-19.23.40:114][266]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.19-19.23.40:114][266]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.19-19.23.40:114][266]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.19-19.23.40:114][266]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.19-19.23.40:114][266]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.19-19.23.40:115][266]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.19-19.23.40:115][266]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.19-19.23.40:117][266]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.19-19.23.40:139][266]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.19-19.23.40:140][266]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.19-19.23.40:140][266]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.19-19.23.40:140][266]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.19-19.23.40:140][266]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=67
+[2024.05.19-19.23.40:140][266]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=67
+[2024.05.19-19.23.40:142][266]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=67
+[2024.05.19-19.23.40:142][266]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=67
+[2024.05.19-19.23.40:142][266]LogInit: FAudioDevice initialized with ID 67.
+[2024.05.19-19.23.40:142][266]LogAudio: Display: Audio Device (ID: 67) registered with world 'Sandbox1'.
+[2024.05.19-19.23.40:142][266]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 67
+[2024.05.19-19.23.40:168][266]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.19-19.23.40:168][266]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.19-19.23.40:169][266]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.19-19.23.40:169][266]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.19-19.23.40:177][266]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.19-20.23.40
+[2024.05.19-19.23.40:177][266]LogWorld: Bringing up level for play took: 0.008981
+[2024.05.19-19.23.40:179][266]LogOnline: OSS: Created online subsystem instance for: :Context_90
+[2024.05.19-19.23.40:180][266]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.19-19.23.40:180][266]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.19-19.23.40:185][266]PIE: Server logged in
+[2024.05.19-19.23.40:186][266]PIE: Play in editor total start time 0.115 seconds.
+[2024.05.19-19.23.40:200][266]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.19-19.23.40:366][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onEndingGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Ending Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.23.40:366][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.23.40:366][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onAttemptEnding'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Attempt Ending Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.23.40:366][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.23.40:366][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onGameEnd'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Game End Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.23.40:366][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On New Wave Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.05.19-19.23.40:367][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.23.40:367][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onChangeAttachments'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On Change Attachments Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.23.40:367][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.23.40:367][270]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On New Wave Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.19-19.24.08:559][ 11]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.19-19.24.08:559][ 11]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.19-19.24.08:559][ 11]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.19-19.24.08:564][ 11]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.19-19.24.08:565][ 11]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.19-19.24.08:568][ 11]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.19-19.24.08:572][ 11]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.19-19.24.08:584][ 11]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 67
+[2024.05.19-19.24.08:584][ 11]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=67
+[2024.05.19-19.24.08:586][ 11]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=67
+[2024.05.19-19.24.08:593][ 11]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:597][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_9.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_0.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Treads_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_11.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_12.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_9.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_10.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_5.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_6.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_7.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_8.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheels_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_10.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_4.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_3.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:598][ 11]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_2.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.19-19.24.08:675][ 12]LogPlayLevel: Display: Destroying online subsystem :Context_90
+[2024.05.19-19.24.09:674][ 98]LogSlate: Window 'Message Log' being destroyed
+[2024.05.19-19.24.09:680][ 98]LogSlate: Window 'Message Log' being destroyed
+[2024.05.19-19.24.47:446][649]LogHotReload: New module detected: UnrealEditor-projProblox-0094.dll
+[2024.05.19-19.24.48:120][652]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.19-19.24.48:156][652]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.05.19-19.24.48:302][652]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.19-19.24.48:394][652]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.19-19.24.48:429][652]Display: HotReload took  0.3s.
+[2024.05.19-19.24.48:429][652]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 85 functions remapped, 1 scriptstruct remapped
