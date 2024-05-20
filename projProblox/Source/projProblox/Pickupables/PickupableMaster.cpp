@@ -60,7 +60,7 @@ APickupableMaster::APickupableMaster()
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
-	audioManager->Attach(mesh);
+	if(audioManager && mesh) audioManager->Attach(mesh);
 
 	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
