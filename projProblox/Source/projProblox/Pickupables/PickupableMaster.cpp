@@ -27,7 +27,8 @@ APickupableMaster::APickupableMaster()
 	mesh->SetGenerateOverlapEvents(true);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
-	silhouette->SetCollisionResponseToAllChannels(ECR_Ignore);
+	silhouette->SetCollisionResponseToAllChannels(ECR_Overlap);
+	silhouette->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	silhouette->SetStaticMesh(mesh->GetStaticMesh());
 	silhouette->SetupAttachment(mesh);
 	silhouette->SetHiddenInGame(true);
@@ -35,7 +36,6 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetMassOverrideInKg("", 0);
 	silhouette->SetSimulatePhysics(false);
 	silhouette->UnWeldFromParent();
-	silhouette->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	silhouette->SetEnableGravity(false);
 	
 	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
@@ -52,13 +52,15 @@ APickupableMaster::APickupableMaster()
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
-	soundManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	audioManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	audioManager->Attach(mesh);
 }
 
 // Called when the game starts or when spawned
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
+	if(audioManager && mesh) audioManager->Attach(mesh);
 
 	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
@@ -238,7 +240,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	UseSilhouetteTransform();
 	ResetGhost();
 
-	soundManager->PlayConnect();
+	audioManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -293,6 +295,9 @@ void APickupableMaster::Detach(const bool push)
 	{
 		previousObj = parentCore;
 		parentCore = nullptr;
+		
+		// Only play the detach sound if there was a parent core
+		audioManager->PlayDetach();
 	}
 
 	ToggleGravity(true);
@@ -423,9 +428,9 @@ void APickupableMaster::ResetRotation(const bool resetVelocity)
 
 void APickupableMaster::RotateVert(const float axis, const float rotSpeed)
 {
-	if(vertAxis.X != 0) AddActorLocalRotation({0,0, axis * rotSpeed});
-	else if(vertAxis.Y != 0) AddActorLocalRotation({axis * rotSpeed, 0, 0});
-	else if(vertAxis.Z != 0) AddActorLocalRotation({0, axis * rotSpeed, 0});
+	if(vertAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
+	else if(vertAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
+	else if(vertAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 }
 
 void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
@@ -474,12 +479,8 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hit
 	
 	for(const auto& socket: coreMesh->GetAllSocketNames())
 	{
+		// Don't incorporate sockets if there's already an object attached to it
 		if(core) if(core->ObjectInSocket(socket)) continue;
-		if(blockedSilhouette)
-		{
-			silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
-			continue;
-		}
 		
 		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hitPos);
 
@@ -503,44 +504,38 @@ void APickupableMaster::RemoveVelocity() const
 }
 
 
-void APickupableMaster::ResetGhost(const bool resetRot) const
+void APickupableMaster::ResetGhost() const
 {
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
 
-	if(resetRot) silhouette->SetWorldRotation({0,0,0});
+	silhouette->SetRelativeRotation({0,0,0});
+	silhouette->SetRelativeLocation({0,0,0});
 }
 
 void APickupableMaster::SetGhostBlocked()
 {
-	TArray<UPrimitiveComponent*> overlaps;
-	silhouette->GetOverlappingComponents(overlaps);
-
-	TArray<AActor*> owners;
-	
-	for(const auto& obj: overlaps)
-	{
-		AActor* owner = obj->GetOwner();
-		if(owner == this) continue;
-
-		// only include things that are solid (ignores triggers)
-		if(obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Overlap || obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Ignore) continue;
-		owners.Add(owner);
-	}
-
-	for(const auto& obj : owners)
-	{
-		// If there is a successful cast, there is a collision with another pickupable
-		if(Cast<APickupableMaster>(obj))
-		{
-			blockedSilhouette = true;
-			return;
-		}
-	}
-
-	// There are no blockages since it didn't return.
-	blockedSilhouette = false;
+	// TArray<UPrimitiveComponent*> overlaps;
+	// silhouette->GetOverlappingComponents(overlaps);
+	// PrintVector(silhouette->GetRelativeLocation(), 1)
+	//
+	// TArray<AActor*> owners;
+	// for(const auto& obj: overlaps)
+	// {
+	// 	AActor* owner = obj->GetOwner();
+	// 	if(owner == this) continue;
+	//
+	// 	// only include things that are solid (ignores triggers)
+	// 	if(obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Block) owners.Add(owner);
+	// }
+	//
+	// for(const auto& obj : owners)
+	// {
+	// 	Print(obj->GetName(), 1)
+	// 	// If there is a successful cast, there is a collision with another pickupable
+	// 	const APickupableMaster* valid = Cast<APickupableMaster>(obj);
+	// }
 }
 
 
@@ -663,6 +658,7 @@ void APickupableMaster::Reattach()
 	}
 
 	AttachToActor(parentCore, attachRules, removedSocket);
+	audioManager->PlayAttach();
 	UseSavedTransform();
 	
 	parentCore->AddAttachment(this, attachedSocket);

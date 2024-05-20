@@ -168,35 +168,24 @@ void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMa
 
 void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj) const
 {
+	// Try to cast to a core
 	if(ACubeCore* objCore = Cast<ACubeCore>(obj))
 	{
 		TArray<APickupableMaster*> detachedObjects = objCore->DetachAll();
 		if(detachedObjects.IsEmpty()) return;
 		CreateTaskHistory("DETACH", detachedObjects, FTransform::Identity, FTransform::Identity);
-		
-		// for (auto* detachedObj  : detachedObjects)
-		// {
-		// 	if(!detachedObj) continue;
-		// 	const FTransform objTransform = detachedObj->GetTransform();
-		// 	CreateTaskHistory("DETACH", detachedObj, objTransform, objTransform);
-		// }
 		return;
 	}
-	
+
+	// If the cast fails... cast to the object's parent core
 	if(ACubeCore* parentCore = obj->GetCore())
 	{
 		TArray<APickupableMaster*> detachedObjects = parentCore->DetachAll();
 		if(detachedObjects.IsEmpty()) return;
 		CreateTaskHistory("DETACH", detachedObjects, FTransform::Identity, FTransform::Identity);
-		
-		// for (auto* detachedObj  : detachedObjects)
-		// {
-		// 	if(!detachedObj) continue;
-		// 	const FTransform objTransform = detachedObj->GetTransform();
-		// 	CreateTaskHistory("DETACH", detachedObj, objTransform, objTransform);
-		// }
 	}
-	
+
+	else Print("No parent / core found when detaching all", 5)
 }
 
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)

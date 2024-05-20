@@ -14,12 +14,20 @@ UAudioManager::UAudioManager()
 
 void UAudioManager::LoadSoundFiles()
 {
-	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_connection1.MS_connection1'")));
+	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_attach.MS_attach'")));
+	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_detach.MS_detach'")));
+	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_ejection.MS_ejection'")));
 }
 
-void UAudioManager::PlayConnect()
+void UAudioManager::PlaySound(const int index, const float startTime)
 {
-	if(sounds.IsValidIndex(0)) player->SetSound(sounds[0]);
-	player->Play();
-}
+	if(!sounds.IsValidIndex(index))
+	{
+		GEngine->AddOnScreenDebugMessage(0, 5 ,FColor::Cyan, "bad sound index ~ audio manager");
+		return;
+	}
 
+	// Only set the sound if the sound isn't already the target sound..
+	if(player->Sound != sounds[index]) player->SetSound(sounds[index]);
+	player->Play(startTime);
+}

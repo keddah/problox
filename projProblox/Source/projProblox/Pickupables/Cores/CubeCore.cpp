@@ -95,12 +95,13 @@ void ACubeCore::Placement()
 		SetHideIndicator(true);
 		return;
 	}
-	if(blockedSilhouette)
-	{
-		silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
-		hitObj = 0;
-		return;
-	}
+	// if(blockedSilhouette)
+	// {
+	// 	silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
+	// 	hitObj = 0;
+	// 	Print("Silhouette blocked...", 1)
+	// 	return;
+	// }
 
 	RemoveVelocity();
 	
@@ -285,7 +286,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
 
-	soundManager->PlayConnect();
+	audioManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -392,6 +393,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 		obj->Detach(push);
 	}
 
+	audioManager->PlayDetachAll();
 	socketInfo->ClearAttachments();
 	return objs;
 }

@@ -23,6 +23,8 @@ APropeller::APropeller()
 	windBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Wind Collider"));
 	windBox->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 
+	audioManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_propeller.MS_propeller'"));
+	
 	// Don't allow cells to be collected from this collider.
 	Tags.Add("NO");
 }
@@ -30,12 +32,14 @@ APropeller::APropeller()
 
 void APropeller::Ability(const float deltaTime)
 {
+	if(audioManager) audioManager->SetFloatParam("roll", mesh->GetRelativeRotation().Roll);
 	Super::Ability(deltaTime);
+	audioManager->RunAudioFunction("print");
 	
 	if(!active) return;
 
 	mesh->AddLocalRotation({0, 0, spinSpeed});
-
+	
 	if(!parentCore) return;
 
 	const bool vertical = GetActorForwardVector().Z >= .85f;
@@ -61,4 +65,11 @@ void APropeller::Ability(const float deltaTime)
 	parentCore->GetMesh()->AddForceAtLocation(force, mesh->GetComponentLocation());
 
 	
+}
+
+void APropeller::SetAbilityActive(const bool value)
+{
+	Super::SetAbilityActive(value);
+	if(value) audioManager->PlayAbility();
+	else audioManager->StopAbility();
 }
