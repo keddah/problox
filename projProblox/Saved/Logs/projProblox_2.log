@@ -1217,3 +1217,18 @@ Script Stack (0 frames) :
 [2024.05.21-23.12.56:142][664]LogContentBrowser: Attempting asset rename: NewFolder -> AssetPacks
 [2024.05.21-23.12.56:153][664]LogContentBrowser: End creating deferred item NewFolder
 [2024.05.21-23.13.21:705][274]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.05.21-23.14.23:573][533]LogDerivedDataCache: C:/Users/geeze/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:06.298 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 3821 files in 5348 folders with total size 764 MiB.
+[2024.05.21-23.15.06:657][847]LogAssetTools: Warning: Failed to import 'C:\Users\geeze\OneDrive\Desktop\Maps/RuralAustralia_Content_BuiltData.uasset'. Unknown extension 'uasset'.
+[2024.05.21-23.15.06:673][847]LogAssetTools: Warning: Failed to import 'C:\Users\geeze\OneDrive\Desktop\Maps/RuralAustralia_Example_01_BuiltData.uasset'. Unknown extension 'uasset'.
+[2024.05.21-23.15.06:688][847]LogAssetTools: Warning: Failed to import 'C:\Users\geeze\OneDrive\Desktop\Maps/RuralAustralia_Example_02_BuiltData.uasset'. Unknown extension 'uasset'.
+[2024.05.21-23.15.06:700][847]LogAssetTools: Warning: Failed to import 'C:\Users\geeze\OneDrive\Desktop\Maps/RuralAustralia_Example_03_BuiltData.uasset'. Unknown extension 'uasset'.
+[2024.05.21-23.16.08:468][727]LogTexture: Display: Building textures: /Game/AssetPacks/Maps/RuralAustralia_Content_BuiltData.RuralAustralia_Content_BuiltData:NewReflectionComponentTextureB0D7B0334379B646CE0D14BC7110615B (BGRA8, 128x128 x6x1x1) (Required Memory Estimate: 3.062492 MB), EncodeSpeed: Fast
+[2024.05.21-23.16.08:468][727]LogTexture: Display: Building textures: /Game/AssetPacks/Maps/RuralAustralia_Example_01_BuiltData.RuralAustralia_Example_01_BuiltData:NewReflectionComponentTextureCAF65C9E4EFF1005E323C2914D708439 (BGRA8, 128x128 x6x1x1) (Required Memory Estimate: 3.062492 MB), EncodeSpeed: Fast
+[2024.05.21-23.16.08:505][727]LogTexture: Display: Building textures: /Game/AssetPacks/Maps/RuralAustralia_Example_03_BuiltData.RuralAustralia_Example_03_BuiltData:NewReflectionComponentTexture1D096B7B45F7381049459DBA839A8589 (BGRA8, 128x128 x6x1x1) (Required Memory Estimate: 3.062492 MB), EncodeSpeed: Fast
+[2024.05.21-23.16.08:517][727]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.05.21-23.16.09:352][727]LogSlate: Window 'Delete Assets' being destroyed
+[2024.05.21-23.16.09:849][727]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.05.21-23.16.09:853][727]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2024.05.21-23.16.09:858][727]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.05.21-23.17.40:215][313]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2024.05.21-23.17.51:701][457]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
