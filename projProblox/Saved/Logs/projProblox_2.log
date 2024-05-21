@@ -1232,3 +1232,750 @@ Script Stack (0 frames) :
 [2024.05.21-23.16.09:858][727]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
 [2024.05.21-23.17.40:215][313]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
 [2024.05.21-23.17.51:701][457]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.21-23.20.37:482][213]LogTexture: Display: Building textures: /Game/AssetPacks/Maps/RuralAustralia_Example_02_BuiltData.RuralAustralia_Example_02_BuiltData:NewReflectionComponentTexture1CFABA204742845662AE3AADD4805E55 (BGRA8, 128x128 x6x1x1) (Required Memory Estimate: 3.062492 MB), EncodeSpeed: Fast
+[2024.05.21-23.20.37:626][213]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2024.05.21-23.20.38:599][213]LogSlate: Window 'Delete Assets' being destroyed
+[2024.05.21-23.20.39:872][213]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.21-23.20.39:877][213]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2024.05.21-23.20.39:882][213]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.05.21-23.21.00:969][295]LogDirectoryWatcher: Display: A directory notification failed for 'D:/problox/projProblox/Content/Collections/' because it could not be accessed. Aborting watch request...
+[2024.05.21-23.21.00:969][295]LogDirectoryWatcher: Display: A directory notification failed for 'D:/problox/projProblox/Saved/Collections/' because it could not be accessed. Aborting watch request...
+[2024.05.21-23.21.00:969][295]LogDirectoryWatcher: Display: A directory notification failed for 'D:/problox/projProblox/Content/Developers/geeze/Collections/' because it could not be accessed. Aborting watch request...
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/ArtTools/RenderToTexture/Textures/127grey.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/ArtTools/RenderToTexture/Textures/127grey.uasset' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineLightProfiles: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineLightProfiles' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions01/Coordinates: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions01/Coordinates' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/SupportFiles' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/2dArrayLookupByIndex.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/2dArrayLookupByIndex.uasset' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/3ColorBlend.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/3ColorBlend.uasset' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/Texturing: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/Texturing' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/3PointLevels.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions02/3PointLevels.uasset' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/AbberatedBlur-Texture.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/AbberatedBlur-Texture.uasset' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/NavigationSystem/Public/AbstractNavData.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/NavigationSystem/Public/AbstractNavData.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Public/ActiveSoundUpdateInterface.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Public/ActiveSoundUpdateInterface.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/Blutility/Classes/ActorActionUtility.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/Blutility/Classes/ActorActionUtility.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/SceneOutliner/Private/ActorBrowsingModeSettings.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/SceneOutliner/Private/ActorBrowsingModeSettings.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Engine: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Engine' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Components/ActorComponent.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Components/ActorComponent.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorBlueprintResources/ActorComponentMacros.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorBlueprintResources/ActorComponentMacros.uasset' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Public/WorldPartition/ActorDescContainer.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Public/WorldPartition/ActorDescContainer.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Subsystems/ActorEditorContextSubsystem.h: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Subsystems/ActorEditorContextSubsystem.h' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Public/Elements/Actor: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Public/Elements/Actor' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Elements/Actor: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/UnrealEd/Public/Elements/Actor' is outside repository at 'D:/problox'
+[2024.05.21-23.21.06:268][326]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/ActorFactories: 'C:/Program Files/Epic Games/UE_5.3/Engine/Source/Editor/UnrealEd/Classes/ActorFactories' is outside repository at 'D:/problox'
+[2024.05.21-23.22.05:379][  6]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find Brush 'ContentBrowser.ListViewFolderIcon.Base'.'
+[2024.05.21-23.22.05:379][  6]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find Brush 'ContentBrowser.ListViewFolderIcon.Mask'.'
+[2024.05.21-23.22.38:296][700]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.05.21-23.22.38:297][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/SM_Delineator_01': Can't find file.
+[2024.05.21-23.22.38:297][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/SM_Delineator_01': Can't find file.
+[2024.05.21-23.22.38:297][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Delineator_01/SM_Delineator_01.SM_Delineator_01'
+[2024.05.21-23.22.38:297][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/M_Delineator_01': Can't find file.
+[2024.05.21-23.22.38:297][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/M_Delineator_01': Can't find file.
+[2024.05.21-23.22.38:297][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Delineator_01/M_Delineator_01.M_Delineator_01'
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/T_Delineator_01_NA': Can't find file.
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/T_Delineator_01_NA': Can't find file.
+[2024.05.21-23.22.38:298][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Delineator_01/T_Delineator_01_NA.T_Delineator_01_NA'
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/T_Delineator_01_CA': Can't find file.
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Delineator_01/T_Delineator_01_CA': Can't find file.
+[2024.05.21-23.22.38:298][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Delineator_01/T_Delineator_01_CA.T_Delineator_01_CA'
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/MI_Fence_01': Can't find file.
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/MI_Fence_01': Can't find file.
+[2024.05.21-23.22.38:298][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/MI_Fence_01.MI_Fence_01'
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/M_Fence_Wires_01_LOD': Can't find file.
+[2024.05.21-23.22.38:298][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/M_Fence_Wires_01_LOD': Can't find file.
+[2024.05.21-23.22.38:298][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/M_Fence_Wires_01_LOD.M_Fence_Wires_01_LOD'
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/M_Fence_Wires_01': Can't find file.
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/M_Fence_Wires_01': Can't find file.
+[2024.05.21-23.22.38:300][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/M_Fence_Wires_01.M_Fence_Wires_01'
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/Spline_Fence': Can't find file.
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/Spline_Fence': Can't find file.
+[2024.05.21-23.22.38:300][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/Spline_Fence.Spline_Fence'
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_Wires_01': Can't find file.
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_Wires_01': Can't find file.
+[2024.05.21-23.22.38:300][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_Wires_01.SM_Fence_Wires_01'
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_02': Can't find file.
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_02': Can't find file.
+[2024.05.21-23.22.38:300][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_02.SM_Fence_02'
+[2024.05.21-23.22.38:300][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_01': Can't find file.
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_01': Can't find file.
+[2024.05.21-23.22.38:301][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/SM_Fence_01.SM_Fence_01'
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_01_CA': Can't find file.
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_01_CA': Can't find file.
+[2024.05.21-23.22.38:301][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_01_CA.T_Fence_01_CA'
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_CA': Can't find file.
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_CA': Can't find file.
+[2024.05.21-23.22.38:301][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_CA.T_Fence_Wire_01_CA'
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_01_NA': Can't find file.
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_01_NA': Can't find file.
+[2024.05.21-23.22.38:301][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_01_NA.T_Fence_01_NA'
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_N': Can't find file.
+[2024.05.21-23.22.38:301][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_N': Can't find file.
+[2024.05.21-23.22.38:302][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_N.T_Fence_Wire_01_N'
+[2024.05.21-23.22.38:302][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_LOD_N': Can't find file.
+[2024.05.21-23.22.38:302][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_LOD_N': Can't find file.
+[2024.05.21-23.22.38:302][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_LOD_N.T_Fence_Wire_01_LOD_N'
+[2024.05.21-23.22.38:302][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_LOD_CA': Can't find file.
+[2024.05.21-23.22.38:302][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_LOD_CA': Can't find file.
+[2024.05.21-23.22.38:302][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Fence_01/T_Fence_Wire_01_LOD_CA.T_Fence_Wire_01_LOD_CA'
+[2024.05.21-23.22.38:302][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/SM_KangarooSign_01': Can't find file.
+[2024.05.21-23.22.38:302][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/SM_KangarooSign_01': Can't find file.
+[2024.05.21-23.22.38:303][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/SM_KangarooSign_01.SM_KangarooSign_01'
+[2024.05.21-23.22.38:303][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/M_KangarooSign_01': Can't find file.
+[2024.05.21-23.22.38:303][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/M_KangarooSign_01': Can't find file.
+[2024.05.21-23.22.38:303][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/M_KangarooSign_01.M_KangarooSign_01'
+[2024.05.21-23.22.38:303][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/T_KangarooSign_01_N': Can't find file.
+[2024.05.21-23.22.38:303][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/T_KangarooSign_01_N': Can't find file.
+[2024.05.21-23.22.38:303][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/T_KangarooSign_01_N.T_KangarooSign_01_N'
+[2024.05.21-23.22.38:303][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/T_KangarooSign_01_CA': Can't find file.
+[2024.05.21-23.22.38:303][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/T_KangarooSign_01_CA': Can't find file.
+[2024.05.21-23.22.38:304][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/KangarooSign_01/T_KangarooSign_01_CA.T_KangarooSign_01_CA'
+[2024.05.21-23.22.38:304][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/T_Reflector_01_N': Can't find file.
+[2024.05.21-23.22.38:304][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/T_Reflector_01_N': Can't find file.
+[2024.05.21-23.22.38:304][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Reflector_01/T_Reflector_01_N.T_Reflector_01_N'
+[2024.05.21-23.22.38:304][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/T_Reflector_01_CA': Can't find file.
+[2024.05.21-23.22.38:304][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/T_Reflector_01_CA': Can't find file.
+[2024.05.21-23.22.38:304][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Reflector_01/T_Reflector_01_CA.T_Reflector_01_CA'
+[2024.05.21-23.22.38:304][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/SM_Reflector_01': Can't find file.
+[2024.05.21-23.22.38:304][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/SM_Reflector_01': Can't find file.
+[2024.05.21-23.22.38:304][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Reflector_01/SM_Reflector_01.SM_Reflector_01'
+[2024.05.21-23.22.38:305][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/M_Reflector_01': Can't find file.
+[2024.05.21-23.22.38:305][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Reflector_01/M_Reflector_01': Can't find file.
+[2024.05.21-23.22.38:305][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Reflector_01/M_Reflector_01.M_Reflector_01'
+[2024.05.21-23.22.38:305][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/M_RoadLine_Decal_01': Can't find file.
+[2024.05.21-23.22.38:305][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/M_RoadLine_Decal_01': Can't find file.
+[2024.05.21-23.22.38:305][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/M_RoadLine_Decal_01.M_RoadLine_Decal_01'
+[2024.05.21-23.22.38:305][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/M_Road_01': Can't find file.
+[2024.05.21-23.22.38:305][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/M_Road_01': Can't find file.
+[2024.05.21-23.22.38:305][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/M_Road_01.M_Road_01'
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_RoadLine_Decal_01_CA': Can't find file.
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_RoadLine_Decal_01_CA': Can't find file.
+[2024.05.21-23.22.38:306][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/T_RoadLine_Decal_01_CA.T_RoadLine_Decal_01_CA'
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/SM_Road_Spline_01': Can't find file.
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/SM_Road_Spline_01': Can't find file.
+[2024.05.21-23.22.38:306][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/SM_Road_Spline_01.SM_Road_Spline_01'
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/SM_Road_01': Can't find file.
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/SM_Road_01': Can't find file.
+[2024.05.21-23.22.38:306][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/SM_Road_01.SM_Road_01'
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_RoadLine_Decal_01_NA': Can't find file.
+[2024.05.21-23.22.38:306][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_RoadLine_Decal_01_NA': Can't find file.
+[2024.05.21-23.22.38:306][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/T_RoadLine_Decal_01_NA.T_RoadLine_Decal_01_NA'
+[2024.05.21-23.22.38:308][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_CA': Can't find file.
+[2024.05.21-23.22.38:308][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_CA': Can't find file.
+[2024.05.21-23.22.38:308][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_CA.T_Road_01_CA'
+[2024.05.21-23.22.38:308][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_Tile_NA': Can't find file.
+[2024.05.21-23.22.38:308][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_Tile_NA': Can't find file.
+[2024.05.21-23.22.38:308][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_Tile_NA.T_Road_01_Tile_NA'
+[2024.05.21-23.22.38:308][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_NA': Can't find file.
+[2024.05.21-23.22.38:308][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_NA': Can't find file.
+[2024.05.21-23.22.38:308][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Road_01/T_Road_01_NA.T_Road_01_NA'
+[2024.05.21-23.22.38:308][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/M_Snake_01': Can't find file.
+[2024.05.21-23.22.38:309][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/M_Snake_01': Can't find file.
+[2024.05.21-23.22.38:309][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Snake_01/M_Snake_01.M_Snake_01'
+[2024.05.21-23.22.38:309][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/SM_Snake_01': Can't find file.
+[2024.05.21-23.22.38:309][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/SM_Snake_01': Can't find file.
+[2024.05.21-23.22.38:309][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Snake_01/SM_Snake_01.SM_Snake_01'
+[2024.05.21-23.22.38:309][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/T_Snake_01_CA': Can't find file.
+[2024.05.21-23.22.38:309][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/T_Snake_01_CA': Can't find file.
+[2024.05.21-23.22.38:309][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Snake_01/T_Snake_01_CA.T_Snake_01_CA'
+[2024.05.21-23.22.38:309][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/T_Snake_01_NA': Can't find file.
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Props/Snake_01/T_Snake_01_NA': Can't find file.
+[2024.05.21-23.22.38:310][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Props/Snake_01/T_Snake_01_NA.T_Snake_01_NA'
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/MI_Cliff_L_01': Can't find file.
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/MI_Cliff_L_01': Can't find file.
+[2024.05.21-23.22.38:310][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/MI_Cliff_L_01.MI_Cliff_L_01'
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/SM_Cliff_L_01_A': Can't find file.
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/SM_Cliff_L_01_A': Can't find file.
+[2024.05.21-23.22.38:310][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/SM_Cliff_L_01_A.SM_Cliff_L_01_A'
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/SM_Cliff_L_01_B': Can't find file.
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/SM_Cliff_L_01_B': Can't find file.
+[2024.05.21-23.22.38:310][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/SM_Cliff_L_01_B.SM_Cliff_L_01_B'
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/T_Cliff_L_01_CA': Can't find file.
+[2024.05.21-23.22.38:310][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/T_Cliff_L_01_CA': Can't find file.
+[2024.05.21-23.22.38:310][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/T_Cliff_L_01_CA.T_Cliff_L_01_CA'
+[2024.05.21-23.22.38:312][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/T_Cliff_L_01_NA': Can't find file.
+[2024.05.21-23.22.38:312][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/T_Cliff_L_01_NA': Can't find file.
+[2024.05.21-23.22.38:312][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_L_01/T_Cliff_L_01_NA.T_Cliff_L_01_NA'
+[2024.05.21-23.22.38:312][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/MI_Cliff_M_01': Can't find file.
+[2024.05.21-23.22.38:312][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/MI_Cliff_M_01': Can't find file.
+[2024.05.21-23.22.38:312][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/MI_Cliff_M_01.MI_Cliff_M_01'
+[2024.05.21-23.22.38:312][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/SM_Cliff_M_01_A': Can't find file.
+[2024.05.21-23.22.38:312][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/SM_Cliff_M_01_A': Can't find file.
+[2024.05.21-23.22.38:312][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/SM_Cliff_M_01_A.SM_Cliff_M_01_A'
+[2024.05.21-23.22.38:312][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/SM_Cliff_M_01_B': Can't find file.
+[2024.05.21-23.22.38:313][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/SM_Cliff_M_01_B': Can't find file.
+[2024.05.21-23.22.38:313][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/SM_Cliff_M_01_B.SM_Cliff_M_01_B'
+[2024.05.21-23.22.38:313][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/T_Cliff_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:313][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/T_Cliff_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:313][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/T_Cliff_M_01_CA.T_Cliff_M_01_CA'
+[2024.05.21-23.22.38:313][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/T_Cliff_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:313][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/T_Cliff_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:313][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_01/T_Cliff_M_01_NA.T_Cliff_M_01_NA'
+[2024.05.21-23.22.38:313][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/MI_Cliff_M_02': Can't find file.
+[2024.05.21-23.22.38:314][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/MI_Cliff_M_02': Can't find file.
+[2024.05.21-23.22.38:314][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/MI_Cliff_M_02.MI_Cliff_M_02'
+[2024.05.21-23.22.38:314][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_A': Can't find file.
+[2024.05.21-23.22.38:314][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_A': Can't find file.
+[2024.05.21-23.22.38:314][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_A.SM_Cliff_M_02_A'
+[2024.05.21-23.22.38:314][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_B': Can't find file.
+[2024.05.21-23.22.38:314][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_B': Can't find file.
+[2024.05.21-23.22.38:314][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_B.SM_Cliff_M_02_B'
+[2024.05.21-23.22.38:314][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_C': Can't find file.
+[2024.05.21-23.22.38:314][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_C': Can't find file.
+[2024.05.21-23.22.38:314][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/SM_Cliff_M_02_C.SM_Cliff_M_02_C'
+[2024.05.21-23.22.38:315][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/T_Cliff_M_02_CA': Can't find file.
+[2024.05.21-23.22.38:315][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/T_Cliff_M_02_CA': Can't find file.
+[2024.05.21-23.22.38:315][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/T_Cliff_M_02_CA.T_Cliff_M_02_CA'
+[2024.05.21-23.22.38:315][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/T_Cliff_M_02_NA': Can't find file.
+[2024.05.21-23.22.38:315][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/T_Cliff_M_02_NA': Can't find file.
+[2024.05.21-23.22.38:315][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_02/T_Cliff_M_02_NA.T_Cliff_M_02_NA'
+[2024.05.21-23.22.38:315][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/MI_Cliff_M_03': Can't find file.
+[2024.05.21-23.22.38:315][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/MI_Cliff_M_03': Can't find file.
+[2024.05.21-23.22.38:315][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/MI_Cliff_M_03.MI_Cliff_M_03'
+[2024.05.21-23.22.38:316][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/SM_Cliff_M_03': Can't find file.
+[2024.05.21-23.22.38:316][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/SM_Cliff_M_03': Can't find file.
+[2024.05.21-23.22.38:316][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/SM_Cliff_M_03.SM_Cliff_M_03'
+[2024.05.21-23.22.38:316][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/T_Cliff_M_03_CA': Can't find file.
+[2024.05.21-23.22.38:316][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/T_Cliff_M_03_CA': Can't find file.
+[2024.05.21-23.22.38:316][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/T_Cliff_M_03_CA.T_Cliff_M_03_CA'
+[2024.05.21-23.22.38:316][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/T_Cliff_M_03_NA': Can't find file.
+[2024.05.21-23.22.38:316][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/T_Cliff_M_03_NA': Can't find file.
+[2024.05.21-23.22.38:316][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Cliff_M_03/T_Cliff_M_03_NA.T_Cliff_M_03_NA'
+[2024.05.21-23.22.38:316][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_01': Can't find file.
+[2024.05.21-23.22.38:317][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_01': Can't find file.
+[2024.05.21-23.22.38:317][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_01.MI_Ridge_Dirt_01'
+[2024.05.21-23.22.38:317][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_01_NoOverlay': Can't find file.
+[2024.05.21-23.22.38:317][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_01_NoOverlay': Can't find file.
+[2024.05.21-23.22.38:317][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_01_NoOverlay.MI_Ridge_Dirt_01_NoOverlay'
+[2024.05.21-23.22.38:317][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_02': Can't find file.
+[2024.05.21-23.22.38:317][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_02': Can't find file.
+[2024.05.21-23.22.38:317][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/MI_Ridge_Dirt_02.MI_Ridge_Dirt_02'
+[2024.05.21-23.22.38:317][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_A': Can't find file.
+[2024.05.21-23.22.38:317][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_A': Can't find file.
+[2024.05.21-23.22.38:317][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_A.SM_Ridge_Dirt_01_A'
+[2024.05.21-23.22.38:318][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_A_NoOverlay': Can't find file.
+[2024.05.21-23.22.38:318][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_A_NoOverlay': Can't find file.
+[2024.05.21-23.22.38:318][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_A_NoOverlay.SM_Ridge_Dirt_01_A_NoOverlay'
+[2024.05.21-23.22.38:318][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_B': Can't find file.
+[2024.05.21-23.22.38:318][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_B': Can't find file.
+[2024.05.21-23.22.38:318][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_B.SM_Ridge_Dirt_01_B'
+[2024.05.21-23.22.38:318][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_B_NoOverlay': Can't find file.
+[2024.05.21-23.22.38:318][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_B_NoOverlay': Can't find file.
+[2024.05.21-23.22.38:318][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_01_B_NoOverlay.SM_Ridge_Dirt_01_B_NoOverlay'
+[2024.05.21-23.22.38:318][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_02_A': Can't find file.
+[2024.05.21-23.22.38:319][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_02_A': Can't find file.
+[2024.05.21-23.22.38:319][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_02_A.SM_Ridge_Dirt_02_A'
+[2024.05.21-23.22.38:319][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_02_B': Can't find file.
+[2024.05.21-23.22.38:319][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_02_B': Can't find file.
+[2024.05.21-23.22.38:319][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/SM_Ridge_Dirt_02_B.SM_Ridge_Dirt_02_B'
+[2024.05.21-23.22.38:319][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_01_CA': Can't find file.
+[2024.05.21-23.22.38:319][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_01_CA': Can't find file.
+[2024.05.21-23.22.38:319][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_01_CA.T_Ridge_Dirt_01_CA'
+[2024.05.21-23.22.38:319][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_01_NA': Can't find file.
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_01_NA': Can't find file.
+[2024.05.21-23.22.38:320][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_01_NA.T_Ridge_Dirt_01_NA'
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_02_CA': Can't find file.
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_02_CA': Can't find file.
+[2024.05.21-23.22.38:320][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Dirt_01/T_Ridge_Dirt_02_CA.T_Ridge_Dirt_02_CA'
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/MI_Ridge_Rock_01': Can't find file.
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/MI_Ridge_Rock_01': Can't find file.
+[2024.05.21-23.22.38:320][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/MI_Ridge_Rock_01.MI_Ridge_Rock_01'
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/SM_Ridge_Rock_01': Can't find file.
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/SM_Ridge_Rock_01': Can't find file.
+[2024.05.21-23.22.38:320][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/SM_Ridge_Rock_01.SM_Ridge_Rock_01'
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/T_Ridge_Rock_01_CA': Can't find file.
+[2024.05.21-23.22.38:320][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/T_Ridge_Rock_01_CA': Can't find file.
+[2024.05.21-23.22.38:320][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/T_Ridge_Rock_01_CA.T_Ridge_Rock_01_CA'
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/T_Ridge_Rock_01_NA': Can't find file.
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/T_Ridge_Rock_01_NA': Can't find file.
+[2024.05.21-23.22.38:322][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_01/T_Ridge_Rock_01_NA.T_Ridge_Rock_01_NA'
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/MI_Ridge_Rock_02': Can't find file.
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/MI_Ridge_Rock_02': Can't find file.
+[2024.05.21-23.22.38:322][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/MI_Ridge_Rock_02.MI_Ridge_Rock_02'
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/SM_Ridge_Rock_02': Can't find file.
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/SM_Ridge_Rock_02': Can't find file.
+[2024.05.21-23.22.38:322][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/SM_Ridge_Rock_02.SM_Ridge_Rock_02'
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/T_Ridge_Rock_02_CA': Can't find file.
+[2024.05.21-23.22.38:322][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/T_Ridge_Rock_02_CA': Can't find file.
+[2024.05.21-23.22.38:322][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/T_Ridge_Rock_02_CA.T_Ridge_Rock_02_CA'
+[2024.05.21-23.22.38:323][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/T_Ridge_Rock_02_NA': Can't find file.
+[2024.05.21-23.22.38:323][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/T_Ridge_Rock_02_NA': Can't find file.
+[2024.05.21-23.22.38:323][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Ridge_Rock_02/T_Ridge_Rock_02_NA.T_Ridge_Rock_02_NA'
+[2024.05.21-23.22.38:323][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/FT_Rock_M_01': Can't find file.
+[2024.05.21-23.22.38:323][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/FT_Rock_M_01': Can't find file.
+[2024.05.21-23.22.38:323][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/FT_Rock_M_01.FT_Rock_M_01'
+[2024.05.21-23.22.38:323][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/MI_Rock_M_01': Can't find file.
+[2024.05.21-23.22.38:323][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/MI_Rock_M_01': Can't find file.
+[2024.05.21-23.22.38:323][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/MI_Rock_M_01.MI_Rock_M_01'
+[2024.05.21-23.22.38:324][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/SM_Rock_M_01': Can't find file.
+[2024.05.21-23.22.38:324][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/SM_Rock_M_01': Can't find file.
+[2024.05.21-23.22.38:324][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/SM_Rock_M_01.SM_Rock_M_01'
+[2024.05.21-23.22.38:324][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/T_Rock_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:324][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/T_Rock_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:324][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/T_Rock_M_01_CA.T_Rock_M_01_CA'
+[2024.05.21-23.22.38:324][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/T_Rock_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:324][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/T_Rock_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:324][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_01/T_Rock_M_01_NA.T_Rock_M_01_NA'
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/FT_Rock_M_02': Can't find file.
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/FT_Rock_M_02': Can't find file.
+[2024.05.21-23.22.38:325][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/FT_Rock_M_02.FT_Rock_M_02'
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/MI_Rock_M_02': Can't find file.
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/MI_Rock_M_02': Can't find file.
+[2024.05.21-23.22.38:325][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/MI_Rock_M_02.MI_Rock_M_02'
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/SM_Rock_M_02': Can't find file.
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/SM_Rock_M_02': Can't find file.
+[2024.05.21-23.22.38:325][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/SM_Rock_M_02.SM_Rock_M_02'
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/T_Rock_M_02_NA': Can't find file.
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/T_Rock_M_02_NA': Can't find file.
+[2024.05.21-23.22.38:325][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/T_Rock_M_02_NA.T_Rock_M_02_NA'
+[2024.05.21-23.22.38:325][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/T_Rock_M_02_CA': Can't find file.
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/T_Rock_M_02_CA': Can't find file.
+[2024.05.21-23.22.38:326][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_02/T_Rock_M_02_CA.T_Rock_M_02_CA'
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/FT_Rock_M_03': Can't find file.
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/FT_Rock_M_03': Can't find file.
+[2024.05.21-23.22.38:326][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/FT_Rock_M_03.FT_Rock_M_03'
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/MI_Rock_M_03': Can't find file.
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/MI_Rock_M_03': Can't find file.
+[2024.05.21-23.22.38:326][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/MI_Rock_M_03.MI_Rock_M_03'
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/SM_Rock_M_03': Can't find file.
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/SM_Rock_M_03': Can't find file.
+[2024.05.21-23.22.38:326][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/SM_Rock_M_03.SM_Rock_M_03'
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/T_Rock_M_03_NA': Can't find file.
+[2024.05.21-23.22.38:326][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/T_Rock_M_03_NA': Can't find file.
+[2024.05.21-23.22.38:326][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/T_Rock_M_03_NA.T_Rock_M_03_NA'
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/T_Rock_M_03_CA': Can't find file.
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/T_Rock_M_03_CA': Can't find file.
+[2024.05.21-23.22.38:327][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_M_03/T_Rock_M_03_CA.T_Rock_M_03_CA'
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/FT_Rock_S_01': Can't find file.
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/FT_Rock_S_01': Can't find file.
+[2024.05.21-23.22.38:327][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/FT_Rock_S_01.FT_Rock_S_01'
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/MI_Rock_S_01': Can't find file.
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/MI_Rock_S_01': Can't find file.
+[2024.05.21-23.22.38:327][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/MI_Rock_S_01.MI_Rock_S_01'
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/SM_Rock_S_01': Can't find file.
+[2024.05.21-23.22.38:327][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/SM_Rock_S_01': Can't find file.
+[2024.05.21-23.22.38:327][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/SM_Rock_S_01.SM_Rock_S_01'
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/T_Rock_S_01_CA': Can't find file.
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/T_Rock_S_01_CA': Can't find file.
+[2024.05.21-23.22.38:328][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/T_Rock_S_01_CA.T_Rock_S_01_CA'
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/T_Rock_S_01_NA': Can't find file.
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/T_Rock_S_01_NA': Can't find file.
+[2024.05.21-23.22.38:328][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_01/T_Rock_S_01_NA.T_Rock_S_01_NA'
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/FT_Rock_S_02': Can't find file.
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/FT_Rock_S_02': Can't find file.
+[2024.05.21-23.22.38:328][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/FT_Rock_S_02.FT_Rock_S_02'
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/MI_Rock_S_02': Can't find file.
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/MI_Rock_S_02': Can't find file.
+[2024.05.21-23.22.38:328][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/MI_Rock_S_02.MI_Rock_S_02'
+[2024.05.21-23.22.38:328][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/SM_Rock_S_02': Can't find file.
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/SM_Rock_S_02': Can't find file.
+[2024.05.21-23.22.38:329][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/SM_Rock_S_02.SM_Rock_S_02'
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/T_Rock_S_02_CA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/T_Rock_S_02_CA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/T_Rock_S_02_CA.T_Rock_S_02_CA'
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/T_Rock_S_02_NA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/T_Rock_S_02_NA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/Rock_S_02/T_Rock_S_02_NA.T_Rock_S_02_NA'
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_Cliff_Tile_CA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_Cliff_Tile_CA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_Cliff_Tile_CA.T_Cliff_Tile_CA'
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_DetailTexture_01_NA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_DetailTexture_01_NA': Can't find file.
+[2024.05.21-23.22.38:329][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_DetailTexture_01_NA.T_DetailTexture_01_NA'
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_RockStains_CA': Can't find file.
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_RockStains_CA': Can't find file.
+[2024.05.21-23.22.38:331][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_RockStains_CA.T_RockStains_CA'
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_Cliff_Tile_NA': Can't find file.
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_Cliff_Tile_NA': Can't find file.
+[2024.05.21-23.22.38:331][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Rocks/_SharedTextures/T_Cliff_Tile_NA.T_Cliff_Tile_NA'
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_01': Can't find file.
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_01': Can't find file.
+[2024.05.21-23.22.38:331][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_01.FT_GrassTree_01'
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_02': Can't find file.
+[2024.05.21-23.22.38:331][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_02': Can't find file.
+[2024.05.21-23.22.38:331][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_02.FT_GrassTree_02'
+[2024.05.21-23.22.38:332][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_03': Can't find file.
+[2024.05.21-23.22.38:332][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_03': Can't find file.
+[2024.05.21-23.22.38:332][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_03.FT_GrassTree_03'
+[2024.05.21-23.22.38:332][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_04': Can't find file.
+[2024.05.21-23.22.38:332][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_04': Can't find file.
+[2024.05.21-23.22.38:332][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/FT_GrassTree_04.FT_GrassTree_04'
+[2024.05.21-23.22.38:332][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01': Can't find file.
+[2024.05.21-23.22.38:332][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01': Can't find file.
+[2024.05.21-23.22.38:332][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01.MI_GrassTree_01'
+[2024.05.21-23.22.38:332][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01_Base': Can't find file.
+[2024.05.21-23.22.38:333][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01_Base': Can't find file.
+[2024.05.21-23.22.38:333][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01_Base.MI_GrassTree_01_Base'
+[2024.05.21-23.22.38:333][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:333][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:333][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_01_Billboard.MI_GrassTree_01_Billboard'
+[2024.05.21-23.22.38:333][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02': Can't find file.
+[2024.05.21-23.22.38:333][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02': Can't find file.
+[2024.05.21-23.22.38:333][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02.MI_GrassTree_02'
+[2024.05.21-23.22.38:333][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02_Base': Can't find file.
+[2024.05.21-23.22.38:333][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02_Base': Can't find file.
+[2024.05.21-23.22.38:333][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02_Base.MI_GrassTree_02_Base'
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02_Billboard': Can't find file.
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02_Billboard': Can't find file.
+[2024.05.21-23.22.38:334][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_02_Billboard.MI_GrassTree_02_Billboard'
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03': Can't find file.
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03': Can't find file.
+[2024.05.21-23.22.38:334][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03.MI_GrassTree_03'
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03_Base': Can't find file.
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03_Base': Can't find file.
+[2024.05.21-23.22.38:334][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03_Base.MI_GrassTree_03_Base'
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03_Billboard': Can't find file.
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03_Billboard': Can't find file.
+[2024.05.21-23.22.38:334][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_03_Billboard.MI_GrassTree_03_Billboard'
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_04': Can't find file.
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_04': Can't find file.
+[2024.05.21-23.22.38:334][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_04.MI_GrassTree_04'
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_04_Billboard': Can't find file.
+[2024.05.21-23.22.38:334][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_04_Billboard': Can't find file.
+[2024.05.21-23.22.38:334][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/MI_GrassTree_04_Billboard.MI_GrassTree_04_Billboard'
+[2024.05.21-23.22.38:335][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_01': Can't find file.
+[2024.05.21-23.22.38:335][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_01': Can't find file.
+[2024.05.21-23.22.38:335][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_01.SM_GrassTree_01'
+[2024.05.21-23.22.38:335][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_02': Can't find file.
+[2024.05.21-23.22.38:335][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_02': Can't find file.
+[2024.05.21-23.22.38:335][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_02.SM_GrassTree_02'
+[2024.05.21-23.22.38:335][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_03': Can't find file.
+[2024.05.21-23.22.38:335][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_03': Can't find file.
+[2024.05.21-23.22.38:335][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_03.SM_GrassTree_03'
+[2024.05.21-23.22.38:335][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_04': Can't find file.
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_04': Can't find file.
+[2024.05.21-23.22.38:336][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/SM_GrassTree_04.SM_GrassTree_04'
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_Billboard_CA.T_GrassTree_01_Billboard_CA'
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_Billboard_NA.T_GrassTree_01_Billboard_NA'
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_CA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_CA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_CA.T_GrassTree_01_CA'
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_NA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_NA': Can't find file.
+[2024.05.21-23.22.38:336][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_01_NA.T_GrassTree_01_NA'
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_02_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_02_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_02_Billboard_CA.T_GrassTree_02_Billboard_CA'
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_02_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_02_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_02_Billboard_NA.T_GrassTree_02_Billboard_NA'
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_03_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_03_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_03_Billboard_CA.T_GrassTree_03_Billboard_CA'
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_03_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_03_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_03_Billboard_NA.T_GrassTree_03_Billboard_NA'
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_04_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_04_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:337][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_04_Billboard_CA.T_GrassTree_04_Billboard_CA'
+[2024.05.21-23.22.38:339][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_04_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:339][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_04_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:339][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_04_Billboard_NA.T_GrassTree_04_Billboard_NA'
+[2024.05.21-23.22.38:339][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_Base_01_CA': Can't find file.
+[2024.05.21-23.22.38:339][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_Base_01_CA': Can't find file.
+[2024.05.21-23.22.38:339][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_Base_01_CA.T_GrassTree_Base_01_CA'
+[2024.05.21-23.22.38:339][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_Base_01_NA': Can't find file.
+[2024.05.21-23.22.38:339][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_Base_01_NA': Can't find file.
+[2024.05.21-23.22.38:339][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/GrassTree_01/T_GrassTree_Base_01_NA.T_GrassTree_Base_01_NA'
+[2024.05.21-23.22.38:339][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/FT_Log_L_01': Can't find file.
+[2024.05.21-23.22.38:340][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/FT_Log_L_01': Can't find file.
+[2024.05.21-23.22.38:340][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/FT_Log_L_01.FT_Log_L_01'
+[2024.05.21-23.22.38:340][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/MI_Log_L_01': Can't find file.
+[2024.05.21-23.22.38:340][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/MI_Log_L_01': Can't find file.
+[2024.05.21-23.22.38:340][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/MI_Log_L_01.MI_Log_L_01'
+[2024.05.21-23.22.38:340][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/SM_Log_L_01': Can't find file.
+[2024.05.21-23.22.38:340][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/SM_Log_L_01': Can't find file.
+[2024.05.21-23.22.38:340][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/SM_Log_L_01.SM_Log_L_01'
+[2024.05.21-23.22.38:340][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/T_Log_L_01_CA': Can't find file.
+[2024.05.21-23.22.38:340][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/T_Log_L_01_CA': Can't find file.
+[2024.05.21-23.22.38:340][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/T_Log_L_01_CA.T_Log_L_01_CA'
+[2024.05.21-23.22.38:341][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/T_Log_L_01_NA': Can't find file.
+[2024.05.21-23.22.38:341][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/T_Log_L_01_NA': Can't find file.
+[2024.05.21-23.22.38:341][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_L_01/T_Log_L_01_NA.T_Log_L_01_NA'
+[2024.05.21-23.22.38:341][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/FT_Log_M_01': Can't find file.
+[2024.05.21-23.22.38:342][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/FT_Log_M_01': Can't find file.
+[2024.05.21-23.22.38:342][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/FT_Log_M_01.FT_Log_M_01'
+[2024.05.21-23.22.38:342][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/MI_Log_M_01': Can't find file.
+[2024.05.21-23.22.38:342][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/MI_Log_M_01': Can't find file.
+[2024.05.21-23.22.38:342][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/MI_Log_M_01.MI_Log_M_01'
+[2024.05.21-23.22.38:342][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/SM_Log_M_01': Can't find file.
+[2024.05.21-23.22.38:342][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/SM_Log_M_01': Can't find file.
+[2024.05.21-23.22.38:342][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/SM_Log_M_01.SM_Log_M_01'
+[2024.05.21-23.22.38:342][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/T_Log_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:342][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/T_Log_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:342][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/T_Log_M_01_CA.T_Log_M_01_CA'
+[2024.05.21-23.22.38:343][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/T_Log_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:343][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/T_Log_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:343][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_M_01/T_Log_M_01_NA.T_Log_M_01_NA'
+[2024.05.21-23.22.38:343][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/FT_Log_S_01': Can't find file.
+[2024.05.21-23.22.38:343][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/FT_Log_S_01': Can't find file.
+[2024.05.21-23.22.38:343][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/FT_Log_S_01.FT_Log_S_01'
+[2024.05.21-23.22.38:343][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/MI_Log_S_01': Can't find file.
+[2024.05.21-23.22.38:343][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/MI_Log_S_01': Can't find file.
+[2024.05.21-23.22.38:344][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/MI_Log_S_01.MI_Log_S_01'
+[2024.05.21-23.22.38:344][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/SM_Log_S_01': Can't find file.
+[2024.05.21-23.22.38:344][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/SM_Log_S_01': Can't find file.
+[2024.05.21-23.22.38:344][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/SM_Log_S_01.SM_Log_S_01'
+[2024.05.21-23.22.38:344][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/T_Log_S_01_CA': Can't find file.
+[2024.05.21-23.22.38:344][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/T_Log_S_01_CA': Can't find file.
+[2024.05.21-23.22.38:344][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/T_Log_S_01_CA.T_Log_S_01_CA'
+[2024.05.21-23.22.38:344][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/T_Log_S_01_NA': Can't find file.
+[2024.05.21-23.22.38:344][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/T_Log_S_01_NA': Can't find file.
+[2024.05.21-23.22.38:344][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_01/T_Log_S_01_NA.T_Log_S_01_NA'
+[2024.05.21-23.22.38:345][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/FT_Log_S_02': Can't find file.
+[2024.05.21-23.22.38:345][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/FT_Log_S_02': Can't find file.
+[2024.05.21-23.22.38:345][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/FT_Log_S_02.FT_Log_S_02'
+[2024.05.21-23.22.38:345][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/MI_Log_S_02': Can't find file.
+[2024.05.21-23.22.38:345][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/MI_Log_S_02': Can't find file.
+[2024.05.21-23.22.38:345][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/MI_Log_S_02.MI_Log_S_02'
+[2024.05.21-23.22.38:345][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/SM_Log_S_02': Can't find file.
+[2024.05.21-23.22.38:345][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/SM_Log_S_02': Can't find file.
+[2024.05.21-23.22.38:345][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/SM_Log_S_02.SM_Log_S_02'
+[2024.05.21-23.22.38:345][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/T_Log_S_02_CA': Can't find file.
+[2024.05.21-23.22.38:346][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/T_Log_S_02_CA': Can't find file.
+[2024.05.21-23.22.38:346][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/T_Log_S_02_CA.T_Log_S_02_CA'
+[2024.05.21-23.22.38:346][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/T_Log_S_02_NA': Can't find file.
+[2024.05.21-23.22.38:346][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/T_Log_S_02_NA': Can't find file.
+[2024.05.21-23.22.38:346][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Log_S_02/T_Log_S_02_NA.T_Log_S_02_NA'
+[2024.05.21-23.22.38:346][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/MI_Roots_01': Can't find file.
+[2024.05.21-23.22.38:346][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/MI_Roots_01': Can't find file.
+[2024.05.21-23.22.38:346][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/MI_Roots_01.MI_Roots_01'
+[2024.05.21-23.22.38:346][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/SM_Roots_01': Can't find file.
+[2024.05.21-23.22.38:346][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/SM_Roots_01': Can't find file.
+[2024.05.21-23.22.38:346][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/SM_Roots_01.SM_Roots_01'
+[2024.05.21-23.22.38:347][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/T_Roots_01_CA': Can't find file.
+[2024.05.21-23.22.38:347][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/T_Roots_01_CA': Can't find file.
+[2024.05.21-23.22.38:347][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/T_Roots_01_CA.T_Roots_01_CA'
+[2024.05.21-23.22.38:347][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/T_Roots_01_NA': Can't find file.
+[2024.05.21-23.22.38:347][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/T_Roots_01_NA': Can't find file.
+[2024.05.21-23.22.38:347][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Roots_01/T_Roots_01_NA.T_Roots_01_NA'
+[2024.05.21-23.22.38:347][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/FT_Tree_L_01': Can't find file.
+[2024.05.21-23.22.38:347][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/FT_Tree_L_01': Can't find file.
+[2024.05.21-23.22.38:347][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/FT_Tree_L_01.FT_Tree_L_01'
+[2024.05.21-23.22.38:348][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/FT_Tree_L_01_Large': Can't find file.
+[2024.05.21-23.22.38:348][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/FT_Tree_L_01_Large': Can't find file.
+[2024.05.21-23.22.38:348][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/FT_Tree_L_01_Large.FT_Tree_L_01_Large'
+[2024.05.21-23.22.38:348][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Base': Can't find file.
+[2024.05.21-23.22.38:348][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Base': Can't find file.
+[2024.05.21-23.22.38:348][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Base.MI_Tree_L_01_Base'
+[2024.05.21-23.22.38:348][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:348][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:348][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Billboard.MI_Tree_L_01_Billboard'
+[2024.05.21-23.22.38:348][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Leaves': Can't find file.
+[2024.05.21-23.22.38:349][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Leaves': Can't find file.
+[2024.05.21-23.22.38:349][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Leaves.MI_Tree_L_01_Leaves'
+[2024.05.21-23.22.38:349][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Tile': Can't find file.
+[2024.05.21-23.22.38:349][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Tile': Can't find file.
+[2024.05.21-23.22.38:349][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/MI_Tree_L_01_Tile.MI_Tree_L_01_Tile'
+[2024.05.21-23.22.38:349][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/SM_Tree_L_01': Can't find file.
+[2024.05.21-23.22.38:349][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/SM_Tree_L_01': Can't find file.
+[2024.05.21-23.22.38:349][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/SM_Tree_L_01.SM_Tree_L_01'
+[2024.05.21-23.22.38:349][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:349][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:349][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_Billboard_CA.T_Tree_L_01_Billboard_CA'
+[2024.05.21-23.22.38:350][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:350][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:350][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_Billboard_NA.T_Tree_L_01_Billboard_NA'
+[2024.05.21-23.22.38:350][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_NA': Can't find file.
+[2024.05.21-23.22.38:350][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_NA': Can't find file.
+[2024.05.21-23.22.38:350][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_NA.T_Tree_L_01_NA'
+[2024.05.21-23.22.38:350][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_CA': Can't find file.
+[2024.05.21-23.22.38:350][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_CA': Can't find file.
+[2024.05.21-23.22.38:350][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_L_01/T_Tree_L_01_CA.T_Tree_L_01_CA'
+[2024.05.21-23.22.38:350][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/FT_Tree_M_01': Can't find file.
+[2024.05.21-23.22.38:351][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/FT_Tree_M_01': Can't find file.
+[2024.05.21-23.22.38:351][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/FT_Tree_M_01.FT_Tree_M_01'
+[2024.05.21-23.22.38:351][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Base': Can't find file.
+[2024.05.21-23.22.38:351][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Base': Can't find file.
+[2024.05.21-23.22.38:351][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Base.MI_Tree_M_01_Base'
+[2024.05.21-23.22.38:351][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:351][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:351][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Billboard.MI_Tree_M_01_Billboard'
+[2024.05.21-23.22.38:351][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Leaves': Can't find file.
+[2024.05.21-23.22.38:351][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Leaves': Can't find file.
+[2024.05.21-23.22.38:351][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Leaves.MI_Tree_M_01_Leaves'
+[2024.05.21-23.22.38:352][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Tile': Can't find file.
+[2024.05.21-23.22.38:352][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Tile': Can't find file.
+[2024.05.21-23.22.38:352][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/MI_Tree_M_01_Tile.MI_Tree_M_01_Tile'
+[2024.05.21-23.22.38:352][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/SM_Tree_M_01': Can't find file.
+[2024.05.21-23.22.38:352][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/SM_Tree_M_01': Can't find file.
+[2024.05.21-23.22.38:352][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/SM_Tree_M_01.SM_Tree_M_01'
+[2024.05.21-23.22.38:352][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:352][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:352][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_Billboard_CA.T_Tree_M_01_Billboard_CA'
+[2024.05.21-23.22.38:353][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:353][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:353][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_Billboard_NA.T_Tree_M_01_Billboard_NA'
+[2024.05.21-23.22.38:353][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:353][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_CA': Can't find file.
+[2024.05.21-23.22.38:353][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_CA.T_Tree_M_01_CA'
+[2024.05.21-23.22.38:353][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:353][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_NA': Can't find file.
+[2024.05.21-23.22.38:353][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_01/T_Tree_M_01_NA.T_Tree_M_01_NA'
+[2024.05.21-23.22.38:353][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/FT_Tree_M_02': Can't find file.
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/FT_Tree_M_02': Can't find file.
+[2024.05.21-23.22.38:354][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/FT_Tree_M_02.FT_Tree_M_02'
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Base': Can't find file.
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Base': Can't find file.
+[2024.05.21-23.22.38:354][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Base.MI_Tree_M_02_Base'
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Billboard': Can't find file.
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Billboard': Can't find file.
+[2024.05.21-23.22.38:354][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Billboard.MI_Tree_M_02_Billboard'
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Leaves': Can't find file.
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Leaves': Can't find file.
+[2024.05.21-23.22.38:354][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Leaves.MI_Tree_M_02_Leaves'
+[2024.05.21-23.22.38:354][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Tile': Can't find file.
+[2024.05.21-23.22.38:356][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Tile': Can't find file.
+[2024.05.21-23.22.38:356][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/MI_Tree_M_02_Tile.MI_Tree_M_02_Tile'
+[2024.05.21-23.22.38:356][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/SM_Tree_M_02': Can't find file.
+[2024.05.21-23.22.38:356][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/SM_Tree_M_02': Can't find file.
+[2024.05.21-23.22.38:356][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/SM_Tree_M_02.SM_Tree_M_02'
+[2024.05.21-23.22.38:356][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:356][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:356][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_Billboard_CA.T_Tree_M_02_Billboard_CA'
+[2024.05.21-23.22.38:357][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:357][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:357][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_Billboard_NA.T_Tree_M_02_Billboard_NA'
+[2024.05.21-23.22.38:357][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_CA': Can't find file.
+[2024.05.21-23.22.38:357][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_CA': Can't find file.
+[2024.05.21-23.22.38:357][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_CA.T_Tree_M_02_CA'
+[2024.05.21-23.22.38:357][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_NA': Can't find file.
+[2024.05.21-23.22.38:357][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_NA': Can't find file.
+[2024.05.21-23.22.38:357][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_02/T_Tree_M_02_NA.T_Tree_M_02_NA'
+[2024.05.21-23.22.38:358][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/FT_Tree_M_03': Can't find file.
+[2024.05.21-23.22.38:358][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/FT_Tree_M_03': Can't find file.
+[2024.05.21-23.22.38:358][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/FT_Tree_M_03.FT_Tree_M_03'
+[2024.05.21-23.22.38:358][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/FT_Tree_M_03_Small': Can't find file.
+[2024.05.21-23.22.38:358][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/FT_Tree_M_03_Small': Can't find file.
+[2024.05.21-23.22.38:358][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/FT_Tree_M_03_Small.FT_Tree_M_03_Small'
+[2024.05.21-23.22.38:358][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Base': Can't find file.
+[2024.05.21-23.22.38:358][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Base': Can't find file.
+[2024.05.21-23.22.38:358][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Base.MI_Tree_M_03_Base'
+[2024.05.21-23.22.38:358][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Billboard': Can't find file.
+[2024.05.21-23.22.38:359][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Billboard': Can't find file.
+[2024.05.21-23.22.38:359][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Billboard.MI_Tree_M_03_Billboard'
+[2024.05.21-23.22.38:359][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Leaves': Can't find file.
+[2024.05.21-23.22.38:359][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Leaves': Can't find file.
+[2024.05.21-23.22.38:359][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Leaves.MI_Tree_M_03_Leaves'
+[2024.05.21-23.22.38:359][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Tile': Can't find file.
+[2024.05.21-23.22.38:359][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Tile': Can't find file.
+[2024.05.21-23.22.38:359][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/MI_Tree_M_03_Tile.MI_Tree_M_03_Tile'
+[2024.05.21-23.22.38:359][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/SM_Tree_M_03': Can't find file.
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/SM_Tree_M_03': Can't find file.
+[2024.05.21-23.22.38:360][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/SM_Tree_M_03.SM_Tree_M_03'
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_Billboard_CA.T_Tree_M_03_Billboard_CA'
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_Billboard_NA.T_Tree_M_03_Billboard_NA'
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_CA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_CA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_CA.T_Tree_M_03_CA'
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_NA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_NA': Can't find file.
+[2024.05.21-23.22.38:360][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_03/T_Tree_M_03_NA.T_Tree_M_03_NA'
+[2024.05.21-23.22.38:360][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/FT_Tree_M_04': Can't find file.
+[2024.05.21-23.22.38:361][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/FT_Tree_M_04': Can't find file.
+[2024.05.21-23.22.38:361][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/FT_Tree_M_04.FT_Tree_M_04'
+[2024.05.21-23.22.38:361][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Base': Can't find file.
+[2024.05.21-23.22.38:361][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Base': Can't find file.
+[2024.05.21-23.22.38:361][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Base.MI_Tree_M_04_Base'
+[2024.05.21-23.22.38:361][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Billboard': Can't find file.
+[2024.05.21-23.22.38:361][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Billboard': Can't find file.
+[2024.05.21-23.22.38:361][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Billboard.MI_Tree_M_04_Billboard'
+[2024.05.21-23.22.38:361][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Leaves': Can't find file.
+[2024.05.21-23.22.38:361][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Leaves': Can't find file.
+[2024.05.21-23.22.38:361][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Leaves.MI_Tree_M_04_Leaves'
+[2024.05.21-23.22.38:363][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Tile': Can't find file.
+[2024.05.21-23.22.38:363][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Tile': Can't find file.
+[2024.05.21-23.22.38:363][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/MI_Tree_M_04_Tile.MI_Tree_M_04_Tile'
+[2024.05.21-23.22.38:363][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/SM_Tree_M_04': Can't find file.
+[2024.05.21-23.22.38:363][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/SM_Tree_M_04': Can't find file.
+[2024.05.21-23.22.38:363][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/SM_Tree_M_04.SM_Tree_M_04'
+[2024.05.21-23.22.38:363][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:363][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:363][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_Billboard_CA.T_Tree_M_04_Billboard_CA'
+[2024.05.21-23.22.38:364][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:364][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:364][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_Billboard_NA.T_Tree_M_04_Billboard_NA'
+[2024.05.21-23.22.38:364][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_CA': Can't find file.
+[2024.05.21-23.22.38:364][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_CA': Can't find file.
+[2024.05.21-23.22.38:364][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_CA.T_Tree_M_04_CA'
+[2024.05.21-23.22.38:364][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_NA': Can't find file.
+[2024.05.21-23.22.38:364][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_NA': Can't find file.
+[2024.05.21-23.22.38:364][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_M_04/T_Tree_M_04_NA.T_Tree_M_04_NA'
+[2024.05.21-23.22.38:365][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/FT_Tree_S_01': Can't find file.
+[2024.05.21-23.22.38:365][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/FT_Tree_S_01': Can't find file.
+[2024.05.21-23.22.38:365][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/FT_Tree_S_01.FT_Tree_S_01'
+[2024.05.21-23.22.38:365][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/FT_Tree_S_01_Small': Can't find file.
+[2024.05.21-23.22.38:365][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/FT_Tree_S_01_Small': Can't find file.
+[2024.05.21-23.22.38:365][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/FT_Tree_S_01_Small.FT_Tree_S_01_Small'
+[2024.05.21-23.22.38:365][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Base': Can't find file.
+[2024.05.21-23.22.38:365][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Base': Can't find file.
+[2024.05.21-23.22.38:365][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Base.MI_Tree_S_01_Base'
+[2024.05.21-23.22.38:365][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:366][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Billboard': Can't find file.
+[2024.05.21-23.22.38:366][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Billboard.MI_Tree_S_01_Billboard'
+[2024.05.21-23.22.38:366][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Leaves': Can't find file.
+[2024.05.21-23.22.38:366][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Leaves': Can't find file.
+[2024.05.21-23.22.38:366][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Leaves.MI_Tree_S_01_Leaves'
+[2024.05.21-23.22.38:366][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Tile': Can't find file.
+[2024.05.21-23.22.38:366][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Tile': Can't find file.
+[2024.05.21-23.22.38:366][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/MI_Tree_S_01_Tile.MI_Tree_S_01_Tile'
+[2024.05.21-23.22.38:366][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/SM_Tree_S_01': Can't find file.
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/SM_Tree_S_01': Can't find file.
+[2024.05.21-23.22.38:367][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/SM_Tree_S_01.SM_Tree_S_01'
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_Billboard_CA': Can't find file.
+[2024.05.21-23.22.38:367][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_Billboard_CA.T_Tree_S_01_Billboard_CA'
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_Billboard_NA': Can't find file.
+[2024.05.21-23.22.38:367][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_Billboard_NA.T_Tree_S_01_Billboard_NA'
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_CA': Can't find file.
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_CA': Can't find file.
+[2024.05.21-23.22.38:367][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_CA.T_Tree_S_01_CA'
+[2024.05.21-23.22.38:367][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_NA': Can't find file.
+[2024.05.21-23.22.38:368][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_NA': Can't find file.
+[2024.05.21-23.22.38:368][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/Tree_S_01/T_Tree_S_01_NA.T_Tree_S_01_NA'
+[2024.05.21-23.22.38:368][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_01_NA': Can't find file.
+[2024.05.21-23.22.38:368][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_01_NA': Can't find file.
+[2024.05.21-23.22.38:368][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_01_NA.T_Branches_01_NA'
+[2024.05.21-23.22.38:368][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_Tile_01_CA': Can't find file.
+[2024.05.21-23.22.38:368][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_Tile_01_CA': Can't find file.
+[2024.05.21-23.22.38:368][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_Tile_01_CA.T_Branches_Tile_01_CA'
+[2024.05.21-23.22.38:368][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_Tile_01_NA': Can't find file.
+[2024.05.21-23.22.38:368][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_Tile_01_NA': Can't find file.
+[2024.05.21-23.22.38:369][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_Tile_01_NA.T_Branches_Tile_01_NA'
+[2024.05.21-23.22.38:369][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_01_CA': Can't find file.
+[2024.05.21-23.22.38:369][700]LogLinker: Warning: Failed to load '/Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_01_CA': Can't find file.
+[2024.05.21-23.22.38:369][700]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/StaticMeshes/Vegetation/_SharedTextures/T_Branches_01_CA.T_Branches_01_CA'
+[2024.05.21-23.22.52:647][249]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.05.21-23.22.56:433][361]LogSlate: Window 'Message Log' being destroyed
+[2024.05.21-23.22.56:457][361]LogSlate: Window 'Message Log' being destroyed
+[2024.05.21-23.24.17:618][205]SourceControl: Error: warning: could not open directory 'projProblox/Content/RuralAustralia/StaticMeshes/Vegetation/': No such file or directory
+[2024.05.21-23.30.16:677][505]LogUObjectHash: Compacting FUObjectHashTables data took   1.14ms
+[2024.05.21-23.34.54:928][761]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.05.21-23.35.18:540][ 49]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.05.21-23.35.24:097][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/BP_Sky_01': Can't find file.
+[2024.05.21-23.35.24:097][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/BP_Sky_01': Can't find file.
+[2024.05.21-23.35.24:097][313]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/Sky/BP_Sky_01.BP_Sky_01'
+[2024.05.21-23.35.24:097][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/HDRI_02': Can't find file.
+[2024.05.21-23.35.24:097][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/HDRI_02': Can't find file.
+[2024.05.21-23.35.24:097][313]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/Sky/HDRI_02.HDRI_02'
+[2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/HDRI_01': Can't find file.
+[2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/HDRI_01': Can't find file.
+[2024.05.21-23.35.24:098][313]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/Sky/HDRI_01.HDRI_01'
+[2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/LF_CloudShadows': Can't find file.
+[2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/LF_CloudShadows': Can't find file.
+[2024.05.21-23.35.24:098][313]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/Sky/LF_CloudShadows.LF_CloudShadows'
+[2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/M_Sky_01': Can't find file.
+[2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/M_Sky_01': Can't find file.
+[2024.05.21-23.35.24:098][313]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/Sky/M_Sky_01.M_Sky_01'
+[2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/T_CloudShadows_01_C': Can't find file.
+[2024.05.21-23.35.24:099][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/T_CloudShadows_01_C': Can't find file.
+[2024.05.21-23.35.24:099][313]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/Sky/T_CloudShadows_01_C.T_CloudShadows_01_C'
