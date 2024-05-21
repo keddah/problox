@@ -37,6 +37,11 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
 	float moveSpeed = 500;
 
+	void CalculateVelocity(float deltaTime);
+	FVector velocity;
+	FVector prevPos;
+
+	
 protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
 	bool grounded;
