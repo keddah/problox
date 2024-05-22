@@ -1198,3 +1198,4 @@ Script Stack (0 frames) :
 [2024.05.21-23.07.25:006][  0]LogPakFile: Display: Mounted Pak file 'C:/Program Files/Epic Games/UE_5.3/FeaturePacks/TP_VirtualRealityBP.upack', mount point: 'root:/'
 [2024.05.21-23.09.06:327][  0]LogDerivedDataCache: C:/Users/geeze/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:06.335 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 3810 files in 5336 folders with total size 764 MiB.
 [2024.05.21-23.12.17:889][  0]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected. InstanceID=1
+[2024.05.22-00.09.07:560][  0]LogDerivedDataCache: C:/Users/geeze/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:07.566 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 3832 files in 5359 folders with total size 764 MiB.
