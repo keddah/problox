@@ -1979,3 +1979,4 @@ Script Stack (0 frames) :
 [2024.05.21-23.35.24:098][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/T_CloudShadows_01_C': Can't find file.
 [2024.05.21-23.35.24:099][313]LogLinker: Warning: Failed to load '/Game/RuralAustralia/Sky/T_CloudShadows_01_C': Can't find file.
 [2024.05.21-23.35.24:099][313]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/RuralAustralia/Sky/T_CloudShadows_01_C.T_CloudShadows_01_C'
+[2024.05.22-00.14.24:804][764]LogDerivedDataCache: C:/Users/geeze/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:07.529 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 3832 files in 5359 folders with total size 764 MiB.
