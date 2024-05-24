@@ -1,1 +1,35 @@
 [0524/114718.776:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/120303.104:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/121603.258:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/121939.341:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/122718.635:ERROR:backend_impl.cc(1041)] Critical error found -8
+[0524/122718.636:ERROR:entry_impl.cc(1075)] No file for c10300de
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:ERROR:entry_impl.cc(1075)] No file for c10300e6
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:ERROR:entry_impl.cc(1075)] No file for c10300e0
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.636:ERROR:entry_impl.cc(1075)] No file for c10300e4
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:ERROR:entry_impl.cc(1075)] No file for c10300e2
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122718.637:WARNING:storage_block-inl.h(146)] Failed data load.
+[0524/122917.729:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/123807.489:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/125024.769:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/125456.686:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
