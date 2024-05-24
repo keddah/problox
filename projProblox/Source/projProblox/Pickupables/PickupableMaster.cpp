@@ -70,6 +70,7 @@ void APickupableMaster::BeginPlay()
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetPlaceIndicator();
 
+	if(centerMass->GetRelativeLocation().Length() <= .01f) return;
 	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
 }
 
