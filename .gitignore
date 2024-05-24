@@ -42,16 +42,11 @@ Plugins/**/Saved/
 .DS_Store
 Thumbs.db
 
-# Ignore Unreal Engine temporary files
-*.uasset
-*.umap
-
 # Ignore other engine-generated files
 *.xcodeproj
 *.xcworkspace
 *.workspace
 *.idea/
-*.sln
 
 # Ignore the .build directory
 
