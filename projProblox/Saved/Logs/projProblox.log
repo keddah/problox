@@ -1297,3 +1297,138 @@ Script Stack (0 frames) :
 [2024.05.24-09.52.55:343][801]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
 [2024.05.24-09.52.55:353][801]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
 [2024.05.24-09.52.55:395][802]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2024.05.24-10.01.27:281][ 30]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_Collector.BP_Collector
+[2024.05.24-10.01.27:282][ 30]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.01.27:282][ 30]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.24-10.01.27:839][ 30]LogActor: Warning: BP_Collector_C /Engine/Transient.World_5:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.01.29:152][150]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.24-10.01.54:449][ 85]BlueprintLog: New page: Compile BP_Collector
+[2024.05.24-10.01.54:477][ 85]LogActor: Warning: BP_Collector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.01.54:480][ 85]LogActor: Warning: BP_Collector_C /Engine/Transient.World_2:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.01.54:480][ 85]LogActor: Warning: BP_Collector_C /Engine/Transient.World_5:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.01.54:505][ 85]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.24-10.01.54:509][ 85]LogActor: Warning: BP_Collector_C /Engine/Transient.World_2:PersistentLevel.BP_Collector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.01.54:608][ 85]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.24-10.01.54:651][ 85]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.01.54:658][ 85]LogActor: Warning: BP_Collector_C /Engine/Transient.World_6:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.01.54:669][ 85]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Collector" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Collector.uasset" SILENT=true
+[2024.05.24-10.01.54:678][ 85]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.007327 seconds
+[2024.05.24-10.01.54:709][ 85]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_Collector
+[2024.05.24-10.01.54:709][ 85]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Collector67E2094644A5F8EDE90F0E952FF492C6.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Collector.uasset'
+[2024.05.24-10.01.54:719][ 85]LogFileHelpers: InternalPromptForCheckoutAndSave took 110 ms
+[2024.05.24-10.01.54:735][ 85]AssetCheck: New page: Asset Save: BP_Collector
+[2024.05.24-10.01.54:735][ 85]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_Collector.BP_Collector
+[2024.05.24-10.02.00:979][794]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.24-10.02.01:006][794]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.24-10.02.01:051][794]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2024.05.24-10.02.01:148][794]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.24-10.02.01:149][794]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox106811F7E4F69D124DA9F23AB3011A34E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.24-10.02.01:163][794]LogFileHelpers: Saving map 'Sandbox1' took 0.158
+[2024.05.24-10.02.01:173][794]LogFileHelpers: InternalPromptForCheckoutAndSave took 194 ms (total: 304 ms)
+[2024.05.24-10.02.01:176][794]AssetCheck: New page: Asset Save: Sandbox1
+[2024.05.24-10.02.01:176][794]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.24-10.06.08:344][784]LogHotReload: New module detected: UnrealEditor-projProblox-0026.dll
+[2024.05.24-10.06.09:348][788]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.24-10.06.09:386][788]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2024.05.24-10.06.09:553][788]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.24-10.06.09:659][788]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.05.24-10.06.09:698][788]Display: HotReload took  0.3s.
+[2024.05.24-10.06.09:698][788]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 58 functions remapped, 1 scriptstruct remapped
+[2024.05.24-10.07.18:073][993]LogHotReload: New module detected: UnrealEditor-projProblox-0027.dll
+[2024.05.24-10.07.19:075][997]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.24-10.07.19:137][997]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2024.05.24-10.07.19:271][997]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.24-10.07.19:401][997]LogUObjectHash: Compacting FUObjectHashTables data took   1.95ms
+[2024.05.24-10.07.19:449][997]Display: HotReload took  0.4s.
+[2024.05.24-10.07.19:449][997]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 58 functions remapped, 1 scriptstruct remapped
+[2024.05.24-10.09.21:498][363]LogHotReload: New module detected: UnrealEditor-projProblox-0028.dll
+[2024.05.24-10.09.22:504][367]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.24-10.09.22:568][367]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.05.24-10.09.22:700][367]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.24-10.09.22:764][367]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.24-10.09.22:802][367]Display: HotReload took  0.3s.
+[2024.05.24-10.09.22:802][367]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 58 functions remapped, 1 scriptstruct remapped
+[2024.05.24-10.11.19:651][147]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:656][147]LogActor: Warning: BP_Treads_C /Engine/Transient.World_7:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:695][148]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:701][148]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_8:PersistentLevel.BP_Thruster_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:720][149]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:727][149]LogActor: Warning: BP_Spring_C /Engine/Transient.World_9:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:747][150]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:752][150]LogActor: Warning: BP_Propeller_C /Engine/Transient.World_10:PersistentLevel.BP_Propeller_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:771][151]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:777][151]LogActor: Warning: BP_Piston_C /Engine/Transient.World_11:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:797][152]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:803][152]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_12:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:822][153]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:827][153]LogActor: Warning: BP_Hover_C /Engine/Transient.World_13:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:847][154]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:853][154]LogActor: Warning: BP_Glider_C /Engine/Transient.World_14:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.19:872][155]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.19:878][155]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_15:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.24:136][614]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Spring.BP_Spring
+[2024.05.24-10.11.24:136][614]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.24:136][614]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.24-10.11.24:248][614]LogActor: Warning: BP_Spring_C /Engine/Transient.World_16:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.50:067][688]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.50:900][776]LogSlate: Took 0.000125 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: ================================================
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Total job queries 16, among them cache hits 6 (37.50%)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Tracking 10 distinct input hashes that result in 6 distinct outputs (60.00%)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: RAM used: 205.92 KiB of 1.60 GiB budget. Usage: 0.01%
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Shaders Compiled: 10
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Jobs assigned 10, completed 10 (100%)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Average time worker was idle: 0.00 s
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Time job spent in pending queue: average 0.18 s, longest 0.65 s
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Job execution time: average 0.71 s, max 1.01 s
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Job life time (pending + execution): average 0.89 s, max 1.01
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Shader code size: average 34.052 KiB, min 29.605 KiB, max 36.125 KiB
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 1.22 s
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Jobs were issued in 10 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Average processing rate: 8.21 jobs/sec
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Total thread time: 3.357 s
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Total thread preprocess time: 0.457 s
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Percentage time preprocessing: 13.60%
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Effective parallelization: 2.76 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Top 4 most expensive shader types by average time:
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                                 FLumenCardVS (compiled    1 times, average 0.45 sec, max 0.45 sec, min 0.45 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    4 times, average 0.35 sec, max 0.51 sec, min 0.28 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    4 times, average 0.32 sec, max 0.49 sec, min 0.22 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                          FLumenCardPS<false> (compiled    1 times, average 0.26 sec, max 0.26 sec, min 0.26 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: Top 4 shader types by total compile time:
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 41.19% of total time (compiled    4 times, average 0.35 sec, max 0.51 sec, min 0.28 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 37.84% of total time (compiled    4 times, average 0.32 sec, max 0.49 sec, min 0.22 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                                 FLumenCardVS - 13.37% of total time (compiled    1 times, average 0.45 sec, max 0.45 sec, min 0.45 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 7.60% of total time (compiled    1 times, average 0.26 sec, max 0.26 sec, min 0.26 sec)
+[2024.05.24-10.11.51:024][781]LogShaderCompilers: Display: ================================================
+[2024.05.24-10.11.55:621][281]LogMaterial: Display: Material /Game/Materials/Pickupables/M_Wheel.M_Wheel needed to have new flag set bUsedWithSplineMeshes !
+[2024.05.24-10.11.55:702][281]LogShaderCompilers: Display: Current jobs: 14, Batch size: 3, Num Already Dispatched: 0
+[2024.05.24-10.11.59:322][649]BlueprintLog: New page: Compile BP_Spring
+[2024.05.24-10.11.59:330][649]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:332][649]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:332][649]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:334][649]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:335][649]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:336][649]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:337][649]LogActor: Warning: BP_Spring_C /Engine/Transient.World_9:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:338][649]LogActor: Warning: BP_Spring_C /Engine/Transient.World_16:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:405][649]LogUObjectHash: Compacting FUObjectHashTables data took   1.34ms
+[2024.05.24-10.11.59:430][649]LogActor: Warning: BP_Spring_C /Engine/Transient.World_9:PersistentLevel.BP_Spring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:550][649]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.24-10.11.59:575][649]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.11.59:581][649]LogActor: Warning: BP_Spring_C /Engine/Transient.World_18:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.11.59:657][649]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Spring" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Spring.uasset" SILENT=true
+[2024.05.24-10.11.59:666][649]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Spring
+[2024.05.24-10.11.59:667][649]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Spring186B5E3046880649347333ADBB43A05E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Spring.uasset'
+[2024.05.24-10.11.59:672][649]LogFileHelpers: InternalPromptForCheckoutAndSave took 122 ms (total: 426 ms)
+[2024.05.24-10.11.59:693][649]AssetCheck: New page: Asset Save: BP_Spring
+[2024.05.24-10.11.59:693][649]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Spring.BP_Spring
+[2024.05.24-10.12.07:178][453]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.12.07:185][453]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_19:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.12.07:235][454]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.12.08:677][607]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.12.08:682][607]LogActor: Warning: BP_Wheels_C /Engine/Transient.World_21:PersistentLevel.BP_Wheels_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.12.08:727][608]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.12.08:747][608]LogActor: Warning: BP_Wheel_C /Engine/Transient.World_22:PersistentLevel.BP_Wheel_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily

@@ -92,7 +92,6 @@ void APlayerCharacter::Undo()
 			// Undo the detach operation
 			case EOperations::Detach:
 				obj->Reattach();
-				Print("Reattaching", 4)
 				break;
 			
 			// Undo the move operation
@@ -136,7 +135,6 @@ void APlayerCharacter::Redo()
 			// Redo the attach operation
 		case EOperations::Attach:
 			obj->Reattach();
-			Print("Reattaching", 4)
 			break;
 			
 			// Redo the detach operation

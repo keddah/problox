@@ -36,7 +36,7 @@ void ABounceSpring::Ability(float deltaTime)
 	collisionParams.AddIgnoredActor(this);
 	collisionParams.AddIgnoredActor(parentCore);
 	
-	DrawDebugLine(wrld, startPos, endPos, FColor::Red);
+	// DrawDebugLine(wrld, startPos, endPos, FColor::Red);
 	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
 
 	pickupCollider->SetWorldLocation(end->GetComponentLocation());
@@ -51,10 +51,10 @@ void ABounceSpring::Ability(float deltaTime)
 	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
 	end->SetWorldLocation(springHit.Location);
 	
-	DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
+	// DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
-	DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
+	// DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
 
 	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
 	if(!audioManager->IsPlaying()) audioManager->PlayAbility();
