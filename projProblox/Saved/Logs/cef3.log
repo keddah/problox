@@ -33,3 +33,4 @@
 [0524/123807.489:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
 [0524/125024.769:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
 [0524/125456.686:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0524/130628.377:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
