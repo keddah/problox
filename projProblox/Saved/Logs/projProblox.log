@@ -1248,3 +1248,438 @@ Script Stack (0 frames) :
 [2024.05.24-10.32.33:792][582]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
 [2024.05.24-10.32.33:795][582]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
 [2024.05.24-10.32.33:835][583]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2024.05.24-10.33.31:696][ 40]LogSlate: Took 0.000162 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2024.05.24-10.33.31:703][ 40]LogSlate: Took 0.000138 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.05.24-10.33.31:727][ 41]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:733][ 41]LogActor: Warning: BP_Treads_C /Engine/Transient.World_0:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:776][ 42]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:782][ 42]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_1:PersistentLevel.BP_Thruster_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:800][ 43]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:806][ 43]LogActor: Warning: BP_Spring_C /Engine/Transient.World_2:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:822][ 44]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:830][ 44]LogActor: Warning: BP_Propeller_C /Engine/Transient.World_3:PersistentLevel.BP_Propeller_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:846][ 45]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:850][ 45]LogActor: Warning: BP_Piston_C /Engine/Transient.World_4:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:867][ 46]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:872][ 46]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_5:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:888][ 47]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:895][ 47]LogActor: Warning: BP_Hover_C /Engine/Transient.World_6:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:911][ 48]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:916][ 48]LogActor: Warning: BP_Glider_C /Engine/Transient.World_7:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.31:933][ 49]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.31:938][ 49]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_8:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.35:911][430]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Thruster.BP_Thruster
+[2024.05.24-10.33.35:912][430]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.35:912][430]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.24-10.33.35:920][430]LogSlate: Warning: The command 'BlueprintEditorSpawnNodes.AddActorRefAction->CommandInfo' has the same default chord as 'BlueprintEditorSpawnNodes.(Class=/Script/BlueprintGraph.K2Node_Knot Key=R Shift=false Ctrl=false Alt=false)' [R]
+[2024.05.24-10.33.36:472][430]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_9:PersistentLevel.BP_Thruster_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.33.36:483][430]LogSlate: Took 0.000145 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2024.05.24-10.33.37:795][562]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.33.42:496][109]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.24-10.34.29:620][701]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:20.167 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 10679 files in 13268 folders with total size 1205 MiB.
+[2024.05.24-10.35.31:236][885]LogHotReload: New module detected: UnrealEditor-projProblox-0004.dll
+[2024.05.24-10.35.32:236][889]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.24-10.35.32:276][889]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.05.24-10.35.32:304][889]LogClass: UClass Treads Reload.
+[2024.05.24-10.35.32:349][889]LogClass: Could not find existing class Treads in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.35.32:415][889]Re-instancing Treads after reload.
+[2024.05.24-10.35.32:422][889]LogActor: Warning: BP_Treads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Treads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.35.32:423][889]LogActor: Warning: BP_Treads_C /Engine/Transient.World_0:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.35.32:454][889]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.24-10.35.32:574][889]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.05.24-10.35.32:630][889]Display: HotReload took  0.4s.
+[2024.05.24-10.35.32:630][889]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 37 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 58 functions remapped, 1 scriptstruct remapped
+[2024.05.24-10.36.25:627][493]LogHotReload: New module detected: UnrealEditor-projProblox-0006.dll
+[2024.05.24-10.36.26:631][497]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.24-10.36.26:698][497]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.05.24-10.36.26:724][497]LogClass: UPackage /Script/projProblox Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass Balloon Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass BounceSpring Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass CubeConnector Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass CubeCore Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass CuboidConnector Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass CuboidCore Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass Glider Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass Grappler Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass HexCore Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass Hoverer Reload.
+[2024.05.24-10.36.26:727][497]LogClass: UClass Magnet Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass PickupableMaster Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass Piston Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass Propeller Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass Thruster Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass Treads Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass WedgeConnector Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass Wheel Reload.
+[2024.05.24-10.36.26:728][497]LogClass: UClass Wheels Reload.
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Balloon in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class PickupableMaster in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Function AllObjsInHierarchy is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function AscendDescend is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetMass is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetMesh is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function ResetRotation is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function RotateHori is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function RotateVert is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function SetAbilityActive is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function SetCanPickup is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function SetSelected is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function SnapRotateMesh is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class BounceSpring in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class CubeConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class CubeCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Function DetachAll is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetAttachedObjActors is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetAttempts is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetCloseAttachments is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetRating is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function GetSocketCount is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function NextWave is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function ObjectInSocket is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function SelectSocket is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function SetAllAbilityActive is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function Start is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function StartEndingGame is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function StartGame is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Function StartStoryGame is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class CuboidConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class CuboidCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Glider in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Grappler in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Function Pull is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class HexCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Hoverer in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Magnet in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Function SetCharge is new or belongs to a modified class.
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Piston in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Propeller in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Thruster in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Treads in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class WedgeConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Wheel in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:750][497]LogClass: Could not find existing class Wheels in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.26:800][497]Re-instancing CubeCore after reload.
+[2024.05.24-10.36.26:809][497]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\Cores\BP_CubeCore.uasset: [Compiler] Could not find a variable named "pickupCollider" in 'BP_CubeCore_C'.
+Make sure 'BP_CubeCore_C' has been compiled for  Get pickupCollider
+[2024.05.24-10.36.26:822][497]LogActor: Warning: BP_CubeCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:823][497]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.24-10.36.26:823][497]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.24-10.36.26:824][497]LogScript: Warning: Attempted to access missing property 'mesh'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_CubeCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1
+	Function /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore_C:UserConstructionScript:000D
+[2024.05.24-10.36.26:824][497]LogScript: Warning: Accessed None trying to read property mesh
+	BP_CubeCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1
+	Function /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore_C:UserConstructionScript:000D
+[2024.05.24-10.36.26:824][497]LogScript: Warning: Attempted to access missing property 'pickupCollider'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_CubeCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1
+	Function /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore_C:UserConstructionScript:0048
+[2024.05.24-10.36.26:824][497]LogScript: Warning: Accessed None trying to read property pickupCollider
+	BP_CubeCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1
+	Function /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore_C:UserConstructionScript:0048
+[2024.05.24-10.36.26:855][497]Re-instancing PickupableMaster after reload.
+[2024.05.24-10.36.26:876][497]Re-instancing Balloon after reload.
+[2024.05.24-10.36.26:879][497]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:881][497]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:882][497]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:882][497]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:884][497]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_8:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:912][497]Re-instancing BounceSpring after reload.
+[2024.05.24-10.36.26:920][497]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:921][497]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:922][497]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:924][497]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:925][497]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:926][497]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:927][497]LogActor: Warning: BP_Spring_C /Engine/Transient.World_2:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:971][497]Re-instancing CubeConnector after reload.
+[2024.05.24-10.36.26:980][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:981][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:982][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:985][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:986][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:988][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:989][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:991][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:993][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:995][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:997][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.26:999][497]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:038][497]Re-instancing CuboidConnector after reload.
+[2024.05.24-10.36.27:046][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:048][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:050][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:052][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:054][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:056][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:058][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:060][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:061][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:063][497]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:098][497]Re-instancing CuboidCore after reload.
+[2024.05.24-10.36.27:136][497]Re-instancing Glider after reload.
+[2024.05.24-10.36.27:141][497]LogActor: Warning: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:142][497]LogActor: Warning: BP_Glider_C /Engine/Transient.World_7:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:168][497]Re-instancing Grappler after reload.
+[2024.05.24-10.36.27:175][497]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:176][497]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:177][497]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:178][497]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:208][497]Re-instancing HexCore after reload.
+[2024.05.24-10.36.27:245][497]Re-instancing Hoverer after reload.
+[2024.05.24-10.36.27:249][497]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:250][497]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:251][497]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:252][497]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:252][497]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:254][497]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:255][497]LogActor: Warning: BP_Hover_C /Engine/Transient.World_6:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:282][497]Re-instancing Magnet after reload.
+[2024.05.24-10.36.27:288][497]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:289][497]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:291][497]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:292][497]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:292][497]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:293][497]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:294][497]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:295][497]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_5:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:322][497]Re-instancing Piston after reload.
+[2024.05.24-10.36.27:325][497]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\BP_Piston.uasset: [Compiler] Could not find a variable named "pickupCollider" in 'BP_Piston_C'.
+Make sure 'BP_Piston_C' has been compiled for  Get
+[2024.05.24-10.36.27:325][497]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\BP_Piston.uasset: [Compiler] The property associated with  Pickup Collider  could not be found in '/Game/Blueprints/Pickupables/BP_Piston.BP_Piston_C'
+[2024.05.24-10.36.27:329][497]LogActor: Warning: BP_Piston_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:330][497]LogActor: Warning: BP_Piston_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:331][497]LogActor: Warning: BP_Piston_C /Engine/Transient.World_4:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:358][497]Re-instancing Propeller after reload.
+[2024.05.24-10.36.27:367][497]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:368][497]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:369][497]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:370][497]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:371][497]LogActor: Warning: BP_Propeller_C /Engine/Transient.World_3:PersistentLevel.BP_Propeller_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:399][497]Re-instancing Thruster after reload.
+[2024.05.24-10.36.27:405][497]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:406][497]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:407][497]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:408][497]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:409][497]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:410][497]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:411][497]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_1:PersistentLevel.BP_Thruster_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:412][497]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_9:PersistentLevel.BP_Thruster_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:423][497]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_1:PersistentLevel.BP_Thruster_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:450][497]Re-instancing Treads after reload.
+[2024.05.24-10.36.27:456][497]LogActor: Warning: BP_Treads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Treads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:458][497]LogActor: Warning: BP_Treads_C /Engine/Transient.World_0:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:485][497]Re-instancing WedgeConnector after reload.
+[2024.05.24-10.36.27:494][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:496][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:498][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:499][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:501][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:502][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:503][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:505][497]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:536][497]Re-instancing Wheel after reload.
+[2024.05.24-10.36.27:542][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:543][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:544][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:546][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:547][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:548][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:549][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:550][497]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:578][497]Re-instancing Wheels after reload.
+[2024.05.24-10.36.27:582][497]LogActor: Warning: BP_Wheels_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheels_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.27:607][497]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.24-10.36.27:736][497]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2024.05.24-10.36.27:777][497]Display: HotReload took  1.1s.
+[2024.05.24-10.36.27:777][497]Display: Reload/Re-instancing Complete: 1 package changed, 19 classes changed, 19 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 56 functions remapped, 1 scriptstruct remapped
+[2024.05.24-10.36.54:042][854]LogHotReload: New module detected: UnrealEditor-projProblox-0007.dll
+[2024.05.24-10.36.54:715][857]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.24-10.36.54:784][857]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.05.24-10.36.54:811][857]LogClass: UPackage /Script/projProblox Reload.
+[2024.05.24-10.36.54:814][857]LogClass: UClass Balloon Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass BounceSpring Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass CubeConnector Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass CubeCore Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass CuboidConnector Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass CuboidCore Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Glider Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Grappler Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass HexCore Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Hoverer Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Magnet Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass PickupableMaster Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Piston Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Propeller Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Thruster Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Treads Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass WedgeConnector Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Wheel Reload.
+[2024.05.24-10.36.54:815][857]LogClass: UClass Wheels Reload.
+[2024.05.24-10.36.54:847][857]LogClass: Could not find existing class Balloon in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:847][857]LogClass: Could not find existing class PickupableMaster in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:847][857]LogClass: Function AllObjsInHierarchy is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function AscendDescend is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetMass is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetMesh is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function ResetRotation is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function RotateHori is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function RotateVert is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function SetAbilityActive is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function SetCanPickup is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function SetSelected is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function SnapRotateMesh is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class BounceSpring in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class CubeConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class CubeCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Function DetachAll is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetAttachedObjActors is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetAttempts is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetCloseAttachments is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetRating is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function GetSocketCount is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function NextWave is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function ObjectInSocket is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function SelectSocket is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function SetAllAbilityActive is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function Start is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function StartEndingGame is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function StartGame is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Function StartStoryGame is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class CuboidConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class CuboidCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Glider in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Grappler in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Function Pull is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class HexCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Hoverer in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Magnet in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Function SetCharge is new or belongs to a modified class.
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Piston in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Propeller in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Thruster in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Treads in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class WedgeConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Wheel in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:848][857]LogClass: Could not find existing class Wheels in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.24-10.36.54:894][857]Re-instancing CubeCore after reload.
+[2024.05.24-10.36.54:908][857]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\Cores\BP_CubeCore.uasset: [Compiler] The property associated with  Pickup Collider  could not be found in '/Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore_C'
+[2024.05.24-10.36.54:922][857]LogActor: Warning: BP_CubeCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.54:922][857]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.24-10.36.54:922][857]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.24-10.36.54:959][857]Re-instancing PickupableMaster after reload.
+[2024.05.24-10.36.54:983][857]Re-instancing Balloon after reload.
+[2024.05.24-10.36.54:987][857]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.54:989][857]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.54:991][857]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.54:993][857]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.54:995][857]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_8:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:023][857]Re-instancing BounceSpring after reload.
+[2024.05.24-10.36.55:030][857]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:032][857]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:032][857]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:034][857]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:035][857]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:036][857]LogActor: Warning: BP_Spring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Spring_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:037][857]LogActor: Warning: BP_Spring_C /Engine/Transient.World_2:PersistentLevel.BP_Spring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:081][857]Re-instancing CubeConnector after reload.
+[2024.05.24-10.36.55:089][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:090][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:092][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:093][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:095][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:097][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:098][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:100][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:101][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:102][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:104][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:105][857]LogActor: Warning: BP_CubeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeConnector_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:137][857]Re-instancing CuboidConnector after reload.
+[2024.05.24-10.36.55:145][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:147][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:149][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:151][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:153][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:156][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:159][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:161][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:162][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:165][857]LogActor: Warning: BP_CuboidConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidConnector_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:194][857]Re-instancing CuboidCore after reload.
+[2024.05.24-10.36.55:234][857]Re-instancing Glider after reload.
+[2024.05.24-10.36.55:240][857]LogActor: Warning: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:241][857]LogActor: Warning: BP_Glider_C /Engine/Transient.World_7:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:270][857]Re-instancing Grappler after reload.
+[2024.05.24-10.36.55:276][857]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:278][857]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:279][857]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:280][857]LogActor: Warning: BP_Grappler_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grappler_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:310][857]Re-instancing HexCore after reload.
+[2024.05.24-10.36.55:347][857]Re-instancing Hoverer after reload.
+[2024.05.24-10.36.55:352][857]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:354][857]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:355][857]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:356][857]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:357][857]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:358][857]LogActor: Warning: BP_Hover_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hover_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:359][857]LogActor: Warning: BP_Hover_C /Engine/Transient.World_6:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:386][857]Re-instancing Magnet after reload.
+[2024.05.24-10.36.55:392][857]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:393][857]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:395][857]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:395][857]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:396][857]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:397][857]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:398][857]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:399][857]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_5:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:428][857]Re-instancing Piston after reload.
+[2024.05.24-10.36.55:434][857]LogActor: Warning: BP_Piston_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:436][857]LogActor: Warning: BP_Piston_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Piston_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:438][857]LogActor: Warning: BP_Piston_C /Engine/Transient.World_4:PersistentLevel.BP_Piston_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:470][857]Re-instancing Propeller after reload.
+[2024.05.24-10.36.55:476][857]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:478][857]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:479][857]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:480][857]LogActor: Warning: BP_Propeller_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Propeller_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:481][857]LogActor: Warning: BP_Propeller_C /Engine/Transient.World_3:PersistentLevel.BP_Propeller_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:509][857]Re-instancing Thruster after reload.
+[2024.05.24-10.36.55:533][857]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:535][857]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:536][857]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:537][857]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:538][857]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:539][857]LogActor: Warning: BP_Thruster_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Thruster_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:540][857]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_1:PersistentLevel.BP_Thruster_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:541][857]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_9:PersistentLevel.BP_Thruster_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:552][857]LogActor: Warning: BP_Thruster_C /Engine/Transient.World_1:PersistentLevel.BP_Thruster_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:580][857]Re-instancing Treads after reload.
+[2024.05.24-10.36.55:586][857]LogActor: Warning: BP_Treads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Treads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:587][857]LogActor: Warning: BP_Treads_C /Engine/Transient.World_0:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:615][857]Re-instancing WedgeConnector after reload.
+[2024.05.24-10.36.55:622][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:625][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:627][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:628][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:629][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:631][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:632][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:634][857]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:667][857]Re-instancing Wheel after reload.
+[2024.05.24-10.36.55:672][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:674][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:674][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:675][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:676][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:677][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:679][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:680][857]LogActor: Warning: BP_Wheel_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheel_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:708][857]Re-instancing Wheels after reload.
+[2024.05.24-10.36.55:713][857]LogActor: Warning: BP_Wheels_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Wheels_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.24-10.36.55:734][857]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.24-10.36.55:822][857]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.05.24-10.36.55:860][857]Display: HotReload took  1.1s.
+[2024.05.24-10.36.55:860][857]Display: Reload/Re-instancing Complete: 1 package changed, 19 classes changed, 19 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 83 functions remapped, 1 scriptstruct remapped
