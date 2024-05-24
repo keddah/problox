@@ -21,6 +21,8 @@ ABalloon::ABalloon()
 	constraint->SetLinearXLimit(LCM_Limited, string->CableLength);
 	constraint->SetLinearYLimit(LCM_Limited, string->CableLength);
 	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
+
+	active = true;
 }
 
 void ABalloon::Tick(float DeltaSeconds)
@@ -33,8 +35,7 @@ void ABalloon::Tick(float DeltaSeconds)
 void ABalloon::Ability(float deltaTime)
 {
 	Super::Ability(deltaTime);
-
-	if(!parentCore || !isAttached) return;
+	if(!parentCore || !active) return;
 	
 	FVector velocity = mesh->GetPhysicsLinearVelocity();
 	velocity.Z *= -deltaTime;
@@ -42,6 +43,17 @@ void ABalloon::Ability(float deltaTime)
 	velocity.Z += floatiness; 
 	
 	mesh->SetPhysicsLinearVelocity(velocity);
+}
+
+void ABalloon::SetAbilityActive(const bool value)
+{
+	Super::SetAbilityActive(value);
+
+	if(value) return;
+	mesh->SetHiddenInGame(true);
+	string->bAttachStart = false;
+	string->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	constraint->BreakConstraint();
 }
 
 EOperations ABalloon::SetSelected(const bool value)

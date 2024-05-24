@@ -22,7 +22,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	GENERATED_BODY()
 
 	ATreads();
-	virtual void BeginPlay() override { Super::BeginPlay(); }
+	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); }
 
 	
 	virtual void Ability(float deltaTime) override;
@@ -41,6 +41,8 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	FVector velocity;
 	FVector prevPos;
 
+	UWorld* wrld;
+	bool nearFloor;
 	
 protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))

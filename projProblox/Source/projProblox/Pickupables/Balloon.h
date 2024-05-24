@@ -18,6 +18,7 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	virtual void Tick(float DeltaSeconds) override;
 	
 	virtual void Ability(float deltaTime) override;
+	virtual void SetAbilityActive(const bool value) override;
 	virtual EOperations SetSelected(const bool value) override;
 	
 	void Attach() const;
