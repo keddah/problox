@@ -42,19 +42,15 @@
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
 			"Balloon.cpp.obj",
-			"CubeConnector.cpp.obj",
-			"CuboidConnector.cpp.obj",
-			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
-			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
+			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
-			"PickupableMaster.cpp.obj",
+			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
@@ -64,8 +60,12 @@
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
 			"BounceSpring.cpp.obj",
-			"Hoverer.cpp.obj",
-			"Piston.cpp.obj"
+			"CubeConnector.cpp.obj",
+			"CuboidConnector.cpp.obj",
+			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
+			"CuboidCore.cpp.obj",
+			"PickupableMaster.cpp.obj"
 		]
 	}
 }
