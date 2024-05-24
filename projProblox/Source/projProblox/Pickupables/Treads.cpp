@@ -40,13 +40,25 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
+void ATreads::CalculateVelocity(const float deltaTime)
+{
+	// v= deltaPos / deltaTime
+	const FVector deltaPos = GetActorLocation() - prevPos;
+	velocity = deltaPos / deltaTime;
+	// velocity = velocity.GetClampedToSize(0, );
+	prevPos = GetActorLocation();
+}
+
 void ATreads::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
 
-	// Drag();
+	if(!grounded) AddVelocity(velocity);
+	velocity = {};
+	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
+	CalculateVelocity(deltaTime);
 
 	
 	// Disregards the mass...
