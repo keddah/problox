@@ -33158,3 +33158,1546 @@ Script Stack (0 frames) :
 [2024.05.28-14.54.40:587][ 71]LogFileHelpers: InternalPromptForCheckoutAndSave took 63 ms (total: 3.89 sec)
 [2024.05.28-14.54.40:592][ 71]AssetCheck: New page: Asset Save: WBP_DragWidget
 [2024.05.28-14.54.40:592][ 71]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-14.55.41:681][607]LogD3D12RHI: Warning: Descriptor cache ran out of sub allocated descriptor blocks! Moving to Context local View heap strategy
+[2024.05.28-14.55.41:681][607]LogD3D12RHI: This should only happen in the Editor where it doesn't matter as much. If it happens in game you should increase the device global heap size!
+[2024.05.28-14.56.17:346][640]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.05.28-14.56.17:349][640]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.020
+[2024.05.28-14.56.17:349][640]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_Timeline] ([2] browsable assets)...
+[2024.05.28-14.56.17:355][640]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline]
+[2024.05.28-14.56.17:355][640]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_Timeline]
+[2024.05.28-14.56.17:398][640]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_Timeline_Auto8
+[2024.05.28-14.56.17:398][640]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline_Auto8C76C54014E717E369C9E8197673CF084.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_Timeline_Auto8.uasset'
+[2024.05.28-14.56.17:399][640]LogFileHelpers: Auto-saving content packages took 0.050
+[2024.05.28-14.56.46:801][131]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2024.05.28-14.58.29:219][758]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.28-15.00.01:329][714]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.01.11:012][925]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.02.51:793][781]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.02.51:801][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider6)  does not have a valid matching component!
+[2024.05.28-15.02.51:801][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider5)  does not have a valid matching component!
+[2024.05.28-15.02.51:801][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider4)  does not have a valid matching component!
+[2024.05.28-15.02.51:801][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider3)  does not have a valid matching component!
+[2024.05.28-15.02.51:802][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider2)  does not have a valid matching component!
+[2024.05.28-15.02.51:802][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider1)  does not have a valid matching component!
+[2024.05.28-15.02.51:803][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider6)  does not have a valid matching component!
+[2024.05.28-15.02.51:803][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider5)  does not have a valid matching component!
+[2024.05.28-15.02.51:803][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider4)  does not have a valid matching component!
+[2024.05.28-15.02.51:803][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider3)  does not have a valid matching component!
+[2024.05.28-15.02.51:803][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider2)  does not have a valid matching component!
+[2024.05.28-15.02.51:803][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider1)  does not have a valid matching component!
+[2024.05.28-15.02.51:804][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider1
+[2024.05.28-15.02.51:804][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider2
+[2024.05.28-15.02.51:804][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider3
+[2024.05.28-15.02.51:805][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider4
+[2024.05.28-15.02.51:805][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider5
+[2024.05.28-15.02.51:805][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider6
+[2024.05.28-15.02.51:806][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider1
+[2024.05.28-15.02.51:806][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider2
+[2024.05.28-15.02.51:806][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.02.51:807][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.02.51:807][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.02.51:807][781]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.02.51:813][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:813][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:813][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:813][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:813][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:814][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:814][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:814][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:814][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:814][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:814][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:814][781]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.02.51:878][781]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2024.05.28-15.04.23:498][798]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.05.33:498][951]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.05.33:680][953]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.05.28-15.05.33:864][955]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.05.34:635][ 27]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.05.35:755][146]LogEditorTransaction: Redo Edit Top
+[2024.05.28-15.05.35:992][159]LogEditorTransaction: Redo Edit Top
+[2024.05.28-15.06.22:255][515]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.06.22:263][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider6)  does not have a valid matching component!
+[2024.05.28-15.06.22:263][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider5)  does not have a valid matching component!
+[2024.05.28-15.06.22:263][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider4)  does not have a valid matching component!
+[2024.05.28-15.06.22:264][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider3)  does not have a valid matching component!
+[2024.05.28-15.06.22:264][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider2)  does not have a valid matching component!
+[2024.05.28-15.06.22:264][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider1)  does not have a valid matching component!
+[2024.05.28-15.06.22:264][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider6)  does not have a valid matching component!
+[2024.05.28-15.06.22:264][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider5)  does not have a valid matching component!
+[2024.05.28-15.06.22:264][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider4)  does not have a valid matching component!
+[2024.05.28-15.06.22:265][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider3)  does not have a valid matching component!
+[2024.05.28-15.06.22:265][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider2)  does not have a valid matching component!
+[2024.05.28-15.06.22:265][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider1)  does not have a valid matching component!
+[2024.05.28-15.06.22:265][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider1
+[2024.05.28-15.06.22:266][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider2
+[2024.05.28-15.06.22:266][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider3
+[2024.05.28-15.06.22:266][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider4
+[2024.05.28-15.06.22:267][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider5
+[2024.05.28-15.06.22:267][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider6
+[2024.05.28-15.06.22:267][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider1
+[2024.05.28-15.06.22:268][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider2
+[2024.05.28-15.06.22:268][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.06.22:268][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.06.22:269][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.06.22:269][515]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.06.22:274][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:275][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:276][515]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.22:346][515]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2024.05.28-15.06.46:282][234]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.06.46:289][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider6)  does not have a valid matching component!
+[2024.05.28-15.06.46:289][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider5)  does not have a valid matching component!
+[2024.05.28-15.06.46:289][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider4)  does not have a valid matching component!
+[2024.05.28-15.06.46:290][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider3)  does not have a valid matching component!
+[2024.05.28-15.06.46:290][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider2)  does not have a valid matching component!
+[2024.05.28-15.06.46:290][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider1)  does not have a valid matching component!
+[2024.05.28-15.06.46:290][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider6)  does not have a valid matching component!
+[2024.05.28-15.06.46:290][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider5)  does not have a valid matching component!
+[2024.05.28-15.06.46:290][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider4)  does not have a valid matching component!
+[2024.05.28-15.06.46:290][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider3)  does not have a valid matching component!
+[2024.05.28-15.06.46:291][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider2)  does not have a valid matching component!
+[2024.05.28-15.06.46:291][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider1)  does not have a valid matching component!
+[2024.05.28-15.06.46:291][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider1
+[2024.05.28-15.06.46:292][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider2
+[2024.05.28-15.06.46:292][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider3
+[2024.05.28-15.06.46:292][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider4
+[2024.05.28-15.06.46:293][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider5
+[2024.05.28-15.06.46:293][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider6
+[2024.05.28-15.06.46:293][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider1
+[2024.05.28-15.06.46:294][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider2
+[2024.05.28-15.06.46:294][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.06.46:294][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.06.46:295][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.06.46:295][234]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:301][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:302][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:302][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:302][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:302][234]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.06.46:361][234]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.05.28-15.06.54:439][170]LogEditorTransaction: Undo Changed Anchors
+[2024.05.28-15.06.54:611][172]LogEditorTransaction: Undo Edit Left
+[2024.05.28-15.06.54:789][174]LogEditorTransaction: Undo Edit X
+[2024.05.28-15.06.54:963][176]LogEditorTransaction: Undo Edit font size
+[2024.05.28-15.06.55:987][284]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.05.28-15.06.56:189][294]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.56:333][297]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.56:528][306]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.56:805][325]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.57:040][339]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.57:217][346]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.57:418][356]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.57:577][361]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.57:772][370]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.57:923][374]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.58:080][378]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.58:250][380]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.58:388][381]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.58:573][383]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.58:711][384]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.58:853][386]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.06.59:006][390]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.06.59:166][395]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.06.59:324][400]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.06.59:508][408]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.06.59:658][412]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.06.59:825][418]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.06.59:994][424]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.07.00:146][428]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.07.00:307][433]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.00:442][435]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.07.00:603][440]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.07.00:759][444]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.00:910][448]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.01:054][451]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.01:213][456]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.01:369][460]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.07.01:513][463]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.01:668][467]LogEditorTransaction: Undo Changed Anchors
+[2024.05.28-15.07.01:841][469]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.07.01:984][470]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.02:150][472]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.07.02:289][473]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.02:451][479]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.07.02:613][485]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.02:754][488]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.02:909][492]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.07.03:060][496]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.07.03:223][501]LogEditorTransaction: Undo Paste Category Properties
+[2024.05.28-15.07.03:380][505]LogEditorTransaction: Undo Changed Anchors
+[2024.05.28-15.07.03:525][508]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.03:695][514]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.03:866][520]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.04:020][524]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.04:192][530]LogEditorTransaction: Undo Resize Widget
+[2024.05.28-15.07.04:361][536]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.04:690][561]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.04:903][572]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.05:088][580]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.05:234][583]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.05:418][585]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.05:595][587]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.05:741][588]LogEditorTransaction: Undo Edit Left
+[2024.05.28-15.07.05:926][593]LogEditorTransaction: Undo Edit Left
+[2024.05.28-15.07.06:081][597]LogEditorTransaction: Undo Changed Anchors
+[2024.05.28-15.07.06:252][603]LogEditorTransaction: Undo Edit Y
+[2024.05.28-15.07.06:438][611]LogEditorTransaction: Undo Edit X
+[2024.05.28-15.07.06:598][616]LogEditorTransaction: Undo Edit Top
+[2024.05.28-15.07.06:771][622]LogEditorTransaction: Undo Edit Bottom
+[2024.05.28-15.07.06:942][628]LogEditorTransaction: Undo Edit Right
+[2024.05.28-15.07.07:114][634]LogEditorTransaction: Undo Edit Left
+[2024.05.28-15.07.07:286][640]LogEditorTransaction: Undo Changed Anchors
+[2024.05.28-15.07.07:456][646]LogEditorTransaction: Undo Paste clipboard contents
+[2024.05.28-15.07.07:625][660]LogEditorTransaction: Undo Remove Widget
+[2024.05.28-15.07.08:237][732]LogEditorTransaction: Undo Move Widget
+[2024.05.28-15.07.08:671][782]LogEditorTransaction: Undo Remove Widget
+[2024.05.28-15.07.09:851][920]LogEditorTransaction: Undo Rename Widget
+[2024.05.28-15.07.11:200][ 37]LogEditorTransaction: Undo Rename Widget
+[2024.05.28-15.07.11:825][107]LogEditorTransaction: Undo Rename Widget
+[2024.05.28-15.07.12:331][163]LogEditorTransaction: Undo Rename Widget
+[2024.05.28-15.07.13:111][252]LogEditorTransaction: Redo Rename Widget
+[2024.05.28-15.07.13:369][278]LogEditorTransaction: Redo Rename Widget
+[2024.05.28-15.07.13:627][287]LogEditorTransaction: Redo Rename Widget
+[2024.05.28-15.07.13:925][299]LogEditorTransaction: Redo Rename Widget
+[2024.05.28-15.07.14:218][329]LogEditorTransaction: Redo Remove Widget
+[2024.05.28-15.07.15:346][462]LogEditorTransaction: Undo Remove Widget
+[2024.05.28-15.07.21:435][186]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.07.21:443][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider6)  does not have a valid matching component!
+[2024.05.28-15.07.21:443][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider5)  does not have a valid matching component!
+[2024.05.28-15.07.21:443][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider4)  does not have a valid matching component!
+[2024.05.28-15.07.21:443][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider3)  does not have a valid matching component!
+[2024.05.28-15.07.21:443][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider2)  does not have a valid matching component!
+[2024.05.28-15.07.21:443][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider1)  does not have a valid matching component!
+[2024.05.28-15.07.21:444][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider6)  does not have a valid matching component!
+[2024.05.28-15.07.21:444][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider5)  does not have a valid matching component!
+[2024.05.28-15.07.21:444][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider4)  does not have a valid matching component!
+[2024.05.28-15.07.21:444][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider3)  does not have a valid matching component!
+[2024.05.28-15.07.21:444][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider2)  does not have a valid matching component!
+[2024.05.28-15.07.21:444][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider1)  does not have a valid matching component!
+[2024.05.28-15.07.21:445][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider1
+[2024.05.28-15.07.21:445][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider2
+[2024.05.28-15.07.21:446][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider3
+[2024.05.28-15.07.21:446][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider4
+[2024.05.28-15.07.21:446][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider5
+[2024.05.28-15.07.21:447][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider6
+[2024.05.28-15.07.21:447][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider1
+[2024.05.28-15.07.21:447][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider2
+[2024.05.28-15.07.21:448][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.07.21:448][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.07.21:448][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.07.21:449][186]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.07.21:455][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:455][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:455][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:455][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:455][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:455][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:456][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:456][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:456][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:456][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:456][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:456][186]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.21:755][186]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2024.05.28-15.07.30:187][146]BlueprintLog: New page: Compile WBP_HUD
+[2024.05.28-15.07.30:235][146]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.05.28-15.07.36:564][811]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.07.36:573][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider6)  does not have a valid matching component!
+[2024.05.28-15.07.36:573][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider5)  does not have a valid matching component!
+[2024.05.28-15.07.36:573][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider4)  does not have a valid matching component!
+[2024.05.28-15.07.36:573][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider3)  does not have a valid matching component!
+[2024.05.28-15.07.36:573][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider2)  does not have a valid matching component!
+[2024.05.28-15.07.36:573][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (deactiveSlider1)  does not have a valid matching component!
+[2024.05.28-15.07.36:573][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider6)  does not have a valid matching component!
+[2024.05.28-15.07.36:574][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider5)  does not have a valid matching component!
+[2024.05.28-15.07.36:574][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider4)  does not have a valid matching component!
+[2024.05.28-15.07.36:574][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider3)  does not have a valid matching component!
+[2024.05.28-15.07.36:574][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider2)  does not have a valid matching component!
+[2024.05.28-15.07.36:574][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] On Value Changed (activeSlider1)  does not have a valid matching component!
+[2024.05.28-15.07.36:575][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider1
+[2024.05.28-15.07.36:575][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider2
+[2024.05.28-15.07.36:575][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider3
+[2024.05.28-15.07.36:576][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider4
+[2024.05.28-15.07.36:576][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider5
+[2024.05.28-15.07.36:577][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider6
+[2024.05.28-15.07.36:577][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider1
+[2024.05.28-15.07.36:577][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider2
+[2024.05.28-15.07.36:578][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.07.36:578][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.07.36:578][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.07.36:579][811]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.07.36:585][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:585][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:585][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:585][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:585][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:585][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:586][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:586][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:586][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:586][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:586][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:586][811]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.07.36:680][811]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.05.28-15.08.36:103][986]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.28-15.08.36:107][986]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.019
+[2024.05.28-15.08.36:108][986]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_Timeline] ([2] browsable assets)...
+[2024.05.28-15.08.36:111][986]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline]
+[2024.05.28-15.08.36:111][986]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_Timeline]
+[2024.05.28-15.08.36:146][986]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_Timeline_Auto9
+[2024.05.28-15.08.36:147][986]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline_Auto93591E7F14D8D5D31CE4999831FE4FEA8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_Timeline_Auto9.uasset'
+[2024.05.28-15.08.36:148][986]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_DragWidget] ([2] browsable assets)...
+[2024.05.28-15.08.36:150][986]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget]
+[2024.05.28-15.08.36:150][986]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_DragWidget]
+[2024.05.28-15.08.36:179][986]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_DragWidget_Auto9
+[2024.05.28-15.08.36:180][986]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget_Auto91325EB3C469AF6209D471D961B19030A.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_DragWidget_Auto9.uasset'
+[2024.05.28-15.08.36:181][986]LogFileHelpers: Auto-saving content packages took 0.073
+[2024.05.28-15.10.55:846][907]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.10.55:853][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider1
+[2024.05.28-15.10.55:854][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider2
+[2024.05.28-15.10.55:854][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider3
+[2024.05.28-15.10.55:854][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider4
+[2024.05.28-15.10.55:855][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider5
+[2024.05.28-15.10.55:855][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "activeSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get activeSlider6
+[2024.05.28-15.10.55:855][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider1" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider1
+[2024.05.28-15.10.55:856][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider2
+[2024.05.28-15.10.55:856][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.10.55:856][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.10.55:857][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.10.55:857][907]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.10.55:862][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:862][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:862][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:862][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:863][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:863][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Active Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:863][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 1  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:863][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:863][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:863][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:864][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:864][907]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.10.55:905][907]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.05.28-15.11.36:449][645]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.05.28-15.11.36:454][645]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.017
+[2024.05.28-15.11.36:454][645]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_DragWidget] ([2] browsable assets)...
+[2024.05.28-15.11.36:456][645]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget]
+[2024.05.28-15.11.36:456][645]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_DragWidget]
+[2024.05.28-15.11.36:485][645]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_DragWidget_Auto0
+[2024.05.28-15.11.36:486][645]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget_Auto0EC67D8C94D4F3BB30B079CB0F23E650F.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_DragWidget_Auto0.uasset'
+[2024.05.28-15.11.36:487][645]LogFileHelpers: Auto-saving content packages took 0.033
+[2024.05.28-15.14.37:040][596]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.05.28-15.14.37:043][596]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.016
+[2024.05.28-15.14.37:043][596]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_HUD] ([2] browsable assets)...
+[2024.05.28-15.14.37:048][596]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD]
+[2024.05.28-15.14.37:048][596]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_HUD]
+[2024.05.28-15.14.37:048][596]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_HUD_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2024.05.28-15.14.37:073][596]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_HUD_Auto1
+[2024.05.28-15.14.37:074][596]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUD_Auto15C87B34D434788606DD068A593168B19.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_HUD_Auto1.uasset'
+[2024.05.28-15.14.37:075][596]LogFileHelpers: Auto-saving content packages took 0.031
+[2024.05.28-15.18.37:263][868]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.28-15.18.37:265][868]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.015
+[2024.05.28-15.18.37:266][868]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_HUD] ([2] browsable assets)...
+[2024.05.28-15.18.37:270][868]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD]
+[2024.05.28-15.18.37:270][868]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_HUD]
+[2024.05.28-15.18.37:270][868]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_HUD_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2024.05.28-15.18.37:295][868]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_HUD_Auto2
+[2024.05.28-15.18.37:295][868]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUD_Auto2093E559B45F4FF6315F4E1BABF8B0CDB.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_HUD_Auto2.uasset'
+[2024.05.28-15.18.37:296][868]LogFileHelpers: Auto-saving content packages took 0.031
+[2024.05.28-15.20.39:687][233]BlueprintLog: New page: Compile WBP_HUD
+[2024.05.28-15.20.39:736][233]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.05.28-15.20.39:853][233]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.20.39:884][233]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset" SILENT=true
+[2024.05.28-15.20.39:908][233]LogSavePackage: Moving output files for package: /Game/UI/WBP_HUD
+[2024.05.28-15.20.39:908][233]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUDB910D2314C9D604E5AB62F9BC9851190.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset'
+[2024.05.28-15.20.39:914][233]LogFileHelpers: InternalPromptForCheckoutAndSave took 61 ms (total: 3.96 sec)
+[2024.05.28-15.20.39:922][233]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.05.28-15.20.39:922][233]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD
+[2024.05.28-15.21.06:195][319]LogSlate: Took 0.004520 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensedItalic.ttf' (160K)
+[2024.05.28-15.24.06:111][278]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.05.28-15.24.06:245][278]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2024.05.28-15.24.06:376][278]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.24.06:395][278]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.28-15.24.06:425][278]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.28-15.24.06:425][278]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget906F3CA9463AF579A497089F9CAEEE6C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.28-15.24.06:432][278]LogFileHelpers: InternalPromptForCheckoutAndSave took 56 ms (total: 4.01 sec)
+[2024.05.28-15.24.06:434][278]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.28-15.24.06:434][278]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-15.24.15:749][342]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.24.15:757][342]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider2" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider2
+[2024.05.28-15.24.15:757][342]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.24.15:757][342]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.24.15:758][342]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.24.15:758][342]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.24.15:763][342]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 2  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.15:763][342]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.15:763][342]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.15:764][342]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.15:764][342]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.15:828][342]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.05.28-15.24.38:386][934]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.24.38:394][934]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider3" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider3
+[2024.05.28-15.24.38:394][934]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider4" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider4
+[2024.05.28-15.24.38:394][934]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider5" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider5
+[2024.05.28-15.24.38:395][934]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] Could not find a variable named "deactiveSlider6" in 'WBP_Timeline_C'.
+Make sure 'WBP_Timeline_C' has been compiled for  Get deactiveSlider6
+[2024.05.28-15.24.38:400][934]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 3  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.38:400][934]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 4  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.38:400][934]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 5  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.38:400][934]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_Timeline.uasset: [Compiler] The property associated with  Deactive Slider 6  could not be found in '/Game/UI/WBP_Timeline.WBP_Timeline_C'
+[2024.05.28-15.24.38:453][934]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.05.28-15.24.50:391][289]LogSlate: Took 0.000727 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.05.28-15.26.42:071][282]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:20.141 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 10679 files in 13268 folders with total size 1205 MiB.
+[2024.05.28-15.26.51:400][337]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.26.51:474][337]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.05.28-15.26.51:687][337]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.26.51:717][337]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.26.51:748][337]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.26.51:748][337]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineBC8B68484D1960BA300A3087F91E767D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.26.51:756][337]LogFileHelpers: InternalPromptForCheckoutAndSave took 68 ms (total: 4.08 sec)
+[2024.05.28-15.26.51:769][337]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.26.51:769][337]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.26.58:956][145]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.26.59:026][145]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.05.28-15.26.59:245][145]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.26.59:273][145]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.26.59:303][145]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.26.59:304][145]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline1D010DF44396B34A8FBC8EB5A6682880.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.26.59:310][145]LogFileHelpers: InternalPromptForCheckoutAndSave took 65 ms (total: 4.15 sec)
+[2024.05.28-15.26.59:327][145]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.26.59:327][145]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.28.01:175][215]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.28.01:248][215]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.05.28-15.28.01:471][215]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.28.01:496][215]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.28.01:527][215]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.28.01:528][215]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline68F6FC7B48E1C75F62F108AB429AEEF2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.28.01:534][215]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 4.21 sec)
+[2024.05.28-15.28.01:552][215]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.28.01:552][215]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.28.12:167][448]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.28.12:178][448]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.28.12:180][448]LogPlayLevel: [PlayLevel] Compiling WBP_HUD before play...
+[2024.05.28-15.28.12:320][448]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.28.12:349][448]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset" SILENT=true
+[2024.05.28-15.28.12:374][448]LogSavePackage: Moving output files for package: /Game/UI/WBP_HUD
+[2024.05.28-15.28.12:375][448]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUD8E440C3941420D26C03B2BA427BB7640.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset'
+[2024.05.28-15.28.12:380][448]LogFileHelpers: InternalPromptForCheckoutAndSave took 60 ms (total: 4.27 sec)
+[2024.05.28-15.28.12:394][448]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2024.05.28-15.28.12:396][448]LogPlayLevel: PlayLevel: Blueprint regeneration took 218 ms (1 blueprints)
+[2024.05.28-15.28.12:396][448]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:28:12)
+[2024.05.28-15.28.12:397][448]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.28.12:426][448]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029547s)
+[2024.05.28-15.28.12:426][448]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029575s)
+[2024.05.28-15.28.12:437][448]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.28-15.28.12:438][448]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.28.12:438][448]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.28.12:438][448]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.28.12:439][448]LogPlayLevel: PIE: World Init took: (0.000894s)
+[2024.05.28-15.28.12:439][448]LogAudio: Display: Creating Audio Device:                 Id: 59, Scope: Unique, Realtime: True
+[2024.05.28-15.28.12:439][448]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.28.12:439][448]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.28.12:439][448]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.28.12:439][448]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.28.12:439][448]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.28.12:439][448]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.28.12:439][448]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.28.12:439][448]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.28.12:439][448]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.28.12:439][448]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.28.12:439][448]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.28.12:441][448]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.28.12:473][448]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.28.12:473][448]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.28.12:473][448]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.28.12:473][448]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.28.12:474][448]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=59
+[2024.05.28-15.28.12:474][448]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=59
+[2024.05.28-15.28.12:475][448]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=59
+[2024.05.28-15.28.12:476][448]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=59
+[2024.05.28-15.28.12:476][448]LogInit: FAudioDevice initialized with ID 59.
+[2024.05.28-15.28.12:476][448]LogAudio: Display: Audio Device (ID: 59) registered with world 'Sandbox1'.
+[2024.05.28-15.28.12:476][448]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 59
+[2024.05.28-15.28.12:500][448]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.28.12:500][448]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.28.12:509][448]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.28.12:509][448]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.28.12:509][448]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.28.12
+[2024.05.28-15.28.12:510][448]LogWorld: Bringing up level for play took: 0.009693
+[2024.05.28-15.28.12:511][448]LogOnline: OSS: Created online subsystem instance for: :Context_67
+[2024.05.28-15.28.12:512][448]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.28.12:517][448]PIE: Server logged in
+[2024.05.28-15.28.12:518][448]PIE: Play in editor total start time 0.34 seconds.
+[2024.05.28-15.28.12:556][448]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.28.12:566][449]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.05.28-15.28.12:566][449]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD
+[2024.05.28-15.28.12:748][449]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.28.19:374][ 16]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.28.19:374][ 16]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.28.19:375][ 16]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.28.19:378][ 16]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.28.19:380][ 16]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.28.19:381][ 16]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.28.19:386][ 16]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.28.19:400][ 16]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 59
+[2024.05.28-15.28.19:400][ 16]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=59
+[2024.05.28-15.28.19:401][ 16]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=59
+[2024.05.28-15.28.19:410][ 16]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2024.05.28-15.28.19:445][ 18]LogPlayLevel: Display: Destroying online subsystem :Context_67
+[2024.05.28-15.29.20:325][658]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.29.20:396][658]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.05.28-15.29.20:619][658]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.29.20:649][658]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.29.20:681][658]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.29.20:682][658]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline8D9C3CFE4F996AA702594AAE1EAE61B5.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.29.20:689][658]LogFileHelpers: InternalPromptForCheckoutAndSave took 69 ms (total: 4.34 sec)
+[2024.05.28-15.29.20:706][658]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.29.20:706][658]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.29.21:250][703]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.29.21:262][703]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.28-15.29.21:262][703]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:29:21)
+[2024.05.28-15.29.21:262][703]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.29.21:291][703]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029241s)
+[2024.05.28-15.29.21:291][703]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029266s)
+[2024.05.28-15.29.21:304][703]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.05.28-15.29.21:307][703]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.29.21:307][703]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.29.21:307][703]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.29.21:308][703]LogPlayLevel: PIE: World Init took: (0.000838s)
+[2024.05.28-15.29.21:308][703]LogAudio: Display: Creating Audio Device:                 Id: 60, Scope: Unique, Realtime: True
+[2024.05.28-15.29.21:308][703]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.29.21:308][703]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.29.21:308][703]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.29.21:308][703]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.29.21:308][703]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.29.21:308][703]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.29.21:308][703]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.29.21:308][703]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.29.21:308][703]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.29.21:308][703]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.29.21:308][703]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.29.21:310][703]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.29.21:334][703]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.29.21:334][703]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.29.21:334][703]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.29.21:334][703]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.29.21:335][703]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=60
+[2024.05.28-15.29.21:335][703]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=60
+[2024.05.28-15.29.21:336][703]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=60
+[2024.05.28-15.29.21:336][703]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=60
+[2024.05.28-15.29.21:336][703]LogInit: FAudioDevice initialized with ID 60.
+[2024.05.28-15.29.21:336][703]LogAudio: Display: Audio Device (ID: 60) registered with world 'Sandbox1'.
+[2024.05.28-15.29.21:336][703]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 60
+[2024.05.28-15.29.21:361][703]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.29.21:361][703]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.29.21:370][703]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.29.21:370][703]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.29.21:371][703]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.29.21
+[2024.05.28-15.29.21:371][703]LogWorld: Bringing up level for play took: 0.010371
+[2024.05.28-15.29.21:373][703]LogOnline: OSS: Created online subsystem instance for: :Context_68
+[2024.05.28-15.29.21:374][703]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.29.21:378][703]PIE: Server logged in
+[2024.05.28-15.29.21:380][703]PIE: Play in editor total start time 0.117 seconds.
+[2024.05.28-15.29.21:392][703]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.29.21:551][706]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.29.30:532][483]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.29.30:532][483]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.29.30:533][483]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.29.30:538][483]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.29.30:540][483]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.29.30:541][483]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.29.30:546][483]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.29.30:561][483]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.28-15.29.30:561][483]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 60
+[2024.05.28-15.29.30:561][483]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=60
+[2024.05.28-15.29.30:562][483]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=60
+[2024.05.28-15.29.30:570][483]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2024.05.28-15.29.30:604][485]LogPlayLevel: Display: Destroying online subsystem :Context_68
+[2024.05.28-15.29.49:211][597]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.29.49:222][597]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.29.49:228][597]LogPlayLevel: [PlayLevel] Compiling WBP_DragWidget before play...
+[2024.05.28-15.29.49:457][597]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.29.49:486][597]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.28-15.29.49:514][597]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.28-15.29.49:515][597]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidgetF5C1529247A990EE885345AA0C082EEA.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.28-15.29.49:521][597]LogFileHelpers: InternalPromptForCheckoutAndSave took 64 ms (total: 4.40 sec)
+[2024.05.28-15.29.49:536][597]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.05.28-15.29.49:539][597]LogPlayLevel: PlayLevel: Blueprint regeneration took 316 ms (1 blueprints)
+[2024.05.28-15.29.49:539][597]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:29:49)
+[2024.05.28-15.29.49:539][597]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.29.49:570][597]LogPlayLevel: PIE: StaticDuplicateObject took: (0.031623s)
+[2024.05.28-15.29.49:570][597]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.031648s)
+[2024.05.28-15.29.49:582][597]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2024.05.28-15.29.49:583][597]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.29.49:583][597]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.29.49:584][597]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.29.49:584][597]LogPlayLevel: PIE: World Init took: (0.000801s)
+[2024.05.28-15.29.49:584][597]LogAudio: Display: Creating Audio Device:                 Id: 61, Scope: Unique, Realtime: True
+[2024.05.28-15.29.49:584][597]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.29.49:584][597]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.29.49:584][597]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.29.49:584][597]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.29.49:584][597]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.29.49:584][597]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.29.49:584][597]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.29.49:584][597]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.29.49:585][597]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.29.49:585][597]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.29.49:585][597]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.29.49:587][597]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.29.49:610][597]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.29.49:610][597]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.29.49:611][597]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.29.49:611][597]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.29.49:611][597]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=61
+[2024.05.28-15.29.49:611][597]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=61
+[2024.05.28-15.29.49:612][597]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=61
+[2024.05.28-15.29.49:612][597]LogInit: FAudioDevice initialized with ID 61.
+[2024.05.28-15.29.49:612][597]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=61
+[2024.05.28-15.29.49:612][597]LogAudio: Display: Audio Device (ID: 61) registered with world 'Sandbox1'.
+[2024.05.28-15.29.49:612][597]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 61
+[2024.05.28-15.29.49:638][597]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.29.49:638][597]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.29.49:647][597]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.29.49:647][597]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.29.49:648][597]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.29.49
+[2024.05.28-15.29.49:648][597]LogWorld: Bringing up level for play took: 0.009850
+[2024.05.28-15.29.49:650][597]LogOnline: OSS: Created online subsystem instance for: :Context_69
+[2024.05.28-15.29.49:651][597]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.29.49:655][597]PIE: Server logged in
+[2024.05.28-15.29.49:656][597]PIE: Play in editor total start time 0.434 seconds.
+[2024.05.28-15.29.49:698][597]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.29.49:705][598]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.28-15.29.49:705][598]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-15.29.49:883][598]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.29.58:294][423]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.29.58:294][423]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.29.58:294][423]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.29.58:298][423]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.29.58:299][423]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.29.58:301][423]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.29.58:306][423]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.29.58:321][423]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 61
+[2024.05.28-15.29.58:321][423]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=61
+[2024.05.28-15.29.58:322][423]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=61
+[2024.05.28-15.29.58:329][423]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.05.28-15.29.58:371][426]LogPlayLevel: Display: Destroying online subsystem :Context_69
+[2024.05.28-15.30.35:605][783]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.30.35:615][783]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.30.35:621][783]LogPlayLevel: [PlayLevel] Compiling WBP_DragWidget before play...
+[2024.05.28-15.30.35:861][783]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.30.35:891][783]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.28-15.30.35:919][783]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.28-15.30.35:920][783]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget2342D03C4A0C61FD3AA974ADFC9A16F8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.28-15.30.35:926][783]LogFileHelpers: InternalPromptForCheckoutAndSave took 64 ms (total: 4.47 sec)
+[2024.05.28-15.30.35:941][783]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.05.28-15.30.35:944][783]LogPlayLevel: PlayLevel: Blueprint regeneration took 328 ms (1 blueprints)
+[2024.05.28-15.30.35:944][783]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:30:35)
+[2024.05.28-15.30.35:944][783]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.30.35:975][783]LogPlayLevel: PIE: StaticDuplicateObject took: (0.030991s)
+[2024.05.28-15.30.35:975][783]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.031022s)
+[2024.05.28-15.30.35:986][783]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2024.05.28-15.30.35:987][783]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.30.35:987][783]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.30.35:987][783]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.30.35:987][783]LogPlayLevel: PIE: World Init took: (0.000784s)
+[2024.05.28-15.30.35:987][783]LogAudio: Display: Creating Audio Device:                 Id: 62, Scope: Unique, Realtime: True
+[2024.05.28-15.30.35:987][783]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.30.35:987][783]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.30.35:987][783]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.30.35:987][783]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.30.35:988][783]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.30.35:988][783]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.30.35:988][783]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.30.35:988][783]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.30.35:988][783]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.30.35:988][783]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.30.35:988][783]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.30.35:990][783]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.30.36:014][783]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.30.36:014][783]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.30.36:014][783]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.30.36:014][783]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.30.36:014][783]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=62
+[2024.05.28-15.30.36:014][783]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=62
+[2024.05.28-15.30.36:016][783]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=62
+[2024.05.28-15.30.36:016][783]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=62
+[2024.05.28-15.30.36:016][783]LogInit: FAudioDevice initialized with ID 62.
+[2024.05.28-15.30.36:016][783]LogAudio: Display: Audio Device (ID: 62) registered with world 'Sandbox1'.
+[2024.05.28-15.30.36:016][783]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 62
+[2024.05.28-15.30.36:041][783]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.30.36:041][783]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.30.36:050][783]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.30.36:050][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.30.36:051][783]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.30.36
+[2024.05.28-15.30.36:051][783]LogWorld: Bringing up level for play took: 0.010024
+[2024.05.28-15.30.36:052][783]LogOnline: OSS: Created online subsystem instance for: :Context_70
+[2024.05.28-15.30.36:053][783]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.30.36:057][783]PIE: Server logged in
+[2024.05.28-15.30.36:058][783]PIE: Play in editor total start time 0.443 seconds.
+[2024.05.28-15.30.36:110][783]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.30.36:117][784]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.28-15.30.36:118][784]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-15.30.36:301][784]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.30.56:205][814]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.30.56:205][814]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.30.56:205][814]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.30.56:210][814]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.30.56:211][814]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.30.56:214][814]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.30.56:219][814]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.30.56:236][814]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 62
+[2024.05.28-15.30.56:236][814]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=62
+[2024.05.28-15.30.56:237][814]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=62
+[2024.05.28-15.30.56:245][814]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.28-15.30.56:266][815]LogPlayLevel: Display: Destroying online subsystem :Context_70
+[2024.05.28-15.31.37:383][633]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.31.37:393][633]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.31.37:397][633]LogPlayLevel: [PlayLevel] Compiling WBP_DragWidget before play...
+[2024.05.28-15.31.37:646][633]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.31.37:675][633]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.28-15.31.37:710][633]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.28-15.31.37:710][633]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidgetEE18A2114F025F8B7D91EB96FDAB90AF.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.28-15.31.37:717][633]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 4.54 sec)
+[2024.05.28-15.31.37:733][633]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.05.28-15.31.37:736][633]LogPlayLevel: PlayLevel: Blueprint regeneration took 342 ms (1 blueprints)
+[2024.05.28-15.31.37:736][633]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:31:37)
+[2024.05.28-15.31.37:736][633]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.31.37:770][633]LogPlayLevel: PIE: StaticDuplicateObject took: (0.033733s)
+[2024.05.28-15.31.37:770][633]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.033760s)
+[2024.05.28-15.31.37:783][633]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.05.28-15.31.37:784][633]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.31.37:784][633]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.31.37:785][633]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.31.37:785][633]LogPlayLevel: PIE: World Init took: (0.000750s)
+[2024.05.28-15.31.37:785][633]LogAudio: Display: Creating Audio Device:                 Id: 63, Scope: Unique, Realtime: True
+[2024.05.28-15.31.37:785][633]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.31.37:785][633]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.31.37:785][633]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.31.37:785][633]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.31.37:785][633]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.31.37:785][633]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.31.37:785][633]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.31.37:785][633]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.31.37:785][633]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.31.37:785][633]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.31.37:785][633]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.31.37:787][633]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.31.37:814][633]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.31.37:814][633]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.31.37:815][633]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.31.37:815][633]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.31.37:815][633]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=63
+[2024.05.28-15.31.37:815][633]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=63
+[2024.05.28-15.31.37:817][633]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=63
+[2024.05.28-15.31.37:817][633]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=63
+[2024.05.28-15.31.37:817][633]LogInit: FAudioDevice initialized with ID 63.
+[2024.05.28-15.31.37:817][633]LogAudio: Display: Audio Device (ID: 63) registered with world 'Sandbox1'.
+[2024.05.28-15.31.37:817][633]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 63
+[2024.05.28-15.31.37:841][633]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.31.37:841][633]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.31.37:850][633]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.31.37:850][633]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.31.37:850][633]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.31.37
+[2024.05.28-15.31.37:850][633]LogWorld: Bringing up level for play took: 0.009504
+[2024.05.28-15.31.37:852][633]LogOnline: OSS: Created online subsystem instance for: :Context_71
+[2024.05.28-15.31.37:853][633]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.31.37:857][633]PIE: Server logged in
+[2024.05.28-15.31.37:857][633]PIE: Play in editor total start time 0.464 seconds.
+[2024.05.28-15.31.37:905][633]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.31.37:913][634]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.28-15.31.37:913][634]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-15.31.38:094][634]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.33.16:334][738]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.33.16:334][738]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.33.16:334][738]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.33.16:340][738]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.33.16:341][738]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.33.16:344][738]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.33.16:349][738]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.33.16:367][738]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 63
+[2024.05.28-15.33.16:367][738]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=63
+[2024.05.28-15.33.16:369][738]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=63
+[2024.05.28-15.33.16:376][738]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.28-15.33.16:640][739]LogPlayLevel: Display: Destroying online subsystem :Context_71
+[2024.05.28-15.34.03:104][945]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.34.03:115][945]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.34.03:119][945]LogPlayLevel: [PlayLevel] Compiling WBP_DragWidget before play...
+[2024.05.28-15.34.03:349][945]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.34.03:376][945]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.28-15.34.03:405][945]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.28-15.34.03:406][945]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget7EACAB9D49BEEDC2D2C11B9B6ED948EE.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.28-15.34.03:412][945]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 4.60 sec)
+[2024.05.28-15.34.03:427][945]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.28-15.34.03:429][945]LogPlayLevel: PlayLevel: Blueprint regeneration took 314 ms (1 blueprints)
+[2024.05.28-15.34.03:429][945]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:34:03)
+[2024.05.28-15.34.03:429][945]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.34.03:460][945]LogPlayLevel: PIE: StaticDuplicateObject took: (0.030821s)
+[2024.05.28-15.34.03:460][945]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.030846s)
+[2024.05.28-15.34.03:471][945]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.05.28-15.34.03:471][945]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.34.03:471][945]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.34.03:472][945]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.34.03:473][945]LogPlayLevel: PIE: World Init took: (0.000917s)
+[2024.05.28-15.34.03:473][945]LogAudio: Display: Creating Audio Device:                 Id: 64, Scope: Unique, Realtime: True
+[2024.05.28-15.34.03:473][945]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.34.03:473][945]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.34.03:473][945]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.34.03:473][945]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.34.03:473][945]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.34.03:473][945]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.34.03:473][945]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.34.03:473][945]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.34.03:473][945]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.34.03:473][945]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.34.03:473][945]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.34.03:475][945]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.34.03:499][945]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.34.03:499][945]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.34.03:499][945]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.34.03:499][945]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.34.03:500][945]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=64
+[2024.05.28-15.34.03:500][945]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=64
+[2024.05.28-15.34.03:501][945]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=64
+[2024.05.28-15.34.03:501][945]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=64
+[2024.05.28-15.34.03:501][945]LogInit: FAudioDevice initialized with ID 64.
+[2024.05.28-15.34.03:501][945]LogAudio: Display: Audio Device (ID: 64) registered with world 'Sandbox1'.
+[2024.05.28-15.34.03:501][945]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 64
+[2024.05.28-15.34.03:521][945]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.34.03:521][945]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.34.03:530][945]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.34.03:530][945]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.34.03:531][945]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.34.03
+[2024.05.28-15.34.03:531][945]LogWorld: Bringing up level for play took: 0.010070
+[2024.05.28-15.34.03:533][945]LogOnline: OSS: Created online subsystem instance for: :Context_72
+[2024.05.28-15.34.03:533][945]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.34.03:537][945]PIE: Server logged in
+[2024.05.28-15.34.03:538][945]PIE: Play in editor total start time 0.423 seconds.
+[2024.05.28-15.34.03:587][945]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.34.03:595][946]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.28-15.34.03:595][946]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-15.34.03:783][946]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.34.23:533][836]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.34.23:533][836]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.34.23:533][836]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.34.23:537][836]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.34.23:539][836]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.34.23:540][836]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.34.23:545][836]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.34.23:562][836]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 64
+[2024.05.28-15.34.23:562][836]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=64
+[2024.05.28-15.34.23:563][836]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=64
+[2024.05.28-15.34.23:571][836]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
+[2024.05.28-15.34.23:594][837]LogPlayLevel: Display: Destroying online subsystem :Context_72
+[2024.05.28-15.34.37:399][443]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.34.37:410][443]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.34.37:417][443]LogPlayLevel: [PlayLevel] Compiling WBP_DragWidget before play...
+[2024.05.28-15.34.37:621][443]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.34.37:648][443]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.28-15.34.37:677][443]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.28-15.34.37:677][443]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget6D0958FE4B3E453057B1AD87D9053B98.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.28-15.34.37:683][443]LogFileHelpers: InternalPromptForCheckoutAndSave took 61 ms (total: 4.66 sec)
+[2024.05.28-15.34.37:698][443]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.05.28-15.34.37:701][443]LogPlayLevel: PlayLevel: Blueprint regeneration took 289 ms (1 blueprints)
+[2024.05.28-15.34.37:701][443]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:34:37)
+[2024.05.28-15.34.37:701][443]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.34.37:740][443]LogPlayLevel: PIE: StaticDuplicateObject took: (0.039264s)
+[2024.05.28-15.34.37:740][443]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.039308s)
+[2024.05.28-15.34.37:752][443]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2024.05.28-15.34.37:753][443]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.34.37:753][443]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.34.37:753][443]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.34.37:753][443]LogPlayLevel: PIE: World Init took: (0.000864s)
+[2024.05.28-15.34.37:754][443]LogAudio: Display: Creating Audio Device:                 Id: 65, Scope: Unique, Realtime: True
+[2024.05.28-15.34.37:754][443]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.34.37:754][443]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.34.37:754][443]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.34.37:754][443]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.34.37:754][443]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.34.37:754][443]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.34.37:754][443]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.34.37:754][443]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.34.37:754][443]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.34.37:754][443]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.34.37:754][443]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.34.37:756][443]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.34.37:779][443]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.34.37:779][443]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.34.37:779][443]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.34.37:779][443]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.34.37:779][443]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=65
+[2024.05.28-15.34.37:779][443]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=65
+[2024.05.28-15.34.37:781][443]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=65
+[2024.05.28-15.34.37:781][443]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=65
+[2024.05.28-15.34.37:781][443]LogInit: FAudioDevice initialized with ID 65.
+[2024.05.28-15.34.37:781][443]LogAudio: Display: Audio Device (ID: 65) registered with world 'Sandbox1'.
+[2024.05.28-15.34.37:781][443]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 65
+[2024.05.28-15.34.37:805][443]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.34.37:805][443]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.34.37:815][443]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.34.37:815][443]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.34.37:816][443]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.34.37
+[2024.05.28-15.34.37:816][443]LogWorld: Bringing up level for play took: 0.010957
+[2024.05.28-15.34.37:818][443]LogOnline: OSS: Created online subsystem instance for: :Context_73
+[2024.05.28-15.34.37:819][443]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.34.37:824][443]PIE: Server logged in
+[2024.05.28-15.34.37:825][443]PIE: Play in editor total start time 0.414 seconds.
+[2024.05.28-15.34.37:874][443]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.34.37:881][444]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.28-15.34.37:881][444]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-15.34.38:069][444]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.35.32:643][756]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.35.32:643][756]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.35.32:643][756]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.35.32:647][756]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.35.32:648][756]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.35.32:650][756]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.35.32:656][756]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.35.32:676][756]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 65
+[2024.05.28-15.35.32:676][756]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=65
+[2024.05.28-15.35.32:678][756]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=65
+[2024.05.28-15.35.32:686][756]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2024.05.28-15.35.32:708][757]LogPlayLevel: Display: Destroying online subsystem :Context_73
+[2024.05.28-15.35.42:493][900]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.05.28-15.35.42:499][900]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_DragWidget.uasset: [Compiler] Could not find a variable named "bkg" in 'WBP_DragWidget_C'.
+Make sure 'WBP_DragWidget_C' has been compiled for  Get bkg
+[2024.05.28-15.35.42:509][900]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_DragWidget.uasset: [Compiler] The property associated with  Bkg  could not be found in '/Game/UI/WBP_DragWidget.WBP_DragWidget_C'
+[2024.05.28-15.35.42:611][900]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2024.05.28-15.35.50:525][802]LogEditorTransaction: Undo Remove Widget
+[2024.05.28-15.35.58:069][624]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.28-15.36.00:298][890]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.05.28-15.36.00:423][890]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.28-15.36.00:626][890]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.36.00:656][890]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.28-15.36.00:686][890]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.28-15.36.00:687][890]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidgetE49465054CFC79EE1406ACB8A7E1F098.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.28-15.36.00:693][890]LogFileHelpers: InternalPromptForCheckoutAndSave took 67 ms (total: 4.73 sec)
+[2024.05.28-15.36.00:708][890]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.28-15.36.00:708][890]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.28-15.36.05:807][476]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.36.05:818][476]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.28-15.36.05:818][476]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:36:05)
+[2024.05.28-15.36.05:818][476]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.36.05:848][476]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029915s)
+[2024.05.28-15.36.05:848][476]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029941s)
+[2024.05.28-15.36.05:861][476]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2024.05.28-15.36.05:864][476]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.36.05:864][476]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.36.05:864][476]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.36.05:864][476]LogPlayLevel: PIE: World Init took: (0.000780s)
+[2024.05.28-15.36.05:864][476]LogAudio: Display: Creating Audio Device:                 Id: 66, Scope: Unique, Realtime: True
+[2024.05.28-15.36.05:864][476]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.36.05:864][476]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.36.05:864][476]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.36.05:864][476]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.36.05:864][476]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.36.05:864][476]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.36.05:864][476]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.36.05:864][476]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.36.05:864][476]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.36.05:864][476]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.36.05:864][476]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.36.05:866][476]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.36.05:890][476]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.36.05:890][476]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.36.05:890][476]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.36.05:890][476]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.36.05:891][476]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=66
+[2024.05.28-15.36.05:891][476]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=66
+[2024.05.28-15.36.05:892][476]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=66
+[2024.05.28-15.36.05:892][476]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=66
+[2024.05.28-15.36.05:892][476]LogInit: FAudioDevice initialized with ID 66.
+[2024.05.28-15.36.05:892][476]LogAudio: Display: Audio Device (ID: 66) registered with world 'Sandbox1'.
+[2024.05.28-15.36.05:892][476]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 66
+[2024.05.28-15.36.05:918][476]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.36.05:918][476]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.36.05:927][476]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.36.05:927][476]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.36.05:927][476]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.36.05
+[2024.05.28-15.36.05:927][476]LogWorld: Bringing up level for play took: 0.009587
+[2024.05.28-15.36.05:929][476]LogOnline: OSS: Created online subsystem instance for: :Context_74
+[2024.05.28-15.36.05:930][476]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.36.05:935][476]PIE: Server logged in
+[2024.05.28-15.36.05:935][476]PIE: Play in editor total start time 0.118 seconds.
+[2024.05.28-15.36.05:947][476]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.36.06:105][479]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.36.17:472][529]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.36.17:472][529]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.36.17:473][529]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.36.17:476][529]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.36.17:477][529]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.36.17:479][529]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.36.17:484][529]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.36.17:501][529]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.28-15.36.17:501][529]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 66
+[2024.05.28-15.36.17:501][529]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=66
+[2024.05.28-15.36.17:502][529]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=66
+[2024.05.28-15.36.17:511][529]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2024.05.28-15.36.17:542][531]LogPlayLevel: Display: Destroying online subsystem :Context_74
+[2024.05.28-15.41.00:280][329]LogInterchangeEngine: [Pending] Importing
+[2024.05.28-15.41.00:281][329]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/Deany/Pictu.../UNI/MicrobeMachines/timeline.png]
+[2024.05.28-15.41.00:287][329]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.05.28-15.41.00:297][330]LogTexture: Display: Building textures: /Game/UI/Image/timeline.timeline (TFO_AutoDXT, 300x60 x1x1x1) (Required Memory Estimate: 2.900635 MB), EncodeSpeed: Fast
+[2024.05.28-15.41.00:321][330]LogInterchangeEngine: [Success] Import Done
+[2024.05.28-15.41.00:325][330]LogInterchangeEngine: [Success] Import Done
+[2024.05.28-15.41.00:610][331]LogInterchangeEngine: [Success] Import Done
+[2024.05.28-15.41.37:393][624]LogSlate: Took 0.000137 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.05.28-15.41.37:464][629]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.42.31:781][591]LogInterchangeEngine: [Pending] Importing
+[2024.05.28-15.42.31:781][591]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/Deany/Pictu.../UNI/MicrobeMachines/timeline.png]
+[2024.05.28-15.42.31:783][591]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.05.28-15.42.31:785][591]LogTexture: Display: Building textures: /Game/UI/Image/timeline.timeline (TFO_AutoDXT, 300x60 x1x1x1) (Required Memory Estimate: 2.900635 MB), EncodeSpeed: Fast
+[2024.05.28-15.42.31:787][591]LogInterchangeEngine: [Success] Import Done
+[2024.05.28-15.42.31:804][592]LogInterchangeEngine: [Success] Import Done
+[2024.05.28-15.42.33:659][753]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.42.33:745][753]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.05.28-15.42.34:004][753]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.42.34:034][753]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.42.34:066][753]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.42.34:067][753]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineAAF65C2A4D4E7C6C4ADDBF8A6773FD74.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.42.34:074][753]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 4.80 sec)
+[2024.05.28-15.42.34:095][753]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.42.34:095][753]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.42.47:899][300]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.28-15.42.49:378][444]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.28-15.42.53:119][852]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.28-15.42.54:615][992]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.28-15.42.55:598][ 75]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.28-15.43.36:511][771]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.43.36:594][771]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.28-15.43.36:878][771]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.43.36:907][771]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.43.36:941][771]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.43.36:941][771]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline6F2C954B4150BA8A7117FA825ACC5AF9.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.43.36:947][771]LogFileHelpers: InternalPromptForCheckoutAndSave took 69 ms (total: 4.87 sec)
+[2024.05.28-15.43.36:991][771]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.43.36:991][771]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.43.38:803][965]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.43.38:813][965]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.28-15.43.38:813][965]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:43:38)
+[2024.05.28-15.43.38:813][965]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.43.38:844][965]LogPlayLevel: PIE: StaticDuplicateObject took: (0.030991s)
+[2024.05.28-15.43.38:844][965]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.031017s)
+[2024.05.28-15.43.38:859][965]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.05.28-15.43.38:860][965]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.43.38:861][965]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.43.38:861][965]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.43.38:861][965]LogPlayLevel: PIE: World Init took: (0.000899s)
+[2024.05.28-15.43.38:861][965]LogAudio: Display: Creating Audio Device:                 Id: 67, Scope: Unique, Realtime: True
+[2024.05.28-15.43.38:861][965]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.43.38:861][965]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.43.38:861][965]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.43.38:861][965]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.43.38:861][965]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.43.38:861][965]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.43.38:861][965]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.43.38:861][965]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.43.38:861][965]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.43.38:861][965]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.43.38:861][965]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.43.38:864][965]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.43.38:888][965]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.43.38:889][965]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.43.38:889][965]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.43.38:889][965]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.43.38:889][965]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=67
+[2024.05.28-15.43.38:889][965]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=67
+[2024.05.28-15.43.38:890][965]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=67
+[2024.05.28-15.43.38:891][965]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=67
+[2024.05.28-15.43.38:891][965]LogInit: FAudioDevice initialized with ID 67.
+[2024.05.28-15.43.38:891][965]LogAudio: Display: Audio Device (ID: 67) registered with world 'Sandbox1'.
+[2024.05.28-15.43.38:891][965]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 67
+[2024.05.28-15.43.38:912][965]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.43.38:912][965]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.43.38:921][965]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.43.38:921][965]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.43.38:921][965]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.43.38
+[2024.05.28-15.43.38:922][965]LogWorld: Bringing up level for play took: 0.009546
+[2024.05.28-15.43.38:924][965]LogOnline: OSS: Created online subsystem instance for: :Context_76
+[2024.05.28-15.43.38:925][965]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.43.38:929][965]PIE: Server logged in
+[2024.05.28-15.43.38:931][965]PIE: Play in editor total start time 0.118 seconds.
+[2024.05.28-15.43.38:943][965]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.43.39:101][968]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.43.47:973][699]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.43.47:973][699]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.43.47:973][699]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.43.47:978][699]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.43.47:979][699]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.43.47:981][699]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.43.47:986][699]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.43.48:005][699]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.28-15.43.48:005][699]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 67
+[2024.05.28-15.43.48:006][699]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=67
+[2024.05.28-15.43.48:007][699]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=67
+[2024.05.28-15.43.48:015][699]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2024.05.28-15.43.48:038][700]LogPlayLevel: Display: Destroying online subsystem :Context_76
+[2024.05.28-15.44.03:579][317]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.44.03:590][317]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.44.03:593][317]LogPlayLevel: [PlayLevel] Compiling WBP_Timeline before play...
+[2024.05.28-15.44.03:879][317]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.44.03:900][317]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.44.03:934][317]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.44.03:935][317]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineA41099174A7F32618ED9CF81E6C2A44E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.44.03:942][317]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 4.93 sec)
+[2024.05.28-15.44.03:958][317]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.05.28-15.44.03:959][317]LogPlayLevel: PlayLevel: Blueprint regeneration took 369 ms (1 blueprints)
+[2024.05.28-15.44.03:959][317]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:44:03)
+[2024.05.28-15.44.03:959][317]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.44.03:989][317]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029920s)
+[2024.05.28-15.44.03:989][317]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029945s)
+[2024.05.28-15.44.04:003][317]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.05.28-15.44.04:005][317]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.44.04:005][317]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.44.04:005][317]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.44.04:006][317]LogPlayLevel: PIE: World Init took: (0.000841s)
+[2024.05.28-15.44.04:006][317]LogAudio: Display: Creating Audio Device:                 Id: 68, Scope: Unique, Realtime: True
+[2024.05.28-15.44.04:006][317]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.44.04:006][317]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.44.04:006][317]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.44.04:006][317]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.44.04:006][317]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.44.04:006][317]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.44.04:006][317]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.44.04:006][317]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.44.04:006][317]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.44.04:006][317]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.44.04:006][317]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.44.04:008][317]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.44.04:031][317]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.44.04:031][317]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.44.04:031][317]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.44.04:031][317]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.44.04:032][317]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=68
+[2024.05.28-15.44.04:032][317]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=68
+[2024.05.28-15.44.04:034][317]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=68
+[2024.05.28-15.44.04:034][317]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=68
+[2024.05.28-15.44.04:034][317]LogInit: FAudioDevice initialized with ID 68.
+[2024.05.28-15.44.04:034][317]LogAudio: Display: Audio Device (ID: 68) registered with world 'Sandbox1'.
+[2024.05.28-15.44.04:034][317]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 68
+[2024.05.28-15.44.04:057][317]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.44.04:057][317]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.44.04:067][317]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.44.04:067][317]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.44.04:068][317]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.44.04
+[2024.05.28-15.44.04:068][317]LogWorld: Bringing up level for play took: 0.009776
+[2024.05.28-15.44.04:070][317]LogOnline: OSS: Created online subsystem instance for: :Context_77
+[2024.05.28-15.44.04:070][317]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.44.04:075][317]PIE: Server logged in
+[2024.05.28-15.44.04:076][317]PIE: Play in editor total start time 0.486 seconds.
+[2024.05.28-15.44.04:165][317]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.44.04:201][318]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.44.04:201][318]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.44.04:280][318]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.44.43:204][727]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.44.43:204][727]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.44.43:204][727]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.44.43:208][727]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.44.43:209][727]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.44.43:211][727]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.44.43:216][727]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.44.43:236][727]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 68
+[2024.05.28-15.44.43:236][727]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=68
+[2024.05.28-15.44.43:237][727]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=68
+[2024.05.28-15.44.43:244][727]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.05.28-15.44.43:281][729]LogPlayLevel: Display: Destroying online subsystem :Context_77
+[2024.05.28-15.47.59:241][469]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.28-15.47.59:333][469]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.05.28-15.47.59:551][469]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.47.59:581][469]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.47.59:624][469]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.47.59:625][469]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline0E0E466547DB80572BF9289382901609.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.47.59:631][469]LogFileHelpers: InternalPromptForCheckoutAndSave took 80 ms (total: 5.01 sec)
+[2024.05.28-15.47.59:661][469]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.47.59:661][469]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.48.20:107][783]BlueprintLog: New page: Compile WBP_HUD
+[2024.05.28-15.48.20:161][783]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.05.28-15.48.20:266][783]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.48.20:297][783]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset" SILENT=true
+[2024.05.28-15.48.20:322][783]LogSavePackage: Moving output files for package: /Game/UI/WBP_HUD
+[2024.05.28-15.48.20:323][783]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUDAFE8A14E45558F88650FE996FA2312D5.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset'
+[2024.05.28-15.48.20:329][783]LogFileHelpers: InternalPromptForCheckoutAndSave took 63 ms (total: 5.08 sec)
+[2024.05.28-15.48.20:336][783]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.05.28-15.48.20:336][783]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD
+[2024.05.28-15.48.20:777][820]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.48.20:788][820]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.48.20:795][820]LogPlayLevel: [PlayLevel] Compiling WBP_Timeline before play...
+[2024.05.28-15.48.21:056][820]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.48.21:089][820]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.28-15.48.21:127][820]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.28-15.48.21:128][820]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline6D3F46F741062B6BA7CADE927F271B33.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.28-15.48.21:134][820]LogFileHelpers: InternalPromptForCheckoutAndSave took 77 ms (total: 5.15 sec)
+[2024.05.28-15.48.21:154][820]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.05.28-15.48.21:156][820]LogPlayLevel: PlayLevel: Blueprint regeneration took 366 ms (1 blueprints)
+[2024.05.28-15.48.21:156][820]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:48:21)
+[2024.05.28-15.48.21:156][820]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.48.21:187][820]LogPlayLevel: PIE: StaticDuplicateObject took: (0.031489s)
+[2024.05.28-15.48.21:187][820]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.031517s)
+[2024.05.28-15.48.21:204][820]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.05.28-15.48.21:205][820]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.48.21:205][820]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.48.21:206][820]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.48.21:206][820]LogPlayLevel: PIE: World Init took: (0.000763s)
+[2024.05.28-15.48.21:206][820]LogAudio: Display: Creating Audio Device:                 Id: 69, Scope: Unique, Realtime: True
+[2024.05.28-15.48.21:206][820]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.48.21:206][820]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.48.21:206][820]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.48.21:206][820]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.48.21:206][820]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.48.21:206][820]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.48.21:206][820]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.48.21:206][820]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.48.21:206][820]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.48.21:206][820]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.48.21:206][820]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.48.21:208][820]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.48.21:234][820]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.48.21:234][820]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.48.21:234][820]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.48.21:234][820]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.48.21:235][820]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=69
+[2024.05.28-15.48.21:235][820]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=69
+[2024.05.28-15.48.21:237][820]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=69
+[2024.05.28-15.48.21:237][820]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=69
+[2024.05.28-15.48.21:237][820]LogInit: FAudioDevice initialized with ID 69.
+[2024.05.28-15.48.21:237][820]LogAudio: Display: Audio Device (ID: 69) registered with world 'Sandbox1'.
+[2024.05.28-15.48.21:237][820]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 69
+[2024.05.28-15.48.21:259][820]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.48.21:259][820]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.48.21:269][820]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.48.21:269][820]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.48.21:269][820]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.48.21
+[2024.05.28-15.48.21:270][820]LogWorld: Bringing up level for play took: 0.009737
+[2024.05.28-15.48.21:271][820]LogOnline: OSS: Created online subsystem instance for: :Context_78
+[2024.05.28-15.48.21:271][820]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.48.21:276][820]PIE: Server logged in
+[2024.05.28-15.48.21:277][820]PIE: Play in editor total start time 0.488 seconds.
+[2024.05.28-15.48.21:318][820]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.48.21:357][821]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.28-15.48.21:357][821]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.28-15.48.21:435][821]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.48.44:453][  6]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.48.44:453][  6]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.48.44:453][  6]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.48.44:457][  6]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.48.44:459][  6]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.48.44:461][  6]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.48.44:466][  6]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.48.44:486][  6]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.28-15.48.44:487][  6]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 69
+[2024.05.28-15.48.44:487][  6]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=69
+[2024.05.28-15.48.44:488][  6]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=69
+[2024.05.28-15.48.44:498][  6]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2024.05.28-15.48.44:520][  7]LogPlayLevel: Display: Destroying online subsystem :Context_78
+[2024.05.28-15.49.01:733][986]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.49.01:743][986]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.28-15.49.01:746][986]LogPlayLevel: [PlayLevel] Compiling WBP_HUD before play...
+[2024.05.28-15.49.01:893][986]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.49.01:917][986]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset" SILENT=true
+[2024.05.28-15.49.01:943][986]LogSavePackage: Moving output files for package: /Game/UI/WBP_HUD
+[2024.05.28-15.49.01:943][986]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUDD43567F74AACAF53A5B8CF9591B5BA60.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset'
+[2024.05.28-15.49.01:950][986]LogFileHelpers: InternalPromptForCheckoutAndSave took 56 ms (total: 5.21 sec)
+[2024.05.28-15.49.01:968][986]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2024.05.28-15.49.01:970][986]LogPlayLevel: PlayLevel: Blueprint regeneration took 226 ms (1 blueprints)
+[2024.05.28-15.49.01:970][986]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:49:01)
+[2024.05.28-15.49.01:970][986]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.49.02:002][986]LogPlayLevel: PIE: StaticDuplicateObject took: (0.031800s)
+[2024.05.28-15.49.02:002][986]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.031848s)
+[2024.05.28-15.49.02:015][986]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.05.28-15.49.02:016][986]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.49.02:017][986]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.49.02:017][986]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.49.02:017][986]LogPlayLevel: PIE: World Init took: (0.000849s)
+[2024.05.28-15.49.02:017][986]LogAudio: Display: Creating Audio Device:                 Id: 70, Scope: Unique, Realtime: True
+[2024.05.28-15.49.02:017][986]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.49.02:017][986]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.49.02:017][986]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.49.02:017][986]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.49.02:017][986]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.49.02:017][986]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.49.02:017][986]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.49.02:017][986]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.49.02:018][986]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.49.02:018][986]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.49.02:018][986]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.49.02:019][986]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.49.02:043][986]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.49.02:043][986]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.49.02:043][986]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.49.02:043][986]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.49.02:044][986]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=70
+[2024.05.28-15.49.02:044][986]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=70
+[2024.05.28-15.49.02:045][986]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=70
+[2024.05.28-15.49.02:045][986]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=70
+[2024.05.28-15.49.02:045][986]LogInit: FAudioDevice initialized with ID 70.
+[2024.05.28-15.49.02:045][986]LogAudio: Display: Audio Device (ID: 70) registered with world 'Sandbox1'.
+[2024.05.28-15.49.02:045][986]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 70
+[2024.05.28-15.49.02:072][986]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.49.02:072][986]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.49.02:081][986]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.49.02:081][986]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.49.02:082][986]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.49.02
+[2024.05.28-15.49.02:082][986]LogWorld: Bringing up level for play took: 0.009559
+[2024.05.28-15.49.02:084][986]LogOnline: OSS: Created online subsystem instance for: :Context_79
+[2024.05.28-15.49.02:085][986]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.49.02:089][986]PIE: Server logged in
+[2024.05.28-15.49.02:089][986]PIE: Play in editor total start time 0.346 seconds.
+[2024.05.28-15.49.02:126][986]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.49.02:134][987]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.05.28-15.49.02:134][987]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD
+[2024.05.28-15.49.02:225][987]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.49.08:273][563]LogBlueprintUserMessages: [WBP_EndScreen_C_0] 0 stars
+[2024.05.28-15.49.08:273][563]LogBlueprintUserMessages: [WBP_EndScreen_C_0] 3 stars
+[2024.05.28-15.49.10:864][814]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.49.10:864][814]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.49.10:864][814]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.49.10:868][814]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.49.10:869][814]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.49.10:871][814]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.49.10:876][814]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.49.10:896][814]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.28-15.49.10:897][814]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 70
+[2024.05.28-15.49.10:897][814]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=70
+[2024.05.28-15.49.10:899][814]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=70
+[2024.05.28-15.49.10:908][814]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.05.28-15.49.10:928][815]LogPlayLevel: Display: Destroying online subsystem :Context_79
+[2024.05.28-15.49.34:881][562]BlueprintLog: New page: Compile WBP_HUD
+[2024.05.28-15.49.34:931][562]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.05.28-15.49.35:039][562]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.28-15.49.35:070][562]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset" SILENT=true
+[2024.05.28-15.49.35:096][562]LogSavePackage: Moving output files for package: /Game/UI/WBP_HUD
+[2024.05.28-15.49.35:096][562]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUD48C805EE43BC1762E7EF7BA9DC0FC739.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset'
+[2024.05.28-15.49.35:102][562]LogFileHelpers: InternalPromptForCheckoutAndSave took 63 ms (total: 5.27 sec)
+[2024.05.28-15.49.35:104][562]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.05.28-15.49.35:104][562]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD
+[2024.05.28-15.49.38:760][984]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.49.38:773][984]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.28-15.49.38:773][984]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:49:38)
+[2024.05.28-15.49.38:773][984]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.49.38:804][984]LogPlayLevel: PIE: StaticDuplicateObject took: (0.031500s)
+[2024.05.28-15.49.38:804][984]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.031526s)
+[2024.05.28-15.49.38:821][984]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.05.28-15.49.38:824][984]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.49.38:824][984]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.49.38:825][984]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.49.38:825][984]LogPlayLevel: PIE: World Init took: (0.000760s)
+[2024.05.28-15.49.38:825][984]LogAudio: Display: Creating Audio Device:                 Id: 71, Scope: Unique, Realtime: True
+[2024.05.28-15.49.38:825][984]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.49.38:825][984]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.49.38:825][984]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.49.38:825][984]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.49.38:825][984]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.49.38:825][984]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.49.38:825][984]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.49.38:825][984]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.49.38:826][984]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.49.38:826][984]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.49.38:826][984]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.49.38:827][984]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.49.38:851][984]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.49.38:851][984]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.49.38:851][984]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.49.38:851][984]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.49.38:853][984]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=71
+[2024.05.28-15.49.38:853][984]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=71
+[2024.05.28-15.49.38:854][984]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=71
+[2024.05.28-15.49.38:854][984]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=71
+[2024.05.28-15.49.38:854][984]LogInit: FAudioDevice initialized with ID 71.
+[2024.05.28-15.49.38:854][984]LogAudio: Display: Audio Device (ID: 71) registered with world 'Sandbox1'.
+[2024.05.28-15.49.38:854][984]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 71
+[2024.05.28-15.49.38:878][984]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.49.38:878][984]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.49.38:887][984]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.49.38:888][984]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.49.38:888][984]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.49.38
+[2024.05.28-15.49.38:888][984]LogWorld: Bringing up level for play took: 0.009679
+[2024.05.28-15.49.38:890][984]LogOnline: OSS: Created online subsystem instance for: :Context_80
+[2024.05.28-15.49.38:891][984]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.49.38:895][984]PIE: Server logged in
+[2024.05.28-15.49.38:896][984]PIE: Play in editor total start time 0.123 seconds.
+[2024.05.28-15.49.38:905][984]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.49.39:064][987]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.49.42:079][259]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.28-15.49.42:079][259]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.28-15.49.42:079][259]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.28-15.49.42:079][259]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.28-15.49.42:079][259]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.28-15.49.42:079][259]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.28-15.49.45:308][564]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.05.28-15.49.53:213][326]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.49.53:213][326]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.49.53:213][326]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.49.53:217][326]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.49.53:219][326]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.49.53:220][326]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.49.53:226][326]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.49.53:247][326]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.28-15.49.53:250][326]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 71
+[2024.05.28-15.49.53:250][326]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=71
+[2024.05.28-15.49.53:252][326]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=71
+[2024.05.28-15.49.53:259][326]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.05.28-15.49.53:297][329]LogPlayLevel: Display: Destroying online subsystem :Context_80
+[2024.05.28-15.49.54:017][415]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.28-15.49.54:028][415]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.28-15.49.54:028][415]PIE: New page: PIE session: Sandbox1 (28 May 2024, 17:49:54)
+[2024.05.28-15.49.54:028][415]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.49.54:058][415]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029735s)
+[2024.05.28-15.49.54:058][415]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029761s)
+[2024.05.28-15.49.54:075][415]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.28-15.49.54:075][415]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.28-15.49.54:075][415]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.28-15.49.54:077][415]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.28-15.49.54:077][415]LogPlayLevel: PIE: World Init took: (0.000758s)
+[2024.05.28-15.49.54:077][415]LogAudio: Display: Creating Audio Device:                 Id: 72, Scope: Unique, Realtime: True
+[2024.05.28-15.49.54:077][415]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.28-15.49.54:077][415]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.28-15.49.54:077][415]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.28-15.49.54:077][415]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.28-15.49.54:077][415]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.28-15.49.54:077][415]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.28-15.49.54:077][415]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.28-15.49.54:077][415]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.28-15.49.54:077][415]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.28-15.49.54:077][415]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.28-15.49.54:077][415]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.28-15.49.54:079][415]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.28-15.49.54:102][415]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.05.28-15.49.54:102][415]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.28-15.49.54:102][415]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.28-15.49.54:102][415]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.28-15.49.54:103][415]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=72
+[2024.05.28-15.49.54:103][415]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=72
+[2024.05.28-15.49.54:104][415]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=72
+[2024.05.28-15.49.54:104][415]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=72
+[2024.05.28-15.49.54:104][415]LogInit: FAudioDevice initialized with ID 72.
+[2024.05.28-15.49.54:104][415]LogAudio: Display: Audio Device (ID: 72) registered with world 'Sandbox1'.
+[2024.05.28-15.49.54:104][415]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 72
+[2024.05.28-15.49.54:130][415]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.49.54:130][415]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.28-15.49.54:139][415]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.28-15.49.54:139][415]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.28-15.49.54:139][415]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.28-16.49.54
+[2024.05.28-15.49.54:140][415]LogWorld: Bringing up level for play took: 0.010027
+[2024.05.28-15.49.54:141][415]LogOnline: OSS: Created online subsystem instance for: :Context_81
+[2024.05.28-15.49.54:142][415]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.28-15.49.54:147][415]PIE: Server logged in
+[2024.05.28-15.49.54:147][415]PIE: Play in editor total start time 0.12 seconds.
+[2024.05.28-15.49.54:158][415]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.28-15.49.54:324][419]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.28-15.49.57:119][679]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.28-15.49.57:119][679]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.28-15.49.57:119][679]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.28-15.49.57:119][679]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.28-15.49.57:119][679]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.28-15.49.57:119][679]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.28-15.50.08:505][806]LogBlueprintUserMessages: [WBP_HUD_C_0] 2
+[2024.05.28-15.50.29:183][809]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.28-15.50.29:183][809]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.28-15.50.29:183][809]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.28-15.50.29:188][809]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.28-15.50.29:190][809]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.50.29:191][809]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.28-15.50.29:196][809]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.28-15.50.29:219][809]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 72
+[2024.05.28-15.50.29:219][809]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=72
+[2024.05.28-15.50.29:221][809]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=72
+[2024.05.28-15.50.29:228][809]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.05.28-15.50.29:249][810]LogPlayLevel: Display: Destroying online subsystem :Context_81
