@@ -41,7 +41,7 @@ void ABounceSpring::Ability(float deltaTime)
 	// DrawDebugLine(wrld, startPos, endPos, FColor::Red);
 	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
 
-	collider->SetWorldLocation(end->GetComponentLocation());
+	pickerUpper->SetWorldLocation(end->GetComponentLocation());
 
 	if(!springHit.bBlockingHit)
 	{

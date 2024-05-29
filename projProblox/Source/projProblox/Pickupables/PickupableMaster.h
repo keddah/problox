@@ -52,7 +52,7 @@ protected:
 	UStaticMeshComponent* silhouette;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UBoxComponent* collider;
+	UBoxComponent* pickerUpper;
 
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* centerMass;

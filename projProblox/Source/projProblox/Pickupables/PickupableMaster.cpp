@@ -44,11 +44,11 @@ APickupableMaster::APickupableMaster()
 	centerMass = CreateDefaultSubobject<USceneComponent>("Center of Gravity");
 	centerMass->SetupAttachment(mesh);
 	
-	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
-	collider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
-	collider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	collider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
-	collider->AddRelativeLocation({0,0,50});
+	pickerUpper = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
+	pickerUpper->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
+	pickerUpper->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	pickerUpper->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	pickerUpper->AddRelativeLocation({0,0,50});
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
