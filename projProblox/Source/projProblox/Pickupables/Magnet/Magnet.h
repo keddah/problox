@@ -48,7 +48,10 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 public:
 	UFUNCTION(BlueprintCallable)
 	void SetCharge(const bool pos) { positive = pos; ConfigureCharge(); }
-	float GetAttraction() const { return attractionForce; } 
+	float GetAttraction() const { return attractionForce; }
+
+	// For when a new magpole is created in creative mode...
+	void AddMagPole(AMagPole* newPole) { poles.AddUnique(newPole); }
 	
 protected:
 	virtual void BeginPlay() override;

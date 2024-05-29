@@ -3,6 +3,8 @@
 
 #include "MagPole.h"
 
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values
 AMagPole::AMagPole()
 {
@@ -20,10 +22,9 @@ void AMagPole::BeginPlay()
 	ConfigureCharge();
 }
 
-// Called every frame
-void AMagPole::Tick(float DeltaTime)
+void AMagPole::UpdateMagnets()
 {
-	Super::Tick(DeltaTime);
-
+	TArray<AActor*> magActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagnet::StaticClass(), magActors);
+	for (const auto& magActor : magActors) Cast<AMagnet>(magActor)->AddMagPole(this);
 }
-

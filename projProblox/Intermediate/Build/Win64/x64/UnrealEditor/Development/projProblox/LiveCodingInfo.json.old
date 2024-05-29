@@ -41,6 +41,7 @@
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
+			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
@@ -54,7 +55,6 @@
 			"Grappler.cpp.obj",
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
-			"MagPole.cpp.obj",
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
@@ -65,7 +65,7 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"Balloon.cpp.obj"
+			"MagPole.cpp.obj"
 		]
 	}
 }
