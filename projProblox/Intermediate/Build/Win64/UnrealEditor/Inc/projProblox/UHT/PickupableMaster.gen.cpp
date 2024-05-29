@@ -708,9 +708,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_silhouette;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_pickerUpper_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_mouseCollider_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_pickerUpper;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_mouseCollider;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_centerMass_MetaData[];
 #endif
@@ -720,9 +720,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_placeIndicator;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_soundManager_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_sfxManager_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_soundManager;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_sfxManager;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_selected_MetaData[];
 #endif
@@ -827,13 +827,13 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_silhouette = { "silhouette", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, silhouette), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_silhouette_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_silhouette_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_pickerUpper_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_mouseCollider_MetaData[] = {
 		{ "Category", "PickupableMaster" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_pickerUpper = { "pickerUpper", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, pickerUpper), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_pickerUpper_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_pickerUpper_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_mouseCollider = { "mouseCollider", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, mouseCollider), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_mouseCollider_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_mouseCollider_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_centerMass_MetaData[] = {
 		{ "Category", "PickupableMaster" },
@@ -851,13 +851,13 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeIndicator = { "placeIndicator", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, placeIndicator), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeIndicator_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeIndicator_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_soundManager_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_sfxManager_MetaData[] = {
 		{ "Category", "PickupableMaster" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_soundManager = { "soundManager", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, soundManager), Z_Construct_UClass_UAudioManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_soundManager_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_soundManager_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_sfxManager = { "sfxManager", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, sfxManager), Z_Construct_UClass_UAudioManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_sfxManager_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_sfxManager_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_selected_MetaData[] = {
 		{ "Category", "PickupableMaster" },
@@ -999,10 +999,10 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APickupableMaster_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_mesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_silhouette,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_pickerUpper,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_mouseCollider,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_centerMass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeIndicator,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_soundManager,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_sfxManager,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_selected,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeDir,
@@ -1054,9 +1054,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 3611576790U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 2995792065U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_3042887252(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_3881792350(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

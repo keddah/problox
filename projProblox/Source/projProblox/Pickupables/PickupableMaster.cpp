@@ -44,23 +44,23 @@ APickupableMaster::APickupableMaster()
 	centerMass = CreateDefaultSubobject<USceneComponent>("Center of Gravity");
 	centerMass->SetupAttachment(mesh);
 	
-	pickerUpper = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
-	pickerUpper->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
-	pickerUpper->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	pickerUpper->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
-	pickerUpper->AddRelativeLocation({0,0,50});
+	mouseCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
+	mouseCollider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
+	mouseCollider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	mouseCollider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	mouseCollider->AddRelativeLocation({0,0,50});
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
-	soundManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
-	soundManager->Attach(mesh);
+	sfxManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	sfxManager->Attach(mesh);
 }
 
 // Called when the game starts or when spawned
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
-	if(soundManager && mesh) soundManager->Attach(mesh);
+	if(sfxManager && mesh) sfxManager->Attach(mesh);
 
 	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
@@ -70,7 +70,8 @@ void APickupableMaster::BeginPlay()
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetPlaceIndicator();
 
-	if(centerMass->GetRelativeLocation().Length() <= .01f) return;
+	// Only set a custom center of mass if it has been moved... 
+	if(centerMass->GetRelativeLocation().Length() <= .005f) return;
 	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
 }
 
@@ -241,7 +242,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	UseSilhouetteTransform();
 	ResetGhost();
 
-	soundManager->PlayAttach();
+	sfxManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -298,7 +299,7 @@ void APickupableMaster::Detach(const bool push)
 		parentCore = nullptr;
 		
 		// Only play the detach sound if there was a parent core
-		soundManager->PlayDetach();
+		sfxManager->PlayDetach();
 	}
 
 	ToggleGravity(true);
@@ -659,7 +660,7 @@ void APickupableMaster::Reattach()
 	}
 
 	AttachToActor(parentCore, attachRules, removedSocket);
-	soundManager->PlayAttach();
+	sfxManager->PlayAttach();
 	UseSavedTransform();
 	
 	parentCore->AddAttachment(this, attachedSocket);

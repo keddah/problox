@@ -52,7 +52,7 @@ protected:
 	UStaticMeshComponent* silhouette;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UBoxComponent* pickerUpper;
+	UBoxComponent* mouseCollider;
 
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* centerMass;
@@ -61,7 +61,7 @@ protected:
 	UArrowComponent* placeIndicator;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UAudioManager* soundManager;
+	UAudioManager* sfxManager;
 
 
 	/////////////// Selection / Placement ///////////////

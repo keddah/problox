@@ -36,7 +36,7 @@ ACubeCore::ACubeCore()
 	distanceLine->SetRelativeScale3D({1,7,7});
 	distanceLine->SetHiddenInGame(true);
 
-	pickerUpper->SetBoxExtent({});
+	mouseCollider->SetBoxExtent({});
 	
 	placeRange = 50;
 }
@@ -286,7 +286,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
 
-	soundManager->PlayAttach();
+	sfxManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -393,7 +393,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 		obj->Detach(push);
 	}
 
-	soundManager->PlayDetachAll();
+	sfxManager->PlayDetachAll();
 	socketInfo->ClearAttachments();
 	return objs;
 }

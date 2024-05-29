@@ -250,7 +250,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 
 	isAttached = true;
 	parentCore->AddAttachment(this, attachedSocket);
-	soundManager->PlayAttach();
+	sfxManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -299,7 +299,7 @@ void ACubeConnector::Reattach()
 	}
 	
 	AttachToActor(parentCore, attachRules, removedSocket);
-	soundManager->PlayAttach();
+	sfxManager->PlayAttach();
 	SetActorRelativeLocation(savedTransform.GetLocation());
 	SetActorRelativeRotation(savedTransform.Rotator());
 	
@@ -343,7 +343,7 @@ void ACubeConnector::Detach(const bool push)
 		parentCore = nullptr;
 
 		// Only play the detach sound if there was a parent core
-		soundManager->PlayDetach();
+		sfxManager->PlayDetach();
 	}
 
 	ToggleGravity(true);
