@@ -36,7 +36,7 @@ ACubeCore::ACubeCore()
 	distanceLine->SetRelativeScale3D({1,7,7});
 	distanceLine->SetHiddenInGame(true);
 
-	mouseCollider->SetBoxExtent({});
+	pickup->SetBoxExtent({});
 	
 	placeRange = 50;
 }
@@ -66,19 +66,19 @@ void ACubeCore::BeginPlay()
 
 void ACubeCore::SetupPlaceIndicator()
 {
-	if(!placeIndicator) return;
+	if(!placer_) return;
 
 	// ScaleIndicator();
 	
-	placeIndicator->ArrowColor.A = .5f;
+	placer_->ArrowColor.A = .5f;
 
 	const float length = placeRange * 2;
-	placeIndicator->ArrowLength = length;
+	placer_->ArrowLength = length;
 
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	placeIndicator->SetRelativeRotation(rot);
+	placer_->SetRelativeRotation(rot);
 
-	placeIndicator->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
+	placer_->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
 	SetHideIndicator(true);
 }
 
@@ -261,7 +261,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 		return EOperations::Detach;
 	}
 
-	placeIndicator->SetHiddenInGame(true);
+	placer_->SetHiddenInGame(true);
 
 	// If there is no hit object.
 	if(!IsValid(hitObj)) return EOperations::Move;
@@ -286,7 +286,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
 
-	sfxManager->PlayAttach();
+	sounder->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -393,7 +393,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 		obj->Detach(push);
 	}
 
-	sfxManager->PlayDetachAll();
+	sounder->PlayDetachAll();
 	socketInfo->ClearAttachments();
 	return objs;
 }

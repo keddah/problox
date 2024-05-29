@@ -129,7 +129,7 @@ void ABalloon::Detach(const bool push)
 
 	ToggleGravity(true);
 	isAttached = false;
-	sfxManager->PlayDetach();
+	sounder->PlayDetach();
 }
 
 void ABalloon::Attach() const
@@ -137,7 +137,7 @@ void ABalloon::Attach() const
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);
-	sfxManager->PlayAttach();
+	sounder->PlayAttach();
 }
 
 void ABalloon::Reattach()

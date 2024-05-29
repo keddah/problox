@@ -33,8 +33,8 @@ void ACuboidConnector::SetupPlaceIndicator()
 
 	// Setting the position and orientation
 	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
-	placeIndicator->SetRelativeRotation(rot);
-	placeIndicator->SetWorldLocation(mesh->GetSocketLocation("FRONT"));
+	placer_->SetRelativeRotation(rot);
+	placer_->SetWorldLocation(mesh->GetSocketLocation("FRONT"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
 	backArrow->SetRelativeRotation(rot);
