@@ -50,8 +50,8 @@ void ACubeConnector::SetupPlaceIndicator()
 {
 	// Setting the position and orientation
 	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
-	indicator->SetRelativeRotation(rot);
-	indicator->SetWorldLocation(mesh->GetSocketLocation("FRONT"));
+	placeIndicator->SetRelativeRotation(rot);
+	placeIndicator->SetWorldLocation(mesh->GetSocketLocation("FRONT"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
 	backArrow->SetRelativeRotation(rot);
@@ -250,7 +250,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 
 	isAttached = true;
 	parentCore->AddAttachment(this, attachedSocket);
-	audioManager->PlayAttach();
+	soundManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -299,7 +299,7 @@ void ACubeConnector::Reattach()
 	}
 	
 	AttachToActor(parentCore, attachRules, removedSocket);
-	audioManager->PlayAttach();
+	soundManager->PlayAttach();
 	SetActorRelativeLocation(savedTransform.GetLocation());
 	SetActorRelativeRotation(savedTransform.Rotator());
 	
@@ -343,7 +343,7 @@ void ACubeConnector::Detach(const bool push)
 		parentCore = nullptr;
 
 		// Only play the detach sound if there was a parent core
-		audioManager->PlayDetach();
+		soundManager->PlayDetach();
 	}
 
 	ToggleGravity(true);

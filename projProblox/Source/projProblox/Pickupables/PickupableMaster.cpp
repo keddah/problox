@@ -38,29 +38,29 @@ APickupableMaster::APickupableMaster()
 	silhouette->UnWeldFromParent();
 	silhouette->SetEnableGravity(false);
 	
-	indicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
-	indicator->SetupAttachment(mesh);
+	placeIndicator = CreateDefaultSubobject<UArrowComponent>("Place Indicator");
+	placeIndicator->SetupAttachment(mesh);
 
 	centerMass = CreateDefaultSubobject<USceneComponent>("Center of Gravity");
 	centerMass->SetupAttachment(mesh);
 	
-	pickupCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
-	pickupCollider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
-	pickupCollider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	pickupCollider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
-	pickupCollider->AddRelativeLocation({0,0,50});
+	collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Pickup Detector"));
+	collider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
+	collider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	collider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	collider->AddRelativeLocation({0,0,50});
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
-	audioManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
-	audioManager->Attach(mesh);
+	soundManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	soundManager->Attach(mesh);
 }
 
 // Called when the game starts or when spawned
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
-	if(audioManager && mesh) audioManager->Attach(mesh);
+	if(soundManager && mesh) soundManager->Attach(mesh);
 
 	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
@@ -99,10 +99,10 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 
 void APickupableMaster::ScaleIndicator()
 {
-	indicator->ArrowColor.A = .5f;
+	placeIndicator->ArrowColor.A = .5f;
 
 	const FVector actorScale = GetActorRelativeScale3D();
-	const FVector indiScale = indicator->GetRelativeScale3D();
+	const FVector indiScale = placeIndicator->GetRelativeScale3D();
 	
 	FVector scale;
 	scale.X = indiScale.X / actorScale.X;
@@ -110,14 +110,14 @@ void APickupableMaster::ScaleIndicator()
 	scale.Z = indiScale.Z / actorScale.Z;
 
 	// Removes the scale relativity so that the place range is accurate... 
-	indicator->SetRelativeScale3D(scale);
-	indicator->ArrowLength = placeRange;
+	placeIndicator->SetRelativeScale3D(scale);
+	placeIndicator->ArrowLength = placeRange;
 }
 
 void APickupableMaster::SetPlaceIndicator()
 {
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
-	indicator->SetRelativeRotation(rot);
+	placeIndicator->SetRelativeRotation(rot);
 	ScaleIndicator();
 }
 
@@ -138,7 +138,7 @@ void APickupableMaster::Placement()
 	collisionParams.MobilityType = EQueryMobilityType::Any;
 	
 	// Debug Draw
-	const FVector start = indicator->GetComponentLocation();
+	const FVector start = placeIndicator->GetComponentLocation();
 	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
 
@@ -241,7 +241,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	UseSilhouetteTransform();
 	ResetGhost();
 
-	audioManager->PlayAttach();
+	soundManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -298,7 +298,7 @@ void APickupableMaster::Detach(const bool push)
 		parentCore = nullptr;
 		
 		// Only play the detach sound if there was a parent core
-		audioManager->PlayDetach();
+		soundManager->PlayDetach();
 	}
 
 	ToggleGravity(true);
@@ -659,7 +659,7 @@ void APickupableMaster::Reattach()
 	}
 
 	AttachToActor(parentCore, attachRules, removedSocket);
-	audioManager->PlayAttach();
+	soundManager->PlayAttach();
 	UseSavedTransform();
 	
 	parentCore->AddAttachment(this, attachedSocket);
