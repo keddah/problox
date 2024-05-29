@@ -86,13 +86,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		*(ACubeCore**)Z_Param__Result=P_THIS->GetCore();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(APlayerCharacter::execGetGameMode)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(EGameMode*)Z_Param__Result=P_THIS->GetGameMode();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(APlayerCharacter::execEndGame)
 	{
 		P_FINISH;
@@ -145,6 +138,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->ManualSelectObject(Z_Param_obj);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APlayerCharacter::execGetGameMode)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(EGameMode*)Z_Param__Result=P_THIS->GetGameMode();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(APlayerCharacter::execSetGameMode)
@@ -388,7 +388,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "GetGameMode", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PlayerCharacter_eventGetGameMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "GetGameMode", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PlayerCharacter_eventGetGameMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::Function_MetaDataParams) };
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PropPointers) < 2048);
 	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_GetGameMode_Statics::PlayerCharacter_eventGetGameMode_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_APlayerCharacter_GetGameMode()
@@ -728,7 +728,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_Detach, "Detach" }, // 1541612637
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
 		{ &Z_Construct_UFunction_APlayerCharacter_GetCore, "GetCore" }, // 344276006
-		{ &Z_Construct_UFunction_APlayerCharacter_GetGameMode, "GetGameMode" }, // 4117543127
+		{ &Z_Construct_UFunction_APlayerCharacter_GetGameMode, "GetGameMode" }, // 3301509063
 		{ &Z_Construct_UFunction_APlayerCharacter_GroupSelect, "GroupSelect" }, // 2137927514
 		{ &Z_Construct_UFunction_APlayerCharacter_ManualSelectObject, "ManualSelectObject" }, // 163528957
 		{ &Z_Construct_UFunction_APlayerCharacter_MoveSelection, "MoveSelection" }, // 767853428
@@ -928,9 +928,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 616461896U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2185243366U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2315387993U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3753954893(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_2317865864(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

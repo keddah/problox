@@ -24,7 +24,6 @@ struct FHitResult;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetCore); \
-	DECLARE_FUNCTION(execGetGameMode); \
 	DECLARE_FUNCTION(execEndGame); \
 	DECLARE_FUNCTION(execDetach); \
 	DECLARE_FUNCTION(execDeselect); \
@@ -32,6 +31,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGroupSelect); \
 	DECLARE_FUNCTION(execSelectObject); \
 	DECLARE_FUNCTION(execManualSelectObject); \
+	DECLARE_FUNCTION(execGetGameMode); \
 	DECLARE_FUNCTION(execSetGameMode); \
 	DECLARE_FUNCTION(execCreateDetachHistory); \
 	DECLARE_FUNCTION(execRedo); \

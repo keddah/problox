@@ -93,6 +93,9 @@ public:
 	void SetGameMode(EGameMode mode) { currentMode = mode; }
 
 	UFUNCTION(BlueprintCallable)
+	EGameMode GetGameMode() const { return currentMode; }
+	
+	UFUNCTION(BlueprintCallable)
 	void ManualSelectObject(APickupableMaster* obj);
 	
 private:
@@ -116,9 +119,6 @@ private:
 	/////////////// Game States ///////////////
 	UFUNCTION()
 	void EndGame() { gameEnded = true; }
-
-	UFUNCTION(BlueprintCallable)
-	EGameMode GetGameMode() const { return currentMode; }
 
 	UFUNCTION(BlueprintCallable)
 	ACubeCore* GetCore() const { return core; }
