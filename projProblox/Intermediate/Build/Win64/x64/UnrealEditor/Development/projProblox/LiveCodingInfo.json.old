@@ -31,6 +31,7 @@
 			"Piston.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
 			"Balloon.gen.cpp.obj",
@@ -64,8 +65,7 @@
 			"PickupableMaster.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
-			"Treads.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"Treads.cpp.obj"
 		]
 	}
 }

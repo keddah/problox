@@ -10,6 +10,7 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/HexagonSocketInfo.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/MagPole.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Modes.gen.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/PlayerCharacter.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/WedgeSocketInfo.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/AudioManager.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Cells/Cell.cpp"

@@ -193,7 +193,6 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\PickupableMaster.h"/>
-    <None Include="..\..\Source\projProblox\Pickupables\PickupableMaster.h~"/>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Piston.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>

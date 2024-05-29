@@ -25,7 +25,7 @@ ATreads::ATreads()
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = false;
 	rotOffset = {90,0,180};
-	sounder->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
+	sfxManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
 }
 
 float ATreads::GetAttachOffset(const APickupableMaster& attachee)
@@ -79,6 +79,6 @@ void ATreads::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
 
-	if(value) sounder->PlayAbility();
-	else sounder->StopAbility();
+	if(value) sfxManager->PlayAbility();
+	else sfxManager->StopAbility();
 }

@@ -118,9 +118,6 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\PickupableMaster.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
-    <None Include="..\..\Source\projProblox\Pickupables\PickupableMaster.h~">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </None>
     <ClCompile Include="..\..\Source\projProblox\Pickupables\Piston.cpp">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>

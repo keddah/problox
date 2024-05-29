@@ -11,18 +11,18 @@ ACuboidCore::ACuboidCore()
 
 void ACuboidCore::ScaleIndicator()
 {
-	placer_->ArrowColor.A = .5f;
+	indicator->ArrowColor.A = .5f;
 	otherIndicator->ArrowColor.A = .5f;
 
 	const float length = placeRange * 2;
-	placer_->ArrowLength = length;
+	indicator->ArrowLength = length;
 	otherIndicator->ArrowLength = length;
 
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	placer_->SetRelativeRotation(rot);
+	indicator->SetRelativeRotation(rot);
 	otherIndicator->SetRelativeRotation(rot);
 
-	placer_->SetWorldLocation(mesh->GetSocketLocation("DOWN1"));
+	indicator->SetWorldLocation(mesh->GetSocketLocation("DOWN1"));
 	otherIndicator->SetWorldLocation(mesh->GetSocketLocation("DOWN2"));
 
 	SetHideIndicator(true);
@@ -63,7 +63,7 @@ void ACuboidCore::Placement()
 		if(ObjectInSocket(socket))
 		{
 			// Hide the correct indicator depending on the blocked socket.
-			if(socket == "DOWN1") placer_->SetHiddenInGame(true);
+			if(socket == "DOWN1") indicator->SetHiddenInGame(true);
 			else otherIndicator->SetHiddenInGame(true);
 			continue;
 		}

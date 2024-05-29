@@ -154,7 +154,7 @@ void AWedgeConnector::Tick(float DeltaSeconds)
 
 void AWedgeConnector::SetHideIndicator(const bool hide)
 {
-	placer_->SetHiddenInGame(hide);
+	indicator->SetHiddenInGame(hide);
 	backArrow->SetHiddenInGame(hide);
 	downArrow->SetHiddenInGame(hide);
 }
@@ -163,8 +163,8 @@ void AWedgeConnector::SetupPlaceIndicator()
 {
 	// Setting the position and orientation
 	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,1});
-	placer_->SetRelativeRotation(rot);
-	placer_->SetWorldLocation(mesh->GetSocketLocation("DIAG"));
+	indicator->SetRelativeRotation(rot);
+	indicator->SetWorldLocation(mesh->GetSocketLocation("DIAG"));
 
 	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
 	backArrow->SetRelativeRotation(rot);

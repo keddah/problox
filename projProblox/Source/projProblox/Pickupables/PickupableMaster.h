@@ -50,18 +50,18 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* silhouette;
-//
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UBoxComponent* pickup;
+	UBoxComponent* pickupCollider;
 
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* centerMass;
 	
 	UPROPERTY(EditDefaultsOnly)
-	UArrowComponent* placer_;
+	UArrowComponent* indicator;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UAudioManager* sounder;
+	UAudioManager* sfxManager;
 
 
 	/////////////// Selection / Placement ///////////////
@@ -169,7 +169,7 @@ protected:
 
 	
 	/////////////// Indicator ///////////////
-	virtual void SetHideIndicator(const bool hide) { placer_->SetHiddenInGame(hide); }
+	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
 	virtual void ScaleIndicator();
 	virtual void SetPlaceIndicator();
 
