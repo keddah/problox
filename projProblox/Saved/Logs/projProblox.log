@@ -1812,3 +1812,703 @@ Script Stack (0 frames) :
 [2024.05.29-09.29.11:317][  0]LogFileHelpers: InternalPromptForCheckoutAndSave took 176 ms (total: 509 ms)
 [2024.05.29-09.29.11:319][  0]AssetCheck: New page: Asset Save: Sandbox1
 [2024.05.29-09.29.11:319][  0]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.29-09.29.53:841][375]BlueprintLog: New page: Compile WBP_ObjectSelector
+[2024.05.29-09.29.53:884][375]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.29-09.29.54:020][375]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-09.29.54:046][375]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_ObjectSelector" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_ObjectSelector.uasset" SILENT=true
+[2024.05.29-09.29.54:094][375]LogSavePackage: Moving output files for package: /Game/UI/WBP_ObjectSelector
+[2024.05.29-09.29.54:095][375]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_ObjectSelector2BB70DDE4EC7B683C1A022855650A6D6.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_ObjectSelector.uasset'
+[2024.05.29-09.29.54:102][375]LogFileHelpers: InternalPromptForCheckoutAndSave took 81 ms (total: 590 ms)
+[2024.05.29-09.29.54:103][375]AssetCheck: New page: Asset Save: WBP_ObjectSelector
+[2024.05.29-09.29.54:104][375]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_ObjectSelector.WBP_ObjectSelector
+[2024.05.29-09.42.18:330][506]LogInterchangeEngine: [Pending] Importing
+[2024.05.29-09.42.18:331][506]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/Deany/Pictu.../UNI/MicrobeMachines/timelineBkg.png]
+[2024.05.29-09.42.18:340][506]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.05.29-09.42.18:350][507]LogTexture: Display: Building textures: /Game/UI/Image/timelineBkg.timelineBkg (TFO_AutoDXT, 1000x400 x1x1x1) (Required Memory Estimate: 67.980784 MB), EncodeSpeed: Fast
+[2024.05.29-09.42.18:378][507]LogInterchangeEngine: [Success] Import Done
+[2024.05.29-09.42.18:380][507]LogInterchangeEngine: [Success] Import Done
+[2024.05.29-09.42.18:661][508]LogInterchangeEngine: [Success] Import Done
+[2024.05.29-09.42.20:993][736]LogSlate: Took 0.000175 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.05.29-09.42.39:855][934]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.43.19:390][253]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.43.43:439][ 97]LogD3D12RHI: Warning: Descriptor cache ran out of sub allocated descriptor blocks! Moving to Context local View heap strategy
+[2024.05.29-09.43.43:439][ 97]LogD3D12RHI: This should only happen in the Editor where it doesn't matter as much. If it happens in game you should increase the device global heap size!
+[2024.05.29-09.43.56:218][577]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.44.08:009][947]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2024.05.29-09.44.13:459][592]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.44.17:915][124]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-09.44.17:926][124]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.29-09.44.17:930][124]LogPlayLevel: [PlayLevel] Compiling WBP_Timeline before play...
+[2024.05.29-09.44.18:126][124]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-09.44.18:153][124]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.29-09.44.18:189][124]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.29-09.44.18:189][124]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline57B7FFAD4D029C3866CFA28A34E7835E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.29-09.44.18:196][124]LogFileHelpers: InternalPromptForCheckoutAndSave took 69 ms (total: 660 ms)
+[2024.05.29-09.44.18:208][124]LogOutputDevice: Warning: 
+
+Script Stack (0 frames) :
+
+[2024.05.29-09.44.18:252][124]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.044 s
+[2024.05.29-09.44.18:252][124]LogOutputDevice: Error: === Handled ensure: ===
+[2024.05.29-09.44.18:252][124]LogOutputDevice: Error: 
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: Ensure condition failed: GExitPurge || !IsGarbageCollecting()  [File:D:\build\++UE5\Sync\Engine\Source\Runtime\UMG\Private\Slate\SObjectWidget.cpp] [Line: 43] 
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: SObjectWidget for 'WBP_DragWidget_C /Engine/Transient.World_5:WBP_Timeline_C_5.WidgetTree_0.WBP_DragWidget1' destroyed while collecting garbage.  This can lead to multiple GCs being required to cleanup the object.  Possible causes might be,
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: 1) ReleaseSlateResources not being implemented for the owner of this pointer.
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: 2) You may just be holding onto some slate pointers on an actor that don't get reset until the actor is Garbage Collected.  You should avoid doing this, and instead reset those references when the actor is Destroyed.
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: Stack: 
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb167acd4f UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb17d7f56f UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1858a770 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb16595d4a UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb17d7f56f UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb17c947ed UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb166afa6a UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb17d7f56f UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1858a770 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb16595d4a UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb17d7f56f UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb17c947ed UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb166afa6a UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb17d7f56f UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1858a770 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb16595d4a UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb16597f95 UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1662f524 UnrealEditor-UMG.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1ca43eae UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1c993f3e UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1c8d1556 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1c8fecb3 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffb1c8feaed UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffac5cde1b6 UnrealEditor-UnrealEd.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffac5ce866c UnrealEditor-UnrealEd.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffac5cedcdb UnrealEditor-UnrealEd.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffac5ced30e UnrealEditor-UnrealEd.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffac5544e94 UnrealEditor-UnrealEd.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffac619ea06 UnrealEditor-UnrealEd.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ff7238d8af2 UnrealEditor.exe!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ff7238fd28c UnrealEditor.exe!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ff7238fd37a UnrealEditor.exe!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ff723900854 UnrealEditor.exe!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ff723916984 UnrealEditor.exe!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ff723919d7a UnrealEditor.exe!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffbf2fc257d KERNEL32.DLL!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: [Callstack] 0x00007ffbf460aa48 ntdll.dll!UnknownFunction []
+[2024.05.29-09.44.18:253][124]LogOutputDevice: Error: 
+[2024.05.29-09.44.18:261][124]LogStats:                SubmitErrorReport -  0.000 s
+[2024.05.29-09.44.19:649][124]LogStats:                    SendNewReport -  1.388 s
+[2024.05.29-09.44.19:649][124]LogStats:             FDebug::EnsureFailed -  1.442 s
+[2024.05.29-09.44.19:653][124]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.05.29-09.44.19:655][124]LogPlayLevel: PlayLevel: Blueprint regeneration took 1729 ms (1 blueprints)
+[2024.05.29-09.44.19:655][124]PIE: New page: PIE session: Sandbox1 (29 May 2024, 11:44:19)
+[2024.05.29-09.44.19:655][124]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.44.19:685][124]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029624s)
+[2024.05.29-09.44.19:685][124]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029652s)
+[2024.05.29-09.44.19:695][124]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.05.29-09.44.19:695][124]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-09.44.19:695][124]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-09.44.19:696][124]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-09.44.19:696][124]LogPlayLevel: PIE: World Init took: (0.000859s)
+[2024.05.29-09.44.19:696][124]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2024.05.29-09.44.19:696][124]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-09.44.19:696][124]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-09.44.19:696][124]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-09.44.19:696][124]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-09.44.19:696][124]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-09.44.19:696][124]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-09.44.19:696][124]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-09.44.19:696][124]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-09.44.19:697][124]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-09.44.19:697][124]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-09.44.19:697][124]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-09.44.19:698][124]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-09.44.19:728][124]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-09.44.19:729][124]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-09.44.19:729][124]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-09.44.19:729][124]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-09.44.19:729][124]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2024.05.29-09.44.19:729][124]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2024.05.29-09.44.19:731][124]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2024.05.29-09.44.19:731][124]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2024.05.29-09.44.19:731][124]LogInit: FAudioDevice initialized with ID 10.
+[2024.05.29-09.44.19:731][124]LogAudio: Display: Audio Device (ID: 10) registered with world 'Sandbox1'.
+[2024.05.29-09.44.19:731][124]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2024.05.29-09.44.19:754][124]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.44.19:754][124]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.29-09.44.19:763][124]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-09.44.19:763][124]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-09.44.19:764][124]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-10.44.19
+[2024.05.29-09.44.19:764][124]LogWorld: Bringing up level for play took: 0.009399
+[2024.05.29-09.44.19:766][124]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2024.05.29-09.44.19:771][124]PIE: Server logged in
+[2024.05.29-09.44.19:772][124]PIE: Play in editor total start time 1.846 seconds.
+[2024.05.29-09.44.19:843][124]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.29-09.44.19:853][125]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.29-09.44.19:853][125]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.29-09.44.20:812][186]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.44.20:812][186]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.44.20:812][186]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.29-09.44.20:817][186]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-09.44.20:818][186]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.44.20:820][186]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-09.44.20:824][186]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.44.20:834][186]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.29-09.44.20:834][186]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2024.05.29-09.44.20:834][186]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.05.29-09.44.20:835][186]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.05.29-09.44.20:843][186]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.29-09.44.20:884][187]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2024.05.29-09.44.26:753][837]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-09.44.26:764][837]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.29-09.44.26:764][837]PIE: New page: PIE session: Sandbox1 (29 May 2024, 11:44:26)
+[2024.05.29-09.44.26:765][837]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.44.26:793][837]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028296s)
+[2024.05.29-09.44.26:793][837]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.028323s)
+[2024.05.29-09.44.26:804][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.05.29-09.44.26:805][837]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-09.44.26:806][837]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-09.44.26:806][837]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-09.44.26:806][837]LogPlayLevel: PIE: World Init took: (0.000765s)
+[2024.05.29-09.44.26:806][837]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2024.05.29-09.44.26:806][837]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-09.44.26:806][837]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-09.44.26:806][837]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-09.44.26:806][837]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-09.44.26:806][837]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-09.44.26:806][837]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-09.44.26:806][837]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-09.44.26:806][837]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-09.44.26:807][837]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-09.44.26:807][837]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-09.44.26:807][837]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-09.44.26:808][837]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-09.44.26:834][837]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-09.44.26:834][837]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-09.44.26:834][837]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-09.44.26:834][837]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-09.44.26:834][837]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=11
+[2024.05.29-09.44.26:834][837]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=11
+[2024.05.29-09.44.26:836][837]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=11
+[2024.05.29-09.44.26:836][837]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=11
+[2024.05.29-09.44.26:836][837]LogInit: FAudioDevice initialized with ID 11.
+[2024.05.29-09.44.26:836][837]LogAudio: Display: Audio Device (ID: 11) registered with world 'Sandbox1'.
+[2024.05.29-09.44.26:836][837]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 11
+[2024.05.29-09.44.26:839][837]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.29-09.44.26:847][837]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-09.44.26:847][837]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-09.44.26:848][837]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-10.44.26
+[2024.05.29-09.44.26:848][837]LogWorld: Bringing up level for play took: 0.008803
+[2024.05.29-09.44.26:850][837]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2024.05.29-09.44.26:850][837]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.29-09.44.26:854][837]PIE: Server logged in
+[2024.05.29-09.44.26:854][837]PIE: Play in editor total start time 0.09 seconds.
+[2024.05.29-09.44.27:055][851]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.29-09.44.44:502][918]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.44.44:502][918]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.44.44:502][918]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-09.44.44:503][918]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.44.44:506][918]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-09.44.44:509][918]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.44.44:519][918]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.29-09.44.44:520][918]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 11
+[2024.05.29-09.44.44:520][918]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.05.29-09.44.44:522][918]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.05.29-09.44.44:526][918]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.44.44:531][918]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.05.29-09.44.44:586][919]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2024.05.29-09.45.03:494][183]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.05.29-09.45.03:585][183]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Sandbox1_Auto3
+[2024.05.29-09.45.03:586][183]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1_Auto37A0DD6584A4D9103500F18808E7E260A.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto3.umap'
+[2024.05.29-09.45.03:587][183]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto3.umap is in the /Temp path, will not scan.
+[2024.05.29-09.45.03:588][183]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.103
+[2024.05.29-09.45.03:588][183]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.103
+[2024.05.29-09.45.03:588][183]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/UI/Image/timelineBkg] ([1] browsable assets)...
+[2024.05.29-09.45.03:590][183]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/UI/Image/timelineBkg.timelineBkg]
+[2024.05.29-09.45.03:590][183]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Image/timelineBkg]
+[2024.05.29-09.45.03:592][183]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Image/timelineBkg_Auto3
+[2024.05.29-09.45.03:592][183]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/timelineBkg_Auto3FED089F644C3E9F0C2C8D59D780659E3.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/Image/timelineBkg_Auto3.uasset'
+[2024.05.29-09.45.03:593][183]LogFileHelpers: Auto-saving content packages took 0.005
+[2024.05.29-09.45.21:380][382]LogInterchangeEngine: [Pending] Importing
+[2024.05.29-09.45.21:380][382]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/Deany/Pictu.../UNI/MicrobeMachines/timelineBkg.png]
+[2024.05.29-09.45.21:384][382]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.05.29-09.45.21:386][382]LogTexture: Display: Building textures: /Game/UI/Image/timelineBkg.timelineBkg (TFO_AutoDXT, 1000x400 x1x1x1) (Required Memory Estimate: 67.980784 MB), EncodeSpeed: Fast
+[2024.05.29-09.45.21:387][382]LogInterchangeEngine: [Success] Import Done
+[2024.05.29-09.45.21:435][383]LogInterchangeEngine: [Success] Import Done
+[2024.05.29-09.45.23:281][524]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-09.45.23:292][524]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.29-09.45.23:292][524]PIE: New page: PIE session: Sandbox1 (29 May 2024, 11:45:23)
+[2024.05.29-09.45.23:292][524]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.45.23:320][524]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028366s)
+[2024.05.29-09.45.23:320][524]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.028393s)
+[2024.05.29-09.45.23:331][524]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.29-09.45.23:332][524]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-09.45.23:332][524]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-09.45.23:333][524]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-09.45.23:333][524]LogPlayLevel: PIE: World Init took: (0.000717s)
+[2024.05.29-09.45.23:333][524]LogAudio: Display: Creating Audio Device:                 Id: 12, Scope: Unique, Realtime: True
+[2024.05.29-09.45.23:333][524]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-09.45.23:333][524]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-09.45.23:333][524]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-09.45.23:333][524]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-09.45.23:333][524]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-09.45.23:333][524]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-09.45.23:333][524]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-09.45.23:333][524]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-09.45.23:333][524]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-09.45.23:333][524]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-09.45.23:333][524]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-09.45.23:335][524]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-09.45.23:362][524]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-09.45.23:362][524]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-09.45.23:362][524]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-09.45.23:362][524]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-09.45.23:362][524]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=12
+[2024.05.29-09.45.23:362][524]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=12
+[2024.05.29-09.45.23:364][524]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=12
+[2024.05.29-09.45.23:364][524]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=12
+[2024.05.29-09.45.23:364][524]LogInit: FAudioDevice initialized with ID 12.
+[2024.05.29-09.45.23:364][524]LogAudio: Display: Audio Device (ID: 12) registered with world 'Sandbox1'.
+[2024.05.29-09.45.23:364][524]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 12
+[2024.05.29-09.45.23:367][524]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.29-09.45.23:375][524]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-09.45.23:375][524]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-09.45.23:375][524]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-10.45.23
+[2024.05.29-09.45.23:376][524]LogWorld: Bringing up level for play took: 0.008974
+[2024.05.29-09.45.23:377][524]LogOnline: OSS: Created online subsystem instance for: :Context_26
+[2024.05.29-09.45.23:378][524]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.29-09.45.23:381][524]PIE: Server logged in
+[2024.05.29-09.45.23:382][524]PIE: Play in editor total start time 0.091 seconds.
+[2024.05.29-09.45.23:579][535]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.29-09.48.35:305][907]Cmd: SELECT NONE
+[2024.05.29-09.48.35:813][962]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.48.35:813][962]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.48.35:814][962]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-09.48.35:815][962]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.48.35:817][962]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-09.48.35:821][962]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.48.35:832][962]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.48.35:834][962]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 12
+[2024.05.29-09.48.35:834][962]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2024.05.29-09.48.35:835][962]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2024.05.29-09.48.35:842][962]LogUObjectHash: Compacting FUObjectHashTables data took   1.21ms
+[2024.05.29-09.48.35:898][963]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2024.05.29-09.48.39:372][120]LogInterchangeEngine: [Pending] Importing
+[2024.05.29-09.48.39:373][120]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/Deany/Pictu.../UNI/MicrobeMachines/timelineBkg.png]
+[2024.05.29-09.48.39:374][120]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.05.29-09.48.39:376][120]LogInterchangeEngine: [Success] Import Done
+[2024.05.29-09.48.39:376][120]LogTexture: Display: Building textures: /Game/UI/Image/timelineBkg.timelineBkg (TFO_AutoDXT, 1000x400 x1x1x1) (Required Memory Estimate: 67.980784 MB), EncodeSpeed: Fast
+[2024.05.29-09.48.39:427][121]LogInterchangeEngine: [Success] Import Done
+[2024.05.29-09.48.40:715][212]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-09.48.40:724][212]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.29-09.48.40:724][212]PIE: New page: PIE session: Sandbox1 (29 May 2024, 11:48:40)
+[2024.05.29-09.48.40:724][212]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.48.40:753][212]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028330s)
+[2024.05.29-09.48.40:753][212]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.028359s)
+[2024.05.29-09.48.40:764][212]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.05.29-09.48.40:766][212]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-09.48.40:766][212]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-09.48.40:766][212]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-09.48.40:766][212]LogPlayLevel: PIE: World Init took: (0.000751s)
+[2024.05.29-09.48.40:767][212]LogAudio: Display: Creating Audio Device:                 Id: 13, Scope: Unique, Realtime: True
+[2024.05.29-09.48.40:767][212]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-09.48.40:767][212]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-09.48.40:767][212]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-09.48.40:767][212]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-09.48.40:767][212]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-09.48.40:767][212]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-09.48.40:767][212]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-09.48.40:767][212]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-09.48.40:767][212]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-09.48.40:767][212]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-09.48.40:767][212]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-09.48.40:769][212]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-09.48.40:794][212]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-09.48.40:794][212]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-09.48.40:794][212]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-09.48.40:794][212]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-09.48.40:795][212]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=13
+[2024.05.29-09.48.40:795][212]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=13
+[2024.05.29-09.48.40:796][212]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=13
+[2024.05.29-09.48.40:796][212]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=13
+[2024.05.29-09.48.40:796][212]LogInit: FAudioDevice initialized with ID 13.
+[2024.05.29-09.48.40:796][212]LogAudio: Display: Audio Device (ID: 13) registered with world 'Sandbox1'.
+[2024.05.29-09.48.40:797][212]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 13
+[2024.05.29-09.48.40:799][212]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.29-09.48.40:807][212]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-09.48.40:807][212]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-09.48.40:808][212]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-10.48.40
+[2024.05.29-09.48.40:808][212]LogWorld: Bringing up level for play took: 0.008733
+[2024.05.29-09.48.40:810][212]LogOnline: OSS: Created online subsystem instance for: :Context_27
+[2024.05.29-09.48.40:811][212]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.29-09.48.40:814][212]PIE: Server logged in
+[2024.05.29-09.48.40:815][212]PIE: Play in editor total start time 0.091 seconds.
+[2024.05.29-09.48.41:024][221]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.29-09.49.07:444][357]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.49.07:444][357]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.49.07:444][357]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-09.49.07:445][357]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.49.07:447][357]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-09.49.07:451][357]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.49.07:461][357]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.29-09.49.07:464][357]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 13
+[2024.05.29-09.49.07:464][357]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13
+[2024.05.29-09.49.07:465][357]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13
+[2024.05.29-09.49.07:468][357]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.49.07:472][357]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.05.29-09.49.07:534][358]LogPlayLevel: Display: Destroying online subsystem :Context_27
+[2024.05.29-09.49.59:622][438]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-09.49.59:633][438]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.29-09.49.59:637][438]LogPlayLevel: [PlayLevel] Compiling WBP_DragWidget before play...
+[2024.05.29-09.49.59:848][438]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-09.49.59:866][438]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.29-09.49.59:889][438]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.29-09.49.59:889][438]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget2C34248340AAC3F0E7B05BB5D6233A96.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.29-09.49.59:895][438]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 706 ms)
+[2024.05.29-09.49.59:908][438]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.29-09.49.59:909][438]LogPlayLevel: PlayLevel: Blueprint regeneration took 276 ms (1 blueprints)
+[2024.05.29-09.49.59:910][438]PIE: New page: PIE session: Sandbox1 (29 May 2024, 11:49:59)
+[2024.05.29-09.49.59:910][438]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.49.59:938][438]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028616s)
+[2024.05.29-09.49.59:939][438]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.028641s)
+[2024.05.29-09.49.59:947][438]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.29-09.49.59:948][438]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-09.49.59:948][438]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-09.49.59:948][438]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-09.49.59:948][438]LogPlayLevel: PIE: World Init took: (0.000854s)
+[2024.05.29-09.49.59:949][438]LogAudio: Display: Creating Audio Device:                 Id: 14, Scope: Unique, Realtime: True
+[2024.05.29-09.49.59:949][438]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-09.49.59:949][438]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-09.49.59:949][438]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-09.49.59:949][438]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-09.49.59:949][438]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-09.49.59:949][438]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-09.49.59:949][438]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-09.49.59:949][438]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-09.49.59:949][438]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-09.49.59:949][438]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-09.49.59:949][438]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-09.49.59:951][438]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-09.49.59:977][438]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-09.49.59:977][438]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-09.49.59:977][438]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-09.49.59:978][438]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-09.49.59:978][438]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=14
+[2024.05.29-09.49.59:978][438]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=14
+[2024.05.29-09.49.59:980][438]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=14
+[2024.05.29-09.49.59:980][438]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=14
+[2024.05.29-09.49.59:980][438]LogInit: FAudioDevice initialized with ID 14.
+[2024.05.29-09.49.59:980][438]LogAudio: Display: Audio Device (ID: 14) registered with world 'Sandbox1'.
+[2024.05.29-09.49.59:980][438]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 14
+[2024.05.29-09.49.59:997][438]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.49.59:997][438]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.29-09.50.00:007][438]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-09.50.00:007][438]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-09.50.00:008][438]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-10.50.00
+[2024.05.29-09.50.00:008][438]LogWorld: Bringing up level for play took: 0.010223
+[2024.05.29-09.50.00:010][438]LogOnline: OSS: Created online subsystem instance for: :Context_28
+[2024.05.29-09.50.00:011][438]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.29-09.50.00:015][438]PIE: Server logged in
+[2024.05.29-09.50.00:015][438]PIE: Play in editor total start time 0.382 seconds.
+[2024.05.29-09.50.00:067][438]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.29-09.50.00:083][439]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.29-09.50.00:083][439]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.29-09.50.00:139][439]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.29-09.50.04:427][858]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.29-09.50.04:427][858]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.29-09.50.04:427][858]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.29-09.50.04:427][858]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.29-09.50.04:427][858]LogScript: Warning: Script Msg: Divide by zero: Divide_DoubleDouble
+[2024.05.29-09.50.04:427][858]LogScript: Warning: Script Msg called by: BP_Collector_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1
+[2024.05.29-09.50.41:704][761]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.50.41:704][761]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.50.41:704][761]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.29-09.50.41:709][761]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-09.50.41:710][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.50.41:712][761]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-09.50.41:716][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.50.41:725][761]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.29-09.50.41:726][761]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 14
+[2024.05.29-09.50.41:726][761]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2024.05.29-09.50.41:727][761]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2024.05.29-09.50.41:735][761]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2024.05.29-09.50.41:773][762]LogPlayLevel: Display: Destroying online subsystem :Context_28
+[2024.05.29-09.50.56:408][493]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-09.50.56:419][493]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.29-09.50.56:422][493]LogPlayLevel: [PlayLevel] Compiling WBP_Timeline before play...
+[2024.05.29-09.50.56:610][493]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-09.50.56:648][493]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.29-09.50.56:684][493]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.29-09.50.56:685][493]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline7C2F1C6045315018120B8ABBF5A83D15.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.29-09.50.56:692][493]LogFileHelpers: InternalPromptForCheckoutAndSave took 81 ms (total: 788 ms)
+[2024.05.29-09.50.56:705][493]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.29-09.50.56:706][493]LogPlayLevel: PlayLevel: Blueprint regeneration took 287 ms (1 blueprints)
+[2024.05.29-09.50.56:706][493]PIE: New page: PIE session: Sandbox1 (29 May 2024, 11:50:56)
+[2024.05.29-09.50.56:706][493]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.50.56:736][493]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029645s)
+[2024.05.29-09.50.56:736][493]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029678s)
+[2024.05.29-09.50.56:747][493]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.29-09.50.56:748][493]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-09.50.56:748][493]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-09.50.56:748][493]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-09.50.56:749][493]LogPlayLevel: PIE: World Init took: (0.000752s)
+[2024.05.29-09.50.56:749][493]LogAudio: Display: Creating Audio Device:                 Id: 15, Scope: Unique, Realtime: True
+[2024.05.29-09.50.56:749][493]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-09.50.56:749][493]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-09.50.56:749][493]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-09.50.56:749][493]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-09.50.56:749][493]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-09.50.56:749][493]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-09.50.56:749][493]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-09.50.56:749][493]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-09.50.56:749][493]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-09.50.56:749][493]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-09.50.56:749][493]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-09.50.56:751][493]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-09.50.56:779][493]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-09.50.56:779][493]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-09.50.56:779][493]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-09.50.56:779][493]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-09.50.56:780][493]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=15
+[2024.05.29-09.50.56:780][493]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=15
+[2024.05.29-09.50.56:781][493]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=15
+[2024.05.29-09.50.56:781][493]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=15
+[2024.05.29-09.50.56:781][493]LogInit: FAudioDevice initialized with ID 15.
+[2024.05.29-09.50.56:781][493]LogAudio: Display: Audio Device (ID: 15) registered with world 'Sandbox1'.
+[2024.05.29-09.50.56:781][493]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 15
+[2024.05.29-09.50.56:810][493]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.50.56:810][493]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.29-09.50.56:818][493]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-09.50.56:818][493]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-09.50.56:819][493]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-10.50.56
+[2024.05.29-09.50.56:819][493]LogWorld: Bringing up level for play took: 0.008944
+[2024.05.29-09.50.56:821][493]LogOnline: OSS: Created online subsystem instance for: :Context_29
+[2024.05.29-09.50.56:821][493]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.29-09.50.56:826][493]PIE: Server logged in
+[2024.05.29-09.50.56:826][493]PIE: Play in editor total start time 0.408 seconds.
+[2024.05.29-09.50.56:882][493]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.29-09.50.56:892][494]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.29-09.50.56:892][494]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.29-09.50.56:951][494]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.29-09.51.24:985][372]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.51.24:985][372]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.51.24:985][372]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.29-09.51.24:991][372]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-09.51.24:992][372]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.51.24:994][372]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-09.51.24:997][372]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.51.25:010][372]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 15
+[2024.05.29-09.51.25:010][372]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2024.05.29-09.51.25:012][372]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2024.05.29-09.51.25:018][372]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.29-09.51.25:066][374]LogPlayLevel: Display: Destroying online subsystem :Context_29
+[2024.05.29-09.51.43:718][395]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.51.55:274][740]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.29-09.52.39:343][975]LogEditorTransaction: Undo Move Anchor
+[2024.05.29-09.53.41:591][312]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.05.29-09.54.41:009][314]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.29-09.54.41:100][314]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Sandbox1_Auto4
+[2024.05.29-09.54.41:101][314]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1_Auto486689B8E4927BF6FF9AA6088507DD8BE.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto4.umap'
+[2024.05.29-09.54.41:103][314]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto4.umap is in the /Temp path, will not scan.
+[2024.05.29-09.54.41:103][314]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.108
+[2024.05.29-09.54.41:103][314]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.108
+[2024.05.29-09.54.41:103][314]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_Timeline] ([2] browsable assets)...
+[2024.05.29-09.54.41:108][314]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline]
+[2024.05.29-09.54.41:108][314]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_Timeline]
+[2024.05.29-09.54.41:143][314]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_Timeline_Auto4
+[2024.05.29-09.54.41:143][314]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline_Auto491CDD32C476FA23A2C95439B79566EBC.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_Timeline_Auto4.uasset'
+[2024.05.29-09.54.41:144][314]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/UI/Image/timelineBkg] ([1] browsable assets)...
+[2024.05.29-09.54.41:146][314]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/UI/Image/timelineBkg.timelineBkg]
+[2024.05.29-09.54.41:146][314]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Image/timelineBkg]
+[2024.05.29-09.54.41:147][314]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Image/timelineBkg_Auto4
+[2024.05.29-09.54.41:147][314]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/timelineBkg_Auto4DF1496734F7F5F5AC92FEFA301F76B95.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/Image/timelineBkg_Auto4.uasset'
+[2024.05.29-09.54.41:149][314]LogFileHelpers: Auto-saving content packages took 0.046
+[2024.05.29-09.56.04:897][296]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.29-09.56.04:942][296]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.05.29-09.56.05:161][296]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-09.56.05:188][296]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.29-09.56.05:224][296]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.29-09.56.05:225][296]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineC166B79D471B70AD86952193B42EB557.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.29-09.56.05:231][296]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 858 ms)
+[2024.05.29-09.56.05:241][296]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.29-09.56.05:241][296]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.29-09.56.13:118][204]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.56.25:147][526]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.57.23:044][695]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.57.24:774][884]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-09.57.24:785][884]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.29-09.57.24:789][884]LogPlayLevel: [PlayLevel] Compiling WBP_Timeline before play...
+[2024.05.29-09.57.24:992][884]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-09.57.25:022][884]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.29-09.57.25:058][884]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.29-09.57.25:058][884]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineFFC3B6D040CFFB1018BEBE9D8452B8A2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.29-09.57.25:064][884]LogFileHelpers: InternalPromptForCheckoutAndSave took 72 ms (total: 931 ms)
+[2024.05.29-09.57.25:079][884]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.29-09.57.25:080][884]LogPlayLevel: PlayLevel: Blueprint regeneration took 294 ms (1 blueprints)
+[2024.05.29-09.57.25:080][884]PIE: New page: PIE session: Sandbox1 (29 May 2024, 11:57:25)
+[2024.05.29-09.57.25:080][884]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.57.25:109][884]LogPlayLevel: PIE: StaticDuplicateObject took: (0.029138s)
+[2024.05.29-09.57.25:109][884]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.029165s)
+[2024.05.29-09.57.25:118][884]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2024.05.29-09.57.25:119][884]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-09.57.25:119][884]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-09.57.25:119][884]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-09.57.25:119][884]LogPlayLevel: PIE: World Init took: (0.000992s)
+[2024.05.29-09.57.25:120][884]LogAudio: Display: Creating Audio Device:                 Id: 16, Scope: Unique, Realtime: True
+[2024.05.29-09.57.25:120][884]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-09.57.25:120][884]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-09.57.25:120][884]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-09.57.25:120][884]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-09.57.25:120][884]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-09.57.25:120][884]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-09.57.25:120][884]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-09.57.25:120][884]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-09.57.25:120][884]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-09.57.25:120][884]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-09.57.25:120][884]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-09.57.25:122][884]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-09.57.25:148][884]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-09.57.25:149][884]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-09.57.25:149][884]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-09.57.25:149][884]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-09.57.25:149][884]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=16
+[2024.05.29-09.57.25:149][884]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=16
+[2024.05.29-09.57.25:151][884]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=16
+[2024.05.29-09.57.25:151][884]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=16
+[2024.05.29-09.57.25:151][884]LogInit: FAudioDevice initialized with ID 16.
+[2024.05.29-09.57.25:151][884]LogAudio: Display: Audio Device (ID: 16) registered with world 'Sandbox1'.
+[2024.05.29-09.57.25:151][884]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 16
+[2024.05.29-09.57.25:178][884]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.57.25:178][884]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.29-09.57.25:187][884]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-09.57.25:187][884]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-09.57.25:187][884]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-10.57.25
+[2024.05.29-09.57.25:188][884]LogWorld: Bringing up level for play took: 0.009539
+[2024.05.29-09.57.25:189][884]LogOnline: OSS: Created online subsystem instance for: :Context_30
+[2024.05.29-09.57.25:190][884]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.29-09.57.25:194][884]PIE: Server logged in
+[2024.05.29-09.57.25:196][884]PIE: Play in editor total start time 0.41 seconds.
+[2024.05.29-09.57.25:263][884]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.29-09.57.25:273][885]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.29-09.57.25:273][885]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.29-09.57.25:330][885]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.29-09.57.36:627][785]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-09.57.36:627][785]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-09.57.36:627][785]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.29-09.57.36:632][785]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-09.57.36:633][785]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.57.36:634][785]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-09.57.36:639][785]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-09.57.36:651][785]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.29-09.57.36:652][785]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 16
+[2024.05.29-09.57.36:652][785]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2024.05.29-09.57.36:654][785]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2024.05.29-09.57.36:661][785]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.29-09.57.36:698][786]LogPlayLevel: Display: Destroying online subsystem :Context_30
+[2024.05.29-09.57.51:642][419]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.58.05:351][944]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.58.29:239][739]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.05.29-09.58.29:241][739]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.011
+[2024.05.29-09.58.29:241][739]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_Timeline] ([2] browsable assets)...
+[2024.05.29-09.58.29:245][739]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline]
+[2024.05.29-09.58.29:245][739]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_Timeline]
+[2024.05.29-09.58.29:281][739]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_Timeline_Auto5
+[2024.05.29-09.58.29:281][739]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline_Auto5111A5F704FF7295F95DCE4B9790910A3.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_Timeline_Auto5.uasset'
+[2024.05.29-09.58.29:281][739]LogFileHelpers: Auto-saving content packages took 0.041
+[2024.05.29-09.59.29:372][937]BlueprintLog: New page: Compile WBP_Timeline
+[2024.05.29-09.59.29:418][937]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.05.29-09.59.29:593][937]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-09.59.29:615][937]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.29-09.59.29:652][937]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.29-09.59.29:652][937]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineF48C668D43D146440CF012B1E6F1F668.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.29-09.59.29:658][937]LogFileHelpers: InternalPromptForCheckoutAndSave took 65 ms (total: 996 ms)
+[2024.05.29-09.59.29:665][937]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.05.29-09.59.29:665][937]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.29-09.59.42:674][426]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-09.59.57:579][166]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-10.00.11:291][790]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-10.00.32:304][271]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-10.00.33:686][434]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.05.29-10.00.33:753][434]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.05.29-10.00.34:067][434]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-10.00.34:096][434]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.29-10.00.34:118][434]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.29-10.00.34:119][434]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget52C056624ACAABA0C5565CABA02F5928.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.29-10.00.34:125][434]LogFileHelpers: InternalPromptForCheckoutAndSave took 58 ms (total: 1.05 sec)
+[2024.05.29-10.00.34:136][434]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.29-10.00.34:136][434]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.29-10.00.47:369][988]LogSlate: Window 'Color Picker' being destroyed
+[2024.05.29-10.00.55:419][941]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.05.29-10.00.55:485][941]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.29-10.00.55:795][941]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.29-10.00.55:819][941]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.29-10.00.55:842][941]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.29-10.00.55:843][941]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget23085FC64E8BE0524E8834AC1B7100D5.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.29-10.00.55:848][941]LogFileHelpers: InternalPromptForCheckoutAndSave took 53 ms (total: 1.10 sec)
+[2024.05.29-10.00.55:860][941]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.29-10.00.55:860][941]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.29-10.00.57:562][127]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.29-10.00.57:573][127]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.29-10.00.57:573][127]PIE: New page: PIE session: Sandbox1 (29 May 2024, 12:00:57)
+[2024.05.29-10.00.57:574][127]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-10.00.57:603][127]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028919s)
+[2024.05.29-10.00.57:603][127]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.028953s)
+[2024.05.29-10.00.57:615][127]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2024.05.29-10.00.57:616][127]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.29-10.00.57:616][127]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.29-10.00.57:617][127]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.29-10.00.57:617][127]LogPlayLevel: PIE: World Init took: (0.000847s)
+[2024.05.29-10.00.57:617][127]LogAudio: Display: Creating Audio Device:                 Id: 17, Scope: Unique, Realtime: True
+[2024.05.29-10.00.57:617][127]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.29-10.00.57:617][127]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.29-10.00.57:617][127]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.29-10.00.57:617][127]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.29-10.00.57:617][127]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.29-10.00.57:617][127]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.29-10.00.57:617][127]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.29-10.00.57:617][127]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.29-10.00.57:617][127]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.29-10.00.57:617][127]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.29-10.00.57:617][127]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.29-10.00.57:620][127]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.29-10.00.57:646][127]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.29-10.00.57:646][127]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.29-10.00.57:646][127]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.29-10.00.57:646][127]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.29-10.00.57:646][127]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=17
+[2024.05.29-10.00.57:646][127]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=17
+[2024.05.29-10.00.57:647][127]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=17
+[2024.05.29-10.00.57:647][127]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=17
+[2024.05.29-10.00.57:647][127]LogInit: FAudioDevice initialized with ID 17.
+[2024.05.29-10.00.57:647][127]LogAudio: Display: Audio Device (ID: 17) registered with world 'Sandbox1'.
+[2024.05.29-10.00.57:647][127]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 17
+[2024.05.29-10.00.57:671][127]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-10.00.57:672][127]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.29-10.00.57:680][127]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.29-10.00.57:680][127]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore1' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Pickup Detector' 
+[2024.05.29-10.00.57:681][127]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.29-11.00.57
+[2024.05.29-10.00.57:681][127]LogWorld: Bringing up level for play took: 0.009154
+[2024.05.29-10.00.57:683][127]LogOnline: OSS: Created online subsystem instance for: :Context_31
+[2024.05.29-10.00.57:684][127]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.29-10.00.57:688][127]PIE: Server logged in
+[2024.05.29-10.00.57:689][127]PIE: Play in editor total start time 0.116 seconds.
+[2024.05.29-10.00.57:701][127]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.29-10.00.57:870][131]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.29-10.01.31:298][581]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.29-10.01.31:298][581]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.29-10.01.31:299][581]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.29-10.01.31:304][581]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.29-10.01.31:305][581]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-10.01.31:307][581]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.29-10.01.31:311][581]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.29-10.01.31:322][581]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.29-10.01.31:324][581]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 17
+[2024.05.29-10.01.31:324][581]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2024.05.29-10.01.31:326][581]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2024.05.29-10.01.31:333][581]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.05.29-10.01.31:366][582]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2024.05.29-10.05.21:639][ 53]LogHotReload: New module detected: UnrealEditor-projProblox-0006.dll
+[2024.05.29-10.05.22:641][ 57]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.29-10.05.22:680][ 57]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2024.05.29-10.05.22:872][ 57]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.29-10.05.22:970][ 57]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.05.29-10.05.23:010][ 57]Display: HotReload took  0.4s.
+[2024.05.29-10.05.23:011][ 57]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 59 functions remapped, 1 scriptstruct remapped
