@@ -11,12 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/Development/projProbloxModuleRules.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/projProbloxModuleRules/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_DragWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_DragWidget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Timeline.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_Timeline.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Collector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Collector.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ToolWindowMonitoring.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;components&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ui&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -289,6 +291,8 @@
       <workItem from="1716114864961" duration="17201000" />
       <workItem from="1716284789336" duration="1388000" />
       <workItem from="1716544187030" duration="1986000" />
+      <workItem from="1716813805607" duration="673000" />
+      <workItem from="1716973964858" duration="6681000" />
     </task>
     <servers />
   </component>

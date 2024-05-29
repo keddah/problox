@@ -124,6 +124,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool active;
 
+	bool needsTimer = true;
 	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
@@ -302,6 +303,9 @@ public:
 
 	// Returns the relative transform to the parent core.
 	FTransform GetRelativeTransform() const { return mesh->GetRelativeTransform(); }
+
+	UFUNCTION(BlueprintCallable)
+	bool IsTimerRequired() const { return needsTimer; }
 	
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const

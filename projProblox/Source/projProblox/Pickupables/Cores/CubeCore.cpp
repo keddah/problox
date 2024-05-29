@@ -592,14 +592,18 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
 		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
 
+		const float delayTime = delays[i] < 1? .01f : delays[i];
+		const float durationTime = durations[i] < 1? .1f : durations[i];
+		
 		// Activate...
-		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delays[i] < 1? .1f : delays[i], false);
+		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delayTime, false);
 
 		// Deactivate after the delay and duration elapses activation...
-		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
+		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, delayTime + durationTime, false);
 
 		// If the current duration is bigger than "longestDuration" set the new longest duration... otherwise.. same.
-		longestDuration = (delays[i] < 1? .1f : delays[i]) + durations[i] > longestDuration? (delays[i] < 1? .1f : delays[i]) + durations[i] : longestDuration;
+		longestDuration = delayTime + durationTime > longestDuration? delayTime + durationTime : longestDuration;
+		PrintFloat(longestDuration, 6)
 	}
 
 	FTimerHandle startResetHandle;

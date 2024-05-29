@@ -30,6 +30,13 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		*(float*)Z_Param__Result=P_THIS->GetMass();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APickupableMaster::execIsTimerRequired)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsTimerRequired();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APickupableMaster::execGetMesh)
 	{
 		P_FINISH;
@@ -119,6 +126,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 			{ "AscendDescend", &APickupableMaster::execAscendDescend },
 			{ "GetMass", &APickupableMaster::execGetMass },
 			{ "GetMesh", &APickupableMaster::execGetMesh },
+			{ "IsTimerRequired", &APickupableMaster::execIsTimerRequired },
 			{ "ResetRotation", &APickupableMaster::execResetRotation },
 			{ "RotateHori", &APickupableMaster::execRotateHori },
 			{ "RotateVert", &APickupableMaster::execRotateVert },
@@ -284,6 +292,45 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_GetMesh_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics
+	{
+		struct PickupableMaster_eventIsTimerRequired_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((PickupableMaster_eventIsTimerRequired_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PickupableMaster_eventIsTimerRequired_Parms), &Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "IsTimerRequired", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::PickupableMaster_eventIsTimerRequired_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::PickupableMaster_eventIsTimerRequired_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APickupableMaster_IsTimerRequired()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_IsTimerRequired_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -741,6 +788,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ &Z_Construct_UFunction_APickupableMaster_AscendDescend, "AscendDescend" }, // 3362325091
 		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 1738982093
 		{ &Z_Construct_UFunction_APickupableMaster_GetMesh, "GetMesh" }, // 627417709
+		{ &Z_Construct_UFunction_APickupableMaster_IsTimerRequired, "IsTimerRequired" }, // 2822607283
 		{ &Z_Construct_UFunction_APickupableMaster_ResetRotation, "ResetRotation" }, // 3818178389
 		{ &Z_Construct_UFunction_APickupableMaster_RotateHori, "RotateHori" }, // 395303158
 		{ &Z_Construct_UFunction_APickupableMaster_RotateVert, "RotateVert" }, // 2959353659
@@ -1001,15 +1049,15 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APickupableMaster);
 	APickupableMaster::~APickupableMaster() {}
-	struct Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 1118705954U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 3128601665U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_4282163591(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_1861459138(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

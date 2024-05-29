@@ -21,7 +21,7 @@ class PROJPROBLOX_API AMagPole : public AActor
 	UPROPERTY(EditDefaultsOnly)
 	UStaticMeshComponent* mesh;
 	
-	void ConfigureCharge() const { mesh->SetMaterial(0, positive? positiveMat : negativeMat); }
+	void ConfigureCharge() { mesh->SetMaterial(0, positive? positiveMat : negativeMat); UpdateMagnets(); }
 
 	UPROPERTY(EditInstanceOnly)
 	bool positive;
@@ -29,11 +29,11 @@ class PROJPROBLOX_API AMagPole : public AActor
 	UPROPERTY(EditInstanceOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "Putting this value too high will cause the magnets that are attracted to it to get destroyed..."))
 	float attractionForce = 2500;
 
+	void UpdateMagnets();
 	
 public:	
 	// Sets default values for this actor's properties
 	AMagPole();
-	virtual void Tick(float DeltaTime) override;
 
 	// true = positive
 	bool GetPositiveCharge() const { return positive; }
@@ -44,6 +44,9 @@ public:
 		mesh->GetClosestPointOnCollision(mag->GetActorLocation(), out);
 		return out;
 	}
+
+	UFUNCTION(BlueprintCallable)
+	void SetPositiveCharge(const bool pos) { positive = pos; ConfigureCharge(); }
 	
 protected:
 	// Called when the game starts or when spawned

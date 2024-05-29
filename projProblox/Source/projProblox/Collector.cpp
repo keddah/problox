@@ -72,5 +72,5 @@ void ACollector::CalculateCellCount()
 			if(!cell->IsSafe()) cellsInLevel++;
 		}
 	}
-	Print("Things in level: " + FString::FromInt(cellsInLevel), 4)
+	Print("Things in level: " + FString::FromInt(cellsInLevel), 40)
 }
