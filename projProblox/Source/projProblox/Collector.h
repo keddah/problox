@@ -51,6 +51,8 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	int32 cellCount;
 
+	UFUNCTION(BlueprintCallable)
+	void ResetCells();
 	
 	/////////////// Other ///////////////
 	UPROPERTY(BlueprintReadOnly)

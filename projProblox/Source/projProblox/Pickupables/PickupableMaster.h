@@ -52,16 +52,16 @@ protected:
 	UStaticMeshComponent* silhouette;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UBoxComponent* pickupCollider;
+	UBoxComponent* mouseCollider;
 
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* centerMass;
 	
 	UPROPERTY(EditDefaultsOnly)
-	UArrowComponent* indicator;
+	UArrowComponent* placeIndicator;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UAudioManager* audioManager;
+	UAudioManager* sfxManager;
 
 
 	/////////////// Selection / Placement ///////////////
@@ -124,6 +124,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool active;
 
+	bool needsTimer = true;
 	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
@@ -168,7 +169,7 @@ protected:
 
 	
 	/////////////// Indicator ///////////////
-	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
+	virtual void SetHideIndicator(const bool hide) { placeIndicator->SetHiddenInGame(hide); }
 	virtual void ScaleIndicator();
 	virtual void SetPlaceIndicator();
 
@@ -302,6 +303,9 @@ public:
 
 	// Returns the relative transform to the parent core.
 	FTransform GetRelativeTransform() const { return mesh->GetRelativeTransform(); }
+
+	UFUNCTION(BlueprintCallable)
+	bool IsTimerRequired() const { return needsTimer; }
 	
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const

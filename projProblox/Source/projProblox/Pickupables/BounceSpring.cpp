@@ -14,7 +14,9 @@ ABounceSpring::ABounceSpring()
 	end->SetupAttachment(mesh);
 	end->SetSimulatePhysics(false);
 
-	audioManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
+	needsTimer = false;
+
+	sfxManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
 }
 
 void ABounceSpring::Ability(float deltaTime)
@@ -36,10 +38,10 @@ void ABounceSpring::Ability(float deltaTime)
 	collisionParams.AddIgnoredActor(this);
 	collisionParams.AddIgnoredActor(parentCore);
 	
-	DrawDebugLine(wrld, startPos, endPos, FColor::Red);
+	// DrawDebugLine(wrld, startPos, endPos, FColor::Red);
 	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
 
-	pickupCollider->SetWorldLocation(end->GetComponentLocation());
+	mouseCollider->SetWorldLocation(end->GetComponentLocation());
 
 	if(!springHit.bBlockingHit)
 	{
@@ -51,13 +53,13 @@ void ABounceSpring::Ability(float deltaTime)
 	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
 	end->SetWorldLocation(springHit.Location);
 	
-	DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
+	// DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
-	DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
+	// DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
 
 	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
-	if(!audioManager->IsPlaying()) audioManager->PlayAbility();
+	if(!sfxManager->IsPlaying()) sfxManager->PlayAbility();
 }
 
 void ABounceSpring::ToggleGravity() const

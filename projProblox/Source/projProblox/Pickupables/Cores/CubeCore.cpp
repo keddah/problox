@@ -36,7 +36,7 @@ ACubeCore::ACubeCore()
 	distanceLine->SetRelativeScale3D({1,7,7});
 	distanceLine->SetHiddenInGame(true);
 
-	pickupCollider->SetBoxExtent({});
+	mouseCollider->SetBoxExtent({});
 	
 	placeRange = 50;
 }
@@ -66,19 +66,19 @@ void ACubeCore::BeginPlay()
 
 void ACubeCore::SetupPlaceIndicator()
 {
-	if(!indicator) return;
+	if(!placeIndicator) return;
 
 	// ScaleIndicator();
 	
-	indicator->ArrowColor.A = .5f;
+	placeIndicator->ArrowColor.A = .5f;
 
 	const float length = placeRange * 2;
-	indicator->ArrowLength = length;
+	placeIndicator->ArrowLength = length;
 
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	indicator->SetRelativeRotation(rot);
+	placeIndicator->SetRelativeRotation(rot);
 
-	indicator->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
+	placeIndicator->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
 	SetHideIndicator(true);
 }
 
@@ -261,7 +261,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 		return EOperations::Detach;
 	}
 
-	indicator->SetHiddenInGame(true);
+	placeIndicator->SetHiddenInGame(true);
 
 	// If there is no hit object.
 	if(!IsValid(hitObj)) return EOperations::Move;
@@ -286,7 +286,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
 	hitObj = 0;
 
-	audioManager->PlayAttach();
+	sfxManager->PlayAttach();
 	return EOperations::Attach;
 }
 
@@ -393,7 +393,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 		obj->Detach(push);
 	}
 
-	audioManager->PlayDetachAll();
+	sfxManager->PlayDetachAll();
 	socketInfo->ClearAttachments();
 	return objs;
 }
@@ -592,14 +592,18 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
 		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
 
+		const float delayTime = delays[i] < 1? .01f : delays[i];
+		const float durationTime = durations[i] < 1? .1f : durations[i];
+		
 		// Activate...
-		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delays[i] < 1? .1f : delays[i], false);
+		wrld->GetTimerManager().SetTimer(activationHandle, activateDelegate, delayTime, false);
 
 		// Deactivate after the delay and duration elapses activation...
-		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, (delays[i] < 1? .1f : delays[i]) + durations[i], false);
+		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, delayTime + durationTime, false);
 
 		// If the current duration is bigger than "longestDuration" set the new longest duration... otherwise.. same.
-		longestDuration = (delays[i] < 1? .1f : delays[i]) + durations[i] > longestDuration? (delays[i] < 1? .1f : delays[i]) + durations[i] : longestDuration;
+		longestDuration = delayTime + durationTime > longestDuration? delayTime + durationTime : longestDuration;
+		PrintFloat(longestDuration, 6)
 	}
 
 	FTimerHandle startResetHandle;

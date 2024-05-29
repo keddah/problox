@@ -21,6 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
  \
 	DECLARE_FUNCTION(execAddThing); \
 	DECLARE_FUNCTION(execGetCollectPoint); \
+	DECLARE_FUNCTION(execResetCells); \
 	DECLARE_FUNCTION(execCalculateCellCount);
 
 

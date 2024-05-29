@@ -25,7 +25,7 @@ ATreads::ATreads()
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = false;
 	rotOffset = {90,0,180};
-	audioManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
+	sfxManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
 }
 
 float ATreads::GetAttachOffset(const APickupableMaster& attachee)
@@ -40,13 +40,35 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
+void ATreads::CalculateVelocity(const float deltaTime)
+{
+	const FVector deltaPos = GetActorLocation() - prevPos;
+	velocity = deltaPos / deltaTime;
+	prevPos = GetActorLocation();
+}
+
 void ATreads::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
 
-	// Drag();
+	if(wrld)
+	{
+		FHitResult hit;
+		FCollisionQueryParams params;
+		params.AddIgnoredActor(this);
+
+		const FVector start = GetActorLocation();
+		
+		DrawDebugLine(wrld, start, start + FVector(0,0,1) * -40, FColor::Red);
+		nearFloor = wrld->LineTraceSingleByChannel(hit, start, start + GetActorUpVector() * -40, ECC_Visibility, params);
+	}
+	
+	if(!grounded && isAttached && nearFloor) AddVelocity(velocity * deltaTime);
+	velocity = {};
+
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
+	CalculateVelocity(deltaTime);
 
 	
 	// Disregards the mass...
@@ -57,6 +79,6 @@ void ATreads::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
 
-	if(value) audioManager->PlayAbility();
-	else audioManager->StopAbility();
+	if(value) sfxManager->PlayAbility();
+	else sfxManager->StopAbility();
 }

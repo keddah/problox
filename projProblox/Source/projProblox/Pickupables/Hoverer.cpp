@@ -81,7 +81,7 @@ void AHoverer::Ability(float deltaTime)
 		
 			const FVector start = point->GetComponentLocation();
 			const FVector end = start + forwardVec * distance;
-			DrawDebugLine(wrld, start, end, FColor::Red);
+			// DrawDebugLine(wrld, start, end, FColor::Red);
 		
 			if(wrld->LineTraceSingleByChannel(hit, start, end, ECC_Visibility, collisionParams))
 			{
@@ -90,7 +90,7 @@ void AHoverer::Ability(float deltaTime)
 				const float power = (hoverStrength * -1000) / distanceSquared;
 				mesh->AddForceAtLocation(forwardVec * power, end);
 	
-				DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+				// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 			}
 		}
 	}

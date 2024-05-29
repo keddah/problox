@@ -53,13 +53,13 @@ void APiston::Ability(const float deltaTime)
 
 	// If the target position hasn't been met and the relative position is towards the middle of the movement.
 	moving = !Approximately(relativePos.Length(), targetPos.Length(), 2);
-	if(moving) DrawDebugLine(wrld, start, end, FColor::Red);
+	// if(moving) DrawDebugLine(wrld, start, end, FColor::Red);
 
 	wrld->LineTraceSingleByChannel(hit, start, end, ECC_Visibility, collisionParams);
 	flatHead->SetCollisionResponseToAllChannels(moving? ECR_Ignore : ECR_Block);
 	
 	if(!hit.bBlockingHit) return;
-	DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 	if(!wrld || !moving || !canPush) return;
 
@@ -72,14 +72,14 @@ void APiston::Ability(const float deltaTime)
 	UPrimitiveComponent* comp = hit.GetComponent();
 	if(comp->IsSimulatingPhysics())
 	{
-		Print("pushing something else", 5)
+		// Print("pushing something else", 5)
 		const FVector outputForce = pushDir * pushForce * 100 * comp->CalculateMass();
 		comp->AddForceAtLocation(outputForce, hit.Location);
 		return;
 	}
 
 	// Push self
-	Print("pushing self", 5)
+	// Print("pushing self", 5)
 	const FVector outputForce = pushDir * selfPropelForce * -1000 * sqrt(parentCore->GetMass());
 	mesh->AddForceAtLocation(outputForce, hit.Location);
 }

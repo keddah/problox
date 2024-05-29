@@ -23,6 +23,7 @@ enum class EOperations : uint8;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetMass); \
+	DECLARE_FUNCTION(execIsTimerRequired); \
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execAllObjsInHierarchy); \
 	DECLARE_FUNCTION(execSetAbilityActive); \

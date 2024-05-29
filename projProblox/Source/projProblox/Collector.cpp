@@ -4,6 +4,7 @@
 #include "Collector.h"
 
 #include "Cells/Cell.h"
+#include "Cells/CellSpawner.h"
 #include "Components/LightComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -50,6 +51,21 @@ void ACollector::BeginPlay()
 	core->onStartGame.AddDynamic(this, &ACollector::CalculateCellCount);
 }
 
+void ACollector::ResetCells()
+{
+	TArray<AActor*> cellActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACell::StaticClass(), cellActors);
+
+	// Destroy all the cells in the level
+	for (const auto& cell : cellActors) cell->Destroy();
+
+	// ... Then get all the spawners in the level to spawn the cells again.
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), cellActors);
+	for (auto& spawner : cellActors) Cast<ACellSpawner>(spawner)->BeginSpawn();
+
+	Print("Resetting", 5);
+}
+
 // Called every frame
 void ACollector::Tick(float DeltaTime)
 {
@@ -58,6 +74,8 @@ void ACollector::Tick(float DeltaTime)
 
 void ACollector::CalculateCellCount()
 {
+	if(player->GetGameMode() == EGameMode::Story) ResetCells();
+	
 	TArray<AActor*> countArr;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACell::StaticClass(), countArr);
 
@@ -72,5 +90,5 @@ void ACollector::CalculateCellCount()
 			if(!cell->IsSafe()) cellsInLevel++;
 		}
 	}
-	Print("Things in level: " + FString::FromInt(cellsInLevel), 4)
+	Print("Things in level: " + FString::FromInt(cellsInLevel), 40)
 }

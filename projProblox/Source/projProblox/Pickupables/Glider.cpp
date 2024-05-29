@@ -15,13 +15,14 @@
 AGlider::AGlider()
 {
 	snapRot = false;
+	needsTimer = false;
 }
 
 void AGlider::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
 	
-	if(!active) return;
+	// if(!active) return;
 	if(selected)
 	{
 		mesh->SetAllPhysicsLinearVelocity({});
