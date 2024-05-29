@@ -6,7 +6,12 @@
 /Binaries
 /DerivedDataCache
 /Intermediate
-*/Saved
+/Saved
+*/Saved/Cooked
+*/Saved/AutoSaves
+*/Saved/Config/CrashReportClient
+*/Saved/Crashes
+*/Saved/Logs
 
 #################################
 # Visual Studio Generated Files #
