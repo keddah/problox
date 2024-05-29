@@ -582,8 +582,6 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 		return;
 	}
 
-	longestDuration = 999;
-	
 	const UWorld* wrld = GetWorld();
 	for(int i = 0; i < objs.Num(); i++)
 	{
@@ -605,6 +603,7 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 
 		// If the current duration is bigger than "longestDuration" set the new longest duration... otherwise.. same.
 		longestDuration = delayTime + durationTime > longestDuration? delayTime + durationTime : longestDuration;
+		PrintFloat(longestDuration, 6)
 	}
 
 	FTimerHandle startResetHandle;

@@ -14,6 +14,8 @@ ABounceSpring::ABounceSpring()
 	end->SetupAttachment(mesh);
 	end->SetSimulatePhysics(false);
 
+	needsTimer = false;
+
 	audioManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
 }
 
