@@ -3148,3 +3148,473 @@ Script Stack (0 frames) :
 [2024.05.30-18.31.31:304][727]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
 [2024.05.30-18.31.31:345][727]Display: HotReload took  0.3s.
 [2024.05.30-18.31.31:345][727]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 61 functions remapped, 1 scriptstruct remapped
+[2024.05.30-18.31.37:950][195]LogWorld: UWorld::CleanupWorld for World_32, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.31.37:950][195]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.31.38:532][254]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.31.38:532][254]LogWorld: UWorld::CleanupWorld for World_33, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.31.38:532][254]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.31.39:224][326]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.31.39:224][326]LogWorld: UWorld::CleanupWorld for World_35, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.31.39:224][326]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.31.40:495][468]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.31.40:495][468]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.31.40:495][468]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.31.51:121][567]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.31.51:126][567]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_38:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.31.51:177][568]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.31.51:930][647]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grappler.BP_Grappler
+[2024.05.30-18.31.51:931][647]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.31.51:931][647]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.31.52:056][647]LogActor: Warning: BP_Grappler_C /Engine/Transient.World_40:PersistentLevel.BP_Grappler_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.32.20:422][983]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.05.30-18.32.20:423][983]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.32.20:423][983]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.32.20:502][983]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.05.30-18.32.20:542][983]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_41:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.32.20:559][983]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.30-18.32.23:336][294]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.32.23:340][294]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.33.11:172][835]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.30-18.34.02:363][839]BlueprintLog: New page: Compile BP_Grapple
+[2024.05.30-18.34.02:384][839]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_41:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.34.02:443][839]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2024.05.30-18.34.02:526][839]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.34.02:550][839]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.34.02:556][839]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_42:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.34.02:572][839]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.34.02:577][839]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_43:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.34.02:590][839]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_Grapple
+[2024.05.30-18.34.02:591][839]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleDE0993B0406E41DE810AB2A5AB90E0EC.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_Grapple.uasset'
+[2024.05.30-18.34.02:726][839]LogFileHelpers: InternalPromptForCheckoutAndSave took 200 ms (total: 1.69 sec)
+[2024.05.30-18.34.02:745][839]AssetCheck: New page: Asset Save: BP_Grapple
+[2024.05.30-18.34.02:745][839]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.05.30-18.34.11:247][721]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple_C
+[2024.05.30-18.34.11:247][721]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple_C
+[2024.05.30-18.34.11:247][721]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.34.11:249][721]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple as actor: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_0
+[2024.05.30-18.34.11:249][721]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple as actor: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_0
+[2024.05.30-18.34.12:117][820]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple_C
+[2024.05.30-18.34.12:117][820]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple_C
+[2024.05.30-18.34.12:119][820]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.34.12:120][820]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple as actor: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_1
+[2024.05.30-18.34.12:120][820]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple as actor: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_1
+[2024.05.30-18.34.13:685][979]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.34.13:697][979]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.30-18.34.13:697][979]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:34:13)
+[2024.05.30-18.34.13:720][979]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.34.13:731][979]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011133s)
+[2024.05.30-18.34.13:731][979]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.011164s)
+[2024.05.30-18.34.13:758][979]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.05.30-18.34.13:764][979]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.34.13:764][979]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.34.13:764][979]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.34.13:765][979]LogPlayLevel: PIE: World Init took: (0.000756s)
+[2024.05.30-18.34.13:765][979]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2024.05.30-18.34.13:765][979]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.34.13:765][979]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.34.13:765][979]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.34.13:765][979]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.34.13:765][979]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.34.13:765][979]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.34.13:765][979]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.34.13:765][979]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.34.13:765][979]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.34.13:765][979]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.34.13:765][979]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.34.13:767][979]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.34.13:793][979]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.34.13:793][979]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.34.13:793][979]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.34.13:794][979]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.34.13:794][979]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=21
+[2024.05.30-18.34.13:794][979]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=21
+[2024.05.30-18.34.13:795][979]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=21
+[2024.05.30-18.34.13:795][979]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=21
+[2024.05.30-18.34.13:795][979]LogInit: FAudioDevice initialized with ID 21.
+[2024.05.30-18.34.13:795][979]LogAudio: Display: Audio Device (ID: 21) registered with world 'Sandbox1'.
+[2024.05.30-18.34.13:795][979]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 21
+[2024.05.30-18.34.13:797][979]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.30-18.34.13:800][979]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.34.13:800][979]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-18.34.13:800][979]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.34.13
+[2024.05.30-18.34.13:801][979]LogWorld: Bringing up level for play took: 0.002365
+[2024.05.30-18.34.13:802][979]LogOnline: OSS: Created online subsystem instance for: :Context_64
+[2024.05.30-18.34.13:803][979]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.34.13:804][979]PIE: Server logged in
+[2024.05.30-18.34.13:805][979]PIE: Play in editor total start time 0.11 seconds.
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.34.17:679][373]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.34.21:273][804]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.05.30-18.34.21:273][804]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.34.22:232][919]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:233][919]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:233][919]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:233][919]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:239][920]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:239][920]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:239][920]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:240][920]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:248][921]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:248][921]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:248][921]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:248][921]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:256][922]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:256][922]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:256][922]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:256][922]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:264][923]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:264][923]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:264][923]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:264][923]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:273][924]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:273][924]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:273][924]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:273][924]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:281][925]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:281][925]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:281][925]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:281][925]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:290][926]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:010B
+[2024.05.30-18.34.22:290][926]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:290][926]LogScript: Warning: Accessed None trying to read property parent
+	BP_GrappleHead_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_GrappleHead_C_0
+	Function /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead_C:Pull:01CF
+[2024.05.30-18.34.22:290][926]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:298][927]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:298][927]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:306][928]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:306][928]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:315][929]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:315][929]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:323][930]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:324][930]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:331][931]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:332][931]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:340][932]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:340][932]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:348][933]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:348][933]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:357][934]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:357][934]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:364][935]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:364][935]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:373][936]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:373][936]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:381][937]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:381][937]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:389][938]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:389][938]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:398][939]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:398][939]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:406][940]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:406][940]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:415][941]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:415][941]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:423][942]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:423][942]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:431][943]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:431][943]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:439][944]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:439][944]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:447][945]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:447][945]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:456][946]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:456][946]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:464][947]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:464][947]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:473][948]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:473][948]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:481][949]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:481][949]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:489][950]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:489][950]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:497][951]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:497][951]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:506][952]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:506][952]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:515][953]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:515][953]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:523][954]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:523][954]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:531][955]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:531][955]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:540][956]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:540][956]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:548][957]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:548][957]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:556][958]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:556][958]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:565][959]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:565][959]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:573][960]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:573][960]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:581][961]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:581][961]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:590][962]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:590][962]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:598][963]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:598][963]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:606][964]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:606][964]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:615][965]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:615][965]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:623][966]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:623][966]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:631][967]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:631][967]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:639][968]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:640][968]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:647][969]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:647][969]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:656][970]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:656][970]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:664][971]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:664][971]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:674][972]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:674][972]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:681][973]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:681][973]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:689][974]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:689][974]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:697][975]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:697][975]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:706][976]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:706][976]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:715][977]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:715][977]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:723][978]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:723][978]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:731][979]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:731][979]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:740][980]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:740][980]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:748][981]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:748][981]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:756][982]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:756][982]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:765][983]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:765][983]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:773][984]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:773][984]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:781][985]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:782][985]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:789][986]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:789][986]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:797][987]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:797][987]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:806][988]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:806][988]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:815][989]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:815][989]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:823][990]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:823][990]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:831][991]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:832][991]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:839][992]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:839][992]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:847][993]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:847][993]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:856][994]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:856][994]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:865][995]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:865][995]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:874][996]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:874][996]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property parent". Node:  Pull Graph:  Pull Function:  Pull Blueprint:  BP_GrappleHead
+[2024.05.30-18.34.22:900][996]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.34.22:900][996]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.34.22:900][996]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.34.22:901][996]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.34.22:906][996]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.34.22:909][996]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.34.22:918][996]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.30-18.34.22:918][996]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 21
+[2024.05.30-18.34.22:918][996]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.05.30-18.34.22:919][996]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.05.30-18.34.22:923][996]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.34.22:925][996]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.30-18.34.23:061][997]LogPlayLevel: Display: Destroying online subsystem :Context_64
+[2024.05.30-18.34.24:805][155]LogSlate: Window 'Message Log' being destroyed
+[2024.05.30-18.34.24:819][155]LogSlate: Window 'Message Log' being destroyed
+[2024.05.30-18.35.28:480][199]BlueprintLog: New page: Compile BP_Grapple
+[2024.05.30-18.35.28:505][199]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_41:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.35.28:506][199]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_42:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.35.28:507][199]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_43:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.35.28:508][199]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.35.28:551][199]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.05.30-18.35.28:557][199]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_42:PersistentLevel.BP_Grapple_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.35.28:640][199]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.35.28:683][199]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_Grapple
+[2024.05.30-18.35.28:683][199]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grapple18A91EB34185B7E0685604B686A1386D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_Grapple.uasset'
+[2024.05.30-18.35.28:689][199]LogFileHelpers: InternalPromptForCheckoutAndSave took 49 ms (total: 1.74 sec)
+[2024.05.30-18.35.28:713][199]AssetCheck: New page: Asset Save: BP_Grapple
+[2024.05.30-18.35.28:713][199]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.05.30-18.35.32:418][616]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead
+[2024.05.30-18.35.32:418][616]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.35.32:418][616]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.35.49:966][583]BlueprintLog: New page: Compile BP_GrappleHead
+[2024.05.30-18.35.49:988][583]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.30-18.35.50:089][583]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.35.50:150][583]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead
+[2024.05.30-18.35.50:151][583]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleHeadCA340B884EF0B80BF2A501BD3CC69D5C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_GrappleHead.uasset'
+[2024.05.30-18.35.50:156][583]LogFileHelpers: InternalPromptForCheckoutAndSave took 67 ms (total: 1.81 sec)
+[2024.05.30-18.35.50:157][583]AssetCheck: New page: Asset Save: BP_GrappleHead
+[2024.05.30-18.35.50:157][583]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead
+[2024.05.30-18.36.26:309][758]BlueprintLog: New page: Compile BP_GrappleHead
+[2024.05.30-18.36.26:333][758]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.30-18.36.26:435][758]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.36.26:497][758]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead
+[2024.05.30-18.36.26:497][758]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleHead77DA12F14D5D8BA09C16599E3D6E5451.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_GrappleHead.uasset'
+[2024.05.30-18.36.26:503][758]LogFileHelpers: InternalPromptForCheckoutAndSave took 67 ms (total: 1.87 sec)
+[2024.05.30-18.36.26:510][758]AssetCheck: New page: Asset Save: BP_GrappleHead
+[2024.05.30-18.36.26:510][758]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead
+[2024.05.30-18.36.29:415][ 88]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.36.29:425][ 88]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.30-18.36.29:425][ 88]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:36:29)
+[2024.05.30-18.36.29:425][ 88]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.36.29:435][ 88]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010541s)
+[2024.05.30-18.36.29:435][ 88]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.010567s)
+[2024.05.30-18.36.29:447][ 88]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.30-18.36.29:448][ 88]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.36.29:448][ 88]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.36.29:450][ 88]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.36.29:450][ 88]LogPlayLevel: PIE: World Init took: (0.000861s)
+[2024.05.30-18.36.29:450][ 88]LogAudio: Display: Creating Audio Device:                 Id: 22, Scope: Unique, Realtime: True
+[2024.05.30-18.36.29:450][ 88]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.36.29:450][ 88]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.36.29:450][ 88]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.36.29:450][ 88]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.36.29:450][ 88]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.36.29:450][ 88]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.36.29:450][ 88]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.36.29:450][ 88]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.36.29:451][ 88]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.36.29:451][ 88]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.36.29:451][ 88]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.36.29:452][ 88]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.36.29:478][ 88]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.36.29:479][ 88]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.36.29:479][ 88]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.36.29:479][ 88]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.36.29:480][ 88]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=22
+[2024.05.30-18.36.29:480][ 88]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=22
+[2024.05.30-18.36.29:481][ 88]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=22
+[2024.05.30-18.36.29:481][ 88]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=22
+[2024.05.30-18.36.29:481][ 88]LogInit: FAudioDevice initialized with ID 22.
+[2024.05.30-18.36.29:481][ 88]LogAudio: Display: Audio Device (ID: 22) registered with world 'Sandbox1'.
+[2024.05.30-18.36.29:481][ 88]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 22
+[2024.05.30-18.36.29:508][ 88]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.36.29:508][ 88]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.30-18.36.29:510][ 88]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.36.29:510][ 88]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-18.36.29:510][ 88]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.36.29
+[2024.05.30-18.36.29:510][ 88]LogWorld: Bringing up level for play took: 0.002252
+[2024.05.30-18.36.29:512][ 88]LogOnline: OSS: Created online subsystem instance for: :Context_66
+[2024.05.30-18.36.29:513][ 88]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.36.29:516][ 88]PIE: Server logged in
+[2024.05.30-18.36.29:517][ 88]PIE: Play in editor total start time 0.093 seconds.
+[2024.05.30-18.36.29:526][ 88]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.32:858][429]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.35:743][728]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.05.30-18.36.35:743][728]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.47:445][ 24]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.50:561][352]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.53:897][711]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.53:897][711]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.53:897][711]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.53:897][711]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.53:898][711]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.53:898][711]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.36.53:898][711]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.36.53:898][711]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_20.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.37.05:977][ 17]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.05.30-18.37.05:977][ 17]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.37.17:981][297]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.37.17:981][297]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.37.17:981][297]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.30-18.37.17:985][297]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.37.17:986][297]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.37.17:991][297]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.37.17:995][297]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.37.18:007][297]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.30-18.37.18:007][297]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 22
+[2024.05.30-18.37.18:007][297]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2024.05.30-18.37.18:009][297]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2024.05.30-18.37.18:015][297]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.05.30-18.37.18:068][298]LogPlayLevel: Display: Destroying online subsystem :Context_66
+[2024.05.30-18.37.19:886][507]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.30-18.37.19:965][507]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.37.19:995][507]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.30-18.37.20:040][507]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.05.30-18.37.20:061][507]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.30-18.37.20:061][507]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox121F3AD8744E8CBDB86B9A19F1BA1FA54.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.30-18.37.20:071][507]LogFileHelpers: Saving map 'Sandbox1' took 0.076
+[2024.05.30-18.37.20:075][507]LogFileHelpers: InternalPromptForCheckoutAndSave took 110 ms (total: 1.99 sec)
+[2024.05.30-18.37.20:077][507]AssetCheck: New page: Asset Save: Sandbox1
+[2024.05.30-18.37.20:077][507]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
