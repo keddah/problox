@@ -3776,3 +3776,904 @@ Script Stack (0 frames) :
 [2024.05.30-18.43.45:880][777]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
 [2024.05.30-18.43.45:880][777]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
 [2024.05.30-18.43.46:000][777]LogActor: Warning: BP_CuboidCore_C /Engine/Transient.World_51:PersistentLevel.BP_CuboidCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.44.31:023][533]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree
+[2024.05.30-18.44.31:024][533]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.44.31:024][533]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.44.31:105][533]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.05.30-18.44.31:152][533]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_52:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.44.31:169][533]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.30-18.44.33:202][757]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.44.33:206][757]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.44.45:374][ 66]LogSlate: Window 'BP_CuboidCore' being destroyed
+[2024.05.30-18.45.53:601][804]BlueprintLog: New page: Compile BP_CuboidCoree
+[2024.05.30-18.45.53:624][804]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_52:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.45.53:644][804]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.30-18.45.53:730][804]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.45.53:746][804]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.45.53:751][804]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_53:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.45.53:788][804]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.45.53:795][804]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_54:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.45.53:809][804]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree
+[2024.05.30-18.45.53:809][804]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CuboidCoreeBE82EEAF456B4EB9728EE2B18E2C7060.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CuboidCoree.uasset'
+[2024.05.30-18.45.53:964][804]LogFileHelpers: InternalPromptForCheckoutAndSave took 233 ms (total: 2.55 sec)
+[2024.05.30-18.45.53:983][804]AssetCheck: New page: Asset Save: BP_CuboidCoree
+[2024.05.30-18.45.53:983][804]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree
+[2024.05.30-18.46.25:128][299]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.46.25:128][299]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-18.46.25:130][299]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.46.25:130][299]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-18.46.25:353][324]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.46.25:354][324]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-18.46.25:355][324]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.46.25:355][324]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-18.46.39:798][986]BlueprintLog: New page: Compile BP_TankTreads
+[2024.05.30-18.46.39:824][986]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_46:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.46.39:826][986]LogActor: Warning: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.46.39:851][986]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_47:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.46.39:852][986]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_48:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.46.39:872][986]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.30-18.46.39:876][986]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_47:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.46.39:960][986]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.46.40:025][986]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_TankTreads
+[2024.05.30-18.46.40:025][986]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreadsC524C98F406E3C12E8007BA0DA66A0A4.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_TankTreads.uasset'
+[2024.05.30-18.46.40:030][986]LogFileHelpers: InternalPromptForCheckoutAndSave took 69 ms (total: 2.62 sec)
+[2024.05.30-18.46.40:054][986]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.05.30-18.46.40:054][986]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads
+[2024.05.30-18.46.48:164][853]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Rocket.BP_Rocket
+[2024.05.30-18.46.48:164][853]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.46.48:165][853]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.46.48:292][853]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_55:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.46.58:419][953]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Hover.BP_Hover
+[2024.05.30-18.46.58:419][953]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.46.58:419][953]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.46.58:558][953]LogActor: Warning: BP_Hover_C /Engine/Transient.World_56:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.03:403][488]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer
+[2024.05.30-18.47.03:403][488]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.03:403][488]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.47.03:539][488]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_57:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.12:583][494]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_BounceSpring.BP_BounceSpring
+[2024.05.30-18.47.12:583][494]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.12:583][494]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.47.12:723][494]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_58:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.20:325][326]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_PropellerFan.BP_PropellerFan
+[2024.05.30-18.47.20:325][326]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.20:325][326]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.47.20:462][326]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_59:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.27:778][128]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Pusher.BP_Pusher
+[2024.05.30-18.47.27:778][128]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.27:778][128]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.47.27:923][128]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_60:PersistentLevel.BP_Pusher_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.40:598][481]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.05.30-18.47.40:598][481]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.40:598][481]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.47.40:679][481]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.05.30-18.47.40:765][481]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_61:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.41:981][615]LogSlate: Window 'Document' being destroyed
+[2024.05.30-18.47.41:986][615]LogSlate: Window 'Document' being destroyed
+[2024.05.30-18.47.42:692][695]LogWorld: UWorld::CleanupWorld for World_61, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.42:692][695]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.47.42:716][695]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.05.30-18.47.42:716][695]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.42:716][695]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.47.42:892][695]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_62:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.49:152][393]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.05.30-18.47.49:368][393]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.47.49:392][393]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.30-18.47.49:438][393]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2024.05.30-18.47.49:460][393]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.30-18.47.49:460][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox15C7ABCBA422919776B27DD9AECEF906D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.30-18.47.49:470][393]LogFileHelpers: Saving map 'Sandbox1' took 0.078
+[2024.05.30-18.47.49:470][393]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.49:476][393]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_63:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.49:532][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_BounceSpring
+[2024.05.30-18.47.49:532][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_BounceSpring96B7317744468238F7638994A929E2ED.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_BounceSpring.uasset'
+[2024.05.30-18.47.49:534][393]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.49:538][393]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_64:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.49:558][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Hoverer
+[2024.05.30-18.47.49:559][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HovererCA6E66A5463EA3E898816B990705C3FA.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hoverer.uasset'
+[2024.05.30-18.47.49:560][393]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.49:565][393]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_65:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.49:580][393]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Rocket" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Rocket.uasset" SILENT=true
+[2024.05.30-18.47.49:585][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Rocket
+[2024.05.30-18.47.49:586][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Rocket9956378C4FFB7C838DA024834F60A96B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Rocket.uasset'
+[2024.05.30-18.47.49:587][393]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.47.49:593][393]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_66:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.47.49:629][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCoree
+[2024.05.30-18.47.49:630][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoree0340F4264DC42965D12587B1D5644E0B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCoree.uasset'
+[2024.05.30-18.47.49:641][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_PropellerFan
+[2024.05.30-18.47.49:642][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PropellerFanA7815ADA4F893F5B1806DF82BE194EB0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_PropellerFan.uasset'
+[2024.05.30-18.47.49:648][393]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Pusher" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Pusher.uasset" SILENT=true
+[2024.05.30-18.47.49:652][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Pusher
+[2024.05.30-18.47.49:653][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Pusher32C1F26A4407C38B809959B4BD1CED1E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Pusher.uasset'
+[2024.05.30-18.47.49:668][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_Grapple
+[2024.05.30-18.47.49:669][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleF4DD9CA643E06C81A21335A426F0B80F.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_Grapple.uasset'
+[2024.05.30-18.47.49:679][393]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree
+[2024.05.30-18.47.49:680][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CuboidCoree35997FBD474E008BF142D2B9F810C68E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CuboidCoree.uasset'
+[2024.05.30-18.47.49:685][393]LogFileHelpers: InternalPromptForCheckoutAndSave took 316 ms (total: 2.94 sec)
+[2024.05.30-18.47.49:689][393]AssetCheck: New page: Asset Save: multiple assets
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_BounceSpring.BP_BounceSpring
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Rocket.BP_Rocket
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCoree.BP_CubeCoree
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_PropellerFan.BP_PropellerFan
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Pusher.BP_Pusher
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.05.30-18.47.49:689][393]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree
+[2024.05.30-18.47.51:187][565]LogWorld: UWorld::CleanupWorld for World_62, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.51:187][565]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.47.51:391][582]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.47.51:391][582]LogWorld: UWorld::CleanupWorld for World_60, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.51:391][582]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.47.51:584][597]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.47.51:584][597]LogWorld: UWorld::CleanupWorld for World_59, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.51:584][597]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.47.51:778][613]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.47.51:778][613]LogWorld: UWorld::CleanupWorld for World_58, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.51:778][613]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.47.52:523][695]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.47.52:523][695]LogWorld: UWorld::CleanupWorld for World_57, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.52:523][695]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.47.53:016][747]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.47.53:017][747]LogWorld: UWorld::CleanupWorld for World_56, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.53:017][747]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.47.54:092][869]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.47.54:092][869]LogWorld: UWorld::CleanupWorld for World_55, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.47.54:092][869]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.48.07:425][191]LogSlate: Window 'Fix Self Context Function References' being destroyed
+[2024.05.30-18.49.39:616][ 32]BlueprintLog: New page: Compile BP_CuboidCoree
+[2024.05.30-18.49.39:621][ 32]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\Cores\BP_CuboidCoree.uasset: [Compiler] In use pin  <Unnamed>  no longer exists on node  Collect Cell . Please refresh node or break links to remove pin.
+[2024.05.30-18.49.39:621][ 32]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\Cores\BP_CuboidCoree.uasset: [Compiler] In use pin  Cell  no longer exists on node  Collect Cell . Please refresh node or break links to remove pin.
+[2024.05.30-18.49.39:632][ 32]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_52:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.39:633][ 32]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_53:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.39:634][ 32]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_54:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.39:658][ 32]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.30-18.49.39:663][ 32]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_53:PersistentLevel.BP_CuboidCoree_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.52:377][495]BlueprintLog: New page: Compile BP_CuboidCoree
+[2024.05.30-18.49.52:391][495]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_52:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.52:393][495]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_54:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.52:393][495]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_53:PersistentLevel.BP_CuboidCoree_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.52:415][495]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.30-18.49.52:421][495]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_53:PersistentLevel.BP_CuboidCoree_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.49.52:522][495]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.49.52:600][495]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree
+[2024.05.30-18.49.52:601][495]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CuboidCoree45AD2E794CEF0E8B3BA97A85BC6A00CE.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CuboidCoree.uasset'
+[2024.05.30-18.49.52:606][495]LogFileHelpers: InternalPromptForCheckoutAndSave took 84 ms (total: 3.02 sec)
+[2024.05.30-18.49.52:611][495]AssetCheck: New page: Asset Save: BP_CuboidCoree
+[2024.05.30-18.49.52:611][495]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree
+[2024.05.30-18.50.01:732][549]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.50.01:733][549]LogWorld: UWorld::CleanupWorld for World_51, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.50.01:733][549]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.50.06:262][ 60]Cmd: DELETE
+[2024.05.30-18.50.06:262][ 60]Cmd: ACTOR DELETE
+[2024.05.30-18.50.06:265][ 60]LogEditorActor: Deleted Actor: BP_CubeCoree_C
+[2024.05.30-18.50.06:278][ 60]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.30-18.50.06:286][ 60]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2024.05.30-18.50.12:330][719]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree_C
+[2024.05.30-18.50.12:330][719]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree_C
+[2024.05.30-18.50.12:330][719]LogActor: Warning: BP_CuboidCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.12:331][719]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree as actor: BP_CuboidCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_0
+[2024.05.30-18.50.12:332][719]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree as actor: BP_CuboidCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_0
+[2024.05.30-18.50.12:823][775]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree_C
+[2024.05.30-18.50.12:823][775]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree_C
+[2024.05.30-18.50.12:825][775]LogActor: Warning: BP_CuboidCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.12:826][775]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree as actor: BP_CuboidCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_1
+[2024.05.30-18.50.12:826][775]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree as actor: BP_CuboidCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_1
+[2024.05.30-18.50.14:772][992]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.50.14:799][992]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.30-18.50.14:799][992]LogPlayLevel: [PlayLevel] Compiling BP_BounceSpring before play...
+[2024.05.30-18.50.14:808][992]LogActor: Warning: BP_BounceSpring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_BounceSpring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:810][992]LogActor: Warning: BP_BounceSpring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_BounceSpring_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:811][992]LogActor: Warning: BP_BounceSpring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_BounceSpring_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:812][992]LogActor: Warning: BP_BounceSpring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_BounceSpring_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:813][992]LogActor: Warning: BP_BounceSpring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_BounceSpring_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:814][992]LogActor: Warning: BP_BounceSpring_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_BounceSpring_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:815][992]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_23:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:816][992]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_63:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:843][992]LogPlayLevel: [PlayLevel] Compiling BP_Hoverer before play...
+[2024.05.30-18.50.14:849][992]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:850][992]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_20:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:851][992]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_64:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:863][992]LogPlayLevel: [PlayLevel] Compiling BP_Rocket before play...
+[2024.05.30-18.50.14:869][992]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:870][992]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_16:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:871][992]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_65:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:890][992]LogPlayLevel: [PlayLevel] Compiling BP_CubeCoree before play...
+[2024.05.30-18.50.14:927][992]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:928][992]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.50.14:928][992]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-18.50.14:928][992]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_26:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:929][992]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_66:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.14:940][992]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.50.14:940][992]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-18.50.14:941][992]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_26:PersistentLevel.BP_CubeCoree_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:028][992]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.50.15:028][992]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-18.50.15:034][992]LogPlayLevel: [PlayLevel] Compiling BP_PropellerFan before play...
+[2024.05.30-18.50.15:041][992]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_29:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:042][992]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_28:PersistentLevel.BP_PropellerFan_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:043][992]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:053][992]LogPlayLevel: [PlayLevel] Compiling BP_Pusher before play...
+[2024.05.30-18.50.15:059][992]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_36:PersistentLevel.BP_Pusher_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:060][992]LogActor: Warning: BP_Pusher_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Pusher_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:061][992]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_34:PersistentLevel.BP_Pusher_C_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:085][992]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.05.30-18.50.15:092][992]LogPlayLevel: PlayLevel: Blueprint regeneration took 293 ms (6 blueprints)
+[2024.05.30-18.50.15:092][992]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:50:15)
+[2024.05.30-18.50.15:137][992]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.50.15:148][992]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011641s)
+[2024.05.30-18.50.15:148][992]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.011673s)
+[2024.05.30-18.50.15:159][992]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.30-18.50.15:160][992]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.50.15:160][992]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.50.15:161][992]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.50.15:161][992]LogPlayLevel: PIE: World Init took: (0.000794s)
+[2024.05.30-18.50.15:161][992]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2024.05.30-18.50.15:161][992]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.50.15:161][992]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.50.15:161][992]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.50.15:161][992]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.50.15:161][992]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.50.15:161][992]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.50.15:161][992]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.50.15:161][992]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.50.15:162][992]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.50.15:162][992]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.50.15:162][992]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.50.15:163][992]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.50.15:190][992]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.50.15:190][992]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.50.15:190][992]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.50.15:190][992]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.50.15:191][992]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=24
+[2024.05.30-18.50.15:191][992]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=24
+[2024.05.30-18.50.15:192][992]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=24
+[2024.05.30-18.50.15:192][992]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=24
+[2024.05.30-18.50.15:192][992]LogInit: FAudioDevice initialized with ID 24.
+[2024.05.30-18.50.15:192][992]LogAudio: Display: Audio Device (ID: 24) registered with world 'Sandbox1'.
+[2024.05.30-18.50.15:192][992]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 24
+[2024.05.30-18.50.15:195][992]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.30-18.50.15:197][992]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.50.15
+[2024.05.30-18.50.15:198][992]LogWorld: Bringing up level for play took: 0.002286
+[2024.05.30-18.50.15:199][992]LogOnline: OSS: Created online subsystem instance for: :Context_90
+[2024.05.30-18.50.15:200][992]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.50.15:202][992]PIE: Server logged in
+[2024.05.30-18.50.15:203][992]PIE: Play in editor total start time 0.419 seconds.
+[2024.05.30-18.50.15:358][993]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.30-18.50.15:358][993]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.30-18.50.30:597][779]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.50.30:597][779]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.50.30:597][779]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.50.30:598][779]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.50.30:604][779]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.50.30:608][779]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.50.30:618][779]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.50.30:619][779]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 24
+[2024.05.30-18.50.30:619][779]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.05.30-18.50.30:620][779]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.05.30-18.50.30:627][779]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.05.30-18.50.30:632][779]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.50.30:694][780]LogPlayLevel: Display: Destroying online subsystem :Context_90
+[2024.05.30-18.50.36:122][369]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.50.36:132][369]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.30-18.50.36:132][369]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:50:36)
+[2024.05.30-18.50.36:132][369]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.50.36:142][369]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010854s)
+[2024.05.30-18.50.36:142][369]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.010881s)
+[2024.05.30-18.50.36:151][369]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.30-18.50.36:155][369]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.50.36:155][369]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.50.36:155][369]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.50.36:155][369]LogPlayLevel: PIE: World Init took: (0.000742s)
+[2024.05.30-18.50.36:155][369]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2024.05.30-18.50.36:155][369]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.50.36:155][369]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.50.36:155][369]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.50.36:155][369]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.50.36:155][369]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.50.36:155][369]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.50.36:155][369]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.50.36:155][369]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.50.36:156][369]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.50.36:156][369]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.50.36:156][369]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.50.36:158][369]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.50.36:183][369]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.50.36:183][369]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.50.36:183][369]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.50.36:183][369]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.50.36:184][369]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=25
+[2024.05.30-18.50.36:184][369]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=25
+[2024.05.30-18.50.36:185][369]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=25
+[2024.05.30-18.50.36:185][369]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=25
+[2024.05.30-18.50.36:185][369]LogInit: FAudioDevice initialized with ID 25.
+[2024.05.30-18.50.36:186][369]LogAudio: Display: Audio Device (ID: 25) registered with world 'Sandbox1'.
+[2024.05.30-18.50.36:186][369]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 25
+[2024.05.30-18.50.36:188][369]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.30-18.50.36:191][369]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.50.36
+[2024.05.30-18.50.36:191][369]LogWorld: Bringing up level for play took: 0.002572
+[2024.05.30-18.50.36:192][369]LogOnline: OSS: Created online subsystem instance for: :Context_91
+[2024.05.30-18.50.36:195][369]PIE: Server logged in
+[2024.05.30-18.50.36:196][369]PIE: Play in editor total start time 0.065 seconds.
+[2024.05.30-18.50.36:418][385]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.30-18.50.36:418][385]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.30-18.52.15:208][963]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.52.15:208][963]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.52.15:209][963]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.15:209][963]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.15:215][963]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.52.15:219][963]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.15:231][963]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.52.15:231][963]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 25
+[2024.05.30-18.52.15:231][963]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.05.30-18.52.15:233][963]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.05.30-18.52.15:239][963]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2024.05.30-18.52.15:243][963]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.52.15:307][964]LogPlayLevel: Display: Destroying online subsystem :Context_91
+[2024.05.30-18.52.16:773][135]Cmd: SELECT NONE
+[2024.05.30-18.52.19:371][400]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCore.BP_CuboidCore
+[2024.05.30-18.52.19:371][400]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.52.19:371][400]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.52.19:498][400]LogActor: Warning: BP_CuboidCore_C /Engine/Transient.World_67:PersistentLevel.BP_CuboidCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.52.25:239][ 24]LogWorld: UWorld::CleanupWorld for World_67, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.25:239][ 24]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.29:171][469]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.30-18.52.35:491][469]LogSlate: Window 'Replace References?' being destroyed
+[2024.05.30-18.52.35:494][469]Message dialog closed, result: Ok, title: Replace References?, text: This will replace any reference to the pending deleted assets with BP_CuboidCoree; and then delete them.
+
+Are you sure?
+[2024.05.30-18.52.35:494][469]LogSlate: Window 'Delete Assets' being destroyed
+[2024.05.30-18.52.35:530][469]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.52.35:530][469]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.35:530][469]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.35:602][469]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.52.35:602][469]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.35:602][469]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.35:684][469]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.52.35:685][469]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.35:685][469]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.35:753][469]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.52.35:753][469]LogWorld: UWorld::CleanupWorld for World_46, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.35:753][469]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.35:823][469]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.52.35:823][469]LogWorld: UWorld::CleanupWorld for World_52, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.35:823][469]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.35:882][469]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.52.35:882][469]LogWorld: UWorld::CleanupWorld for World_45, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.52.35:882][469]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.52.36:360][469]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_25:PersistentLevel.BP_CuboidCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.52.36:381][469]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.30-18.52.36:494][469]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.30-18.52.37:635][469]LogSlate: Window 'Save Content' being destroyed
+[2024.05.30-18.52.37:814][469]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.52.37:881][469]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.52.37:886][469]LogActor: Warning: BP_Collector_C /Engine/Transient.World_68:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.52.37:897][469]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Collector" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Collector.uasset" SILENT=true
+[2024.05.30-18.52.37:915][469]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_Collector
+[2024.05.30-18.52.37:915][469]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Collector1D59FBAB4829565F1D9C36BB61D162C1.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_Collector.uasset'
+[2024.05.30-18.52.37:918][469]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CuboidCore
+[2024.05.30-18.52.37:918][469]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CuboidCore952DBAFD43EAA7498B63E7B79CD2B3D8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CuboidCore.uasset'
+[2024.05.30-18.52.37:925][469]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset" SILENT=true
+[2024.05.30-18.52.37:953][469]LogSavePackage: Moving output files for package: /Game/UI/WBP_HUD
+[2024.05.30-18.52.37:953][469]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUDAAFC915941E63483AD33CF9C587BF284.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_HUD.uasset'
+[2024.05.30-18.52.37:958][469]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset" SILENT=true
+[2024.05.30-18.52.38:000][469]LogSavePackage: Moving output files for package: /Game/UI/WBP_Timeline
+[2024.05.30-18.52.38:000][469]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline31AF458F4037FDD58AB26EA6AB63C21C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Timeline.uasset'
+[2024.05.30-18.52.38:007][469]LogFileHelpers: InternalPromptForCheckoutAndSave took 192 ms (total: 3.22 sec)
+[2024.05.30-18.52.38:012][469]AssetCheck: New page: Asset Save: multiple assets
+[2024.05.30-18.52.38:012][469]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_Collector.BP_Collector
+[2024.05.30-18.52.38:012][469]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Blueprints/Pickupables/Cores/BP_CuboidCore.BP_CuboidCore
+[2024.05.30-18.52.38:012][469]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Blueprints/Pickupables/Cores/BP_CuboidCore.BP_CuboidCore_C
+[2024.05.30-18.52.38:012][469]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Blueprints/Pickupables/Cores/BP_CuboidCore.Default__BP_CuboidCore_C
+[2024.05.30-18.52.38:012][469]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_HUD.WBP_HUD
+[2024.05.30-18.52.38:014][469]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Timeline.WBP_Timeline
+[2024.05.30-18.52.38:286][496]LogHttp: Warning: 000007678FBE7D00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 0 (Found bundle for host: 0x7670e160000 [serially])
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 1 (Re-using existing connection with host datarouter.ol.epicgames.com)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 2 (We are completely uploaded and fine)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 3 (TLSv1.3 (IN), TLS alert, close notify (256):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 5 (state.rewindbeforesend = TRUE)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 6 (Closing connection)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 7 (TLSv1.3 (OUT), TLS alert, close notify (256):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 8 (Issue another request to this URL: 'https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BAFB40557-495D-FFDC-2F1A-4F9581B0D61B%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.3.2-29314046%2B%2B%2BUE5%2BRelease-5.3&UserID=73e65d0744ecfe954b536b91e68cb5ae%7C0e41d59f1717457abcdf6957edd36e2f%7C0afb52b3-15ce-4ab5-9c65-3e8a6ef8f089&AppEnvironment=datacollector-binary&UploadType=eteventstream')
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 9 (  Trying 3.228.71.134:443...)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 10 (Connected to datarouter.ol.epicgames.com (3.228.71.134) port 443)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 11 (ALPN: curl offers http/1.1)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 12 (SSL reusing session ID)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 13 (TLSv1.3 (OUT), TLS handshake, Client hello (1):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 14 (TLSv1.3 (IN), TLS handshake, Server hello (2):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 15 (TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 16 (TLSv1.3 (IN), TLS handshake, Certificate (11):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 17 (TLSv1.3 (IN), TLS handshake, CERT verify (15):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 18 (TLSv1.3 (IN), TLS handshake, Finished (20):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 19 (TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 20 (TLSv1.3 (OUT), TLS handshake, Finished (20):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 21 (SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 22 (ALPN: server accepted http/1.1)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 23 (Server certificate:)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 24 ( subject: CN=datarouter.cfef.live.use1a.on.epicgames.com)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 25 ( start date: Mar  4 00:00:00 2024 GMT)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 26 ( expire date: Apr  2 23:59:59 2025 GMT)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 27 ( subjectAltName: host "datarouter.ol.epicgames.com" matched cert's "datarouter.ol.epicgames.com")
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 28 ( issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M03)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 29 ( SSL certificate verify ok.)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 30 (using HTTP/1.1)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 31 (necessary data rewind wasn't possible)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 32 (Closing connection)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: 000007678FBE7D00: libcurl info message cache 33 (TLSv1.3 (OUT), TLS alert, close notify (256):)
+[2024.05.30-18.52.38:287][496]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BAFB40557-495D-FFDC-2F1A-4F9581B0D61B%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.3.2-29314046%2B%2B%2BUE5%2BRelease-5.3&UserID=73e65d0744ecfe954b536b91e68cb5ae%7C0e41d59f1717457abcdf6957edd36e2f%7C0afb52b3-15ce-4ab5-9c65-3e8a6ef8f089&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.05.30-18.52.42:300][971]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.05.30-18.52.42:377][971]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.52.42:399][971]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.30-18.52.42:443][971]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.05.30-18.52.42:465][971]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.30-18.52.42:465][971]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox14A2002B447CE3745A0D54197D1B299C3.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.30-18.52.42:475][971]LogFileHelpers: Saving map 'Sandbox1' took 0.076
+[2024.05.30-18.52.42:480][971]LogFileHelpers: InternalPromptForCheckoutAndSave took 103 ms (total: 3.32 sec)
+[2024.05.30-18.52.42:482][971]AssetCheck: New page: Asset Save: Sandbox1
+[2024.05.30-18.52.42:482][971]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.30-18.52.54:696][222]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.30-18.52.55:648][222]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.52.55:655][222]LogActor: Warning: BP_CuboidConnector_C /Engine/Transient.World_71:PersistentLevel.BP_CuboidConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.52.55:666][222]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.52.55:671][222]LogActor: Warning: BP_WedgeConnector_C /Engine/Transient.World_72:PersistentLevel.BP_WedgeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.52.55:683][222]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.52.55:688][222]LogActor: Warning: BP_CubeConnector_C /Engine/Transient.World_73:PersistentLevel.BP_CubeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.53.00:775][222]LogSlate: Window 'Replace References?' being destroyed
+[2024.05.30-18.53.00:782][222]Message dialog closed, result: Ok, title: Replace References?, text: This will replace any reference to the pending deleted assets with BP_CubeCoree; and then delete them.
+
+Are you sure?
+[2024.05.30-18.53.00:782][222]LogSlate: Window 'Delete Assets' being destroyed
+[2024.05.30-18.53.01:223][222]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_50:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.53.01:241][222]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.05.30-18.53.01:332][222]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.30-18.53.02:679][222]LogSlate: Window 'Save Content' being destroyed
+[2024.05.30-18.53.02:802][222]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.53.02:832][222]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCore
+[2024.05.30-18.53.02:833][222]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoreF762766A4B5DA6CEB68A0292619FEFF2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset'
+[2024.05.30-18.53.02:836][222]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_OmniCam" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset" SILENT=true
+[2024.05.30-18.53.02:842][222]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_OmniCam
+[2024.05.30-18.53.02:842][222]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_OmniCam70AB39874C78035C0A987EBE69371A4C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset'
+[2024.05.30-18.53.02:848][222]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 3.37 sec)
+[2024.05.30-18.53.02:851][222]AssetCheck: New page: Asset Save: multiple assets
+[2024.05.30-18.53.02:851][222]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore
+[2024.05.30-18.53.02:851][222]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore_C
+[2024.05.30-18.53.02:851][222]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Blueprints/Pickupables/Cores/BP_CubeCore.Default__BP_CubeCore_C
+[2024.05.30-18.53.02:851][222]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_OmniCam.BP_OmniCam
+[2024.05.30-18.53.08:349][820]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexCore.BP_HexCore
+[2024.05.30-18.53.08:349][820]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.53.08:349][820]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.53.08:447][820]LogActor: Warning: BP_HexCore_C /Engine/Transient.World_74:PersistentLevel.BP_HexCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.53.30:937][448]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore
+[2024.05.30-18.53.30:937][448]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.53.30:937][448]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.53.31:016][448]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.05.30-18.53.31:036][448]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_75:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.53.31:058][448]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.30-18.53.32:716][629]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.53.32:720][629]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.55.00:047][728]BlueprintLog: New page: Compile BP_HexagonalCore
+[2024.05.30-18.55.00:054][728]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_75:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.00:075][728]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.30-18.55.00:171][728]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.55.00:198][728]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.55.00:203][728]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.00:246][728]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.55.00:251][728]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_77:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.00:264][728]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore
+[2024.05.30-18.55.00:264][728]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexagonalCore5BCF58734963FB5B57FD3BAFF0B57F28.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_HexagonalCore.uasset'
+[2024.05.30-18.55.00:394][728]LogFileHelpers: InternalPromptForCheckoutAndSave took 223 ms (total: 3.59 sec)
+[2024.05.30-18.55.00:395][728]AssetCheck: New page: Asset Save: BP_HexagonalCore
+[2024.05.30-18.55.00:395][728]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore
+[2024.05.30-18.55.31:509][413]BlueprintLog: New page: Compile BP_HexagonalCore
+[2024.05.30-18.55.31:535][413]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_75:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.31:536][413]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.31:537][413]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_77:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.31:557][413]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.30-18.55.31:562][413]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.31:640][413]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.55.31:704][413]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore
+[2024.05.30-18.55.31:704][413]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexagonalCore8A95DA144FCBAEA8234D5C93B48645F5.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_HexagonalCore.uasset'
+[2024.05.30-18.55.31:709][413]LogFileHelpers: InternalPromptForCheckoutAndSave took 69 ms (total: 3.66 sec)
+[2024.05.30-18.55.31:731][413]AssetCheck: New page: Asset Save: BP_HexagonalCore
+[2024.05.30-18.55.31:732][413]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore
+[2024.05.30-18.55.35:610][848]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_16:PersistentLevel.BP_Rocket_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.35:613][848]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_34:PersistentLevel.BP_Pusher_C_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.35:624][849]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_28:PersistentLevel.BP_PropellerFan_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.35:642][850]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_20:PersistentLevel.BP_Hoverer_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.35:657][851]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_23:PersistentLevel.BP_BounceSpring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.37:524][ 56]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree
+[2024.05.30-18.55.37:524][ 56]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.55.37:524][ 56]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.55.37:629][ 56]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_78:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.55.39:453][247]LogWorld: UWorld::CleanupWorld for World_78, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.55.39:453][247]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.55.58:535][316]LogSlate: Window 'Fix Self Context Function References' being destroyed
+[2024.05.30-18.56.46:835][892]BlueprintLog: New page: Compile BP_HexagonalCore
+[2024.05.30-18.56.46:848][892]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_75:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.56.46:849][892]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_77:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.56.46:850][892]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.56.46:874][892]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.30-18.56.46:883][892]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.56.46:992][892]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.56.47:069][892]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore
+[2024.05.30-18.56.47:070][892]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexagonalCore8C2F870B487200B9D26CA085F5C94F89.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_HexagonalCore.uasset'
+[2024.05.30-18.56.47:075][892]LogFileHelpers: InternalPromptForCheckoutAndSave took 83 ms (total: 3.74 sec)
+[2024.05.30-18.56.47:077][892]AssetCheck: New page: Asset Save: BP_HexagonalCore
+[2024.05.30-18.56.47:077][892]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore
+[2024.05.30-18.57.13:832][891]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCoree.BP_CubeCoree
+[2024.05.30-18.57.13:832][891]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.57.13:832][891]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.57.13:943][891]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_79:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.57.21:372][722]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCoree.BP_CuboidCoree
+[2024.05.30-18.57.21:372][722]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.57.21:372][722]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.57.21:480][722]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_80:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.57.41:248][969]Cmd: DELETE
+[2024.05.30-18.57.41:248][969]Cmd: ACTOR DELETE
+[2024.05.30-18.57.41:250][969]LogEditorActor: Deleted Actor: BP_CuboidCoree_C
+[2024.05.30-18.57.41:264][969]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.05.30-18.57.41:268][969]LogEditorActor: Deleted 1 Actors (0.021 secs)
+[2024.05.30-18.57.43:686][191]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore_C
+[2024.05.30-18.57.43:686][191]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore_C
+[2024.05.30-18.57.43:686][191]LogActor: Warning: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.57.43:687][191]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore as actor: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_0
+[2024.05.30-18.57.43:688][191]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore as actor: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_0
+[2024.05.30-18.57.44:248][254]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore_C
+[2024.05.30-18.57.44:249][254]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore_C
+[2024.05.30-18.57.44:251][254]LogActor: Warning: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.57.44:252][254]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore as actor: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_1
+[2024.05.30-18.57.44:252][254]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore as actor: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_1
+[2024.05.30-18.57.46:178][474]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.57.46:206][474]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.30-18.57.46:234][474]LogPlayLevel: [PlayLevel] Compiling BP_Collector before play...
+[2024.05.30-18.57.46:248][474]LogActor: Warning: BP_Collector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Collector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.57.46:250][474]LogActor: Warning: BP_Collector_C /Engine/Transient.World_31:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.57.46:251][474]LogActor: Warning: BP_Collector_C /Engine/Transient.World_68:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.57.46:262][474]LogPhysics: Warning: Scale for /Engine/Transient.World_79:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.57.46:262][474]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_79:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-18.57.46:326][474]LogPhysics: Warning: Scale for /Engine/Transient.World_79:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.57.46:326][474]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_79:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-18.57.46:335][474]LogPlayLevel: [PlayLevel] Compiling BP_OmniCam before play...
+[2024.05.30-18.57.46:336][474]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Can't connect pins  Core  and  Return Value : Object Reference is not compatible with BP Cube Coree Object Reference.
+[2024.05.30-18.57.46:336][474]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Can't connect pins  Return Value  and  Core : BP Cube Coree Object Reference is not compatible with Object Reference.
+[2024.05.30-18.57.46:336][474]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Invalid pin connection from ' Return Value ' to ' Core '. You may have changed the type after the connections were made.
+[2024.05.30-18.57.46:338][474]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Can't connect pins  Target  and  Core : Actor Object Reference is not compatible with Object Reference.
+[2024.05.30-18.57.46:338][474]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Can't connect pins  Core  and  Target : Object Reference is not compatible with Actor Object Reference.
+[2024.05.30-18.57.46:338][474]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Failed to find class for pin  Core
+[2024.05.30-18.57.46:348][474]LogPlayLevel: [PlayLevel] Compiling WBP_HUD before play...
+[2024.05.30-18.57.46:375][474]LogPlayLevel: [PlayLevel] Compiling WBP_Timeline before play...
+[2024.05.30-18.57.46:433][474]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.05.30-18.57.46:442][474]LogPlayLevel: PlayLevel: Blueprint regeneration took 235 ms (4 blueprints)
+[2024.05.30-18.57.46:442][474]BlueprintLog: Warning: Blueprint failed to compile:  BP_OmniCam
+[2024.05.30-18.57.49:023][474]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_OmniCam.BP_OmniCam
+[2024.05.30-18.57.49:023][474]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.57.49:023][474]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.57.49:103][474]LogSlate: Warning: Ignoring SetUserFocus because it's not an active modal Window (user 0 not set to SGraphPanel [SGraphEditorImpl.cpp(754)].
+[2024.05.30-18.57.49:118][474]LogSlate: Window 'Blueprint Compilation Errors' being destroyed
+[2024.05.30-18.57.50:337][601]LogSlate: Window 'Message Log' being destroyed
+[2024.05.30-18.57.50:342][601]LogSlate: Window 'Message Log' being destroyed
+[2024.05.30-18.57.52:266][826]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.30-18.57.52:288][826]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Sandbox1_Auto4
+[2024.05.30-18.57.52:289][826]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1_Auto4A778F53E4E29F474BBD3389F1062E0F8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto4.umap'
+[2024.05.30-18.57.52:290][826]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto4.umap is in the /Temp path, will not scan.
+[2024.05.30-18.57.52:290][826]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.034
+[2024.05.30-18.57.52:290][826]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.034
+[2024.05.30-18.58.12:399][184]BlueprintLog: New page: Compile BP_OmniCam
+[2024.05.30-18.58.12:404][184]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Can't connect pins  Target  and  Core : Actor Object Reference is not compatible with Object Reference.
+[2024.05.30-18.58.12:404][184]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\BP_OmniCam.uasset: [Compiler] Can't connect pins  Core  and  Target : Object Reference is not compatible with Actor Object Reference.
+[2024.05.30-18.58.12:428][184]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.30-18.58.18:309][846]BlueprintLog: New page: Compile BP_OmniCam
+[2024.05.30-18.58.18:341][846]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.05.30-18.58.18:443][846]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.58.18:470][846]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_OmniCam" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset" SILENT=true
+[2024.05.30-18.58.18:477][846]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_OmniCam
+[2024.05.30-18.58.18:478][846]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_OmniCamF883074F4893A77579A275B8FA422B88.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset'
+[2024.05.30-18.58.18:484][846]LogFileHelpers: InternalPromptForCheckoutAndSave took 41 ms (total: 3.78 sec)
+[2024.05.30-18.58.18:485][846]AssetCheck: New page: Asset Save: BP_OmniCam
+[2024.05.30-18.58.18:485][846]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_OmniCam.BP_OmniCam
+[2024.05.30-18.58.23:180][387]BlueprintLog: New page: Compile BP_OmniCam
+[2024.05.30-18.58.23:211][387]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.30-18.58.23:302][387]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.58.23:331][387]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_OmniCam" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset" SILENT=true
+[2024.05.30-18.58.23:337][387]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_OmniCam
+[2024.05.30-18.58.23:338][387]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_OmniCam56A1991B4D7141FA931E03AF2F80A7E2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset'
+[2024.05.30-18.58.23:342][387]LogFileHelpers: InternalPromptForCheckoutAndSave took 40 ms (total: 3.82 sec)
+[2024.05.30-18.58.23:344][387]AssetCheck: New page: Asset Save: BP_OmniCam
+[2024.05.30-18.58.23:344][387]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_OmniCam.BP_OmniCam
+[2024.05.30-18.58.30:142][196]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.58.30:152][196]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.30-18.58.30:152][196]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:58:30)
+[2024.05.30-18.58.30:152][196]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.58.30:166][196]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013046s)
+[2024.05.30-18.58.30:166][196]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.013081s)
+[2024.05.30-18.58.30:178][196]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2024.05.30-18.58.30:180][196]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.58.30:180][196]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.58.30:180][196]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.58.30:181][196]LogPlayLevel: PIE: World Init took: (0.000853s)
+[2024.05.30-18.58.30:181][196]LogAudio: Display: Creating Audio Device:                 Id: 26, Scope: Unique, Realtime: True
+[2024.05.30-18.58.30:181][196]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.58.30:181][196]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.58.30:181][196]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.58.30:181][196]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.58.30:181][196]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.58.30:181][196]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.58.30:181][196]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.58.30:181][196]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.58.30:182][196]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.58.30:182][196]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.58.30:182][196]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.58.30:184][196]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.58.30:216][196]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.58.30:217][196]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.58.30:217][196]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.58.30:217][196]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.58.30:217][196]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=26
+[2024.05.30-18.58.30:217][196]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=26
+[2024.05.30-18.58.30:219][196]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=26
+[2024.05.30-18.58.30:219][196]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=26
+[2024.05.30-18.58.30:219][196]LogInit: FAudioDevice initialized with ID 26.
+[2024.05.30-18.58.30:219][196]LogAudio: Display: Audio Device (ID: 26) registered with world 'Sandbox1'.
+[2024.05.30-18.58.30:219][196]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 26
+[2024.05.30-18.58.30:248][196]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.58.30:248][196]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.30-18.58.30:251][196]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.58.30
+[2024.05.30-18.58.30:251][196]LogWorld: Bringing up level for play took: 0.002323
+[2024.05.30-18.58.30:253][196]LogOnline: OSS: Created online subsystem instance for: :Context_105
+[2024.05.30-18.58.30:256][196]PIE: Server logged in
+[2024.05.30-18.58.30:257][196]PIE: Play in editor total start time 0.105 seconds.
+[2024.05.30-18.58.30:267][196]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.30-18.58.30:486][199]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.30-18.58.30:486][199]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.30-18.58.40:311][177]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.58.40:311][177]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.58.40:311][177]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.30-18.58.40:316][177]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.58.40:317][177]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.58.40:320][177]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.58.40:323][177]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.58.40:334][177]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.30-18.58.40:334][177]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 26
+[2024.05.30-18.58.40:334][177]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.05.30-18.58.40:336][177]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.05.30-18.58.40:341][177]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.05.30-18.58.40:347][177]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.58.40:347][177]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.58.40:396][178]LogPlayLevel: Display: Destroying online subsystem :Context_105
+[2024.05.30-18.58.57:455][125]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.58.57:467][125]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.30-18.58.57:468][125]LogPlayLevel: [PlayLevel] Compiling BP_HexagonalCore before play...
+[2024.05.30-18.58.57:543][125]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_75:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.58.57:545][125]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_77:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.58.57:546][125]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.58.57:547][125]LogActor: Warning: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.58.57:582][125]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.58.57:677][125]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.58.57:757][125]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore
+[2024.05.30-18.58.57:758][125]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexagonalCore1060CCAC4754F2192788C6BB2892616C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_HexagonalCore.uasset'
+[2024.05.30-18.58.57:763][125]LogFileHelpers: InternalPromptForCheckoutAndSave took 86 ms (total: 3.91 sec)
+[2024.05.30-18.58.57:775][125]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.30-18.58.57:778][125]LogPlayLevel: PlayLevel: Blueprint regeneration took 311 ms (1 blueprints)
+[2024.05.30-18.58.57:778][125]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:58:57)
+[2024.05.30-18.58.57:778][125]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.58.57:789][125]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010818s)
+[2024.05.30-18.58.57:789][125]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.010843s)
+[2024.05.30-18.58.57:800][125]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.30-18.58.57:801][125]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.58.57:801][125]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.58.57:802][125]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.58.57:802][125]LogPlayLevel: PIE: World Init took: (0.000778s)
+[2024.05.30-18.58.57:802][125]LogAudio: Display: Creating Audio Device:                 Id: 27, Scope: Unique, Realtime: True
+[2024.05.30-18.58.57:802][125]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.58.57:802][125]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.58.57:802][125]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.58.57:802][125]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.58.57:802][125]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.58.57:802][125]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.58.57:802][125]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.58.57:802][125]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.58.57:802][125]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.58.57:802][125]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.58.57:802][125]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.58.57:804][125]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.58.57:830][125]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.58.57:830][125]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.58.57:830][125]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.58.57:830][125]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.58.57:830][125]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=27
+[2024.05.30-18.58.57:830][125]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=27
+[2024.05.30-18.58.57:832][125]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=27
+[2024.05.30-18.58.57:832][125]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=27
+[2024.05.30-18.58.57:832][125]LogInit: FAudioDevice initialized with ID 27.
+[2024.05.30-18.58.57:832][125]LogAudio: Display: Audio Device (ID: 27) registered with world 'Sandbox1'.
+[2024.05.30-18.58.57:832][125]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 27
+[2024.05.30-18.58.57:859][125]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.58.57:859][125]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.30-18.58.57:862][125]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.58.57
+[2024.05.30-18.58.57:862][125]LogWorld: Bringing up level for play took: 0.002290
+[2024.05.30-18.58.57:863][125]LogOnline: OSS: Created online subsystem instance for: :Context_106
+[2024.05.30-18.58.57:866][125]PIE: Server logged in
+[2024.05.30-18.58.57:867][125]PIE: Play in editor total start time 0.401 seconds.
+[2024.05.30-18.58.57:932][125]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.30-18.58.57:968][126]AssetCheck: New page: Asset Save: BP_HexagonalCore
+[2024.05.30-18.58.57:968][126]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore
+[2024.05.30-18.58.58:035][126]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.30-18.58.58:035][126]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.30-18.59.01:351][430]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.59.01:351][430]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.59.01:351][430]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.30-18.59.01:355][430]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.59.01:356][430]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.59.01:373][430]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.59.01:377][430]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.59.01:389][430]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 27
+[2024.05.30-18.59.01:389][430]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=27
+[2024.05.30-18.59.01:390][430]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=27
+[2024.05.30-18.59.01:396][430]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.05.30-18.59.01:402][430]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.59.01:402][430]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.59.01:509][431]LogPlayLevel: Display: Destroying online subsystem :Context_106
+[2024.05.30-18.59.09:561][360]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.59.09:572][360]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.30-18.59.09:573][360]LogPlayLevel: [PlayLevel] Compiling BP_HexagonalCore before play...
+[2024.05.30-18.59.09:649][360]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_75:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.09:651][360]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_77:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.09:652][360]LogActor: Warning: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.09:675][360]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.09:688][360]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.09:774][360]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.59.09:853][360]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore
+[2024.05.30-18.59.09:854][360]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexagonalCoreE153D7854D9E0F33B12B4EBE6FDA583D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_HexagonalCore.uasset'
+[2024.05.30-18.59.09:859][360]LogFileHelpers: InternalPromptForCheckoutAndSave took 85 ms (total: 3.99 sec)
+[2024.05.30-18.59.09:871][360]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.05.30-18.59.09:875][360]LogPlayLevel: PlayLevel: Blueprint regeneration took 303 ms (1 blueprints)
+[2024.05.30-18.59.09:875][360]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:59:09)
+[2024.05.30-18.59.09:875][360]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.59.09:886][360]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010723s)
+[2024.05.30-18.59.09:886][360]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.010748s)
+[2024.05.30-18.59.09:895][360]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.30-18.59.09:896][360]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.59.09:896][360]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.59.09:897][360]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.59.09:897][360]LogPlayLevel: PIE: World Init took: (0.000896s)
+[2024.05.30-18.59.09:897][360]LogAudio: Display: Creating Audio Device:                 Id: 28, Scope: Unique, Realtime: True
+[2024.05.30-18.59.09:897][360]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.59.09:897][360]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.59.09:897][360]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.59.09:897][360]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.59.09:897][360]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.59.09:897][360]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.59.09:897][360]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.59.09:897][360]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.59.09:898][360]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.59.09:898][360]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.59.09:898][360]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.59.09:899][360]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.59.09:925][360]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.59.09:925][360]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.59.09:925][360]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.59.09:925][360]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.59.09:926][360]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=28
+[2024.05.30-18.59.09:926][360]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=28
+[2024.05.30-18.59.09:927][360]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=28
+[2024.05.30-18.59.09:927][360]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=28
+[2024.05.30-18.59.09:927][360]LogInit: FAudioDevice initialized with ID 28.
+[2024.05.30-18.59.09:927][360]LogAudio: Display: Audio Device (ID: 28) registered with world 'Sandbox1'.
+[2024.05.30-18.59.09:927][360]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 28
+[2024.05.30-18.59.09:949][360]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.59.09:949][360]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.30-18.59.09:951][360]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.59.09
+[2024.05.30-18.59.09:951][360]LogWorld: Bringing up level for play took: 0.002420
+[2024.05.30-18.59.09:953][360]LogOnline: OSS: Created online subsystem instance for: :Context_107
+[2024.05.30-18.59.09:956][360]PIE: Server logged in
+[2024.05.30-18.59.09:957][360]PIE: Play in editor total start time 0.386 seconds.
+[2024.05.30-18.59.10:024][360]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.30-18.59.10:058][361]AssetCheck: New page: Asset Save: BP_HexagonalCore
+[2024.05.30-18.59.10:058][361]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore
+[2024.05.30-18.59.10:107][361]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.30-18.59.10:107][361]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.30-18.59.13:252][671]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.59.13:252][671]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.59.13:252][671]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.30-18.59.13:257][671]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.59.13:258][671]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.59.13:273][671]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.59.13:276][671]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.59.13:289][671]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 28
+[2024.05.30-18.59.13:289][671]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=28
+[2024.05.30-18.59.13:291][671]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=28
+[2024.05.30-18.59.13:297][671]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.05.30-18.59.13:304][671]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.59.13:304][671]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-18.59.13:409][672]LogPlayLevel: Display: Destroying online subsystem :Context_107
+[2024.05.30-18.59.19:229][322]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.59.19:240][322]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.30-18.59.19:241][322]LogPlayLevel: [PlayLevel] Compiling BP_HexagonalCore before play...
+[2024.05.30-18.59.19:315][322]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_75:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.19:316][322]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_77:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.19:317][322]LogActor: Warning: BP_HexagonalCore_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_HexagonalCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.19:342][322]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.19:354][322]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_76:PersistentLevel.BP_HexagonalCore_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.59.19:459][322]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.59.19:535][322]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore
+[2024.05.30-18.59.19:536][322]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HexagonalCore2A6E39C34783A3CD4B75858E8D9EC255.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_HexagonalCore.uasset'
+[2024.05.30-18.59.19:542][322]LogFileHelpers: InternalPromptForCheckoutAndSave took 82 ms (total: 4.08 sec)
+[2024.05.30-18.59.19:554][322]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.05.30-18.59.19:557][322]LogPlayLevel: PlayLevel: Blueprint regeneration took 316 ms (1 blueprints)
+[2024.05.30-18.59.19:557][322]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:59:19)
+[2024.05.30-18.59.19:557][322]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.59.19:568][322]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010659s)
+[2024.05.30-18.59.19:568][322]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.010683s)
+[2024.05.30-18.59.19:579][322]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.30-18.59.19:580][322]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.59.19:580][322]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.59.19:580][322]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.59.19:581][322]LogPlayLevel: PIE: World Init took: (0.000720s)
+[2024.05.30-18.59.19:581][322]LogAudio: Display: Creating Audio Device:                 Id: 29, Scope: Unique, Realtime: True
+[2024.05.30-18.59.19:581][322]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.59.19:581][322]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.59.19:581][322]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.59.19:581][322]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.59.19:581][322]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.59.19:581][322]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.59.19:581][322]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.59.19:581][322]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.59.19:581][322]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.59.19:581][322]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.59.19:581][322]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.59.19:583][322]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.59.19:608][322]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.59.19:608][322]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.59.19:608][322]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.59.19:609][322]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.59.19:609][322]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=29
+[2024.05.30-18.59.19:609][322]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=29
+[2024.05.30-18.59.19:611][322]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=29
+[2024.05.30-18.59.19:611][322]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=29
+[2024.05.30-18.59.19:611][322]LogInit: FAudioDevice initialized with ID 29.
+[2024.05.30-18.59.19:611][322]LogAudio: Display: Audio Device (ID: 29) registered with world 'Sandbox1'.
+[2024.05.30-18.59.19:611][322]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 29
+[2024.05.30-18.59.19:636][322]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.59.19:636][322]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.30-18.59.19:639][322]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.59.19
+[2024.05.30-18.59.19:639][322]LogWorld: Bringing up level for play took: 0.002745
+[2024.05.30-18.59.19:641][322]LogOnline: OSS: Created online subsystem instance for: :Context_108
+[2024.05.30-18.59.19:644][322]PIE: Server logged in
+[2024.05.30-18.59.19:645][322]PIE: Play in editor total start time 0.405 seconds.
+[2024.05.30-18.59.19:711][322]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.30-18.59.19:745][323]AssetCheck: New page: Asset Save: BP_HexagonalCore
+[2024.05.30-18.59.19:745][323]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_HexagonalCore.BP_HexagonalCore
+[2024.05.30-18.59.19:796][323]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.30-18.59.19:796][323]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.30-19.00.19:341][280]LogMetaSound: Display: [MS_propeller]:  147.718231
+[2024.05.30-19.00.23:462][691]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-19.00.23:462][691]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-19.00.23:463][691]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.30-19.00.23:468][691]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-19.00.23:469][691]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-19.00.23:484][691]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-19.00.23:488][691]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-19.00.23:500][691]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.30-19.00.23:500][691]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 29
+[2024.05.30-19.00.23:500][691]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=29
+[2024.05.30-19.00.23:502][691]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=29
+[2024.05.30-19.00.23:508][691]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.30-19.00.23:514][691]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-19.00.23:514][691]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CuboidCoree_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-19.00.23:620][692]LogPlayLevel: Display: Destroying online subsystem :Context_108
+[2024.05.30-19.00.27:929][206]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.30-19.00.28:054][206]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-19.00.28:083][206]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.30-19.00.28:125][206]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.05.30-19.00.28:149][206]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.30-19.00.28:149][206]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1FDA9719D4D49B977FEC3B491C9AAE77D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.30-19.00.28:158][206]LogFileHelpers: Saving map 'Sandbox1' took 0.076
+[2024.05.30-19.00.28:158][206]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_OmniCam" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset" SILENT=true
+[2024.05.30-19.00.28:165][206]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_OmniCam
+[2024.05.30-19.00.28:165][206]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_OmniCam7445391841D97C00E4AC0795A9157FCB.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_OmniCam.uasset'
+[2024.05.30-19.00.28:171][206]LogFileHelpers: InternalPromptForCheckoutAndSave took 116 ms (total: 4.19 sec)
+[2024.05.30-19.00.28:173][206]AssetCheck: New page: Asset Save: multiple assets
+[2024.05.30-19.00.28:173][206]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.30-19.00.28:173][206]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_OmniCam.BP_OmniCam
