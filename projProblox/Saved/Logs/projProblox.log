@@ -2206,3 +2206,410 @@ Cooking
 [2024.05.30-17.28.20:864][770]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
 [2024.05.30-17.28.20:869][770]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
 [2024.05.30-17.28.20:917][771]LogPlayLevel: Display: Destroying online subsystem :Context_48
+[2024.05.30-17.28.48:202][556]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon
+[2024.05.30-17.28.48:202][556]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.28.48:202][556]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.28.48:292][556]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.05.30-17.28.48:375][556]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_45:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.28.49:617][693]LogSlate: Window 'Document' being destroyed
+[2024.05.30-17.28.49:621][693]LogSlate: Window 'Document' being destroyed
+[2024.05.30-17.28.50:302][771]LogWorld: UWorld::CleanupWorld for World_45, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-17.28.50:302][771]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.28.50:324][771]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon
+[2024.05.30-17.28.50:325][771]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.28.50:325][771]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.28.50:485][771]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_46:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.28.57:369][537]LogWorld: UWorld::CleanupWorld for World_46, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-17.28.57:369][537]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.29.00:305][853]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Glider.BP_Glider
+[2024.05.30-17.29.00:305][853]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.29.00:305][853]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.29.00:380][853]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.05.30-17.29.00:450][853]LogActor: Warning: BP_Glider_C /Engine/Transient.World_47:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.29.01:509][972]LogSlate: Window 'Document' being destroyed
+[2024.05.30-17.29.01:513][972]LogSlate: Window 'Document' being destroyed
+[2024.05.30-17.29.02:390][ 75]LogWorld: UWorld::CleanupWorld for World_47, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-17.29.02:390][ 75]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.29.02:412][ 75]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Glider.BP_Glider
+[2024.05.30-17.29.02:412][ 75]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.29.02:412][ 75]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.29.02:557][ 75]LogActor: Warning: BP_Glider_C /Engine/Transient.World_48:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.29.10:461][965]LogWorld: UWorld::CleanupWorld for World_48, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-17.29.10:461][965]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.29.14:035][355]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Hover.BP_Hover
+[2024.05.30-17.29.14:035][355]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.29.14:035][355]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.29.14:173][355]LogActor: Warning: BP_Hover_C /Engine/Transient.World_49:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.29.46:349][ 82]BlueprintLog: New page: Compile BP_Hover
+[2024.05.30-17.29.46:359][ 82]LogActor: Warning: BP_Hover_C /Engine/Transient.World_5:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.29.46:359][ 82]LogActor: Warning: BP_Hover_C /Engine/Transient.World_49:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.29.46:384][ 82]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.30-17.29.46:387][ 82]LogActor: Warning: BP_Hover_C /Engine/Transient.World_5:PersistentLevel.BP_Hover_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.29.46:487][ 82]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.29.46:512][ 82]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.29.46:518][ 82]LogActor: Warning: BP_Hover_C /Engine/Transient.World_50:PersistentLevel.BP_Hover_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.29.46:564][ 82]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Hover" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hover.uasset" SILENT=true
+[2024.05.30-17.29.46:570][ 82]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Hover
+[2024.05.30-17.29.46:570][ 82]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HoverF21D70824C2CB9C6162F16A0B97063FA.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hover.uasset'
+[2024.05.30-17.29.46:576][ 82]LogFileHelpers: InternalPromptForCheckoutAndSave took 88 ms (total: 1.89 sec)
+[2024.05.30-17.29.46:577][ 82]AssetCheck: New page: Asset Save: BP_Hover
+[2024.05.30-17.29.46:577][ 82]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Hover.BP_Hover
+[2024.05.30-17.30.05:020][257]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer
+[2024.05.30-17.30.05:020][257]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.30.05:021][257]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.30.05:102][257]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.05.30-17.30.05:165][257]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_51:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.30.05:193][257]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.30-17.30.06:408][385]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-17.30.06:413][385]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-17.30.24:888][528]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.05.30-17.30.24:906][528]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Sandbox1_Auto3
+[2024.05.30-17.30.24:907][528]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1_Auto3060F5DDE4DC7CC62C4DC309B5F2DC14F.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto3.umap'
+[2024.05.30-17.30.24:908][528]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Sandbox1_Auto3.umap is in the /Temp path, will not scan.
+[2024.05.30-17.30.24:908][528]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.033
+[2024.05.30-17.30.24:908][528]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.033
+[2024.05.30-17.30.24:908][528]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Blueprints/Pickupables/BP_Hoverer] ([2] browsable assets)...
+[2024.05.30-17.30.24:908][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/BP_Hoverer]
+[2024.05.30-17.30.24:912][528]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/BP_Hoverer_Auto3
+[2024.05.30-17.30.24:913][528]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Hoverer_Auto38E44FB044D32906C831A4B86EE2A1E4E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/BP_Hoverer_Auto3.uasset'
+[2024.05.30-17.30.24:913][528]LogFileHelpers: Auto-saving content packages took 0.005
+[2024.05.30-17.33.58:885][722]BlueprintLog: New page: Compile BP_Hoverer
+[2024.05.30-17.33.58:910][722]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_51:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.33.58:928][722]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.30-17.33.59:009][722]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.33.59:035][722]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.33.59:040][722]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_52:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.33.59:082][722]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.33.59:086][722]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_53:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.33.59:100][722]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Hoverer
+[2024.05.30-17.33.59:100][722]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HovererBB8A80C649A657853EFE2DA47BF50C11.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hoverer.uasset'
+[2024.05.30-17.33.59:231][722]LogFileHelpers: InternalPromptForCheckoutAndSave took 222 ms (total: 2.11 sec)
+[2024.05.30-17.33.59:256][722]AssetCheck: New page: Asset Save: BP_Hoverer
+[2024.05.30-17.33.59:256][722]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer
+[2024.05.30-17.34.36:621][ 17]BlueprintLog: New page: Compile BP_Hoverer
+[2024.05.30-17.34.36:646][ 17]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_51:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.36:647][ 17]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_52:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.36:648][ 17]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_53:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.36:666][ 17]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.30-17.34.36:668][ 17]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_52:PersistentLevel.BP_Hoverer_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.36:738][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.34.36:794][ 17]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Hoverer
+[2024.05.30-17.34.36:795][ 17]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HovererD876DF93404EF7BC9A3542A475940B31.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hoverer.uasset'
+[2024.05.30-17.34.36:800][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 2.17 sec)
+[2024.05.30-17.34.36:825][ 17]AssetCheck: New page: Asset Save: BP_Hoverer
+[2024.05.30-17.34.36:825][ 17]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer
+[2024.05.30-17.34.42:702][700]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.34.42:729][700]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Hover" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hover.uasset" SILENT=true
+[2024.05.30-17.34.42:734][700]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Hover
+[2024.05.30-17.34.42:735][700]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Hover563500E442AD19771EE361B550B6A553.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hover.uasset'
+[2024.05.30-17.34.42:740][700]LogFileHelpers: InternalPromptForCheckoutAndSave took 37 ms (total: 2.21 sec)
+[2024.05.30-17.34.42:740][700]AssetCheck: New page: Asset Save: BP_Hover
+[2024.05.30-17.34.42:740][700]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Hover.BP_Hover
+[2024.05.30-17.34.58:843][581]BlueprintLog: New page: Compile BP_Hoverer
+[2024.05.30-17.34.58:850][581]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_51:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.58:850][581]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_53:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.58:852][581]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_52:PersistentLevel.BP_Hoverer_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.58:872][581]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.05.30-17.34.58:876][581]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_52:PersistentLevel.BP_Hoverer_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.34.58:960][581]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.34.59:026][581]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Hoverer
+[2024.05.30-17.34.59:027][581]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Hoverer53E663DF4604C557AF48C2A2B17108D3.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Hoverer.uasset'
+[2024.05.30-17.34.59:032][581]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 2.28 sec)
+[2024.05.30-17.34.59:040][581]AssetCheck: New page: Asset Save: BP_Hoverer
+[2024.05.30-17.34.59:040][581]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer
+[2024.05.30-17.35.25:125][404]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.05.30-17.35.25:216][404]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.35.25:244][404]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.30-17.35.25:290][404]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2024.05.30-17.35.25:306][404]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.30-17.35.25:307][404]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox177884F194A4086D680A977A57AA5DA70.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.30-17.35.25:316][404]LogFileHelpers: Saving map 'Sandbox1' took 0.073
+[2024.05.30-17.35.25:321][404]LogFileHelpers: InternalPromptForCheckoutAndSave took 104 ms (total: 2.38 sec)
+[2024.05.30-17.35.25:322][404]AssetCheck: New page: Asset Save: Sandbox1
+[2024.05.30-17.35.25:322][404]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.30-17.35.37:083][694]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer_C
+[2024.05.30-17.35.37:083][694]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer_C
+[2024.05.30-17.35.37:083][694]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.35.37:084][694]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer as actor: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_0
+[2024.05.30-17.35.37:085][694]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer as actor: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_0
+[2024.05.30-17.35.38:012][778]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer_C
+[2024.05.30-17.35.38:012][778]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer_C
+[2024.05.30-17.35.38:015][778]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.35.38:016][778]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer as actor: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_1
+[2024.05.30-17.35.38:017][778]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Hoverer.BP_Hoverer as actor: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_1
+[2024.05.30-17.35.39:010][883]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-17.35.39:024][883]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.30-17.35.39:024][883]PIE: New page: PIE session: Sandbox1 (30 May 2024, 19:35:39)
+[2024.05.30-17.35.39:024][883]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-17.35.39:034][883]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010016s)
+[2024.05.30-17.35.39:034][883]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.010047s)
+[2024.05.30-17.35.39:046][883]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.30-17.35.39:048][883]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.35.39:048][883]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.35.39:048][883]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-17.35.39:048][883]LogPlayLevel: PIE: World Init took: (0.000751s)
+[2024.05.30-17.35.39:048][883]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2024.05.30-17.35.39:048][883]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-17.35.39:048][883]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-17.35.39:049][883]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-17.35.39:049][883]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-17.35.39:049][883]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-17.35.39:049][883]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-17.35.39:049][883]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-17.35.39:049][883]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-17.35.39:049][883]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-17.35.39:049][883]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-17.35.39:049][883]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-17.35.39:051][883]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-17.35.39:083][883]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-17.35.39:083][883]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-17.35.39:083][883]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-17.35.39:083][883]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-17.35.39:084][883]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2024.05.30-17.35.39:084][883]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2024.05.30-17.35.39:084][883]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2024.05.30-17.35.39:085][883]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2024.05.30-17.35.39:085][883]LogInit: FAudioDevice initialized with ID 7.
+[2024.05.30-17.35.39:085][883]LogAudio: Display: Audio Device (ID: 7) registered with world 'Sandbox1'.
+[2024.05.30-17.35.39:085][883]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2024.05.30-17.35.39:087][883]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.30-17.35.39:088][883]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.35.39:088][883]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.35.39:089][883]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-18.35.39
+[2024.05.30-17.35.39:089][883]LogWorld: Bringing up level for play took: 0.001818
+[2024.05.30-17.35.39:090][883]LogOnline: OSS: Created online subsystem instance for: :Context_58
+[2024.05.30-17.35.39:092][883]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.35.39:093][883]PIE: Server logged in
+[2024.05.30-17.35.39:094][883]PIE: Play in editor total start time 0.074 seconds.
+[2024.05.30-17.35.39:307][898]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_5.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_5.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_5.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_5.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.35.42:980][339]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_5.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.35.47:522][884]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.05.30-17.35.47:522][884]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.35.54:763][750]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-17.35.54:763][750]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-17.35.54:763][750]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-17.35.54:764][750]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.35.54:770][750]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-17.35.54:774][750]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.35.54:787][750]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.30-17.35.54:787][750]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2024.05.30-17.35.54:787][750]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.05.30-17.35.54:788][750]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.05.30-17.35.54:791][750]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-17.35.54:794][750]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.30-17.35.54:798][750]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-17.35.54:859][751]LogPlayLevel: Display: Destroying online subsystem :Context_58
+[2024.05.30-17.36.00:776][431]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.30-17.36.26:551][463]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.26:551][463]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.37:943][794]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.37:943][794]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.37:945][794]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.37:945][794]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.37:959][794]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.37:959][794]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.39:316][953]BlueprintLog: New page: Compile BP_CubeCoree
+[2024.05.30-17.36.39:360][953]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.39:361][953]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.39:361][953]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.39:361][953]LogActor: Warning: BP_CubeCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.39:363][953]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.39:363][953]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.39:363][953]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_28:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.39:364][953]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_27:PersistentLevel.BP_CubeCoree_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.39:386][953]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.05.30-17.36.39:394][953]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.39:394][953]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.39:394][953]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.39:394][953]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.39:394][953]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_27:PersistentLevel.BP_CubeCoree_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.39:407][953]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.39:407][953]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.39:407][953]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.39:407][953]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.39:503][953]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.36.39:548][953]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCoree
+[2024.05.30-17.36.39:549][953]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoree91A80C924BBCD1656B0ABD9A3A97D4C1.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCoree.uasset'
+[2024.05.30-17.36.39:556][953]LogFileHelpers: InternalPromptForCheckoutAndSave took 53 ms (total: 2.44 sec)
+[2024.05.30-17.36.39:576][953]AssetCheck: New page: Asset Save: BP_CubeCoree
+[2024.05.30-17.36.39:576][953]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCoree.BP_CubeCoree
+[2024.05.30-17.36.39:594][953]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.39:594][953]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.45:550][648]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.45:550][648]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.45:551][648]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.45:551][648]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.45:566][648]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.45:566][648]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.46:696][783]BlueprintLog: New page: Compile BP_CubeCoree
+[2024.05.30-17.36.46:734][783]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.46:735][783]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.46:735][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.46:735][783]LogActor: Warning: BP_CubeCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.46:736][783]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.46:736][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.46:736][783]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_28:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.46:737][783]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_27:PersistentLevel.BP_CubeCoree_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.46:761][783]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.30-17.36.46:768][783]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.46:768][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.46:769][783]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.46:769][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.46:769][783]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_27:PersistentLevel.BP_CubeCoree_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.36.46:781][783]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.46:781][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.36.46:781][783]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.46:781][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.36.46:867][783]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.36.46:923][783]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCoree
+[2024.05.30-17.36.46:923][783]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoree2FC1C8A74F902BB2F1534099FBE64488.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCoree.uasset'
+[2024.05.30-17.36.46:929][783]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 2.50 sec)
+[2024.05.30-17.36.46:949][783]AssetCheck: New page: Asset Save: BP_CubeCoree
+[2024.05.30-17.36.46:949][783]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCoree.BP_CubeCoree
+[2024.05.30-17.36.46:965][783]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.36.46:965][783]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.08:436][304]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.08:436][304]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.08:438][304]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.08:438][304]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.08:451][304]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.08:451][304]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.16:222][223]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.16:222][223]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.16:224][223]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.16:224][223]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.16:244][223]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.16:244][223]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.23:783][ 86]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:783][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.23:784][ 86]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:785][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.23:789][ 86]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:789][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.23:789][ 86]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:789][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.23:791][ 86]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:791][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.23:792][ 86]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:792][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.23:793][ 86]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:793][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.23:793][ 86]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:793][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.23:820][ 86]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.23:820][ 86]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.46:052][735]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.30-17.37.46:173][735]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-17.37.46:202][735]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.30-17.37.46:246][735]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2024.05.30-17.37.46:264][735]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.30-17.37.46:264][735]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox15EFAAA164E9B2492EBE746B9FC676AF8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.30-17.37.46:275][735]LogFileHelpers: Saving map 'Sandbox1' took 0.074
+[2024.05.30-17.37.46:330][735]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCoree
+[2024.05.30-17.37.46:331][735]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoreeCB10DA54448F8FDAE55E54810E009D58.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCoree.uasset'
+[2024.05.30-17.37.46:339][735]LogFileHelpers: InternalPromptForCheckoutAndSave took 166 ms (total: 2.67 sec)
+[2024.05.30-17.37.46:341][735]AssetCheck: New page: Asset Save: multiple assets
+[2024.05.30-17.37.46:341][735]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.30-17.37.46:341][735]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCoree.BP_CubeCoree
+[2024.05.30-17.37.46:923][805]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-17.37.46:933][805]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.30-17.37.46:937][805]LogPlayLevel: [PlayLevel] Compiling BP_CubeCoree before play...
+[2024.05.30-17.37.46:970][805]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.37.46:971][805]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.46:971][805]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.46:971][805]LogActor: Warning: BP_CubeCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.37.46:972][805]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.46:972][805]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.46:973][805]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_28:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.37.46:974][805]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_27:PersistentLevel.BP_CubeCoree_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.37.46:990][805]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.46:990][805]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.46:990][805]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.46:990][805]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.46:991][805]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_27:PersistentLevel.BP_CubeCoree_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.37.47:001][805]LogPhysics: Warning: Scale for /Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.47:001][805]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_15:PersistentLevel.BP_CubeCoree_C_0.Mouse Detector' 
+[2024.05.30-17.37.47:001][805]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.47:001][805]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.47:021][805]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.30-17.37.47:022][805]LogPlayLevel: PlayLevel: Blueprint regeneration took 89 ms (1 blueprints)
+[2024.05.30-17.37.47:022][805]PIE: New page: PIE session: Sandbox1 (30 May 2024, 19:37:47)
+[2024.05.30-17.37.47:022][805]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-17.37.47:032][805]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009967s)
+[2024.05.30-17.37.47:032][805]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.009992s)
+[2024.05.30-17.37.47:043][805]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2024.05.30-17.37.47:044][805]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-17.37.47:044][805]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-17.37.47:045][805]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-17.37.47:045][805]LogPlayLevel: PIE: World Init took: (0.000908s)
+[2024.05.30-17.37.47:045][805]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2024.05.30-17.37.47:045][805]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-17.37.47:045][805]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-17.37.47:045][805]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-17.37.47:045][805]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-17.37.47:045][805]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-17.37.47:045][805]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-17.37.47:045][805]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-17.37.47:045][805]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-17.37.47:046][805]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-17.37.47:046][805]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-17.37.47:046][805]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-17.37.47:048][805]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-17.37.47:075][805]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-17.37.47:075][805]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-17.37.47:075][805]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-17.37.47:075][805]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-17.37.47:076][805]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2024.05.30-17.37.47:076][805]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2024.05.30-17.37.47:077][805]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2024.05.30-17.37.47:077][805]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2024.05.30-17.37.47:077][805]LogInit: FAudioDevice initialized with ID 8.
+[2024.05.30-17.37.47:077][805]LogAudio: Display: Audio Device (ID: 8) registered with world 'Sandbox1'.
+[2024.05.30-17.37.47:077][805]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 8
+[2024.05.30-17.37.47:105][805]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-17.37.47:105][805]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.30-17.37.47:107][805]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-17.37.47:107][805]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-17.37.47:107][805]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-18.37.47
+[2024.05.30-17.37.47:107][805]LogWorld: Bringing up level for play took: 0.002073
+[2024.05.30-17.37.47:110][805]LogOnline: OSS: Created online subsystem instance for: :Context_59
+[2024.05.30-17.37.47:111][805]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.37.47:113][805]PIE: Server logged in
+[2024.05.30-17.37.47:113][805]PIE: Play in editor total start time 0.181 seconds.
+[2024.05.30-17.37.47:123][805]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.30-17.37.47:239][807]LogBlueprintUserMessages: [BP_PlayerCharacter_C_0] story
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_6.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_6.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_6.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_6.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-17.37.54:948][614]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_6.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-17.37.56:885][817]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.05.30-17.37.56:885][817]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-17.38.14:104][540]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-17.38.14:104][540]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-17.38.14:105][540]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.30-17.38.14:111][540]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-17.38.14:112][540]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.38.14:117][540]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-17.38.14:120][540]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-17.38.14:130][540]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.30-17.38.14:130][540]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 8
+[2024.05.30-17.38.14:130][540]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.05.30-17.38.14:131][540]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.05.30-17.38.14:137][540]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.30-17.38.14:141][540]LogActorComponent: ReregisterComponent: (/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCore_C_1.Sound Player.Audio Player) Not currently registered. Aborting.
+[2024.05.30-17.38.14:190][541]LogPlayLevel: Display: Destroying online subsystem :Context_59
