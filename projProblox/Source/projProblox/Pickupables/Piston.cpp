@@ -22,13 +22,6 @@ void APiston::BeginPlay()
 {
 	Super::BeginPlay();
 	wrld = GetWorld();
-	// SetAbilityActive(true);
-}
-
-EOperations APiston::SetSelected(const bool value)
-{
-	// if(!value && IsValid(parentCore)) SetAbilityActive(false);
-	return Super::SetSelected(value);
 }
 
 void APiston::Ability(const float deltaTime)
@@ -47,19 +40,17 @@ void APiston::Ability(const float deltaTime)
 
 	// The center of the core...
 	const FVector start = parentCore->GetActorLocation();
-	const FVector end = flatHead->GetComponentLocation() + flatHead->GetUpVector() * 10 / flatHead->GetRelativeScale3D().Z; // parentCore->GetMesh()->GetSocketLocation(attachedSocket);
+	const FVector end = flatHead->GetComponentLocation() + flatHead->GetUpVector() * 10 / flatHead->GetRelativeScale3D().Z; 
 	
 	flatHead->SetRelativeLocation(UKismetMathLibrary::VLerp(relativePos, targetPos, pushSpeed * deltaTime));
 
 	// If the target position hasn't been met and the relative position is towards the middle of the movement.
 	moving = !Approximately(relativePos.Length(), targetPos.Length(), 2);
-	// if(moving) DrawDebugLine(wrld, start, end, FColor::Red);
 
 	wrld->LineTraceSingleByChannel(hit, start, end, ECC_Visibility, collisionParams);
 	flatHead->SetCollisionResponseToAllChannels(moving? ECR_Ignore : ECR_Block);
 	
 	if(!hit.bBlockingHit) return;
-	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 
 	if(!wrld || !moving || !canPush) return;
 

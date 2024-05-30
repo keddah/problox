@@ -23,7 +23,6 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 	APiston();
 	virtual void BeginPlay() override;
 
-	virtual EOperations SetSelected(const bool value) override;
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
 	

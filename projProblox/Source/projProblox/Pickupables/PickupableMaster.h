@@ -234,7 +234,7 @@ public:
 	virtual void SetCanPickup(const bool can) { canPickup = can; }
 
 	// Since this is used a lot...
-	void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr)
+	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr)
 	{
 		// If a silhouette wasn't given, use this one.
 		if(!ghost) ghost = silhouette;
