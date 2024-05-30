@@ -3618,3 +3618,161 @@ Script Stack (0 frames) :
 [2024.05.30-18.37.20:075][507]LogFileHelpers: InternalPromptForCheckoutAndSave took 110 ms (total: 1.99 sec)
 [2024.05.30-18.37.20:077][507]AssetCheck: New page: Asset Save: Sandbox1
 [2024.05.30-18.37.20:077][507]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.30-18.37.38:604][921]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Treads.BP_Treads
+[2024.05.30-18.37.38:604][921]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.37.38:604][921]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.37.38:732][921]LogActor: Warning: BP_Treads_C /Engine/Transient.World_45:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.38.00:622][364]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads
+[2024.05.30-18.38.00:622][364]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.38.00:622][364]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.38.00:703][364]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2024.05.30-18.38.00:756][364]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_46:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.38.00:779][364]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.05.30-18.38.02:405][537]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.38.02:408][537]LogSlate: Window 'Content Browser' being destroyed
+[2024.05.30-18.39.56:929][958]BlueprintLog: New page: Compile BP_TankTreads
+[2024.05.30-18.39.56:952][958]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_46:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.39.56:974][958]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.05.30-18.39.57:055][958]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.39.57:080][958]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_TankTreads
+[2024.05.30-18.39.57:080][958]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads1C9222464F70D0B88C18E898A17FD4F2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_TankTreads.uasset'
+[2024.05.30-18.39.57:214][958]LogFileHelpers: InternalPromptForCheckoutAndSave took 158 ms (total: 2.14 sec)
+[2024.05.30-18.39.57:238][958]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.05.30-18.39.57:238][958]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads
+[2024.05.30-18.40.51:823][313]BlueprintLog: New page: Compile BP_TankTreads
+[2024.05.30-18.40.51:830][313]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_46:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.40.51:850][313]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.05.30-18.40.51:930][313]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.40.51:960][313]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_TankTreads
+[2024.05.30-18.40.51:960][313]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads41D7042F4D86ECDF4FA2B3B1D826EB7B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_TankTreads.uasset'
+[2024.05.30-18.40.51:965][313]LogFileHelpers: InternalPromptForCheckoutAndSave took 35 ms (total: 2.18 sec)
+[2024.05.30-18.40.51:973][313]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.05.30-18.40.51:973][313]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads
+[2024.05.30-18.41.37:037][158]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads_C
+[2024.05.30-18.41.37:037][158]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads_C
+[2024.05.30-18.41.37:038][158]LogActor: Warning: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.41.37:040][158]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads as actor: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_0
+[2024.05.30-18.41.37:041][158]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads as actor: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_0
+[2024.05.30-18.41.52:061][877]BlueprintLog: New page: Compile BP_TankTreads
+[2024.05.30-18.41.52:082][877]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_46:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.41.52:083][877]LogActor: Warning: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.41.52:129][877]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.05.30-18.41.52:217][877]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.41.52:250][877]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_TankTreads
+[2024.05.30-18.41.52:251][877]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads886E126B413E155098F18AA69AB9A09B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_TankTreads.uasset'
+[2024.05.30-18.41.52:255][877]LogFileHelpers: InternalPromptForCheckoutAndSave took 38 ms (total: 2.22 sec)
+[2024.05.30-18.41.52:275][877]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.05.30-18.41.52:275][877]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads
+[2024.05.30-18.42.01:850][930]BlueprintLog: New page: Compile BP_TankTreads
+[2024.05.30-18.42.01:872][930]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_46:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.42.01:873][930]LogActor: Warning: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.42.01:917][930]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.05.30-18.42.02:001][930]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.30-18.42.02:031][930]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.42.02:037][930]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_47:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.42.02:078][930]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.42.02:083][930]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_48:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.42.02:099][930]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_TankTreads
+[2024.05.30-18.42.02:100][930]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TankTreads79B008574D69518A89FD11BD5E8B3B6D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_TankTreads.uasset'
+[2024.05.30-18.42.02:104][930]LogFileHelpers: InternalPromptForCheckoutAndSave took 102 ms (total: 2.32 sec)
+[2024.05.30-18.42.02:125][930]AssetCheck: New page: Asset Save: BP_TankTreads
+[2024.05.30-18.42.02:125][930]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_TankTreads.BP_TankTreads
+[2024.05.30-18.42.16:080][373]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.30-18.42.16:090][373]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.30-18.42.16:090][373]PIE: New page: PIE session: Sandbox1 (30 May 2024, 20:42:16)
+[2024.05.30-18.42.16:113][373]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.42.16:124][373]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010953s)
+[2024.05.30-18.42.16:124][373]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.010982s)
+[2024.05.30-18.42.16:136][373]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.30-18.42.16:138][373]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.42.16:138][373]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.42.16:138][373]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.30-18.42.16:138][373]LogPlayLevel: PIE: World Init took: (0.000836s)
+[2024.05.30-18.42.16:138][373]LogAudio: Display: Creating Audio Device:                 Id: 23, Scope: Unique, Realtime: True
+[2024.05.30-18.42.16:138][373]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.30-18.42.16:139][373]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.30-18.42.16:139][373]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.30-18.42.16:139][373]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.30-18.42.16:139][373]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.30-18.42.16:139][373]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.30-18.42.16:139][373]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.30-18.42.16:139][373]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.30-18.42.16:139][373]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.30-18.42.16:139][373]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.30-18.42.16:139][373]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.30-18.42.16:141][373]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.30-18.42.16:169][373]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.30-18.42.16:170][373]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.30-18.42.16:170][373]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.30-18.42.16:170][373]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.30-18.42.16:170][373]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=23
+[2024.05.30-18.42.16:170][373]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=23
+[2024.05.30-18.42.16:171][373]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=23
+[2024.05.30-18.42.16:171][373]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=23
+[2024.05.30-18.42.16:171][373]LogInit: FAudioDevice initialized with ID 23.
+[2024.05.30-18.42.16:171][373]LogAudio: Display: Audio Device (ID: 23) registered with world 'Sandbox1'.
+[2024.05.30-18.42.16:171][373]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 23
+[2024.05.30-18.42.16:175][373]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.30-18.42.16:177][373]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.30-18.42.16:177][373]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_1.Mouse Detector' 
+[2024.05.30-18.42.16:177][373]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.30-19.42.16
+[2024.05.30-18.42.16:177][373]LogWorld: Bringing up level for play took: 0.002410
+[2024.05.30-18.42.16:179][373]LogOnline: OSS: Created online subsystem instance for: :Context_71
+[2024.05.30-18.42.16:180][373]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.42.16:181][373]PIE: Server logged in
+[2024.05.30-18.42.16:183][373]PIE: Play in editor total start time 0.094 seconds.
+[2024.05.30-18.42.22:724][143]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.22:724][143]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.22:724][143]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.22:724][143]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.22:724][143]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.22:724][143]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.22:724][143]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.22:725][143]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.22:725][143]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.22:725][143]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.27:770][748]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.05.30-18.42.27:770][748]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.05.30-18.42.43:548][639]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_21.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.05.30-18.42.46:524][989]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.42.46:524][989]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.30-18.42.46:524][989]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.42.46:525][989]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.42.46:531][989]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.30-18.42.46:534][989]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.42.46:544][989]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.30-18.42.46:544][989]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 23
+[2024.05.30-18.42.46:544][989]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2024.05.30-18.42.46:546][989]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2024.05.30-18.42.46:551][989]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.30-18.42.46:621][990]LogPlayLevel: Display: Destroying online subsystem :Context_71
+[2024.05.30-18.43.12:472][ 20]LogWorld: UWorld::CleanupWorld for World_40, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.43.12:472][ 20]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.43.13:433][126]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.43.13:433][126]LogWorld: UWorld::CleanupWorld for World_41, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.43.13:433][126]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.43.14:857][286]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.43.14:857][286]LogWorld: UWorld::CleanupWorld for World_44, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.43.14:857][286]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.43.15:484][352]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.05.30-18.43.15:485][352]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2024.05.30-18.43.15:485][352]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.30-18.43.36:133][648]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.43.36:139][648]LogActor: Warning: BP_HexCore_C /Engine/Transient.World_49:PersistentLevel.BP_HexCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.43.36:192][650]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.43.36:201][650]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_50:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.30-18.43.45:880][777]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_CuboidCore.BP_CuboidCore
+[2024.05.30-18.43.45:880][777]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.30-18.43.45:880][777]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.30-18.43.46:000][777]LogActor: Warning: BP_CuboidCore_C /Engine/Transient.World_51:PersistentLevel.BP_CuboidCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
