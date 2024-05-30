@@ -25,6 +25,9 @@ APickupableMaster::APickupableMaster()
 	mesh->SetSimulatePhysics(true);
 	mesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	mesh->SetGenerateOverlapEvents(true);
+
+	for(int i = 0; i < 3; i++) if(!IsValid(arrow)) arrow = CreateDefaultSubobject<UArrowComponent>("Indicator");
+	arrow->SetupAttachment(mesh);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
 	silhouette->SetCollisionResponseToAllChannels(ECR_Overlap);
@@ -38,29 +41,27 @@ APickupableMaster::APickupableMaster()
 	silhouette->UnWeldFromParent();
 	silhouette->SetEnableGravity(false);
 	
-	indicator = CreateDefaultSubobject<UArrowComponent>("Indicator");
-	indicator->SetupAttachment(mesh);
-
 	centerMass = CreateDefaultSubobject<USceneComponent>("Center of Gravity");
 	centerMass->SetupAttachment(mesh);
 	
-	pickupCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Mouse Detector"));
-	pickupCollider->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
-	pickupCollider->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	pickupCollider->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
-	pickupCollider->AddRelativeLocation({0,0,50});
+	for(int i = 0; i < 3; i++) if(!IsValid(mouseDetector)) mouseDetector = CreateDefaultSubobject<UBoxComponent>(TEXT("Mouse Detector"));
+	mouseDetector->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
+	mouseDetector->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	mouseDetector->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	mouseDetector->AddRelativeLocation({0,0,50});
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
-	sfxManager = CreateDefaultSubobject<UAudioManager>("Sound Player");
-	sfxManager->Attach(mesh);
+	for(int i = 0; i < 3; i++) if(!IsValid(soundPlayer)) soundPlayer = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	soundPlayer->Attach(mesh);
 }
 
 // Called when the game starts or when spawned
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
-	if(sfxManager && mesh) sfxManager->Attach(mesh);
+	
+	if(soundPlayer && mesh) soundPlayer->Attach(mesh);
 
 	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
@@ -100,10 +101,12 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 
 void APickupableMaster::ScaleIndicator()
 {
-	indicator->ArrowColor.A = .5f;
+    if(!arrow) return;
+	
+	arrow->ArrowColor.A = .5f;
 
 	const FVector actorScale = GetActorRelativeScale3D();
-	const FVector indiScale = indicator->GetRelativeScale3D();
+	const FVector indiScale = arrow->GetRelativeScale3D();
 	
 	FVector scale;
 	scale.X = indiScale.X / actorScale.X;
@@ -111,14 +114,16 @@ void APickupableMaster::ScaleIndicator()
 	scale.Z = indiScale.Z / actorScale.Z;
 
 	// Removes the scale relativity so that the place range is accurate... 
-	indicator->SetRelativeScale3D(scale);
-	indicator->ArrowLength = placeRange;
+	arrow->SetRelativeScale3D(scale);
+	arrow->ArrowLength = placeRange;
 }
 
 void APickupableMaster::SetPlaceIndicator()
 {
+	if(!arrow) return;
+
 	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
-	indicator->SetRelativeRotation(rot);
+	arrow->SetRelativeRotation(rot);
 	ScaleIndicator();
 }
 
@@ -139,7 +144,7 @@ void APickupableMaster::Placement()
 	collisionParams.MobilityType = EQueryMobilityType::Any;
 	
 	// Debug Draw
-	const FVector start = indicator->GetComponentLocation();
+	const FVector start = arrow->GetComponentLocation();
 	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
 	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
 
@@ -242,7 +247,8 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	UseSilhouetteTransform();
 	ResetGhost();
 
-	sfxManager->PlayAttach();
+	if(soundPlayer) soundPlayer->PlayAttach();
+	else Print("Sfx manager is invalid....", 5)
 	return EOperations::Attach;
 }
 
@@ -299,7 +305,8 @@ void APickupableMaster::Detach(const bool push)
 		parentCore = nullptr;
 		
 		// Only play the detach sound if there was a parent core
-		sfxManager->PlayDetach();
+		if(soundPlayer) soundPlayer->PlayDetach();
+		else Print("Sfx manager is invalid.....", 5)
 	}
 
 	ToggleGravity(true);
@@ -660,7 +667,9 @@ void APickupableMaster::Reattach()
 	}
 
 	AttachToActor(parentCore, attachRules, removedSocket);
-	sfxManager->PlayAttach();
+	if(soundPlayer) soundPlayer->PlayAttach();
+	else Print("Sfx manager is invalid.....", 5)
+
 	UseSavedTransform();
 	
 	parentCore->AddAttachment(this, attachedSocket);

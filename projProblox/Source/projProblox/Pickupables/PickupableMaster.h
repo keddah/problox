@@ -51,17 +51,17 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* silhouette;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UBoxComponent* pickupCollider;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UBoxComponent* mouseDetector;
 
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* centerMass;
 	
-	UPROPERTY(EditDefaultsOnly)
-	UArrowComponent* indicator;
+	UPROPERTY(EditAnywhere)
+	UArrowComponent* arrow;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UAudioManager* sfxManager;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UAudioManager* soundPlayer;
 
 
 	/////////////// Selection / Placement ///////////////
@@ -169,7 +169,7 @@ protected:
 
 	
 	/////////////// Indicator ///////////////
-	virtual void SetHideIndicator(const bool hide) { indicator->SetHiddenInGame(hide); }
+	virtual void SetHideIndicator(const bool hide) { arrow->SetHiddenInGame(hide); }
 	virtual void ScaleIndicator();
 	virtual void SetPlaceIndicator();
 

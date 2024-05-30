@@ -13,10 +13,11 @@ ABounceSpring::ABounceSpring()
 	end = CreateDefaultSubobject<UStaticMeshComponent>("End");
 	end->SetupAttachment(mesh);
 	end->SetSimulatePhysics(false);
+	end->SetCollisionResponseToAllChannels(ECR_Ignore);
 
 	needsTimer = false;
 
-	sfxManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
+	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
 }
 
 void ABounceSpring::Ability(float deltaTime)
@@ -41,7 +42,7 @@ void ABounceSpring::Ability(float deltaTime)
 	// DrawDebugLine(wrld, startPos, endPos, FColor::Red);
 	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
 
-	pickupCollider->SetWorldLocation(end->GetComponentLocation());
+	mouseDetector->SetWorldLocation(end->GetComponentLocation());
 
 	if(!springHit.bBlockingHit)
 	{
@@ -59,7 +60,7 @@ void ABounceSpring::Ability(float deltaTime)
 	// DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
 
 	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
-	if(!sfxManager->IsPlaying()) sfxManager->PlayAbility();
+	if(!soundPlayer->IsPlaying()) soundPlayer->PlayAbility();
 }
 
 void ABounceSpring::ToggleGravity() const

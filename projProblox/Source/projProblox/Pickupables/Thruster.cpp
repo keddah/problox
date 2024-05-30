@@ -15,7 +15,7 @@ AThruster::AThruster()
 	thrusterComp->SetupAttachment(mesh);
 
 	snapRot = false;
-	sfxManager->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_thruster.MS_thruster'"));
+	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_thruster.MS_thruster'"));
 }
 
 void AThruster::BeginPlay()
@@ -28,6 +28,6 @@ void AThruster::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
 
-	if(value) sfxManager->PlayAbility();
-	else sfxManager->StopAbility();
+	if(value) soundPlayer->PlayAbility();
+	else soundPlayer->StopAbility();
 }
