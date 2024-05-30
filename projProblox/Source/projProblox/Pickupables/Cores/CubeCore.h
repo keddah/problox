@@ -75,9 +75,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	
 	/////////////// Turn System ///////////////
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = true))
-	FTimerHandle resetTimer;
-
 	FTransform resetTransform;
 	
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The time in seconds before the attempt is reset (This timer starts after the highest intiation delay + duration)."))
@@ -194,6 +191,11 @@ protected:
 
 	/////////////// Undo/Redo ///////////////
 	TArray<APickupableMaster*> previousAttachments;
+
+	
+	/////////////// Turn System ///////////////
+	UPROPERTY(BlueprintReadOnly)
+	FTimerHandle resetTimer;
 
 	
 	/////////////// Other ///////////////
