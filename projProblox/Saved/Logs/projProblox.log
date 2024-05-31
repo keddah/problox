@@ -2283,3 +2283,409 @@ Script Stack (0 frames) :
 [2024.05.31-11.23.42:630][587]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13
 [2024.05.31-11.23.42:635][587]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
 [2024.05.31-11.23.42:686][592]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2024.05.31-11.24.05:228][132]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.31-11.24.05:230][132]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Sandbox1' took 0.013
+[2024.05.31-11.24.05:230][132]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/WBP_DragWidget] ([2] browsable assets)...
+[2024.05.31-11.24.05:232][132]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget]
+[2024.05.31-11.24.05:232][132]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/WBP_DragWidget]
+[2024.05.31-11.24.05:271][132]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/WBP_DragWidget_Auto2
+[2024.05.31-11.24.05:272][132]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget_Auto249A51AA5497B1C6D780C66A0F06FFCB7.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/WBP_DragWidget_Auto2.uasset'
+[2024.05.31-11.24.05:273][132]LogFileHelpers: Auto-saving content packages took 0.043
+[2024.05.31-11.25.01:242][115]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-11.25.01:253][115]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.05.31-11.25.01:258][115]LogPlayLevel: [PlayLevel] Compiling WBP_DragWidget before play...
+[2024.05.31-11.25.01:465][115]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.31-11.25.01:493][115]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset" SILENT=true
+[2024.05.31-11.25.01:528][115]LogSavePackage: Moving output files for package: /Game/UI/WBP_DragWidget
+[2024.05.31-11.25.01:529][115]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidgetA527F2F34864E6888E82DB92E5E7EA57.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_DragWidget.uasset'
+[2024.05.31-11.25.01:535][115]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 980 ms)
+[2024.05.31-11.25.01:546][115]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.05.31-11.25.01:547][115]LogPlayLevel: PlayLevel: Blueprint regeneration took 294 ms (1 blueprints)
+[2024.05.31-11.25.01:547][115]PIE: New page: PIE session: Sandbox1 (31 May 2024, 13:25:01)
+[2024.05.31-11.25.01:547][115]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-11.25.01:564][115]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016610s)
+[2024.05.31-11.25.01:564][115]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.016637s)
+[2024.05.31-11.25.01:574][115]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.05.31-11.25.01:575][115]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.01:575][115]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-11.25.01:575][115]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-11.25.01:576][115]LogPlayLevel: PIE: World Init took: (0.000739s)
+[2024.05.31-11.25.01:576][115]LogAudio: Display: Creating Audio Device:                 Id: 14, Scope: Unique, Realtime: True
+[2024.05.31-11.25.01:576][115]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-11.25.01:576][115]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-11.25.01:576][115]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-11.25.01:576][115]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-11.25.01:576][115]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-11.25.01:576][115]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-11.25.01:576][115]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-11.25.01:576][115]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-11.25.01:576][115]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-11.25.01:576][115]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-11.25.01:576][115]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-11.25.01:578][115]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-11.25.01:604][115]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-11.25.01:604][115]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-11.25.01:604][115]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-11.25.01:604][115]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-11.25.01:605][115]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=14
+[2024.05.31-11.25.01:605][115]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=14
+[2024.05.31-11.25.01:606][115]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=14
+[2024.05.31-11.25.01:606][115]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=14
+[2024.05.31-11.25.01:606][115]LogInit: FAudioDevice initialized with ID 14.
+[2024.05.31-11.25.01:606][115]LogAudio: Display: Audio Device (ID: 14) registered with world 'Sandbox1'.
+[2024.05.31-11.25.01:606][115]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 14
+[2024.05.31-11.25.01:632][115]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-11.25.01:632][115]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.31-11.25.01:633][115]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-11.25.01:633][115]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-11.25.01:635][115]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-12.25.01
+[2024.05.31-11.25.01:635][115]LogWorld: Bringing up level for play took: 0.003345
+[2024.05.31-11.25.01:637][115]LogOnline: OSS: Created online subsystem instance for: :Context_19
+[2024.05.31-11.25.01:638][115]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.01:641][115]PIE: Server logged in
+[2024.05.31-11.25.01:641][115]PIE: Play in editor total start time 0.389 seconds.
+[2024.05.31-11.25.01:697][115]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.05.31-11.25.01:719][116]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.05.31-11.25.01:720][116]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_DragWidget.WBP_DragWidget
+[2024.05.31-11.25.05:909][533]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-11.25.05:909][533]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-11.25.05:909][533]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.05.31-11.25.05:914][533]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-11.25.05:915][533]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-11.25.05:917][533]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-11.25.05:921][533]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-11.25.05:933][533]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 14
+[2024.05.31-11.25.05:933][533]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2024.05.31-11.25.05:934][533]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2024.05.31-11.25.05:940][533]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.05.31-11.25.05:977][536]LogPlayLevel: Display: Destroying online subsystem :Context_19
+[2024.05.31-11.25.15:585][635]LogSlate: Took 0.000141 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.05.31-11.25.19:129][ 28]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:135][ 28]LogActor: Warning: BP_MagPole_C /Engine/Transient.World_20:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:179][ 29]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:184][ 29]LogActor: Warning: BP_Collector_C /Engine/Transient.World_21:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:831][ 97]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:836][ 97]LogActor: Warning: BP_TankTreads_C /Engine/Transient.World_22:PersistentLevel.BP_TankTreads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:876][ 98]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:882][ 98]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_23:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:902][ 99]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:907][ 99]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_24:PersistentLevel.BP_Pusher_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:927][100]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:931][100]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_25:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:953][101]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:959][101]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_26:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:978][102]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.19:983][102]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_27:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.19:999][103]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.20:005][103]LogActor: Warning: BP_Glider_C /Engine/Transient.World_28:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.20:023][104]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.20:027][104]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_29:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.20:044][105]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.20:050][105]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_30:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.20:674][170]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.20:680][170]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_31:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.20:719][171]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.20:724][171]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_32:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.20:747][172]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.20:752][172]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_33:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.20:981][195]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.20:987][195]LogActor: Warning: BP_WedgeConnector_C /Engine/Transient.World_34:PersistentLevel.BP_WedgeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.21:031][196]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.21:036][196]LogActor: Warning: BP_ConnectorCuboid_C /Engine/Transient.World_35:PersistentLevel.BP_ConnectorCuboid_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.21:055][197]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.25.21:062][197]LogActor: Warning: BP_ConnectorCube_C /Engine/Transient.World_36:PersistentLevel.BP_ConnectorCube_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.22:325][319]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector_C
+[2024.05.31-11.25.22:325][319]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector_C
+[2024.05.31-11.25.22:326][319]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.22:326][319]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector as actor: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0
+[2024.05.31-11.25.22:328][319]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector as actor: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_0
+[2024.05.31-11.25.22:338][319]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2024.05.31-11.25.23:377][439]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector_C
+[2024.05.31-11.25.23:377][439]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector_C
+[2024.05.31-11.25.23:380][439]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.23:381][439]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector as actor: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1
+[2024.05.31-11.25.23:382][439]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/Cores/Connectors/BP_WedgeConnector.BP_WedgeConnector as actor: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1
+[2024.05.31-11.25.33:127][458]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.35:052][678]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.43:324][576]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.43:327][576]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.43:330][576]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.45:050][768]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.45:053][768]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.25.45:055][768]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.39:652][431]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.41:096][593]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.45:020][ 38]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.45:022][ 38]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.45:023][ 38]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.49:413][528]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.49:415][528]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.49:417][528]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.49:418][528]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.49:420][528]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.26.49:421][528]LogActor: Warning: BP_Grapple_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Grapple_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.15:813][206]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.16:972][313]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.23:595][993]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.23:597][993]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.23:598][993]LogActor: Warning: BP_Hoverer_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Hoverer_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.37:642][413]Cmd: DELETE
+[2024.05.31-11.27.37:642][413]Cmd: ACTOR DELETE
+[2024.05.31-11.27.37:653][413]LogEditorActor: Deleted Actor: BP_PropellerFan_C
+[2024.05.31-11.27.37:667][413]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.05.31-11.27.37:670][413]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2024.05.31-11.27.39:231][599]Cmd: TRANSACTION UNDO
+[2024.05.31-11.27.39:231][599]LogEditorTransaction: Undo Delete Elements
+[2024.05.31-11.27.49:214][572]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.50:954][761]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.57:169][469]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.57:172][469]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.27.57:173][469]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.01:755][957]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.01:757][957]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.01:759][957]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.01:760][957]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.01:761][957]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.01:762][957]LogActor: Warning: BP_PropellerFan_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_PropellerFan_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.28:160][788]LogActor: Warning: BP_Pusher_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Pusher_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.30:978][110]LogActor: Warning: BP_Pusher_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Pusher_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.37:321][832]LogActor: Warning: BP_Pusher_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Pusher_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.37:323][832]LogActor: Warning: BP_Pusher_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Pusher_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.28.37:324][832]LogActor: Warning: BP_Pusher_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Pusher_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.01:313][318]LogActor: Warning: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.03:148][498]LogActor: Warning: BP_TankTreads_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_TankTreads_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.26:074][857]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.28:003][ 42]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.34:423][746]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.34:424][746]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.34:426][746]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.40:965][468]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.40:967][468]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.40:968][468]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.40:970][468]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.40:972][468]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.29.40:973][468]LogActor: Warning: BP_Rocket_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.30.12:520][902]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.30.12:575][903]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.30.15:737][217]Cmd: DELETE
+[2024.05.31-11.30.15:737][217]Cmd: ACTOR DELETE
+[2024.05.31-11.30.15:744][217]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.05.31-11.30.15:755][217]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2024.05.31-11.30.15:757][217]LogEditorActor: Deleted 1 Actors (0.020 secs)
+[2024.05.31-11.30.40:487][986]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C
+[2024.05.31-11.30.40:487][986]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C
+[2024.05.31-11.30.40:487][986]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.30.40:488][986]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon as actor: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0
+[2024.05.31-11.30.40:488][986]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon as actor: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_0
+[2024.05.31-11.30.43:486][329]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C
+[2024.05.31-11.30.43:486][329]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C
+[2024.05.31-11.30.43:488][329]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.30.43:489][329]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon as actor: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1
+[2024.05.31-11.30.43:489][329]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon as actor: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1
+[2024.05.31-11.30.53:341][348]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.30.56:302][667]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.30.56:303][667]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.30.58:262][879]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.30.58:264][879]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.00:831][159]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.00:833][159]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.24:729][564]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Glider.BP_Glider_C
+[2024.05.31-11.31.24:729][564]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Glider.BP_Glider_C
+[2024.05.31-11.31.24:729][564]LogActor: Warning: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.24:730][564]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Glider.BP_Glider as actor: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_0
+[2024.05.31-11.31.24:730][564]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Glider.BP_Glider as actor: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_0
+[2024.05.31-11.31.26:582][779]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Glider.BP_Glider_C
+[2024.05.31-11.31.26:582][779]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Glider.BP_Glider_C
+[2024.05.31-11.31.26:584][779]LogActor: Warning: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.26:584][779]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Glider.BP_Glider as actor: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1
+[2024.05.31-11.31.26:585][779]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Glider.BP_Glider as actor: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1
+[2024.05.31-11.31.37:970][ 34]LogActor: Warning: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.39:917][244]LogActor: Warning: BP_Glider_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.58:602][172]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet_C
+[2024.05.31-11.31.58:602][172]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet_C
+[2024.05.31-11.31.58:602][172]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.58:603][172]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet as actor: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_0
+[2024.05.31-11.31.58:603][172]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet as actor: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_0
+[2024.05.31-11.31.59:199][239]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet_C
+[2024.05.31-11.31.59:199][239]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet_C
+[2024.05.31-11.31.59:200][239]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.31.59:201][239]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet as actor: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1
+[2024.05.31-11.31.59:201][239]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet as actor: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_1
+[2024.05.31-11.32.18:526][  5]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.20:961][238]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.20:963][238]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.28:291][ 47]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.28:293][ 47]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.28:295][ 47]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.28:296][ 47]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:755][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:757][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:758][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:759][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:760][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:762][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:763][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.35:764][822]LogActor: Warning: BP_Magnet_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Magnet_C_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.48:255][976]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.32.48:261][976]LogActor: Warning: BP_Wheel_C /Engine/Transient.World_39:PersistentLevel.BP_Wheel_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.55:846][656]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_MagPole.BP_MagPole_C
+[2024.05.31-11.32.55:846][656]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_MagPole.BP_MagPole_C
+[2024.05.31-11.32.55:846][656]LogActor: Warning: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.55:847][656]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_MagPole.BP_MagPole as actor: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_0
+[2024.05.31-11.32.55:847][656]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_MagPole.BP_MagPole as actor: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_0
+[2024.05.31-11.32.56:544][727]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_MagPole.BP_MagPole_C
+[2024.05.31-11.32.56:544][727]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_MagPole.BP_MagPole_C
+[2024.05.31-11.32.56:545][727]LogActor: Warning: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.32.56:546][727]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_MagPole.BP_MagPole as actor: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_1
+[2024.05.31-11.32.56:546][727]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_MagPole.BP_MagPole as actor: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_1
+[2024.05.31-11.33.15:905][718]LogActor: Warning: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.33.20:956][244]LogActor: Warning: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.33.23:372][502]Cmd: TRANSACTION UNDO
+[2024.05.31-11.33.23:372][502]LogEditorTransaction: Undo Move Elements
+[2024.05.31-11.33.26:823][741]LogActor: Warning: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.33.26:824][741]LogActor: Warning: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.33.47:191][859]LogActor: Warning: BP_MagPole_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_MagPole_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.33.50:818][235]Cmd: DELETE
+[2024.05.31-11.33.50:818][235]Cmd: ACTOR DELETE
+[2024.05.31-11.33.50:828][235]LogEditorActor: Deleted Actor: BP_MagPole_C
+[2024.05.31-11.33.50:839][235]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.05.31-11.33.50:841][235]LogEditorActor: Deleted 1 Actors (0.022 secs)
+[2024.05.31-11.34.22:052][611]Cmd: TRANSACTION UNDO
+[2024.05.31-11.34.22:052][611]LogEditorTransaction: Undo Clicking on Actors
+[2024.05.31-11.34.22:555][625]Cmd: TRANSACTION UNDO
+[2024.05.31-11.34.22:555][625]LogEditorTransaction: Undo Clicking on Actors
+[2024.05.31-11.34.23:240][685]Cmd: TRANSACTION UNDO
+[2024.05.31-11.34.23:240][685]LogEditorTransaction: Undo Clicking on Actors
+[2024.05.31-11.34.23:895][746]Cmd: TRANSACTION UNDO
+[2024.05.31-11.34.23:895][746]LogEditorTransaction: Undo Create Folder
+[2024.05.31-11.35.09:516][953]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.31-11.35.09:543][953]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.31-11.35.09:587][953]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.05.31-11.35.09:697][953]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.31-11.35.09:697][953]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1124C177443CF16D12567C5810202D9B9.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.31-11.35.09:708][953]LogFileHelpers: Saving map 'Sandbox1' took 0.166
+[2024.05.31-11.35.09:714][953]LogFileHelpers: InternalPromptForCheckoutAndSave took 197 ms (total: 1.17 sec)
+[2024.05.31-11.35.09:717][953]AssetCheck: New page: Asset Save: Sandbox1
+[2024.05.31-11.35.09:717][953]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.31-11.35.10:649][ 48]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-11.35.10:660][ 48]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-11.35.10:660][ 48]PIE: New page: PIE session: Sandbox1 (31 May 2024, 13:35:10)
+[2024.05.31-11.35.10:660][ 48]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-11.35.10:696][ 48]LogPlayLevel: PIE: StaticDuplicateObject took: (0.035277s)
+[2024.05.31-11.35.10:696][ 48]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.035311s)
+[2024.05.31-11.35.10:707][ 48]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.05.31-11.35.10:708][ 48]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.35.10:708][ 48]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-11.35.10:708][ 48]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-11.35.10:708][ 48]LogPlayLevel: PIE: World Init took: (0.000759s)
+[2024.05.31-11.35.10:708][ 48]LogAudio: Display: Creating Audio Device:                 Id: 15, Scope: Unique, Realtime: True
+[2024.05.31-11.35.10:708][ 48]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-11.35.10:708][ 48]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-11.35.10:708][ 48]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-11.35.10:708][ 48]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-11.35.10:708][ 48]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-11.35.10:708][ 48]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-11.35.10:708][ 48]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-11.35.10:708][ 48]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-11.35.10:709][ 48]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-11.35.10:709][ 48]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-11.35.10:709][ 48]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-11.35.10:710][ 48]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-11.35.10:739][ 48]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-11.35.10:739][ 48]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-11.35.10:739][ 48]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-11.35.10:739][ 48]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-11.35.10:739][ 48]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=15
+[2024.05.31-11.35.10:739][ 48]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=15
+[2024.05.31-11.35.10:740][ 48]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=15
+[2024.05.31-11.35.10:740][ 48]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=15
+[2024.05.31-11.35.10:740][ 48]LogInit: FAudioDevice initialized with ID 15.
+[2024.05.31-11.35.10:740][ 48]LogAudio: Display: Audio Device (ID: 15) registered with world 'Sandbox1'.
+[2024.05.31-11.35.10:740][ 48]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 15
+[2024.05.31-11.35.10:744][ 48]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.31-11.35.10:745][ 48]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-11.35.10:745][ 48]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-11.35.10:753][ 48]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-12.35.10
+[2024.05.31-11.35.10:753][ 48]LogWorld: Bringing up level for play took: 0.009389
+[2024.05.31-11.35.10:755][ 48]LogOnline: OSS: Created online subsystem instance for: :Context_40
+[2024.05.31-11.35.10:756][ 48]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.35.10:762][ 48]PIE: Server logged in
+[2024.05.31-11.35.10:763][ 48]PIE: Play in editor total start time 0.102 seconds.
+[2024.05.31-11.35.16:152][621]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-11.35.16:152][621]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-11.35.16:153][621]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-11.35.16:154][621]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-11.35.16:156][621]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-11.35.16:160][621]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-11.35.16:171][621]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.31-11.35.16:172][621]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 15
+[2024.05.31-11.35.16:172][621]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2024.05.31-11.35.16:174][621]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2024.05.31-11.35.16:176][621]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-11.35.16:183][621]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.05.31-11.35.16:226][622]LogPlayLevel: Display: Destroying online subsystem :Context_40
+[2024.05.31-11.35.22:063][159]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.05.31-11.35.22:090][159]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Sandbox1" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.05.31-11.35.22:137][159]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.05.31-11.35.22:243][159]LogSavePackage: Moving output files for package: /Game/Levels/Sandbox1
+[2024.05.31-11.35.22:243][159]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Sandbox1E7B06AC74AC4297FFB534C84635363DC.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Sandbox1.umap'
+[2024.05.31-11.35.22:255][159]LogFileHelpers: Saving map 'Sandbox1' took 0.165
+[2024.05.31-11.35.22:260][159]LogFileHelpers: InternalPromptForCheckoutAndSave took 196 ms (total: 1.37 sec)
+[2024.05.31-11.35.22:262][159]AssetCheck: New page: Asset Save: Sandbox1
+[2024.05.31-11.35.22:262][159]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Sandbox1.Sandbox1
+[2024.05.31-11.35.22:902][215]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-11.35.22:914][215]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-11.35.22:914][215]PIE: New page: PIE session: Sandbox1 (31 May 2024, 13:35:22)
+[2024.05.31-11.35.22:914][215]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-11.35.22:949][215]LogPlayLevel: PIE: StaticDuplicateObject took: (0.034459s)
+[2024.05.31-11.35.22:949][215]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.034492s)
+[2024.05.31-11.35.22:960][215]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.31-11.35.22:960][215]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-11.35.22:960][215]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-11.35.22:960][215]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-11.35.22:961][215]LogPlayLevel: PIE: World Init took: (0.000768s)
+[2024.05.31-11.35.22:961][215]LogAudio: Display: Creating Audio Device:                 Id: 16, Scope: Unique, Realtime: True
+[2024.05.31-11.35.22:961][215]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-11.35.22:961][215]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-11.35.22:961][215]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-11.35.22:961][215]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-11.35.22:961][215]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-11.35.22:961][215]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-11.35.22:961][215]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-11.35.22:961][215]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-11.35.22:962][215]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-11.35.22:962][215]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-11.35.22:962][215]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-11.35.22:963][215]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-11.35.22:990][215]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-11.35.22:990][215]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-11.35.22:990][215]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-11.35.22:990][215]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-11.35.22:990][215]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=16
+[2024.05.31-11.35.22:990][215]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=16
+[2024.05.31-11.35.22:992][215]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=16
+[2024.05.31-11.35.22:992][215]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=16
+[2024.05.31-11.35.22:992][215]LogInit: FAudioDevice initialized with ID 16.
+[2024.05.31-11.35.22:992][215]LogAudio: Display: Audio Device (ID: 16) registered with world 'Sandbox1'.
+[2024.05.31-11.35.22:992][215]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 16
+[2024.05.31-11.35.22:994][215]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.05.31-11.35.22:995][215]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-11.35.22:995][215]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-11.35.23:003][215]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-12.35.23
+[2024.05.31-11.35.23:004][215]LogWorld: Bringing up level for play took: 0.009170
+[2024.05.31-11.35.23:006][215]LogOnline: OSS: Created online subsystem instance for: :Context_41
+[2024.05.31-11.35.23:007][215]LogActor: Warning: BP_Cell_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.05.31-11.35.23:012][215]PIE: Server logged in
+[2024.05.31-11.35.23:013][215]PIE: Play in editor total start time 0.099 seconds.
+[2024.05.31-11.36.18:972][654]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-11.36.18:972][654]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-11.36.18:973][654]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-11.36.18:975][654]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-11.36.18:977][654]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-11.36.18:980][654]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-11.36.18:990][654]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-11.36.18:991][654]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 16
+[2024.05.31-11.36.18:991][654]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2024.05.31-11.36.18:992][654]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2024.05.31-11.36.19:005][654]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2024.05.31-11.36.19:068][655]LogPlayLevel: Display: Destroying online subsystem :Context_41
