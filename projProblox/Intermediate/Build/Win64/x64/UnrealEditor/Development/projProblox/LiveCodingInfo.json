@@ -23,6 +23,7 @@
 			"Modes.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
+			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
@@ -37,6 +38,8 @@
 			"MagPole.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
+			"Thruster.cpp.obj",
+			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
@@ -62,10 +65,7 @@
 			"WedgeConnector.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
-			"CubeConnector.cpp.obj",
-			"PickupableMaster.cpp.obj",
-			"Thruster.cpp.obj",
-			"Treads.cpp.obj"
+			"PickupableMaster.cpp.obj"
 		]
 	}
 }
