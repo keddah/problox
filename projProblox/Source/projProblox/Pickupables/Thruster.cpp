@@ -15,6 +15,8 @@ AThruster::AThruster()
 	thrusterComp->SetupAttachment(mesh);
 
 	snapRot = false;
+	lockAxis = {0,1,1};
+
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_thruster.MS_thruster'"));
 
 	uiName = "Thruster";

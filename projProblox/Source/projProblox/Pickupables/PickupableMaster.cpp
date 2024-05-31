@@ -197,6 +197,14 @@ void APickupableMaster::GhostPlacement()
 
 		// Rotate to match the socket rotation
 		silhouette->SetWorldRotation(rot);
+
+		// Whether or not the attached socket is the diagonal side of a wedge...
+		const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90;
+		const FRotator roundRot = RoundRotation(silhouette->GetRelativeRotation(), -float(rounder));
+
+		// Round it to the socket rotation
+		silhouette->SetRelativeRotation({roundRot.Pitch, roundRot.Yaw, roundRot.Roll});
+		
 		SetGhostBlocked();
 		return;
 	}
@@ -205,11 +213,21 @@ void APickupableMaster::GhostPlacement()
 	FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
 	const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
 	socketRot = socketRot.RotateVector(socketForward).Rotation();
-	
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
 
+	
+	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
+	const bool roundX = lockAxis.X == 0;
+	const bool roundY = lockAxis.Y == 0;
+	const bool roundZ = lockAxis.Z == 0;  
+
 	// Whether or not the attached socket is the diagonal side of a wedge...
-	const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90; 
+	const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90;
+	
+	const FRotator roundRot = RoundRotation(silhouette->GetRelativeRotation(), -float(rounder));
+
+	// Depending on the locked axis, set the relative rotation to the new rounded rotation
+	silhouette->SetRelativeRotation(FRotator(roundY? roundRot.Pitch : 0, roundZ? roundRot.Yaw : 0, roundX? roundRot.Roll : 0));
 	
 	// Ensures that the final rotation is always aligned.
 	SetGhostBlocked();
@@ -287,19 +305,20 @@ void APickupableMaster::Detach(const bool push)
 	ResetMaterial();
 	RemoveVelocity();
 	
-	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
-	else previousObj->RemoveAttachment(attachedSocket);
-	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	silhouette->SetupAttachment(mesh);
 	if(push)
 	{
-		const FVector launchDir = -UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(attachedSocket));
+		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 		const float launchForce = GetMass();
 
 		constexpr float maxVelocity = 1000;
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
+	
+	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	else previousObj->RemoveAttachment(attachedSocket);
+	
+	silhouette->SetupAttachment(mesh);
 	
 	if(parentCore)
 	{

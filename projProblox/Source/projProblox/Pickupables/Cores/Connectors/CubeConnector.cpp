@@ -326,28 +326,29 @@ void ACubeConnector::Detach(const bool push)
 	ResetMaterial();
 	RemoveVelocity();
 	
-	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
-	else previousObj->RemoveAttachment(attachedSocket);
-	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	if(push)
 	{
-		const FVector launchDir = -UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(attachedSocket));
+		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 		const float launchForce = GetMass();
 
 		constexpr float maxVelocity = 1000;
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
 	
+	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	else previousObj->RemoveAttachment(attachedSocket);
+	
 	silhouette->SetupAttachment(mesh);
-
+	
 	if(parentCore)
 	{
 		previousObj = parentCore;
 		parentCore = nullptr;
-
+		
 		// Only play the detach sound if there was a parent core
-		soundPlayer->PlayDetach();
+		if(soundPlayer) soundPlayer->PlayDetach();
+		else Print("Sfx manager is invalid.....", 5)
 	}
 
 	ToggleGravity(true);

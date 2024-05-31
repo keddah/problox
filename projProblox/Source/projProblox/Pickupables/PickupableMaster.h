@@ -100,6 +100,8 @@ protected:
 	// Whether or not to use the parent core's socket's forward rotation when attaching...
 	bool snapRot = true;
 
+	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "When not snapRotating, lock any of the axis. Set the axis to lock to a value other than 0."))
+	FVector lockAxis;
 	
 	/////////////// Attachments ///////////////
 	UPROPERTY(BlueprintReadOnly)
@@ -114,6 +116,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "The rotational offset for when the core attaches itself to the object."))
 	FRotator rotOffset;
 
+	
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
 	
@@ -137,7 +140,7 @@ protected:
 	// The socket that this has been removed from
 	FName removedSocket;
 	bool wasDetached;
-//
+
 	// The relative transform that should be saved whenever attaching...
 	FTransform savedAttachTransform;
 	
