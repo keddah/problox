@@ -6,7 +6,6 @@
 
 FTask UActionHistory::Undo()
 {
-	// if(atEnd) return {};
 	if (tasks.IsEmpty())
 	{
 		Print("The task history is empty.", 5);
@@ -41,7 +40,6 @@ FTask UActionHistory::Undo()
 
 FTask UActionHistory::Redo()
 {
-	// if(atEnd) return {};
 	if (tasks.IsEmpty())
 	{
 		Print("The task history is empty.", 5);
@@ -103,10 +101,7 @@ void UActionHistory::NewAction(const FTask& task)
 
 void UActionHistory::Overwrite()
 {
-	Print("OVERWRITE CALLED", 5);
-
 	// Remove tasks after the current task
 	const unsigned int tasksToRemove = tasks.Num() - (currentTask + 1) + 1;
-	PrintInt(tasksToRemove, 4)
 	if (tasksToRemove > 0) tasks.RemoveAt(currentTask, tasksToRemove);
 }

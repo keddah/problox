@@ -56,7 +56,12 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerCharacter::Undo()
 {
-	const FTask task = history->Undo();
+	if(lastUndo == history->Undo() && undid) return;
+	
+	const FTask& task = history->Undo();
+	lastUndo = task;
+	undid = true;
+
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
@@ -105,7 +110,12 @@ void APlayerCharacter::Undo()
 
 void APlayerCharacter::Redo()
 {
-	const FTask task = history->Redo();
+	if(lastRedo == history->Redo() && !undid) return;
+
+	const FTask& task = history->Redo();
+	lastRedo = task;
+	undid = false;
+
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;

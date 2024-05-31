@@ -37,6 +37,13 @@ struct FTask
 
 	UPROPERTY(VisibleAnywhere)
 	EOperations operation;
+
+	bool operator==(const FTask& task) const
+	{
+		// If all the values are the same...
+		const bool same = taskName == task.taskName && modifiedObjs == task.modifiedObjs && operation == task.operation && startTransform.Equals(task.startTransform) && endTransform.Equals(task.endTransform);
+		return same;
+	}
 };
 
 UCLASS()

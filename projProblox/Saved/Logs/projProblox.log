@@ -2395,3 +2395,696 @@ Script Stack (0 frames) :
 [2024.05.31-10.15.30:364][710]LogPlayLevel: Display: Destroying online subsystem :Context_17
 [2024.05.31-10.15.31:682][815]LogSlate: Window 'Message Log' being destroyed
 [2024.05.31-10.15.31:687][815]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.26.31:472][623]LogHotReload: New module detected: UnrealEditor-projProblox-0019.dll
+[2024.05.31-10.26.32:358][705]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.31-10.26.32:407][705]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.31-10.26.32:438][705]LogClass: UClass PlayerCharacter Reload.
+[2024.05.31-10.26.32:491][705]LogClass: Could not find existing class PlayerCharacter in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.31-10.26.32:491][705]LogClass: Function CreateDetachHistory is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function Deselect is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function Detach is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function GetCore is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function GroupSelect is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function ManualSelectObject is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function MoveSelection is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function Redo is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function SelectObject is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function SetGameMode is new or belongs to a modified class.
+[2024.05.31-10.26.32:491][705]LogClass: Function Undo is new or belongs to a modified class.
+[2024.05.31-10.26.32:567][705]Re-instancing PlayerCharacter after reload.
+[2024.05.31-10.26.32:711][705]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.31-10.26.32:819][705]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.05.31-10.26.32:857][705]Display: HotReload took  0.5s.
+[2024.05.31-10.26.32:857][705]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 37 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 48 functions remapped, 1 scriptstruct remapped
+[2024.05.31-10.26.33:498][735]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.26.33:509][735]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.26.33:509][735]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:26:33)
+[2024.05.31-10.26.33:549][735]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.26.33:566][735]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017211s)
+[2024.05.31-10.26.33:566][735]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.017249s)
+[2024.05.31-10.26.33:612][735]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.05.31-10.26.33:614][735]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.26.33:614][735]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.26.33:614][735]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.26.33:615][735]LogPlayLevel: PIE: World Init took: (0.000813s)
+[2024.05.31-10.26.33:615][735]LogAudio: Display: Creating Audio Device:                 Id: 17, Scope: Unique, Realtime: True
+[2024.05.31-10.26.33:615][735]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.26.33:615][735]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.26.33:615][735]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.26.33:615][735]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.26.33:615][735]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.26.33:615][735]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.26.33:615][735]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.26.33:615][735]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.26.33:615][735]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.26.33:615][735]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.26.33:615][735]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.26.33:617][735]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.26.33:637][735]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.26.33:637][735]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.26.33:637][735]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.26.33:637][735]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.26.33:637][735]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=17
+[2024.05.31-10.26.33:637][735]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=17
+[2024.05.31-10.26.33:640][735]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=17
+[2024.05.31-10.26.33:640][735]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=17
+[2024.05.31-10.26.33:640][735]LogInit: FAudioDevice initialized with ID 17.
+[2024.05.31-10.26.33:640][735]LogAudio: Display: Audio Device (ID: 17) registered with world 'Sandbox1'.
+[2024.05.31-10.26.33:640][735]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 17
+[2024.05.31-10.26.33:643][735]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.26.33:644][735]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.26.33:644][735]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.26.33:646][735]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.26.33
+[2024.05.31-10.26.33:646][735]LogWorld: Bringing up level for play took: 0.003369
+[2024.05.31-10.26.33:647][735]LogOnline: OSS: Created online subsystem instance for: :Context_18
+[2024.05.31-10.26.33:649][735]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.26.33:649][735]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.26.33:651][735]PIE: Server logged in
+[2024.05.31-10.26.33:652][735]PIE: Play in editor total start time 0.143 seconds.
+[2024.05.31-10.26.33:800][741]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.26.33:801][741]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.26.45:510][135]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.26.45:510][135]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.26.45:510][135]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.26.45:511][135]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.26.45:513][135]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.26.45:517][135]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.26.45:525][135]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.31-10.26.45:530][135]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 17
+[2024.05.31-10.26.45:530][135]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2024.05.31-10.26.45:532][135]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2024.05.31-10.26.45:534][135]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.26.45:549][135]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2024.05.31-10.26.45:678][136]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2024.05.31-10.26.47:940][347]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.26.47:952][347]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.27.17:766][515]LogHotReload: New module detected: UnrealEditor-projProblox-0020.dll
+[2024.05.31-10.27.18:438][518]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.31-10.27.18:479][518]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2024.05.31-10.27.18:512][518]LogClass: UClass PlayerCharacter Reload.
+[2024.05.31-10.27.18:564][518]LogClass: Could not find existing class PlayerCharacter in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.31-10.27.18:564][518]LogClass: Function CreateDetachHistory is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function Deselect is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function Detach is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function GetCore is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function GroupSelect is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function ManualSelectObject is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function MoveSelection is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function Redo is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function SelectObject is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function SetGameMode is new or belongs to a modified class.
+[2024.05.31-10.27.18:564][518]LogClass: Function Undo is new or belongs to a modified class.
+[2024.05.31-10.27.18:627][518]Re-instancing PlayerCharacter after reload.
+[2024.05.31-10.27.18:762][518]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.31-10.27.18:867][518]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.05.31-10.27.18:905][518]Display: HotReload took  0.5s.
+[2024.05.31-10.27.18:905][518]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 37 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 48 functions remapped, 1 scriptstruct remapped
+[2024.05.31-10.27.22:345][595]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.27.22:355][595]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.27.22:355][595]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:27:22)
+[2024.05.31-10.27.22:379][595]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.27.22:396][595]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016545s)
+[2024.05.31-10.27.22:396][595]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.016584s)
+[2024.05.31-10.27.22:440][595]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.05.31-10.27.22:442][595]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.27.22:442][595]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.27.22:442][595]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.27.22:442][595]LogPlayLevel: PIE: World Init took: (0.000724s)
+[2024.05.31-10.27.22:442][595]LogAudio: Display: Creating Audio Device:                 Id: 18, Scope: Unique, Realtime: True
+[2024.05.31-10.27.22:443][595]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.27.22:443][595]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.27.22:443][595]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.27.22:443][595]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.27.22:443][595]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.27.22:443][595]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.27.22:443][595]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.27.22:443][595]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.27.22:443][595]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.27.22:443][595]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.27.22:443][595]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.27.22:445][595]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.27.22:471][595]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.27.22:471][595]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.27.22:471][595]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.27.22:471][595]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.27.22:471][595]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=18
+[2024.05.31-10.27.22:471][595]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=18
+[2024.05.31-10.27.22:473][595]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=18
+[2024.05.31-10.27.22:473][595]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=18
+[2024.05.31-10.27.22:473][595]LogInit: FAudioDevice initialized with ID 18.
+[2024.05.31-10.27.22:473][595]LogAudio: Display: Audio Device (ID: 18) registered with world 'Sandbox1'.
+[2024.05.31-10.27.22:473][595]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 18
+[2024.05.31-10.27.22:476][595]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.27.22:476][595]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.27.22:477][595]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.27.22:479][595]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.27.22
+[2024.05.31-10.27.22:479][595]LogWorld: Bringing up level for play took: 0.003212
+[2024.05.31-10.27.22:481][595]LogOnline: OSS: Created online subsystem instance for: :Context_19
+[2024.05.31-10.27.22:482][595]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.27.22:482][595]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.27.22:483][595]PIE: Server logged in
+[2024.05.31-10.27.22:484][595]PIE: Play in editor total start time 0.13 seconds.
+[2024.05.31-10.27.22:642][602]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.27.22:642][602]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.27.30:770][573]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.27.30:770][573]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.27.30:770][573]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.27.30:771][573]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.27.30:773][573]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.27.30:777][573]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.27.30:787][573]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.31-10.27.30:792][573]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 18
+[2024.05.31-10.27.30:792][573]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2024.05.31-10.27.30:793][573]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2024.05.31-10.27.30:796][573]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.27.30:809][573]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2024.05.31-10.27.30:945][574]LogPlayLevel: Display: Destroying online subsystem :Context_19
+[2024.05.31-10.27.32:157][682]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.27.32:170][682]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.47.05:292][149]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.47.05:303][149]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.47.05:303][149]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:47:05)
+[2024.05.31-10.47.05:303][149]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.47.05:321][149]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017458s)
+[2024.05.31-10.47.05:321][149]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.017493s)
+[2024.05.31-10.47.05:334][149]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.05.31-10.47.05:339][149]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.47.05:339][149]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.47.05:339][149]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.47.05:340][149]LogPlayLevel: PIE: World Init took: (0.001063s)
+[2024.05.31-10.47.05:340][149]LogAudio: Display: Creating Audio Device:                 Id: 19, Scope: Unique, Realtime: True
+[2024.05.31-10.47.05:340][149]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.47.05:340][149]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.47.05:340][149]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.47.05:340][149]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.47.05:340][149]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.47.05:340][149]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.47.05:340][149]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.47.05:340][149]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.47.05:340][149]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.47.05:340][149]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.47.05:340][149]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.47.05:342][149]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.47.05:371][149]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.47.05:371][149]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.47.05:371][149]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.47.05:371][149]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.47.05:372][149]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=19
+[2024.05.31-10.47.05:372][149]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=19
+[2024.05.31-10.47.05:373][149]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=19
+[2024.05.31-10.47.05:373][149]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=19
+[2024.05.31-10.47.05:373][149]LogInit: FAudioDevice initialized with ID 19.
+[2024.05.31-10.47.05:373][149]LogAudio: Display: Audio Device (ID: 19) registered with world 'Sandbox1'.
+[2024.05.31-10.47.05:373][149]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 19
+[2024.05.31-10.47.05:376][149]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.47.05:377][149]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.47.05:377][149]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.47.05:379][149]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.47.05
+[2024.05.31-10.47.05:379][149]LogWorld: Bringing up level for play took: 0.003398
+[2024.05.31-10.47.05:381][149]LogOnline: OSS: Created online subsystem instance for: :Context_20
+[2024.05.31-10.47.05:382][149]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.47.05:382][149]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.47.05:384][149]PIE: Server logged in
+[2024.05.31-10.47.05:385][149]PIE: Play in editor total start time 0.082 seconds.
+[2024.05.31-10.47.05:587][164]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.47.05:587][164]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.47.15:526][352]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.47.15:527][352]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.47.15:527][352]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.47.15:527][352]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.47.15:530][352]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.47.15:533][352]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.47.15:544][352]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.47.15:545][352]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 19
+[2024.05.31-10.47.15:545][352]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2024.05.31-10.47.15:547][352]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2024.05.31-10.47.15:554][352]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2024.05.31-10.47.15:695][353]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2024.05.31-10.47.17:080][475]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.47.17:092][475]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.47.23:424][619]LogHotReload: New module detected: UnrealEditor-projProblox-0022.dll
+[2024.05.31-10.47.24:286][705]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.31-10.47.24:324][705]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.05.31-10.47.24:352][705]LogClass: UClass PlayerCharacter Reload.
+[2024.05.31-10.47.24:397][705]LogClass: Could not find existing class PlayerCharacter in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.31-10.47.24:397][705]LogClass: Function CreateDetachHistory is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function Deselect is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function Detach is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function GetCore is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function GroupSelect is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function ManualSelectObject is new or belongs to a modified class.
+[2024.05.31-10.47.24:397][705]LogClass: Function MoveSelection is new or belongs to a modified class.
+[2024.05.31-10.47.24:398][705]LogClass: Function Redo is new or belongs to a modified class.
+[2024.05.31-10.47.24:398][705]LogClass: Function SelectObject is new or belongs to a modified class.
+[2024.05.31-10.47.24:398][705]LogClass: Function SetGameMode is new or belongs to a modified class.
+[2024.05.31-10.47.24:398][705]LogClass: Function Undo is new or belongs to a modified class.
+[2024.05.31-10.47.24:478][705]Re-instancing PlayerCharacter after reload.
+[2024.05.31-10.47.24:616][705]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.31-10.47.24:723][705]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2024.05.31-10.47.24:760][705]Display: HotReload took  0.5s.
+[2024.05.31-10.47.24:760][705]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 37 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 48 functions remapped, 1 scriptstruct remapped
+[2024.05.31-10.47.25:600][757]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.47.25:611][757]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.47.25:611][757]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:47:25)
+[2024.05.31-10.47.25:646][757]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.47.25:662][757]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016206s)
+[2024.05.31-10.47.25:662][757]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.016244s)
+[2024.05.31-10.47.25:709][757]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2024.05.31-10.47.25:710][757]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.47.25:710][757]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.47.25:711][757]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.47.25:711][757]LogPlayLevel: PIE: World Init took: (0.000718s)
+[2024.05.31-10.47.25:711][757]LogAudio: Display: Creating Audio Device:                 Id: 20, Scope: Unique, Realtime: True
+[2024.05.31-10.47.25:711][757]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.47.25:711][757]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.47.25:711][757]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.47.25:711][757]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.47.25:711][757]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.47.25:711][757]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.47.25:711][757]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.47.25:711][757]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.47.25:711][757]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.47.25:711][757]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.47.25:711][757]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.47.25:713][757]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.47.25:739][757]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.47.25:739][757]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.47.25:739][757]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.47.25:739][757]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.47.25:740][757]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=20
+[2024.05.31-10.47.25:740][757]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=20
+[2024.05.31-10.47.25:741][757]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=20
+[2024.05.31-10.47.25:741][757]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=20
+[2024.05.31-10.47.25:741][757]LogInit: FAudioDevice initialized with ID 20.
+[2024.05.31-10.47.25:741][757]LogAudio: Display: Audio Device (ID: 20) registered with world 'Sandbox1'.
+[2024.05.31-10.47.25:741][757]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 20
+[2024.05.31-10.47.25:744][757]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.47.25:745][757]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.47.25:745][757]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.47.25:747][757]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.47.25
+[2024.05.31-10.47.25:748][757]LogWorld: Bringing up level for play took: 0.003652
+[2024.05.31-10.47.25:749][757]LogOnline: OSS: Created online subsystem instance for: :Context_21
+[2024.05.31-10.47.25:751][757]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.47.25:751][757]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.47.25:752][757]PIE: Server logged in
+[2024.05.31-10.47.25:753][757]PIE: Play in editor total start time 0.143 seconds.
+[2024.05.31-10.47.25:894][763]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onChangeAttachments'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Change Attachments Graph:  EventGraph Function:  Execute Ubergraph WBP Timeline Blueprint:  WBP_Timeline
+[2024.05.31-10.47.25:894][763]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.31-10.47.25:894][763]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.31-10.47.25:894][763]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On New Wave Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.05.31-10.48.32:617][754]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.48.32:617][754]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.48.32:617][754]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.48.32:618][754]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.48.32:621][754]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.48.32:624][754]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.48.32:633][754]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.31-10.48.32:634][754]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 20
+[2024.05.31-10.48.32:634][754]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2024.05.31-10.48.32:635][754]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2024.05.31-10.48.32:639][754]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.48.32:642][754]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.05.31-10.48.32:768][755]LogPlayLevel: Display: Destroying online subsystem :Context_21
+[2024.05.31-10.48.33:956][851]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.48.33:969][851]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.48.56:648][986]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:25.589 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 13299 files in 15448 folders with total size 1297 MiB.
+[2024.05.31-10.50.53:961][337]LogHotReload: New module detected: UnrealEditor-projProblox-0023.dll
+[2024.05.31-10.50.54:635][340]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.31-10.50.54:673][340]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2024.05.31-10.50.54:705][340]LogClass: UClass PlayerCharacter Reload.
+[2024.05.31-10.50.54:768][340]LogClass: Could not find existing class PlayerCharacter in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.31-10.50.54:768][340]LogClass: Function CreateDetachHistory is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function Deselect is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function Detach is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function GetCore is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function GroupSelect is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function ManualSelectObject is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function MoveSelection is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function Redo is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function SelectObject is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function SetGameMode is new or belongs to a modified class.
+[2024.05.31-10.50.54:769][340]LogClass: Function Undo is new or belongs to a modified class.
+[2024.05.31-10.50.54:834][340]Re-instancing PlayerCharacter after reload.
+[2024.05.31-10.50.54:969][340]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.31-10.50.55:083][340]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2024.05.31-10.50.55:121][340]Display: HotReload took  0.5s.
+[2024.05.31-10.50.55:121][340]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 37 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 48 functions remapped, 1 scriptstruct remapped
+[2024.05.31-10.50.56:028][392]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.50.56:039][392]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.50.56:039][392]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:50:56)
+[2024.05.31-10.50.56:039][392]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.50.56:057][392]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017481s)
+[2024.05.31-10.50.56:057][392]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.017511s)
+[2024.05.31-10.50.56:101][392]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.05.31-10.50.56:103][392]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.50.56:103][392]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.50.56:104][392]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.50.56:104][392]LogPlayLevel: PIE: World Init took: (0.000999s)
+[2024.05.31-10.50.56:104][392]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2024.05.31-10.50.56:104][392]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.50.56:104][392]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.50.56:104][392]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.50.56:104][392]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.50.56:104][392]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.50.56:104][392]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.50.56:104][392]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.50.56:104][392]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.50.56:105][392]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.50.56:105][392]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.50.56:105][392]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.50.56:106][392]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.50.56:136][392]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.50.56:137][392]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.50.56:137][392]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.50.56:137][392]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.50.56:137][392]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=21
+[2024.05.31-10.50.56:137][392]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=21
+[2024.05.31-10.50.56:139][392]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=21
+[2024.05.31-10.50.56:139][392]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=21
+[2024.05.31-10.50.56:139][392]LogInit: FAudioDevice initialized with ID 21.
+[2024.05.31-10.50.56:139][392]LogAudio: Display: Audio Device (ID: 21) registered with world 'Sandbox1'.
+[2024.05.31-10.50.56:139][392]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 21
+[2024.05.31-10.50.56:142][392]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.50.56:143][392]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.50.56:143][392]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.50.56:145][392]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.50.56
+[2024.05.31-10.50.56:145][392]LogWorld: Bringing up level for play took: 0.003270
+[2024.05.31-10.50.56:147][392]LogOnline: OSS: Created online subsystem instance for: :Context_22
+[2024.05.31-10.50.56:148][392]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.50.56:148][392]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.50.56:150][392]PIE: Server logged in
+[2024.05.31-10.50.56:151][392]PIE: Play in editor total start time 0.112 seconds.
+[2024.05.31-10.50.56:329][402]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.50.56:329][402]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.51.07:107][677]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.51.07:107][677]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.51.07:108][677]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.51.07:109][677]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.51.07:111][677]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.51.07:114][677]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.51.07:124][677]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.51.07:125][677]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 21
+[2024.05.31-10.51.07:125][677]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.05.31-10.51.07:126][677]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.05.31-10.51.07:133][677]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
+[2024.05.31-10.51.07:263][678]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2024.05.31-10.51.08:921][832]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.51.08:933][832]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.51.46:565][412]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.51.46:575][412]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.51.46:575][412]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:51:46)
+[2024.05.31-10.51.46:597][412]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.51.46:614][412]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016661s)
+[2024.05.31-10.51.46:614][412]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.016697s)
+[2024.05.31-10.51.46:626][412]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.05.31-10.51.46:629][412]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.51.46:629][412]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.51.46:629][412]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.51.46:630][412]LogPlayLevel: PIE: World Init took: (0.000723s)
+[2024.05.31-10.51.46:630][412]LogAudio: Display: Creating Audio Device:                 Id: 22, Scope: Unique, Realtime: True
+[2024.05.31-10.51.46:630][412]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.51.46:630][412]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.51.46:630][412]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.51.46:630][412]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.51.46:630][412]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.51.46:630][412]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.51.46:630][412]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.51.46:630][412]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.51.46:630][412]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.51.46:630][412]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.51.46:630][412]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.51.46:632][412]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.51.46:652][412]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.51.46:653][412]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.51.46:653][412]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.51.46:653][412]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.51.46:653][412]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=22
+[2024.05.31-10.51.46:653][412]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=22
+[2024.05.31-10.51.46:654][412]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=22
+[2024.05.31-10.51.46:654][412]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=22
+[2024.05.31-10.51.46:654][412]LogInit: FAudioDevice initialized with ID 22.
+[2024.05.31-10.51.46:654][412]LogAudio: Display: Audio Device (ID: 22) registered with world 'Sandbox1'.
+[2024.05.31-10.51.46:654][412]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 22
+[2024.05.31-10.51.46:657][412]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.51.46:657][412]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.51.46:657][412]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.51.46:660][412]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.51.46
+[2024.05.31-10.51.46:661][412]LogWorld: Bringing up level for play took: 0.003586
+[2024.05.31-10.51.46:662][412]LogOnline: OSS: Created online subsystem instance for: :Context_23
+[2024.05.31-10.51.46:664][412]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.51.46:664][412]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.51.46:665][412]PIE: Server logged in
+[2024.05.31-10.51.46:665][412]PIE: Play in editor total start time 0.091 seconds.
+[2024.05.31-10.51.46:865][424]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.51.46:865][424]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.51.47:488][490]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.51.47:488][490]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.51.47:488][490]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.51.47:489][490]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.51.47:491][490]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.51.47:495][490]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.51.47:505][490]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.51.47:506][490]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 22
+[2024.05.31-10.51.47:506][490]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2024.05.31-10.51.47:508][490]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2024.05.31-10.51.47:514][490]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.05.31-10.51.47:645][491]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2024.05.31-10.51.51:338][731]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.51.51:343][731]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.51.52:696][886]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.51.52:706][886]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.51.52:706][886]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:51:52)
+[2024.05.31-10.51.52:706][886]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.51.52:722][886]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016489s)
+[2024.05.31-10.51.52:723][886]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.016517s)
+[2024.05.31-10.51.52:734][886]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.05.31-10.51.52:736][886]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.51.52:736][886]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.51.52:736][886]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.51.52:737][886]LogPlayLevel: PIE: World Init took: (0.000842s)
+[2024.05.31-10.51.52:737][886]LogAudio: Display: Creating Audio Device:                 Id: 23, Scope: Unique, Realtime: True
+[2024.05.31-10.51.52:737][886]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.51.52:737][886]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.51.52:737][886]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.51.52:737][886]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.51.52:737][886]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.51.52:737][886]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.51.52:737][886]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.51.52:737][886]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.51.52:737][886]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.51.52:737][886]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.51.52:737][886]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.51.52:739][886]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.51.52:764][886]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.51.52:764][886]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.51.52:764][886]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.51.52:765][886]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.51.52:765][886]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=23
+[2024.05.31-10.51.52:765][886]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=23
+[2024.05.31-10.51.52:767][886]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=23
+[2024.05.31-10.51.52:767][886]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=23
+[2024.05.31-10.51.52:767][886]LogInit: FAudioDevice initialized with ID 23.
+[2024.05.31-10.51.52:767][886]LogAudio: Display: Audio Device (ID: 23) registered with world 'Sandbox1'.
+[2024.05.31-10.51.52:767][886]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 23
+[2024.05.31-10.51.52:770][886]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.51.52:771][886]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.51.52:771][886]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.51.52:773][886]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.51.52
+[2024.05.31-10.51.52:773][886]LogWorld: Bringing up level for play took: 0.003267
+[2024.05.31-10.51.52:775][886]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2024.05.31-10.51.52:776][886]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.51.52:776][886]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.51.52:778][886]PIE: Server logged in
+[2024.05.31-10.51.52:779][886]PIE: Play in editor total start time 0.073 seconds.
+[2024.05.31-10.51.52:995][900]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.51.52:995][900]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.51.59:228][641]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.51.59:228][641]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.51.59:228][641]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.51.59:229][641]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.51.59:231][641]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.51.59:235][641]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.51.59:242][641]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.31-10.51.59:244][641]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 23
+[2024.05.31-10.51.59:244][641]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2024.05.31-10.51.59:245][641]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2024.05.31-10.51.59:248][641]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.51.59:251][641]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.05.31-10.51.59:388][642]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2024.05.31-10.52.11:429][763]LogHotReload: New module detected: UnrealEditor-projProblox-0025.dll
+[2024.05.31-10.52.12:100][766]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.31-10.52.12:141][766]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.05.31-10.52.12:175][766]LogClass: UClass PlayerCharacter Reload.
+[2024.05.31-10.52.12:216][766]LogClass: Could not find existing class PlayerCharacter in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.31-10.52.12:216][766]LogClass: Function CreateDetachHistory is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function Deselect is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function Detach is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function GetCore is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function GroupSelect is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function ManualSelectObject is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function MoveSelection is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function Redo is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function SelectObject is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function SetGameMode is new or belongs to a modified class.
+[2024.05.31-10.52.12:216][766]LogClass: Function Undo is new or belongs to a modified class.
+[2024.05.31-10.52.12:281][766]Re-instancing PlayerCharacter after reload.
+[2024.05.31-10.52.12:417][766]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.31-10.52.12:528][766]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.05.31-10.52.12:565][766]Display: HotReload took  0.5s.
+[2024.05.31-10.52.12:565][766]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 37 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 48 functions remapped, 1 scriptstruct remapped
+[2024.05.31-10.52.13:379][806]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.52.13:390][806]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.52.13:390][806]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:52:13)
+[2024.05.31-10.52.13:418][806]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.52.13:434][806]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016720s)
+[2024.05.31-10.52.13:434][806]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.016752s)
+[2024.05.31-10.52.13:481][806]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2024.05.31-10.52.13:482][806]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.52.13:482][806]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.52.13:483][806]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.52.13:483][806]LogPlayLevel: PIE: World Init took: (0.000713s)
+[2024.05.31-10.52.13:483][806]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2024.05.31-10.52.13:483][806]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.52.13:483][806]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.52.13:483][806]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.52.13:483][806]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.52.13:483][806]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.52.13:483][806]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.52.13:483][806]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.52.13:483][806]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.52.13:483][806]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.52.13:483][806]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.52.13:483][806]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.52.13:485][806]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.52.13:510][806]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.52.13:511][806]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.52.13:511][806]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.52.13:511][806]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.52.13:512][806]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=24
+[2024.05.31-10.52.13:512][806]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=24
+[2024.05.31-10.52.13:513][806]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=24
+[2024.05.31-10.52.13:513][806]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=24
+[2024.05.31-10.52.13:513][806]LogInit: FAudioDevice initialized with ID 24.
+[2024.05.31-10.52.13:513][806]LogAudio: Display: Audio Device (ID: 24) registered with world 'Sandbox1'.
+[2024.05.31-10.52.13:513][806]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 24
+[2024.05.31-10.52.13:515][806]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.52.13:517][806]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.52.13:517][806]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.52.13:519][806]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.52.13
+[2024.05.31-10.52.13:520][806]LogWorld: Bringing up level for play took: 0.003933
+[2024.05.31-10.52.13:521][806]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2024.05.31-10.52.13:523][806]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.52.13:523][806]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.52.13:524][806]PIE: Server logged in
+[2024.05.31-10.52.13:525][806]PIE: Play in editor total start time 0.136 seconds.
+[2024.05.31-10.52.13:680][813]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.52.13:680][813]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.52.20:828][636]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.52.20:828][636]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.52.20:828][636]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.52.20:829][636]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.52.20:832][636]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.52.20:835][636]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.52.20:845][636]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.05.31-10.52.20:846][636]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 24
+[2024.05.31-10.52.20:846][636]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.05.31-10.52.20:847][636]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.05.31-10.52.20:850][636]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.52.20:868][636]LogUObjectHash: Compacting FUObjectHashTables data took   1.95ms
+[2024.05.31-10.52.20:982][637]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2024.05.31-10.52.23:989][937]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.52.24:001][937]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.54.01:263][336]LogHotReload: New module detected: UnrealEditor-projProblox-0027.dll
+[2024.05.31-10.54.01:936][339]LogHotReload: Starting Hot-Reload from IDE
+[2024.05.31-10.54.01:978][339]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.05.31-10.54.02:011][339]LogClass: UClass PlayerCharacter Reload.
+[2024.05.31-10.54.02:066][339]LogClass: Could not find existing class PlayerCharacter in package /Script/projProblox for reload, assuming new or modified class
+[2024.05.31-10.54.02:066][339]LogClass: Function CreateDetachHistory is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function Deselect is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function Detach is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function GetCore is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function GroupSelect is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function ManualSelectObject is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function MoveSelection is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function Redo is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function SelectObject is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function SetGameMode is new or belongs to a modified class.
+[2024.05.31-10.54.02:066][339]LogClass: Function Undo is new or belongs to a modified class.
+[2024.05.31-10.54.02:131][339]Re-instancing PlayerCharacter after reload.
+[2024.05.31-10.54.02:267][339]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.05.31-10.54.02:375][339]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2024.05.31-10.54.02:414][339]Display: HotReload took  0.5s.
+[2024.05.31-10.54.02:414][339]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 37 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 48 functions remapped, 1 scriptstruct remapped
+[2024.05.31-10.54.05:131][415]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.05.31-10.54.05:143][415]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.05.31-10.54.05:143][415]PIE: New page: PIE session: Sandbox1 (31 May 2024, 12:54:05)
+[2024.05.31-10.54.05:143][415]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.54.05:161][415]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017890s)
+[2024.05.31-10.54.05:161][415]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.017924s)
+[2024.05.31-10.54.05:208][415]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2024.05.31-10.54.05:210][415]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.05.31-10.54.05:210][415]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.05.31-10.54.05:210][415]LogAIModule: Creating AISystem for world Sandbox1
+[2024.05.31-10.54.05:211][415]LogPlayLevel: PIE: World Init took: (0.001199s)
+[2024.05.31-10.54.05:211][415]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2024.05.31-10.54.05:211][415]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.05.31-10.54.05:211][415]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.05.31-10.54.05:211][415]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.05.31-10.54.05:211][415]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.05.31-10.54.05:211][415]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.05.31-10.54.05:211][415]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.05.31-10.54.05:211][415]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.05.31-10.54.05:211][415]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.05.31-10.54.05:211][415]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.05.31-10.54.05:211][415]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.05.31-10.54.05:211][415]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.05.31-10.54.05:214][415]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.05.31-10.54.05:242][415]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.05.31-10.54.05:243][415]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.05.31-10.54.05:243][415]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.05.31-10.54.05:243][415]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.05.31-10.54.05:243][415]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=25
+[2024.05.31-10.54.05:243][415]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=25
+[2024.05.31-10.54.05:245][415]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=25
+[2024.05.31-10.54.05:245][415]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=25
+[2024.05.31-10.54.05:245][415]LogInit: FAudioDevice initialized with ID 25.
+[2024.05.31-10.54.05:245][415]LogAudio: Display: Audio Device (ID: 25) registered with world 'Sandbox1'.
+[2024.05.31-10.54.05:245][415]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 25
+[2024.05.31-10.54.05:247][415]LogLoad: Game class is 'BP_Mode_Creative_C'
+[2024.05.31-10.54.05:248][415]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.05.31-10.54.05:248][415]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_2.Mouse Detector' 
+[2024.05.31-10.54.05:252][415]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.05.31-11.54.05
+[2024.05.31-10.54.05:252][415]LogWorld: Bringing up level for play took: 0.004620
+[2024.05.31-10.54.05:254][415]LogOnline: OSS: Created online subsystem instance for: :Context_26
+[2024.05.31-10.54.05:255][415]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.54.05:255][415]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.05.31-10.54.05:257][415]PIE: Server logged in
+[2024.05.31-10.54.05:258][415]PIE: Play in editor total start time 0.116 seconds.
+[2024.05.31-10.54.05:426][423]LogBlueprintUserMessages: [WBP_Timeline] Couldnt cast to core (TImlien)
+[2024.05.31-10.54.05:426][423]LogBlueprintUserMessages: [WBP_HUD_C_0] Couldnt cast to core (HUD)
+[2024.05.31-10.54.36:139][101]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.54.36:139][101]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.05.31-10.54.36:139][101]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.05.31-10.54.36:140][101]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.54.36:142][101]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.05.31-10.54.36:146][101]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.05.31-10.54.36:158][101]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.05.31-10.54.36:158][101]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 25
+[2024.05.31-10.54.36:158][101]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.05.31-10.54.36:159][101]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.05.31-10.54.36:183][101]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.05.31-10.54.36:312][102]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2024.05.31-10.54.37:651][222]LogSlate: Window 'Message Log' being destroyed
+[2024.05.31-10.54.37:663][222]LogSlate: Window 'Message Log' being destroyed

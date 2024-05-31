@@ -30,6 +30,10 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	UActionHistory* history;
 
+	FTask lastUndo;
+	FTask lastRedo;
+	bool undid;
+
 	// The transform of the selected object (should be set when picking up an object)
 	FTransform selectedTransform;
 
@@ -97,7 +101,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void ManualSelectObject(APickupableMaster* obj);
-	
+
 private:
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Picking up")

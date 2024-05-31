@@ -171,7 +171,9 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\cells\\cellvariations.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\collector.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\gamemodes\\modes.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\balloon.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\bouncespring.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\connectors\\cubeconnector.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\connectors\\cuboidconnector.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\connectors\\wedgeconnector.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\cubecore.cpp",
@@ -184,13 +186,15 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\hoverer.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet\\magnet.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet\\magpole.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\pickupablemaster.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\piston.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\propeller.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\thruster.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\treads.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\wheel.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\wheels.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.cpp",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\undoredo\\actionhistory.cpp"
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\projproblox.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
