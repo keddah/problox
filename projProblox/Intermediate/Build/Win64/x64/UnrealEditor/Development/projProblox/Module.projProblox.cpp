@@ -60,6 +60,5 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Treads.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Wheel.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Wheels.cpp"
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/PlayerCharacter.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/projProblox.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/UndoRedo/ActionHistory.cpp"

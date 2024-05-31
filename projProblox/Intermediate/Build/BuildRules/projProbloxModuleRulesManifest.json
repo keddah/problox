@@ -1,6 +1,14 @@
 {
 	"SourceFiles": [
 		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Source\\projProblox\\projProblox.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RD\\RD.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RiderBlueprint\\RiderBlueprint.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RiderDebuggerSupport\\RiderDebuggerSupport.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RiderGameControl\\RiderGameControl.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RiderLC\\RiderLC.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RiderLink\\RiderLink.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RiderLogging\\RiderLogging.Build.cs",
+		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Plugins\\Developer\\RiderLink\\Source\\RiderShaderInfo\\RiderShaderInfo.Build.cs",
 		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Source\\projProblox.Target.cs",
 		"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Source\\projProbloxEditor.Target.cs"
 	],

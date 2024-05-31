@@ -65,7 +65,6 @@ void APlayerCharacter::Undo()
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 
-	Print("Number of changed things: " + FString::FromInt(changedObjs.Num()), 5)
 	Print(task.taskName.ToString(), 5)
 	for (auto& obj : changedObjs)
 	{
