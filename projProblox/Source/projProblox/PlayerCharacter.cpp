@@ -71,7 +71,6 @@ void APlayerCharacter::Undo()
 		// If the task.object wasn't set... the task struct is invalid.
 		if(!IsValid(obj))
 		{
-			Print("There aren't any tasks to undo...", 2);
 			history->PrintTaskIndex();
 			continue;
 		}
@@ -85,7 +84,7 @@ void APlayerCharacter::Undo()
 			// Undo the attach operation
 			case EOperations::Attach:
 				obj->Detach(true);
-				// obj->UseSavedTransform();
+				obj->UseSavedTransform();
 				break;
 			
 			// Undo the detach operation
@@ -139,7 +138,7 @@ void APlayerCharacter::Redo()
 			// Redo the detach operation
 		case EOperations::Detach:
 			obj->Detach(true);
-			// obj->UseSavedTransform();
+			obj->UseSavedTransform();
 			break;
 			
 			// Redo the move operation

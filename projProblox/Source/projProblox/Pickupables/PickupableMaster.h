@@ -137,7 +137,10 @@ protected:
 	bool wasDetached;
 
 	// The relative transform that should be saved whenever attaching...
-	FTransform savedTransform;
+	FTransform savedAttachTransform;
+	
+	// The world transform that should be saved whenever an object is selected...
+	FTransform savedDetachTransform;
 	
 	APickupableMaster* previousObj;
 
@@ -250,9 +253,17 @@ public:
 	void SetSavedTransform();
 	void UseSavedTransform()
 	{
-		SetActorRelativeLocation(savedTransform.GetLocation());
-		SetActorRelativeRotation(savedTransform.Rotator());
-	}
+		if(parentCore)
+		{
+			SetActorRelativeLocation(savedAttachTransform.GetLocation());
+			SetActorRelativeRotation(savedAttachTransform.Rotator());
+			return;
+		}
+
+		SetActorLocation(savedDetachTransform.GetLocation());
+		SetActorRotation(savedDetachTransform.Rotator());
+		PrintVector(savedDetachTransform.GetLocation(), 5)
+}
 
 	
 	/////////////// Ability ///////////////

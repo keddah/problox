@@ -227,6 +227,8 @@ EOperations APickupableMaster::SetSelected(const bool value)
 
 	if(selected)
 	{
+		SetSavedTransform();
+		
 		wasDetached = isAttached;
 		Detach(false);
 		
@@ -315,8 +317,9 @@ void APickupableMaster::Detach(const bool push)
 
 void APickupableMaster::SetSavedTransform()
 {
-	if(parentCore)
-	savedTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
+	Print("Saving transform...", 3)
+	if(parentCore)	savedAttachTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
+	else savedDetachTransform = GetActorTransform();
 }
 
 

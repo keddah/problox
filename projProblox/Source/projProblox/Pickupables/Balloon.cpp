@@ -68,6 +68,8 @@ EOperations ABalloon::SetSelected(const bool value)
 
 	if(selected)
 	{
+		SetSavedTransform();
+		
 		wasDetached = isAttached;
 		Detach(false);
 		
@@ -150,8 +152,8 @@ void ABalloon::Reattach()
 	}
 	
 	Attach();
-	SetActorRelativeLocation(savedTransform.GetLocation());
-	SetActorRelativeRotation(savedTransform.Rotator());
+	SetActorRelativeLocation(savedAttachTransform.GetLocation());
+	SetActorRelativeRotation(savedAttachTransform.Rotator());
 	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;

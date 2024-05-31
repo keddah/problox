@@ -250,8 +250,8 @@ void AWheels::Reattach()
 	}
 
 	Attach();
-	SetActorRelativeLocation(savedTransform.GetLocation());
-	SetActorRelativeRotation(savedTransform.Rotator());
+	SetActorRelativeLocation(savedAttachTransform.GetLocation());
+	SetActorRelativeRotation(savedAttachTransform.Rotator());
 
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;

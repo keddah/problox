@@ -228,6 +228,8 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	// Detach from its components if selected
 	if(selected)
 	{
+		SetSavedTransform();
+		
 		wasDetached = isAttached;
 		canPlace = true;
 		Detach(false);
@@ -300,8 +302,8 @@ void ACubeConnector::Reattach()
 	
 	AttachToActor(parentCore, attachRules, removedSocket);
 	soundPlayer->PlayAttach();
-	SetActorRelativeLocation(savedTransform.GetLocation());
-	SetActorRelativeRotation(savedTransform.Rotator());
+	SetActorRelativeLocation(savedAttachTransform.GetLocation());
+	SetActorRelativeRotation(savedAttachTransform.Rotator());
 	
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
