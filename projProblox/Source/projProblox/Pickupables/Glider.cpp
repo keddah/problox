@@ -16,6 +16,8 @@ AGlider::AGlider()
 {
 	snapRot = false;
 	needsTimer = false;
+
+	uiName = "Glider";
 }
 
 void AGlider::Ability(const float deltaTime)

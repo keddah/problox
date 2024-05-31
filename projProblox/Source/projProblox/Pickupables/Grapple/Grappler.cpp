@@ -27,6 +27,8 @@ AGrappler::AGrappler()
 
 	grappleLine->NumSides = 4;
 	grappleLine->NumSegments = 128;
+
+	uiName = "Grapple";
 }
 
 void AGrappler::Ability(const float deltaTime)

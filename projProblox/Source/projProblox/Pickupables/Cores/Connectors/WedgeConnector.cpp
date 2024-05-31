@@ -28,6 +28,8 @@ AWedgeConnector::AWedgeConnector()
 	thingHomer->SetGenerateOverlapEvents(false);
 	thingHomer->SetBoxExtent({});
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	uiName = "Wedge";
 }
 
 void AWedgeConnector::BeginPlay()

@@ -16,6 +16,8 @@ APiston::APiston()
 	flatHead = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Push Pad"));
 	flatHead->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	flatHead->SetUseCCD(true);
+
+	uiName = "Piston";
 }
 
 void APiston::BeginPlay()

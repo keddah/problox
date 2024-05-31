@@ -23,6 +23,7 @@ ABalloon::ABalloon()
 	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
 
 	active = true;
+	uiName = "Balloon";
 }
 
 void ABalloon::Tick(float DeltaSeconds)

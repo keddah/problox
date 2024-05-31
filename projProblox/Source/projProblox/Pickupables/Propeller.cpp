@@ -27,6 +27,8 @@ APropeller::APropeller()
 	
 	// Don't allow cells to be collected from this collider.
 	Tags.Add("NO");
+
+	uiName = "Propeller";
 }
 
 

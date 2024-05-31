@@ -15,9 +15,11 @@ ABounceSpring::ABounceSpring()
 	end->SetSimulatePhysics(false);
 	end->SetCollisionResponseToAllChannels(ECR_Ignore);
 
-	needsTimer = false;
 
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
+	
+	needsTimer = false;
+	uiName = "Spring";
 }
 
 void ABounceSpring::Ability(float deltaTime)

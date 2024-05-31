@@ -22,6 +22,8 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 {
 	GENERATED_BODY()
 
+	AMagnet() { uiName = "Magnet"; }
+	
 	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* positiveMat;
 	

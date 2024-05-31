@@ -33,8 +33,6 @@ public: \
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_23_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMagnet(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMagnet(AMagnet&&); \

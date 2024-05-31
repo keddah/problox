@@ -16,6 +16,8 @@ AThruster::AThruster()
 
 	snapRot = false;
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_thruster.MS_thruster'"));
+
+	uiName = "Thruster";
 }
 
 void AThruster::BeginPlay()

@@ -38,6 +38,8 @@ ACubeConnector::ACubeConnector()
 	thingHomer->SetGenerateOverlapEvents(false);
 	thingHomer->SetBoxExtent({});
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	uiName = "Cube";
 }
 
 void ACubeConnector::BeginPlay()

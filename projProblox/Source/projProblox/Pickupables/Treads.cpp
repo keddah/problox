@@ -26,6 +26,8 @@ ATreads::ATreads()
 	snapRot = false;
 	rotOffset = {90,0,180};
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
+
+	uiName = "Tank Tracks";
 }
 
 float ATreads::GetAttachOffset(const APickupableMaster& attachee)
