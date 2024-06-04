@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\github\\fmp\\problox\\projproblox\\intermediate\\build\\win64\\unrealgame\\inc\\projproblox\\uht\\projproblox.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\github\\fmp\\problox\\projproblox\\intermediate\\build\\win64\\x64\\projproblox\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\github\\fmp\\problox\\projproblox\\intermediate\\build\\win64\\x64\\unrealgame\\development\\projproblox\\definitions.projproblox.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
