@@ -280,7 +280,7 @@ public:
 
 		return out;
 	}
-	TArray<APickupableMaster*> GetAttachedObjects() const
+	TArray<APickupableMaster*> GetAttachedObjs() const
 	{
 		TArray<APickupableMaster*> out;
 		GetDescendents(this, out);

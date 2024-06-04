@@ -347,7 +347,7 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	isAttached = true;
 
 	onChangeAttachments.Broadcast();
-	previousAttachments = GetAttachedObjects();
+	previousAttachments = GetAttachedObjs();
 }
 
 void ACubeCore::RemoveAttachment(const FName& socket)
@@ -364,7 +364,7 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	mesh->SetEnableGravity(true);
 
 	onChangeAttachments.Broadcast();
-	previousAttachments = GetAttachedObjects();
+	previousAttachments = GetAttachedObjs();
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
@@ -375,7 +375,7 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	mesh->SetEnableGravity(true);
 
 	onChangeAttachments.Broadcast();
-	previousAttachments = GetAttachedObjects();
+	previousAttachments = GetAttachedObjs();
 }
 
 TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
@@ -429,7 +429,7 @@ float ACubeCore::GetMass() const
 
 void ACubeCore::RevertAttachments()
 {
-	TArray<APickupableMaster*> currentAttachments = GetAttachedObjects();
+	TArray<APickupableMaster*> currentAttachments = GetAttachedObjs();
 
 	// Removes all the attachments that weren't there before the undo/redo
 	for (auto& obj : currentAttachments)

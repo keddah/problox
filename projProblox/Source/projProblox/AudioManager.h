@@ -28,7 +28,7 @@ private:
 	void LoadSoundFiles();
 	
 public:
-	void Attach(UPrimitiveComponent* parent) const { player->AttachToComponent(parent, FAttachmentTransformRules::SnapToTargetNotIncludingScale); }
+	void Attach(UPrimitiveComponent* parent) const { player->SetupAttachment(parent); }
 
 	// Would mean that the sound effect is the last element (since the universal sounds are all created in the constructor).
 	// Call in the pickupable's constructor...
