@@ -272,8 +272,8 @@ public:
 
 
 	/////////////// Getters ///////////////
-	UFUNCTION(BlueprintCallable, Category = "Socket")
-	TArray<AActor*> GetAttachedObjActors()
+	// UFUNCTION(BlueprintCallable, Category = "Socket")
+	TArray<AActor*> GetAttachedActorObjects() const
 	{
 		TArray<AActor*> out;
 		GetDescendentsActors(this, out);

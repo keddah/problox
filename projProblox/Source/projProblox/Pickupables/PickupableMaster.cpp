@@ -36,7 +36,7 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetupAttachment(mesh);
 	silhouette->SetHiddenInGame(true);
 	
-	silhouette->SetMassOverrideInKg("", 0);
+	if(GEngine) silhouette->SetMassOverrideInKg("", 0);
 	silhouette->SetSimulatePhysics(false);
 	silhouette->UnWeldFromParent();
 	silhouette->SetEnableGravity(false);

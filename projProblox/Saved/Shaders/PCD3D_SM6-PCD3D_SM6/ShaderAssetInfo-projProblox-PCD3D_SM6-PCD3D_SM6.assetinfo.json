@@ -258,6 +258,8 @@
 				"/Game/Megascans/Surfaces/Stucco_Wall_ukmobfecw/lambert1",
 				"/Game/Models/Hassan/PM3D_Sphere3D2",
 				"/Game/Models/Hassan/PolySphere1",
+				"/Game/Models/HassanModels/cell/PM3D_Sphere3D2",
+				"/Game/Models/HassanModels/cell/PolySphere1",
 				"/Game/Models/OutsourcedModels/Helice",
 				"/Game/Models/OutsourcedModels/Pottery_Bowl_Mat"
 			]
@@ -733,8 +735,8 @@
 		{
 			"ShaderMapHash": "510D13A8A30E91EC3D8162D786A2947CA4C9FB72",
 			"Assets": [
-				"/Game/Models/OutsourcedArt/EllaModels/lambert1",
-				"/Game/Models/OutsourcedArt/HassanModels/lambert1"
+				"/Game/Models/EllaModels/lambert1",
+				"/Game/Models/HassanModels/lambert1"
 			]
 		},
 		{

@@ -27,7 +27,7 @@ void ACell::BeginPlay()
 	Super::BeginPlay();
 
 	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
-	core->onRangeExceeded.AddDynamic(this, &ACell::DeactivateHoming);
+	if(core) core->onRangeExceeded.AddDynamic(this, &ACell::DeactivateHoming);
 }
 
 // Called every frame

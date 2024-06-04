@@ -63,5 +63,5 @@ void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimiti
 	body->SetPhysicsAngularVelocityInDegrees({0,0,0});
 	
 	stuck = true;
-	body->SetMassOverrideInKg("", 100000);
+	if(GEngine) body->SetMassOverrideInKg("", 100000);
 }

@@ -74,6 +74,7 @@ void ACollector::Tick(float DeltaTime)
 
 void ACollector::CalculateCellCount()
 {
+	if(!player) return;
 	if(player->GetGameMode() == EGameMode::Story) ResetCells();
 	
 	TArray<AActor*> countArr;

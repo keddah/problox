@@ -19,7 +19,7 @@
 AWheel::AWheel()
 {
 	pivot = CreateDefaultSubobject<USceneComponent>("Center");
-	pivot->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
+	pivot->SetupAttachment(mesh);
 	pivot->AddRelativeLocation({0,0,50});
 	
 	wheelAxel = CreateDefaultSubobject<UPhysicsConstraintComponent>("Wheel Axel");

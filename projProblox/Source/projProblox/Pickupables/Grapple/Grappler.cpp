@@ -15,10 +15,10 @@
 AGrappler::AGrappler()
 {
 	grappleSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Location"));
-	grappleSpawn->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
+	grappleSpawn->SetupAttachment(mesh);
 
 	grappleLine = CreateDefaultSubobject<UCableComponent>(TEXT("Line"));
-	grappleLine->AttachToComponent(grappleSpawn, FAttachmentTransformRules::KeepRelativeTransform);
+	grappleLine->SetupAttachment(mesh);
 	grappleLine->CableWidth = 20;
 	grappleLine->CableLength = 0;
 	grappleLine->SolverIterations = 100;

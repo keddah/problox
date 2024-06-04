@@ -213,7 +213,7 @@ void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
 	// Add the things that are connected to the core/connector to the things to ignore
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
-		exclusions.Append(obj->GetAttachedObjActors());
+		exclusions.Append(obj->GetAttachedActorObjects());
 	}
 }
 
@@ -274,7 +274,7 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	// Add the things that are connected to the core/connector to the things to ignore
 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
 	{
-		exclusions.Append(obj->GetAttachedObjActors());
+		exclusions.Append(obj->GetAttachedActorObjects());
 	}
 }
 
@@ -352,7 +352,7 @@ void APlayerCharacter::GroupSelect(const FHitResult& hit)
 
 	// Add the things that are connected to the core/connector to the things to ignore
 	ACubeCore* obj = Cast<ACubeCore>(selectedObj);
-	exclusions.Append(obj->GetAttachedObjActors());
+	exclusions.Append(obj->GetAttachedActorObjects());
 }
 
 void APlayerCharacter::Detach(const FHitResult& hit)

@@ -14,8 +14,8 @@ AWheels::AWheels()
 
 	leftPivot = CreateDefaultSubobject<USceneComponent>("Left Pivot");
 	rightPivot = CreateDefaultSubobject<USceneComponent>("Right Pivot");
-	leftPivot->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
-	rightPivot->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
+	leftPivot->SetupAttachment(mesh);
+	rightPivot->SetupAttachment(mesh);
 	
 	SetupAttachments();
 	placeRange = 300;
@@ -52,13 +52,13 @@ void AWheels::SetupAttachments() const
 		return;
 	}
 
-	leftWheel->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
+	leftWheel->SetupAttachment(mesh);
 	leftWheel->SetSimulatePhysics(true);	// Needs to simulate physics (otherwise it'll crash)
 	
-	rightWheel->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
+	rightWheel->SetupAttachment(mesh);
 	rightWheel->SetSimulatePhysics(true);	// Needs to simulate physics (otherwise it'll crash)
 	
-	leftAxel->AttachToComponent(leftWheel, FAttachmentTransformRules::KeepWorldTransform);
+	leftAxel->SetupAttachment(mesh);
 	leftAxel->SetDisableCollision(true);
 	
 	leftAxel->SetLinearXLimit(LCM_Locked, 0);
@@ -72,7 +72,7 @@ void AWheels::SetupAttachments() const
 	leftAxel->SetAngularDriveMode(EAngularDriveMode::TwistAndSwing);
 	leftAxel->SetAngularVelocityDriveTwistAndSwing(false, true);
 
-	rightAxel->AttachToComponent(rightWheel, FAttachmentTransformRules::KeepWorldTransform);
+	rightAxel->SetupAttachment(mesh);
 	rightAxel->SetDisableCollision(true);
 	
 	rightAxel->SetLinearXLimit(LCM_Locked, 0);

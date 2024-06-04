@@ -3,9 +3,7 @@
 	{
 		"Module.projProblox.cpp.obj": [
 			"AudioManager.cpp.obj",
-			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
-			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
 			"Balloon.cpp.obj",
@@ -13,24 +11,17 @@
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
-			"Grappler.cpp.obj",
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
-			"PickupableMaster.cpp.obj",
-			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"Wheel.cpp.obj",
-			"Wheels.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
 			"ActionHistory.gen.cpp.obj",
@@ -65,7 +56,16 @@
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
-			"Wheels.gen.cpp.obj"
+			"Wheels.gen.cpp.obj",
+			"Cell.cpp.obj",
+			"CellVariations.cpp.obj",
+			"CubeCore.cpp.obj",
+			"Grappler.cpp.obj",
+			"PickupableMaster.cpp.obj",
+			"Piston.cpp.obj",
+			"Wheel.cpp.obj",
+			"Wheels.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }
