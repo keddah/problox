@@ -14,16 +14,19 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	GENERATED_BODY()
 	ABalloon();
 	
-	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); }
+	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
 	virtual EOperations SetSelected(const bool value) override;
 	
-	void Attach() const;
+	void Attach();
 	virtual void Detach(bool push = false) override;
 	virtual void Reattach() override;
+
+	UFUNCTION(BlueprintCallable)
+	void ResetBalloon();
 	
 	void SetConstraintsActive(const bool constrained) const
 	{

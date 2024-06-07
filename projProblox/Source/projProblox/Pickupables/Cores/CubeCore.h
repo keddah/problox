@@ -186,9 +186,6 @@ protected:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnAttemptEnding onAttemptEnding;
 
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
-	FOnReset onReset;
-
 	/////////////// Undo/Redo ///////////////
 	TArray<APickupableMaster*> previousAttachments;
 
@@ -320,6 +317,9 @@ public:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
 	FOnStartGame onStartGame;
 
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
+	FOnReset onReset;
+	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the all the cells have been collected (in wave mode)."))
 	FOnNewWave onNewWave;
 	

@@ -22,8 +22,13 @@ ABalloon::ABalloon()
 	constraint->SetLinearYLimit(LCM_Limited, string->CableLength);
 	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
 
-	active = true;
 	uiName = "Balloon";
+}
+
+void ABalloon::BeginPlay()
+{
+	Super::BeginPlay();
+	wrld = GetWorld(); 
 }
 
 void ABalloon::Tick(float DeltaSeconds)
@@ -37,11 +42,13 @@ void ABalloon::Ability(float deltaTime)
 {
 	Super::Ability(deltaTime);
 	if(!parentCore || !active) return;
+
+	const bool atLimit = FVector::Dist(parentCore->GetMesh()->GetSocketLocation(attachedSocket), GetActorLocation()) >= constraint->ConstraintInstance.GetLinearLimit() - 5;
 	
 	FVector velocity = mesh->GetPhysicsLinearVelocity();
 	velocity.Z *= -deltaTime;
 	velocity.Z -= sqrt(parentCore->GetMass());
-	velocity.Z += floatiness; 
+	velocity.Z += atLimit? floatiness : floatiness * 5; 
 	
 	mesh->SetPhysicsLinearVelocity(velocity);
 }
@@ -103,8 +110,6 @@ void ABalloon::Detach(const bool push)
 		return;
 	}
 
-	SetAbilityActive(false);
-
 	ResetMaterial();
 	RemoveVelocity();
 	
@@ -135,12 +140,13 @@ void ABalloon::Detach(const bool push)
 	soundPlayer->PlayDetach();
 }
 
-void ABalloon::Attach() const
+void ABalloon::Attach()
 {
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);
 	soundPlayer->PlayAttach();
+	active = false;
 }
 
 void ABalloon::Reattach()
@@ -159,3 +165,16 @@ void ABalloon::Reattach()
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
 }
+
+void ABalloon::ResetBalloon()
+{
+	mesh->SetHiddenInGame(false);
+	string->bAttachStart = true;
+	string->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
+	string->SetRelativeLocation({0,0,50});
+
+	if(!parentCore) return;
+	
+	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
+	string->SetAttachEndToComponent(parentMesh, attachedSocket);}

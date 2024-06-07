@@ -3612,3 +3612,1336 @@ Script Stack (0 frames) :
 [2024.06.07-11.02.28:233][315]LogFileHelpers: InternalPromptForCheckoutAndSave took 37 ms (total: 1.36 sec)
 [2024.06.07-11.02.28:234][315]AssetCheck: New page: Asset Save: tempTreads
 [2024.06.07-11.02.28:234][315]LogContentValidation: Display: Validating /Script/Engine.StaticMesh /Game/Models/TempModels/tempTreads.tempTreads
+[2024.06.07-11.02.53:230][618]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.07-11.02.53:297][618]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.06.07-11.02.53:297][618]PIE: New page: PIE session: Sandbox1 (7 Jun 2024, 13:02:53)
+[2024.06.07-11.02.53:297][618]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.02.53:332][618]LogPlayLevel: PIE: StaticDuplicateObject took: (0.035020s)
+[2024.06.07-11.02.53:332][618]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.035051s)
+[2024.06.07-11.02.53:344][618]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.06.07-11.02.53:345][618]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.02.53:345][618]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.07-11.02.53:345][618]LogAIModule: Creating AISystem for world Sandbox1
+[2024.06.07-11.02.53:345][618]LogPlayLevel: PIE: World Init took: (0.000726s)
+[2024.06.07-11.02.53:345][618]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2024.06.07-11.02.53:345][618]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.07-11.02.53:346][618]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.07-11.02.53:346][618]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.07-11.02.53:346][618]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.07-11.02.53:346][618]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.07-11.02.53:346][618]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.07-11.02.53:346][618]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.07-11.02.53:346][618]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.07-11.02.53:346][618]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.07-11.02.53:346][618]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.07-11.02.53:346][618]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.07-11.02.53:347][618]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.07-11.02.53:371][618]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.06.07-11.02.53:371][618]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.07-11.02.53:371][618]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.07-11.02.53:371][618]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.07-11.02.53:371][618]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=25
+[2024.06.07-11.02.53:371][618]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=25
+[2024.06.07-11.02.53:373][618]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=25
+[2024.06.07-11.02.53:373][618]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=25
+[2024.06.07-11.02.53:373][618]LogInit: FAudioDevice initialized with ID 25.
+[2024.06.07-11.02.53:373][618]LogAudio: Display: Audio Device (ID: 25) registered with world 'Sandbox1'.
+[2024.06.07-11.02.53:373][618]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 25
+[2024.06.07-11.02.53:397][618]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.02.53:397][618]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.07-11.02.53:405][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:405][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:405][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_0.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_4.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_5.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_6.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_7.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_8.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_9.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:406][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_10.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:407][618]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_11.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.02.53:407][618]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.07-11.02.53:407][618]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector' 
+[2024.06.07-11.02.53:438][618]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.06.07-12.02.53
+[2024.06.07-11.02.53:438][618]LogWorld: Bringing up level for play took: 0.041047
+[2024.06.07-11.02.53:441][618]LogOnline: OSS: Created online subsystem instance for: :Context_41
+[2024.06.07-11.02.53:446][618]PIE: Server logged in
+[2024.06.07-11.02.53:447][618]PIE: Play in editor total start time 0.15 seconds.
+[2024.06.07-11.02.53:507][618]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.02.57:038][932]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.18:928][125]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.44:398][731]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.47:664][ 55]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 2 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.55:134][786]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.03.57:355][  5]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.02:516][519]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.04.04:497][718]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_23.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.04.12:759][552]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.04.12:759][552]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.04.12:759][552]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.06.07-11.04.12:764][552]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.04.12:766][552]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.04.12:768][552]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.06.07-11.04.12:772][552]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.04.12:783][552]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.06.07-11.04.12:783][552]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 25
+[2024.06.07-11.04.12:783][552]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.06.07-11.04.12:784][552]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.06.07-11.04.12:796][552]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.06.07-11.04.12:863][553]LogPlayLevel: Display: Destroying online subsystem :Context_41
+[2024.06.07-11.04.14:324][695]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.04.14:330][695]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.06.02:404][249]LogHotReload: New module detected: UnrealEditor-projProblox-0077.dll
+[2024.06.07-11.06.03:410][253]LogHotReload: Starting Hot-Reload from IDE
+[2024.06.07-11.06.03:453][253]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2024.06.07-11.06.03:645][253]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.07-11.06.03:752][253]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.06.07-11.06.03:790][253]Display: HotReload took  0.4s.
+[2024.06.07-11.06.03:790][253]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 62 functions remapped, 1 scriptstruct remapped
+[2024.06.07-11.06.09:140][337]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.07-11.06.09:150][337]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.06.07-11.06.09:150][337]PIE: New page: PIE session: Sandbox1 (7 Jun 2024, 13:06:09)
+[2024.06.07-11.06.09:150][337]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.06.09:187][337]LogPlayLevel: PIE: StaticDuplicateObject took: (0.036568s)
+[2024.06.07-11.06.09:187][337]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.036602s)
+[2024.06.07-11.06.09:233][337]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.06.07-11.06.09:235][337]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.06.09:235][337]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.07-11.06.09:235][337]LogAIModule: Creating AISystem for world Sandbox1
+[2024.06.07-11.06.09:236][337]LogPlayLevel: PIE: World Init took: (0.000750s)
+[2024.06.07-11.06.09:236][337]LogAudio: Display: Creating Audio Device:                 Id: 26, Scope: Unique, Realtime: True
+[2024.06.07-11.06.09:236][337]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.07-11.06.09:236][337]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.07-11.06.09:236][337]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.07-11.06.09:236][337]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.07-11.06.09:236][337]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.07-11.06.09:236][337]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.07-11.06.09:236][337]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.07-11.06.09:236][337]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.07-11.06.09:236][337]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.07-11.06.09:236][337]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.07-11.06.09:236][337]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.07-11.06.09:238][337]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.07-11.06.09:261][337]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.06.07-11.06.09:261][337]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.07-11.06.09:261][337]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.07-11.06.09:261][337]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.07-11.06.09:261][337]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=26
+[2024.06.07-11.06.09:261][337]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=26
+[2024.06.07-11.06.09:263][337]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=26
+[2024.06.07-11.06.09:263][337]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=26
+[2024.06.07-11.06.09:263][337]LogInit: FAudioDevice initialized with ID 26.
+[2024.06.07-11.06.09:263][337]LogAudio: Display: Audio Device (ID: 26) registered with world 'Sandbox1'.
+[2024.06.07-11.06.09:263][337]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 26
+[2024.06.07-11.06.09:286][337]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.06.09:287][337]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.07-11.06.09:295][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:295][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:295][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:296][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:296][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_0.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:296][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:296][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:296][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_4.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:296][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_5.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:297][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_6.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:297][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_7.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:297][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_8.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:297][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_9.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:297][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_10.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:297][337]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_11.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.06.09:297][337]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.07-11.06.09:298][337]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector' 
+[2024.06.07-11.06.09:328][337]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.06.07-12.06.09
+[2024.06.07-11.06.09:329][337]LogWorld: Bringing up level for play took: 0.041924
+[2024.06.07-11.06.09:331][337]LogOnline: OSS: Created online subsystem instance for: :Context_42
+[2024.06.07-11.06.09:337][337]PIE: Server logged in
+[2024.06.07-11.06.09:338][337]PIE: Play in editor total start time 0.188 seconds.
+[2024.06.07-11.06.09:345][337]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.12:834][659]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.13:919][768]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.06.17:673][155]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_24.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.06.18:498][235]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.06.18:498][235]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.06.18:498][235]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.06.07-11.06.18:501][235]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.06.18:503][235]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.06.18:505][235]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.06.07-11.06.18:509][235]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.06.18:525][235]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 26
+[2024.06.07-11.06.18:525][235]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.06.07-11.06.18:526][235]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.06.07-11.06.18:547][235]LogUObjectHash: Compacting FUObjectHashTables data took   1.40ms
+[2024.06.07-11.06.18:627][236]LogPlayLevel: Display: Destroying online subsystem :Context_42
+[2024.06.07-11.06.19:719][334]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.06.19:724][334]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.07.00:369][531]LogHotReload: New module detected: UnrealEditor-projProblox-0078.dll
+[2024.06.07-11.07.01:373][535]LogHotReload: Starting Hot-Reload from IDE
+[2024.06.07-11.07.01:405][535]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.06.07-11.07.01:531][535]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.07-11.07.01:618][535]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.06.07-11.07.01:653][535]Display: HotReload took  0.3s.
+[2024.06.07-11.07.01:653][535]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 62 functions remapped, 1 scriptstruct remapped
+[2024.06.07-11.07.03:119][621]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.07-11.07.03:133][621]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.06.07-11.07.03:133][621]PIE: New page: PIE session: Sandbox1 (7 Jun 2024, 13:07:03)
+[2024.06.07-11.07.03:133][621]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.07.03:173][621]LogPlayLevel: PIE: StaticDuplicateObject took: (0.039397s)
+[2024.06.07-11.07.03:173][621]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.039426s)
+[2024.06.07-11.07.03:219][621]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.06.07-11.07.03:221][621]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.07.03:221][621]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.07-11.07.03:222][621]LogAIModule: Creating AISystem for world Sandbox1
+[2024.06.07-11.07.03:222][621]LogPlayLevel: PIE: World Init took: (0.000843s)
+[2024.06.07-11.07.03:222][621]LogAudio: Display: Creating Audio Device:                 Id: 27, Scope: Unique, Realtime: True
+[2024.06.07-11.07.03:222][621]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.07-11.07.03:222][621]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.07-11.07.03:222][621]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.07-11.07.03:222][621]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.07-11.07.03:222][621]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.07-11.07.03:222][621]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.07-11.07.03:222][621]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.07-11.07.03:222][621]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.07-11.07.03:223][621]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.07-11.07.03:223][621]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.07-11.07.03:223][621]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.07-11.07.03:225][621]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.07-11.07.03:246][621]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.06.07-11.07.03:246][621]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.07-11.07.03:246][621]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.07-11.07.03:246][621]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.07-11.07.03:246][621]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=27
+[2024.06.07-11.07.03:246][621]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=27
+[2024.06.07-11.07.03:248][621]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=27
+[2024.06.07-11.07.03:248][621]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=27
+[2024.06.07-11.07.03:248][621]LogInit: FAudioDevice initialized with ID 27.
+[2024.06.07-11.07.03:248][621]LogAudio: Display: Audio Device (ID: 27) registered with world 'Sandbox1'.
+[2024.06.07-11.07.03:248][621]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 27
+[2024.06.07-11.07.03:273][621]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.07.03:273][621]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.07-11.07.03:284][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:284][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:284][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_0.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_4.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_5.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_6.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_7.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_8.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_9.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_10.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_11.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.07.03:286][621]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.07-11.07.03:286][621]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector' 
+[2024.06.07-11.07.03:316][621]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.06.07-12.07.03
+[2024.06.07-11.07.03:317][621]LogWorld: Bringing up level for play took: 0.044030
+[2024.06.07-11.07.03:319][621]LogOnline: OSS: Created online subsystem instance for: :Context_43
+[2024.06.07-11.07.03:324][621]PIE: Server logged in
+[2024.06.07-11.07.03:325][621]PIE: Play in editor total start time 0.192 seconds.
+[2024.06.07-11.07.03:333][621]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 1 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.07:152][966]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.12:626][514]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.06.07-11.07.30:347][321]LogBlueprintUserMessages: [WBP_HUD_C_0] 0
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.31:730][464]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/WBP_Timeline.WBP_Timeline_C'!
+[2024.06.07-11.07.31:731][464]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_25.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.06.07-11.07.32:269][517]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.07.32:269][517]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.07.32:269][517]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.06.07-11.07.32:273][517]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.07.32:275][517]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.07.32:276][517]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.06.07-11.07.32:280][517]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.07.32:295][517]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 27
+[2024.06.07-11.07.32:295][517]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=27
+[2024.06.07-11.07.32:296][517]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=27
+[2024.06.07-11.07.32:306][517]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.06.07-11.07.32:378][518]LogPlayLevel: Display: Destroying online subsystem :Context_43
+[2024.06.07-11.07.33:196][583]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.07.33:202][583]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.08.43:505][398]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.08.43:510][398]LogActor: Warning: BP_MagPole_C /Engine/Transient.World_17:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.08.43:551][399]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.08.43:556][399]LogActor: Warning: BP_Collector_C /Engine/Transient.World_18:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.08.45:356][552]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon
+[2024.06.07-11.08.45:356][552]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.08.45:356][552]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.07-11.08.45:445][552]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.06.07-11.08.45:481][552]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_19:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.08.46:824][693]LogSlate: Window 'Document' being destroyed
+[2024.06.07-11.08.46:828][693]LogSlate: Window 'Document' being destroyed
+[2024.06.07-11.08.47:398][758]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.08.47:398][758]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.08.47:428][758]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon
+[2024.06.07-11.08.47:429][758]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.08.47:429][758]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.07-11.08.47:539][758]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_20:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.09.58:105][614]LogHotReload: New module detected: UnrealEditor-projProblox-0079.dll
+[2024.06.07-11.09.59:109][618]LogHotReload: Starting Hot-Reload from IDE
+[2024.06.07-11.09.59:152][618]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.06.07-11.09.59:288][618]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.07-11.09.59:392][618]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.06.07-11.09.59:430][618]Display: HotReload took  0.3s.
+[2024.06.07-11.09.59:430][618]Display: Reload/Re-instancing Complete: 1 package changed, 38 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 62 functions remapped, 1 scriptstruct remapped
+[2024.06.07-11.20.31:911][186]LogHotReload: New module detected: UnrealEditor-projProblox-0083.dll
+[2024.06.07-11.20.32:705][277]LogHotReload: Starting Hot-Reload from IDE
+[2024.06.07-11.20.32:791][277]LogUObjectHash: Compacting FUObjectHashTables data took   2.78ms
+[2024.06.07-11.20.32:819][277]LogClass: UPackage /Script/projProblox Reload.
+[2024.06.07-11.20.32:823][277]LogClass: UClass Balloon Reload.
+[2024.06.07-11.20.32:823][277]LogClass: UClass CubeConnector Reload.
+[2024.06.07-11.20.32:823][277]LogClass: UClass CubeCore Reload.
+[2024.06.07-11.20.32:823][277]LogClass: UClass CuboidConnector Reload.
+[2024.06.07-11.20.32:823][277]LogClass: UClass CuboidCore Reload.
+[2024.06.07-11.20.32:823][277]LogClass: UClass HexCore Reload.
+[2024.06.07-11.20.32:823][277]LogClass: UClass WedgeConnector Reload.
+[2024.06.07-11.20.32:880][277]LogClass: Could not find existing class Balloon in package /Script/projProblox for reload, assuming new or modified class
+[2024.06.07-11.20.32:880][277]LogClass: Function ResetBalloon is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Could not find existing class CubeConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.06.07-11.20.32:880][277]LogClass: Could not find existing class CubeCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.06.07-11.20.32:880][277]LogClass: Function DetachAll is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function EndGame is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function GetAttachedObjActors is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function GetAttempts is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function GetCloseAttachments is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function GetGameMode is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function GetRating is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function GetSocketCount is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function NextWave is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function ObjectInSocket is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function SelectSocket is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function SetAllAbilityActive is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function Start is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function StartEndingGame is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function StartGame is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Function StartStoryGame is new or belongs to a modified class.
+[2024.06.07-11.20.32:880][277]LogClass: Could not find existing class CuboidConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.06.07-11.20.32:880][277]LogClass: Could not find existing class CuboidCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.06.07-11.20.32:880][277]LogClass: Could not find existing class HexCore in package /Script/projProblox for reload, assuming new or modified class
+[2024.06.07-11.20.32:880][277]LogClass: Could not find existing class WedgeConnector in package /Script/projProblox for reload, assuming new or modified class
+[2024.06.07-11.20.32:939][277]Re-instancing Balloon after reload.
+[2024.06.07-11.20.32:963][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:965][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:966][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:967][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:969][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:970][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:971][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:972][277]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:973][277]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_11:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:974][277]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_20:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.32:986][277]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_11:PersistentLevel.BP_Balloon_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:018][277]Re-instancing CubeCore after reload.
+[2024.06.07-11.20.33:040][277]LogActor: Warning: BP_CubeCoree_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:041][277]LogPhysics: Warning: Scale for /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.07-11.20.33:041][277]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector' 
+[2024.06.07-11.20.33:041][277]LogActor: Warning: BP_CubeCoree_C /Engine/Transient.World_2:PersistentLevel.BP_CubeCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:078][277]Re-instancing CubeConnector after reload.
+[2024.06.07-11.20.33:089][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:091][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:092][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_30 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:093][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:095][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:096][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:097][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:099][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:100][277]LogActor: Warning: BP_ConnectorCube_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCube_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:140][277]Re-instancing CuboidConnector after reload.
+[2024.06.07-11.20.33:152][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:154][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:155][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:157][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:159][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:161][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:162][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:164][277]LogActor: Warning: BP_ConnectorCuboid_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_ConnectorCuboid_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:202][277]Re-instancing CuboidCore after reload.
+[2024.06.07-11.20.33:219][277]LogActor: Warning: BP_CuboidCoree_C /Engine/Transient.World_1:PersistentLevel.BP_CuboidCoree_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:256][277]Re-instancing HexCore after reload.
+[2024.06.07-11.20.33:271][277]LogActor: Warning: BP_HexagonalCore_C /Engine/Transient.World_0:PersistentLevel.BP_HexagonalCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:303][277]Re-instancing WedgeConnector after reload.
+[2024.06.07-11.20.33:311][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:313][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:315][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:316][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:318][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:320][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:322][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:323][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:325][277]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_WedgeConnector_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.20.33:361][277]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.07-11.20.33:536][277]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.06.07-11.20.33:579][277]Display: HotReload took  0.9s.
+[2024.06.07-11.20.33:579][277]Display: Reload/Re-instancing Complete: 1 package changed, 7 classes changed, 31 classes unchanged, 3 enums unchanged, 1 scriptstruct unchanged, 62 functions remapped, 1 scriptstruct remapped
+[2024.06.07-11.23.11:608][522]BlueprintLog: New page: Compile BP_Balloon
+[2024.06.07-11.23.11:619][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:620][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:621][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:622][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:623][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:624][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:625][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:626][522]LogActor: Warning: BP_Balloon_C /Game/Levels/Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:627][522]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_11:PersistentLevel.BP_Balloon_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:627][522]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_20:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:681][522]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.06.07-11.23.11:685][522]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_11:PersistentLevel.BP_Balloon_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:780][522]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.07-11.23.11:809][522]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.23.11:814][522]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_21:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.07-11.23.11:871][522]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Balloon
+[2024.06.07-11.23.11:871][522]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Balloon590E0FAA49D5F82816676099E3102C3C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Balloon.uasset'
+[2024.06.07-11.23.11:876][522]LogFileHelpers: InternalPromptForCheckoutAndSave took 96 ms (total: 1.46 sec)
+[2024.06.07-11.23.11:878][522]AssetCheck: New page: Asset Save: BP_Balloon
+[2024.06.07-11.23.11:878][522]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon
+[2024.06.07-11.23.14:316][803]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.07-11.23.14:332][803]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.06.07-11.23.14:332][803]PIE: New page: PIE session: Sandbox1 (7 Jun 2024, 13:23:14)
+[2024.06.07-11.23.14:332][803]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.23.14:369][803]LogPlayLevel: PIE: StaticDuplicateObject took: (0.036768s)
+[2024.06.07-11.23.14:369][803]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Sandbox1.Sandbox1 to /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 (0.036796s)
+[2024.06.07-11.23.14:394][803]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.06.07-11.23.14:397][803]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.07-11.23.14:397][803]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.07-11.23.14:397][803]LogAIModule: Creating AISystem for world Sandbox1
+[2024.06.07-11.23.14:398][803]LogPlayLevel: PIE: World Init took: (0.000720s)
+[2024.06.07-11.23.14:398][803]LogAudio: Display: Creating Audio Device:                 Id: 28, Scope: Unique, Realtime: True
+[2024.06.07-11.23.14:398][803]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.07-11.23.14:398][803]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.07-11.23.14:398][803]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.07-11.23.14:398][803]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.07-11.23.14:398][803]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.07-11.23.14:398][803]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.07-11.23.14:398][803]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.07-11.23.14:398][803]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.07-11.23.14:399][803]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.07-11.23.14:399][803]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.07-11.23.14:399][803]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.07-11.23.14:400][803]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.07-11.23.14:423][803]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.06.07-11.23.14:423][803]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.07-11.23.14:423][803]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.07-11.23.14:423][803]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.07-11.23.14:423][803]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=28
+[2024.06.07-11.23.14:423][803]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=28
+[2024.06.07-11.23.14:425][803]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=28
+[2024.06.07-11.23.14:425][803]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=28
+[2024.06.07-11.23.14:425][803]LogInit: FAudioDevice initialized with ID 28.
+[2024.06.07-11.23.14:425][803]LogAudio: Display: Audio Device (ID: 28) registered with world 'Sandbox1'.
+[2024.06.07-11.23.14:425][803]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 28
+[2024.06.07-11.23.14:456][803]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.23.14:456][803]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.07-11.23.14:461][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:461][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:461][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Glider_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_1.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_0.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_2.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_3.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_4.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_5.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_6.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_7.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_8.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_9.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_10.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:462][803]PIE: Warning: Trying to simulate physics on ''/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Rocket_C_11.Mesh'' but it has ComplexAsSimple collision.
+[2024.06.07-11.23.14:463][803]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.07-11.23.14:463][803]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCoree' Component: '/Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CubeCoree_C_4.Mouse Detector' 
+[2024.06.07-11.23.14:492][803]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1 up for play (max tick rate 0) at 2024.06.07-12.23.14
+[2024.06.07-11.23.14:493][803]LogWorld: Bringing up level for play took: 0.036308
+[2024.06.07-11.23.14:495][803]LogOnline: OSS: Created online subsystem instance for: :Context_49
+[2024.06.07-11.23.14:499][803]LogScript: Warning: Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_CoreGhost_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CoreGhost_C_0
+	Function /Game/Blueprints/Pickupables/Cores/BP_CoreGhost.BP_CoreGhost_C:ExecuteUbergraph_BP_CoreGhost:0074
+[2024.06.07-11.23.14:499][803]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.06.07-11.23.14:499][803]LogScript: Warning: Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_CoreGhost_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_CoreGhost_C_0
+	Function /Game/Blueprints/Pickupables/Cores/BP_CoreGhost.BP_CoreGhost_C:ExecuteUbergraph_BP_CoreGhost:00B6
+[2024.06.07-11.23.14:499][803]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Core Ghost Blueprint:  BP_CoreGhost
+[2024.06.07-11.23.14:500][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:500][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:500][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_1
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:500][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:500][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:500][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:500][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_2
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:500][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_3
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_4
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_4
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_5
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_5
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_6
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_6
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_7
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:501][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_7
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:501][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:502][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_8
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02AE
+[2024.06.07-11.23.14:502][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Cuboid_Coree". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:502][803]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core
+	BP_Balloon_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_Balloon_C_8
+	Function /Game/Blueprints/Pickupables/BP_Balloon.BP_Balloon_C:ExecuteUbergraph_BP_Balloon:02D7
+[2024.06.07-11.23.14:502][803]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property K2Node_DynamicCast_AsBP_Hexagonal_Core". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Balloon Blueprint:  BP_Balloon
+[2024.06.07-11.23.14:503][803]PIE: Server logged in
+[2024.06.07-11.23.14:504][803]PIE: Play in editor total start time 0.174 seconds.
+[2024.06.07-11.23.14:511][803]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.06.07-11.23.14:629][805]LogScript: Warning: Attempted to access missing property 'onEndingGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_PlayerCharacter_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_PlayerCharacter_C_0
+	Function /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter_C:ExecuteUbergraph_BP_PlayerCharacter:18E0
+[2024.06.07-11.23.14:629][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onEndingGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Ending Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.06.07-11.23.14:629][805]LogScript: Warning: Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_PlayerCharacter_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_PlayerCharacter_C_0
+	Function /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter_C:ExecuteUbergraph_BP_PlayerCharacter:1936
+[2024.06.07-11.23.14:629][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.06.07-11.23.14:629][805]LogScript: Warning: Attempted to access missing property 'onAttemptEnding'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_PlayerCharacter_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_PlayerCharacter_C_0
+	Function /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter_C:ExecuteUbergraph_BP_PlayerCharacter:198C
+[2024.06.07-11.23.14:629][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onAttemptEnding'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Attempt Ending Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.06.07-11.23.14:629][805]LogScript: Warning: Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_PlayerCharacter_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_PlayerCharacter_C_0
+	Function /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter_C:ExecuteUbergraph_BP_PlayerCharacter:19E2
+[2024.06.07-11.23.14:629][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.06.07-11.23.14:629][805]LogScript: Warning: Attempted to access missing property 'onGameEnd'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_PlayerCharacter_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_PlayerCharacter_C_0
+	Function /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter_C:ExecuteUbergraph_BP_PlayerCharacter:1A38
+[2024.06.07-11.23.14:629][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onGameEnd'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Game End Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.06.07-11.23.14:629][805]LogScript: Warning: Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	BP_PlayerCharacter_C /Game/Levels/UEDPIE_0_Sandbox1.Sandbox1:PersistentLevel.BP_PlayerCharacter_C_0
+	Function /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter_C:ExecuteUbergraph_BP_PlayerCharacter:1A8E
+[2024.06.07-11.23.14:629][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On New Wave Graph:  EventGraph Function:  Execute Ubergraph BP Player Character Blueprint:  BP_PlayerCharacter
+[2024.06.07-11.23.14:631][805]LogScript: Warning: Attempted to access missing property 'onChangeAttachments'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:GameInstance_26.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+	Function /Game/UI/WBP_Timeline.WBP_Timeline_C:ExecuteUbergraph_WBP_Timeline:0103
+[2024.06.07-11.23.14:631][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onChangeAttachments'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Change Attachments Graph:  EventGraph Function:  Execute Ubergraph WBP Timeline Blueprint:  WBP_Timeline
+[2024.06.07-11.23.14:631][805]LogScript: Warning: Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	WBP_HUD_C /Engine/Transient.UnrealEdEngine_0:GameInstance_26.WBP_HUD_C_0
+	Function /Game/UI/WBP_HUD.WBP_HUD_C:ExecuteUbergraph_WBP_HUD:0331
+[2024.06.07-11.23.14:631][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onStartGame'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Start Game Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.06.07-11.23.14:631][805]LogScript: Warning: Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	WBP_HUD_C /Engine/Transient.UnrealEdEngine_0:GameInstance_26.WBP_HUD_C_0
+	Function /Game/UI/WBP_HUD.WBP_HUD_C:ExecuteUbergraph_WBP_HUD:0373
+[2024.06.07-11.23.14:631][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onReset'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Assign On Reset Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.06.07-11.23.14:631][805]LogScript: Warning: Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	WBP_HUD_C /Engine/Transient.UnrealEdEngine_0:GameInstance_26.WBP_HUD_C_0
+	Function /Game/UI/WBP_HUD.WBP_HUD_C:ExecuteUbergraph_WBP_HUD:03B5
+[2024.06.07-11.23.14:631][805]PIE: Error: Blueprint Runtime Error: "Attempted to access missing property 'onNewWave'. If this is a packaged/cooked build, are you attempting to use an editor-only property?". Node:  Bind Event to On New Wave Graph:  EventGraph Function:  Execute Ubergraph WBP HUD Blueprint:  WBP_HUD
+[2024.06.07-11.23.27:100][ 36]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.07-11.23.27:100][ 36]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Sandbox1
+[2024.06.07-11.23.27:100][ 36]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.06.07-11.23.27:103][ 36]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.27:104][ 36]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.23.27:106][ 36]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.06.07-11.23.27:111][ 36]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.23.27:122][ 36]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.06.07-11.23.27:122][ 36]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 28
+[2024.06.07-11.23.27:122][ 36]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=28
+[2024.06.07-11.23.27:123][ 36]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=28
+[2024.06.07-11.23.27:134][ 36]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.06.07-11.23.27:201][ 37]LogPlayLevel: Display: Destroying online subsystem :Context_49
+[2024.06.07-11.23.31:340][499]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.23.31:347][499]LogSlate: Window 'Message Log' being destroyed
+[2024.06.07-11.23.32:174][596]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.06.07-11.23.33:328][733]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.06.07-11.23.33:329][733]LogStall: Shutdown...
+[2024.06.07-11.23.33:332][733]LogStall: Shutdown complete.
+[2024.06.07-11.23.33:376][733]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.33:376][733]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.23.33:445][733]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.33:445][733]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.23.33:485][733]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.06.07-11.23.33:485][733]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.33:485][733]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.23.33:550][733]LogSlate: Window 'projProblox - Unreal Editor' being destroyed
+[2024.06.07-11.23.33:606][734]Cmd: QUIT_EDITOR
+[2024.06.07-11.23.33:607][734]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2024.06.07-11.23.33:611][734]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2024.06.07-11.23.33:611][734]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2024.06.07-11.23.33:611][734]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2024.06.07-11.23.33:616][734]LogWorld: UWorld::CleanupWorld for Sandbox1, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.33:616][734]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.07-11.23.33:634][734]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2024.06.07-11.23.34:620][734]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2024.06.07-11.23.34:620][734]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2024.06.07-11.23.34:620][734]LogAudio: Display: Audio Device unregistered from world 'Sandbox1'.
+[2024.06.07-11.23.34:620][734]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 1
+[2024.06.07-11.23.34:638][734]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2024.06.07-11.23.34:640][734]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2024.06.07-11.23.34:644][734]LogAudio: Display: Audio Device Manager Shutdown
+[2024.06.07-11.23.34:649][734]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2024.06.07-11.23.34:650][734]LogExit: Preparing to exit.
+[2024.06.07-11.23.34:681][734]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.add_controls_for_selected_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.add_controls_for_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.add_null_above_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.align_translation_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.align_translation_all' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.align_translation_x' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.align_translation_y' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.align_translation_z' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.align_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.align_scale' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.search_replace_name_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.search_replace_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.add_prefix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.add_prefix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.add_suffix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.add_suffix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.do_rename_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.do_rename_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.set_bone_reference_pose' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.34:691][734]LogPython: Display: Object '/Engine/PythonTypes.ControlOutputFormat' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2024.06.07-11.23.35:435][734]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:436][734]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:438][734]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:440][734]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:442][734]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:443][734]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:445][734]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:447][734]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:449][734]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:450][734]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:452][734]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:453][734]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:455][734]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:457][734]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:458][734]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:460][734]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:461][734]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:463][734]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2024.06.07-11.23.35:585][734]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2024.06.07-11.23.35:641][734]LogExit: Editor shut down
+[2024.06.07-11.23.35:644][734]LogExit: Transaction tracking system shut down
+[2024.06.07-11.23.35:875][734]LogExit: Object subsystem successfully closed.
+[2024.06.07-11.23.35:879][734]LogShaderCompilers: Display: ================================================
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Total job queries 12, among them cache hits 8 (66.67%)
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Tracking 2 distinct input hashes that result in 2 distinct outputs (100.00%)
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: RAM used: 44.34 KiB of 1.60 GiB budget. Usage: 0.00%
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Shaders Compiled: 2
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Jobs assigned 2, completed 2 (100%)
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Time job spent in pending queue: average 0.03 s, longest 0.03 s
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Job execution time: average 0.62 s, max 0.62 s
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Job life time (pending + execution): average 0.65 s, max 0.65
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Shader code size: average 36.227 KiB, min 35.891 KiB, max 36.562 KiB
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.65 s
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Jobs were issued in 2 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Average processing rate: 3.09 jobs/sec
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Total thread time: 0.398 s
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Total thread preprocess time: 0.048 s
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Percentage time preprocessing: 12.17%
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Effective parallelization: 0.62 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Top 2 most expensive shader types by average time:
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    1 times, average 0.21 sec, max 0.21 sec, min 0.21 sec)
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    1 times, average 0.19 sec, max 0.19 sec, min 0.19 sec)
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: Top 2 shader types by total compile time:
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 52.05% of total time (compiled    1 times, average 0.21 sec, max 0.21 sec, min 0.21 sec)
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 47.95% of total time (compiled    1 times, average 0.19 sec, max 0.19 sec, min 0.19 sec)
+[2024.06.07-11.23.35:880][734]LogShaderCompilers: Display: ================================================
+[2024.06.07-11.23.35:884][734]LogShaderCompilers: Display: Shaders left to compile 0
+[2024.06.07-11.23.35:947][734]LogShaderCompilers: Display: Shaders left to compile 0
+[2024.06.07-11.23.35:965][734]LogVirtualization: UE::Virtualization was shutdown
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module projProblox (1083)
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (1075)
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module Voice (1073)
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (1070)
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module AddContentDialog (1068)
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module WidgetCarousel (1067)
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module SubobjectEditor (1064)
+[2024.06.07-11.23.36:039][734]LogModuleManager: Shutting down and abandoning module SceneOutliner (1062)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module StatusBar (1060)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module UnsavedAssetsTracker (1058)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (1056)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module StatsViewer (1054)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (1052)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module AutomationWorker (1050)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module RiderLC (1048)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module RiderShaderInfo (1046)
+[2024.06.07-11.23.36:040][734]LogModuleManager: Shutting down and abandoning module PlanarCut (1044)
+[2024.06.07-11.23.36:041][734]LogModuleManager: Shutting down and abandoning module FractureEngine (1042)
+[2024.06.07-11.23.36:041][734]LogModuleManager: Shutting down and abandoning module CharacterAI (1040)
+[2024.06.07-11.23.36:041][734]LogModuleManager: Shutting down and abandoning module SmartSnapping (1038)
+[2024.06.07-11.23.36:041][734]LogModuleManager: Shutting down and abandoning module WaveTableEditor (1036)
+[2024.06.07-11.23.36:042][734]LogModuleManager: Shutting down and abandoning module RigVMEditor (1034)
+[2024.06.07-11.23.36:043][734]LogModuleManager: Shutting down and abandoning module ResonanceAudioEditor (1032)
+[2024.06.07-11.23.36:043][734]LogModuleManager: Shutting down and abandoning module GooglePADEditor (1030)
+[2024.06.07-11.23.36:044][734]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (1028)
+[2024.06.07-11.23.36:044][734]LogModuleManager: Shutting down and abandoning module AndroidFileServerEditor (1026)
+[2024.06.07-11.23.36:044][734]LogModuleManager: Shutting down and abandoning module TextureAlignMode (1024)
+[2024.06.07-11.23.36:044][734]LogModuleManager: Shutting down and abandoning module BspMode (1022)
+[2024.06.07-11.23.36:044][734]LogModuleManager: Shutting down and abandoning module GeometryMode (1020)
+[2024.06.07-11.23.36:044][734]LogModuleManager: Shutting down and abandoning module EngineAssetDefinitions (1018)
+[2024.06.07-11.23.36:044][734]LogModuleManager: Shutting down and abandoning module TemplateSequenceEditor (1016)
+[2024.06.07-11.23.36:045][734]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (1014)
+[2024.06.07-11.23.36:045][734]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (1012)
+[2024.06.07-11.23.36:045][734]LogModuleManager: Shutting down and abandoning module CameraShakePreviewer (1010)
+[2024.06.07-11.23.36:047][734]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (1008)
+[2024.06.07-11.23.36:047][734]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (1006)
+[2024.06.07-11.23.36:047][734]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (1004)
+[2024.06.07-11.23.36:047][734]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (1002)
+[2024.06.07-11.23.36:047][734]LogModuleManager: Shutting down and abandoning module WebMMedia (1000)
+[2024.06.07-11.23.36:047][734]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (998)
+[2024.06.07-11.23.36:047][734]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (996)
+[2024.06.07-11.23.36:049][734]LogModuleManager: Shutting down and abandoning module SequenceRecorder (995)
+[2024.06.07-11.23.36:049][734]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (992)
+[2024.06.07-11.23.36:049][734]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (990)
+[2024.06.07-11.23.36:049][734]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (988)
+[2024.06.07-11.23.36:050][734]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (986)
+[2024.06.07-11.23.36:050][734]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (984)
+[2024.06.07-11.23.36:050][734]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (982)
+[2024.06.07-11.23.36:050][734]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (980)
+[2024.06.07-11.23.36:050][734]LogModuleManager: Shutting down and abandoning module IKRigEditor (978)
+[2024.06.07-11.23.36:052][734]LogModuleManager: Shutting down and abandoning module ControlRigEditor (976)
+[2024.06.07-11.23.36:053][734]LogModuleManager: Shutting down and abandoning module SessionServices (974)
+[2024.06.07-11.23.36:054][734]LogModuleManager: Shutting down and abandoning module MeshPaint (972)
+[2024.06.07-11.23.36:054][734]LogModuleManager: Shutting down and abandoning module VirtualTexturingEditor (970)
+[2024.06.07-11.23.36:055][734]LogModuleManager: Shutting down and abandoning module PlacementMode (969)
+[2024.06.07-11.23.36:055][734]LogModuleManager: Shutting down and abandoning module FoliageEdit (966)
+[2024.06.07-11.23.36:056][734]LogModuleManager: Shutting down and abandoning module LandscapeEditor (964)
+[2024.06.07-11.23.36:058][734]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (962)
+[2024.06.07-11.23.36:058][734]LogModuleManager: Shutting down and abandoning module ActorPickerMode (960)
+[2024.06.07-11.23.36:058][734]LogModuleManager: Shutting down and abandoning module ViewportSnapping (958)
+[2024.06.07-11.23.36:058][734]LogModuleManager: Shutting down and abandoning module EditorWidgets (956)
+[2024.06.07-11.23.36:058][734]LogModuleManager: Shutting down and abandoning module ViewportInteraction (954)
+[2024.06.07-11.23.36:058][734]LogModuleManager: Shutting down and abandoning module ClothPainter (952)
+[2024.06.07-11.23.36:059][734]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (951)
+[2024.06.07-11.23.36:060][734]LogModuleManager: Shutting down and abandoning module WidgetRegistration (948)
+[2024.06.07-11.23.36:060][734]LogModuleManager: Shutting down and abandoning module LogVisualizer (946)
+[2024.06.07-11.23.36:061][734]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (944)
+[2024.06.07-11.23.36:061][734]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (942)
+[2024.06.07-11.23.36:061][734]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (941)
+[2024.06.07-11.23.36:062][734]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (939)
+[2024.06.07-11.23.36:730][734]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (936)
+[2024.06.07-11.23.36:730][734]LogModuleManager: Shutting down and abandoning module MacPlatformEditor (934)
+[2024.06.07-11.23.36:730][734]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (932)
+[2024.06.07-11.23.36:730][734]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (930)
+[2024.06.07-11.23.36:730][734]LogModuleManager: Shutting down and abandoning module RenderResourceViewer (928)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module GameplayDebuggerEditor (926)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module AnimationSettings (924)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module VirtualizationEditor (922)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module CSVtoSVG (920)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module DerivedDataEditor (918)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module EditorConfig (916)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module EditorFramework (914)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module StaticMeshEditor (912)
+[2024.06.07-11.23.36:731][734]LogModuleManager: Shutting down and abandoning module TraceInsights (910)
+[2024.06.07-11.23.36:736][734]MemoryProfiler: Shutdown
+[2024.06.07-11.23.36:736][734]NetworkingProfiler: Shutdown
+[2024.06.07-11.23.36:736][734]LoadingProfiler: Shutdown
+[2024.06.07-11.23.36:737][734]TimingProfiler: Shutdown
+[2024.06.07-11.23.36:740][734]LogModuleManager: Shutting down and abandoning module TraceServices (909)
+[2024.06.07-11.23.36:741][734]LogModuleManager: Shutting down and abandoning module TraceAnalysis (908)
+[2024.06.07-11.23.36:741][734]LogModuleManager: Shutting down and abandoning module EditorInteractiveToolsFramework (904)
+[2024.06.07-11.23.36:741][734]LogModuleManager: Shutting down and abandoning module InteractiveToolsFramework (903)
+[2024.06.07-11.23.36:741][734]LogModuleManager: Shutting down and abandoning module InputBindingEditor (900)
+[2024.06.07-11.23.36:741][734]LogModuleManager: Shutting down and abandoning module MergeActors (898)
+[2024.06.07-11.23.36:742][734]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (896)
+[2024.06.07-11.23.36:742][734]LogModuleManager: Shutting down and abandoning module LocalizationService (895)
+[2024.06.07-11.23.36:743][734]LogModuleManager: Shutting down and abandoning module HardwareTargeting (892)
+[2024.06.07-11.23.36:743][734]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (890)
+[2024.06.07-11.23.36:743][734]LogModuleManager: Shutting down and abandoning module UndoHistory (888)
+[2024.06.07-11.23.36:743][734]LogModuleManager: Shutting down and abandoning module XmlParser (886)
+[2024.06.07-11.23.36:743][734]LogModuleManager: Shutting down and abandoning module Blutility (884)
+[2024.06.07-11.23.36:743][734]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (882)
+[2024.06.07-11.23.36:743][734]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (881)
+[2024.06.07-11.23.36:744][734]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (878)
+[2024.06.07-11.23.36:744][734]LogModuleManager: Shutting down and abandoning module InternationalizationSettings (877)
+[2024.06.07-11.23.36:744][734]LogModuleManager: Shutting down and abandoning module SettingsEditor (874)
+[2024.06.07-11.23.36:744][734]LogModuleManager: Shutting down and abandoning module ProjectLauncher (872)
+[2024.06.07-11.23.36:744][734]LogModuleManager: Shutting down and abandoning module SessionFrontend (870)
+[2024.06.07-11.23.36:745][734]LogModuleManager: Shutting down and abandoning module ProfilerClient (868)
+[2024.06.07-11.23.36:745][734]LogModuleManager: Shutting down and abandoning module DeviceManager (866)
+[2024.06.07-11.23.36:745][734]LogModuleManager: Shutting down and abandoning module AutomationController (864)
+[2024.06.07-11.23.36:745][734]LogModuleManager: Shutting down and abandoning module AutomationWindow (862)
+[2024.06.07-11.23.36:747][734]LogModuleManager: Shutting down and abandoning module Layers (860)
+[2024.06.07-11.23.36:748][734]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (858)
+[2024.06.07-11.23.36:749][734]LogModuleManager: Shutting down and abandoning module DetailCustomizations (856)
+[2024.06.07-11.23.36:749][734]LogModuleManager: Shutting down and abandoning module PackagesDialog (854)
+[2024.06.07-11.23.36:749][734]LogModuleManager: Shutting down and abandoning module AnimationBlueprintEditor (852)
+[2024.06.07-11.23.36:750][734]LogModuleManager: Shutting down and abandoning module Persona (850)
+[2024.06.07-11.23.36:750][734]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (849)
+[2024.06.07-11.23.36:750][734]LogModuleManager: Shutting down and abandoning module Kismet (846)
+[2024.06.07-11.23.36:757][734]LogModuleManager: Shutting down and abandoning module KismetWidgets (845)
+[2024.06.07-11.23.36:757][734]LogModuleManager: Shutting down and abandoning module GraphEditor (842)
+[2024.06.07-11.23.36:757][734]LogModuleManager: Shutting down and abandoning module StructViewer (840)
+[2024.06.07-11.23.36:757][734]LogModuleManager: Shutting down and abandoning module ClassViewer (838)
+[2024.06.07-11.23.36:758][734]LogModuleManager: Shutting down and abandoning module UncontrolledChangelists (836)
+[2024.06.07-11.23.36:758][734]LogModuleManager: Shutting down and abandoning module SourceControlWindowExtender (834)
+[2024.06.07-11.23.36:758][734]LogModuleManager: Shutting down and abandoning module SourceControlWindows (832)
+[2024.06.07-11.23.36:758][734]LogModuleManager: Shutting down and abandoning module OutputLog (830)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module Documentation (828)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module SparseVolumeTexture (826)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (824)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module MovieScene (822)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (820)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module BinkAudioDecoder (818)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module AudioMixerXAudio2 (816)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module AudioMixer (815)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module AudioMixerCore (814)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module LauncherPlatform (810)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module AnalyticsET (808)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module PortalServices (806)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module PortalRpc (804)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module MessagingRpc (802)
+[2024.06.07-11.23.36:759][734]LogModuleManager: Shutting down and abandoning module AIModule (800)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module GameplayDebugger (799)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module AITestSuite (797)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module NavigationSystem (795)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module LevelInstanceEditor (792)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module TypedElementRuntime (790)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module TypedElementFramework (788)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (786)
+[2024.06.07-11.23.36:760][734]LogModuleManager: Shutting down and abandoning module ProfilerService (784)
+[2024.06.07-11.23.36:986][734]LogModuleManager: Shutting down and abandoning module ProfileVisualizer (782)
+[2024.06.07-11.23.36:987][734]LogModuleManager: Shutting down and abandoning module AudioSynesthesiaEditor (780)
+[2024.06.07-11.23.36:987][734]LogModuleManager: Shutting down and abandoning module CacheTrackRecorder (778)
+[2024.06.07-11.23.36:987][734]LogModuleManager: Shutting down and abandoning module TakeRecorderSources (776)
+[2024.06.07-11.23.36:988][734]LogModuleManager: Shutting down and abandoning module TakeTrackRecorders (774)
+[2024.06.07-11.23.36:988][734]LogModuleManager: Shutting down and abandoning module TakesCore (772)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module MegascansPlugin (770)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module Bridge (768)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module RiderGameControl (766)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module RiderBlueprint (764)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module PortableObjectFileDataSource (762)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module ContentBrowserFileDataSource (760)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module ContentBrowserAssetDataSource (758)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module ContentBrowserClassDataSource (756)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module CollectionManager (755)
+[2024.06.07-11.23.36:989][734]LogModuleManager: Shutting down and abandoning module LightMixer (752)
+[2024.06.07-11.23.36:990][734]LogModuleManager: Shutting down and abandoning module ObjectMixerEditor (750)
+[2024.06.07-11.23.36:990][734]LogModuleManager: Shutting down and abandoning module ToolPresetEditor (748)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module ToolPresetAsset (746)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module Text3DEditor (744)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module Text3D (742)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module StructUtilsTestSuite (740)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module StructUtilsNodes (738)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module StructUtilsEditor (736)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module StructUtilsEngine (734)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module OpenImageDenoise (732)
+[2024.06.07-11.23.36:991][734]LogOpenImageDenoise: OIDN shutting down
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module SkeletalMeshModifiers (730)
+[2024.06.07-11.23.36:991][734]LogModuleManager: Shutting down and abandoning module ModelingEditorUI (728)
+[2024.06.07-11.23.36:992][734]LogModuleManager: Shutting down and abandoning module GeometryProcessingAdapters (726)
+[2024.06.07-11.23.36:993][734]LogModuleManager: Shutting down and abandoning module MeshModelingToolsEditorOnlyExp (724)
+[2024.06.07-11.23.36:994][734]LogModuleManager: Shutting down and abandoning module MeshModelingToolsExp (722)
+[2024.06.07-11.23.36:994][734]LogModuleManager: Shutting down and abandoning module LocalizableMessageBlueprint (720)
+[2024.06.07-11.23.36:994][734]LogModuleManager: Shutting down and abandoning module LocalizableMessage (718)
+[2024.06.07-11.23.36:994][734]LogModuleManager: Shutting down and abandoning module MeshLODToolset (716)
+[2024.06.07-11.23.36:994][734]LogModuleManager: Shutting down and abandoning module GeometryFlowMeshProcessingEditor (714)
+[2024.06.07-11.23.36:994][734]LogModuleManager: Shutting down and abandoning module GeometryFlowMeshProcessing (712)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module GeometryFlowCore (710)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module GeometryCollectionNodes (708)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module GeometryCollectionTracks (706)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module GeometryCollectionEngine (705)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module GeometryCollectionSequencer (703)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module GeometryCollectionEditor (700)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module DataflowNodes (698)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module DataflowEnginePlugin (696)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module DataflowEditor (694)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module ChaosSolverEditor (692)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module ChaosUserDataPT (690)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module ChaosNiagara (688)
+[2024.06.07-11.23.36:995][734]LogModuleManager: Shutting down and abandoning module FractureEditor (686)
+[2024.06.07-11.23.36:996][734]LogModuleManager: Shutting down and abandoning module ChaosClothEditor (684)
+[2024.06.07-11.23.36:996][734]LogModuleManager: Shutting down and abandoning module BackChannel (682)
+[2024.06.07-11.23.36:996][734]LogModuleManager: Shutting down and abandoning module AutomationUtilsEditor (680)
+[2024.06.07-11.23.36:996][734]LogModuleManager: Shutting down and abandoning module AutomationUtils (678)
+[2024.06.07-11.23.36:996][734]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (676)
+[2024.06.07-11.23.36:996][734]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (674)
+[2024.06.07-11.23.36:996][734]LogModuleManager: Shutting down and abandoning module Paper2DEditor (672)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module SynthesisEditor (670)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module ResonanceAudio (668)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (666)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (664)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module ModelingOperatorsEditorOnly (662)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module ModelingOperators (660)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module ModelingComponentsEditorOnly (658)
+[2024.06.07-11.23.36:998][734]LogModuleManager: Shutting down and abandoning module ModelingComponents (656)
+[2024.06.07-11.23.36:999][734]LogModuleManager: Shutting down and abandoning module GeometryFramework (655)
+[2024.06.07-11.23.36:999][734]LogModuleManager: Shutting down and abandoning module MeshModelingToolsEditorOnly (652)
+[2024.06.07-11.23.36:999][734]LogModuleManager: Shutting down and abandoning module MeshModelingTools (650)
+[2024.06.07-11.23.36:999][734]LogModuleManager: Shutting down and abandoning module InputDebuggingEditor (648)
+[2024.06.07-11.23.36:999][734]LogModuleManager: Shutting down and abandoning module InputDebugging (646)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module GooglePAD (644)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module DynamicMesh (642)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module GeometryAlgorithms (640)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (638)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module GeometryCacheStreamer (636)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (634)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (632)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module AppleImageUtils (630)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module AudioCapture (628)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module AudioCaptureWasapi (627)
+[2024.06.07-11.23.37:000][734]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (624)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module AssetTags (622)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module AndroidPermission (620)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (618)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (616)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module WorldPartitionHLODUtilities (614)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module UVEditorToolsEditorOnly (612)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module UVEditorTools (610)
+[2024.06.07-11.23.37:001][734]LogModuleManager: Shutting down and abandoning module UVEditor (608)
+[2024.06.07-11.23.37:002][734]LogModuleManager: Shutting down and abandoning module SequencerAnimTools (606)
+[2024.06.07-11.23.37:002][734]LogModuleManager: Shutting down and abandoning module PluginBrowser (604)
+[2024.06.07-11.23.37:003][734]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (602)
+[2024.06.07-11.23.37:003][734]LogModuleManager: Shutting down and abandoning module ModelingToolsEditorMode (600)
+[2024.06.07-11.23.37:004][734]LogModuleManager: Shutting down and abandoning module MaterialAnalyzer (598)
+[2024.06.07-11.23.37:005][734]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (596)
+[2024.06.07-11.23.37:005][734]LogModuleManager: Shutting down and abandoning module EditorDebugTools (594)
+[2024.06.07-11.23.37:006][734]LogModuleManager: Shutting down and abandoning module EditorScriptingUtilities (592)
+[2024.06.07-11.23.37:006][734]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (590)
+[2024.06.07-11.23.37:006][734]LogModuleManager: Shutting down and abandoning module CryptoKeys (588)
+[2024.06.07-11.23.37:006][734]LogModuleManager: Shutting down and abandoning module CurveEditorTools (586)
+[2024.06.07-11.23.37:006][734]LogModuleManager: Shutting down and abandoning module ChangelistReview (584)
+[2024.06.07-11.23.37:007][734]LogModuleManager: Shutting down and abandoning module BlueprintHeaderView (582)
+[2024.06.07-11.23.37:007][734]LogModuleManager: Shutting down and abandoning module SequencerScriptingEditor (580)
+[2024.06.07-11.23.37:007][734]LogModuleManager: Shutting down and abandoning module SequencerScripting (578)
+[2024.06.07-11.23.37:007][734]LogModuleManager: Shutting down and abandoning module TemplateSequence (576)
+[2024.06.07-11.23.37:008][734]LogModuleManager: Shutting down and abandoning module MediaPlateEditor (574)
+[2024.06.07-11.23.37:008][734]LogModuleManager: Shutting down and abandoning module MediaPlate (572)
+[2024.06.07-11.23.37:008][734]LogModuleManager: Shutting down and abandoning module MediaCompositing (570)
+[2024.06.07-11.23.37:008][734]LogModuleManager: Shutting down and abandoning module ImgMedia (568)
+[2024.06.07-11.23.37:008][734]LogModuleManager: Shutting down and abandoning module OodleNetworkHandlerComponent (566)
+[2024.06.07-11.23.37:008][734]LogModuleManager: Shutting down and abandoning module InterchangeTestEditor (564)
+[2024.06.07-11.23.37:009][734]LogModuleManager: Shutting down and abandoning module InterchangeTests (562)
+[2024.06.07-11.23.37:009][734]LogModuleManager: Shutting down and abandoning module AlembicImporter (560)
+[2024.06.07-11.23.37:009][734]LogModuleManager: Shutting down and abandoning module AlembicLibrary (559)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module GeometryCache (558)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (557)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module ControlRigSpline (552)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module BlendSpaceMotionAnalysis (550)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module ACLPluginEditor (548)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module AnimationModifierLibrary (546)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (544)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (540)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module UObjectPlugin (538)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (536)
+[2024.06.07-11.23.37:010][734]LogModuleManager: Shutting down and abandoning module RiderSourceCodeAccess (534)
+[2024.06.07-11.23.37:011][734]LogModuleManager: Shutting down and abandoning module PluginUtils (532)
+[2024.06.07-11.23.37:011][734]LogModuleManager: Shutting down and abandoning module N10XSourceCodeAccess (530)
+[2024.06.07-11.23.37:011][734]LogModuleManager: Shutting down and abandoning module GitSourceControl (528)
+[2024.06.07-11.23.37:011][734]LogModuleManager: Shutting down and abandoning module VariantManager (526)
+[2024.06.07-11.23.37:013][734]LogModuleManager: Shutting down and abandoning module DumpGPUServices (524)
+[2024.06.07-11.23.37:013][734]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (522)
+[2024.06.07-11.23.37:013][734]LogModuleManager: Shutting down and abandoning module AnimationSharingEd (520)
+[2024.06.07-11.23.37:013][734]LogModuleManager: Shutting down and abandoning module VariantManagerContentEditor (518)
+[2024.06.07-11.23.37:013][734]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (516)
+[2024.06.07-11.23.37:013][734]LogModuleManager: Shutting down and abandoning module TakeSequencer (514)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module TakeMovieScene (512)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeFbxParser (510)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeCommonParser (508)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeDispatcher (506)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeExport (504)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeMessages (502)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module GLTFCore (500)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeEditorUtilities (498)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeEditorPipelines (496)
+[2024.06.07-11.23.37:014][734]LogModuleManager: Shutting down and abandoning module InterchangeEditor (494)
+[2024.06.07-11.23.37:015][734]LogModuleManager: Shutting down and abandoning module NiagaraEditorWidgets (492)
+[2024.06.07-11.23.37:016][734]LogModuleManager: Shutting down and abandoning module EditorTraceUtilities (490)
+[2024.06.07-11.23.37:016][734]LogModuleManager: Shutting down and abandoning module TraceUtilities (488)
+[2024.06.07-11.23.37:016][734]LogModuleManager: Shutting down and abandoning module MeshPaintingToolset (486)
+[2024.06.07-11.23.37:016][734]LogModuleManager: Shutting down and abandoning module MeshPaintEditorMode (484)
+[2024.06.07-11.23.37:016][734]LogModuleManager: Shutting down and abandoning module InputEditor (482)
+[2024.06.07-11.23.37:016][734]LogModuleManager: Shutting down and abandoning module RiderDebuggerSupport (478)
+[2024.06.07-11.23.37:016][734]LogModuleManager: Shutting down and abandoning module RiderLogging (476)
+[2024.06.07-11.23.37:018][734]LogModuleManager: Shutting down and abandoning module RiderLink (474)
+[2024.06.07-11.23.37:226][734]LogModuleManager: Shutting down and abandoning module RD (472)
+[2024.06.07-11.23.37:226][734]LogModuleManager: Shutting down and abandoning module StructUtils (470)
+[2024.06.07-11.23.37:226][734]LogModuleManager: Shutting down and abandoning module PythonScriptPlugin (468)
+[2024.06.07-11.23.37:226][734]LogModuleManager: Shutting down and abandoning module PBIK (466)
+[2024.06.07-11.23.37:226][734]LogModuleManager: Shutting down and abandoning module FullBodyIK (464)
+[2024.06.07-11.23.37:226][734]LogModuleManager: Shutting down and abandoning module ChaosCachingEditor (462)
+[2024.06.07-11.23.37:226][734]LogModuleManager: Shutting down and abandoning module TakeRecorder (461)
+[2024.06.07-11.23.37:228][734]LogModuleManager: Shutting down and abandoning module ChaosCaching (458)
+[2024.06.07-11.23.37:228][734]LogModuleManager: Shutting down and abandoning module Paper2D (456)
+[2024.06.07-11.23.37:228][734]LogModuleManager: Shutting down and abandoning module Synthesis (454)
+[2024.06.07-11.23.37:229][734]LogModuleManager: Shutting down and abandoning module SoundFields (452)
+[2024.06.07-11.23.37:229][734]LogModuleManager: Shutting down and abandoning module SignificanceManager (450)
+[2024.06.07-11.23.37:229][734]LogModuleManager: Shutting down and abandoning module RigVMDeveloper (448)
+[2024.06.07-11.23.37:229][734]LogModuleManager: Shutting down and abandoning module RigVM (446)
+[2024.06.07-11.23.37:229][734]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (444)
+[2024.06.07-11.23.37:229][734]LogModuleManager: Shutting down and abandoning module PropertyAccessEditor (442)
+[2024.06.07-11.23.37:229][734]LogModuleManager: Shutting down and abandoning module MsQuicRuntime (440)
+[2024.06.07-11.23.37:230][734]LogModuleManager: Shutting down and abandoning module MetasoundEditor (438)
+[2024.06.07-11.23.37:231][734]LogModuleManager: Shutting down and abandoning module AudioWidgets (437)
+[2024.06.07-11.23.37:232][734]LogModuleManager: Shutting down and abandoning module AdvancedWidgets (436)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module MetasoundEngineTest (432)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module MetasoundEngine (430)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module WaveTable (429)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module AudioCodecEngine (427)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module MetasoundStandardNodes (424)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module MetasoundFrontend (422)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module MetasoundGenerator (420)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module MetasoundGraphCore (418)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (416)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (414)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module CableComponent (412)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module AudioSynesthesia (410)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module AudioAnalyzer (409)
+[2024.06.07-11.23.37:233][734]LogModuleManager: Shutting down and abandoning module AudioSynesthesiaCore (406)
+[2024.06.07-11.23.37:234][734]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (404)
+[2024.06.07-11.23.37:234][734]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (402)
+[2024.06.07-11.23.37:234][734]LogModuleManager: Shutting down and abandoning module FacialAnimation (400)
+[2024.06.07-11.23.37:234][734]LogModuleManager: Shutting down and abandoning module DataValidation (398)
+[2024.06.07-11.23.37:234][734]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (396)
+[2024.06.07-11.23.37:236][734]LogModuleManager: Shutting down and abandoning module LevelEditor (395)
+[2024.06.07-11.23.37:240][734]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (394)
+[2024.06.07-11.23.37:240][734]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (392)
+[2024.06.07-11.23.37:240][734]LogModuleManager: Shutting down and abandoning module MainFrame (390)
+[2024.06.07-11.23.37:241][734]LogModuleManager: Shutting down and abandoning module HotReload (389)
+[2024.06.07-11.23.37:241][734]LogModuleManager: Shutting down and abandoning module TreeMap (385)
+[2024.06.07-11.23.37:241][734]LogModuleManager: Shutting down and abandoning module ActorSequence (382)
+[2024.06.07-11.23.37:241][734]LogModuleManager: Shutting down and abandoning module GameplayCameras (380)
+[2024.06.07-11.23.37:241][734]LogModuleManager: Shutting down and abandoning module ImgMediaEngine (378)
+[2024.06.07-11.23.37:241][734]LogModuleManager: Shutting down and abandoning module EnvironmentQueryEditor (376)
+[2024.06.07-11.23.37:242][734]LogModuleManager: Shutting down and abandoning module IKRigDeveloper (374)
+[2024.06.07-11.23.37:242][734]LogModuleManager: Shutting down and abandoning module IKRig (372)
+[2024.06.07-11.23.37:242][734]LogModuleManager: Shutting down and abandoning module ControlRigDeveloper (370)
+[2024.06.07-11.23.37:242][734]LogModuleManager: Shutting down and abandoning module ControlRig (368)
+[2024.06.07-11.23.37:242][734]LogModuleManager: Shutting down and abandoning module Constraints (367)
+[2024.06.07-11.23.37:242][734]LogModuleManager: Shutting down and abandoning module AnimationData (364)
+[2024.06.07-11.23.37:242][734]LogModuleManager: Shutting down and abandoning module TraceDataFiltering (362)
+[2024.06.07-11.23.37:243][734]LogModuleManager: Shutting down and abandoning module PropertyAccessNode (360)
+[2024.06.07-11.23.37:243][734]LogModuleManager: Shutting down and abandoning module AnimationSharing (358)
+[2024.06.07-11.23.37:243][734]LogModuleManager: Shutting down and abandoning module TcpMessaging (356)
+[2024.06.07-11.23.37:343][734]LogModuleManager: Shutting down and abandoning module InterchangePipelines (354)
+[2024.06.07-11.23.37:343][734]LogModuleManager: Shutting down and abandoning module InterchangeImport (352)
+[2024.06.07-11.23.37:343][734]LogModuleManager: Shutting down and abandoning module InterchangeFactoryNodes (350)
+[2024.06.07-11.23.37:343][734]LogModuleManager: Shutting down and abandoning module InterchangeNodes (348)
+[2024.06.07-11.23.37:343][734]LogModuleManager: Shutting down and abandoning module UdpMessaging (346)
+[2024.06.07-11.23.37:444][734]LogModuleManager: Shutting down and abandoning module NiagaraAnimNotifies (344)
+[2024.06.07-11.23.37:444][734]LogModuleManager: Shutting down and abandoning module Niagara (342)
+[2024.06.07-11.23.37:444][734]LogModuleManager: Shutting down and abandoning module SignalProcessing (341)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module NiagaraEditor (339)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module LevelSequence (338)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module ContentBrowser (336)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module ToolMenus (335)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module ContentBrowserData (333)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module NiagaraCore (328)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module InputBlueprintNodes (326)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module BlueprintGraph (325)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module EnhancedInput (322)
+[2024.06.07-11.23.37:445][734]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (320)
+[2024.06.07-11.23.37:446][734]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (318)
+[2024.06.07-11.23.37:446][734]LogModuleManager: Shutting down and abandoning module AndroidFileServer (316)
+[2024.06.07-11.23.37:446][734]LogModuleManager: Shutting down and abandoning module NetworkReplayStreaming (314)
+[2024.06.07-11.23.37:447][734]LogModuleManager: Shutting down and abandoning module PacketHandler (312)
+[2024.06.07-11.23.37:447][734]LogModuleManager: Shutting down and abandoning module WorldPartitionEditor (310)
+[2024.06.07-11.23.37:448][734]LogModuleManager: Shutting down and abandoning module AnimGraph (308)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module TimeManagement (306)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module AnimationDataController (304)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (302)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntimeNv (300)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module MediaAssets (298)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module Overlay (296)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module OverlayEditor (295)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module VREditor (292)
+[2024.06.07-11.23.37:449][734]LogModuleManager: Shutting down and abandoning module StringTableEditor (290)
+[2024.06.07-11.23.37:450][734]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (288)
+[2024.06.07-11.23.37:450][734]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (286)
+[2024.06.07-11.23.37:451][734]LogModuleManager: Shutting down and abandoning module FunctionalTesting (284)
+[2024.06.07-11.23.37:451][734]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (282)
+[2024.06.07-11.23.37:452][734]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (281)
+[2024.06.07-11.23.37:452][734]LogModuleManager: Shutting down and abandoning module ScriptableEditorWidgets (278)
+[2024.06.07-11.23.37:452][734]LogModuleManager: Shutting down and abandoning module UMG (276)
+[2024.06.07-11.23.37:452][734]LogModuleManager: Shutting down and abandoning module UMGEditor (275)
+[2024.06.07-11.23.37:453][734]LogModuleManager: Shutting down and abandoning module EditorStyle (270)
+[2024.06.07-11.23.37:453][734]LogModuleManager: Shutting down and abandoning module SlateReflector (268)
+[2024.06.07-11.23.37:456][734]LogModuleManager: Shutting down and abandoning module Slate (266)
+[2024.06.07-11.23.37:457][734]LogModuleManager: Shutting down and abandoning module SlateCore (264)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module SubobjectDataInterface (262)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module LandscapeEditorUtilities (260)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module UnrealEd (258)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module MRMesh (256)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module Messaging (254)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (252)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (250)
+[2024.06.07-11.23.37:459][734]LogModuleManager: Shutting down and abandoning module LiveCoding (248)
+[2024.06.07-11.23.37:460][734]LogModuleManager: Shutting down and abandoning module Networking (246)
+[2024.06.07-11.23.37:460][734]LogModuleManager: Shutting down and abandoning module Core (244)
+[2024.06.07-11.23.37:460][734]LogModuleManager: Shutting down and abandoning module AssetDefinition (242)
+[2024.06.07-11.23.37:460][734]LogModuleManager: Shutting down and abandoning module MovieSceneTools (240)
+[2024.06.07-11.23.37:461][734]LogModuleManager: Shutting down and abandoning module CurveEditor (239)
+[2024.06.07-11.23.37:462][734]LogModuleManager: Shutting down and abandoning module Sequencer (237)
+[2024.06.07-11.23.37:464][734]LogModuleManager: Shutting down and abandoning module KismetCompiler (234)
+[2024.06.07-11.23.37:464][734]LogModuleManager: Shutting down and abandoning module MeshBuilder (232)
+[2024.06.07-11.23.37:464][734]LogModuleManager: Shutting down and abandoning module NaniteBuilder (230)
+[2024.06.07-11.23.37:465][734]LogModuleManager: Shutting down and abandoning module MeshUtilities (228)
+[2024.06.07-11.23.37:465][734]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (227)
+[2024.06.07-11.23.37:465][734]LogModuleManager: Shutting down and abandoning module StaticMeshDescription (226)
+[2024.06.07-11.23.37:465][734]LogModuleManager: Shutting down and abandoning module GeometryProcessingInterfaces (225)
+[2024.06.07-11.23.37:465][734]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (222)
+[2024.06.07-11.23.37:465][734]LogModuleManager: Shutting down and abandoning module MeshBoneReduction (221)
+[2024.06.07-11.23.37:466][734]LogModuleManager: Shutting down and abandoning module SkeletalMeshReduction (219)
+[2024.06.07-11.23.37:466][734]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (217)
+[2024.06.07-11.23.37:469][734]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (215)
+[2024.06.07-11.23.37:469][734]LogModuleManager: Shutting down and abandoning module MaterialBaking (211)
+[2024.06.07-11.23.37:470][734]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (208)
+[2024.06.07-11.23.37:480][734]LogModuleManager: Shutting down and abandoning module TelemetryUtils (205)
+[2024.06.07-11.23.37:480][734]LogModuleManager: Shutting down and abandoning module NullInstallBundleManager (202)
+[2024.06.07-11.23.37:480][734]LogModuleManager: Shutting down and abandoning module ShaderPreprocessor (200)
+[2024.06.07-11.23.37:480][734]LogModuleManager: Shutting down and abandoning module DerivedDataCache (198)
+[2024.06.07-11.23.37:484][734]LogModuleManager: Shutting down and abandoning module TargetPlatform (196)
+[2024.06.07-11.23.37:484][734]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (195)
+[2024.06.07-11.23.37:485][734]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (193)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (191)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (189)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (187)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module AudioFormatBINK (185)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (183)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module AudioFormatOGG (181)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module AudioFormatOPUS (179)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (177)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (175)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (173)
+[2024.06.07-11.23.37:486][734]LogModuleManager: Shutting down and abandoning module LinuxArm64TargetPlatform (171)
+[2024.06.07-11.23.37:487][734]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (169)
+[2024.06.07-11.23.37:487][734]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (167)
+[2024.06.07-11.23.37:487][734]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (165)
+[2024.06.07-11.23.37:487][734]LogModuleManager: Shutting down and abandoning module TextureFormat (163)
+[2024.06.07-11.23.37:487][734]LogModuleManager: Shutting down and abandoning module ImageWrapper (162)
+[2024.06.07-11.23.37:487][734]LogModuleManager: Shutting down and abandoning module TextureFormatOodle (160)
+[2024.06.07-11.23.37:488][734]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (158)
+[2024.06.07-11.23.37:488][734]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (156)
+[2024.06.07-11.23.37:488][734]LogModuleManager: Shutting down and abandoning module TextureFormatETC2 (154)
+[2024.06.07-11.23.37:488][734]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (152)
+[2024.06.07-11.23.37:488][734]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (150)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module TurnkeySupport (147)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module InputCore (144)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module Settings (142)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (140)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module ChaosSolverEngine (138)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module FieldSystemEngine (137)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module Chaos (134)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module GeometryCore (133)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module WindowsPlatformFeatures (130)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module GameplayMediaEncoder (129)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module AVEncoder (128)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module D3D12RHI (124)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (122)
+[2024.06.07-11.23.37:489][734]LogModuleManager: Shutting down and abandoning module ChaosCloth (120)
+[2024.06.07-11.23.37:490][734]LogModuleManager: Shutting down and abandoning module WindowsDeviceProfileSelector (118)
+[2024.06.07-11.23.37:490][734]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (116)
+[2024.06.07-11.23.37:490][734]LogModuleManager: Shutting down and abandoning module ChunkDownloader (114)
+[2024.06.07-11.23.37:490][734]LogModuleManager: Shutting down and abandoning module WmfMedia (112)
+[2024.06.07-11.23.37:496][734]LogModuleManager: Shutting down and abandoning module Media (111)
+[2024.06.07-11.23.37:497][734]LogModuleManager: Shutting down and abandoning module ExrReaderGpu (108)
+[2024.06.07-11.23.37:497][734]LogModuleManager: Shutting down and abandoning module AISupportModule (106)
+[2024.06.07-11.23.37:497][734]LogModuleManager: Shutting down and abandoning module ACLPlugin (104)
+[2024.06.07-11.23.37:497][734]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (102)
+[2024.06.07-11.23.37:497][734]LogModuleManager: Shutting down and abandoning module OnlineSubsystemUtils (100)
+[2024.06.07-11.23.37:498][734]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (98)
+[2024.06.07-11.23.37:500][734]LogModuleManager: Shutting down and abandoning module XMPP (93)
+[2024.06.07-11.23.37:500][734]LogModuleManager: Shutting down and abandoning module WebSockets (92)
+[2024.06.07-11.23.37:506][734]LogModuleManager: Shutting down and abandoning module HTTP (89)
+[2024.06.07-11.23.37:507][734]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2024.06.07-11.23.37:507][734]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B48032C5E-437B-92E2-8AD0-8AB45E023EE1%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.3.2-29314046%2B%2B%2BUE5%2BRelease-5.3&UserID=73e65d0744ecfe954b536b91e68cb5ae%7C0e41d59f1717457abcdf6957edd36e2f%7C0afb52b3-15ce-4ab5-9c65-3e8a6ef8f089&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[1] status=Processing
+[2024.06.07-11.23.37:513][734]LogModuleManager: Shutting down and abandoning module SSL (88)
+[2024.06.07-11.23.37:514][734]LogModuleManager: Shutting down and abandoning module OnlineServicesCommonEngineUtils (84)
+[2024.06.07-11.23.37:514][734]LogModuleManager: Shutting down and abandoning module OnlineServicesCommon (82)
+[2024.06.07-11.23.37:514][734]LogModuleManager: Shutting down and abandoning module OnlineServicesInterface (80)
+[2024.06.07-11.23.37:514][734]LogModuleManager: Shutting down and abandoning module RenderDocPlugin (78)
+[2024.06.07-11.23.37:514][734]RenderDocPlugin: plugin has been unloaded.
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module PixWinPlugin (76)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module VariantManagerContent (74)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module GLTFExporter (72)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module DatasmithContent (70)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module NiagaraVertexFactories (68)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module NiagaraShader (66)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module DesktopPlatform (64)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module PythonScriptPluginPreload (62)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module PlatformCryptoOpenSSL (60)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module PlatformCryptoTypes (58)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module PlatformCrypto (56)
+[2024.06.07-11.23.37:515][734]LogModuleManager: Shutting down and abandoning module PlasticSourceControl (54)
+[2024.06.07-11.23.37:516][734]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (52)
+[2024.06.07-11.23.37:517][734]LogModuleManager: Shutting down and abandoning module SourceControl (51)
+[2024.06.07-11.23.37:517][734]LogModuleManager: Shutting down and abandoning module XGEController (48)
+[2024.06.07-11.23.37:517][734]LogXGEController: Cleaning working directory: C:/Users/Deany/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2024.06.07-11.23.37:517][734]LogModuleManager: Shutting down and abandoning module FastBuildController (46)
+[2024.06.07-11.23.37:518][734]LogModuleManager: Shutting down and abandoning module IoStoreOnDemand (44)
+[2024.06.07-11.23.37:518][734]LogModuleManager: Shutting down and abandoning module AnimationModifiers (42)
+[2024.06.07-11.23.37:519][734]LogModuleManager: Shutting down and abandoning module AudioEditor (40)
+[2024.06.07-11.23.37:520][734]LogModuleManager: Shutting down and abandoning module PropertyEditor (39)
+[2024.06.07-11.23.37:520][734]LogModuleManager: Shutting down and abandoning module Virtualization (36)
+[2024.06.07-11.23.37:520][734]LogModuleManager: Shutting down and abandoning module MessageLog (35)
+[2024.06.07-11.23.37:520][734]LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
+[2024.06.07-11.23.37:521][734]LogModuleManager: Shutting down and abandoning module OpenColorIOWrapper (31)
+[2024.06.07-11.23.37:521][734]LogModuleManager: Shutting down and abandoning module RenderCore (28)
+[2024.06.07-11.23.37:521][734]LogModuleManager: Shutting down and abandoning module Landscape (26)
+[2024.06.07-11.23.37:521][734]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
+[2024.06.07-11.23.37:522][734]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (22)
+[2024.06.07-11.23.37:522][734]LogModuleManager: Shutting down and abandoning module Renderer (20)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module Engine (18)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module CoreUObject (16)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module SandboxFile (14)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module PakFile (12)
+[2024.06.07-11.23.37:523][734]LogPakFile: Destroying PakPlatformFile
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module RSA (11)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module NetworkFile (8)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module CookOnTheFly (4)
+[2024.06.07-11.23.37:523][734]LogModuleManager: Shutting down and abandoning module StorageServerClient (2)
+[2024.06.07-11.23.37:688][734]LogD3D12RHI: ~FD3D12DynamicRHI
+[2024.06.07-11.23.37:745][734]LogExit: Exiting.
+[2024.06.07-11.23.37:805][734]Log file closed, 06/07/24 12:23:37

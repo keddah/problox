@@ -267,8 +267,7 @@ public:
 
 		SetActorLocation(savedDetachTransform.GetLocation());
 		SetActorRotation(savedDetachTransform.Rotator());
-		PrintVector(savedDetachTransform.GetLocation(), 5)
-}
+	}
 
 	
 	/////////////// Ability ///////////////
