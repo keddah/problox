@@ -65,16 +65,18 @@ void ATreads::Ability(const float deltaTime)
 		nearFloor = wrld->LineTraceSingleByChannel(hit, start, start + GetActorUpVector() * -40, ECC_Visibility, params);
 	}
 	
-	if(!grounded && isAttached && nearFloor) AddVelocity(velocity * deltaTime);
-	velocity = {};
+	// if(!grounded && isAttached && nearFloor) AddVelocity(velocity * deltaTime);
+	// velocity = {};
 
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 	CalculateVelocity(deltaTime);
 
+	Print("MOving", .1)
+	parentCore->GetMesh()->AddForce(GetActorForwardVector() * moveSpeed * 1000);
 	
 	// Disregards the mass...
-	GetParent()->AddActorWorldOffset(GetActorForwardVector() * moveSpeed * deltaTime);
+	// GetParent()->AddActorWorldOffset(GetActorForwardVector() * moveSpeed * deltaTime);
 }
 
 void ATreads::SetAbilityActive(const bool value)

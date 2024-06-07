@@ -363,6 +363,7 @@
     <None Include="..\..\Source\projProblox.Target.cs"/>
     <None Include="..\..\Source\projProbloxEditor.Target.cs"/>
     <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\projProblox.sln.DotSettings.user"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
