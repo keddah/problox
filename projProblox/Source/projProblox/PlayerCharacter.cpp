@@ -88,7 +88,7 @@ void APlayerCharacter::Undo()
 		{
 			// Undo the attach operation
 			case EOperations::Attach:
-				obj->Detach(true);
+				obj->Detach(false);
 				obj->UseSavedTransform();
 				break;
 			
@@ -147,7 +147,7 @@ void APlayerCharacter::Redo()
 			
 			// Redo the detach operation
 		case EOperations::Detach:
-			obj->Detach(true);
+			obj->Detach(false);
 			obj->UseSavedTransform();
 			break;
 			

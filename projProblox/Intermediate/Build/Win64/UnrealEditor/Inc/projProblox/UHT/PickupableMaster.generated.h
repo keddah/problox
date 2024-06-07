@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class APickupableMaster;
+class UMaterialInstance;
 class UStaticMeshComponent;
 enum class EOperations : uint8;
 #ifdef PROJPROBLOX_PickupableMaster_generated_h
@@ -22,6 +23,8 @@ enum class EOperations : uint8;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSetHideOutlineMesh); \
+	DECLARE_FUNCTION(execSetOutlineMaterial); \
 	DECLARE_FUNCTION(execGetMass); \
 	DECLARE_FUNCTION(execGetUIDisplayName); \
 	DECLARE_FUNCTION(execIsTimerRequired); \
@@ -34,7 +37,8 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateHori); \
 	DECLARE_FUNCTION(execRotateVert); \
-	DECLARE_FUNCTION(execAscendDescend);
+	DECLARE_FUNCTION(execAscendDescend); \
+	DECLARE_FUNCTION(execResetOutline);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_ACCESSORS

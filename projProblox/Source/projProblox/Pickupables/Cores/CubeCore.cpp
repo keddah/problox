@@ -572,7 +572,7 @@ void ACubeCore::RearrangeSockets()
 }
 
 
-void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
+void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const int longestDuration)
 {
 	 TArray<APickupableMaster*> objs = GetCloseAttachments();
 
@@ -600,10 +600,6 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations)
 
 		// Deactivate after the delay and duration elapses activation...
 		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, delayTime + durationTime, false);
-
-		// If the current duration is bigger than "longestDuration" set the new longest duration... otherwise.. same.
-		longestDuration = delayTime + durationTime > longestDuration? delayTime + durationTime : longestDuration;
-		PrintFloat(longestDuration, 6)
 	}
 
 	FTimerHandle startResetHandle;

@@ -13,7 +13,9 @@
 #include "PickupableMaster.h"
 
 #include "Cores/CubeCore.h"
+#include "Kismet/GameplayStatics.h"
 #include "./projProblox/Cells/Cell.h"
+#include "Cores/Connectors/CubeConnector.h"
 
 // Sets default values
 APickupableMaster::APickupableMaster()
@@ -26,7 +28,19 @@ APickupableMaster::APickupableMaster()
 	mesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	mesh->SetGenerateOverlapEvents(true);
 
-	for(int i = 0; i < 3; i++) if(!IsValid(arrow)) arrow = CreateDefaultSubobject<UArrowComponent>("Indicator");
+	outlineMesh = CreateDefaultSubobject<UStaticMeshComponent>("Outliner");
+	outlineMesh->SetupAttachment(mesh);
+	outlineMesh->SetRelativeLocation({});
+	outlineMesh->SetRelativeRotation({0,0,0});
+	outlineMesh->SetRelativeScale3D({1,1,1});
+	if(GEngine) outlineMesh->SetMassOverrideInKg("", 0);
+	outlineMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
+	outlineMesh->SetHiddenInGame(true);
+	outlineMesh->SetSimulatePhysics(false);
+	outlineMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	outlineMesh->SetStaticMesh(mesh->GetStaticMesh());
+	
+	arrow = CreateDefaultSubobject<UArrowComponent>("Indicator");
 	arrow->SetupAttachment(mesh);
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
@@ -44,7 +58,7 @@ APickupableMaster::APickupableMaster()
 	centerMass = CreateDefaultSubobject<USceneComponent>("Center of Gravity");
 	centerMass->SetupAttachment(mesh);
 	
-	for(int i = 0; i < 3; i++) if(!IsValid(mouseDetector)) mouseDetector = CreateDefaultSubobject<UBoxComponent>(TEXT("Mouse Detector"));
+	mouseDetector = CreateDefaultSubobject<UBoxComponent>(TEXT("Mouse Detector"));
 	mouseDetector->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 	mouseDetector->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 	mouseDetector->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
@@ -52,7 +66,7 @@ APickupableMaster::APickupableMaster()
 	
 	defaultRot = mesh->GetRelativeRotation();
 	
-	for(int i = 0; i < 3; i++) if(!IsValid(soundPlayer)) soundPlayer = CreateDefaultSubobject<UAudioManager>("Sound Player");
+	soundPlayer = CreateDefaultSubobject<UAudioManager>("Sound Player");
 	soundPlayer->Attach(mesh);
 }
 
@@ -71,6 +85,19 @@ void APickupableMaster::BeginPlay()
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetPlaceIndicator();
 
+	TArray<AActor*> coreActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), coreActors);
+	for (const auto& actor : coreActors)
+	{
+		if(!actor->IsA<ACubeConnector>()) continue;
+		
+		if(ACubeCore* core = Cast<ACubeCore>(actor))
+		{
+			core->onStartGame.AddDynamic(this, &APickupableMaster::ResetOutline);
+			core->onStartGame.AddDynamic(this, &APickupableMaster::ResetOutline);
+		}
+	}
+	
 	// Only set a custom center of mass if it has been moved... 
 	if(centerMass->GetRelativeLocation().Length() <= .005f) return;
 	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
@@ -293,7 +320,8 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 void APickupableMaster::Detach(const bool push)
 {
 	ResetGhost();
-
+	SetHideOutlineMesh(true);
+	
 	if(!parentCore && !previousObj)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)

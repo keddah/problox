@@ -314,6 +314,7 @@ void ACubeConnector::Reattach()
 void ACubeConnector::Detach(const bool push)
 {
 	ResetGhost();
+	SetHideOutlineMesh(true);
 
 	if(!parentCore && !previousObj)
 	{

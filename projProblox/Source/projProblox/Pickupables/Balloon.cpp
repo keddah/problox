@@ -103,6 +103,7 @@ EOperations ABalloon::SetSelected(const bool value)
 void ABalloon::Detach(const bool push)
 {
 	ResetGhost();
+	SetHideOutlineMesh(true);
 
 	if(!parentCore && !previousObj)
 	{

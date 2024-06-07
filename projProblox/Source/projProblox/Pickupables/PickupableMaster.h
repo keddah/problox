@@ -35,6 +35,9 @@ class PROJPROBLOX_API APickupableMaster : public AActor
 {
 	GENERATED_BODY()
 
+	UFUNCTION()
+	void ResetOutline() { SetHideOutlineMesh(true); }
+	
 public:	
 	// Sets default values for this actor's properties
 	APickupableMaster();
@@ -48,6 +51,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	UStaticMeshComponent* mesh;
 
+	UPROPERTY(EditDefaultsOnly)
+	UStaticMeshComponent* outlineMesh;
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* silhouette;
 
@@ -132,6 +138,7 @@ protected:
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
 	UMaterial* silhouetteMat;
+	UMaterialInstance* outlineMat;
 
 	UPROPERTY(EditDefaultsOnly)
 	FString uiName = "No name given...";
@@ -355,6 +362,16 @@ public:
 	
 	void ResetMaterial() const { silhouette->SetMaterial(0, silhouetteMat); }
 
+	UFUNCTION(BlueprintCallable)
+	void SetOutlineMaterial(UMaterialInstance* mat) { outlineMat = mat; }
+
+	UFUNCTION(BlueprintCallable)
+	void SetHideOutlineMesh(const bool hide)
+	{
+		outlineMesh->SetMaterial(0, outlineMat);
+		outlineMesh->SetHiddenInGame(hide);
+	}
+	
 	virtual void ActivateOutline(UMaterialInstance* mat) const;
 	void DeactivateOutline() const;
 

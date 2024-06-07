@@ -65,7 +65,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	UFUNCTION(BlueprintCallable)
 	void StartEndingGame() { onEndingGame.Broadcast(); }
 
-	void TimedObjectActivation(TArray<int> delays, TArray<int> durations);
+	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, int longestDuration);
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
@@ -88,8 +88,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	unsigned short attempts = 0;
 	unsigned short maxAttempts = 5;
 
-	float longestDuration;
-
 	void CalculateRating();
 	
 	
@@ -106,7 +104,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void StartGame() { onStartGame.Broadcast(); } 
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
-	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations)
+	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const int longestDuration)
 	{
 		StartGame();
 		
@@ -117,7 +115,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 			return;
 		}
 		
-		TimedObjectActivation(delays, durations);
+		TimedObjectActivation(delays, durations, longestDuration);
 	}
 
 
@@ -141,7 +139,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UMaterial* inactiveMat;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Collection")
+	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* selectedMat;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
