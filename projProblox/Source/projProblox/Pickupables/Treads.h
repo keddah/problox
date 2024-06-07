@@ -38,7 +38,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	/////////////// Ability ///////////////
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
-	float moveSpeed = 500;
+	float moveSpeed = 5000;
 
 	void CalculateVelocity(float deltaTime);
 	FVector velocity;

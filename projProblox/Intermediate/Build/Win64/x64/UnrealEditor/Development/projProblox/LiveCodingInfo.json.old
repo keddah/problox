@@ -39,7 +39,6 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
 			"Balloon.gen.cpp.obj",
@@ -65,7 +64,8 @@
 			"Balloon.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
-			"PickupableMaster.cpp.obj"
+			"PickupableMaster.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }
