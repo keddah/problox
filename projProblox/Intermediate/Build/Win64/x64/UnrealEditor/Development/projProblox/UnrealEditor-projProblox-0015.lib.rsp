@@ -8,6 +8,9 @@
 /NODEFAULTLIB
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\projProbloxEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Module.projProblox.cpp.obj"
-"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Treads.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\PlayerCharacter.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\ActionHistory.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\PlayerCharacter.gen.cpp.obj"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\projProblox.init.gen.cpp.obj"
 "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
 /OUT:"C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\UnrealEditor-projProblox-0015.lib"

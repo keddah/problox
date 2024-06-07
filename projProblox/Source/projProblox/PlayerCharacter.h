@@ -33,6 +33,7 @@ private:
 	FTask lastUndo;
 	FTask lastRedo;
 	bool undid;
+	bool redid;
 
 	// The transform of the selected object (should be set when picking up an object)
 	FTransform selectedTransform;
@@ -42,11 +43,11 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void Redo();
 
-	void CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform) const;
+	void CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform);
 
 	// Detaches everything from the inputted core or the pickupable's parent then creates task histories for each thing that was detached.  
 	UFUNCTION(BlueprintCallable)
-	void CreateDetachHistory(APickupableMaster* obj) const;
+	void CreateDetachHistory(APickupableMaster* obj);
 	
 protected:
 	// Called when the game starts or when spawned

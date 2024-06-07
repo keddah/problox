@@ -56,11 +56,14 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerCharacter::Undo()
 {
-	// if(lastUndo == history->Undo() && undid) return;
+	// Stops the player from being able to spam undo/redo
+	std::tuple<FTask, bool> Ttask = history->Undo();
+	if(!undid) undid = std::get<bool>(Ttask);
+	const FTask& task = std::get<FTask>(Ttask);
+
+	// If the undo reached the end...
+	if(lastUndo == task && undid) return;
 	
-	const FTask& task = history->Undo();
-	// lastUndo = task;
-	// undid = true;
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
@@ -69,7 +72,6 @@ void APlayerCharacter::Undo()
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 
-	Print("Number of changed things: " + FString::FromInt(changedObjs.Num()), 5)
 	Print(task.taskName.ToString(), 5)
 	for (auto& obj : changedObjs)
 	{
@@ -88,135 +90,40 @@ void APlayerCharacter::Undo()
 		switch (task.operation)
 		{
 			// Undo the attach operation
-		case EOperations::Attach:
-			obj->Detach(true);
-			// obj->UseSavedTransform();
-			break;
+			case EOperations::Attach:
+				obj->Detach(true);
+				break;
 			
 			// Undo the detach operation
-		case EOperations::Detach:
-			obj->Reattach();
-			Print("Reattaching", 4)
-			break;
+			case EOperations::Detach:
+				obj->Reattach();
+				Print("Reattaching", 4)
+				break;
 			
 			// Undo the move operation
-		case EOperations::Move:
-			obj->SetActorLocation(task.startTransform.GetLocation());
-			obj->SetActorRotation(task.startTransform.Rotator());
-			break;
+			case EOperations::Move:
+				obj->SetActorLocation(task.startTransform.GetLocation());
+				obj->SetActorRotation(task.startTransform.Rotator());
+				break;
 		}
 
 		obj->RemoveVelocity();
 	}
-	
-	
-	
-	//
-	// TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
-	//
-	// holding = false;
-	// selectedObj = nullptr;
-	//
-	// // Clear things to ignore once not selecting anything.
-	// exclusions.Empty();
-	//
-	// Print(task.taskName.ToString(), 5)
-	// for (auto& obj : changedObjs)
-	// {
-	// 	// If the task.object wasn't set... the task struct is invalid.
-	// 	if(!IsValid(obj))
-	// 	{
-	// 		history->PrintTaskIndex();
-	// 		continue;
-	// 	}
-	//
-	// 	// Manually deselect the object...
-	// 	obj->ManualSetSelected(false);
-	//
-	// 	// Depending on the operation... Move back, Reattach or Detach
-	// 	switch (task.operation)
-	// 	{
-	// 		// Undo the attach operation
-	// 		case EOperations::Attach:
-	// 			obj->Detach(false);
-	// 			obj->UseSavedTransform();
-	// 			break;
-	// 		
-	// 		// Undo the detach operation
-	// 		case EOperations::Detach:
-	// 			obj->Reattach();
-	// 			break;
-	// 		
-	// 		// Undo the move operation
-	// 		case EOperations::Move:
-	// 			obj->SetActorLocation(task.startTransform.GetLocation());
-	// 			obj->SetActorRotation(task.startTransform.Rotator());
-	// 			break;
-	// 	}
-	//
-	// 	obj->RemoveVelocity();
-	// }
+	undid = true;
 }
 
 void APlayerCharacter::Redo()
 {
-	// if(lastRedo == history->Redo() && !undid) return;
-	//
-	// const FTask& task = history->Redo();
-	// lastRedo = task;
-	// undid = false;
-	//
-	// TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
-	//
-	// holding = false;
-	// selectedObj = nullptr;
-	//
-	// // Clear things to ignore once not selecting anything.
-	// exclusions.Empty();
-	//
-	// for (auto& obj : changedObjs)
-	// {
-	// 	// If the task.object wasn't set... the task struct is invalid.
-	// 	if(!IsValid(obj))
-	// 	{
-	// 		Print("There aren't any tasks to redo...", 2);
-	// 		history->PrintTaskIndex();
-	// 		continue;
-	// 	}
-	//
-	// 	// Manually deselect the object...
-	// 	obj->ManualSetSelected(false);
-	//
-	// 	// Depending on the operation... Move back, Reattach or Detach
-	// 	switch (task.operation)
-	// 	{
-	// 		// Redo the attach operation
-	// 	case EOperations::Attach:
-	// 		obj->Reattach();
-	// 		break;
-	// 		
-	// 		// Redo the detach operation
-	// 	case EOperations::Detach:
-	// 		obj->Detach(false);
-	// 		obj->UseSavedTransform();
-	// 		break;
-	// 		
-	// 		// Redo the move operation
-	// 	case EOperations::Move:
-	// 		obj->SetActorLocation(task.endTransform.GetLocation());
-	// 		obj->SetActorRotation(task.endTransform.Rotator());
-	// 		break;
-	// 	}
-	//
-	// 	obj->RemoveVelocity();
-	// }
+	// Stops the player from being able to spam undo/redo
+	std::tuple<FTask, bool> Ttask = history->Redo();
+	if(!redid) redid = std::get<bool>(Ttask);
+	const FTask& task = std::get<FTask>(Ttask);
 
-	// if(lastRedo == history->Redo() && !undid) return;
-	//
-	// const FTask& task = history->Redo();
-	// lastRedo = task;
-	// undid = false;
-	const FTask task = history->Redo();
+	// If the redo reached the end...
+	if(lastRedo == task && redid) return;
+	
+	lastRedo = task;
+	redid = true;
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
@@ -250,7 +157,6 @@ void APlayerCharacter::Redo()
 			// Redo the detach operation
 		case EOperations::Detach:
 			obj->Detach(true);
-			// obj->UseSavedTransform();
 			break;
 			
 			// Redo the move operation
@@ -262,9 +168,10 @@ void APlayerCharacter::Redo()
 
 		obj->RemoveVelocity();
 	}
+	redid = true;
 }
 
-void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform) const
+void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform)
 {
 	FTask newTask;
 	if(task == "ATTACH") newTask = {task, objs, startTransform, endTransform, EOperations::Attach};
@@ -272,9 +179,11 @@ void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMa
 	if(task == "MOVE") newTask = {task, objs, startTransform, endTransform, EOperations::Move};
 	
 	history->NewAction(newTask);
+	undid = false;
+	redid = false;
 }
 
-void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj) const
+void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)
 {
 	// Try to cast to a core
 	if(ACubeCore* objCore = Cast<ACubeCore>(obj))

@@ -66,9 +66,11 @@ class PROJPROBLOX_API UActionHistory : public UObject
 
 public:
 	void NewAction(const FTask& task);
-	
-	FTask Undo();
-	FTask Redo();
+
+
+	// The bool in the tuple returns whether it reached the end.
+	std::tuple<FTask, bool> Undo();
+	std::tuple<FTask, bool> Redo();
 	void Clear() {tasks.Empty(); currentTask = -1; }
 	void PrintTaskIndex(const float duration = 4) const { Print("Current Task: " + FString::FromInt(currentTask), duration)}
 	
