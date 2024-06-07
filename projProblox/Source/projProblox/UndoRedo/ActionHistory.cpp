@@ -53,7 +53,7 @@ FTask UActionHistory::Redo()
 		return {};
 	}
 
-	// Decrement currentTask to point to the previous task
+	// Increment currentTask to point to the previous task
 	++currentTask;
 	atEnd = currentTask == tasks.Num();
 

@@ -269,6 +269,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	
 	ToggleGravity();
 	SetHideIndicator(!selected);
+	wasDetached = false;
 
 	if(selected)
 	{
@@ -302,9 +303,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 EOperations APickupableMaster::SetGroupSelected(const bool value)
 {
 	groupSelected = value;
-
 	ToggleGravity(!groupSelected);
-	
 	canPlace = !groupSelected;
 
 	// If the player has unselected... the operation is move
