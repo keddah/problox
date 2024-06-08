@@ -111,8 +111,8 @@ void APickupableMaster::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	Ability(DeltaTime);
 	Placement();
+	Ability(DeltaTime);
 }
 
 void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
@@ -320,7 +320,6 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 void APickupableMaster::Detach(const bool push)
 {
 	ResetGhost();
-	SetHideOutlineMesh(true);
 	
 	if(!parentCore && !previousObj)
 	{
@@ -608,7 +607,7 @@ void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
 	silhouette->SetWorldLocation(mesh->GetComponentLocation());
 }
 
-void APickupableMaster::DeactivateOutline() const
+void APickupableMaster::DeactivateOutline()
 {
 	ResetGhost();
 	ResetMaterial();

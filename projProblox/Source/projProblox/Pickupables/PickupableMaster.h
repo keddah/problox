@@ -365,7 +365,11 @@ public:
 	
 	virtual void RemoveVelocity() const;
 	
-	void ResetMaterial() const { silhouette->SetMaterial(0, silhouetteMat); }
+	void ResetMaterial()
+	{
+		if(silhouette && silhouetteMat) silhouette->SetMaterial(0, silhouetteMat);
+		SetHideOutlineMesh(true);
+	}
 
 	UFUNCTION(BlueprintCallable)
 	void SetOutlineMaterial(UMaterialInstance* mat) { outlineMat = mat; }
@@ -373,12 +377,14 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetHideOutlineMesh(const bool hide)
 	{
+		if(!outlineMat || !outlineMesh) return;
+		
 		outlineMesh->SetMaterial(0, outlineMat);
 		outlineMesh->SetHiddenInGame(hide);
 	}
 	
 	virtual void ActivateOutline(UMaterialInstance* mat) const;
-	void DeactivateOutline() const;
+	void DeactivateOutline();
 
 	void AddVelocity(const FVector& velocity) const
 	{
