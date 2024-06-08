@@ -25,12 +25,6 @@ ABalloon::ABalloon()
 	uiName = "Balloon";
 }
 
-void ABalloon::BeginPlay()
-{
-	Super::BeginPlay();
-	wrld = GetWorld(); 
-}
-
 void ABalloon::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);

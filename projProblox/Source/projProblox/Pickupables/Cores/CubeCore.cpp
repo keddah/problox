@@ -55,7 +55,6 @@ void ACubeCore::BeginPlay()
 	onStartGame.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 
-	UWorld* wrld = GetWorld();
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Story;
 	else if(Cast<AMode_Wave>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Wave;
 	else if(Cast<AMode_Assault>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Assault;
@@ -104,8 +103,6 @@ void ACubeCore::Placement()
 	// }
 
 	RemoveVelocity();
-	
-	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
 	FCollisionQueryParams collisionParams;
@@ -582,7 +579,6 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 		return;
 	}
 
-	const UWorld* wrld = GetWorld();
 	for(int i = 0; i < objs.Num(); i++)
 	{
 		FTimerHandle activationHandle;

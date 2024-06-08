@@ -33,10 +33,7 @@ class PROJPROBLOX_API AGrappler : public APickupableMaster
 	TSubclassOf<AActor> grappleHeadClass;
 
 	AActor* hook;
-	UWorld* wrld;
 
-	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); }
-	
 	// If this is called whilst the hook is valid, destroy the hook (this means pressing the ability button after the grapple has been launched will destroy the grapple).  
 	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); if(IsValid(hook) && !active) hook->Destroy(); };
 	virtual void Ability(float deltaTime) override;

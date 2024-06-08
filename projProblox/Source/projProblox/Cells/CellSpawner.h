@@ -68,8 +68,9 @@ protected:
 	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
 	unsigned int spawnRadius = 50;
 
+	UWorld* wrld;
 	
-	void Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
+	void Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 
 public:
 	UFUNCTION(BlueprintCallable)

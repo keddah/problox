@@ -86,7 +86,6 @@ void ACubeConnector::Placement()
 
 	RemoveVelocity();
 
-	const UWorld* wrld = GetWorld();
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
 	collisionParams.MobilityType = EQueryMobilityType::Any;

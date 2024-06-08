@@ -145,6 +145,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	FString uiName = "No name given...";
 
+	UWorld* wrld;
+	
+	
 	/////////////// Undo/Redo ///////////////
 	// The socket that this has been removed from
 	FName removedSocket;

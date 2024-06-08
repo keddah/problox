@@ -17,6 +17,8 @@ class PROJPROBLOX_API ACuboidCore : public ACubeCore
 
 	ACuboidCore();
 	
+	UWorld* wrld;
+
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* otherIndicator;
 

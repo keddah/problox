@@ -85,6 +85,8 @@ void APickupableMaster::BeginPlay()
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
 	SetPlaceIndicator();
 
+	wrld = GetWorld();
+	
 	TArray<AActor*> coreActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), coreActors);
 	for (const auto& actor : coreActors)
@@ -161,8 +163,6 @@ void APickupableMaster::Placement()
 	if(!selected) return;
 
 	RemoveVelocity();
-	
-	const UWorld* wrld = GetWorld();
 	
 	FHitResult hit;
 	const FVector direction = GetActorRotation().RotateVector(placeDir);

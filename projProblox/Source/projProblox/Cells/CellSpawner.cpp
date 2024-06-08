@@ -25,7 +25,7 @@ void ACellSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UWorld* wrld = GetWorld();
+	wrld = GetWorld();
 
 	// If the current gamemode successfully casts to story mode...
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
@@ -39,7 +39,7 @@ void ACellSpawner::BeginPlay()
 	core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
 }
 
-void ACellSpawner::Spawn(UWorld* wrld, const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
+void ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
 {
 	TSubclassOf<ACell> subClass;
 	switch (thingType)
@@ -75,8 +75,6 @@ void ACellSpawner::BeginSpawn()
 {
 	if(!active) return;
 	
-	UWorld* wrld = GetWorld();
-
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
@@ -87,5 +85,5 @@ void ACellSpawner::BeginSpawn()
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(int i = 0; i < spawnAmount; i++) Spawn(wrld, spawn, rot, params);
+	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
 }
