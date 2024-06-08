@@ -38,6 +38,7 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execRotateHori); \
 	DECLARE_FUNCTION(execRotateVert); \
 	DECLARE_FUNCTION(execAscendDescend); \
+	DECLARE_FUNCTION(execShowOutline); \
 	DECLARE_FUNCTION(execResetOutline);
 
 

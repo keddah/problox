@@ -89,12 +89,13 @@ void APickupableMaster::BeginPlay()
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), coreActors);
 	for (const auto& actor : coreActors)
 	{
-		if(!actor->IsA<ACubeConnector>()) continue;
-		
 		if(ACubeCore* core = Cast<ACubeCore>(actor))
 		{
+			if(core->IsA<ACubeConnector>()) continue;
+
 			core->onStartGame.AddDynamic(this, &APickupableMaster::ResetOutline);
-			core->onStartGame.AddDynamic(this, &APickupableMaster::ResetOutline);
+			core->onReset.AddDynamic(this, &APickupableMaster::ShowOutline);
+			break;
 		}
 	}
 	
@@ -333,7 +334,7 @@ void APickupableMaster::Detach(const bool push)
 	RemoveVelocity();
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	if(push)
+	if(push && parentCore)
 	{
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 		const float launchForce = GetMass();

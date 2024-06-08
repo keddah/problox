@@ -192,7 +192,6 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	FTimerHandle resetTimer;
 
-	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
 	APickupableMaster* hitObj;
@@ -304,8 +303,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
-		
-	
+
+
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
 	FOnGameEnd onGameEnd;
