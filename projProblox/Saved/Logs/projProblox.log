@@ -1964,3 +1964,56 @@ Script Stack (0 frames) :
 [2024.06.08-15.53.23:999][618]AssetCheck: New page: Asset Save: KitchenLevel
 [2024.06.08-15.53.23:999][618]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel
 [2024.06.08-15.53.24:014][619]LogAutomationController: Ignoring very large delta of 9.37 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2024.06.08-15.58.48:789][ 90]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-15.58.48:789][ 90]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-15.58.48:790][ 90]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_26
+[2024.06.08-15.58.48:790][ 90]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_26
+[2024.06.08-15.58.49:381][116]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-15.58.49:383][116]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-15.58.49:385][116]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_33
+[2024.06.08-15.58.49:386][116]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_33
+[2024.06.08-16.00.33:275][ 39]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2024.06.08-16.00.42:145][ 39]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto2
+[2024.06.08-16.00.42:145][ 39]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/KitchenLevel_Auto226D140EE4F942D372E0930BB40124F86.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto2.umap'
+[2024.06.08-16.00.42:150][ 39]LogAssetRegistry: Warning: ScanPathsSynchronous: D:/Uni/problox/projProblox/Saved/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto2.umap is in the /Temp path, will not scan.
+[2024.06.08-16.00.42:150][ 39]LogAssetRegistry: Warning: ScanPathsSynchronous: /Temp/__ExternalActors__/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto2 is in the /Temp path, will not scan.
+[2024.06.08-16.00.42:150][ 39]LogAssetRegistry: Warning: ScanPathsSynchronous: /Temp/__ExternalObjects__/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto2 is in the /Temp path, will not scan.
+[2024.06.08-16.00.42:150][ 39]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel' took 8.885
+[2024.06.08-16.00.42:150][ 39]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 8.885
+[2024.06.08-16.00.42:191][ 40]LogAutomationController: Ignoring very large delta of 9.33 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2024.06.08-16.02.19:548][705]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.02.19:548][705]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.02.19:549][705]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_40
+[2024.06.08-16.02.19:549][705]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_40
+[2024.06.08-16.02.20:003][717]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.02.20:003][717]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.02.20:005][717]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_42
+[2024.06.08-16.02.20:005][717]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_42
+[2024.06.08-16.02.24:720][982]Cmd: TRANSACTION UNDO
+[2024.06.08-16.02.24:720][982]LogEditorTransaction: Undo Scale Elements
+[2024.06.08-16.03.50:283][478]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.03.50:283][478]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.03.50:284][478]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_45
+[2024.06.08-16.03.50:284][478]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_45
+[2024.06.08-16.03.51:073][512]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.03.51:073][512]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cube.Cube
+[2024.06.08-16.03.51:075][512]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_47
+[2024.06.08-16.03.51:076][512]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cube.Cube as actor: StaticMeshActor /Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel.KitchenLevel:PersistentLevel.StaticMeshActor_47
+[2024.06.08-16.05.14:194][983]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.06.08-16.05.21:986][983]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto3
+[2024.06.08-16.05.21:986][983]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/KitchenLevel_Auto3EA189CD4412DF52FE60528BE09147626.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto3.umap'
+[2024.06.08-16.05.21:990][983]LogAssetRegistry: Warning: ScanPathsSynchronous: D:/Uni/problox/projProblox/Saved/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto3.umap is in the /Temp path, will not scan.
+[2024.06.08-16.05.21:990][983]LogAssetRegistry: Warning: ScanPathsSynchronous: /Temp/__ExternalActors__/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto3 is in the /Temp path, will not scan.
+[2024.06.08-16.05.21:990][983]LogAssetRegistry: Warning: ScanPathsSynchronous: /Temp/__ExternalObjects__/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto3 is in the /Temp path, will not scan.
+[2024.06.08-16.05.21:991][983]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel' took 7.806
+[2024.06.08-16.05.21:991][983]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 7.806
+[2024.06.08-16.05.22:030][984]LogAutomationController: Ignoring very large delta of 8.24 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2024.06.08-16.08.22:177][722]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2024.06.08-16.08.30:492][722]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto4
+[2024.06.08-16.08.30:492][722]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/KitchenLevel_Auto47CE0655540ACAD273654F2B206490DA9.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto4.umap'
+[2024.06.08-16.08.30:497][722]LogAssetRegistry: Warning: ScanPathsSynchronous: D:/Uni/problox/projProblox/Saved/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto4.umap is in the /Temp path, will not scan.
+[2024.06.08-16.08.30:497][722]LogAssetRegistry: Warning: ScanPathsSynchronous: /Temp/__ExternalActors__/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto4 is in the /Temp path, will not scan.
+[2024.06.08-16.08.30:497][722]LogAssetRegistry: Warning: ScanPathsSynchronous: /Temp/__ExternalObjects__/Autosaves/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel_Auto4 is in the /Temp path, will not scan.
+[2024.06.08-16.08.30:497][722]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/StoryMode/24_05_24-Levels/KitchenLevel' took 8.332
+[2024.06.08-16.08.30:497][722]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 8.332
+[2024.06.08-16.08.30:535][723]LogAutomationController: Ignoring very large delta of 8.78 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
