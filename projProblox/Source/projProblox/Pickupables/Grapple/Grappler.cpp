@@ -20,7 +20,7 @@ AGrappler::AGrappler()
 	grappleLine = CreateDefaultSubobject<UCableComponent>(TEXT("Line"));
 	grappleLine->AttachToComponent(grappleSpawn, FAttachmentTransformRules::KeepRelativeTransform);
 	grappleLine->CableWidth = 20;
-	grappleLine->CableLength = 0;
+	grappleLine->CableLength = 20000;
 	grappleLine->SolverIterations = 100;
 
 	grappleLine->EndLocation = {};
@@ -42,18 +42,16 @@ void AGrappler::Ability(const float deltaTime)
 	params.Owner = this;
 	params.bNoFail = true;
 	
-	grappleLine->CableLength = 20000;
-
 	// Destroy the hook if one is already valid.
-	if(IsValid(hook)) hook->Destroy();
+	if(hook) hook->Destroy();
 
 	// Spawn and set the hook
 	// STILL CRASHES SOMEHOW....
-	if(!wrld) return;
+	// if(!wrld) return;
 
-	hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	if(wrld != nullptr) if(grappleSpawn && grappleHeadClass) hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
-
+//
 	// Deactivate so that this doesn't happen repeatedly
 	active = false;
 }
