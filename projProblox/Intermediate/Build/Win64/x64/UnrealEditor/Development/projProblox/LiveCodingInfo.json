@@ -52,6 +52,7 @@
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
+			"Grappler.cpp.obj",
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
@@ -64,8 +65,7 @@
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"Grappler.cpp.obj"
+			"ActionHistory.cpp.obj"
 		]
 	}
 }
