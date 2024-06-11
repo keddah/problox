@@ -4,7 +4,6 @@
 		"Module.projProblox.1.cpp.obj": [
 			"ActionHistory.gen.cpp.obj",
 			"AudioManager.gen.cpp.obj",
-			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
 			"CellSpawner.gen.cpp.obj",
@@ -23,13 +22,13 @@
 			"Hoverer.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
-			"Modes.gen.cpp.obj"
+			"Modes.gen.cpp.obj",
+			"Balloon.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
@@ -39,9 +38,10 @@
 			"Wheels.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
+			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
+			"Collector.cpp.obj",
 			"Modes.cpp.obj",
-			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
@@ -56,7 +56,6 @@
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
@@ -66,8 +65,9 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"CellSpawner.cpp.obj",
-			"Collector.cpp.obj"
+			"projProblox.init.gen.cpp.obj",
+			"Balloon.cpp.obj",
+			"PickupableMaster.cpp.obj"
 		]
 	}
 }
