@@ -45,7 +45,6 @@ void AHoverer::Ability(float deltaTime)
 	if(!active) return;
 
 	const FRotator rot = GetActorRotation();
-	UWorld* wrld = GetWorld();
 
 	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is 45 degrees, only need one distance (the minFloorDistance))
 	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));

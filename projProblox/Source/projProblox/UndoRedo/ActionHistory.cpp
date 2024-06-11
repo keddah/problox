@@ -4,7 +4,7 @@
 #include "ActionHistory.h"
 
 
-FTask UActionHistory::Undo()
+std::tuple<FTask, bool> UActionHistory::Undo()
 {
 	if (tasks.IsEmpty())
 	{
@@ -28,17 +28,19 @@ FTask UActionHistory::Undo()
 	{
 		// This means we have undone all tasks, and we're at the beginning
 		currentTask = 0; // Reset to the first index
-		atEnd = true; 
-		return tasks[currentTask];
+		atEnd = true;
+		PrintInt(currentTask, 5)
+		return std::make_tuple(tasks[currentTask], true);
 	}
 
 	// Return the task that was undone
-	if(tasks.IsValidIndex(currentTask + 1)) return tasks[currentTask + 1];
-	return tasks[currentTask];
+	if(tasks.IsValidIndex(currentTask + 1)) return std::make_tuple(tasks[currentTask + 1], false);
+	
+	return std::make_tuple(tasks[currentTask], false);
 }
 
 
-FTask UActionHistory::Redo()
+std::tuple<FTask, bool> UActionHistory::Redo()
 {
 	if (tasks.IsEmpty())
 	{
@@ -53,7 +55,7 @@ FTask UActionHistory::Redo()
 		return {};
 	}
 
-	// Decrement currentTask to point to the previous task
+	// Increment currentTask to point to the previous task
 	++currentTask;
 	atEnd = currentTask == tasks.Num();
 
@@ -63,12 +65,15 @@ FTask UActionHistory::Redo()
 		// This means we have undone all tasks, and we're at the beginning
 		currentTask = tasks.Num() - 1; // Reset to the last index
 		atEnd = true;
-		return tasks[currentTask];
+		PrintInt(currentTask, 5)
+		
+		return std::make_tuple(tasks[currentTask], true);
 	}
 
 	// Return the task that was undone
-	if(tasks.IsValidIndex(currentTask - 1)) return tasks[currentTask - 1];
-	return tasks[currentTask];
+	if(tasks.IsValidIndex(currentTask - 1)) return std::make_tuple(tasks[currentTask - 1], false);
+	
+	return std::make_tuple(tasks[currentTask], false);
 }
 
 

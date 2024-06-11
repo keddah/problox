@@ -21,7 +21,6 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 	GENERATED_BODY()
 
 	APiston();
-	virtual void BeginPlay() override;
 
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
@@ -43,8 +42,6 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "How far the flatHead should extend from the piston shaft."))
 	float pushExtent = 100;
 
-	UWorld* wrld;
-	
 	static bool Approximately(const float a, const float b, const float tolerance)
 	{
 		return fabs(a - b) < tolerance;

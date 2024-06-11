@@ -42,39 +42,14 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
-void ATreads::CalculateVelocity(const float deltaTime)
-{
-	const FVector deltaPos = GetActorLocation() - prevPos;
-	velocity = deltaPos / deltaTime;
-	prevPos = GetActorLocation();
-}
-
 void ATreads::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
 
-	if(wrld)
-	{
-		FHitResult hit;
-		FCollisionQueryParams params;
-		params.AddIgnoredActor(this);
-
-		const FVector start = GetActorLocation();
-		
-		DrawDebugLine(wrld, start, start + FVector(0,0,1) * -40, FColor::Red);
-		nearFloor = wrld->LineTraceSingleByChannel(hit, start, start + GetActorUpVector() * -40, ECC_Visibility, params);
-	}
-	
-	if(!grounded && isAttached && nearFloor) AddVelocity(velocity * deltaTime);
-	velocity = {};
-
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
-	CalculateVelocity(deltaTime);
 
-	
-	// Disregards the mass...
-	GetParent()->AddActorWorldOffset(GetActorForwardVector() * moveSpeed * deltaTime);
+	parentCore->GetMesh()->AddForceAtLocation(GetActorForwardVector() * moveSpeed * parentCore->GetMass(), parentCore->GetMesh()->GetSocketLocation(attachedSocket));
 }
 
 void ATreads::SetAbilityActive(const bool value)

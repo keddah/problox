@@ -13,17 +13,25 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 {
 	GENERATED_BODY()
 	ABalloon();
-	
-	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); }
+	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
 	virtual EOperations SetSelected(const bool value) override;
+	virtual EOperations SetGroupSelected(const bool value) override;
 	
-	void Attach() const;
+	virtual APickupableMaster* GetParent() override;
+	
+	void Attach();
 	virtual void Detach(bool push = false) override;
 	virtual void Reattach() override;
+
+	UFUNCTION(BlueprintCallable)
+	void ResetBalloon(int empty);
+
+	UFUNCTION()
+	void SaveRestTransform() { resetTransform = GetActorTransform(); }
 	
 	void SetConstraintsActive(const bool constrained) const
 	{
@@ -31,15 +39,20 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 		constraint->SetActive(constrained);
 		mesh->SetSimulatePhysics(constrained);
 	}
+	void SetParentDominates(const bool dominate) const
+	{
+		if(dominate) constraint->ConstraintInstance.EnableParentDominates();
+		else constraint->ConstraintInstance.DisableParentDominates();
+	}
 	
-	UWorld* wrld;
-
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* constraint;
 
 	UPROPERTY(EditDefaultsOnly)
 	UCableComponent* string;
 
+	FTransform resetTransform;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "How far the flatHead should extend from the piston shaft."))
 	float floatiness = 67;
 };

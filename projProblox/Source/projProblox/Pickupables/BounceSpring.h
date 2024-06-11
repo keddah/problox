@@ -11,14 +11,13 @@ class PROJPROBLOX_API ABounceSpring : public APickupableMaster
 {
 	GENERATED_BODY()
 	ABounceSpring();
-	virtual void BeginPlay() override { Super::BeginPlay(); wrld = GetWorld(); damping *= .001f; }
+	virtual void BeginPlay() override { Super::BeginPlay(); damping *= .001f; }
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void ToggleGravity() const override;
 	virtual void ToggleGravity(bool gravityOn) override;
 	virtual void RemoveVelocity() const override;
 	
-	UWorld* wrld;
 	bool contracting;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Spring", meta = (Delta = 1, ToolTip = "The maximum amount the spring is allowed to stretch."))

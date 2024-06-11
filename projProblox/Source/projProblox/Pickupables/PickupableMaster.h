@@ -35,6 +35,11 @@ class PROJPROBLOX_API APickupableMaster : public AActor
 {
 	GENERATED_BODY()
 
+	UFUNCTION()
+	void ResetOutline() { SetHideOutlineMesh(true); }
+	UFUNCTION()
+	void ShowOutline(int empty) { SetHideOutlineMesh(false); }
+	
 public:	
 	// Sets default values for this actor's properties
 	APickupableMaster();
@@ -48,6 +53,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	UStaticMeshComponent* mesh;
 
+	UPROPERTY(EditDefaultsOnly)
+	UStaticMeshComponent* outlineMesh;
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* silhouette;
 
@@ -132,10 +140,14 @@ protected:
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
 	UMaterial* silhouetteMat;
+	UMaterialInstance* outlineMat;
 
 	UPROPERTY(EditDefaultsOnly)
 	FString uiName = "No name given...";
 
+	UWorld* wrld;
+	
+	
 	/////////////// Undo/Redo ///////////////
 	// The socket that this has been removed from
 	FName removedSocket;
@@ -267,8 +279,7 @@ public:
 
 		SetActorLocation(savedDetachTransform.GetLocation());
 		SetActorRotation(savedDetachTransform.Rotator());
-		PrintVector(savedDetachTransform.GetLocation(), 5)
-}
+	}
 
 	
 	/////////////// Ability ///////////////
@@ -354,10 +365,26 @@ public:
 	
 	virtual void RemoveVelocity() const;
 	
-	void ResetMaterial() const { silhouette->SetMaterial(0, silhouetteMat); }
+	void ResetMaterial()
+	{
+		if(silhouette && silhouetteMat) silhouette->SetMaterial(0, silhouetteMat);
+		SetHideOutlineMesh(true);
+	}
 
+	UFUNCTION(BlueprintCallable)
+	void SetOutlineMaterial(UMaterialInstance* mat) { outlineMat = mat; }
+
+	UFUNCTION(BlueprintCallable)
+	void SetHideOutlineMesh(const bool hide)
+	{
+		if(!outlineMat || !outlineMesh) return;
+		
+		outlineMesh->SetMaterial(0, outlineMat);
+		outlineMesh->SetHiddenInGame(hide);
+	}
+	
 	virtual void ActivateOutline(UMaterialInstance* mat) const;
-	void DeactivateOutline() const;
+	void DeactivateOutline();
 
 	void AddVelocity(const FVector& velocity) const
 	{

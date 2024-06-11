@@ -32,6 +32,9 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
 
+// Should be broadcast whenever more cells are spawned in after the game has already started.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSpawnedCells);
+
 // Should be broadcast whenever all the cells have been collected whilst in wave mode.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNewWave, int, wave);
 
@@ -65,7 +68,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	UFUNCTION(BlueprintCallable)
 	void StartEndingGame() { onEndingGame.Broadcast(); }
 
-	void TimedObjectActivation(TArray<int> delays, TArray<int> durations);
+	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, int longestDuration);
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
@@ -88,8 +91,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	unsigned short attempts = 0;
 	unsigned short maxAttempts = 5;
 
-	float longestDuration;
-
 	void CalculateRating();
 	
 	
@@ -106,7 +107,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void StartGame() { onStartGame.Broadcast(); } 
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
-	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations)
+	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const int longestDuration)
 	{
 		StartGame();
 		
@@ -117,7 +118,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 			return;
 		}
 		
-		TimedObjectActivation(delays, durations);
+		TimedObjectActivation(delays, durations, longestDuration);
 	}
 
 
@@ -141,7 +142,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UMaterial* inactiveMat;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Collection")
+	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* selectedMat;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
@@ -186,9 +187,6 @@ protected:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnAttemptEnding onAttemptEnding;
 
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
-	FOnReset onReset;
-
 	/////////////// Undo/Redo ///////////////
 	TArray<APickupableMaster*> previousAttachments;
 
@@ -197,7 +195,6 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	FTimerHandle resetTimer;
 
-	
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
 	APickupableMaster* hitObj;
@@ -309,8 +306,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
-		
-	
+
+
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
 	FOnGameEnd onGameEnd;
@@ -320,6 +317,15 @@ public:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
 	FOnStartGame onStartGame;
 
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
+	FOnReset onReset;
+
+	UFUNCTION(BlueprintCallable)
+	void BroadcastNewCells() const { onCellsSpawned.Broadcast(); }
+	
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when more cells are spawned in whilst the game has already started."))
+	FOnSpawnedCells onCellsSpawned;
+	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the all the cells have been collected (in wave mode)."))
 	FOnNewWave onNewWave;
 	

@@ -43,8 +43,6 @@ void ACuboidCore::Placement()
 
 	RemoveVelocity();
 	
-	const UWorld* wrld = GetWorld();
-	
 	FHitResult hit;
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);

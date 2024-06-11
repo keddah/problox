@@ -86,7 +86,6 @@ void ACubeConnector::Placement()
 
 	RemoveVelocity();
 
-	const UWorld* wrld = GetWorld();
 	FCollisionQueryParams collisionParams;
 	collisionParams.AddIgnoredActor(this);
 	collisionParams.MobilityType = EQueryMobilityType::Any;
@@ -314,6 +313,7 @@ void ACubeConnector::Reattach()
 void ACubeConnector::Detach(const bool push)
 {
 	ResetGhost();
+	SetHideOutlineMesh(true);
 
 	if(!parentCore && !previousObj)
 	{
@@ -327,7 +327,7 @@ void ACubeConnector::Detach(const bool push)
 	RemoveVelocity();
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	if(push)
+	if(push && parentCore)
 	{
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 		const float launchForce = GetMass();

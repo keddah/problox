@@ -48,6 +48,7 @@ void ACollector::BeginPlay()
 
 	if(!core) return;
 
+	core->onStartGame.AddDynamic(this, &ACollector::ResetCells);
 	core->onStartGame.AddDynamic(this, &ACollector::CalculateCellCount);
 }
 
@@ -62,8 +63,6 @@ void ACollector::ResetCells()
 	// ... Then get all the spawners in the level to spawn the cells again.
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), cellActors);
 	for (auto& spawner : cellActors) Cast<ACellSpawner>(spawner)->BeginSpawn();
-
-	Print("Resetting", 5);
 }
 
 // Called every frame
@@ -74,22 +73,31 @@ void ACollector::Tick(float DeltaTime)
 
 void ACollector::CalculateCellCount()
 {
-	if(!player) return;
-	if(player->GetGameMode() == EGameMode::Story) ResetCells();
-	
+	const UWorld* wrld = GetWorld();
+
 	TArray<AActor*> countArr;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACell::StaticClass(), countArr);
 
 	// Only count the cells that aren't captured
 	cellsInLevel = 0;
 	cellCount = 0;
 	
-	for (const auto& Acell: countArr)
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACell::StaticClass(), countArr);
+	for (const auto& cellActor: countArr)
 	{
-		if(ACell* cell = Cast<ACell>(Acell))
+		if(const ACell* cell = Cast<ACell>(cellActor))
 		{
 			if(!cell->IsSafe()) cellsInLevel++;
 		}
 	}
-	Print("Things in level: " + FString::FromInt(cellsInLevel), 40)
+	
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
+	for (const auto& spawnActor: countArr)
+	{
+		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
+		{
+			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
+			cellsInLevel+= spawner->GetSpawnAmount();
+		}
+	}
+
 }

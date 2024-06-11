@@ -2,6 +2,8 @@
 #include "Balloon.h"
 
 #include "Cores/CubeCore.h"
+#include "Cores/Connectors/CubeConnector.h"
+#include "Kismet/GameplayStatics.h"
 
 ABalloon::ABalloon()
 {
@@ -22,26 +24,45 @@ ABalloon::ABalloon()
 	constraint->SetLinearYLimit(LCM_Limited, string->CableLength);
 	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
 
-	active = true;
 	uiName = "Balloon";
+}
+
+void ABalloon::BeginPlay()
+{
+	Super::BeginPlay();
+
+	TArray<AActor*> cores;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), cores);
+
+	for (const auto& coreActor : cores)
+	{
+		if(coreActor->IsA<ACubeConnector>()) continue;
+
+		Cast<ACubeCore>(coreActor)->onReset.AddDynamic(this, &ABalloon::ResetBalloon);
+		Cast<ACubeCore>(coreActor)->onStartGame.AddDynamic(this, &ABalloon::SaveRestTransform);
+	}
 }
 
 void ABalloon::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-
-	SetConstraintsActive(!(selected || groupSelected));
 }
 
 void ABalloon::Ability(float deltaTime)
 {
 	Super::Ability(deltaTime);
 	if(!parentCore || !active) return;
+
+	PrintFloat(GetActorLocation().Z - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z, .1)
+	PrintFloat(constraint->ConstraintInstance.GetLinearLimit() * 2, .1)
+	Print("", .1)
+	
+	const bool atLimit = GetActorLocation().Z - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit() * 1.15f;
 	
 	FVector velocity = mesh->GetPhysicsLinearVelocity();
 	velocity.Z *= -deltaTime;
 	velocity.Z -= sqrt(parentCore->GetMass());
-	velocity.Z += floatiness; 
+	velocity.Z += atLimit? floatiness : floatiness * 4; 
 	
 	mesh->SetPhysicsLinearVelocity(velocity);
 }
@@ -93,17 +114,42 @@ EOperations ABalloon::SetSelected(const bool value)
 	return {EOperations::Attach};
 }
 
+EOperations ABalloon::SetGroupSelected(const bool value)
+{
+	groupSelected = value;
+	
+	ToggleGravity(!groupSelected);
+	SetParentDominates(!groupSelected);
+	canPlace = !groupSelected;
+
+	// If the player has unselected... the operation is move
+	return EOperations::Move;
+}
+
+APickupableMaster* ABalloon::GetParent()
+{
+	if(!isAttached) return this;
+	
+	UPrimitiveComponent* comp1;
+	UPrimitiveComponent* comp2;
+	FName empty;
+	constraint->GetConstrainedComponents(comp1, empty, comp2, empty);
+
+	if(comp1) return Cast<APickupableMaster>(comp1->GetOwner());
+
+	return this;
+}
+
 void ABalloon::Detach(const bool push)
 {
 	ResetGhost();
+	SetHideOutlineMesh(true);
 
 	if(!parentCore && !previousObj)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
 	}
-
-	SetAbilityActive(false);
 
 	ResetMaterial();
 	RemoveVelocity();
@@ -128,19 +174,21 @@ void ABalloon::Detach(const bool push)
 	{
 		previousObj = parentCore;
 		parentCore = nullptr;
+		soundPlayer->PlayDetach();
 	}
 
 	ToggleGravity(true);
 	isAttached = false;
-	soundPlayer->PlayDetach();
 }
 
-void ABalloon::Attach() const
+void ABalloon::Attach()
 {
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);
-	soundPlayer->PlayAttach();
+	if(!isAttached) soundPlayer->PlayAttach();
+	active = false;
+	isAttached = true;
 }
 
 void ABalloon::Reattach()
@@ -152,10 +200,25 @@ void ABalloon::Reattach()
 		return;
 	}
 	
-	Attach();
-	SetActorRelativeLocation(savedAttachTransform.GetLocation());
-	SetActorRelativeRotation(savedAttachTransform.Rotator());
+	SetSelected(false);
+	SetActorLocation(savedAttachTransform.GetLocation() + parentCore->GetActorLocation());
+	SetActorRotation(savedDetachTransform.Rotator());
 	
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
+	RemoveVelocity();
+
+	// Casting to work around the protected override of this function.
+	Cast<APickupableMaster>(parentCore)->RemoveVelocity();
+}
+
+void ABalloon::ResetBalloon(const int empty)
+{
+	mesh->SetHiddenInGame(false);
+	string->bAttachStart = true;
+	string->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
+	string->SetRelativeLocation({0,0,50});
+	SetActorTransform(resetTransform);
+	
+	if(!parentCore) return;
+
+	SetSelected(false);
 }

@@ -20,12 +20,6 @@ APiston::APiston()
 	uiName = "Piston";
 }
 
-void APiston::BeginPlay()
-{
-	Super::BeginPlay();
-	wrld = GetWorld();
-}
-
 void APiston::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);

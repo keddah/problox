@@ -56,12 +56,14 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerCharacter::Undo()
 {
-	if(lastUndo == history->Undo() && undid) return;
-	
-	const FTask& task = history->Undo();
-	lastUndo = task;
-	undid = true;
+	// Stops the player from being able to spam undo/redo
+	std::tuple<FTask, bool> Ttask = history->Undo();
+	if(!undid) undid = std::get<bool>(Ttask);
+	const FTask& task = std::get<FTask>(Ttask);
 
+	// If the undo reached the end...
+	if(lastUndo == task && undid) return;
+	
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
@@ -76,6 +78,7 @@ void APlayerCharacter::Undo()
 		// If the task.object wasn't set... the task struct is invalid.
 		if(!IsValid(obj))
 		{
+			Print("There aren't any tasks to undo...", 2);
 			history->PrintTaskIndex();
 			continue;
 		}
@@ -89,12 +92,12 @@ void APlayerCharacter::Undo()
 			// Undo the attach operation
 			case EOperations::Attach:
 				obj->Detach(true);
-				obj->UseSavedTransform();
 				break;
 			
 			// Undo the detach operation
 			case EOperations::Detach:
 				obj->Reattach();
+				Print("Reattaching", 4)
 				break;
 			
 			// Undo the move operation
@@ -106,16 +109,21 @@ void APlayerCharacter::Undo()
 
 		obj->RemoveVelocity();
 	}
+	undid = true;
 }
 
 void APlayerCharacter::Redo()
 {
-	if(lastRedo == history->Redo() && !undid) return;
+	// Stops the player from being able to spam undo/redo
+	std::tuple<FTask, bool> Ttask = history->Redo();
+	if(!redid) redid = std::get<bool>(Ttask);
+	const FTask& task = std::get<FTask>(Ttask);
 
-	const FTask& task = history->Redo();
+	// If the redo reached the end...
+	if(lastRedo == task && redid) return;
+	
 	lastRedo = task;
-	undid = false;
-
+	redid = true;
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
@@ -143,12 +151,12 @@ void APlayerCharacter::Redo()
 			// Redo the attach operation
 		case EOperations::Attach:
 			obj->Reattach();
+			Print("Reattaching", 4)
 			break;
 			
 			// Redo the detach operation
 		case EOperations::Detach:
 			obj->Detach(true);
-			obj->UseSavedTransform();
 			break;
 			
 			// Redo the move operation
@@ -160,9 +168,10 @@ void APlayerCharacter::Redo()
 
 		obj->RemoveVelocity();
 	}
+	redid = true;
 }
 
-void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform) const
+void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform)
 {
 	FTask newTask;
 	if(task == "ATTACH") newTask = {task, objs, startTransform, endTransform, EOperations::Attach};
@@ -170,9 +179,11 @@ void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMa
 	if(task == "MOVE") newTask = {task, objs, startTransform, endTransform, EOperations::Move};
 	
 	history->NewAction(newTask);
+	undid = false;
+	redid = false;
 }
 
-void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj) const
+void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)
 {
 	// Try to cast to a core
 	if(ACubeCore* objCore = Cast<ACubeCore>(obj))
@@ -189,9 +200,10 @@ void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj) const
 		TArray<APickupableMaster*> detachedObjects = parentCore->DetachAll();
 		if(detachedObjects.IsEmpty()) return;
 		CreateTaskHistory("DETACH", detachedObjects, FTransform::Identity, FTransform::Identity);
+		return;
 	}
 
-	else Print("No parent / core found when detaching all", 5)
+	Print("No parent / core found when detaching all", 5)
 }
 
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
