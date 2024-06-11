@@ -11,6 +11,8 @@
 
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/GameModes/Modes.h"
+#include "projProblox/Pickupables/Cores/Connectors/CubeConnector.h"
+
 
 // Sets default values
 ACellSpawner::ACellSpawner()
@@ -18,6 +20,9 @@ ACellSpawner::ACellSpawner()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
+	defaultScene = CreateDefaultSubobject<USceneComponent>("Default Root Scene");
+	spawnTrigger = CreateDefaultSubobject<UBoxComponent>("Trigger");
+	spawnTrigger->SetupAttachment(defaultScene);
 }
 
 // Called when the game starts or when spawned
@@ -31,7 +36,7 @@ void ACellSpawner::BeginPlay()
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
 	{
 		active = true;
-		BeginSpawn();
+		if(spawnTrigger->GetRelativeLocation() == FVector::ZeroVector) BeginSpawn();
 		return;
 	}
 
@@ -39,8 +44,30 @@ void ACellSpawner::BeginPlay()
 	core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
 }
 
-void ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
+
+void ACellSpawner::NotifyActorBeginOverlap(AActor* OtherActor)
 {
+	Super::NotifyActorBeginOverlap(OtherActor);
+
+	// If the trigger's relative location is unchanged, don't do anything..
+	if(spawnTrigger->GetRelativeLocation() == FVector::ZeroVector) return;
+
+	Print("something hit trigger...", 3)
+	
+	// Only do something if the core collides (not connectors)....
+	if(OtherActor->IsA<ACubeConnector>()) return;
+	if(!Cast<ACubeCore>(OtherActor)) return;
+
+	Print("Spawning from trigger", 3)
+	
+	SpawnWithForce();
+	active = false;
+}
+
+ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
+{
+	if(!active) return nullptr;
+	
 	TSubclassOf<ACell> subClass;
 	switch (thingType)
 	{
@@ -68,7 +95,7 @@ void ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActor
 			subClass = normalThing;
 	}
 	
-	wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
+	return wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
 }
 
 void ACellSpawner::BeginSpawn()
@@ -86,4 +113,26 @@ void ACellSpawner::BeginSpawn()
 
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
+}
+
+void ACellSpawner::SpawnWithForce() const
+{
+	const FVector thisPos = GetActorLocation();
+	const FRotator rot = GetActorRotation();
+
+	FActorSpawnParameters params;
+	params.bNoFail = true;
+
+	TArray<ACell*> spawnedCells;
+	// Spawn a new Thing for however many spawnAmount says to.
+	for(int i = 0; i < spawnAmount; i++)
+	{
+		if(ACell* newCell = Spawn(thisPos, rot, params)) spawnedCells.Add(newCell);
+	}
+
+	for (auto& cell : spawnedCells)
+	{
+		const FVector direction = GetActorForwardVector().RotateAngleAxis(FMath::RandRange(0, spawnRadius), {1,0,0});
+		cell->GetMesh()->AddImpulse(direction * spawnForce, "", true);
+	}
 }

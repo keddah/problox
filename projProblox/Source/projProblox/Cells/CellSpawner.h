@@ -32,7 +32,9 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	GENERATED_BODY()
 
 	bool active;
-	
+
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+
 public:	
 	// Sets default values for this actor's properties
 	ACellSpawner();
@@ -59,6 +61,12 @@ protected:
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
 	ECellType thingType = ECellType::Normal;
 	
+	UPROPERTY(EditDefaultsOnly)
+	USceneComponent* defaultScene;
+
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "If the relative location is 0, this has no affect."))
+	UBoxComponent* spawnTrigger;
+	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
 	int32 spawnAmount = 10;
 
@@ -68,10 +76,14 @@ protected:
 	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
 	unsigned int spawnRadius = 50;
 
+	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "This only applies when cells are spawned using the triggers."))
+	float spawnForce = 2000;
+
 	UWorld* wrld;
 	
-	void Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
+	ACell* Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 
+	
 public:
 	UFUNCTION(BlueprintCallable)
 	bool IsActive() const { return active; }
@@ -81,6 +93,8 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void BeginSpawn();
+
+	void SpawnWithForce() const;
 
 	void IncreaseSpawnCount(unsigned short additions)
 	{

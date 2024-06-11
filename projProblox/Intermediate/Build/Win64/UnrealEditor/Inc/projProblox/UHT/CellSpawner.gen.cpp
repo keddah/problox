@@ -11,6 +11,8 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 // Cross Module References
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACell_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACellSpawner();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACellSpawner_NoRegister();
@@ -228,6 +230,14 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 #endif
 		static const UECodeGen_Private::FEnumPropertyParams NewProp_thingType;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_defaultScene_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_defaultScene;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_spawnTrigger_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_spawnTrigger;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_spawnAmount_MetaData[];
 #endif
 		static const UECodeGen_Private::FIntPropertyParams NewProp_spawnAmount;
@@ -239,6 +249,10 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_spawnRadius_MetaData[];
 #endif
 		static const UECodeGen_Private::FUInt32PropertyParams NewProp_spawnRadius;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_spawnForce_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_spawnForce;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -308,6 +322,25 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 #endif
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_thingType = { "thingType", nullptr, (EPropertyFlags)0x0020080000000801, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, thingType), Z_Construct_UEnum_projProblox_ECellType, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_thingType_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_thingType_MetaData) }; // 653651803
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACellSpawner_Statics::NewProp_defaultScene_MetaData[] = {
+		{ "Category", "CellSpawner" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_defaultScene = { "defaultScene", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, defaultScene), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_defaultScene_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_defaultScene_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnTrigger_MetaData[] = {
+		{ "Category", "CellSpawner" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "If the relative location is 0, this has no affect." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnTrigger = { "spawnTrigger", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, spawnTrigger), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnTrigger_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnTrigger_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnAmount_MetaData[] = {
 		{ "Category", "CellSpawner" },
 		{ "EditInlineNew", "" },
@@ -341,6 +374,18 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	};
 #endif
 	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnRadius = { "spawnRadius", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, spawnRadius), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnRadius_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnRadius_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnForce_MetaData[] = {
+		{ "Category", "CellSpawner" },
+		{ "ClampMax", "1000000" },
+		{ "EditInlineNew", "" },
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "This only applies when cells are spawned using the triggers." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnForce = { "spawnForce", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, spawnForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnForce_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnForce_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACellSpawner_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_normalThing,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_bouncyThing,
@@ -349,9 +394,12 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_stickyThing,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_thingType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_thingType,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_defaultScene,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnTrigger,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnAmount,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_maxSpawnAmount,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnRadius,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnForce,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACellSpawner_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACellSpawner>::IsAbstract,
@@ -395,9 +443,9 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		{ ECellType_StaticEnum, TEXT("ECellType"), &Z_Registration_Info_UEnum_ECellType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 653651803U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 3706456944U) },
+		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 4065541173U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_1935780676(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_4092840837(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo));
