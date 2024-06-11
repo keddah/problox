@@ -20,9 +20,12 @@ ACellSpawner::ACellSpawner()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
-	defaultScene = CreateDefaultSubobject<USceneComponent>("Default Root Scene");
+	scene = CreateDefaultSubobject<USceneComponent>("Root Scene");
 	spawnTrigger = CreateDefaultSubobject<UBoxComponent>("Trigger");
-	spawnTrigger->SetupAttachment(defaultScene);
+
+	forceDirection = CreateDefaultSubobject<UArrowComponent>("Direction indicator");
+	forceDirection->SetupAttachment(scene);
+	forceDirection->ArrowSize = 7.5f;
 }
 
 // Called when the game starts or when spawned
@@ -44,24 +47,21 @@ void ACellSpawner::BeginPlay()
 	core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
 }
 
-
-void ACellSpawner::NotifyActorBeginOverlap(AActor* OtherActor)
+void ACellSpawner::Overlap(AActor* otherActor)
 {
-	Super::NotifyActorBeginOverlap(OtherActor);
-
 	// If the trigger's relative location is unchanged, don't do anything..
 	if(spawnTrigger->GetRelativeLocation() == FVector::ZeroVector) return;
 
-	Print("something hit trigger...", 3)
-	
 	// Only do something if the core collides (not connectors)....
-	if(OtherActor->IsA<ACubeConnector>()) return;
-	if(!Cast<ACubeCore>(OtherActor)) return;
+	if(otherActor->IsA<ACubeConnector>()) return;
+	if(ACubeCore* otherCore = Cast<ACubeCore>(otherActor))
+	{
+		SpawnWithForce();
+		active = false;
 
-	Print("Spawning from trigger", 3)
+		otherCore->BroadcastNewCells();
+	}
 	
-	SpawnWithForce();
-	active = false;
 }
 
 ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
@@ -119,7 +119,8 @@ void ACellSpawner::SpawnWithForce() const
 {
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
-
+	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
+	
 	FActorSpawnParameters params;
 	params.bNoFail = true;
 
@@ -127,12 +128,12 @@ void ACellSpawner::SpawnWithForce() const
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++)
 	{
-		if(ACell* newCell = Spawn(thisPos, rot, params)) spawnedCells.Add(newCell);
+		if(ACell* newCell = Spawn(spawn, rot, params)) spawnedCells.Add(newCell);
 	}
 
 	for (auto& cell : spawnedCells)
 	{
-		const FVector direction = GetActorForwardVector().RotateAngleAxis(FMath::RandRange(0, spawnRadius), {1,0,0});
+		const FVector direction = GetActorForwardVector().RotateAngleAxis(FMath::RandRange(0, coneRadius), {1,0,0});
 		cell->GetMesh()->AddImpulse(direction * spawnForce, "", true);
 	}
 }

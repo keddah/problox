@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef PROJPROBLOX_CellSpawner_generated_h
 #error "CellSpawner.generated.h already included, missing '#pragma once' in CellSpawner.h"
 #endif
@@ -21,7 +22,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
  \
 	DECLARE_FUNCTION(execBeginSpawn); \
 	DECLARE_FUNCTION(execActivate); \
-	DECLARE_FUNCTION(execIsActive);
+	DECLARE_FUNCTION(execIsActive); \
+	DECLARE_FUNCTION(execOverlap);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_32_ACCESSORS

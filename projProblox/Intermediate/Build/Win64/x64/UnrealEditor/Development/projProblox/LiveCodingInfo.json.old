@@ -1,7 +1,7 @@
 {
 	"RemapUnityFiles": 
 	{
-		"Module.projProblox.cpp.obj": [
+		"Module.projProblox.1.cpp.obj": [
 			"ActionHistory.gen.cpp.obj",
 			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
@@ -23,6 +23,9 @@
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
 			"Modes.gen.cpp.obj",
+			"CellSpawner.gen.cpp.obj"
+		],
+		"Module.projProblox.2.cpp.obj": [
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
@@ -43,7 +46,6 @@
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -63,9 +65,9 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"CellSpawner.gen.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
-			"CellSpawner.cpp.obj"
+			"CellSpawner.cpp.obj",
+			"CubeCore.cpp.obj"
 		]
 	}
 }

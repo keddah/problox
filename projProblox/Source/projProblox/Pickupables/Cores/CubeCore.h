@@ -32,6 +32,9 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
 
+// Should be broadcast whenever more cells are spawned in after the game has already started.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSpawnedCells);
+
 // Should be broadcast whenever all the cells have been collected whilst in wave mode.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNewWave, int, wave);
 
@@ -316,6 +319,12 @@ public:
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnReset onReset;
+
+	UFUNCTION(BlueprintCallable)
+	void BroadcastNewCells() const { onCellsSpawned.Broadcast(); }
+	
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when more cells are spawned in whilst the game has already started."))
+	FOnSpawnedCells onCellsSpawned;
 	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the all the cells have been collected (in wave mode)."))
 	FOnNewWave onNewWave;

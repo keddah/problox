@@ -33,7 +33,8 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 
 	bool active;
 
-	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+	UFUNCTION(BlueprintCallable)
+	virtual void Overlap(AActor* otherActor);
 
 public:	
 	// Sets default values for this actor's properties
@@ -61,11 +62,14 @@ protected:
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
 	ECellType thingType = ECellType::Normal;
 	
-	UPROPERTY(EditDefaultsOnly)
-	USceneComponent* defaultScene;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	USceneComponent* scene;
 
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "If the relative location is 0, this has no affect."))
 	UBoxComponent* spawnTrigger;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UArrowComponent* forceDirection;
 	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
 	int32 spawnAmount = 10;
@@ -76,7 +80,10 @@ protected:
 	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
 	unsigned int spawnRadius = 50;
 
-	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "This only applies when cells are spawned using the triggers."))
+	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
+	unsigned int coneRadius = 20;
+
+	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "This only applies when cells are spawned using the triggers."))
 	float spawnForce = 2000;
 
 	UWorld* wrld;
