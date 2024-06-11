@@ -8,6 +8,7 @@
 			"BounceSpring.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
 			"CellSpawner.gen.cpp.obj",
+			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
 			"CubeSocketInfo.gen.cpp.obj",
@@ -22,13 +23,13 @@
 			"Hoverer.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
-			"Modes.gen.cpp.obj",
-			"Collector.gen.cpp.obj"
+			"Modes.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
@@ -65,7 +66,6 @@
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"Collector.cpp.obj"
 		]

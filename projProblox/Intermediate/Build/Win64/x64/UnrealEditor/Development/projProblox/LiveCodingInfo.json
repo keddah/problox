@@ -39,7 +39,9 @@
 			"Wheels.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
+			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
+			"Collector.cpp.obj",
 			"Modes.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
@@ -60,14 +62,12 @@
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
-			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"CellSpawner.cpp.obj",
-			"Collector.cpp.obj"
+			"Treads.cpp.obj"
 		]
 	}
 }

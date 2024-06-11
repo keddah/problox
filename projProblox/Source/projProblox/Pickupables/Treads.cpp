@@ -49,10 +49,7 @@ void ATreads::Ability(const float deltaTime)
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
-	parentCore->GetMesh()->AddForce(GetActorForwardVector() * moveSpeed * 1000);
-	
-	// Disregards the mass...
-	// GetParent()->AddActorWorldOffset(GetActorForwardVector() * moveSpeed * deltaTime);
+	parentCore->GetMesh()->AddForceAtLocation(GetActorForwardVector() * moveSpeed * parentCore->GetMass(), parentCore->GetMesh()->GetSocketLocation(attachedSocket));
 }
 
 void ATreads::SetAbilityActive(const bool value)
