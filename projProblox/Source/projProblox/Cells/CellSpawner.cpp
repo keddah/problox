@@ -44,7 +44,7 @@ void ACellSpawner::BeginPlay()
 	}
 
 	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
-	core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
+	if(spawnTrigger->GetRelativeLocation() == FVector::ZeroVector) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
 }
 
 void ACellSpawner::Overlap(AActor* otherActor)

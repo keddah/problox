@@ -7,7 +7,7 @@
 			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
-			"Collector.gen.cpp.obj",
+			"CellSpawner.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
 			"CubeSocketInfo.gen.cpp.obj",
@@ -23,7 +23,7 @@
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
 			"Modes.gen.cpp.obj",
-			"CellSpawner.gen.cpp.obj"
+			"Collector.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"PickupableMaster.gen.cpp.obj",
@@ -39,13 +39,13 @@
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellVariations.cpp.obj",
-			"Collector.cpp.obj",
 			"Modes.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -67,7 +67,7 @@
 			"ActionHistory.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
 			"CellSpawner.cpp.obj",
-			"CubeCore.cpp.obj"
+			"Collector.cpp.obj"
 		]
 	}
 }

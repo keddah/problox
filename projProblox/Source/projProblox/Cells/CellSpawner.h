@@ -103,6 +103,8 @@ public:
 
 	void SpawnWithForce() const;
 
+	int GetSpawnAmount() const { return spawnAmount; }
+	
 	void IncreaseSpawnCount(unsigned short additions)
 	{
 		spawnAmount += additions;
