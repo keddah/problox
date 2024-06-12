@@ -75,7 +75,7 @@ protected:
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupPlaceIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
-	virtual void Reattach() override;
+	virtual void Reattach(bool sound) override;
 
 	// Overriding so that it reverts back to the PickupableMaster version of "Detach"
 	virtual void Detach(bool push = false) override;

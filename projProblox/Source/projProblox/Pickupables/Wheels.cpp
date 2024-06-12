@@ -240,7 +240,7 @@ void AWheels::Detach(const bool push)
 	isAttached = false;
 }
 
-void AWheels::Reattach()
+void AWheels::Reattach(const bool sound)
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!IsValid(parentCore))

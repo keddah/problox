@@ -225,12 +225,12 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
+
+	savedDetachTransform = GetActorTransform();
 	
 	// Detach from its components if selected
 	if(selected)
 	{
-		SetSavedTransform();
-		
 		wasDetached = isAttached;
 		canPlace = true;
 		Detach(false);
@@ -292,7 +292,7 @@ float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
-void ACubeConnector::Reattach()
+void ACubeConnector::Reattach(const bool sound)
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!IsValid(parentCore))
@@ -302,7 +302,7 @@ void ACubeConnector::Reattach()
 	}
 	
 	AttachToActor(parentCore, attachRules, removedSocket);
-	soundPlayer->PlayAttach();
+	if(soundPlayer && sound) soundPlayer->PlayAttach();
 	SetActorRelativeLocation(savedAttachTransform.GetLocation());
 	SetActorRelativeRotation(savedAttachTransform.Rotator());
 	

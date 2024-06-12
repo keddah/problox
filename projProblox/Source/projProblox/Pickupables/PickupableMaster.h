@@ -254,20 +254,8 @@ public:
 	virtual void SetCanPickup(const bool can) { canPickup = can; }
 
 	// Since this is used a lot...
-	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr)
-	{
-		// If a silhouette wasn't given, use this one.
-		if(!ghost) ghost = silhouette;
-		
-		const FTransform silhouetteTransform = ghost->GetComponentTransform();
-		SetActorLocation(silhouetteTransform.GetLocation());
-		SetActorRotation(silhouetteTransform.GetRotation());
-		SetSavedTransform();
-	}
+	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr);
 
-	
-	// Saves the relative transform from the parent (should be called while the parentCore is valid)
-	void SetSavedTransform();
 	void UseSavedTransform()
 	{
 		if(parentCore)
@@ -306,7 +294,7 @@ public:
 
 	
 	/////////////// Undo/Redo ///////////////
-	virtual void Reattach();
+	virtual void Reattach(bool sound);
 
 	
 	/////////////// Getters ///////////////

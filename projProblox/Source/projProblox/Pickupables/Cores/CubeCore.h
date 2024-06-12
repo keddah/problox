@@ -74,7 +74,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 
 	/////////////// Undo/Redo ///////////////
-	virtual void Reattach() override;
+	virtual void Reattach(bool sound) override;
 
 	
 	/////////////// Turn System ///////////////

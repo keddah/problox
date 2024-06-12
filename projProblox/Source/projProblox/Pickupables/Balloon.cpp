@@ -88,10 +88,10 @@ EOperations ABalloon::SetSelected(const bool value)
 	ToggleGravity();
 	SetHideIndicator(!selected);
 
+	savedDetachTransform = GetActorTransform();
+
 	if(selected)
 	{
-		SetSavedTransform();
-		
 		wasDetached = isAttached;
 		Detach(false);
 		
@@ -191,7 +191,7 @@ void ABalloon::Attach()
 	isAttached = true;
 }
 
-void ABalloon::Reattach()
+void ABalloon::Reattach(const bool sound)
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!parentCore)
