@@ -1,2 +1,5 @@
-2024/06/10-16:30:01.730 8664 Creating DB C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb since it was missing.
-2024/06/10-16:30:01.742 8664 Reusing MANIFEST C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2024/06/12-12:35:09.725 6414 Reusing MANIFEST C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2024/06/12-12:35:09.734 6414 Recovering log #3
+2024/06/12-12:35:09.736 6414 Level-0 table #3: started
+2024/06/12-12:35:09.743 6414 Level-0 table #3: 18863 bytes OK
+2024/06/12-12:35:09.749 6414 Delete type=0 #3
