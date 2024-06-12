@@ -35,18 +35,17 @@ void ACellSpawner::BeginPlay()
 
 	wrld = GetWorld();
 
-	triggerable = spawnTrigger->GetRelativeScale3D() != FVector(1,1,1);
-	
 	// If the current gamemode successfully casts to story mode...
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
 	{
-		active = true;
+		active = !triggerable;
 		if(!triggerable) BeginSpawn();
 		return;
 	}
 
 	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
 	if(!triggerable) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
+	else core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
 }
 
 void ACellSpawner::Overlap(AActor* otherActor)
@@ -56,20 +55,27 @@ void ACellSpawner::Overlap(AActor* otherActor)
 
 	// Only do something if the core collides (not connectors)....
 	if(otherActor->IsA<ACubeConnector>()) return;
-	if(ACubeCore* otherCore = Cast<ACubeCore>(otherActor))
+
+	APickupableMaster* other = Cast<APickupableMaster>(otherActor);
+	if(ACubeCore* otherCore = other->GetCore())
 	{
 		SpawnWithForce();
 		active = false;
 
-		otherCore->BroadcastNewCells();
+		if(otherCore) otherCore->BroadcastNewCells();
 	}
-	
+
+	else if((otherCore = Cast<ACubeCore>(other)))
+	{
+		SpawnWithForce();
+		active = false;
+
+		if(otherCore) otherCore->BroadcastNewCells();
+	}
 }
 
 ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
 {
-	if(!active) return nullptr;
-	
 	TSubclassOf<ACell> subClass;
 	switch (thingType)
 	{

@@ -88,6 +88,7 @@ protected:
 
 	UWorld* wrld;
 
+	UPROPERTY(EditInstanceOnly)
 	bool triggerable;
 	
 	ACell* Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;

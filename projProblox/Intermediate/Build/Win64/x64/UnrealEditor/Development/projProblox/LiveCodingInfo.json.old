@@ -28,7 +28,6 @@
 		"Module.projProblox.2.cpp.obj": [
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
-			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
@@ -60,6 +59,7 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
+			"CellSpawner.cpp.obj",
 			"Balloon.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
