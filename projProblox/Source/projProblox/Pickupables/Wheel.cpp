@@ -99,7 +99,7 @@ void AWheel::Attach(ACubeCore* core)
 	isAttached = true;
 }
 
-void AWheel::Reattach()
+void AWheel::Reattach(const bool sound)
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!IsValid(parentCore))

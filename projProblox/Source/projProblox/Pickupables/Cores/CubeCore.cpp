@@ -640,14 +640,14 @@ void ACubeCore::SetCanCollect(bool collectable)
 	canCollect = collectable;
 }
 
-void ACubeCore::Reattach()
+void ACubeCore::Reattach(const bool sound)
 {
 	// The previous object needs to be valid
 	if(!previousObj) return;
 	
 	hitObj = previousObj;
 	hitObj->SetCore(this);
-	hitObj->Reattach();
+	hitObj->Reattach(sound);
 	RevertAttachments();
 	
 	const FTransform objTransform = hitObj->GetActorTransform();

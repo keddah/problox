@@ -35,22 +35,24 @@ void ACellSpawner::BeginPlay()
 
 	wrld = GetWorld();
 
+	triggerable = spawnTrigger->GetRelativeScale3D() != FVector(1,1,1);
+	
 	// If the current gamemode successfully casts to story mode...
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
 	{
 		active = true;
-		if(spawnTrigger->GetRelativeLocation() == FVector::ZeroVector) BeginSpawn();
+		if(!triggerable) BeginSpawn();
 		return;
 	}
 
 	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
-	if(spawnTrigger->GetRelativeLocation() == FVector::ZeroVector) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
+	if(!triggerable) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
 }
 
 void ACellSpawner::Overlap(AActor* otherActor)
 {
 	// If the trigger's relative location is unchanged, don't do anything..
-	if(spawnTrigger->GetRelativeLocation() == FVector::ZeroVector) return;
+	if(!triggerable) return;
 
 	// Only do something if the core collides (not connectors)....
 	if(otherActor->IsA<ACubeConnector>()) return;

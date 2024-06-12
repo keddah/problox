@@ -47,5 +47,5 @@ public:
 	}
 
 	void Attach(ACubeCore* core);
-	virtual void Reattach() override;
+	virtual void Reattach(bool sound) override;
 };

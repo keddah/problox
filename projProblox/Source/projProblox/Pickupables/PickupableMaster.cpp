@@ -270,12 +270,12 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	
 	ToggleGravity();
 	SetHideIndicator(!selected);
+	
 	wasDetached = false;
-
+	savedDetachTransform = GetActorTransform();
+	
 	if(selected)
 	{
-		SetSavedTransform();
-		
 		wasDetached = isAttached;
 		Detach(false);
 		
@@ -361,11 +361,15 @@ void APickupableMaster::Detach(const bool push)
 	isAttached = false;
 }
 
-void APickupableMaster::SetSavedTransform()
+void APickupableMaster::UseSilhouetteTransform(const UStaticMeshComponent* ghost)
 {
-	Print("Saving transform...", 3)
-	if(parentCore)	savedAttachTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
-	else savedDetachTransform = GetActorTransform();
+	// If a silhouette wasn't given, use this one.
+	if(!ghost) ghost = silhouette;
+		
+	const FTransform silhouetteTransform = ghost->GetComponentTransform();
+	SetActorLocation(silhouetteTransform.GetLocation());
+	SetActorRotation(silhouetteTransform.GetRotation());
+	savedAttachTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
 }
 
 
@@ -706,7 +710,7 @@ bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
 	return false;
 }
 
-void APickupableMaster::Reattach()
+void APickupableMaster::Reattach(const bool sound)
 {
 	parentCore = Cast<ACubeCore>(previousObj);
 	if(!parentCore)
@@ -716,7 +720,7 @@ void APickupableMaster::Reattach()
 	}
 
 	AttachToActor(parentCore, attachRules, removedSocket);
-	if(soundPlayer) soundPlayer->PlayAttach();
+	if(soundPlayer && sound) soundPlayer->PlayAttach();
 	else Print("Sfx manager is invalid.....", 5)
 
 	UseSavedTransform();

@@ -25,7 +25,7 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	
 	void Attach();
 	virtual void Detach(bool push = false) override;
-	virtual void Reattach() override;
+	virtual void Reattach(bool sound) override;
 
 	UFUNCTION(BlueprintCallable)
 	void ResetBalloon(int empty);

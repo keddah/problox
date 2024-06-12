@@ -57,13 +57,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 void APlayerCharacter::Undo()
 {
 	// Stops the player from being able to spam undo/redo
-	std::tuple<FTask, bool> Ttask = history->Undo();
-	if(!undid) undid = std::get<bool>(Ttask);
-	const FTask& task = std::get<FTask>(Ttask);
-
-	// If the undo reached the end...
-	if(lastUndo == task && undid) return;
-	
+	const FTask task = history->Undo();
+		
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
@@ -72,9 +67,11 @@ void APlayerCharacter::Undo()
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
 
-	Print(task.taskName.ToString(), 5)
+	
+	// Print(task.taskName.ToString(), 5)
 	for (auto& obj : changedObjs)
 	{
+		
 		// If the task.object wasn't set... the task struct is invalid.
 		if(!IsValid(obj))
 		{
@@ -86,44 +83,48 @@ void APlayerCharacter::Undo()
 		// Manually deselect the object...
 		obj->ManualSetSelected(false);
 
+		const bool moveAttach = FVector::Dist(obj->GetActorLocation(), task.endTransform.GetLocation()) > undoRedoThreshold;
+		const bool moveDetach = FVector::Dist(obj->GetActorLocation(), task.startTransform.GetLocation()) > undoRedoThreshold;
+		PrintFloat(FVector::Dist(obj->GetActorLocation(), task.startTransform.GetLocation()), 4)
+
 		// Depending on the operation... Move back, Reattach or Detach
 		switch (task.operation)
 		{
 			// Undo the attach operation
 			case EOperations::Attach:
 				obj->Detach(true);
+				if(moveDetach)
+				{
+					obj->SetActorLocation(task.startTransform.GetLocation());
+					obj->SetActorRotation(task.startTransform.Rotator());
+				}
 				break;
 			
 			// Undo the detach operation
 			case EOperations::Detach:
-				obj->Reattach();
-				Print("Reattaching", 4)
+				obj->Reattach(moveAttach);
 				break;
 			
 			// Undo the move operation
 			case EOperations::Move:
-				obj->SetActorLocation(task.startTransform.GetLocation());
-				obj->SetActorRotation(task.startTransform.Rotator());
+				if(moveDetach || moveAttach)
+				{
+					obj->SetActorLocation(task.startTransform.GetLocation());
+					obj->SetActorRotation(task.startTransform.Rotator());
+				}
 				break;
 		}
 
-		obj->RemoveVelocity();
+		if(moveDetach || moveAttach) obj->RemoveVelocity();
 	}
-	undid = true;
 }
 
 void APlayerCharacter::Redo()
 {
 	// Stops the player from being able to spam undo/redo
-	std::tuple<FTask, bool> Ttask = history->Redo();
-	if(!redid) redid = std::get<bool>(Ttask);
-	const FTask& task = std::get<FTask>(Ttask);
-
-	// If the redo reached the end...
-	if(lastRedo == task && redid) return;
-	
-	lastRedo = task;
-	redid = true;
+	const FTask task = history->Redo();
+	history->PrintTaskIndex();
+		
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
 
 	holding = false;
@@ -142,6 +143,9 @@ void APlayerCharacter::Redo()
 			continue;
 		}
 
+		const bool moveDetach = FVector::Dist(obj->GetActorLocation(), task.startTransform.GetLocation()) > undoRedoThreshold;
+		const bool moveAttach = FVector::Dist(obj->GetActorLocation(), task.endTransform.GetLocation()) > undoRedoThreshold;
+		
 		// Manually deselect the object...
 		obj->ManualSetSelected(false);
 
@@ -150,28 +154,34 @@ void APlayerCharacter::Redo()
 		{
 			// Redo the attach operation
 		case EOperations::Attach:
-			obj->Reattach();
-			Print("Reattaching", 4)
+			obj->Reattach(moveAttach);
 			break;
 			
 			// Redo the detach operation
 		case EOperations::Detach:
 			obj->Detach(true);
+			if(moveDetach)
+			{
+				obj->SetActorLocation(task.endTransform.GetLocation());
+				obj->SetActorRotation(task.endTransform.Rotator());
+			}
 			break;
 			
 			// Redo the move operation
 		case EOperations::Move:
-			obj->SetActorLocation(task.endTransform.GetLocation());
-			obj->SetActorRotation(task.endTransform.Rotator());
+			if(moveDetach)
+			{
+				obj->SetActorLocation(task.endTransform.GetLocation());
+				obj->SetActorRotation(task.endTransform.Rotator());
+			}
 			break;
 		}
 
-		obj->RemoveVelocity();
+		if(moveDetach || moveAttach) obj->RemoveVelocity();
 	}
-	redid = true;
 }
 
-void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform)
+void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform) const
 {
 	FTask newTask;
 	if(task == "ATTACH") newTask = {task, objs, startTransform, endTransform, EOperations::Attach};
@@ -179,8 +189,6 @@ void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMa
 	if(task == "MOVE") newTask = {task, objs, startTransform, endTransform, EOperations::Move};
 	
 	history->NewAction(newTask);
-	undid = false;
-	redid = false;
 }
 
 void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)

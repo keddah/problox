@@ -87,6 +87,8 @@ protected:
 	float spawnForce = 2000;
 
 	UWorld* wrld;
+
+	bool triggerable;
 	
 	ACell* Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
 
