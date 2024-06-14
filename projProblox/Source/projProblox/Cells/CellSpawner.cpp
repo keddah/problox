@@ -57,6 +57,11 @@ void ACellSpawner::Overlap(AActor* otherActor)
 	if(otherActor->IsA<ACubeConnector>()) return;
 
 	APickupableMaster* other = Cast<APickupableMaster>(otherActor);
+
+	// The thing that collided wasn't a pickupable
+	if(!other) return;
+
+	// Try to get the pickupables core
 	if(ACubeCore* otherCore = other->GetCore())
 	{
 		SpawnWithForce();
@@ -65,6 +70,7 @@ void ACellSpawner::Overlap(AActor* otherActor)
 		if(otherCore) otherCore->BroadcastNewCells();
 	}
 
+	// Otherwise, it is the core.
 	else if((otherCore = Cast<ACubeCore>(other)))
 	{
 		SpawnWithForce();
