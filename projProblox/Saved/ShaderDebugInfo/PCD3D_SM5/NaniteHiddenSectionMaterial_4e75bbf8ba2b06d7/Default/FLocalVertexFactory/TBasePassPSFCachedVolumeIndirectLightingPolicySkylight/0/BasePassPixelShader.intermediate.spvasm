@@ -1,0 +1,1684 @@
+; SPIR-V
+; Version: 1.3
+; Generator: Google spiregg; 0
+; Bound: 1263
+; Schema: 0
+               OpCapability Shader
+               OpCapability StorageImageReadWithoutFormat
+               OpExtension "SPV_GOOGLE_hlsl_functionality1"
+               OpExtension "SPV_GOOGLE_user_type"
+          %1 = OpExtInstImport "GLSL.std.450"
+               OpMemoryModel Logical GLSL450
+               OpEntryPoint Fragment %MainPS "MainPS" %in_var_TEXCOORD10_centroid %in_var_TEXCOORD11_centroid %in_var_PRIMITIVE_ID %in_var_TEXCOORD9 %gl_FragCoord %gl_FrontFacing %out_var_SV_Target0 %out_var_SV_Target1 %out_var_SV_Target2 %out_var_SV_Target3 %out_var_SV_Target4 %out_var_SV_Target5 %gl_FragDepth
+               OpExecutionMode %MainPS OriginUpperLeft
+               OpExecutionMode %MainPS DepthReplacing
+               OpExecutionMode %MainPS DepthLess
+
+               ; Debug Information
+               OpSource HLSL 620
+               OpName %type_View "type.View"  ; id %16
+               OpMemberName %type_View 0 "View_ViewToClip"
+               OpMemberName %type_View 1 "View_SVPositionToTranslatedWorld"
+               OpMemberName %type_View 2 "View_ViewTilePosition"
+               OpMemberName %type_View 3 "View_ViewForward"
+               OpMemberName %type_View 4 "View_RelativePreViewTranslation"
+               OpMemberName %type_View 5 "View_BufferSizeAndInvSize"
+               OpMemberName %type_View 6 "View_PreExposure"
+               OpMemberName %type_View 7 "View_DiffuseOverrideParameter"
+               OpMemberName %type_View 8 "View_SpecularOverrideParameter"
+               OpMemberName %type_View 9 "View_RoughnessOverrideParameter"
+               OpMemberName %type_View 10 "View_OutOfBoundsMask"
+               OpMemberName %type_View 11 "View_CullingSign"
+               OpMemberName %type_View 12 "View_StateFrameIndexMod8"
+               OpMemberName %type_View 13 "View_UnlitViewmodeMask"
+               OpMemberName %type_View 14 "View_PrecomputedIndirectLightingColorScale"
+               OpMemberName %type_View 15 "View_SkyLightApplyPrecomputedBentNormalShadowingFlag"
+               OpMemberName %type_View 16 "View_SkyLightColor"
+               OpMemberName %type_View 17 "View_ShowDecalsMask"
+               OpMemberName %type_View 18 "View_bCheckerboardSubsurfaceProfileRendering"
+               OpMemberName %type_View 19 "View_VolumetricLightmapWorldToUVScale"
+               OpMemberName %type_View 20 "View_VolumetricLightmapWorldToUVAdd"
+               OpMemberName %type_View 21 "View_VolumetricLightmapIndirectionTextureSize"
+               OpMemberName %type_View 22 "View_VolumetricLightmapBrickSize"
+               OpMemberName %type_View 23 "View_VolumetricLightmapBrickTexelSize"
+               OpMemberName %type_View 24 "View_IndirectLightingCacheShowFlag"
+               OpMemberName %type_View 25 "View_MinRoughness"
+               OpMemberName %type_View 26 "View_bShadingEnergyConservation"
+               OpMemberName %type_View 27 "View_bShadingEnergyPreservation"
+               OpName %View "View"  ; id %17
+               OpName %type_3d_image "type.3d.image"  ; id %18
+               OpName %View_VolumetricLightmapIndirectionTexture "View_VolumetricLightmapIndirectionTexture"  ; id %19
+               OpName %type_3d_image_0 "type.3d.image"  ; id %20
+               OpName %View_DirectionalLightShadowingBrickTexture "View_DirectionalLightShadowingBrickTexture"  ; id %21
+               OpName %type_sampler "type.sampler"  ; id %22
+               OpName %View_SharedBilinearClampedSampler "View_SharedBilinearClampedSampler"  ; id %23
+               OpName %type_StructuredBuffer_v4float "type.StructuredBuffer.v4float"  ; id %24
+               OpName %View_SkyIrradianceEnvironmentMap "View_SkyIrradianceEnvironmentMap"  ; id %25
+               OpName %type_2d_image "type.2d.image"  ; id %26
+               OpName %View_ShadingEnergyGGXSpecTexture "View_ShadingEnergyGGXSpecTexture"  ; id %27
+               OpName %View_ShadingEnergySampler "View_ShadingEnergySampler"  ; id %28
+               OpName %Scene_GPUScene_GPUScenePrimitiveSceneData "Scene_GPUScene_GPUScenePrimitiveSceneData"  ; id %29
+               OpName %type_OpaqueBasePass "type.OpaqueBasePass"  ; id %30
+               OpMemberName %type_OpaqueBasePass 0 "OpaqueBasePass_Shared_UseBasePassSkylight"
+               OpMemberName %type_OpaqueBasePass 1 "OpaqueBasePass_Strata_FirstSliceStoringStrataSSSDataWithoutMRT"
+               OpMemberName %type_OpaqueBasePass 2 "OpaqueBasePass_Is24BitUnormDepthStencil"
+               OpName %OpaqueBasePass "OpaqueBasePass"  ; id %31
+               OpName %type_2d_image_array "type.2d.image.array"  ; id %32
+               OpName %OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs "OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs"  ; id %33
+               OpName %OpaqueBasePass_DBufferATexture "OpaqueBasePass_DBufferATexture"  ; id %34
+               OpName %OpaqueBasePass_DBufferBTexture "OpaqueBasePass_DBufferBTexture"  ; id %35
+               OpName %OpaqueBasePass_DBufferCTexture "OpaqueBasePass_DBufferCTexture"  ; id %36
+               OpName %OpaqueBasePass_DBufferATextureSampler "OpaqueBasePass_DBufferATextureSampler"  ; id %37
+               OpName %OpaqueBasePass_ResolvedSceneDepthTexture "OpaqueBasePass_ResolvedSceneDepthTexture"  ; id %38
+               OpName %type_IndirectLightingCache "type.IndirectLightingCache"  ; id %39
+               OpMemberName %type_IndirectLightingCache 0 "IndirectLightingCache_IndirectLightingCachePrimitiveAdd"
+               OpMemberName %type_IndirectLightingCache 1 "IndirectLightingCache_IndirectLightingCachePrimitiveScale"
+               OpMemberName %type_IndirectLightingCache 2 "IndirectLightingCache_IndirectLightingCacheMinUV"
+               OpMemberName %type_IndirectLightingCache 3 "IndirectLightingCache_IndirectLightingCacheMaxUV"
+               OpMemberName %type_IndirectLightingCache 4 "IndirectLightingCache_PointSkyBentNormal"
+               OpMemberName %type_IndirectLightingCache 5 "IndirectLightingCache_DirectionalLightShadowing"
+               OpName %IndirectLightingCache "IndirectLightingCache"  ; id %40
+               OpName %IndirectLightingCache_IndirectLightingCacheTexture0 "IndirectLightingCache_IndirectLightingCacheTexture0"  ; id %41
+               OpName %IndirectLightingCache_IndirectLightingCacheTexture1 "IndirectLightingCache_IndirectLightingCacheTexture1"  ; id %42
+               OpName %IndirectLightingCache_IndirectLightingCacheTexture2 "IndirectLightingCache_IndirectLightingCacheTexture2"  ; id %43
+               OpName %IndirectLightingCache_IndirectLightingCacheTextureSampler0 "IndirectLightingCache_IndirectLightingCacheTextureSampler0"  ; id %44
+               OpName %in_var_TEXCOORD10_centroid "in.var.TEXCOORD10_centroid"  ; id %3
+               OpName %in_var_TEXCOORD11_centroid "in.var.TEXCOORD11_centroid"  ; id %4
+               OpName %in_var_PRIMITIVE_ID "in.var.PRIMITIVE_ID"  ; id %5
+               OpName %in_var_TEXCOORD9 "in.var.TEXCOORD9"  ; id %6
+               OpName %out_var_SV_Target0 "out.var.SV_Target0"  ; id %9
+               OpName %out_var_SV_Target1 "out.var.SV_Target1"  ; id %10
+               OpName %out_var_SV_Target2 "out.var.SV_Target2"  ; id %11
+               OpName %out_var_SV_Target3 "out.var.SV_Target3"  ; id %12
+               OpName %out_var_SV_Target4 "out.var.SV_Target4"  ; id %13
+               OpName %out_var_SV_Target5 "out.var.SV_Target5"  ; id %14
+               OpName %MainPS "MainPS"  ; id %2
+               OpName %type_sampled_image "type.sampled.image"  ; id %45
+               OpName %type_sampled_image_0 "type.sampled.image"  ; id %46
+
+               ; Annotations
+               OpDecorateString %in_var_TEXCOORD10_centroid UserSemantic "TEXCOORD10_centroid"
+               OpDecorateString %in_var_TEXCOORD11_centroid UserSemantic "TEXCOORD11_centroid"
+               OpDecorateString %in_var_PRIMITIVE_ID UserSemantic "PRIMITIVE_ID"
+               OpDecorate %in_var_PRIMITIVE_ID Flat
+               OpDecorateString %in_var_TEXCOORD9 UserSemantic "TEXCOORD9"
+               OpDecorate %gl_FragCoord BuiltIn FragCoord
+               OpDecorateString %gl_FragCoord UserSemantic "SV_Position"
+               OpDecorate %gl_FragCoord Centroid
+               OpDecorate %gl_FragCoord NoPerspective
+               OpDecorate %gl_FrontFacing BuiltIn FrontFacing
+               OpDecorateString %gl_FrontFacing UserSemantic "SV_IsFrontFace"
+               OpDecorate %gl_FrontFacing Flat
+               OpDecorateString %out_var_SV_Target0 UserSemantic "SV_Target0"
+               OpDecorateString %out_var_SV_Target1 UserSemantic "SV_Target1"
+               OpDecorateString %out_var_SV_Target2 UserSemantic "SV_Target2"
+               OpDecorateString %out_var_SV_Target3 UserSemantic "SV_Target3"
+               OpDecorateString %out_var_SV_Target4 UserSemantic "SV_Target4"
+               OpDecorateString %out_var_SV_Target5 UserSemantic "SV_Target5"
+               OpDecorate %gl_FragDepth BuiltIn FragDepth
+               OpDecorateString %gl_FragDepth UserSemantic "SV_DepthLessEqual"
+               OpDecorate %in_var_TEXCOORD10_centroid Location 0
+               OpDecorate %in_var_TEXCOORD11_centroid Location 1
+               OpDecorate %in_var_PRIMITIVE_ID Location 2
+               OpDecorate %in_var_TEXCOORD9 Location 3
+               OpDecorate %out_var_SV_Target0 Location 0
+               OpDecorate %out_var_SV_Target1 Location 1
+               OpDecorate %out_var_SV_Target2 Location 2
+               OpDecorate %out_var_SV_Target3 Location 3
+               OpDecorate %out_var_SV_Target4 Location 4
+               OpDecorate %out_var_SV_Target5 Location 5
+               OpDecorate %View DescriptorSet 0
+               OpDecorate %View Binding 0
+               OpDecorate %View_VolumetricLightmapIndirectionTexture DescriptorSet 0
+               OpDecorate %View_VolumetricLightmapIndirectionTexture Binding 1
+               OpDecorate %View_DirectionalLightShadowingBrickTexture DescriptorSet 0
+               OpDecorate %View_DirectionalLightShadowingBrickTexture Binding 2
+               OpDecorate %View_SharedBilinearClampedSampler DescriptorSet 0
+               OpDecorate %View_SharedBilinearClampedSampler Binding 3
+               OpDecorate %View_SkyIrradianceEnvironmentMap DescriptorSet 0
+               OpDecorate %View_SkyIrradianceEnvironmentMap Binding 4
+               OpDecorate %View_ShadingEnergyGGXSpecTexture DescriptorSet 0
+               OpDecorate %View_ShadingEnergyGGXSpecTexture Binding 5
+               OpDecorate %View_ShadingEnergySampler DescriptorSet 0
+               OpDecorate %View_ShadingEnergySampler Binding 7
+               OpDecorate %Scene_GPUScene_GPUScenePrimitiveSceneData DescriptorSet 0
+               OpDecorate %Scene_GPUScene_GPUScenePrimitiveSceneData Binding 11
+               OpDecorate %OpaqueBasePass DescriptorSet 0
+               OpDecorate %OpaqueBasePass Binding 12
+               OpDecorate %OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs DescriptorSet 0
+               OpDecorate %OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs Binding 13
+               OpDecorate %OpaqueBasePass_DBufferATexture DescriptorSet 0
+               OpDecorate %OpaqueBasePass_DBufferATexture Binding 14
+               OpDecorate %OpaqueBasePass_DBufferBTexture DescriptorSet 0
+               OpDecorate %OpaqueBasePass_DBufferBTexture Binding 15
+               OpDecorate %OpaqueBasePass_DBufferCTexture DescriptorSet 0
+               OpDecorate %OpaqueBasePass_DBufferCTexture Binding 16
+               OpDecorate %OpaqueBasePass_DBufferATextureSampler DescriptorSet 0
+               OpDecorate %OpaqueBasePass_DBufferATextureSampler Binding 17
+               OpDecorate %OpaqueBasePass_ResolvedSceneDepthTexture DescriptorSet 0
+               OpDecorate %OpaqueBasePass_ResolvedSceneDepthTexture Binding 18
+               OpDecorate %IndirectLightingCache DescriptorSet 0
+               OpDecorate %IndirectLightingCache Binding 19
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTexture0 DescriptorSet 0
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTexture0 Binding 20
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTexture1 DescriptorSet 0
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTexture1 Binding 21
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTexture2 DescriptorSet 0
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTexture2 Binding 22
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTextureSampler0 DescriptorSet 0
+               OpDecorate %IndirectLightingCache_IndirectLightingCacheTextureSampler0 Binding 23
+               OpMemberDecorate %type_View 0 Offset 448
+               OpMemberDecorate %type_View 0 MatrixStride 16
+               OpMemberDecorate %type_View 0 ColMajor
+               OpMemberDecorate %type_View 1 Offset 704
+               OpMemberDecorate %type_View 1 MatrixStride 16
+               OpMemberDecorate %type_View 1 ColMajor
+               OpMemberDecorate %type_View 2 Offset 960
+               OpMemberDecorate %type_View 3 Offset 992
+               OpMemberDecorate %type_View 4 Offset 1152
+               OpMemberDecorate %type_View 5 Offset 2048
+               OpMemberDecorate %type_View 6 Offset 2120
+               OpMemberDecorate %type_View 7 Offset 2128
+               OpMemberDecorate %type_View 8 Offset 2144
+               OpMemberDecorate %type_View 9 Offset 2176
+               OpMemberDecorate %type_View 10 Offset 2192
+               OpMemberDecorate %type_View 11 Offset 2220
+               OpMemberDecorate %type_View 12 Offset 2260
+               OpMemberDecorate %type_View 13 Offset 2280
+               OpMemberDecorate %type_View 14 Offset 2480
+               OpMemberDecorate %type_View 15 Offset 2916
+               OpMemberDecorate %type_View 16 Offset 2928
+               OpMemberDecorate %type_View 17 Offset 3084
+               OpMemberDecorate %type_View 18 Offset 3592
+               OpMemberDecorate %type_View 19 Offset 3696
+               OpMemberDecorate %type_View 20 Offset 3712
+               OpMemberDecorate %type_View 21 Offset 3728
+               OpMemberDecorate %type_View 22 Offset 3740
+               OpMemberDecorate %type_View 23 Offset 3744
+               OpMemberDecorate %type_View 24 Offset 3756
+               OpMemberDecorate %type_View 25 Offset 3896
+               OpMemberDecorate %type_View 26 Offset 5160
+               OpMemberDecorate %type_View 27 Offset 5164
+               OpDecorate %type_View Block
+               OpDecorateString %View UserTypeGOOGLE "cbuffer"
+               OpDecorateString %View_VolumetricLightmapIndirectionTexture UserTypeGOOGLE "texture3d:<uint4>"
+               OpDecorateString %View_DirectionalLightShadowingBrickTexture UserTypeGOOGLE "texture3d:<vector<float,4> >"
+               OpDecorate %_runtimearr_v4float ArrayStride 16
+               OpMemberDecorate %type_StructuredBuffer_v4float 0 Offset 0
+               OpMemberDecorate %type_StructuredBuffer_v4float 0 NonWritable
+               OpDecorate %type_StructuredBuffer_v4float BufferBlock
+               OpDecorateString %View_SkyIrradianceEnvironmentMap UserTypeGOOGLE "structuredbuffer:<float4>"
+               OpDecorateString %View_ShadingEnergyGGXSpecTexture UserTypeGOOGLE "texture2d:<float2>"
+               OpDecorateString %Scene_GPUScene_GPUScenePrimitiveSceneData UserTypeGOOGLE "structuredbuffer:<float4>"
+               OpMemberDecorate %type_OpaqueBasePass 0 Offset 2240
+               OpMemberDecorate %type_OpaqueBasePass 1 Offset 2276
+               OpMemberDecorate %type_OpaqueBasePass 2 Offset 2416
+               OpDecorate %type_OpaqueBasePass Block
+               OpDecorateString %OpaqueBasePass UserTypeGOOGLE "cbuffer"
+               OpDecorateString %OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs UserTypeGOOGLE "rwtexture2darray:<uint>"
+               OpDecorateString %OpaqueBasePass_DBufferATexture UserTypeGOOGLE "texture2d:<vector<float,4> >"
+               OpDecorateString %OpaqueBasePass_DBufferBTexture UserTypeGOOGLE "texture2d:<vector<float,4> >"
+               OpDecorateString %OpaqueBasePass_DBufferCTexture UserTypeGOOGLE "texture2d:<vector<float,4> >"
+               OpDecorateString %OpaqueBasePass_ResolvedSceneDepthTexture UserTypeGOOGLE "texture2d:<vector<float,4> >"
+               OpMemberDecorate %type_IndirectLightingCache 0 Offset 0
+               OpMemberDecorate %type_IndirectLightingCache 1 Offset 16
+               OpMemberDecorate %type_IndirectLightingCache 2 Offset 32
+               OpMemberDecorate %type_IndirectLightingCache 3 Offset 48
+               OpMemberDecorate %type_IndirectLightingCache 4 Offset 64
+               OpMemberDecorate %type_IndirectLightingCache 5 Offset 80
+               OpDecorate %type_IndirectLightingCache Block
+               OpDecorateString %IndirectLightingCache UserTypeGOOGLE "cbuffer"
+               OpDecorateString %IndirectLightingCache_IndirectLightingCacheTexture0 UserTypeGOOGLE "texture3d:<vector<float,4> >"
+               OpDecorateString %IndirectLightingCache_IndirectLightingCacheTexture1 UserTypeGOOGLE "texture3d:<vector<float,4> >"
+               OpDecorateString %IndirectLightingCache_IndirectLightingCacheTexture2 UserTypeGOOGLE "texture3d:<vector<float,4> >"
+
+               ; Types, variables and constants
+      %float = OpTypeFloat 32
+    %v3float = OpTypeVector %float 3
+    %v4float = OpTypeVector %float 4
+%mat4v4float = OpTypeMatrix %v4float 4
+    %v2float = OpTypeVector %float 2
+       %uint = OpTypeInt 32 0
+     %v4uint = OpTypeVector %uint 4
+        %int = OpTypeInt 32 1
+     %uint_2 = OpConstant %uint 2
+     %uint_8 = OpConstant %uint 8
+     %uint_6 = OpConstant %uint 6
+      %v2int = OpTypeVector %int 2
+    %uint_32 = OpConstant %uint 32
+      %v4int = OpTypeVector %int 4
+    %float_1 = OpConstant %float 1
+       %bool = OpTypeBool
+     %uint_3 = OpConstant %uint 3
+      %int_0 = OpConstant %int 0
+      %int_1 = OpConstant %int 1
+     %uint_0 = OpConstant %uint 0
+    %float_0 = OpConstant %float 0
+         %69 = OpConstantComposite %v4float %float_0 %float_0 %float_0 %float_0
+         %70 = OpConstantComposite %v3float %float_0 %float_0 %float_0
+   %uint_512 = OpConstant %uint 512
+   %uint_256 = OpConstant %uint 256
+     %uint_7 = OpConstant %uint 7
+      %int_3 = OpConstant %int 3
+         %75 = OpConstantComposite %v4float %float_1 %float_1 %float_1 %float_1
+       %true = OpConstantTrue %bool
+     %uint_4 = OpConstant %uint 4
+         %78 = OpConstantComposite %v3float %float_1 %float_1 %float_1
+%float_0_577000022 = OpConstant %float 0.577000022
+         %80 = OpConstantComposite %v3float %float_0_577000022 %float_0_577000022 %float_0_577000022
+         %81 = OpConstantComposite %v3float %float_1 %float_1 %float_0
+         %82 = OpConstantComposite %v3float %float_0 %float_1 %float_1
+  %float_0_5 = OpConstant %float 0.5
+         %84 = OpConstantComposite %v3float %float_0_5 %float_0_5 %float_0_5
+     %uint_1 = OpConstant %uint 1
+    %float_2 = OpConstant %float 2
+%float_0_0671105608 = OpConstant %float 0.0671105608
+%float_0_00583714992 = OpConstant %float 0.00583714992
+%float_52_9829178 = OpConstant %float 52.9829178
+     %uint_5 = OpConstant %uint 5
+    %uint_11 = OpConstant %uint 11
+%float_2097152 = OpConstant %float 2097152
+%float_16777215 = OpConstant %float 16777215
+     %int_n1 = OpConstant %int -1
+     %v2uint = OpTypeVector %uint 2
+%float_0_0399999991 = OpConstant %float 0.0399999991
+    %uint_16 = OpConstant %uint 16
+    %uint_64 = OpConstant %uint 64
+    %uint_40 = OpConstant %uint 40
+     %uint_9 = OpConstant %uint 9
+    %uint_10 = OpConstant %uint 10
+        %102 = OpConstantComposite %v2float %float_0 %float_0
+  %uint_4095 = OpConstant %uint 4095
+    %uint_12 = OpConstant %uint 12
+   %uint_255 = OpConstant %uint 255
+    %uint_20 = OpConstant %uint 20
+    %uint_24 = OpConstant %uint 24
+%float_0_00390625 = OpConstant %float 0.00390625
+%_arr_v3float_uint_4 = OpTypeArray %v3float %uint_4
+%float_0_651405632 = OpConstant %float 0.651405632
+%float_0_135633335 = OpConstant %float 0.135633335
+%float_0_896269321 = OpConstant %float 0.896269321
+    %uint_41 = OpConstant %uint 41
+    %uint_14 = OpConstant %uint 14
+    %uint_18 = OpConstant %uint 18
+ %uint_65535 = OpConstant %uint 65535
+    %uint_17 = OpConstant %uint 17
+    %uint_25 = OpConstant %uint 25
+%float_1_00392163 = OpConstant %float 1.00392163
+        %120 = OpConstantComposite %v3float %float_1_00392163 %float_1_00392163 %float_1_00392163
+%float_0_0799999982 = OpConstant %float 0.0799999982
+ %uint_32768 = OpConstant %uint 32768
+  %float_127 = OpConstant %float 127
+%float_0_99000001 = OpConstant %float 0.99000001
+        %125 = OpConstantComposite %v3float %float_0_99000001 %float_0_99000001 %float_0_99000001
+%uint_4294967288 = OpConstant %uint 4294967288
+  %float_255 = OpConstant %float 255
+        %128 = OpConstantComposite %v2float %float_1 %float_1
+ %float_1023 = OpConstant %float 1023
+ %float_2047 = OpConstant %float 2047
+   %float_63 = OpConstant %float 63
+   %float_n1 = OpConstant %float -1
+ %float_1024 = OpConstant %float 1024
+        %134 = OpConstantComposite %v2float %float_1024 %float_1024
+        %135 = OpConstantComposite %v2float %float_2047 %float_2047
+%float_0_00100000005 = OpConstant %float 0.00100000005
+%float_2_04040003 = OpConstant %float 2.04040003
+%float_0_332399994 = OpConstant %float 0.332399994
+        %139 = OpConstantComposite %v3float %float_0_332399994 %float_0_332399994 %float_0_332399994
+%float_n4_79510021 = OpConstant %float -4.79510021
+%float_0_641700029 = OpConstant %float 0.641700029
+        %142 = OpConstantComposite %v3float %float_0_641700029 %float_0_641700029 %float_0_641700029
+%float_2_75519991 = OpConstant %float 2.75519991
+%float_0_690299988 = OpConstant %float 0.690299988
+        %145 = OpConstantComposite %v3float %float_0_690299988 %float_0_690299988 %float_0_690299988
+%float_0_300000012 = OpConstant %float 0.300000012
+%float_0_589999974 = OpConstant %float 0.589999974
+%float_0_109999999 = OpConstant %float 0.109999999
+        %149 = OpConstantComposite %v3float %float_0_300000012 %float_0_589999974 %float_0_109999999
+%uint_2147483647 = OpConstant %uint 2147483647
+     %v3uint = OpTypeVector %uint 3
+        %152 = OpConstantComposite %v3uint %uint_2147483647 %uint_2147483647 %uint_2147483647
+   %float_50 = OpConstant %float 50
+%float_0_488602996 = OpConstant %float 0.488602996
+%float_0_00313066994 = OpConstant %float 0.00313066994
+%float_12_9200001 = OpConstant %float 12.9200001
+%float_0_416666657 = OpConstant %float 0.416666657
+%float_1_05499995 = OpConstant %float 1.05499995
+  %type_View = OpTypeStruct %mat4v4float %mat4v4float %v3float %v3float %v3float %v4float %float %v4float %v4float %v2float %float %float %uint %float %v3float %float %v4float %float %float %v3float %v3float %v3float %float %v3float %float %float %uint %uint
+%_ptr_Uniform_type_View = OpTypePointer Uniform %type_View
+%type_3d_image = OpTypeImage %uint 3D 2 0 0 1 Unknown
+%_ptr_UniformConstant_type_3d_image = OpTypePointer UniformConstant %type_3d_image
+%type_3d_image_0 = OpTypeImage %float 3D 2 0 0 1 Unknown
+%_ptr_UniformConstant_type_3d_image_0 = OpTypePointer UniformConstant %type_3d_image_0
+%type_sampler = OpTypeSampler
+%_ptr_UniformConstant_type_sampler = OpTypePointer UniformConstant %type_sampler
+%_runtimearr_v4float = OpTypeRuntimeArray %v4float
+%type_StructuredBuffer_v4float = OpTypeStruct %_runtimearr_v4float
+%_ptr_Uniform_type_StructuredBuffer_v4float = OpTypePointer Uniform %type_StructuredBuffer_v4float
+%type_2d_image = OpTypeImage %float 2D 2 0 0 1 Unknown
+%_ptr_UniformConstant_type_2d_image = OpTypePointer UniformConstant %type_2d_image
+      %v3int = OpTypeVector %int 3
+%type_OpaqueBasePass = OpTypeStruct %uint %int %int
+%_ptr_Uniform_type_OpaqueBasePass = OpTypePointer Uniform %type_OpaqueBasePass
+%type_2d_image_array = OpTypeImage %uint 2D 2 1 0 2 R32ui
+%_ptr_UniformConstant_type_2d_image_array = OpTypePointer UniformConstant %type_2d_image_array
+%type_IndirectLightingCache = OpTypeStruct %v3float %v3float %v3float %v3float %v4float %float
+%_ptr_Uniform_type_IndirectLightingCache = OpTypePointer Uniform %type_IndirectLightingCache
+%_ptr_Input_v4float = OpTypePointer Input %v4float
+%_ptr_Input_uint = OpTypePointer Input %uint
+%_ptr_Input_v3float = OpTypePointer Input %v3float
+%_ptr_Input_bool = OpTypePointer Input %bool
+%_ptr_Output_v4float = OpTypePointer Output %v4float
+%_ptr_Output_uint = OpTypePointer Output %uint
+%_ptr_Output_float = OpTypePointer Output %float
+       %void = OpTypeVoid
+        %177 = OpTypeFunction %void
+%_ptr_Function_v3float = OpTypePointer Function %v3float
+%_ptr_Uniform_uint = OpTypePointer Uniform %uint
+%_ptr_Uniform_float = OpTypePointer Uniform %float
+     %v4bool = OpTypeVector %bool 4
+     %v3bool = OpTypeVector %bool 3
+%_ptr_Uniform_int = OpTypePointer Uniform %int
+%_ptr_Uniform_v4float = OpTypePointer Uniform %v4float
+%_ptr_Uniform_mat4v4float = OpTypePointer Uniform %mat4v4float
+%_ptr_Uniform_v3float = OpTypePointer Uniform %v3float
+%_ptr_Uniform_v2float = OpTypePointer Uniform %v2float
+%type_sampled_image = OpTypeSampledImage %type_2d_image
+     %v2bool = OpTypeVector %bool 2
+%type_sampled_image_0 = OpTypeSampledImage %type_3d_image_0
+       %View = OpVariable %_ptr_Uniform_type_View Uniform
+%View_VolumetricLightmapIndirectionTexture = OpVariable %_ptr_UniformConstant_type_3d_image UniformConstant
+%View_DirectionalLightShadowingBrickTexture = OpVariable %_ptr_UniformConstant_type_3d_image_0 UniformConstant
+%View_SharedBilinearClampedSampler = OpVariable %_ptr_UniformConstant_type_sampler UniformConstant
+%View_SkyIrradianceEnvironmentMap = OpVariable %_ptr_Uniform_type_StructuredBuffer_v4float Uniform
+%View_ShadingEnergyGGXSpecTexture = OpVariable %_ptr_UniformConstant_type_2d_image UniformConstant
+%View_ShadingEnergySampler = OpVariable %_ptr_UniformConstant_type_sampler UniformConstant
+%Scene_GPUScene_GPUScenePrimitiveSceneData = OpVariable %_ptr_Uniform_type_StructuredBuffer_v4float Uniform
+%OpaqueBasePass = OpVariable %_ptr_Uniform_type_OpaqueBasePass Uniform
+%OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs = OpVariable %_ptr_UniformConstant_type_2d_image_array UniformConstant
+%OpaqueBasePass_DBufferATexture = OpVariable %_ptr_UniformConstant_type_2d_image UniformConstant
+%OpaqueBasePass_DBufferBTexture = OpVariable %_ptr_UniformConstant_type_2d_image UniformConstant
+%OpaqueBasePass_DBufferCTexture = OpVariable %_ptr_UniformConstant_type_2d_image UniformConstant
+%OpaqueBasePass_DBufferATextureSampler = OpVariable %_ptr_UniformConstant_type_sampler UniformConstant
+%OpaqueBasePass_ResolvedSceneDepthTexture = OpVariable %_ptr_UniformConstant_type_2d_image UniformConstant
+%IndirectLightingCache = OpVariable %_ptr_Uniform_type_IndirectLightingCache Uniform
+%IndirectLightingCache_IndirectLightingCacheTexture0 = OpVariable %_ptr_UniformConstant_type_3d_image_0 UniformConstant
+%IndirectLightingCache_IndirectLightingCacheTexture1 = OpVariable %_ptr_UniformConstant_type_3d_image_0 UniformConstant
+%IndirectLightingCache_IndirectLightingCacheTexture2 = OpVariable %_ptr_UniformConstant_type_3d_image_0 UniformConstant
+%IndirectLightingCache_IndirectLightingCacheTextureSampler0 = OpVariable %_ptr_UniformConstant_type_sampler UniformConstant
+%in_var_TEXCOORD10_centroid = OpVariable %_ptr_Input_v4float Input
+%in_var_TEXCOORD11_centroid = OpVariable %_ptr_Input_v4float Input
+%in_var_PRIMITIVE_ID = OpVariable %_ptr_Input_uint Input
+%in_var_TEXCOORD9 = OpVariable %_ptr_Input_v3float Input
+%gl_FragCoord = OpVariable %_ptr_Input_v4float Input
+%gl_FrontFacing = OpVariable %_ptr_Input_bool Input
+%out_var_SV_Target0 = OpVariable %_ptr_Output_v4float Output
+%out_var_SV_Target1 = OpVariable %_ptr_Output_v4float Output
+%out_var_SV_Target2 = OpVariable %_ptr_Output_uint Output
+%out_var_SV_Target3 = OpVariable %_ptr_Output_uint Output
+%out_var_SV_Target4 = OpVariable %_ptr_Output_uint Output
+%out_var_SV_Target5 = OpVariable %_ptr_Output_uint Output
+%gl_FragDepth = OpVariable %_ptr_Output_float Output
+%_ptr_Function__arr_v3float_uint_4 = OpTypePointer Function %_arr_v3float_uint_4
+        %190 = OpConstantNull %uint
+        %191 = OpConstantNull %v3float
+        %192 = OpConstantNull %float
+%float_32_6650009 = OpConstant %float 32.6650009
+%float_11_8149996 = OpConstant %float 11.8149996
+        %195 = OpConstantComposite %v2float %float_32_6650009 %float_11_8149996
+        %196 = OpConstantComposite %v2float %float_0_0671105608 %float_0_00583714992
+%float_0_00787401572 = OpConstant %float 0.00787401572
+%float_32256 = OpConstant %float 32256
+        %199 = OpConstantComposite %v3float %float_32256 %float_32256 %float_32256
+%float_0_00200000009 = OpConstant %float 0.00200000009
+%uint_4294902015 = OpConstant %uint 4294902015
+%float_n0_488602996 = OpConstant %float -0.488602996
+%float_2_09439516 = OpConstant %float 2.09439516
+        %204 = OpConstantComposite %v3uint %uint_1 %uint_1 %uint_1
+    %uint_72 = OpConstant %uint 72
+%float_3_125 = OpConstant %float 3.125
+ %float_12_5 = OpConstant %float 12.5
+%float_4194_3042 = OpConstant %float 4194.3042
+%float_0_0625 = OpConstant %float 0.0625
+%float_0_0158730168 = OpConstant %float 0.0158730168
+%float_0_318309873 = OpConstant %float 0.318309873
+        %212 = OpConstantComposite %v3float %float_0_318309873 %float_0_318309873 %float_0_318309873
+%float_0_999600053 = OpConstant %float 0.999600053
+        %214 = OpConstantComposite %v3float %float_0_999600053 %float_0_999600053 %float_0_999600053
+%float_n0_0549999997 = OpConstant %float -0.0549999997
+        %216 = OpUndef %v3float
+        %217 = OpConstantComposite %v4float %float_0_651405632 %float_0_135633335 %float_0_896269321 %192
+        %218 = OpConstantComposite %v4float %float_0_0399999991 %float_0_0399999991 %float_0_0399999991 %192
+%float_0_886227548 = OpConstant %float 0.886227548
+        %220 = OpUndef %float
+        %221 = OpUndef %v4float
+        %222 = OpUndef %v2float
+        %223 = OpConstantComposite %v3float %float_0_0399999991 %float_0_0399999991 %float_0_0399999991
+        %224 = OpConstantComposite %v3bool %true %true %true
+    %uint_19 = OpConstant %uint 19
+    %uint_21 = OpConstant %uint 21
+    %uint_22 = OpConstant %uint 22
+    %uint_23 = OpConstant %uint 23
+    %uint_26 = OpConstant %uint 26
+    %uint_27 = OpConstant %uint 27
+    %uint_15 = OpConstant %uint 15
+    %uint_13 = OpConstant %uint 13
+
+               ; Function MainPS
+     %MainPS = OpFunction %void None %177
+        %233 = OpLabel
+        %234 = OpVariable %_ptr_Function__arr_v3float_uint_4 Function
+        %235 = OpVariable %_ptr_Function__arr_v3float_uint_4 Function
+        %236 = OpLoad %v4float %in_var_TEXCOORD11_centroid
+        %237 = OpLoad %uint %in_var_PRIMITIVE_ID
+        %238 = OpLoad %v4float %gl_FragCoord
+        %239 = OpCompositeExtract %float %238 3
+        %240 = OpFDiv %float %float_1 %239
+        %241 = OpLoad %bool %gl_FrontFacing
+        %242 = OpAccessChain %_ptr_Uniform_mat4v4float %View %uint_0
+        %243 = OpLoad %mat4v4float %242
+        %244 = OpAccessChain %_ptr_Uniform_mat4v4float %View %uint_1
+        %245 = OpLoad %mat4v4float %244
+        %246 = OpAccessChain %_ptr_Uniform_v3float %View %uint_2
+        %247 = OpLoad %v3float %246
+        %248 = OpAccessChain %_ptr_Uniform_v3float %View %uint_3
+        %249 = OpLoad %v3float %248
+        %250 = OpAccessChain %_ptr_Uniform_v3float %View %uint_4
+        %251 = OpLoad %v3float %250
+        %252 = OpAccessChain %_ptr_Uniform_v4float %View %uint_7
+        %253 = OpLoad %v4float %252
+        %254 = OpAccessChain %_ptr_Uniform_v4float %View %uint_8
+        %255 = OpLoad %v4float %254
+        %256 = OpAccessChain %_ptr_Uniform_v2float %View %uint_9
+        %257 = OpLoad %v2float %256
+        %258 = OpAccessChain %_ptr_Uniform_float %View %uint_11
+        %259 = OpLoad %float %258
+        %260 = OpAccessChain %_ptr_Uniform_v4float %View %uint_16
+        %261 = OpLoad %v4float %260
+        %262 = OpVectorShuffle %v3float %236 %236 0 1 2
+        %263 = OpVectorShuffle %v2float %238 %238 0 1
+        %264 = OpCompositeExtract %float %238 2
+        %265 = OpCompositeConstruct %v4float %220 %220 %264 %float_1
+        %266 = OpVectorTimesScalar %v4float %265 %240
+        %267 = OpCompositeExtract %float %238 0
+        %268 = OpCompositeExtract %float %238 1
+        %269 = OpCompositeConstruct %v4float %267 %268 %264 %float_1
+        %270 = OpMatrixTimesVector %v4float %245 %269
+        %271 = OpVectorShuffle %v3float %270 %270 0 1 2
+        %272 = OpCompositeExtract %float %270 3
+        %273 = OpCompositeConstruct %v3float %272 %272 %272
+        %274 = OpFDiv %v3float %271 %273
+        %275 = OpFSub %v3float %274 %251
+        %276 = OpCompositeExtract %float %243 3 3
+        %277 = OpFOrdGreaterThanEqual %bool %276 %float_1
+               OpSelectionMerge %278 None
+               OpBranchConditional %277 %279 %280
+        %280 = OpLabel
+        %281 = OpFNegate %v3float %274
+        %282 = OpExtInst %v3float %1 Normalize %281
+               OpBranch %278
+        %279 = OpLabel
+        %283 = OpFNegate %v3float %249
+               OpBranch %278
+        %278 = OpLabel
+        %284 = OpPhi %v3float %283 %279 %282 %280
+        %285 = OpIMul %uint %237 %uint_41
+        %286 = OpAccessChain %_ptr_Uniform_v4float %Scene_GPUScene_GPUScenePrimitiveSceneData %int_0 %285
+        %287 = OpLoad %v4float %286
+        %288 = OpCompositeExtract %float %287 0
+        %289 = OpBitcast %uint %288
+        %290 = OpBitwiseAnd %uint %289 %uint_64
+        %291 = OpINotEqual %bool %290 %uint_0
+        %292 = OpSelect %float %291 %float_n1 %float_1
+        %293 = OpFMul %float %259 %292
+        %294 = OpSelect %int %241 %int_1 %int_n1
+        %295 = OpConvertSToF %float %294
+        %296 = OpFMul %float %293 %295
+        %297 = OpExtInst %float %1 NMax %float_0_5 %float_0
+        %298 = OpCompositeInsert %v4float %297 %217 3
+        %299 = OpVectorTimesScalar %v3float %262 %296
+        %300 = OpCompositeExtract %float %266 2
+        %301 = OpCompositeExtract %float %266 3
+        %302 = OpFAdd %float %301 %float_0_651405632
+        %303 = OpFDiv %float %300 %302
+        %304 = OpExtInst %float %1 NMin %303 %264
+        %305 = OpFNegate %float %304
+        %306 = OpExtInst %float %1 Fma %305 %301 %300
+        %307 = OpFDiv %float %306 %304
+        %308 = OpFNegate %v3float %284
+        %309 = OpVectorTimesScalar %v3float %308 %307
+        %310 = OpFAdd %v3float %275 %309
+        %311 = OpAccessChain %_ptr_Uniform_uint %View %uint_12
+        %312 = OpLoad %uint %311
+        %313 = OpConvertUToF %float %312
+        %314 = OpVectorTimesScalar %v2float %195 %313
+        %315 = OpFAdd %v2float %263 %314
+        %316 = OpDot %float %315 %196
+        %317 = OpExtInst %float %1 Fract %316
+        %318 = OpFMul %float %float_52_9829178 %317
+        %319 = OpExtInst %float %1 Fract %318
+        %320 = OpLoad %v4float %286
+        %321 = OpCompositeExtract %float %320 0
+        %322 = OpBitcast %uint %321
+        %323 = OpBitwiseAnd %uint %322 %uint_512
+        %324 = OpINotEqual %bool %323 %uint_0
+        %325 = OpSelect %uint %324 %uint_32 %uint_0
+        %326 = OpBitwiseOr %uint %uint_1 %325
+        %327 = OpLoad %v4float %286
+        %328 = OpCompositeExtract %float %327 0
+        %329 = OpBitcast %uint %328
+        %330 = OpBitwiseAnd %uint %329 %uint_256
+        %331 = OpINotEqual %bool %330 %uint_0
+        %332 = OpSelect %uint %331 %uint_64 %uint_0
+        %333 = OpBitwiseOr %uint %326 %332
+        %334 = OpLoad %v4float %286
+        %335 = OpCompositeExtract %float %334 0
+        %336 = OpBitcast %uint %335
+        %337 = OpBitwiseAnd %uint %336 %uint_8
+        %338 = OpINotEqual %bool %337 %uint_0
+        %339 = OpAccessChain %_ptr_Uniform_float %View %uint_17
+        %340 = OpLoad %float %339
+        %341 = OpFOrdGreaterThan %bool %340 %float_0
+        %342 = OpLogicalAnd %bool %338 %341
+               OpSelectionMerge %343 Flatten
+               OpBranchConditional %342 %344 %343
+        %344 = OpLabel
+        %345 = OpAccessChain %_ptr_Uniform_v4float %View %uint_5
+        %346 = OpLoad %v4float %345
+        %347 = OpVectorShuffle %v2float %346 %346 2 3
+        %348 = OpFMul %v2float %263 %347
+        %349 = OpLoad %type_2d_image %OpaqueBasePass_DBufferATexture
+        %350 = OpLoad %type_sampler %OpaqueBasePass_DBufferATextureSampler
+        %351 = OpSampledImage %type_sampled_image %349 %350
+        %352 = OpImageSampleExplicitLod %v4float %351 %348 Lod %float_0
+        %353 = OpLoad %type_2d_image %OpaqueBasePass_DBufferBTexture
+        %354 = OpSampledImage %type_sampled_image %353 %350
+        %355 = OpImageSampleExplicitLod %v4float %354 %348 Lod %float_0
+        %356 = OpLoad %type_2d_image %OpaqueBasePass_DBufferCTexture
+        %357 = OpSampledImage %type_sampled_image %356 %350
+        %358 = OpImageSampleExplicitLod %v4float %357 %348 Lod %float_0
+        %359 = OpCompositeExtract %float %352 3
+        %360 = OpCompositeExtract %float %355 3
+        %361 = OpCompositeExtract %float %358 3
+        %362 = OpVectorShuffle %v3float %352 %352 0 1 2
+        %363 = OpVectorShuffle %v3float %355 %355 0 1 2
+        %364 = OpVectorTimesScalar %v3float %363 %float_2
+        %365 = OpFSub %v3float %364 %120
+        %366 = OpCompositeExtract %float %358 0
+        %367 = OpCompositeExtract %float %358 1
+        %368 = OpCompositeExtract %float %358 2
+               OpSelectionMerge %369 None
+               OpSwitch %uint_0 %370
+        %370 = OpLabel
+        %371 = OpFOrdNotEqual %v3bool %365 %70
+        %372 = OpAny %bool %371
+        %373 = OpFOrdLessThan %bool %360 %float_1
+        %374 = OpLogicalOr %bool %372 %373
+               OpSelectionMerge %375 None
+               OpBranchConditional %374 %376 %375
+        %376 = OpLabel
+        %377 = OpVectorTimesScalar %v3float %299 %360
+        %378 = OpFAdd %v3float %377 %365
+        %379 = OpExtInst %v3float %1 Normalize %378
+               OpBranch %375
+        %375 = OpLabel
+        %380 = OpPhi %v3float %299 %370 %379 %376
+        %381 = OpFOrdGreaterThan %v3bool %362 %70
+        %382 = OpAny %bool %381
+        %383 = OpFOrdLessThan %bool %359 %float_1
+        %384 = OpLogicalOr %bool %382 %383
+        %385 = OpFOrdGreaterThan %bool %366 %float_0
+        %386 = OpFOrdGreaterThan %bool %367 %float_0
+        %387 = OpLogicalOr %bool %385 %386
+        %388 = OpFOrdGreaterThan %bool %368 %float_0
+        %389 = OpLogicalOr %bool %387 %388
+        %390 = OpFOrdLessThan %bool %361 %float_1
+        %391 = OpLogicalOr %bool %389 %390
+        %392 = OpLogicalNot %bool %384
+        %393 = OpLogicalNot %bool %391
+        %394 = OpLogicalAnd %bool %392 %393
+               OpSelectionMerge %395 None
+               OpBranchConditional %394 %396 %395
+        %396 = OpLabel
+               OpBranch %369
+        %395 = OpLabel
+        %397 = OpExtInst %float %1 NMin %float_0_0399999991 %float_0_0399999991
+        %398 = OpExtInst %float %1 NMin %float_0_0399999991 %397
+        %399 = OpFSub %float %398 %float_0_0799999982
+        %400 = OpFMul %float %399 %float_3_125
+        %401 = OpExtInst %float %1 FClamp %400 %float_0 %float_1
+        %402 = OpCompositeConstruct %v3float %366 %366 %366
+        %403 = OpExtInst %v3float %1 FMix %362 %70 %402
+        %404 = OpFMul %float %float_0_0799999982 %367
+        %405 = OpCompositeConstruct %v3float %404 %404 %404
+        %406 = OpExtInst %v3float %1 FMix %405 %362 %402
+        %407 = OpLogicalOr %bool %384 %391
+               OpSelectionMerge %408 None
+               OpBranchConditional %407 %409 %408
+        %409 = OpLabel
+        %410 = OpVectorTimesScalar %v3float %223 %359
+        %411 = OpFAdd %v3float %410 %406
+        %412 = OpVectorShuffle %v4float %218 %411 4 5 6 3
+               OpBranch %408
+        %408 = OpLabel
+        %413 = OpPhi %v4float %218 %395 %412 %409
+               OpSelectionMerge %414 None
+               OpBranchConditional %384 %415 %414
+        %415 = OpLabel
+        %416 = OpVectorShuffle %v3float %298 %298 0 1 2
+        %417 = OpVectorTimesScalar %v3float %416 %359
+        %418 = OpFAdd %v3float %417 %403
+        %419 = OpVectorShuffle %v4float %298 %418 4 5 6 3
+               OpBranch %414
+        %414 = OpLabel
+        %420 = OpPhi %v4float %298 %408 %419 %415
+               OpSelectionMerge %421 None
+               OpBranchConditional %391 %422 %421
+        %422 = OpLabel
+        %423 = OpExtInst %float %1 Fma %401 %361 %366
+        %424 = OpFOrdGreaterThanEqual %bool %423 %401
+               OpSelectionMerge %425 None
+               OpBranchConditional %424 %426 %427
+        %427 = OpLabel
+        %428 = OpFSub %float %423 %401
+        %429 = OpFNegate %float %428
+        %430 = OpCompositeExtract %float %413 0
+        %431 = OpCompositeExtract %float %413 1
+        %432 = OpCompositeExtract %float %413 2
+        %433 = OpExtInst %float %1 NMin %431 %432
+        %434 = OpExtInst %float %1 NMin %430 %433
+        %435 = OpFMul %float %434 %float_12_5
+        %436 = OpExtInst %float %1 FClamp %435 %float_0 %float_1
+        %437 = OpFMul %float %float_0_0799999982 %436
+        %438 = OpVectorShuffle %v3float %413 %413 0 1 2
+        %439 = OpCompositeConstruct %v3float %437 %437 %437
+        %440 = OpFSub %v3float %438 %439
+        %441 = OpExtInst %v3float %1 FClamp %440 %70 %78
+        %442 = OpVectorTimesScalar %v3float %441 %429
+        %443 = OpVectorShuffle %v3float %420 %420 0 1 2
+        %444 = OpFAdd %v3float %443 %442
+        %445 = OpVectorShuffle %v4float %420 %444 4 5 6 3
+        %446 = OpFSub %v3float %438 %442
+        %447 = OpVectorShuffle %v4float %413 %446 4 5 6 3
+               OpBranch %425
+        %426 = OpLabel
+        %448 = OpFSub %float %423 %401
+        %449 = OpVectorShuffle %v3float %420 %420 0 1 2
+        %450 = OpVectorTimesScalar %v3float %449 %448
+        %451 = OpVectorShuffle %v3float %413 %413 0 1 2
+        %452 = OpFAdd %v3float %451 %450
+        %453 = OpVectorShuffle %v4float %413 %452 4 5 6 3
+        %454 = OpFSub %v3float %449 %450
+        %455 = OpVectorShuffle %v4float %420 %454 4 5 6 3
+               OpBranch %425
+        %425 = OpLabel
+        %456 = OpPhi %v4float %447 %427 %453 %426
+        %457 = OpPhi %v4float %445 %427 %455 %426
+        %458 = OpCompositeExtract %float %457 3
+        %459 = OpExtInst %float %1 Fma %458 %361 %368
+        %460 = OpCompositeInsert %v4float %459 %457 3
+        %461 = OpCompositeExtract %float %456 3
+        %462 = OpFMul %float %461 %361
+        %463 = OpCompositeInsert %v4float %462 %456 3
+               OpBranch %421
+        %421 = OpLabel
+        %464 = OpPhi %v4float %420 %414 %460 %425
+        %465 = OpPhi %v4float %413 %414 %463 %425
+        %466 = OpPhi %uint %190 %414 %uint_0 %425
+               OpBranch %369
+        %369 = OpLabel
+        %467 = OpPhi %v4float %298 %396 %464 %421
+        %468 = OpPhi %v4float %218 %396 %465 %421
+        %469 = OpPhi %uint %190 %396 %466 %421
+               OpBranch %343
+        %343 = OpLabel
+        %470 = OpPhi %v4float %298 %278 %467 %369
+        %471 = OpPhi %v4float %218 %278 %468 %369
+        %472 = OpPhi %uint %190 %278 %469 %369
+        %473 = OpPhi %v3float %299 %278 %380 %369
+        %474 = OpLoad %v4float %286
+        %475 = OpCompositeExtract %float %474 0
+        %476 = OpBitcast %uint %475
+        %477 = OpBitwiseAnd %uint %476 %uint_2
+        %478 = OpINotEqual %bool %477 %uint_0
+        %479 = OpAccessChain %_ptr_Uniform_float %View %uint_24
+        %480 = OpLoad %float %479
+        %481 = OpFOrdGreaterThan %bool %480 %float_0
+        %482 = OpLogicalAnd %bool %478 %481
+               OpSelectionMerge %483 None
+               OpBranchConditional %482 %484 %483
+        %484 = OpLabel
+        %485 = OpAccessChain %_ptr_Uniform_float %IndirectLightingCache %uint_5
+        %486 = OpLoad %float %485
+               OpBranch %483
+        %483 = OpLabel
+        %487 = OpPhi %float %float_1 %343 %486 %484
+        %488 = OpLoad %v4float %286
+        %489 = OpCompositeExtract %float %488 0
+        %490 = OpBitcast %uint %489
+        %491 = OpBitwiseAnd %uint %490 %uint_4
+        %492 = OpINotEqual %bool %491 %uint_0
+               OpSelectionMerge %493 DontFlatten
+               OpBranchConditional %492 %494 %493
+        %494 = OpLabel
+        %495 = OpVectorTimesScalar %v3float %247 %float_2097152
+        %496 = OpFAdd %v3float %495 %310
+        %497 = OpAccessChain %_ptr_Uniform_v3float %View %uint_19
+        %498 = OpLoad %v3float %497
+        %499 = OpAccessChain %_ptr_Uniform_v3float %View %uint_20
+        %500 = OpLoad %v3float %499
+        %501 = OpExtInst %v3float %1 Fma %496 %498 %500
+        %502 = OpExtInst %v3float %1 FClamp %501 %70 %125
+        %503 = OpAccessChain %_ptr_Uniform_v3float %View %uint_21
+        %504 = OpLoad %v3float %503
+        %505 = OpFMul %v3float %502 %504
+        %506 = OpCompositeExtract %float %505 0
+        %507 = OpCompositeExtract %float %505 1
+        %508 = OpCompositeExtract %float %505 2
+        %509 = OpConvertFToS %int %506
+        %510 = OpConvertFToS %int %507
+        %511 = OpConvertFToS %int %508
+        %512 = OpCompositeConstruct %v4int %509 %510 %511 %int_0
+        %513 = OpVectorShuffle %v3int %512 %512 0 1 2
+        %514 = OpLoad %type_3d_image %View_VolumetricLightmapIndirectionTexture
+        %515 = OpImageFetch %v4uint %514 %513 Lod %int_0
+        %516 = OpConvertUToF %v4float %515
+        %517 = OpAccessChain %_ptr_Uniform_float %View %uint_22
+        %518 = OpLoad %float %517
+        %519 = OpFAdd %float %518 %float_1
+        %520 = OpVectorShuffle %v3float %516 %516 0 1 2
+        %521 = OpVectorTimesScalar %v3float %520 %519
+        %522 = OpCompositeExtract %float %516 3
+        %523 = OpCompositeConstruct %v3float %522 %522 %522
+        %524 = OpFDiv %v3float %505 %523
+        %525 = OpExtInst %v3float %1 Fract %524
+        %526 = OpVectorTimesScalar %v3float %525 %518
+        %527 = OpFAdd %v3float %521 %526
+        %528 = OpFAdd %v3float %527 %84
+        %529 = OpAccessChain %_ptr_Uniform_v3float %View %uint_23
+        %530 = OpLoad %v3float %529
+        %531 = OpFMul %v3float %528 %530
+        %532 = OpLoad %type_3d_image_0 %View_DirectionalLightShadowingBrickTexture
+        %533 = OpLoad %type_sampler %View_SharedBilinearClampedSampler
+        %534 = OpSampledImage %type_sampled_image_0 %532 %533
+        %535 = OpImageSampleExplicitLod %v4float %534 %531 Lod %float_0
+        %536 = OpCompositeExtract %float %535 0
+               OpBranch %493
+        %493 = OpLabel
+        %537 = OpPhi %float %487 %483 %536 %494
+        %538 = OpCompositeConstruct %v4float %537 %float_1 %float_1 %float_1
+        %539 = OpFOrdEqual %v4bool %538 %69
+        %540 = OpAll %bool %539
+        %541 = OpFOrdEqual %v4bool %538 %75
+        %542 = OpAll %bool %541
+        %543 = OpLogicalNot %bool %540
+        %544 = OpLogicalNot %bool %542
+        %545 = OpLogicalAnd %bool %543 %544
+               OpSelectionMerge %546 None
+               OpBranchConditional %545 %547 %548
+        %548 = OpLabel
+               OpSelectionMerge %549 None
+               OpBranchConditional %540 %550 %551
+        %551 = OpLabel
+               OpSelectionMerge %552 None
+               OpBranchConditional %542 %553 %552
+        %553 = OpLabel
+        %554 = OpBitwiseOr %uint %333 %uint_0
+        %555 = OpBitwiseOr %uint %554 %uint_0
+               OpBranch %552
+        %552 = OpLabel
+        %556 = OpPhi %uint %333 %551 %555 %553
+               OpBranch %549
+        %550 = OpLabel
+        %557 = OpBitwiseOr %uint %333 %uint_0
+        %558 = OpBitwiseOr %uint %557 %uint_16
+               OpBranch %549
+        %549 = OpLabel
+        %559 = OpPhi %uint %558 %550 %556 %552
+               OpBranch %546
+        %547 = OpLabel
+        %560 = OpBitwiseOr %uint %333 %uint_8
+               OpBranch %546
+        %546 = OpLabel
+        %561 = OpPhi %uint %560 %547 %559 %549
+        %562 = OpAccessChain %_ptr_Uniform_float %View %uint_10
+        %563 = OpLoad %float %562
+        %564 = OpFOrdGreaterThan %bool %563 %float_0
+               OpSelectionMerge %565 DontFlatten
+               OpBranchConditional %564 %566 %565
+        %566 = OpLabel
+        %567 = OpIAdd %uint %285 %uint_1
+        %568 = OpAccessChain %_ptr_Uniform_v4float %Scene_GPUScene_GPUScenePrimitiveSceneData %int_0 %567
+        %569 = OpLoad %v4float %568
+        %570 = OpVectorShuffle %v3float %569 %569 0 1 2
+        %571 = OpIAdd %uint %285 %uint_18
+        %572 = OpAccessChain %_ptr_Uniform_v4float %Scene_GPUScene_GPUScenePrimitiveSceneData %int_0 %571
+        %573 = OpLoad %v4float %572
+        %574 = OpIAdd %uint %285 %uint_17
+        %575 = OpAccessChain %_ptr_Uniform_v4float %Scene_GPUScene_GPUScenePrimitiveSceneData %int_0 %574
+        %576 = OpLoad %v4float %575
+        %577 = OpCompositeExtract %float %576 3
+        %578 = OpVectorShuffle %v3float %573 %573 0 1 2
+        %579 = OpIAdd %uint %285 %uint_24
+        %580 = OpAccessChain %_ptr_Uniform_v4float %Scene_GPUScene_GPUScenePrimitiveSceneData %int_0 %579
+        %581 = OpLoad %v4float %580
+        %582 = OpCompositeExtract %float %581 3
+        %583 = OpIAdd %uint %285 %uint_25
+        %584 = OpAccessChain %_ptr_Uniform_v4float %Scene_GPUScene_GPUScenePrimitiveSceneData %int_0 %583
+        %585 = OpLoad %v4float %584
+        %586 = OpCompositeExtract %float %585 3
+        %587 = OpCompositeConstruct %v3float %577 %582 %586
+        %588 = OpFSub %v3float %247 %570
+        %589 = OpFSub %v3float %310 %578
+        %590 = OpVectorTimesScalar %v3float %588 %float_2097152
+        %591 = OpFAdd %v3float %590 %589
+        %592 = OpExtInst %v3float %1 FAbs %591
+        %593 = OpFAdd %v3float %587 %78
+        %594 = OpFOrdGreaterThan %v3bool %592 %593
+        %595 = OpAny %bool %594
+               OpSelectionMerge %596 None
+               OpBranchConditional %595 %597 %598
+        %598 = OpLabel
+               OpBranch %596
+        %597 = OpLabel
+        %599 = OpFMul %v3float %247 %80
+        %600 = OpFMul %v3float %310 %80
+        %601 = OpCompositeExtract %float %599 0
+        %602 = OpCompositeExtract %float %600 0
+        %603 = OpCompositeExtract %float %599 1
+        %604 = OpCompositeExtract %float %600 1
+        %605 = OpFAdd %float %601 %603
+        %606 = OpFAdd %float %602 %604
+        %607 = OpCompositeExtract %float %599 2
+        %608 = OpCompositeExtract %float %600 2
+        %609 = OpFAdd %float %605 %607
+        %610 = OpFAdd %float %606 %608
+        %611 = OpFMul %float %609 %float_4194_3042
+        %612 = OpExtInst %float %1 Fract %611
+        %613 = OpExtInst %float %1 Fma %610 %float_0_00200000009 %612
+        %614 = OpExtInst %float %1 Fract %613
+        %615 = OpCompositeConstruct %v3float %614 %614 %614
+        %616 = OpFOrdGreaterThan %v3bool %615 %84
+        %617 = OpSelect %v3float %616 %78 %70
+        %618 = OpExtInst %v3float %1 FMix %81 %82 %617
+               OpBranch %596
+        %596 = OpLabel
+        %619 = OpPhi %v3float %618 %597 %70 %598
+               OpBranch %565
+        %565 = OpLabel
+        %620 = OpPhi %v3float %70 %546 %619 %596
+        %621 = OpExtInst %v3float %1 Normalize %473
+        %622 = OpConvertFToS %int %267
+        %623 = OpConvertFToS %int %268
+        %624 = OpCompositeConstruct %v3int %622 %623 %int_0
+        %625 = OpVectorShuffle %v2int %624 %624 0 1
+        %626 = OpLoad %type_2d_image %OpaqueBasePass_ResolvedSceneDepthTexture
+        %627 = OpImageFetch %v4float %626 %625 Lod %int_0
+        %628 = OpCompositeExtract %float %627 0
+        %629 = OpExtInst %float %1 Fma %304 %float_16777215 %float_0_5
+        %630 = OpConvertFToU %uint %629
+        %631 = OpExtInst %float %1 Fma %628 %float_16777215 %float_0_5
+        %632 = OpConvertFToU %uint %631
+        %633 = OpAccessChain %_ptr_Uniform_int %OpaqueBasePass %uint_2
+        %634 = OpLoad %int %633
+        %635 = OpINotEqual %bool %634 %int_0
+        %636 = OpIEqual %bool %630 %632
+        %637 = OpISub %uint %632 %uint_1
+        %638 = OpIEqual %bool %630 %637
+        %639 = OpLogicalOr %bool %636 %638
+        %640 = OpFOrdEqual %bool %304 %628
+        %641 = OpSelect %bool %635 %639 %640
+               OpSelectionMerge %642 None
+               OpBranchConditional %641 %643 %642
+        %643 = OpLabel
+        %644 = OpConvertFToU %v2uint %263
+        %645 = OpCompositeConstruct %_arr_v3float_uint_4 %621 %191 %191 %191
+        %646 = OpVectorShuffle %v3float %470 %470 0 1 2
+        %647 = OpExtInst %v3float %1 FClamp %646 %70 %78
+        %648 = OpVectorShuffle %v3float %253 %253 3 3 3
+        %649 = OpVectorShuffle %v3float %253 %253 0 1 2
+        %650 = OpExtInst %v3float %1 Fma %647 %648 %649
+        %651 = OpVectorShuffle %v4float %470 %650 4 5 6 3
+        %652 = OpVectorShuffle %v3float %471 %471 0 1 2
+        %653 = OpExtInst %v3float %1 FClamp %652 %70 %78
+        %654 = OpCompositeExtract %float %255 3
+        %655 = OpVectorTimesScalar %v3float %653 %654
+        %656 = OpVectorShuffle %v3float %255 %255 0 1 2
+        %657 = OpFAdd %v3float %655 %656
+        %658 = OpVectorShuffle %v4float %471 %657 4 5 6 3
+        %659 = OpCompositeExtract %float %470 3
+        %660 = OpCompositeExtract %float %257 1
+        %661 = OpCompositeExtract %float %257 0
+        %662 = OpExtInst %float %1 Fma %659 %660 %661
+        %663 = OpAccessChain %_ptr_Uniform_float %View %uint_25
+        %664 = OpLoad %float %663
+        %665 = OpExtInst %float %1 NMax %664 %662
+        %666 = OpExtInst %float %1 FClamp %665 %float_0 %float_1
+        %667 = OpCompositeInsert %v4float %666 %651 3
+        %668 = OpExtInst %float %1 Fma %666 %660 %661
+        %669 = OpExtInst %float %1 NMax %664 %668
+        %670 = OpExtInst %float %1 FClamp %669 %float_0 %float_1
+        %671 = OpCompositeInsert %v4float %670 %667 3
+        %672 = OpCompositeExtract %float %471 3
+        %673 = OpExtInst %float %1 FClamp %672 %float_n1 %float_1
+        %674 = OpCompositeInsert %v4float %673 %658 3
+        %675 = OpAny %bool %224
+               OpSelectionMerge %676 None
+               OpBranchConditional %675 %677 %676
+        %677 = OpLabel
+        %678 = OpExtInst %v3float %1 Fma %70 %78 %70
+        %679 = OpAll %bool %224
+        %680 = OpLogicalAnd %bool %true %679
+        %681 = OpLogicalAnd %bool %680 %true
+               OpSelectionMerge %682 None
+               OpSwitch %uint_0 %683
+        %683 = OpLabel
+        %684 = OpVectorShuffle %v3float %671 %671 0 1 2
+        %685 = OpVectorShuffle %v3float %674 %674 0 1 2
+        %686 = OpCompositeExtract %float %657 0
+        %687 = OpCompositeExtract %float %657 1
+        %688 = OpCompositeExtract %float %657 2
+        %689 = OpExtInst %float %1 NMax %687 %688
+        %690 = OpExtInst %float %1 NMax %686 %689
+        %691 = OpFSub %float %690 %float_0_0799999982
+        %692 = OpFMul %float %691 %float_3_125
+        %693 = OpExtInst %float %1 FClamp %692 %float_0 %float_1
+        %694 = OpCompositeConstruct %v3float %693 %693 %693
+        %695 = OpExtInst %v3float %1 FMix %684 %685 %694
+               OpSelectionMerge %696 None
+               OpBranchConditional %true %682 %696
+        %696 = OpLabel
+               OpBranch %682
+        %682 = OpLabel
+        %697 = OpPhi %v3float %695 %683 %70 %696
+        %698 = OpVectorTimesScalar %v3float %697 %float_1
+        %699 = OpBitwiseOr %uint %561 %uint_0
+        %700 = OpBitwiseOr %uint %699 %uint_0
+               OpStore %234 %645
+        %701 = OpAccessChain %_ptr_Function_v3float %234 %uint_0
+        %702 = OpLoad %v3float %701
+        %703 = OpVectorTimesScalar %v3float %702 %float_1
+               OpBranch %676
+        %676 = OpLabel
+        %704 = OpPhi %v3float %70 %643 %678 %682
+        %705 = OpPhi %uint %190 %643 %uint_1 %682
+        %706 = OpPhi %uint %561 %643 %700 %682
+        %707 = OpPhi %bool %true %643 %681 %682
+        %708 = OpPhi %v3float %191 %643 %698 %682
+        %709 = OpPhi %float %192 %643 %670 %682
+        %710 = OpPhi %v3float %191 %643 %703 %682
+        %711 = OpPhi %float %float_0 %643 %float_1 %682
+        %712 = OpSelect %uint %675 %uint_2 %uint_0
+        %713 = OpSelect %uint %675 %uint_1 %uint_0
+        %714 = OpFOrdGreaterThan %bool %711 %float_0
+        %715 = OpCompositeConstruct %v3bool %714 %714 %714
+        %716 = OpExtInst %v3float %1 Normalize %710
+        %717 = OpSelect %v3float %715 %716 %70
+        %718 = OpFDiv %float %709 %711
+        %719 = OpSelect %float %714 %718 %float_0
+        %720 = OpCompositeConstruct %v3float %711 %711 %711
+        %721 = OpFDiv %v3float %708 %720
+        %722 = OpSelect %v3float %715 %721 %70
+               OpSelectionMerge %723 None
+               OpBranchConditional %true %724 %723
+        %724 = OpLabel
+        %725 = OpIEqual %bool %713 %uint_1
+        %726 = OpLogicalAnd %bool %707 %725
+        %727 = OpSelect %uint %726 %uint_2 %uint_3
+        %728 = OpSelect %uint %726 %uint_1 %727
+        %729 = OpBitwiseAnd %uint %706 %uint_4294967288
+        %730 = OpBitwiseAnd %uint %728 %uint_7
+        %731 = OpBitwiseOr %uint %729 %730
+               OpSelectionMerge %732 None
+               OpBranchConditional %726 %733 %732
+        %733 = OpLabel
+        %734 = OpShiftRightLogical %uint %712 %uint_6
+        %735 = OpBitwiseAnd %uint %734 %uint_1
+        %736 = OpINotEqual %bool %735 %uint_0
+               OpSelectionMerge %737 None
+               OpBranchConditional %736 %738 %737
+        %738 = OpLabel
+        %739 = OpBitwiseAnd %uint %472 %uint_32768
+        %740 = OpINotEqual %bool %739 %uint_0
+        %741 = OpSelect %uint %740 %uint_3 %uint_1
+               OpBranch %737
+        %737 = OpLabel
+        %742 = OpPhi %uint %uint_0 %733 %741 %738
+        %743 = OpShiftRightLogical %uint %712 %uint_9
+        %744 = OpBitwiseAnd %uint %743 %uint_1
+        %745 = OpINotEqual %bool %744 %uint_0
+        %746 = OpFOrdEqual %bool %670 %float_0
+        %747 = OpLogicalAnd %bool %745 %746
+               OpSelectionMerge %748 None
+               OpBranchConditional %747 %749 %748
+        %749 = OpLabel
+        %750 = OpBitwiseOr %uint %742 %uint_4
+               OpBranch %748
+        %748 = OpLabel
+        %751 = OpPhi %uint %742 %737 %750 %749
+        %752 = OpShiftRightLogical %uint %712 %uint_10
+        %753 = OpBitwiseAnd %uint %752 %uint_1
+        %754 = OpINotEqual %bool %753 %uint_0
+               OpSelectionMerge %755 None
+               OpBranchConditional %754 %756 %755
+        %756 = OpLabel
+        %757 = OpBitwiseOr %uint %751 %uint_8
+               OpBranch %755
+        %755 = OpLabel
+        %758 = OpPhi %uint %751 %748 %757 %756
+        %759 = OpShiftRightLogical %uint %712 %uint_2
+        %760 = OpBitwiseAnd %uint %759 %uint_7
+        %761 = OpIEqual %bool %760 %uint_4
+               OpSelectionMerge %762 None
+               OpBranchConditional %761 %763 %762
+        %763 = OpLabel
+        %764 = OpBitwiseOr %uint %758 %uint_16
+               OpBranch %762
+        %762 = OpLabel
+        %765 = OpPhi %uint %758 %755 %764 %763
+        %766 = OpIEqual %bool %760 %uint_1
+               OpSelectionMerge %767 None
+               OpBranchConditional %766 %768 %767
+        %768 = OpLabel
+        %769 = OpBitwiseOr %uint %765 %uint_32
+               OpBranch %767
+        %767 = OpLabel
+        %770 = OpPhi %uint %765 %762 %769 %768
+        %771 = OpIEqual %bool %760 %uint_3
+               OpSelectionMerge %772 None
+               OpBranchConditional %771 %773 %772
+        %773 = OpLabel
+        %774 = OpBitwiseOr %uint %770 %uint_64
+               OpBranch %772
+        %772 = OpLabel
+        %775 = OpPhi %uint %770 %767 %774 %773
+        %776 = OpBitwiseAnd %uint %775 %uint_2
+        %777 = OpIEqual %bool %776 %uint_2
+        %778 = OpIEqual %bool %776 %uint_3
+        %779 = OpLogicalOr %bool %777 %778
+               OpSelectionMerge %780 None
+               OpBranchConditional %779 %781 %782
+        %782 = OpLabel
+        %783 = OpBitwiseAnd %uint %775 %uint_4
+        %784 = OpIEqual %bool %783 %uint_4
+               OpSelectionMerge %785 None
+               OpBranchConditional %784 %786 %787
+        %787 = OpLabel
+        %788 = OpBitwiseAnd %uint %775 %uint_40
+        %789 = OpIEqual %bool %788 %uint_40
+               OpSelectionMerge %790 None
+               OpBranchConditional %789 %791 %792
+        %792 = OpLabel
+        %793 = OpBitwiseAnd %uint %775 %uint_32
+        %794 = OpIEqual %bool %793 %uint_32
+               OpSelectionMerge %795 None
+               OpBranchConditional %794 %796 %797
+        %797 = OpLabel
+        %798 = OpBitwiseAnd %uint %775 %uint_72
+        %799 = OpIEqual %bool %798 %uint_64
+        %800 = OpSelect %uint %799 %uint_0 %190
+               OpBranch %795
+        %796 = OpLabel
+               OpBranch %795
+        %795 = OpLabel
+        %801 = OpPhi %uint %uint_0 %796 %800 %797
+               OpBranch %790
+        %791 = OpLabel
+               OpBranch %790
+        %790 = OpLabel
+        %802 = OpPhi %uint %uint_0 %791 %801 %795
+               OpBranch %785
+        %786 = OpLabel
+               OpBranch %785
+        %785 = OpLabel
+        %803 = OpPhi %uint %190 %786 %802 %790
+               OpBranch %780
+        %781 = OpLabel
+               OpBranch %780
+        %780 = OpLabel
+        %804 = OpPhi %uint %190 %781 %803 %785
+               OpBranch %732
+        %732 = OpLabel
+        %805 = OpPhi %uint %190 %724 %804 %780
+               OpBranch %723
+        %723 = OpLabel
+        %806 = OpPhi %uint %190 %676 %805 %732
+        %807 = OpPhi %uint %706 %676 %731 %732
+               OpSelectionMerge %808 DontFlatten
+               OpBranchConditional %675 %809 %808
+        %809 = OpLabel
+               OpStore %235 %645
+        %810 = OpShiftRightLogical %uint %712 %uint_14
+        %811 = OpBitwiseAnd %uint %810 %uint_3
+        %812 = OpAccessChain %_ptr_Function_v3float %235 %811
+        %813 = OpLoad %v3float %812
+        %814 = OpDot %float %813 %284
+        %815 = OpShiftRightLogical %uint %712 %uint_11
+        %816 = OpBitwiseAnd %uint %815 %uint_7
+               OpSelectionMerge %817 None
+               OpSwitch %816 %817 0 %818
+        %818 = OpLabel
+        %819 = OpVectorShuffle %v3float %671 %671 0 1 2
+        %820 = OpVectorShuffle %v3float %674 %674 0 1 2
+        %821 = OpCompositeExtract %float %657 0
+        %822 = OpCompositeExtract %float %657 1
+        %823 = OpCompositeExtract %float %657 2
+        %824 = OpExtInst %float %1 NMax %822 %823
+        %825 = OpExtInst %float %1 NMax %821 %824
+        %826 = OpFMul %float %float_50 %825
+        %827 = OpExtInst %float %1 FClamp %826 %float_0 %float_1
+        %828 = OpVectorTimesScalar %v3float %78 %827
+        %829 = OpExtInst %float %1 FClamp %670 %float_0_00100000005 %float_1
+        %830 = OpLoad %type_2d_image %View_ShadingEnergyGGXSpecTexture
+        %831 = OpLoad %type_sampler %View_ShadingEnergySampler
+        %832 = OpCompositeConstruct %v2float %814 %829
+        %833 = OpSampledImage %type_sampled_image %830 %831
+        %834 = OpImageSampleExplicitLod %v4float %833 %832 Lod %float_0
+        %835 = OpAccessChain %_ptr_Uniform_uint %View %uint_26
+        %836 = OpLoad %uint %835
+        %837 = OpINotEqual %bool %836 %uint_0
+        %838 = OpCompositeConstruct %v3bool %837 %837 %837
+        %839 = OpCompositeExtract %float %834 0
+        %840 = OpFSub %float %float_1 %839
+        %841 = OpFDiv %float %840 %839
+        %842 = OpVectorTimesScalar %v3float %820 %841
+        %843 = OpFAdd %v3float %78 %842
+        %844 = OpSelect %v3float %838 %843 %78
+        %845 = OpVectorTimesScalar %v3float %820 %839
+        %846 = OpFSub %v3float %828 %820
+        %847 = OpCompositeExtract %float %834 1
+        %848 = OpVectorTimesScalar %v3float %846 %847
+        %849 = OpFAdd %v3float %845 %848
+        %850 = OpFMul %v3float %844 %849
+        %851 = OpAccessChain %_ptr_Uniform_uint %View %uint_27
+        %852 = OpLoad %uint %851
+        %853 = OpINotEqual %bool %852 %uint_0
+        %854 = OpDot %float %850 %149
+        %855 = OpFSub %float %float_1 %854
+        %856 = OpSelect %float %853 %855 %float_1
+        %857 = OpVectorTimesScalar %v3float %819 %856
+               OpBranch %817
+        %817 = OpLabel
+        %858 = OpPhi %v3float %191 %809 %813 %818
+        %859 = OpPhi %v3float %191 %809 %857 %818
+        %860 = OpPhi %v3float %191 %809 %819 %818
+               OpSelectionMerge %861 None
+               OpBranchConditional %481 %862 %861
+        %862 = OpLabel
+        %863 = OpVectorTimesScalar %v3float %247 %float_2097152
+        %864 = OpFAdd %v3float %863 %310
+        %865 = OpAccessChain %_ptr_Uniform_v3float %IndirectLightingCache %uint_1
+        %866 = OpLoad %v3float %865
+        %867 = OpAccessChain %_ptr_Uniform_v3float %IndirectLightingCache %int_0
+        %868 = OpLoad %v3float %867
+        %869 = OpExtInst %v3float %1 Fma %864 %866 %868
+        %870 = OpAccessChain %_ptr_Uniform_v3float %IndirectLightingCache %uint_2
+        %871 = OpLoad %v3float %870
+        %872 = OpAccessChain %_ptr_Uniform_v3float %IndirectLightingCache %uint_3
+        %873 = OpLoad %v3float %872
+        %874 = OpExtInst %v3float %1 FClamp %869 %871 %873
+        %875 = OpLoad %type_3d_image_0 %IndirectLightingCache_IndirectLightingCacheTexture0
+        %876 = OpLoad %type_sampler %IndirectLightingCache_IndirectLightingCacheTextureSampler0
+        %877 = OpSampledImage %type_sampled_image_0 %875 %876
+        %878 = OpImageSampleImplicitLod %v4float %877 %874 None
+        %879 = OpLoad %type_3d_image_0 %IndirectLightingCache_IndirectLightingCacheTexture1
+        %880 = OpLoad %type_sampler %View_SharedBilinearClampedSampler
+        %881 = OpSampledImage %type_sampled_image_0 %879 %880
+        %882 = OpImageSampleImplicitLod %v4float %881 %874 None
+        %883 = OpLoad %type_3d_image_0 %IndirectLightingCache_IndirectLightingCacheTexture2
+        %884 = OpSampledImage %type_sampled_image_0 %883 %880
+        %885 = OpImageSampleImplicitLod %v4float %884 %874 None
+        %886 = OpCompositeExtract %float %878 0
+        %887 = OpCompositeExtract %float %882 0
+        %888 = OpCompositeExtract %float %885 0
+        %889 = OpCompositeExtract %float %878 3
+        %890 = OpCompositeConstruct %v4float %886 %887 %888 %889
+        %891 = OpCompositeExtract %float %878 1
+        %892 = OpCompositeExtract %float %882 1
+        %893 = OpCompositeExtract %float %885 1
+        %894 = OpCompositeExtract %float %882 3
+        %895 = OpCompositeConstruct %v4float %891 %892 %893 %894
+        %896 = OpCompositeExtract %float %878 2
+        %897 = OpCompositeExtract %float %882 2
+        %898 = OpCompositeExtract %float %885 2
+        %899 = OpCompositeExtract %float %885 3
+        %900 = OpCompositeConstruct %v4float %896 %897 %898 %899
+        %901 = OpCompositeExtract %float %858 1
+        %902 = OpFMul %float %float_n0_488602996 %901
+        %903 = OpCompositeInsert %v4float %902 %221 1
+        %904 = OpCompositeExtract %float %858 2
+        %905 = OpFMul %float %float_0_488602996 %904
+        %906 = OpCompositeInsert %v4float %905 %903 2
+        %907 = OpCompositeExtract %float %858 0
+        %908 = OpFMul %float %float_n0_488602996 %907
+        %909 = OpCompositeInsert %v4float %908 %906 3
+        %910 = OpCompositeInsert %v4float %float_0_886227548 %909 0
+        %911 = OpVectorShuffle %v3float %910 %910 1 2 3
+        %912 = OpVectorTimesScalar %v3float %911 %float_2_09439516
+        %913 = OpVectorShuffle %v4float %910 %912 0 4 5 6
+        %914 = OpDot %float %890 %913
+        %915 = OpCompositeInsert %v3float %914 %70 0
+        %916 = OpDot %float %895 %913
+        %917 = OpCompositeInsert %v3float %916 %915 1
+        %918 = OpDot %float %900 %913
+        %919 = OpCompositeInsert %v3float %918 %917 2
+        %920 = OpExtInst %v3float %1 NMax %70 %919
+        %921 = OpFMul %v3float %920 %212
+               OpBranch %861
+        %861 = OpLabel
+        %922 = OpPhi %v3float %70 %817 %921 %862
+        %923 = OpAccessChain %_ptr_Uniform_v3float %View %uint_14
+        %924 = OpLoad %v3float %923
+        %925 = OpAccessChain %_ptr_Uniform_uint %OpaqueBasePass %uint_0
+        %926 = OpLoad %uint %925
+        %927 = OpUGreaterThan %bool %926 %uint_0
+               OpSelectionMerge %928 None
+               OpBranchConditional %927 %929 %928
+        %929 = OpLabel
+        %930 = OpAccessChain %_ptr_Uniform_float %View %uint_15
+        %931 = OpLoad %float %930
+        %932 = OpFOrdNotEqual %bool %931 %float_0
+               OpSelectionMerge %933 DontFlatten
+               OpBranchConditional %932 %934 %933
+        %934 = OpLabel
+               OpSelectionMerge %935 None
+               OpBranchConditional %481 %936 %935
+        %936 = OpLabel
+        %937 = OpAccessChain %_ptr_Uniform_v4float %IndirectLightingCache %uint_4
+        %938 = OpLoad %v4float %937
+        %939 = OpVectorShuffle %v3float %938 %938 0 1 2
+        %940 = OpAccessChain %_ptr_Uniform_float %IndirectLightingCache %uint_4 %int_3
+        %941 = OpLoad %float %940
+               OpBranch %935
+        %935 = OpLabel
+        %942 = OpPhi %v3float %858 %934 %939 %936
+        %943 = OpPhi %float %float_1 %934 %941 %936
+        %944 = OpFSub %float %float_1 %943
+        %945 = OpFSub %float %943 %float_1
+        %946 = OpExtInst %float %1 Fma %945 %944 %float_1
+        %947 = OpCompositeConstruct %v3float %946 %946 %946
+        %948 = OpExtInst %v3float %1 FMix %942 %858 %947
+        %949 = OpDot %float %942 %858
+        %950 = OpExtInst %float %1 FClamp %949 %float_0 %float_1
+        %951 = OpExtInst %float %1 FMix %950 %float_1 %946
+               OpBranch %933
+        %933 = OpLabel
+        %952 = OpPhi %float %float_1 %929 %951 %935
+        %953 = OpPhi %float %float_1 %929 %943 %935
+        %954 = OpPhi %v3float %858 %929 %948 %935
+        %955 = OpCompositeExtract %float %954 0
+        %956 = OpCompositeExtract %float %954 1
+        %957 = OpCompositeExtract %float %954 2
+        %958 = OpCompositeConstruct %v4float %955 %956 %957 %float_1
+        %959 = OpAccessChain %_ptr_Uniform_v4float %View_SkyIrradianceEnvironmentMap %int_0 %uint_0
+        %960 = OpLoad %v4float %959
+        %961 = OpDot %float %960 %958
+        %962 = OpCompositeInsert %v3float %961 %216 0
+        %963 = OpAccessChain %_ptr_Uniform_v4float %View_SkyIrradianceEnvironmentMap %int_0 %uint_1
+        %964 = OpLoad %v4float %963
+        %965 = OpDot %float %964 %958
+        %966 = OpCompositeInsert %v3float %965 %962 1
+        %967 = OpAccessChain %_ptr_Uniform_v4float %View_SkyIrradianceEnvironmentMap %int_0 %uint_2
+        %968 = OpLoad %v4float %967
+        %969 = OpDot %float %968 %958
+        %970 = OpCompositeInsert %v3float %969 %966 2
+        %971 = OpVectorShuffle %v4float %958 %958 0 1 2 2
+        %972 = OpVectorShuffle %v4float %958 %958 1 2 2 0
+        %973 = OpFMul %v4float %971 %972
+        %974 = OpAccessChain %_ptr_Uniform_v4float %View_SkyIrradianceEnvironmentMap %int_0 %uint_3
+        %975 = OpLoad %v4float %974
+        %976 = OpDot %float %975 %973
+        %977 = OpCompositeInsert %v3float %976 %216 0
+        %978 = OpAccessChain %_ptr_Uniform_v4float %View_SkyIrradianceEnvironmentMap %int_0 %uint_4
+        %979 = OpLoad %v4float %978
+        %980 = OpDot %float %979 %973
+        %981 = OpCompositeInsert %v3float %980 %977 1
+        %982 = OpAccessChain %_ptr_Uniform_v4float %View_SkyIrradianceEnvironmentMap %int_0 %uint_5
+        %983 = OpLoad %v4float %982
+        %984 = OpDot %float %983 %973
+        %985 = OpCompositeInsert %v3float %984 %981 2
+        %986 = OpFMul %float %956 %956
+        %987 = OpFNegate %float %986
+        %988 = OpExtInst %float %1 Fma %955 %955 %987
+        %989 = OpAccessChain %_ptr_Uniform_v4float %View_SkyIrradianceEnvironmentMap %int_0 %uint_6
+        %990 = OpLoad %v4float %989
+        %991 = OpVectorShuffle %v3float %990 %990 0 1 2
+        %992 = OpVectorTimesScalar %v3float %991 %988
+        %993 = OpFAdd %v3float %970 %985
+        %994 = OpFAdd %v3float %993 %992
+        %995 = OpExtInst %v3float %1 NMax %70 %994
+        %996 = OpVectorShuffle %v3float %261 %261 0 1 2
+        %997 = OpFMul %v3float %995 %996
+        %998 = OpFMul %float %953 %952
+        %999 = OpVectorTimesScalar %v3float %997 %998
+               OpBranch %928
+        %928 = OpLabel
+       %1000 = OpPhi %v3float %70 %861 %999 %933
+       %1001 = OpExtInst %v3float %1 Fma %922 %924 %1000
+       %1002 = OpDot %float %1001 %149
+       %1003 = OpVectorTimesScalar %v3float %860 %float_2_04040003
+       %1004 = OpFSub %v3float %1003 %139
+       %1005 = OpVectorTimesScalar %v3float %860 %float_n4_79510021
+       %1006 = OpFAdd %v3float %1005 %142
+       %1007 = OpVectorTimesScalar %v3float %860 %float_2_75519991
+       %1008 = OpFAdd %v3float %1007 %145
+       %1009 = OpVectorTimesScalar %v3float %1004 %float_1
+       %1010 = OpFAdd %v3float %1009 %1006
+       %1011 = OpVectorTimesScalar %v3float %1010 %float_1
+       %1012 = OpFAdd %v3float %1011 %1008
+       %1013 = OpVectorTimesScalar %v3float %1012 %float_1
+       %1014 = OpExtInst %v3float %1 NMax %78 %1013
+       %1015 = OpExtInst %v3float %1 NMax %78 %214
+       %1016 = OpCompositeExtract %float %1015 1
+       %1017 = OpCompositeInsert %v2float %1016 %222 0
+       %1018 = OpCompositeInsert %v2float %1002 %1017 1
+       %1019 = OpFMul %v3float %1001 %859
+       %1020 = OpExtInst %v3float %1 Fma %1019 %1014 %704
+               OpBranch %808
+        %808 = OpLabel
+       %1021 = OpPhi %v3float %704 %723 %1020 %928
+       %1022 = OpPhi %float %float_0 %723 %float_1 %928
+       %1023 = OpPhi %v2float %102 %723 %1018 %928
+       %1024 = OpExtInst %float %1 NMax %float_1 %1022
+       %1025 = OpFDiv %float %float_1 %1024
+       %1026 = OpVectorTimesScalar %v2float %1023 %1025
+       %1027 = OpCompositeExtract %float %1026 0
+       %1028 = OpCompositeExtract %float %1026 1
+       %1029 = OpBitwiseAnd %uint %807 %uint_4294902015
+       %1030 = OpFMul %float %1028 %1027
+       %1031 = OpAccessChain %_ptr_Uniform_float %View %uint_6
+       %1032 = OpLoad %float %1031
+       %1033 = OpExtInst %float %1 Fma %1030 %1032 %float_0_00390625
+       %1034 = OpExtInst %float %1 Log2 %1033
+       %1035 = OpExtInst %float %1 Fma %1034 %float_0_0625 %float_0_5
+       %1036 = OpFMul %float %1035 %float_255
+       %1037 = OpExtInst %float %1 NMin %float_255 %1036
+       %1038 = OpConvertFToU %uint %1037
+       %1039 = OpBitwiseAnd %uint %1038 %uint_255
+       %1040 = OpShiftLeftLogical %uint %1039 %uint_8
+       %1041 = OpBitwiseOr %uint %1029 %1040
+               OpSelectionMerge %1042 DontFlatten
+               OpBranchConditional %675 %1043 %1042
+       %1043 = OpLabel
+       %1044 = OpVectorShuffle %v3float %671 %671 0 1 2
+       %1045 = OpFSub %float %319 %float_0_5
+       %1046 = OpFMul %float %1045 %float_0_00787401572
+       %1047 = OpFMul %float %1045 %float_0_0158730168
+       %1048 = OpCompositeConstruct %v3float %1046 %1046 %1047
+       %1049 = OpExtInst %v3float %1 FClamp %1044 %70 %78
+       %1050 = OpCompositeExtract %float %1049 0
+               OpSelectionMerge %1051 None
+               OpSwitch %uint_0 %1052
+       %1052 = OpLabel
+       %1053 = OpFOrdLessThan %bool %1050 %float_0_00313066994
+               OpSelectionMerge %1054 None
+               OpBranchConditional %1053 %1055 %1054
+       %1055 = OpLabel
+       %1056 = OpFMul %float %1050 %float_12_9200001
+               OpBranch %1051
+       %1054 = OpLabel
+       %1057 = OpExtInst %float %1 Pow %1050 %float_0_416666657
+       %1058 = OpExtInst %float %1 Fma %1057 %float_1_05499995 %float_n0_0549999997
+               OpBranch %1051
+       %1051 = OpLabel
+       %1059 = OpPhi %float %1056 %1055 %1058 %1054
+       %1060 = OpCompositeExtract %float %1049 1
+               OpSelectionMerge %1061 None
+               OpSwitch %uint_0 %1062
+       %1062 = OpLabel
+       %1063 = OpFOrdLessThan %bool %1060 %float_0_00313066994
+               OpSelectionMerge %1064 None
+               OpBranchConditional %1063 %1065 %1064
+       %1065 = OpLabel
+       %1066 = OpFMul %float %1060 %float_12_9200001
+               OpBranch %1061
+       %1064 = OpLabel
+       %1067 = OpExtInst %float %1 Pow %1060 %float_0_416666657
+       %1068 = OpExtInst %float %1 Fma %1067 %float_1_05499995 %float_n0_0549999997
+               OpBranch %1061
+       %1061 = OpLabel
+       %1069 = OpPhi %float %1066 %1065 %1068 %1064
+       %1070 = OpCompositeExtract %float %1049 2
+               OpSelectionMerge %1071 None
+               OpSwitch %uint_0 %1072
+       %1072 = OpLabel
+       %1073 = OpFOrdLessThan %bool %1070 %float_0_00313066994
+               OpSelectionMerge %1074 None
+               OpBranchConditional %1073 %1075 %1074
+       %1075 = OpLabel
+       %1076 = OpFMul %float %1070 %float_12_9200001
+               OpBranch %1071
+       %1074 = OpLabel
+       %1077 = OpExtInst %float %1 Pow %1070 %float_0_416666657
+       %1078 = OpExtInst %float %1 Fma %1077 %float_1_05499995 %float_n0_0549999997
+               OpBranch %1071
+       %1071 = OpLabel
+       %1079 = OpPhi %float %1076 %1075 %1078 %1074
+       %1080 = OpCompositeConstruct %v3float %1059 %1069 %1079
+       %1081 = OpBitcast %v3uint %1080
+       %1082 = OpBitwiseAnd %v3uint %1081 %152
+       %1083 = OpExtInst %v3uint %1 UMin %1082 %204
+       %1084 = OpConvertUToF %v3float %1083
+       %1085 = OpExtInst %v3float %1 Fma %1048 %1084 %1080
+       %1086 = OpExtInst %v3float %1 FClamp %1085 %70 %78
+       %1087 = OpCompositeExtract %float %1086 0
+       %1088 = OpFMul %float %1087 %float_127
+       %1089 = OpConvertFToU %uint %1088
+       %1090 = OpShiftLeftLogical %uint %1089 %uint_0
+       %1091 = OpCompositeExtract %float %1086 1
+       %1092 = OpFMul %float %1091 %float_127
+       %1093 = OpConvertFToU %uint %1092
+       %1094 = OpShiftLeftLogical %uint %1093 %uint_7
+       %1095 = OpCompositeExtract %float %1086 2
+       %1096 = OpFMul %float %1095 %float_63
+       %1097 = OpConvertFToU %uint %1096
+       %1098 = OpShiftLeftLogical %uint %1097 %uint_14
+       %1099 = OpBitwiseOr %uint %1090 %1094
+       %1100 = OpBitwiseOr %uint %1099 %1098
+       %1101 = OpBitwiseAnd %uint %1100 %uint_4095
+       %1102 = OpShiftRightLogical %uint %1100 %uint_12
+       %1103 = OpBitwiseAnd %uint %1102 %uint_255
+       %1104 = OpVectorShuffle %v3float %674 %674 0 1 2
+       %1105 = OpExtInst %v3float %1 FClamp %1104 %70 %78
+       %1106 = OpCompositeExtract %float %1105 0
+               OpSelectionMerge %1107 None
+               OpSwitch %uint_0 %1108
+       %1108 = OpLabel
+       %1109 = OpFOrdLessThan %bool %1106 %float_0_00313066994
+               OpSelectionMerge %1110 None
+               OpBranchConditional %1109 %1111 %1110
+       %1111 = OpLabel
+       %1112 = OpFMul %float %1106 %float_12_9200001
+               OpBranch %1107
+       %1110 = OpLabel
+       %1113 = OpExtInst %float %1 Pow %1106 %float_0_416666657
+       %1114 = OpExtInst %float %1 Fma %1113 %float_1_05499995 %float_n0_0549999997
+               OpBranch %1107
+       %1107 = OpLabel
+       %1115 = OpPhi %float %1112 %1111 %1114 %1110
+       %1116 = OpCompositeExtract %float %1105 1
+               OpSelectionMerge %1117 None
+               OpSwitch %uint_0 %1118
+       %1118 = OpLabel
+       %1119 = OpFOrdLessThan %bool %1116 %float_0_00313066994
+               OpSelectionMerge %1120 None
+               OpBranchConditional %1119 %1121 %1120
+       %1121 = OpLabel
+       %1122 = OpFMul %float %1116 %float_12_9200001
+               OpBranch %1117
+       %1120 = OpLabel
+       %1123 = OpExtInst %float %1 Pow %1116 %float_0_416666657
+       %1124 = OpExtInst %float %1 Fma %1123 %float_1_05499995 %float_n0_0549999997
+               OpBranch %1117
+       %1117 = OpLabel
+       %1125 = OpPhi %float %1122 %1121 %1124 %1120
+       %1126 = OpCompositeExtract %float %1105 2
+               OpSelectionMerge %1127 None
+               OpSwitch %uint_0 %1128
+       %1128 = OpLabel
+       %1129 = OpFOrdLessThan %bool %1126 %float_0_00313066994
+               OpSelectionMerge %1130 None
+               OpBranchConditional %1129 %1131 %1130
+       %1131 = OpLabel
+       %1132 = OpFMul %float %1126 %float_12_9200001
+               OpBranch %1127
+       %1130 = OpLabel
+       %1133 = OpExtInst %float %1 Pow %1126 %float_0_416666657
+       %1134 = OpExtInst %float %1 Fma %1133 %float_1_05499995 %float_n0_0549999997
+               OpBranch %1127
+       %1127 = OpLabel
+       %1135 = OpPhi %float %1132 %1131 %1134 %1130
+       %1136 = OpCompositeConstruct %v3float %1115 %1125 %1135
+       %1137 = OpBitcast %v3uint %1136
+       %1138 = OpBitwiseAnd %v3uint %1137 %152
+       %1139 = OpExtInst %v3uint %1 UMin %1138 %204
+       %1140 = OpConvertUToF %v3float %1139
+       %1141 = OpExtInst %v3float %1 Fma %1048 %1140 %1136
+       %1142 = OpExtInst %v3float %1 FClamp %1141 %70 %78
+       %1143 = OpCompositeExtract %float %1142 0
+       %1144 = OpFMul %float %1143 %float_127
+       %1145 = OpConvertFToU %uint %1144
+       %1146 = OpShiftLeftLogical %uint %1145 %uint_0
+       %1147 = OpCompositeExtract %float %1142 1
+       %1148 = OpFMul %float %1147 %float_127
+       %1149 = OpConvertFToU %uint %1148
+       %1150 = OpShiftLeftLogical %uint %1149 %uint_7
+       %1151 = OpCompositeExtract %float %1142 2
+       %1152 = OpFMul %float %1151 %float_63
+       %1153 = OpConvertFToU %uint %1152
+       %1154 = OpShiftLeftLogical %uint %1153 %uint_14
+       %1155 = OpBitwiseOr %uint %1146 %1150
+       %1156 = OpBitwiseOr %uint %1155 %1154
+       %1157 = OpExtInst %float %1 FClamp %670 %float_0 %float_1
+       %1158 = OpFMul %float %1157 %float_255
+       %1159 = OpConvertFToU %uint %1158
+       %1160 = OpBitwiseAnd %uint %1041 %uint_65535
+       %1161 = OpShiftLeftLogical %uint %1160 %uint_0
+       %1162 = OpBitwiseOr %uint %uint_0 %1161
+       %1163 = OpShiftLeftLogical %uint %1103 %uint_8
+       %1164 = OpBitwiseOr %uint %1163 %1159
+       %1165 = OpBitwiseAnd %uint %1162 %uint_65535
+       %1166 = OpShiftLeftLogical %uint %1164 %uint_16
+       %1167 = OpBitwiseOr %uint %1165 %1166
+       %1168 = OpShiftLeftLogical %uint %1101 %uint_20
+       %1169 = OpBitwiseOr %uint %1156 %1168
+               OpBranch %1042
+       %1042 = OpLabel
+       %1170 = OpPhi %uint %uint_0 %808 %1169 %1127
+       %1171 = OpPhi %uint %uint_0 %808 %1167 %1127
+       %1172 = OpExtInst %v3float %1 FAbs %717
+       %1173 = OpDot %float %78 %1172
+       %1174 = OpCompositeConstruct %v2float %1173 %1173
+       %1175 = OpVectorShuffle %v2float %717 %717 0 1
+       %1176 = OpFDiv %v2float %1175 %1174
+       %1177 = OpVectorShuffle %v3float %717 %1176 3 4 2
+       %1178 = OpCompositeExtract %float %717 2
+       %1179 = OpFOrdLessThanEqual %bool %1178 %float_0
+               OpSelectionMerge %1180 None
+               OpBranchConditional %1179 %1181 %1180
+       %1181 = OpLabel
+       %1182 = OpVectorShuffle %v2float %1176 %191 1 0
+       %1183 = OpExtInst %v2float %1 FAbs %1182
+       %1184 = OpFSub %v2float %128 %1183
+       %1185 = OpVectorShuffle %v2float %1176 %191 0 1
+       %1186 = OpFOrdGreaterThanEqual %v2bool %1185 %102
+       %1187 = OpCompositeExtract %bool %1186 0
+       %1188 = OpSelect %float %1187 %float_1 %float_n1
+       %1189 = OpCompositeExtract %bool %1186 1
+       %1190 = OpSelect %float %1189 %float_1 %float_n1
+       %1191 = OpCompositeConstruct %v2float %1188 %1190
+       %1192 = OpFMul %v2float %1184 %1191
+       %1193 = OpVectorShuffle %v3float %717 %1192 3 4 2
+               OpBranch %1180
+       %1180 = OpLabel
+       %1194 = OpPhi %v3float %1177 %1042 %1193 %1181
+       %1195 = OpVectorShuffle %v2float %1194 %1194 0 1
+       %1196 = OpVectorTimesScalar %v2float %1195 %float_1023
+       %1197 = OpFAdd %v2float %1196 %134
+       %1198 = OpExtInst %v2float %1 FClamp %1197 %102 %135
+       %1199 = OpConvertFToU %v2uint %1198
+       %1200 = OpCompositeExtract %uint %1199 0
+       %1201 = OpCompositeExtract %uint %1199 1
+       %1202 = OpShiftLeftLogical %uint %1201 %uint_11
+       %1203 = OpBitwiseOr %uint %1200 %1202
+       %1204 = OpShiftLeftLogical %uint %1203 %uint_10
+       %1205 = OpExtInst %float %1 FClamp %719 %float_0 %float_1
+       %1206 = OpFMul %float %1205 %float_255
+       %1207 = OpConvertFToU %uint %1206
+       %1208 = OpShiftLeftLogical %uint %1207 %uint_2
+       %1209 = OpBitwiseOr %uint %1204 %1208
+       %1210 = OpBitwiseOr %uint %1209 %705
+       %1211 = OpBitwiseAnd %uint %806 %uint_3
+       %1212 = OpINotEqual %bool %1211 %uint_0
+               OpSelectionMerge %1213 DontFlatten
+               OpBranchConditional %1212 %1214 %1213
+       %1214 = OpLabel
+       %1215 = OpLoad %type_2d_image_array %OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs
+       %1216 = OpAccessChain %_ptr_Uniform_int %OpaqueBasePass %uint_1
+       %1217 = OpLoad %int %1216
+       %1218 = OpBitcast %uint %1217
+       %1219 = OpCompositeExtract %uint %644 0
+       %1220 = OpCompositeExtract %uint %644 1
+       %1221 = OpCompositeConstruct %v3uint %1219 %1220 %1218
+               OpImageWrite %1215 %1221 %806 None
+       %1222 = OpIEqual %bool %1211 %uint_2
+       %1223 = OpIEqual %bool %1211 %uint_3
+       %1224 = OpLogicalOr %bool %1222 %1223
+               OpSelectionMerge %1225 None
+               OpBranchConditional %1224 %1226 %1225
+       %1226 = OpLabel
+       %1227 = OpLoad %type_2d_image_array %OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs
+       %1228 = OpIAdd %uint %1218 %uint_1
+       %1229 = OpCompositeConstruct %v3uint %1219 %1220 %1228
+               OpImageWrite %1227 %1229 %190 None
+               OpBranch %1225
+       %1225 = OpLabel
+               OpBranch %1213
+       %1213 = OpLabel
+       %1230 = OpAccessChain %_ptr_Uniform_float %View %uint_13
+       %1231 = OpLoad %float %1230
+       %1232 = OpCompositeConstruct %v3float %1231 %1231 %1231
+       %1233 = OpExtInst %v3float %1 FMix %70 %722 %1232
+       %1234 = OpFAdd %v3float %1021 %620
+       %1235 = OpFAdd %v3float %1233 %1234
+               OpBranch %642
+        %642 = OpLabel
+       %1236 = OpPhi %uint %190 %565 %1210 %1213
+       %1237 = OpPhi %uint %190 %565 %1170 %1213
+       %1238 = OpPhi %uint %190 %565 %1171 %1213
+       %1239 = OpPhi %v3float %70 %565 %1235 %1213
+       %1240 = OpSelect %uint %641 %uint_0 %190
+       %1241 = OpVectorTimesScalar %v3float %1239 %float_1
+       %1242 = OpCompositeExtract %float %1241 0
+       %1243 = OpCompositeExtract %float %1241 1
+       %1244 = OpCompositeExtract %float %1241 2
+       %1245 = OpCompositeConstruct %v4float %1242 %1243 %1244 %float_0
+       %1246 = OpAccessChain %_ptr_Uniform_float %View %uint_18
+       %1247 = OpLoad %float %1246
+       %1248 = OpFOrdEqual %bool %1247 %float_0
+               OpSelectionMerge %1249 None
+               OpBranchConditional %1248 %1250 %1249
+       %1250 = OpLabel
+       %1251 = OpCompositeInsert %v4float %192 %1245 3
+               OpBranch %1249
+       %1249 = OpLabel
+       %1252 = OpPhi %v4float %1245 %642 %1251 %1250
+       %1253 = OpCompositeInsert %v4float %537 %69 0
+       %1254 = OpCompositeInsert %v4float %float_1 %1253 1
+       %1255 = OpCompositeInsert %v4float %float_1 %1254 2
+       %1256 = OpCompositeInsert %v4float %float_1 %1255 3
+       %1257 = OpAccessChain %_ptr_Uniform_float %View %uint_6
+       %1258 = OpLoad %float %1257
+       %1259 = OpVectorTimesScalar %v4float %1252 %1258
+       %1260 = OpVectorShuffle %v3float %1259 %1259 0 1 2
+       %1261 = OpExtInst %v3float %1 NMin %1260 %199
+       %1262 = OpVectorShuffle %v4float %1259 %1261 4 5 6 3
+               OpStore %out_var_SV_Target0 %1262
+               OpStore %out_var_SV_Target1 %1256
+               OpStore %out_var_SV_Target2 %1238
+               OpStore %out_var_SV_Target3 %1237
+               OpStore %out_var_SV_Target4 %1240
+               OpStore %out_var_SV_Target5 %1236
+               OpStore %gl_FragDepth %304
+               OpReturn
+               OpFunctionEnd

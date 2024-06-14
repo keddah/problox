@@ -15,6 +15,13 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APickupableMaster();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
+	DEFINE_FUNCTION(AMagnet::execGetIsPositive)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->GetIsPositive();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AMagnet::execSetCharge)
 	{
 		P_GET_UBOOL(Z_Param_pos);
@@ -27,9 +34,49 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	{
 		UClass* Class = AMagnet::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetIsPositive", &AMagnet::execGetIsPositive },
 			{ "SetCharge", &AMagnet::execSetCharge },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AMagnet_GetIsPositive_Statics
+	{
+		struct Magnet_eventGetIsPositive_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((Magnet_eventGetIsPositive_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Magnet_eventGetIsPositive_Parms), &Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Pickupables/Magnet/Magnet.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMagnet, nullptr, "GetIsPositive", nullptr, nullptr, Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::PropPointers), sizeof(Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::Magnet_eventGetIsPositive_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::Magnet_eventGetIsPositive_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AMagnet_GetIsPositive()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMagnet_GetIsPositive_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AMagnet_SetCharge_Statics
 	{
@@ -121,6 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMagnet_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMagnet_GetIsPositive, "GetIsPositive" }, // 4086574826
 		{ &Z_Construct_UFunction_AMagnet_SetCharge, "SetCharge" }, // 4204285088
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMagnet_Statics::FuncInfo) < 2048);
@@ -211,15 +259,15 @@ void EmptyLinkFunctionForGeneratedCodeMagnet() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AMagnet);
 	AMagnet::~AMagnet() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics
+	struct Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 216325359U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AMagnet, AMagnet::StaticClass, TEXT("AMagnet"), &Z_Registration_Info_UClass_AMagnet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagnet), 2231021133U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_2018073913(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_1242296288(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_Magnet_Magnet_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

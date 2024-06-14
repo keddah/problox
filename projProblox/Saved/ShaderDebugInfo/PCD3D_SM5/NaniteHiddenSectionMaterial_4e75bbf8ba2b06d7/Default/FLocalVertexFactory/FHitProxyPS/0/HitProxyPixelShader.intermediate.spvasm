@@ -1,0 +1,109 @@
+; SPIR-V
+; Version: 1.3
+; Generator: Google spiregg; 0
+; Bound: 48
+; Schema: 0
+               OpCapability Shader
+               OpExtension "SPV_GOOGLE_hlsl_functionality1"
+               OpExtension "SPV_GOOGLE_user_type"
+          %1 = OpExtInstImport "GLSL.std.450"
+               OpMemoryModel Logical GLSL450
+               OpEntryPoint Fragment %Main "Main" %in_var_TEXCOORD10_centroid %in_var_TEXCOORD11_centroid %in_var_PRIMITIVE_ID %in_var_TEXCOORD6 %in_var_TEXCOORD7 %gl_FragCoord %gl_FrontFacing %gl_FragDepth %out_var_SV_Target0
+               OpExecutionMode %Main OriginUpperLeft
+               OpExecutionMode %Main DepthReplacing
+               OpExecutionMode %Main DepthLess
+
+               ; Debug Information
+               OpSource HLSL 620
+               OpName %type__Globals "type.$Globals"  ; id %12
+               OpMemberName %type__Globals 0 "HitProxyId"
+               OpName %_Globals "$Globals"  ; id %13
+               OpName %in_var_TEXCOORD10_centroid "in.var.TEXCOORD10_centroid"  ; id %3
+               OpName %in_var_TEXCOORD11_centroid "in.var.TEXCOORD11_centroid"  ; id %4
+               OpName %in_var_PRIMITIVE_ID "in.var.PRIMITIVE_ID"  ; id %5
+               OpName %in_var_TEXCOORD6 "in.var.TEXCOORD6"  ; id %6
+               OpName %in_var_TEXCOORD7 "in.var.TEXCOORD7"  ; id %7
+               OpName %out_var_SV_Target0 "out.var.SV_Target0"  ; id %11
+               OpName %Main "Main"  ; id %2
+
+               ; Annotations
+               OpDecorateString %in_var_TEXCOORD10_centroid UserSemantic "TEXCOORD10_centroid"
+               OpDecorateString %in_var_TEXCOORD11_centroid UserSemantic "TEXCOORD11_centroid"
+               OpDecorateString %in_var_PRIMITIVE_ID UserSemantic "PRIMITIVE_ID"
+               OpDecorate %in_var_PRIMITIVE_ID Flat
+               OpDecorateString %in_var_TEXCOORD6 UserSemantic "TEXCOORD6"
+               OpDecorateString %in_var_TEXCOORD7 UserSemantic "TEXCOORD7"
+               OpDecorate %gl_FragCoord BuiltIn FragCoord
+               OpDecorateString %gl_FragCoord UserSemantic "SV_Position"
+               OpDecorate %gl_FragCoord Centroid
+               OpDecorate %gl_FragCoord NoPerspective
+               OpDecorate %gl_FrontFacing BuiltIn FrontFacing
+               OpDecorateString %gl_FrontFacing UserSemantic "SV_IsFrontFace"
+               OpDecorate %gl_FrontFacing Flat
+               OpDecorate %gl_FragDepth BuiltIn FragDepth
+               OpDecorateString %gl_FragDepth UserSemantic "SV_DepthLessEqual"
+               OpDecorateString %out_var_SV_Target0 UserSemantic "SV_Target0"
+               OpDecorate %in_var_TEXCOORD10_centroid Location 0
+               OpDecorate %in_var_TEXCOORD11_centroid Location 1
+               OpDecorate %in_var_PRIMITIVE_ID Location 2
+               OpDecorate %in_var_TEXCOORD6 Location 3
+               OpDecorate %in_var_TEXCOORD7 Location 4
+               OpDecorate %out_var_SV_Target0 Location 0
+               OpDecorate %_Globals DescriptorSet 0
+               OpDecorate %_Globals Binding 5
+               OpMemberDecorate %type__Globals 0 Offset 0
+               OpDecorate %type__Globals Block
+
+               ; Types, variables and constants
+      %float = OpTypeFloat 32
+    %v3float = OpTypeVector %float 3
+    %v4float = OpTypeVector %float 4
+       %uint = OpTypeInt 32 0
+        %int = OpTypeInt 32 1
+    %float_1 = OpConstant %float 1
+      %int_0 = OpConstant %int 0
+       %bool = OpTypeBool
+%float_0_651405632 = OpConstant %float 0.651405632
+%type__Globals = OpTypeStruct %v4float
+%_ptr_Uniform_type__Globals = OpTypePointer Uniform %type__Globals
+%_ptr_Input_v4float = OpTypePointer Input %v4float
+%_ptr_Input_uint = OpTypePointer Input %uint
+%_ptr_Input_v3float = OpTypePointer Input %v3float
+%_ptr_Input_bool = OpTypePointer Input %bool
+%_ptr_Output_float = OpTypePointer Output %float
+%_ptr_Output_v4float = OpTypePointer Output %v4float
+       %void = OpTypeVoid
+         %31 = OpTypeFunction %void
+%_ptr_Uniform_v4float = OpTypePointer Uniform %v4float
+   %_Globals = OpVariable %_ptr_Uniform_type__Globals Uniform
+%in_var_TEXCOORD10_centroid = OpVariable %_ptr_Input_v4float Input
+%in_var_TEXCOORD11_centroid = OpVariable %_ptr_Input_v4float Input
+%in_var_PRIMITIVE_ID = OpVariable %_ptr_Input_uint Input
+%in_var_TEXCOORD6 = OpVariable %_ptr_Input_v4float Input
+%in_var_TEXCOORD7 = OpVariable %_ptr_Input_v3float Input
+%gl_FragCoord = OpVariable %_ptr_Input_v4float Input
+%gl_FrontFacing = OpVariable %_ptr_Input_bool Input
+%gl_FragDepth = OpVariable %_ptr_Output_float Output
+%out_var_SV_Target0 = OpVariable %_ptr_Output_v4float Output
+         %33 = OpUndef %float
+
+               ; Function Main
+       %Main = OpFunction %void None %31
+         %34 = OpLabel
+         %35 = OpLoad %v4float %gl_FragCoord
+         %36 = OpCompositeExtract %float %35 3
+         %37 = OpFDiv %float %float_1 %36
+         %38 = OpCompositeExtract %float %35 2
+         %39 = OpCompositeConstruct %v4float %33 %33 %38 %float_1
+         %40 = OpVectorTimesScalar %v4float %39 %37
+         %41 = OpCompositeExtract %float %40 2
+         %42 = OpCompositeExtract %float %40 3
+         %43 = OpFAdd %float %42 %float_0_651405632
+         %44 = OpFDiv %float %41 %43
+         %45 = OpExtInst %float %1 NMin %44 %38
+         %46 = OpAccessChain %_ptr_Uniform_v4float %_Globals %int_0
+         %47 = OpLoad %v4float %46
+               OpStore %gl_FragDepth %45
+               OpStore %out_var_SV_Target0 %47
+               OpReturn
+               OpFunctionEnd
