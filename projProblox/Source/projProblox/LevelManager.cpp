@@ -3,8 +3,6 @@
 
 #include "LevelManager.h"
 
-#include "Engine/LevelStreamingDynamic.h"
-
 
 // Sets default values
 ALevelManager::ALevelManager()
@@ -24,17 +22,21 @@ void ALevelManager::BeginPlay()
 	{
 		if (levelStream && levelStream->IsA<ULevelStreamingDynamic>())
 		{
-			if (ULevelStreamingDynamic* lvl = Cast<ULevelStreamingDynamic>(levelStream))
-			{
-				// Add the soft reference to the array
-				TSoftObjectPtr<UWorld> LevelReference(lvl->GetWorldAsset());
-				levels.Add(LevelReference);
-			}
+			if (ULevelStreamingDynamic* lvl = Cast<ULevelStreamingDynamic>(levelStream)) levels.Add(lvl);
 		}
 	}
 
 	// Unload every level apart from the first.
 	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
+}
+
+void ALevelManager::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	if(levels.IsEmpty()) return;
+
+	if(levels.IsValidIndex(currentLevel)) bLevelLoading = levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::MakingVisible;
 }
 
 void ALevelManager::InitLoadLevel(int lvlIndex)
@@ -62,19 +64,20 @@ void ALevelManager::InitLoadLevel(int lvlIndex)
 		Print("World was invalid when trying to load a levels...", 8)
 		return;
 	}
-	
 
-	bLevelLoading = true;
+	TArray<AActor*> outActors;
+	UGameplayStatics::GetAllActorsWithTag(levels[currentLevel],"Chaos", outActors);
+	for (auto& actor : outActors)
+	{
+		if(UStaticMeshComponent* mesh = Cast<UStaticMeshComponent>(actor->FindComponentByClass(UStaticMeshComponent::StaticClass())))
+		{
+			mesh->SetSimulatePhysics(true);
+		}
+	}
+	
 	currentLevel = lvlIndex;
-	
-	FLatentActionInfo loadInfo;
-	loadInfo.CallbackTarget = this;
-	loadInfo.ExecutionFunction = FName("OnLevelLoaded");
-	loadInfo.UUID = FMath::Rand();  // Ensure UUID is unique
-	loadInfo.Linkage = 0;
-
-	// Then load the new level
-	UGameplayStatics::LoadStreamLevelBySoftObjectPtr(wrld, levels[currentLevel], true, false, loadInfo);
+	levels[currentLevel]->SetShouldBeVisible(true);
+	UnloadAllLevels();
 }
 
 void ALevelManager::UnloadLevel(short lvlIndex)
@@ -91,25 +94,18 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 		return;
 	}
 
-	FLatentActionInfo unloadInfo;
-	unloadInfo.CallbackTarget = this;
-	unloadInfo.ExecutionFunction = FName("OnLevelUnloaded");
-	unloadInfo.UUID = FMath::Rand();  // Ensure UUID is unique
-	unloadInfo.Linkage = 0;
-
-	UGameplayStatics::UnloadStreamLevelBySoftObjectPtr(wrld, levels[lvlIndex], unloadInfo, false);
-}
-
-void ALevelManager::OnLevelLoaded()
-{
-	Print("Level loaded Successfully.", 5)
+	TArray<AActor*> outActors;
+	UGameplayStatics::GetAllActorsWithTag(levels[currentLevel],"Chaos", outActors);
+	for (auto& actor : outActors)
+	{
+		if(UStaticMeshComponent* mesh = Cast<UStaticMeshComponent>(actor->FindComponentByClass(UStaticMeshComponent::StaticClass())))
+		{
+			mesh->SetSimulatePhysics(false);
+		}
+	}
 	
-	bLevelLoading = false;
-	
-	// Unloads all apart from the current level
-	UnloadAllLevels();
+	levels[lvlIndex]->SetShouldBeVisible(false);
 }
-
 
 void ALevelManager::UnloadAllLevels()
 {

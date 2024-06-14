@@ -72,7 +72,7 @@ protected:
 	UArrowComponent* forceDirection;
 	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
-	int32 spawnAmount = 10;
+	int32 spawnAmount = 1;
 
 	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "The maximum amount of cells that can spawn from this spawner..."))
 	int32 maxSpawnAmount = 50;

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Engine/LevelStreamingDynamic.h"
 #include "GameFramework/Actor.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -26,7 +27,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	// The index of the current level.
-	short currentLevel = -1;
+	short currentLevel = 1;
 
 	UPROPERTY(BlueprintReadOnly)
 	bool bLevelLoading = false;
@@ -34,22 +35,19 @@ protected:
 	UWorld* wrld;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	TArray<TSoftObjectPtr<UWorld>> levels;
+	TArray<ULevelStreamingDynamic*> levels;
 
 public:
+	virtual void Tick(float DeltaSeconds) override;
+	
 	// Returns whether the loaded level. 
 	UFUNCTION(BlueprintCallable)
 	void InitLoadLevel(int lvlIndex);
 
-	UFUNCTION()
-	void OnLevelLoaded();
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Unloads all the levels apart from the current level."))
 	void UnloadAllLevels();
 	
-	UFUNCTION()
-	void OnLevelUnloaded() { Print("Specified level has been unloaded.", 5)}
-
 	UFUNCTION(BlueprintCallable)
 	void PrintCurrentLevel() const { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
 };
