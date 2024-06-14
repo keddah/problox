@@ -21,10 +21,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
  \
 	DECLARE_FUNCTION(execPrintCurrentLevel); \
 	DECLARE_FUNCTION(execOnLevelUnloaded); \
-	DECLARE_FUNCTION(execOnAllLevelsUnloaded); \
 	DECLARE_FUNCTION(execUnloadAllLevels); \
 	DECLARE_FUNCTION(execOnLevelLoaded); \
-	DECLARE_FUNCTION(execLoadLevel);
+	DECLARE_FUNCTION(execInitLoadLevel);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_16_ACCESSORS

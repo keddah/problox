@@ -29,13 +29,6 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 		P_THIS->OnLevelUnloaded();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ALevelManager::execOnAllLevelsUnloaded)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->OnAllLevelsUnloaded();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ALevelManager::execUnloadAllLevels)
 	{
 		P_FINISH;
@@ -50,20 +43,19 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 		P_THIS->OnLevelLoaded();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ALevelManager::execLoadLevel)
+	DEFINE_FUNCTION(ALevelManager::execInitLoadLevel)
 	{
 		P_GET_PROPERTY(FIntProperty,Z_Param_lvlIndex);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->LoadLevel(Z_Param_lvlIndex);
+		P_THIS->InitLoadLevel(Z_Param_lvlIndex);
 		P_NATIVE_END;
 	}
 	void ALevelManager::StaticRegisterNativesALevelManager()
 	{
 		UClass* Class = ALevelManager::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "LoadLevel", &ALevelManager::execLoadLevel },
-			{ "OnAllLevelsUnloaded", &ALevelManager::execOnAllLevelsUnloaded },
+			{ "InitLoadLevel", &ALevelManager::execInitLoadLevel },
 			{ "OnLevelLoaded", &ALevelManager::execOnLevelLoaded },
 			{ "OnLevelUnloaded", &ALevelManager::execOnLevelUnloaded },
 			{ "PrintCurrentLevel", &ALevelManager::execPrintCurrentLevel },
@@ -71,9 +63,9 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_ALevelManager_LoadLevel_Statics
+	struct Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics
 	{
-		struct LevelManager_eventLoadLevel_Parms
+		struct LevelManager_eventInitLoadLevel_Parms
 		{
 			int32 lvlIndex;
 		};
@@ -84,12 +76,12 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_lvlIndex = { "lvlIndex", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(LevelManager_eventLoadLevel_Parms, lvlIndex), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_lvlIndex,
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::NewProp_lvlIndex = { "lvlIndex", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(LevelManager_eventInitLoadLevel_Parms, lvlIndex), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::NewProp_lvlIndex,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Returns whether the loaded level. \n" },
 #endif
@@ -99,37 +91,15 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "LoadLevel", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::LevelManager_eventLoadLevel_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::LevelManager_eventLoadLevel_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ALevelManager_LoadLevel()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "InitLoadLevel", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::LevelManager_eventInitLoadLevel_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::LevelManager_eventInitLoadLevel_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ALevelManager_InitLoadLevel()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "LevelManager.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "OnAllLevelsUnloaded", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_InitLoadLevel_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -256,8 +226,7 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ALevelManager_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ALevelManager_LoadLevel, "LoadLevel" }, // 258679821
-		{ &Z_Construct_UFunction_ALevelManager_OnAllLevelsUnloaded, "OnAllLevelsUnloaded" }, // 3838218159
+		{ &Z_Construct_UFunction_ALevelManager_InitLoadLevel, "InitLoadLevel" }, // 3493453917
 		{ &Z_Construct_UFunction_ALevelManager_OnLevelLoaded, "OnLevelLoaded" }, // 2761347127
 		{ &Z_Construct_UFunction_ALevelManager_OnLevelUnloaded, "OnLevelUnloaded" }, // 3282281235
 		{ &Z_Construct_UFunction_ALevelManager_PrintCurrentLevel, "PrintCurrentLevel" }, // 455026106
@@ -332,9 +301,9 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 2860647992U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 956142034U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_4271100159(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_1362295775(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

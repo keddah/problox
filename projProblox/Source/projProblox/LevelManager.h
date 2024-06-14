@@ -15,7 +15,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 {
 	GENERATED_BODY()
 
-	void UnloadCurrentLevel();
+	void UnloadLevel(short lvlIndex);
 	
 public:	
 	// Sets default values for this actor's properties
@@ -26,10 +26,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	// The index of the current level.
-	short currentLevel = 0;
-
-	// The level that is about to be loaded.
-	short pendingLevel = -1;
+	short currentLevel = -1;
 
 	UPROPERTY(BlueprintReadOnly)
 	bool bLevelLoading = false;
@@ -42,7 +39,7 @@ protected:
 public:
 	// Returns whether the loaded level. 
 	UFUNCTION(BlueprintCallable)
-	void LoadLevel(int lvlIndex);
+	void InitLoadLevel(int lvlIndex);
 
 	UFUNCTION()
 	void OnLevelLoaded();
@@ -51,11 +48,8 @@ public:
 	void UnloadAllLevels();
 	
 	UFUNCTION()
-	void OnAllLevelsUnloaded() { Print("All levels unloaded.", 5)}
-	
-	UFUNCTION()
-	void OnLevelUnloaded();
+	void OnLevelUnloaded() { Print("Specified level has been unloaded.", 5)}
 
 	UFUNCTION(BlueprintCallable)
-	void PrintCurrentLevel() const { Print("Pending level = " +  FString::FromInt(pendingLevel), 5) Print("Current level = " +  FString::FromInt(currentLevel), 5) }
+	void PrintCurrentLevel() const { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
 };
