@@ -1549,6 +1549,12 @@
     <ClInclude Include="..\..\Source\projProblox\Collector.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\CustomGameInstance.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\CustomGameInstance.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\LevelManager.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
@@ -1568,6 +1574,12 @@
       <Filter>Source\projProblox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\projProblox.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\SpawnPoint.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\SpawnPoint.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
     <Filter Include="Source\projProblox\Cells">

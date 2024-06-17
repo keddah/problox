@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CustomGameInstance.h"
+#include "SpawnPoint.h"
 #include "Engine/LevelStreamingDynamic.h"
 #include "GameFramework/Actor.h"
 #include "Kismet/GameplayStatics.h"
@@ -11,12 +13,20 @@
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedLevels, int, levelIndex);
+
+
 UCLASS()
 class PROJPROBLOX_API ALevelManager : public AActor
 {
 	GENERATED_BODY()
 
 	void UnloadLevel(short lvlIndex);
+	UCustomGameInstance* instance;
+
+	TArray<ASpawnPoint*> lvl1Spawns;
+	TArray<ASpawnPoint*> lvl2Spawns;
+	TArray<ASpawnPoint*> lvl3Spawns;
 	
 public:	
 	// Sets default values for this actor's properties
@@ -50,4 +60,6 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void PrintCurrentLevel() const { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
+
+	FOnChangedLevels onLevelChanged;
 };

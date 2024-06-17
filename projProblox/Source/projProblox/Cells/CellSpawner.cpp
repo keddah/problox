@@ -10,6 +10,7 @@
 #include "CellSpawner.h"
 
 #include "Kismet/GameplayStatics.h"
+#include "projProblox/CustomGameInstance.h"
 #include "projProblox/GameModes/Modes.h"
 #include "projProblox/Pickupables/Cores/Connectors/CubeConnector.h"
 
@@ -114,6 +115,11 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FAct
 
 void ACellSpawner::BeginSpawn()
 {
+	if(!wrld)
+	{
+		Print("World was invalid... couldn't spawn cells.", 5)
+		return;
+	}
 	if(!active) return;
 	
 	const FVector thisPos = GetActorLocation();
@@ -121,6 +127,10 @@ void ACellSpawner::BeginSpawn()
 
 	FActorSpawnParameters params;
 	params.bNoFail = true;
+	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
+	{
+		params.OverrideLevel = wrld->GetLevel(instance->GetCurrentLevel());
+	}
 
 	// If spawn radius isn't set, the spawn position will be this position.
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
@@ -131,12 +141,22 @@ void ACellSpawner::BeginSpawn()
 
 void ACellSpawner::SpawnWithForce() const
 {
+	if(!wrld)
+	{
+		Print("World was invalid... couldn't spawn cells.", 5)
+		return;
+	}
+	
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 	
 	FActorSpawnParameters params;
 	params.bNoFail = true;
+	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
+	{
+		params.OverrideLevel = wrld->GetLevel(instance->GetCurrentLevel());
+	}
 
 	TArray<ACell*> spawnedCells;
 	// Spawn a new Thing for however many spawnAmount says to.
