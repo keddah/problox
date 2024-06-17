@@ -21,15 +21,16 @@
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
+			"LevelManager.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
-			"MagPole.gen.cpp.obj",
-			"LevelManager.gen.cpp.obj"
+			"MagPole.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"Modes.gen.cpp.obj",
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
@@ -39,9 +40,11 @@
 			"Wheels.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
+			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"Modes.cpp.obj",
+			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"CubeConnector.cpp.obj",
@@ -63,10 +66,7 @@
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
-			"Wheels.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
-			"CellSpawner.cpp.obj",
-			"LevelManager.cpp.obj"
+			"Wheels.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
 			"PlayerCharacter.cpp.obj",
