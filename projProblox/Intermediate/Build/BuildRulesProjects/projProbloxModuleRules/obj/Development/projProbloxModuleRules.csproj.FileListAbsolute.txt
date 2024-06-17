@@ -26,7 +26,7 @@ C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRule
 C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\projProbloxModuleRules.AssemblyInfoInputs.cache
 C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\projProbloxModuleRules.AssemblyInfo.cs
 C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\projProbloxModuleRules.csproj.CoreCompileInputs.cache
-C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\projProbloxModuleRules.csproj.CopyComplete
 C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\projProbloxModuleRules.dll
 C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\refint\projProbloxModuleRules.dll
 C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\projProbloxModuleRules.pdb
+C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\BuildRulesProjects\projProbloxModuleRules\obj\Development\projProb.E7B1EA74.Up2Date

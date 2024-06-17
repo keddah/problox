@@ -1549,6 +1549,12 @@
     <ClInclude Include="..\..\Source\projProblox\Collector.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\LevelManager.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\LevelManager.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\PlayerCharacter.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
