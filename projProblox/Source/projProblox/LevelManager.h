@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "CustomGameInstance.h"
+#include "PlayerCharacter.h"
 #include "SpawnPoint.h"
 #include "Engine/LevelStreamingDynamic.h"
 #include "GameFramework/Actor.h"
@@ -23,10 +24,15 @@ class PROJPROBLOX_API ALevelManager : public AActor
 
 	void UnloadLevel(short lvlIndex);
 	UCustomGameInstance* instance;
-
+	APlayerCharacter* player;
+	
+	ACubeCore* core;
+	
 	TArray<ASpawnPoint*> lvl1Spawns;
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
+
+	void FindCore();
 	
 public:	
 	// Sets default values for this actor's properties
@@ -52,14 +58,27 @@ public:
 	
 	// Returns whether the loaded level. 
 	UFUNCTION(BlueprintCallable)
-	void InitLoadLevel(int lvlIndex);
+	void InitLoadLevel(int lvlIndex, int spawnPoint = 0);
 
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Unloads all the levels apart from the current level."))
 	void UnloadAllLevels();
 	
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Returns the level index of the current level."))
+	int GetCurrentLevel() const { return currentLevel; }
+	
 	UFUNCTION(BlueprintCallable)
 	void PrintCurrentLevel() const { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
 
 	FOnChangedLevels onLevelChanged;
+
+	UFUNCTION(BlueprintCallable)
+	TArray<ASpawnPoint*> GetLevel1Spawns() const { return lvl1Spawns; }
+
+	UFUNCTION(BlueprintCallable)
+	TArray<ASpawnPoint*> GetLevel2Spawns() const { return lvl2Spawns; }
+
+	UFUNCTION(BlueprintCallable)
+	TArray<ASpawnPoint*> GetLevel3Spawns() const { return lvl3Spawns; }
+
 };

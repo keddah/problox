@@ -3,6 +3,9 @@
 
 #include "LevelManager.h"
 
+#include "Pickupables/Cores/CubeCore.h"
+#include "Pickupables/Cores/Connectors/CubeConnector.h"
+
 
 // Sets default values
 ALevelManager::ALevelManager()
@@ -17,6 +20,9 @@ void ALevelManager::BeginPlay()
 
 	wrld = GetWorld();
 	instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
+	player = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(wrld, APlayerCharacter::StaticClass()));
+	if(!player) Print("Level Manager couldn't get the player....", 8)
+	FindCore();
 	
 	// Get the level instances that are a part of the main world
 	for (int i = 0; i < wrld->GetStreamingLevels().Num(); i++)
@@ -29,28 +35,34 @@ void ALevelManager::BeginPlay()
 
 			// Add the level if it's valid.
 			levels.AddUnique(lvl);
-
-			// Get all the spawn points from that level
-			TArray<AActor*> spawns;
-			UGameplayStatics::GetAllActorsOfClass(lvl, ASpawnPoint::StaticClass(), spawns);
-
-			for (int j = 0; j < spawns.Num(); j++)
-			{
-				ASpawnPoint* point = Cast<ASpawnPoint>(spawns[j]);
-				if(!point) continue;
-
-				// Unlock the first point of each level
-				if(j == 0) point->UnlockPoint();
-
-				// Add the points to their respective arrays
-				// 0 == the build area
-				if(i == 1) lvl1Spawns.Add(point);
-				if(i == 2) lvl2Spawns.Add(point);
-				if(i == 3) lvl3Spawns.Add(point);
-			}
 		}
 	}
 
+	// Get all the spawn points from that level
+	TArray<AActor*> spawns;
+	UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
+	for (auto& spawn : spawns)
+	{
+		ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
+		if(!point) continue;
+
+		// Add the points to their respective arrays
+		switch (point->GetLevelEnum())
+		{
+			case ELevel::BuildArea:
+				point->SetLevelIndex(0);
+				break;
+			case ELevel::Bedroom:
+				point->SetLevelIndex(1);
+				lvl1Spawns.Add(point);
+				break;
+			case ELevel::Kitchen:
+				point->SetLevelIndex(2);
+				lvl2Spawns.Add(point);
+				break;
+		}
+	}
+	
 	// Unload every level apart from the first.
 	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
 }
@@ -67,7 +79,7 @@ void ALevelManager::Tick(float DeltaSeconds)
 	}
 }
 
-void ALevelManager::InitLoadLevel(int lvlIndex)
+void ALevelManager::InitLoadLevel(const int lvlIndex, const int spawnPoint)
 {
 	if(!levels.IsValidIndex(lvlIndex))
 	{
@@ -95,10 +107,67 @@ void ALevelManager::InitLoadLevel(int lvlIndex)
 	}
 
 	currentLevel = lvlIndex;
+	if(!levels.IsValidIndex(currentLevel)) return;
+	if(!levels[currentLevel]) return;
+	
 	if(!levels[currentLevel]->IsLevelLoaded()) levels[currentLevel]->SetShouldBeLoaded(true);
 	levels[currentLevel]->SetShouldBeVisible(true);
 	instance->SetCurrentLevel(currentLevel);
 	UnloadAllLevels();
+
+	if(!player)
+	{
+		Print("Couldn't set spawn because the player was invalid...", 5)
+		return;
+	}
+
+	if(!core)
+	{
+		Print("Couldn't set spawn because the core was invalid...", 5)
+		return;
+	}
+	
+	FVector spawnPos;
+	switch (currentLevel)
+	{
+		case 0: 
+			// player->SetActorRotation(lvl1Spawns[0]->GetActorRotation());
+			// player->SetActorLocation(lvl1Spawns[0]->GetActorLocation());
+			break;
+
+		case 1:
+			if(lvl1Spawns.IsEmpty()) break;
+			if(lvl1Spawns.IsValidIndex(spawnPoint))
+			{
+				spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
+				player->SetActorRotation(lvl1Spawns[spawnPoint]->GetActorRotation());
+				player->SetActorLocation(spawnPos + FVector(0,0,300));
+				core->SetActorLocation(spawnPos);
+			}
+			break;
+
+		case 2:
+			if(lvl2Spawns.IsEmpty()) break;
+			if(lvl2Spawns.IsValidIndex(spawnPoint))
+			{
+				spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
+				player->SetActorRotation(lvl2Spawns[spawnPoint]->GetActorRotation());
+				player->SetActorLocation(spawnPos + FVector(0,0,300));
+				core->SetActorLocation(spawnPos);
+			}
+			break;
+
+		case 3:
+			if(lvl3Spawns.IsEmpty()) break;
+			if(lvl3Spawns.IsValidIndex(spawnPoint))
+			{
+				spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
+				player->SetActorRotation(lvl3Spawns[spawnPoint]->GetActorRotation());
+				player->SetActorLocation(spawnPos + FVector(0,0,300));
+				core->SetActorLocation(spawnPos);
+			}
+			break;
+	}
 }
 
 void ALevelManager::UnloadLevel(short lvlIndex)
@@ -125,5 +194,21 @@ void ALevelManager::UnloadAllLevels()
 	{
 		if(i == currentLevel) continue;
 		UnloadLevel(i);
+	}
+}
+
+void ALevelManager::FindCore()
+{
+	if(!wrld) return;
+
+	TArray<AActor*> coreActors;
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACubeCore::StaticClass(), coreActors);
+	for (auto& ACore: coreActors)
+	{
+		// Ignore connectors....
+		if(ACore->IsA<ACubeConnector>()) continue;
+
+		if(ACubeCore* objCore = Cast<ACubeCore>(ACore)) core = objCore;
+		if(!core) Print("Core not found... ~ Level Manager", 5)
 	}
 }
