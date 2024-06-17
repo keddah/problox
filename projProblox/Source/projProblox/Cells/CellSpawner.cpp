@@ -35,12 +35,21 @@ void ACellSpawner::BeginPlay()
 	Super::BeginPlay();
 
 	wrld = GetWorld();
-
+	if(!wrld)
+	{
+		Print("World was invalid at beginplay ~ spawner", 5)
+		return;
+	}
+	
 	// If the current gamemode successfully casts to story mode...
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
 	{
 		active = !triggerable;
-		if(!triggerable) BeginSpawn();
+
+	    UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
+		if(!instance) return;
+		
+		if(!triggerable && !instance->HasGameStarted()) BeginSpawn();
 		return;
 	}
 

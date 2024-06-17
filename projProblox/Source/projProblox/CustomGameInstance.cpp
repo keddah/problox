@@ -3,3 +3,9 @@
 
 #include "CustomGameInstance.h"
 
+void UCustomGameInstance::Init()
+{
+	Super::Init();
+
+	gameStarted = true;
+}
