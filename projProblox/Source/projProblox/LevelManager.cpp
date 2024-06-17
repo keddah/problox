@@ -16,13 +16,38 @@ void ALevelManager::BeginPlay()
 	Super::BeginPlay();
 
 	wrld = GetWorld();
-
-	// Get the level instances that are a part of the main level
-	for (ULevelStreaming* levelStream : wrld->GetStreamingLevels())
+	instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
+	
+	// Get the level instances that are a part of the main world
+	for (int i = 0; i < wrld->GetStreamingLevels().Num(); i++)
 	{
+		ULevelStreaming* levelStream = wrld->GetStreamingLevels()[i];
 		if (levelStream && levelStream->IsA<ULevelStreamingDynamic>())
 		{
-			if (ULevelStreamingDynamic* lvl = Cast<ULevelStreamingDynamic>(levelStream)) levels.Add(lvl);
+			ULevelStreamingDynamic* lvl = Cast<ULevelStreamingDynamic>(levelStream);
+			if (!lvl) continue;
+
+			// Add the level if it's valid.
+			levels.AddUnique(lvl);
+
+			// Get all the spawn points from that level
+			TArray<AActor*> spawns;
+			UGameplayStatics::GetAllActorsOfClass(lvl, ASpawnPoint::StaticClass(), spawns);
+
+			for (int j = 0; j < spawns.Num(); j++)
+			{
+				ASpawnPoint* point = Cast<ASpawnPoint>(spawns[j]);
+				if(!point) continue;
+
+				// Unlock the first point of each level
+				if(j == 0) point->UnlockPoint();
+
+				// Add the points to their respective arrays
+				// 0 == the build area
+				if(i == 1) lvl1Spawns.Add(point);
+				if(i == 2) lvl2Spawns.Add(point);
+				if(i == 3) lvl3Spawns.Add(point);
+			}
 		}
 	}
 
@@ -36,7 +61,10 @@ void ALevelManager::Tick(float DeltaSeconds)
 
 	if(levels.IsEmpty()) return;
 
-	if(levels.IsValidIndex(currentLevel)) bLevelLoading = levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::MakingVisible;
+	if(levels.IsValidIndex(currentLevel))
+	{
+		bLevelLoading = levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::MakingVisible;// || levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::Loading;
+	}
 }
 
 void ALevelManager::InitLoadLevel(int lvlIndex)
@@ -56,6 +84,7 @@ void ALevelManager::InitLoadLevel(int lvlIndex)
 	if(lvlIndex == currentLevel)
 	{
 		Print("The level that's trying to be loaded is already loaded...: Index = " + FString::FromInt(lvlIndex), 5)
+		Print("Level name = " + levels[currentLevel]->GetWorld()->GetName(), 5)
 		return;
 	}
 
@@ -65,18 +94,10 @@ void ALevelManager::InitLoadLevel(int lvlIndex)
 		return;
 	}
 
-	TArray<AActor*> outActors;
-	UGameplayStatics::GetAllActorsWithTag(levels[currentLevel],"Chaos", outActors);
-	for (auto& actor : outActors)
-	{
-		if(UStaticMeshComponent* mesh = Cast<UStaticMeshComponent>(actor->FindComponentByClass(UStaticMeshComponent::StaticClass())))
-		{
-			mesh->SetSimulatePhysics(true);
-		}
-	}
-	
 	currentLevel = lvlIndex;
+	if(!levels[currentLevel]->IsLevelLoaded()) levels[currentLevel]->SetShouldBeLoaded(true);
 	levels[currentLevel]->SetShouldBeVisible(true);
+	instance->SetCurrentLevel(currentLevel);
 	UnloadAllLevels();
 }
 
@@ -94,16 +115,6 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 		return;
 	}
 
-	TArray<AActor*> outActors;
-	UGameplayStatics::GetAllActorsWithTag(levels[currentLevel],"Chaos", outActors);
-	for (auto& actor : outActors)
-	{
-		if(UStaticMeshComponent* mesh = Cast<UStaticMeshComponent>(actor->FindComponentByClass(UStaticMeshComponent::StaticClass())))
-		{
-			mesh->SetSimulatePhysics(false);
-		}
-	}
-	
 	levels[lvlIndex]->SetShouldBeVisible(false);
 }
 
