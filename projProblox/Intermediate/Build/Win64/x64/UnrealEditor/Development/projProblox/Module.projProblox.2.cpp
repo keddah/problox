@@ -18,6 +18,7 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Collector.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/CustomGameInstance.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/GameModes/Modes.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/LevelManager.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Balloon.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/BounceSpring.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Cores/Connectors/CubeConnector.cpp"
@@ -32,5 +33,3 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Grapple/Grappler.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Hoverer.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Magnet/Magnet.cpp"
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Magnet/MagPole.cpp"
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/PickupableMaster.cpp"

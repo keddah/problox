@@ -25,7 +25,6 @@ class PROJPROBLOX_API ASpawnPoint : public AActor
 	short levelIndex;
 	
 	UTextureRenderTarget2D* renderTarget;
-	UMaterialInstanceDynamic* dynamicMat;
 	void LoadMaterial();
 
 public:	
@@ -36,6 +35,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	UMaterialInstanceDynamic* dynamicMat;
+	
 	UPROPERTY(EditDefaultsOnly)
 	USceneCaptureComponent2D* previewer;
 
