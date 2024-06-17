@@ -13,10 +13,15 @@ UCLASS()
 class PROJPROBLOX_API UCustomGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
-
+	
 	short currentLevel;
+	bool gameStarted;
 
+protected:
+	virtual void Init() override;
+	
 public:
 	void SetCurrentLevel(const short index) { currentLevel = index; }
 	short GetCurrentLevel() const { return currentLevel; }
+	bool HasGameStarted() const { return gameStarted; }
 };
