@@ -10,13 +10,15 @@
 #include "SpawnPoint.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnNewSpawn);
 
 UENUM(BlueprintType)
 enum class ELevel : uint8
 {
 	BuildArea,
 	Bedroom,
-	Kitchen
+	Kitchen,
+	Bathroom
 };
 
 UCLASS()
@@ -50,6 +52,7 @@ protected:
 	
 public:	
 	void UnlockPoint() { unlocked = true; }
+	void LockPoint() { unlocked = false; }
 	bool IsUnlocked() const { return unlocked; }
 
 	UFUNCTION(BlueprintCallable)
@@ -57,4 +60,6 @@ public:
 	void SetLevelIndex(const short index) { levelIndex = index; }
 
 	ELevel GetLevelEnum() const { return level; }
+
+	FOnNewSpawn onNewSpawn;
 };

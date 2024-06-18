@@ -12,8 +12,6 @@
 
 #include "LevelManager.generated.h"
 
-#define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
-
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedLevels, int, levelIndex);
 
 
@@ -29,11 +27,13 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	ACubeCore* core;
 	
 	ASpawnPoint* lvl0Spawn;
+	TArray<ASpawnPoint*> allSpawns;
 	TArray<ASpawnPoint*> lvl1Spawns;
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
 
 	void FindCore();
+	void FindSpawns();
 
 	UFUNCTION()
 	void InitLevel1Spawners();
@@ -43,6 +43,9 @@ class PROJPROBLOX_API ALevelManager : public AActor
 
 	UFUNCTION()
 	void InitLevel3Spawners();
+
+	UFUNCTION()
+	void SaveSpawns();
 
 public:	
 	// Sets default values for this actor's properties
@@ -63,9 +66,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TArray<ULevelStreamingDynamic*> levels;
 
-	bool lvl1Spawned;
-	bool lvl2Spawned;
-	bool lvl3Spawned;
+	bool lvl1Loaded;
+	bool lvl2Loaded;
+	bool lvl3Loaded;
 
 public:
 	virtual void Tick(float DeltaSeconds) override;

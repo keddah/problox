@@ -38,9 +38,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawnSaves() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_USpawnSaves_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USpawnSaves_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "SpawnSaves.h" },
 		{ "ModuleRelativePath", "SpawnSaves.h" },
 	};
@@ -83,9 +80,9 @@ void EmptyLinkFunctionForGeneratedCodeSpawnSaves() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnSaves_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USpawnSaves, USpawnSaves::StaticClass, TEXT("USpawnSaves"), &Z_Registration_Info_UClass_USpawnSaves, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpawnSaves), 1514105400U) },
+		{ Z_Construct_UClass_USpawnSaves, USpawnSaves::StaticClass, TEXT("USpawnSaves"), &Z_Registration_Info_UClass_USpawnSaves, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpawnSaves), 3428495114U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnSaves_h_2182064092(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnSaves_h_2905773515(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnSaves_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnSaves_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -3,6 +3,7 @@
 
 #include "LevelManager.h"
 
+#include "SpawnSaves.h"
 #include "Cells/CellSpawner.h"
 #include "Pickupables/Cores/CubeCore.h"
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
@@ -39,31 +40,7 @@ void ALevelManager::BeginPlay()
 		}
 	}
 
-	// Get all the spawn points from that level
-	TArray<AActor*> spawns;
-	UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
-	for (auto& spawn : spawns)
-	{
-		ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
-		if(!point) continue;
-
-		// Add the points to their respective arrays
-		switch (point->GetLevelEnum())
-		{
-			case ELevel::BuildArea:
-				point->SetLevelIndex(0);
-				lvl0Spawn = point;
-				break;
-			case ELevel::Bedroom:
-				point->SetLevelIndex(1);
-				lvl1Spawns.Add(point);
-				break;
-			case ELevel::Kitchen:
-				point->SetLevelIndex(2);
-				lvl2Spawns.Add(point);
-				break;
-		}
-	}
+	FindSpawns();
 
 	// Unload every level apart from the first.
 	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
@@ -237,9 +214,81 @@ void ALevelManager::FindCore()
 	}
 }
 
+void ALevelManager::FindSpawns()
+{
+	bool fromSave = false;
+	if(USpawnSaves* savedSpawns = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot("SpawnSaves", 0)))
+	{
+		allSpawns = savedSpawns->GetAllSpawns();
+		fromSave = true;
+	}
+
+	else
+	{
+		// Get all the spawn points from that level
+		TArray<AActor*> spawns;
+		UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
+		for (auto& spawn : spawns)
+		{
+			ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
+			if(!point) continue;
+
+			allSpawns.Add(point);
+			point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
+		}
+	}
+
+	// Sorts the spawns into their levels
+	for (auto& point : allSpawns)
+	{
+		// Add the points to their respective arrays
+		switch (point->GetLevelEnum())
+		{
+			case ELevel::BuildArea:
+				point->SetLevelIndex(0);
+				lvl0Spawn = point;
+				break;
+				
+			case ELevel::Bedroom:
+				point->SetLevelIndex(1);
+				lvl1Spawns.Add(point);
+				break;
+				
+			case ELevel::Kitchen:
+				point->SetLevelIndex(2);
+				lvl2Spawns.Add(point);
+				break;
+				
+			case ELevel::Bathroom:
+				point->SetLevelIndex(3);
+				lvl3Spawns.Add(point);
+				break;
+		}
+	}
+
+	// If it's from the save, its unlock status would be saved.
+	if(fromSave) return;
+	
+	// Lock all the spawn points except the first (then unlock the ones that have been saved to a file)
+	TArray<TArray<ASpawnPoint*>> spawnsArray = {lvl1Spawns, lvl1Spawns };
+
+	// For each array of spawn arrays...
+	for (auto& array : spawnsArray)
+	{
+		for (int i = 0; i < 0; i++)
+		{
+			// Ignore the first spawn point
+			if(i == 0) continue;
+
+			// Lock the rest
+			array[i]->LockPoint();
+		}
+	}
+}
+
 void ALevelManager::InitLevel1Spawners()
 {
-	if(lvl1Spawned) return;
+	if(lvl1Loaded) return;
 
 	TArray<AActor*> spawns;
 	UGameplayStatics::GetAllActorsOfClass(levels[1]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
@@ -250,12 +299,12 @@ void ALevelManager::InitLevel1Spawners()
 		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
 	}
 
-	lvl1Spawned = true;
+	lvl1Loaded = true;
 }
 
 void ALevelManager::InitLevel2Spawners()
 {
-	if(lvl2Spawned) return;
+	if(lvl2Loaded) return;
 
 	TArray<AActor*> spawns;
 	UGameplayStatics::GetAllActorsOfClass(levels[2]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
@@ -266,12 +315,12 @@ void ALevelManager::InitLevel2Spawners()
 		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
 	}
 
-	lvl2Spawned = true;
+	lvl2Loaded = true;
 }
 
 void ALevelManager::InitLevel3Spawners()
 {
-	if(lvl3Spawned) return;
+	if(lvl3Loaded) return;
 
 	TArray<AActor*> spawns;
 	UGameplayStatics::GetAllActorsOfClass(levels[3]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
@@ -282,5 +331,10 @@ void ALevelManager::InitLevel3Spawners()
 		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
 	}
 
-	lvl3Spawned = true;
+	lvl3Loaded = true;
+}
+
+void ALevelManager::SaveSpawns()
+{
+	
 }

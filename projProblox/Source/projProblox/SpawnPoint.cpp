@@ -34,5 +34,6 @@ void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
 		unlocked = true;
 
 		// Create/modify a save file so that it saves....
-	}
+		onNewSpawn.Broadcast();
+ 	}
 }
