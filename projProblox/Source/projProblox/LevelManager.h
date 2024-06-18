@@ -59,7 +59,7 @@ public:
 	
 	// Returns whether the loaded level. 
 	UFUNCTION(BlueprintCallable)
-	void InitLoadLevel(int lvlIndex, int spawnPoint = 0);
+	void LoadLevel(int lvlIndex, int spawnPoint = 0);
 
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Unloads all the levels apart from the current level."))
@@ -69,7 +69,7 @@ public:
 	int GetCurrentLevel() const { return currentLevel; }
 	
 	UFUNCTION(BlueprintCallable)
-	void PrintCurrentLevel() const { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
+	void PrintCurrentLevel() { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
 
 	UPROPERTY(BlueprintAssignable)
 	FOnChangedLevels onLevelChanged;

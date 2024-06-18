@@ -23,7 +23,7 @@ void ALevelManager::BeginPlay()
 	player = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(wrld, APlayerCharacter::StaticClass()));
 	if(!player) Print("Level Manager couldn't get the player....", 8)
 	FindCore();
-	
+
 	// Get the level instances that are a part of the main world
 	for (int i = 0; i < wrld->GetStreamingLevels().Num(); i++)
 	{
@@ -80,7 +80,7 @@ void ALevelManager::Tick(float DeltaSeconds)
 	}
 }
 
-void ALevelManager::InitLoadLevel(const int lvlIndex, const int spawnPoint)
+void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 {
 	if(!levels.IsValidIndex(lvlIndex))
 	{
@@ -113,7 +113,13 @@ void ALevelManager::InitLoadLevel(const int lvlIndex, const int spawnPoint)
 	
 	if(!levels[currentLevel]->IsLevelLoaded()) levels[currentLevel]->SetShouldBeLoaded(true);
 	levels[currentLevel]->SetShouldBeVisible(true);
+
+	// Broadcast the level change
+	onLevelChanged.Broadcast(currentLevel);
+
 	instance->SetCurrentLevel(currentLevel);
+
+	// Unload all the levels apart from the current level
 	UnloadAllLevels();
 
 	if(!player)
