@@ -48,22 +48,22 @@ void ACollector::BeginPlay()
 
 	if(!core) return;
 
-	core->onStartGame.AddDynamic(this, &ACollector::ResetCells);
+	// core->onStartGame.AddDynamic(this, &ACollector::ResetCells);
 	core->onStartGame.AddDynamic(this, &ACollector::CalculateCellCount);
 }
 
-void ACollector::ResetCells()
-{
-	TArray<AActor*> cellActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACell::StaticClass(), cellActors);
-
-	// Destroy all the cells in the level
-	for (const auto& cell : cellActors) cell->Destroy();
-
-	// ... Then get all the spawners in the level to spawn the cells again.
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), cellActors);
-	for (auto& spawner : cellActors) Cast<ACellSpawner>(spawner)->BeginSpawn();
-}
+// void ACollector::ResetCells()
+// {
+// 	TArray<AActor*> cellActors;
+// 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACell::StaticClass(), cellActors);
+//
+// 	// Destroy all the cells in the level
+// 	for (const auto& cell : cellActors) cell->Destroy();
+//
+// 	// ... Then get all the spawners in the level to spawn the cells again.
+// 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), cellActors);
+// 	for (auto& spawner : cellActors) Cast<ACellSpawner>(spawner)->BeginSpawn();
+// }
 
 // Called every frame
 void ACollector::Tick(float DeltaTime)

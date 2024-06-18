@@ -33,6 +33,8 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
 
+	// Ensure the indices are aligned with the levels (start from 1)
+	TArray<bool> levelsLoaded { false, false, false, false };
 	void FindCore();
 	
 public:	
@@ -61,6 +63,21 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void LoadLevel(int lvlIndex, int spawnPoint = 0);
 
+	bool IsLevelLoaded(short index) const { return levelsLoaded[index]; }
+	bool IsLevelLoaded(ULevel* lvl) const
+	{
+		if (!lvl) return false;
+
+		// Iterate through the levels array
+		for (int32 i = 0; i < levels.Num(); ++i)
+		{
+			if (levels[i] && levels[i]->GetLoadedLevel() == lvl)
+			{
+				return levelsLoaded.IsValidIndex(i) ? levelsLoaded[i] : false;
+			}
+		}
+		return false;
+	}
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Unloads all the levels apart from the current level."))
 	void UnloadAllLevels();

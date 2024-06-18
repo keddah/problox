@@ -111,7 +111,11 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 	if(!levels.IsValidIndex(currentLevel)) return;
 	if(!levels[currentLevel]) return;
 	
-	if(!levels[currentLevel]->IsLevelLoaded()) levels[currentLevel]->SetShouldBeLoaded(true);
+	if(!levels[currentLevel]->IsLevelLoaded())
+	{
+		levels[currentLevel]->SetShouldBeLoaded(true);
+		levelsLoaded[currentLevel] = true;
+	}
 	levels[currentLevel]->SetShouldBeVisible(true);
 
 	// Broadcast the level change
@@ -133,6 +137,8 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 		Print("Couldn't set spawn because the core was invalid...", 5)
 		return;
 	}
+
+	core->RemoveVelocity();
 	
 	FVector spawnPos;
 	switch (currentLevel)

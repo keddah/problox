@@ -33,18 +33,6 @@ PROJPROBLOX_API void FOnNewWave_DelegateWrapper(const FMulticastScriptDelegate& 
 PROJPROBLOX_API void FOnAttachmentChange_DelegateWrapper(const FMulticastScriptDelegate& OnAttachmentChange);
 
 
-#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_45_DELEGATE \
-PROJPROBLOX_API void FOnOutOfRange_DelegateWrapper(const FMulticastScriptDelegate& OnOutOfRange);
-
-
-#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_47_DELEGATE \
-PROJPROBLOX_API void FOnGameEnd_DelegateWrapper(const FMulticastScriptDelegate& OnGameEnd);
-
-
-#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_48_DELEGATE \
-PROJPROBLOX_API void FOnEndingGame_DelegateWrapper(const FMulticastScriptDelegate& OnEndingGame);
-
-
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_51_DELEGATE \
 PROJPROBLOX_API void FOnAttemptEnding_DelegateWrapper(const FMulticastScriptDelegate& OnAttemptEnding);
 
@@ -75,9 +63,7 @@ PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegat
 	DECLARE_FUNCTION(execDetachAll); \
 	DECLARE_FUNCTION(execStartStoryGame); \
 	DECLARE_FUNCTION(execStartGame); \
-	DECLARE_FUNCTION(execStart); \
-	DECLARE_FUNCTION(execEndGame); \
-	DECLARE_FUNCTION(execStartEndingGame);
+	DECLARE_FUNCTION(execStart);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_63_ACCESSORS

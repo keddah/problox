@@ -11,6 +11,7 @@
 
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/CustomGameInstance.h"
+#include "projProblox/LevelManager.h"
 #include "projProblox/GameModes/Modes.h"
 #include "projProblox/Pickupables/Cores/Connectors/CubeConnector.h"
 
@@ -40,6 +41,12 @@ void ACellSpawner::BeginPlay()
 		Print("World was invalid at beginplay ~ spawner", 5)
 		return;
 	}
+
+	ALevelManager* levelManager = Cast<ALevelManager>(UGameplayStatics::GetActorOfClass(wrld, ALevelManager::StaticClass()));
+	if(!levelManager) return;
+	
+	const bool loaded = levelManager->IsLevelLoaded(GetLevel());
+	if(!loaded) return;
 	
 	// If the current gamemode successfully casts to story mode...
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
@@ -49,7 +56,7 @@ void ACellSpawner::BeginPlay()
 	    UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
 		if(!instance) return;
 		
-		if(!triggerable && !instance->HasGameStarted()) BeginSpawn();
+		// if(!triggerable && !instance->HasGameStarted()) BeginSpawn();
 		return;
 	}
 
@@ -146,6 +153,7 @@ void ACellSpawner::BeginSpawn()
 
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
+	active = false;
 }
 
 void ACellSpawner::SpawnWithForce() const
