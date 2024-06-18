@@ -15,8 +15,35 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ASpawnPoint();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ASpawnPoint_NoRegister();
 	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_ELevel();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SpawnPoint.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnNewSpawn__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
+{
+	OnNewSpawn.ProcessMulticastDelegate<UObject>(NULL);
+}
 	static FEnumRegistrationInfo Z_Registration_Info_UEnum_ELevel;
 	static UEnum* ELevel_StaticEnum()
 	{
@@ -42,9 +69,11 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 		{ "ELevel::BuildArea", (int64)ELevel::BuildArea },
 		{ "ELevel::Bedroom", (int64)ELevel::Bedroom },
 		{ "ELevel::Kitchen", (int64)ELevel::Kitchen },
+		{ "ELevel::Bathroom", (int64)ELevel::Bathroom },
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_projProblox_ELevel_Statics::Enum_MetaDataParams[] = {
+		{ "Bathroom.Name", "ELevel::Bathroom" },
 		{ "Bedroom.Name", "ELevel::Bedroom" },
 		{ "BlueprintType", "true" },
 		{ "BuildArea.Name", "ELevel::BuildArea" },
@@ -191,7 +220,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level = { "level", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, level), Z_Construct_UEnum_projProblox_ELevel, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData) }; // 764075151
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level = { "level", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, level), Z_Construct_UEnum_projProblox_ELevel, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData) }; // 1235914906
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpawnPoint_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlockTrigger,
@@ -237,12 +266,12 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo[] = {
-		{ ELevel_StaticEnum, TEXT("ELevel"), &Z_Registration_Info_UEnum_ELevel, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 764075151U) },
+		{ ELevel_StaticEnum, TEXT("ELevel"), &Z_Registration_Info_UEnum_ELevel, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1235914906U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 2437405537U) },
+		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 1693058136U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_3921569263(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_2892863932(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo));

@@ -112,6 +112,13 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		P_THIS->LoadLevel(Z_Param_lvlIndex,Z_Param_spawnPoint);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ALevelManager::execSaveSpawns)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SaveSpawns();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ALevelManager::execInitLevel3Spawners)
 	{
 		P_FINISH;
@@ -146,6 +153,7 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 			{ "InitLevel3Spawners", &ALevelManager::execInitLevel3Spawners },
 			{ "LoadLevel", &ALevelManager::execLoadLevel },
 			{ "PrintCurrentLevel", &ALevelManager::execPrintCurrentLevel },
+			{ "SaveSpawns", &ALevelManager::execSaveSpawns },
 			{ "UnloadAllLevels", &ALevelManager::execUnloadAllLevels },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -431,6 +439,28 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ALevelManager_SaveSpawns_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_SaveSpawns_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "LevelManager.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_SaveSpawns_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "SaveSpawns", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_SaveSpawns_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_SaveSpawns_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ALevelManager_SaveSpawns()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_SaveSpawns_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ALevelManager_UnloadAllLevels_Statics
 	{
 #if WITH_METADATA
@@ -501,6 +531,7 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		{ &Z_Construct_UFunction_ALevelManager_InitLevel3Spawners, "InitLevel3Spawners" }, // 3051060635
 		{ &Z_Construct_UFunction_ALevelManager_LoadLevel, "LoadLevel" }, // 3663133168
 		{ &Z_Construct_UFunction_ALevelManager_PrintCurrentLevel, "PrintCurrentLevel" }, // 4221123980
+		{ &Z_Construct_UFunction_ALevelManager_SaveSpawns, "SaveSpawns" }, // 227645982
 		{ &Z_Construct_UFunction_ALevelManager_UnloadAllLevels, "UnloadAllLevels" }, // 2294205534
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::FuncInfo) < 2048);
@@ -579,9 +610,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 599708813U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 1448018340U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_3993760857(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_637920120(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
