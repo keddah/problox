@@ -216,6 +216,7 @@ void ALevelManager::FindCore()
 
 void ALevelManager::FindSpawns()
 {
+	// Whether the spawns have been loaded from a spawn save...
 	bool fromSave = false;
 	if(USpawnSaves* savedSpawns = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot("SpawnSaves", 0)))
 	{
@@ -223,24 +224,27 @@ void ALevelManager::FindSpawns()
 		fromSave = true;
 	}
 
+	// If no spawn save was found, find all the spawns
 	else
 	{
-		// Get all the spawn points from that level
+		// Get all the spawn points from the PERSISTENT level
 		TArray<AActor*> spawns;
 		UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
-		for (auto& spawn : spawns)
+		for (auto& spawn : spawns) 
 		{
 			ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
 			if(!point) continue;
 
 			allSpawns.Add(point);
-			point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
 		}
 	}
 
 	// Sorts the spawns into their levels
 	for (auto& point : allSpawns)
 	{
+		// Foreach spawn point add a delegate to save whenever it has been unlocked
+		point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
+
 		// Add the points to their respective arrays
 		switch (point->GetLevelEnum())
 		{
@@ -336,5 +340,15 @@ void ALevelManager::InitLevel3Spawners()
 
 void ALevelManager::SaveSpawns()
 {
-	
+	// Try to load the spawn save...
+	USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot("SpawnSaves", 0));
+
+	// If one was found, append to the save
+	if(spawnSave) spawnSave->SaveSpawnUnlock(allSpawns);
+	else
+	{
+		// Otherwise create a new save
+		spawnSave = Cast<USpawnSaves>(UGameplayStatics::CreateSaveGameObject(USpawnSaves::StaticClass()));
+		spawnSave->SaveSpawnUnlock(allSpawns);
+	}
 }

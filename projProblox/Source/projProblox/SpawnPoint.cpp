@@ -28,6 +28,9 @@ void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 
+	// Don't do anything if the point has already been unlocked
+	if(unlocked) return;
+	
 	if(OtherActor->IsA<ACubeConnector>()) return;
 	if(!Cast<ACubeCore>(OtherActor)) return;
  	{
