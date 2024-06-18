@@ -36,6 +36,9 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	void FindSpawns();
 
 	UFUNCTION()
+	void SetLoading() { bLevelLoading = true; }
+	
+	UFUNCTION()
 	void InitLevel1Spawners();
 
 	UFUNCTION()

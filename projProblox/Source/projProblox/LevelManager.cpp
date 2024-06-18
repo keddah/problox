@@ -63,7 +63,7 @@ void ALevelManager::Tick(float DeltaSeconds)
 
 	if(levels.IsValidIndex(currentLevel))
 	{
-		bLevelLoading = levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::MakingVisible;// || levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::Loading;
+		bLevelLoading = levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::MakingVisible || levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::Loading;
 	}
 }
 
@@ -237,8 +237,11 @@ void ALevelManager::FindSpawns()
 
 			allSpawns.Add(point);
 		}
+		SaveSpawns();
 	}
 
+	PrintInt(allSpawns.Num(), 4)
+	
 	// Sorts the spawns into their levels
 	for (auto& point : allSpawns)
 	{
