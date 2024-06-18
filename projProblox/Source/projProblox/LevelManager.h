@@ -28,6 +28,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	
 	ACubeCore* core;
 	
+	ASpawnPoint* lvl0Spawn;
 	TArray<ASpawnPoint*> lvl1Spawns;
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
@@ -70,6 +71,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void PrintCurrentLevel() const { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
 
+	UPROPERTY(BlueprintAssignable)
 	FOnChangedLevels onLevelChanged;
 
 	UFUNCTION(BlueprintCallable)

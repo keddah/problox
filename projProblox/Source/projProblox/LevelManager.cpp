@@ -51,6 +51,7 @@ void ALevelManager::BeginPlay()
 		{
 			case ELevel::BuildArea:
 				point->SetLevelIndex(0);
+				lvl0Spawn = point;
 				break;
 			case ELevel::Bedroom:
 				point->SetLevelIndex(1);
@@ -130,9 +131,12 @@ void ALevelManager::InitLoadLevel(const int lvlIndex, const int spawnPoint)
 	FVector spawnPos;
 	switch (currentLevel)
 	{
-		case 0: 
-			// player->SetActorRotation(lvl1Spawns[0]->GetActorRotation());
-			// player->SetActorLocation(lvl1Spawns[0]->GetActorLocation());
+		case 0:
+			if(!lvl0Spawn) break;
+			spawnPos = lvl0Spawn->GetActorLocation();
+			player->SetActorRotation(lvl0Spawn->GetActorRotation());
+			player->SetActorLocation(spawnPos + FVector(0,0,300));
+			core->SetActorLocation(spawnPos);
 			break;
 
 		case 1:

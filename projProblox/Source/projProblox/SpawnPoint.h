@@ -8,6 +8,8 @@
 #include "Engine/CanvasRenderTarget2D.h"
 #include "SpawnPoint.generated.h"
 
+#define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
+
 UENUM(BlueprintType)
 enum class ELevel : uint8
 {
@@ -23,10 +25,9 @@ class PROJPROBLOX_API ASpawnPoint : public AActor
 	
 	bool unlocked;
 	short levelIndex;
-	
-	UTextureRenderTarget2D* renderTarget;
-	void LoadMaterial();
 
+
+	
 public:	
 	// Sets default values for this actor's properties
 	ASpawnPoint();
@@ -34,12 +35,6 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-	UMaterialInstanceDynamic* dynamicMat;
-	
-	UPROPERTY(EditDefaultsOnly)
-	USceneCaptureComponent2D* previewer;
 
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* defaultScene;
@@ -51,19 +46,9 @@ public:
 	void UnlockPoint() { unlocked = true; }
 	bool IsUnlocked() const { return unlocked; }
 
-	void SetLevelIndex(const short index) { levelIndex = index; }
-
-	UFUNCTION(BlueprintCallable)
-	UTextureRenderTarget2D* GetRenderTarget() const { return renderTarget; }
-	
 	UFUNCTION(BlueprintCallable)
 	int GetLevelIndex() const { return levelIndex; }
+	void SetLevelIndex(const short index) { levelIndex = index; }
 
 	ELevel GetLevelEnum() const { return level; }
-
-	UFUNCTION(BlueprintCallable)
-	UTexture2D* ConvertRenderTargetToTexture() const;
-
-	UFUNCTION(BlueprintCallable)
-	UMaterialInstanceDynamic* GetDisplayMaterial() const { return dynamicMat; };
 };
