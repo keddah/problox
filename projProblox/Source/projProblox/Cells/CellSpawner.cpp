@@ -131,7 +131,7 @@ void ACellSpawner::BeginSpawn()
 	params.bNoFail = true;
 	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
 	{
-		params.OverrideLevel = wrld->GetLevel(instance->GetCurrentLevel());
+		params.OverrideLevel = wrld->GetStreamingLevels()[instance->GetCurrentLevel()]->GetLoadedLevel();
 	}
 
 	// If spawn radius isn't set, the spawn position will be this position.

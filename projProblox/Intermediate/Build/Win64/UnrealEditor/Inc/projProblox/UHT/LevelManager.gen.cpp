@@ -112,11 +112,25 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		P_THIS->LoadLevel(Z_Param_lvlIndex,Z_Param_spawnPoint);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ALevelManager::execOnLevelLoaded)
+	DEFINE_FUNCTION(ALevelManager::execInitLevel3Spawners)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->OnLevelLoaded();
+		P_THIS->InitLevel3Spawners();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALevelManager::execInitLevel2Spawners)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->InitLevel2Spawners();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALevelManager::execInitLevel1Spawners)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->InitLevel1Spawners();
 		P_NATIVE_END;
 	}
 	void ALevelManager::StaticRegisterNativesALevelManager()
@@ -127,8 +141,10 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 			{ "GetLevel1Spawns", &ALevelManager::execGetLevel1Spawns },
 			{ "GetLevel2Spawns", &ALevelManager::execGetLevel2Spawns },
 			{ "GetLevel3Spawns", &ALevelManager::execGetLevel3Spawns },
+			{ "InitLevel1Spawners", &ALevelManager::execInitLevel1Spawners },
+			{ "InitLevel2Spawners", &ALevelManager::execInitLevel2Spawners },
+			{ "InitLevel3Spawners", &ALevelManager::execInitLevel3Spawners },
 			{ "LoadLevel", &ALevelManager::execLoadLevel },
-			{ "OnLevelLoaded", &ALevelManager::execOnLevelLoaded },
 			{ "PrintCurrentLevel", &ALevelManager::execPrintCurrentLevel },
 			{ "UnloadAllLevels", &ALevelManager::execUnloadAllLevels },
 		};
@@ -282,6 +298,72 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ALevelManager_InitLevel1Spawners_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_InitLevel1Spawners_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "LevelManager.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_InitLevel1Spawners_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "InitLevel1Spawners", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_InitLevel1Spawners_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_InitLevel1Spawners_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ALevelManager_InitLevel1Spawners()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_InitLevel1Spawners_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALevelManager_InitLevel2Spawners_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_InitLevel2Spawners_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "LevelManager.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_InitLevel2Spawners_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "InitLevel2Spawners", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_InitLevel2Spawners_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_InitLevel2Spawners_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ALevelManager_InitLevel2Spawners()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_InitLevel2Spawners_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ALevelManager_InitLevel3Spawners_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_InitLevel3Spawners_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "LevelManager.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_InitLevel3Spawners_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "InitLevel3Spawners", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_InitLevel3Spawners_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_InitLevel3Spawners_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ALevelManager_InitLevel3Spawners()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_InitLevel3Spawners_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ALevelManager_LoadLevel_Statics
 	{
 		struct LevelManager_eventLoadLevel_Parms
@@ -324,28 +406,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ALevelManager_OnLevelLoaded_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_OnLevelLoaded_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "LevelManager.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_OnLevelLoaded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "OnLevelLoaded", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_OnLevelLoaded_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_OnLevelLoaded_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_ALevelManager_OnLevelLoaded()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_OnLevelLoaded_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -436,8 +496,10 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel1Spawns, "GetLevel1Spawns" }, // 1323057479
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel2Spawns, "GetLevel2Spawns" }, // 3792744041
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel3Spawns, "GetLevel3Spawns" }, // 461800045
+		{ &Z_Construct_UFunction_ALevelManager_InitLevel1Spawners, "InitLevel1Spawners" }, // 2920715197
+		{ &Z_Construct_UFunction_ALevelManager_InitLevel2Spawners, "InitLevel2Spawners" }, // 3208538388
+		{ &Z_Construct_UFunction_ALevelManager_InitLevel3Spawners, "InitLevel3Spawners" }, // 3051060635
 		{ &Z_Construct_UFunction_ALevelManager_LoadLevel, "LoadLevel" }, // 3663133168
-		{ &Z_Construct_UFunction_ALevelManager_OnLevelLoaded, "OnLevelLoaded" }, // 1205654588
 		{ &Z_Construct_UFunction_ALevelManager_PrintCurrentLevel, "PrintCurrentLevel" }, // 4221123980
 		{ &Z_Construct_UFunction_ALevelManager_UnloadAllLevels, "UnloadAllLevels" }, // 2294205534
 	};
@@ -517,9 +579,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 83920075U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 599708813U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_2137388368(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_3993760857(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -3,6 +3,8 @@
 
 #include "SpawnPoint.h"
 
+#include "Pickupables/Cores/Connectors/CubeConnector.h"
+
 // Sets default values
 ASpawnPoint::ASpawnPoint()
 {
@@ -10,6 +12,8 @@ ASpawnPoint::ASpawnPoint()
 	PrimaryActorTick.bCanEverTick = false;
 
 	defaultScene = CreateDefaultSubobject<USceneComponent>("Default Scene Root");
+	unlockTrigger = CreateDefaultSubobject<UBoxComponent>("Unlock Trigger");
+	unlockTrigger->SetupAttachment(defaultScene);
 }
 
 
@@ -18,4 +22,17 @@ void ASpawnPoint::BeginPlay()
 {
 	Super::BeginPlay();
 	
+}
+
+void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	Super::NotifyActorBeginOverlap(OtherActor);
+
+	if(OtherActor->IsA<ACubeConnector>()) return;
+	if(!Cast<ACubeCore>(OtherActor)) return;
+ 	{
+		unlocked = true;
+
+		// Create/modify a save file so that it saves....
+	}
 }

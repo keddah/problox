@@ -34,11 +34,16 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	TArray<ASpawnPoint*> lvl3Spawns;
 
 	void FindCore();
-	void InitCellSpawners();
 
 	UFUNCTION()
-	void OnLevelLoaded();
-	
+	void InitLevel1Spawners();
+
+	UFUNCTION()
+	void InitLevel2Spawners();
+
+	UFUNCTION()
+	void InitLevel3Spawners();
+
 public:	
 	// Sets default values for this actor's properties
 	ALevelManager();

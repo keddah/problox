@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
 #include "Components/SceneCaptureComponent2D.h"
 #include "Engine/CanvasRenderTarget2D.h"
@@ -38,10 +39,15 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* defaultScene;
-
+	
+	UPROPERTY(EditDefaultsOnly)
+	UBoxComponent* unlockTrigger;
+	
 	UPROPERTY(EditAnywhere, meta = (ToolTip = "The level that the spawn point should be valid for."))
 	ELevel level;
 
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+	
 public:	
 	void UnlockPoint() { unlocked = true; }
 	bool IsUnlocked() const { return unlocked; }
