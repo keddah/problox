@@ -3,6 +3,7 @@
 
 #include "LevelManager.h"
 
+#include "Cells/CellSpawner.h"
 #include "Pickupables/Cores/CubeCore.h"
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
 
@@ -63,9 +64,17 @@ void ALevelManager::BeginPlay()
 				break;
 		}
 	}
-	
+
 	// Unload every level apart from the first.
 	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
+
+	for (ULevelStreamingDynamic* level : levels)
+	{
+		if (level)
+		{
+			level->OnLevelLoaded.AddDynamic(this, &ALevelManager::OnLevelLoaded);
+		}
+	}
 }
 
 void ALevelManager::Tick(float DeltaSeconds)
@@ -114,12 +123,12 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 	if(!levels[currentLevel]->IsLevelLoaded())
 	{
 		levels[currentLevel]->SetShouldBeLoaded(true);
-		levelsLoaded[currentLevel] = true;
 	}
 	levels[currentLevel]->SetShouldBeVisible(true);
 
 	// Broadcast the level change
 	onLevelChanged.Broadcast(currentLevel);
+	InitCellSpawners();
 
 	instance->SetCurrentLevel(currentLevel);
 
@@ -228,3 +237,43 @@ void ALevelManager::FindCore()
 		if(!core) Print("Core not found... ~ Level Manager", 5)
 	}
 }
+
+void ALevelManager::InitCellSpawners()
+{
+	if (!wrld) return;
+
+	if(!lvl1Spawned)
+	{
+		TArray<AActor*> spawns;
+		UGameplayStatics::GetAllActorsOfClass(levels[1]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
+		Print(levels[1]->GetName(), 4)
+
+		for (auto& spawnActor : spawns)
+		{
+			if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
+		}
+	}
+
+	else if(!lvl2Spawned)
+	{
+		TArray<AActor*> spawns;
+		UGameplayStatics::GetAllActorsOfClass(levels[2]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
+
+		Print(levels[2]->GetName(), 4)
+		
+		for (auto& spawnActor : spawns)
+		{
+			if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
+		}
+	}
+
+	if(currentLevel == 1) lvl1Spawned = true;
+	if(currentLevel == 2) lvl2Spawned = true;
+}
+
+
+void ALevelManager::OnLevelLoaded()
+{
+	InitCellSpawners();
+}
+

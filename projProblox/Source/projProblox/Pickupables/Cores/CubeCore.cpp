@@ -311,7 +311,6 @@ void ACubeCore::ResetToStart()
 	// RemoveVelocity();
 	//
 	// attempts++;
-	Print("Resetting", 3)
 	buildPhase = true;
 	onReset.Broadcast(attempts);
 }
@@ -324,21 +323,6 @@ void ACubeCore::Start()
 	// Save the transform...
 	resetTransform = GetActorTransform();
 	buildPhase = false;
-
-	if(!wrld) return;
-	
-	UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
-	if(!instance) return;
-	
-	ULevel* currentLevel = wrld->GetLevels()[instance->GetCurrentLevel()];
-	if(!currentLevel) return;
-
-	TArray<AActor*> spawnActors;
-	UGameplayStatics::GetAllActorsOfClass(currentLevel, ACellSpawner::StaticClass(), spawnActors);
-	for (auto& actor : spawnActors)
-	{
-		if(ACellSpawner* spawner = Cast<ACellSpawner>(actor)) spawner->BeginSpawn();
-	}
 }
 
 void ACubeCore::CalculateRating()

@@ -35,34 +35,23 @@ void ACellSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
+}
+
+void ACellSpawner::Init(ACubeCore* core)
+{
+	Print("initing", 4)
 	wrld = GetWorld();
-	if(!wrld)
+
+	if (!wrld)
 	{
-		Print("World was invalid at beginplay ~ spawner", 5)
+		Print("World was invalid at begin play ~ spawner", 5);
 		return;
 	}
 
-	ALevelManager* levelManager = Cast<ALevelManager>(UGameplayStatics::GetActorOfClass(wrld, ALevelManager::StaticClass()));
-	if(!levelManager) return;
-	
-	const bool loaded = levelManager->IsLevelLoaded(GetLevel());
-	if(!loaded) return;
-	
-	// If the current gamemode successfully casts to story mode...
-	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
-	{
-		active = !triggerable;
+	active = !triggerable;
 
-	    UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
-		if(!instance) return;
-		
-		// if(!triggerable && !instance->HasGameStarted()) BeginSpawn();
-		return;
-	}
-
-	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
-	if(!triggerable) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
-	else core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
+	if (!triggerable && core) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
+	else if (core) core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
 }
 
 void ACellSpawner::Overlap(AActor* otherActor)
@@ -82,8 +71,6 @@ void ACellSpawner::Overlap(AActor* otherActor)
 	if(ACubeCore* otherCore = other->GetCore())
 	{
 		SpawnWithForce();
-		active = false;
-
 		if(otherCore) otherCore->BroadcastNewCells();
 	}
 
@@ -91,10 +78,9 @@ void ACellSpawner::Overlap(AActor* otherActor)
 	else if((otherCore = Cast<ACubeCore>(other)))
 	{
 		SpawnWithForce();
-		active = false;
-
 		if(otherCore) otherCore->BroadcastNewCells();
 	}
+	active = false;
 }
 
 ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
@@ -137,7 +123,7 @@ void ACellSpawner::BeginSpawn()
 		return;
 	}
 	if(!active) return;
-	
+
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 

@@ -33,9 +33,11 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
 
-	// Ensure the indices are aligned with the levels (start from 1)
-	TArray<bool> levelsLoaded { false, false, false, false };
 	void FindCore();
+	void InitCellSpawners();
+
+	UFUNCTION()
+	void OnLevelLoaded();
 	
 public:	
 	// Sets default values for this actor's properties
@@ -56,6 +58,10 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TArray<ULevelStreamingDynamic*> levels;
 
+	bool lvl1Spawned;
+	bool lvl2Spawned;
+	bool lvl3Spawned;
+
 public:
 	virtual void Tick(float DeltaSeconds) override;
 	
@@ -63,20 +69,20 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void LoadLevel(int lvlIndex, int spawnPoint = 0);
 
-	bool IsLevelLoaded(short index) const { return levelsLoaded[index]; }
-	bool IsLevelLoaded(ULevel* lvl) const
+	int GetLevelIndex(ULevel* lvl) const
 	{
-		if (!lvl) return false;
+		if (!lvl) return -1;
 
 		// Iterate through the levels array
 		for (int32 i = 0; i < levels.Num(); ++i)
 		{
 			if (levels[i] && levels[i]->GetLoadedLevel() == lvl)
 			{
-				return levelsLoaded.IsValidIndex(i) ? levelsLoaded[i] : false;
+				PrintInt(i, 5)
+				return i;
 			}
 		}
-		return false;
+		return -1;
 	}
 
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Unloads all the levels apart from the current level."))
