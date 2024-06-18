@@ -16,7 +16,7 @@ class PROJPROBLOX_API UCustomGameInstance : public UGameInstance
 	
 	short currentLevel;
 	bool gameStarted;
-
+	
 protected:
 	virtual void Init() override;
 	

@@ -42,10 +42,10 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNewWave, int, wave);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
 
 // Should be broadcast when the cube goes too far away from the container.
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
+// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
+// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
+// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
 
 // Should be broadcast when the reset delay + longest duration has elapsed.. 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttemptEnding);
@@ -65,8 +65,8 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	// The object that is attached to this cube and selected...
 	APickupableMaster* selectedObj;
 
-	UFUNCTION(BlueprintCallable)
-	void StartEndingGame() { onEndingGame.Broadcast(); }
+	// UFUNCTION(BlueprintCallable)
+	// void StartEndingGame() { onEndingGame.Broadcast(); }
 
 	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, int longestDuration);
 	virtual void SetCanPickup(const bool can) override;
@@ -97,8 +97,8 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	/////////////// Game States ///////////////
 	bool buildPhase = true;
 
-	UFUNCTION(BlueprintCallable)
-	void EndGame() { CalculateRating(); onGameEnd.Broadcast(); } // Calculate rating before broadcasting...
+	// UFUNCTION(BlueprintCallable)
+	// void EndGame() { CalculateRating(); onGameEnd.Broadcast(); } // Calculate rating before broadcasting...
 
 	UFUNCTION()
 	void Start();
@@ -109,16 +109,8 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
 	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const int longestDuration)
 	{
-		StartGame();
-		
-		// Crashes when the objects are rearranged
-		if(durations.IsEmpty())
-		{
-			Print("Couldn't start game... durations empty", 4)
-			return;
-		}
-		
 		TimedObjectActivation(delays, durations, longestDuration);
+		StartGame();
 	}
 
 
@@ -181,8 +173,8 @@ protected:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
 	FOnAttachmentChange onChangeAttachments;
 
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
-	FOnEndingGame onEndingGame;
+	// UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
+	// FOnEndingGame onEndingGame;
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnAttemptEnding onAttemptEnding;
@@ -229,7 +221,6 @@ protected:
 
 	
 	/////////////// Other ///////////////
-	virtual void RemoveVelocity() const override;
 	virtual void ToggleGravity() const override;
 	virtual void ToggleGravity(bool gravityOn) override
 	{
@@ -309,10 +300,10 @@ public:
 
 
 	/////////////// Delegates ///////////////
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
-	FOnGameEnd onGameEnd;
-	
-	FOnOutOfRange onRangeExceeded;
+	// UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
+	// FOnGameEnd onGameEnd;
+	//
+	// FOnOutOfRange onRangeExceeded;
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
 	FOnStartGame onStartGame;
@@ -336,6 +327,8 @@ public:
 
 	
 	/////////////// Other ///////////////
+	virtual void RemoveVelocity() const override;
+
 	void AddThing(AActor* thing) const;
 
 	UFUNCTION(BlueprintCallable)

@@ -3,6 +3,7 @@
 
 #include "LevelManager.h"
 
+#include "Cells/CellSpawner.h"
 #include "Pickupables/Cores/CubeCore.h"
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
 
@@ -23,7 +24,7 @@ void ALevelManager::BeginPlay()
 	player = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(wrld, APlayerCharacter::StaticClass()));
 	if(!player) Print("Level Manager couldn't get the player....", 8)
 	FindCore();
-	
+
 	// Get the level instances that are a part of the main world
 	for (int i = 0; i < wrld->GetStreamingLevels().Num(); i++)
 	{
@@ -51,6 +52,7 @@ void ALevelManager::BeginPlay()
 		{
 			case ELevel::BuildArea:
 				point->SetLevelIndex(0);
+				lvl0Spawn = point;
 				break;
 			case ELevel::Bedroom:
 				point->SetLevelIndex(1);
@@ -62,9 +64,18 @@ void ALevelManager::BeginPlay()
 				break;
 		}
 	}
-	
+
 	// Unload every level apart from the first.
 	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
+
+	for (int i = 0; i < levels.Num(); i++)
+	{
+		ULevelStreamingDynamic* level = levels[i];
+		if (!level) continue;
+		if(i == 1) level->OnLevelShown.AddDynamic(this, &ALevelManager::ALevelManager::InitLevel1Spawners);
+		if(i == 2) level->OnLevelShown.AddDynamic(this, &ALevelManager::ALevelManager::InitLevel2Spawners);
+		if(i == 3) level->OnLevelShown.AddDynamic(this, &ALevelManager::ALevelManager::InitLevel3Spawners);
+	}
 }
 
 void ALevelManager::Tick(float DeltaSeconds)
@@ -79,7 +90,7 @@ void ALevelManager::Tick(float DeltaSeconds)
 	}
 }
 
-void ALevelManager::InitLoadLevel(const int lvlIndex, const int spawnPoint)
+void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 {
 	if(!levels.IsValidIndex(lvlIndex))
 	{
@@ -110,9 +121,17 @@ void ALevelManager::InitLoadLevel(const int lvlIndex, const int spawnPoint)
 	if(!levels.IsValidIndex(currentLevel)) return;
 	if(!levels[currentLevel]) return;
 	
-	if(!levels[currentLevel]->IsLevelLoaded()) levels[currentLevel]->SetShouldBeLoaded(true);
+	if(!levels[currentLevel]->IsLevelLoaded())
+	{
+		levels[currentLevel]->SetShouldBeLoaded(true);
+	}
 	levels[currentLevel]->SetShouldBeVisible(true);
+
+	// Broadcast the level change
+	onLevelChanged.Broadcast(currentLevel);
 	instance->SetCurrentLevel(currentLevel);
+
+	// Unload all the levels apart from the current level
 	UnloadAllLevels();
 
 	if(!player)
@@ -126,13 +145,18 @@ void ALevelManager::InitLoadLevel(const int lvlIndex, const int spawnPoint)
 		Print("Couldn't set spawn because the core was invalid...", 5)
 		return;
 	}
+
+	core->RemoveVelocity();
 	
 	FVector spawnPos;
 	switch (currentLevel)
 	{
-		case 0: 
-			// player->SetActorRotation(lvl1Spawns[0]->GetActorRotation());
-			// player->SetActorLocation(lvl1Spawns[0]->GetActorLocation());
+		case 0:
+			if(!lvl0Spawn) break;
+			spawnPos = lvl0Spawn->GetActorLocation();
+			player->SetActorRotation(lvl0Spawn->GetActorRotation());
+			player->SetActorLocation(spawnPos + FVector(0,0,300));
+			core->SetActorLocation(spawnPos);
 			break;
 
 		case 1:
@@ -211,4 +235,52 @@ void ALevelManager::FindCore()
 		if(ACubeCore* objCore = Cast<ACubeCore>(ACore)) core = objCore;
 		if(!core) Print("Core not found... ~ Level Manager", 5)
 	}
+}
+
+void ALevelManager::InitLevel1Spawners()
+{
+	if(lvl1Spawned) return;
+
+	TArray<AActor*> spawns;
+	UGameplayStatics::GetAllActorsOfClass(levels[1]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
+	Print(levels[1]->GetName(), 4)
+
+	for (auto& spawnActor : spawns)
+	{
+		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
+	}
+
+	lvl1Spawned = true;
+}
+
+void ALevelManager::InitLevel2Spawners()
+{
+	if(lvl2Spawned) return;
+
+	TArray<AActor*> spawns;
+	UGameplayStatics::GetAllActorsOfClass(levels[2]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
+	Print(levels[2]->GetName(), 4)
+
+	for (auto& spawnActor : spawns)
+	{
+		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
+	}
+
+	lvl2Spawned = true;
+}
+
+void ALevelManager::InitLevel3Spawners()
+{
+	if(lvl3Spawned) return;
+
+	TArray<AActor*> spawns;
+	UGameplayStatics::GetAllActorsOfClass(levels[3]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
+	Print(levels[3]->GetName(), 4)
+
+	for (auto& spawnActor : spawns)
+	{
+		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
+	}
+
+	lvl3Spawned = true;
 }

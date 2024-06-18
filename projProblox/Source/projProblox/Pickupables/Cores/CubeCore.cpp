@@ -18,6 +18,7 @@
 #include "Connectors/WedgeConnector.h"
 #include "./projProblox/Pickupables/Wheel.h"
 #include "Kismet/GameplayStatics.h"
+#include "projProblox/CustomGameInstance.h"
 #include "projProblox/GameModes/Modes.h"
 
 ACubeCore::ACubeCore()
@@ -306,10 +307,10 @@ void ACubeCore::Detach(const bool push)
 
 void ACubeCore::ResetToStart()
 {
-	SetActorTransform(resetTransform);
-	RemoveVelocity();
-
-	attempts++;
+	// SetActorTransform(resetTransform);
+	// RemoveVelocity();
+	//
+	// attempts++;
 	buildPhase = true;
 	onReset.Broadcast(attempts);
 }
@@ -322,7 +323,6 @@ void ACubeCore::Start()
 	// Save the transform...
 	resetTransform = GetActorTransform();
 	buildPhase = false;
-
 }
 
 void ACubeCore::CalculateRating()
@@ -576,6 +576,9 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 	if(objs.IsEmpty())
 	{
 		Print("objects array empty", 6)
+		const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
+		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
+		Print("Reset timer set", 4)
 		return;
 	}
 
@@ -598,40 +601,36 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, delayTime + durationTime, false);
 	}
 
-	FTimerHandle startResetHandle;
-	const FTimerDelegate startResetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::InitiateReset);
-	wrld->GetTimerManager().SetTimer(startResetHandle, startResetDelegate, longestDuration, false);
-
 	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
-	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration + resetDelay, false);
+	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
 }
 
 void ACubeCore::SetCanPickup(bool can)
 {
-	// Only broadcast when there's a change
-	const bool change = can != canPickup;
-	Super::SetCanPickup(can);
-
-	SetCanCollect(can || !selected);
-
-	if(!canPickup && change) onRangeExceeded.Broadcast();
-
-	distanceLine->SetHiddenInGame(selected || groupSelected);
-	
-	if(can) return;
-	distanceLine->SetHiddenInGame(!buildPhase);
-	
-	distanceLine->SetWorldLocation(mesh->GetComponentLocation());
-
-	const FVector thisPos = distanceLine->GetComponentLocation();
-	const FVector collectorPos = collector->GetActorLocation() + FVector(0,0,750);
-	
-	const FRotator lookRot = UKismetMathLibrary::FindLookAtRotation(thisPos, collectorPos);
-	distanceLine->SetWorldRotation(lookRot);
-
-	const float distance = FVector::Distance(collectorPos, thisPos);
-	const FVector lineSize = distanceLine->GetRelativeScale3D();
-	distanceLine->SetRelativeScale3D({distance * .01f, lineSize.Y, lineSize.Z});
+	// // Only broadcast when there's a change
+	// const bool change = can != canPickup;
+	// Super::SetCanPickup(can);
+	//
+	// SetCanCollect(can || !selected);
+	//
+	// // if(!canPickup && change) onRangeExceeded.Broadcast();
+	//
+	// distanceLine->SetHiddenInGame(selected || groupSelected);
+	//
+	// if(can) return;
+	// distanceLine->SetHiddenInGame(!buildPhase);
+	//
+	// distanceLine->SetWorldLocation(mesh->GetComponentLocation());
+	//
+	// const FVector thisPos = distanceLine->GetComponentLocation();
+	// const FVector collectorPos = collector->GetActorLocation() + FVector(0,0,750);
+	//
+	// const FRotator lookRot = UKismetMathLibrary::FindLookAtRotation(thisPos, collectorPos);
+	// distanceLine->SetWorldRotation(lookRot);
+	//
+	// const float distance = FVector::Distance(collectorPos, thisPos);
+	// const FVector lineSize = distanceLine->GetRelativeScale3D();
+	// distanceLine->SetRelativeScale3D({distance * .01f, lineSize.Y, lineSize.Z});
 }
 
 void ACubeCore::SetCanCollect(bool collectable)

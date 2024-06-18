@@ -11,6 +11,7 @@
 
 #include "CoreMinimal.h"
 #include "Cell.h"
+#include "Engine/LevelStreamingDynamic.h"
 #include "GameFramework/Actor.h"
 #include "CellSpawner.generated.h"
 
@@ -95,6 +96,8 @@ protected:
 
 	
 public:
+	void Init(ACubeCore* core);
+	
 	UFUNCTION(BlueprintCallable)
 	bool IsActive() const { return active; }
 

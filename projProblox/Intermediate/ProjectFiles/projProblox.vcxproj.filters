@@ -1582,6 +1582,12 @@
     <ClInclude Include="..\..\Source\projProblox\SpawnPoint.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\SpawnSaves.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\SpawnSaves.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <Filter Include="Source\projProblox\Cells">
       <UniqueIdentifier>{1F734C2A-6BA2-31F9-9263-8C1D3A11CBED}</UniqueIdentifier>
     </Filter>

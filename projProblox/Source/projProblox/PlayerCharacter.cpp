@@ -35,7 +35,7 @@ void APlayerCharacter::BeginPlay()
 		return;
 	}
 	
-	core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
+	// core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
 
 	history = NewObject<UActionHistory>();
 	buildPhase = true;

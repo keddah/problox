@@ -30,7 +30,10 @@ PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDele
 	DECLARE_FUNCTION(execPrintCurrentLevel); \
 	DECLARE_FUNCTION(execGetCurrentLevel); \
 	DECLARE_FUNCTION(execUnloadAllLevels); \
-	DECLARE_FUNCTION(execInitLoadLevel);
+	DECLARE_FUNCTION(execLoadLevel); \
+	DECLARE_FUNCTION(execInitLevel3Spawners); \
+	DECLARE_FUNCTION(execInitLevel2Spawners); \
+	DECLARE_FUNCTION(execInitLevel1Spawners);
 
 
 #define FID_projProblox_Source_projProblox_LevelManager_h_23_ACCESSORS

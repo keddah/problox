@@ -10,11 +10,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USceneCaptureComponent2D_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ASpawnPoint();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ASpawnPoint_NoRegister();
 	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_ELevel();
@@ -75,20 +72,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 		}
 		return Z_Registration_Info_UEnum_ELevel.InnerSingleton;
 	}
-	DEFINE_FUNCTION(ASpawnPoint::execGetDisplayMaterial)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->GetDisplayMaterial();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ASpawnPoint::execConvertRenderTargetToTexture)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(UTexture2D**)Z_Param__Result=P_THIS->ConvertRenderTargetToTexture();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ASpawnPoint::execGetLevelIndex)
 	{
 		P_FINISH;
@@ -96,91 +79,13 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 		*(int32*)Z_Param__Result=P_THIS->GetLevelIndex();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ASpawnPoint::execGetRenderTarget)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(UTextureRenderTarget2D**)Z_Param__Result=P_THIS->GetRenderTarget();
-		P_NATIVE_END;
-	}
 	void ASpawnPoint::StaticRegisterNativesASpawnPoint()
 	{
 		UClass* Class = ASpawnPoint::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "ConvertRenderTargetToTexture", &ASpawnPoint::execConvertRenderTargetToTexture },
-			{ "GetDisplayMaterial", &ASpawnPoint::execGetDisplayMaterial },
 			{ "GetLevelIndex", &ASpawnPoint::execGetLevelIndex },
-			{ "GetRenderTarget", &ASpawnPoint::execGetRenderTarget },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics
-	{
-		struct SpawnPoint_eventConvertRenderTargetToTexture_Parms
-		{
-			UTexture2D* ReturnValue;
-		};
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SpawnPoint_eventConvertRenderTargetToTexture_Parms, ReturnValue), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "SpawnPoint.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpawnPoint, nullptr, "ConvertRenderTargetToTexture", nullptr, nullptr, Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::SpawnPoint_eventConvertRenderTargetToTexture_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::SpawnPoint_eventConvertRenderTargetToTexture_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics
-	{
-		struct SpawnPoint_eventGetDisplayMaterial_Parms
-		{
-			UMaterialInstanceDynamic* ReturnValue;
-		};
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SpawnPoint_eventGetDisplayMaterial_Parms, ReturnValue), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "SpawnPoint.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpawnPoint, nullptr, "GetDisplayMaterial", nullptr, nullptr, Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::SpawnPoint_eventGetDisplayMaterial_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::SpawnPoint_eventGetDisplayMaterial_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics
 	{
@@ -216,40 +121,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics
-	{
-		struct SpawnPoint_eventGetRenderTarget_Parms
-		{
-			UTextureRenderTarget2D* ReturnValue;
-		};
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SpawnPoint_eventGetRenderTarget_Parms, ReturnValue), Z_Construct_UClass_UTextureRenderTarget2D_NoRegister, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "SpawnPoint.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpawnPoint, nullptr, "GetRenderTarget", nullptr, nullptr, Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::SpawnPoint_eventGetRenderTarget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::SpawnPoint_eventGetRenderTarget_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ASpawnPoint_GetRenderTarget()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASpawnPoint_GetRenderTarget_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ASpawnPoint);
 	UClass* Z_Construct_UClass_ASpawnPoint_NoRegister()
 	{
@@ -263,17 +134,13 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_dynamicMat_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_dynamicMat;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_previewer_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_previewer;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_defaultScene_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_defaultScene;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_unlockTrigger_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_unlockTrigger;
 		static const UECodeGen_Private::FBytePropertyParams NewProp_level_Underlying;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_level_MetaData[];
@@ -289,10 +156,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASpawnPoint_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ASpawnPoint_ConvertRenderTargetToTexture, "ConvertRenderTargetToTexture" }, // 4270366714
-		{ &Z_Construct_UFunction_ASpawnPoint_GetDisplayMaterial, "GetDisplayMaterial" }, // 1369074801
 		{ &Z_Construct_UFunction_ASpawnPoint_GetLevelIndex, "GetLevelIndex" }, // 3193090826
-		{ &Z_Construct_UFunction_ASpawnPoint_GetRenderTarget, "GetRenderTarget" }, // 372420389
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -302,21 +166,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 	};
 #endif
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnPoint_Statics::NewProp_dynamicMat_MetaData[] = {
-		{ "Category", "SpawnPoint" },
-		{ "ModuleRelativePath", "SpawnPoint.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_dynamicMat = { "dynamicMat", nullptr, (EPropertyFlags)0x0020080000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, dynamicMat), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_dynamicMat_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_dynamicMat_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnPoint_Statics::NewProp_previewer_MetaData[] = {
-		{ "Category", "SpawnPoint" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "SpawnPoint.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_previewer = { "previewer", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, previewer), Z_Construct_UClass_USceneCaptureComponent2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_previewer_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_previewer_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene_MetaData[] = {
 		{ "Category", "SpawnPoint" },
 		{ "EditInline", "true" },
@@ -324,6 +173,14 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene = { "defaultScene", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, defaultScene), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlockTrigger_MetaData[] = {
+		{ "Category", "SpawnPoint" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "SpawnPoint.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlockTrigger = { "unlockTrigger", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, unlockTrigger), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlockTrigger_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlockTrigger_MetaData) };
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData[] = {
@@ -336,9 +193,8 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 #endif
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level = { "level", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, level), Z_Construct_UEnum_projProblox_ELevel, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData) }; // 764075151
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpawnPoint_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_dynamicMat,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_previewer,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlockTrigger,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level,
 	};
@@ -375,19 +231,19 @@ void EmptyLinkFunctionForGeneratedCodeSpawnPoint() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASpawnPoint);
 	ASpawnPoint::~ASpawnPoint() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo[] = {
 		{ ELevel_StaticEnum, TEXT("ELevel"), &Z_Registration_Info_UEnum_ELevel, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 764075151U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 896098849U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 2437405537U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_4219080508(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_3921569263(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

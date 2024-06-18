@@ -11,6 +11,7 @@
 
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/CustomGameInstance.h"
+#include "projProblox/LevelManager.h"
 #include "projProblox/GameModes/Modes.h"
 #include "projProblox/Pickupables/Cores/Connectors/CubeConnector.h"
 
@@ -34,28 +35,23 @@ void ACellSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
+}
+
+void ACellSpawner::Init(ACubeCore* core)
+{
+	Print("initing", 4)
 	wrld = GetWorld();
-	if(!wrld)
-	{
-		Print("World was invalid at beginplay ~ spawner", 5)
-		return;
-	}
-	
-	// If the current gamemode successfully casts to story mode...
-	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld)))
-	{
-		active = !triggerable;
 
-	    UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
-		if(!instance) return;
-		
-		if(!triggerable && !instance->HasGameStarted()) BeginSpawn();
+	if (!wrld)
+	{
+		Print("World was invalid at begin play ~ spawner", 5);
 		return;
 	}
 
-	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
-	if(!triggerable) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
-	else core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
+	active = !triggerable;
+
+	if (!triggerable && core) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
+	else if (core) core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
 }
 
 void ACellSpawner::Overlap(AActor* otherActor)
@@ -75,8 +71,6 @@ void ACellSpawner::Overlap(AActor* otherActor)
 	if(ACubeCore* otherCore = other->GetCore())
 	{
 		SpawnWithForce();
-		active = false;
-
 		if(otherCore) otherCore->BroadcastNewCells();
 	}
 
@@ -84,10 +78,9 @@ void ACellSpawner::Overlap(AActor* otherActor)
 	else if((otherCore = Cast<ACubeCore>(other)))
 	{
 		SpawnWithForce();
-		active = false;
-
 		if(otherCore) otherCore->BroadcastNewCells();
 	}
+	active = false;
 }
 
 ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
@@ -130,7 +123,7 @@ void ACellSpawner::BeginSpawn()
 		return;
 	}
 	if(!active) return;
-	
+
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
@@ -138,7 +131,7 @@ void ACellSpawner::BeginSpawn()
 	params.bNoFail = true;
 	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
 	{
-		params.OverrideLevel = wrld->GetLevel(instance->GetCurrentLevel());
+		params.OverrideLevel = wrld->GetStreamingLevels()[instance->GetCurrentLevel()]->GetLoadedLevel();
 	}
 
 	// If spawn radius isn't set, the spawn position will be this position.
@@ -146,6 +139,7 @@ void ACellSpawner::BeginSpawn()
 
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
+	active = false;
 }
 
 void ACellSpawner::SpawnWithForce() const
