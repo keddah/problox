@@ -1272,3 +1272,202 @@ LogConfig: CVar [[con.DebugLateDefault:1]] deferred - dummy variable created
 [2024.06.18-09.19.02:239][858]LogPlayLevel: Display: Destroying online subsystem :Context_13
 [2024.06.18-09.19.02:250][858]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
 [2024.06.18-09.21.04:180][498]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:22.300 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 11647 files in 13936 folders with total size 693 MiB.
+[2024.06.18-09.22.46:118][684]LogSlate: Window 'Document' being destroyed
+[2024.06.18-09.22.46:122][684]LogSlate: Window 'Document' being destroyed
+[2024.06.18-09.22.47:619][861]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.06.18-09.22.47:619][861]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.18-09.22.47:643][861]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_SpawnPoint.BP_SpawnPoint
+[2024.06.18-09.22.47:644][861]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.18-09.22.47:644][861]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.18-09.22.47:782][861]LogActor: Warning: BP_SpawnPoint_C /Engine/Transient.World_12:PersistentLevel.BP_SpawnPoint_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.18-09.23.09:398][425]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find SlateColor 'Foreground'.'
+[2024.06.18-09.23.09:399][425]LogSlate: Took 0.000571 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2024.06.18-09.23.59:032][887]LogEditorTransaction: Undo Straighten Connection(s)
+[2024.06.18-09.24.05:157][541]LogEditorTransaction: Undo Straighten Connection(s)
+[2024.06.18-09.24.07:834][794]LogEditorTransaction: Undo Straighten Connection(s)
+[2024.06.18-09.24.11:273][130]LogEditorTransaction: Undo Straighten Connection(s)
+[2024.06.18-09.24.13:372][310]LogEditorTransaction: Undo Straighten Connection(s)
+[2024.06.18-09.24.35:245][788]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.06.18-09.24.35:246][788]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.017
+[2024.06.18-09.24.35:247][788]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Blueprints/BP_PlayerCharacter] ([2] browsable assets)...
+[2024.06.18-09.24.35:247][788]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/BP_PlayerCharacter]
+[2024.06.18-09.24.35:254][788]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.007691 seconds
+[2024.06.18-09.24.35:325][788]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/BP_PlayerCharacter_Auto1
+[2024.06.18-09.24.35:325][788]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter_Auto1605F84424B239518274A68ACDE3FFCE9.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/BP_PlayerCharacter_Auto1.uasset'
+[2024.06.18-09.24.35:326][788]LogFileHelpers: Auto-saving content packages took 0.080
+[2024.06.18-09.25.00:526][978]LogSlate: Window 'Delete Variable' being destroyed
+[2024.06.18-09.25.14:302][436]BlueprintLog: New page: Compile BP_PlayerCharacter
+[2024.06.18-09.25.14:385][436]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.06.18-09.25.14:616][436]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.18-09.25.14:636][436]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.06.18-09.25.14:704][436]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.06.18-09.25.14:704][436]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter444BAD024E14A945347F4E9A27FBBED6.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.06.18-09.25.14:710][436]LogFileHelpers: InternalPromptForCheckoutAndSave took 95 ms
+[2024.06.18-09.25.14:713][436]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.06.18-09.25.14:713][436]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.18-09.26.22:643][ 44]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.18-09.26.22:655][ 44]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.06.18-09.26.22:664][ 44]LogPlayLevel: [PlayLevel] Compiling BP_PlayerCharacter before play...
+[2024.06.18-09.26.22:896][ 44]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.18-09.26.22:922][ 44]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.06.18-09.26.22:990][ 44]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.06.18-09.26.22:990][ 44]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter30218BA843EBE45D80F2A283A65DE10E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.06.18-09.26.22:995][ 44]LogFileHelpers: InternalPromptForCheckoutAndSave took 99 ms (total: 194 ms)
+[2024.06.18-09.26.22:997][ 44]LogPlayLevel: [PlayLevel] Compiling WBP_Construction before play...
+[2024.06.18-09.26.23:110][ 44]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.18-09.26.23:140][ 44]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Construction" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Construction.uasset" SILENT=true
+[2024.06.18-09.26.23:146][ 44]LogSavePackage: Moving output files for package: /Game/UI/WBP_Construction
+[2024.06.18-09.26.23:146][ 44]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_ConstructionDDE4D8404DF3DE3AC800C2AD588C1C97.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Construction.uasset'
+[2024.06.18-09.26.23:151][ 44]LogFileHelpers: InternalPromptForCheckoutAndSave took 41 ms (total: 236 ms)
+[2024.06.18-09.26.23:167][ 44]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.06.18-09.26.23:168][ 44]LogPlayLevel: PlayLevel: Blueprint regeneration took 513 ms (2 blueprints)
+[2024.06.18-09.26.23:168][ 44]PIE: New page: PIE session: Lvl_Combined (18 Jun 2024, 11:26:23)
+[2024.06.18-09.26.23:168][ 44]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.18-09.26.23:171][ 44]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002954s)
+[2024.06.18-09.26.23:171][ 44]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.002979s)
+[2024.06.18-09.26.23:182][ 44]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2024.06.18-09.26.23:182][ 44]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.18-09.26.23:182][ 44]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.18-09.26.23:183][ 44]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.06.18-09.26.23:183][ 44]LogPlayLevel: PIE: World Init took: (0.000825s)
+[2024.06.18-09.26.23:183][ 44]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.06.18-09.26.23:183][ 44]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.18-09.26.23:183][ 44]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.18-09.26.23:183][ 44]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.18-09.26.23:183][ 44]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.18-09.26.23:183][ 44]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.18-09.26.23:183][ 44]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.18-09.26.23:183][ 44]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.18-09.26.23:183][ 44]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.18-09.26.23:183][ 44]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.18-09.26.23:183][ 44]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.18-09.26.23:183][ 44]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.18-09.26.23:186][ 44]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.18-09.26.23:209][ 44]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.06.18-09.26.23:209][ 44]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.18-09.26.23:209][ 44]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.18-09.26.23:209][ 44]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.18-09.26.23:209][ 44]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.06.18-09.26.23:209][ 44]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2024.06.18-09.26.23:211][ 44]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.06.18-09.26.23:211][ 44]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.06.18-09.26.23:211][ 44]LogInit: FAudioDevice initialized with ID 3.
+[2024.06.18-09.26.23:211][ 44]LogAudio: Display: Audio Device (ID: 3) registered with world 'Lvl_Combined'.
+[2024.06.18-09.26.23:211][ 44]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2024.06.18-09.26.23:228][ 44]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.18-09.26.23:228][ 44]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.18-09.26.23:228][ 44]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.18-09.26.23:229][ 44]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.18-09.26.23:229][ 44]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.06.18-10.26.23
+[2024.06.18-09.26.23:229][ 44]LogWorld: Bringing up level for play took: 0.000994
+[2024.06.18-09.26.23:231][ 44]LogOnline: OSS: Created online subsystem instance for: :Context_15
+[2024.06.18-09.26.23:233][ 44]PIE: Server logged in
+[2024.06.18-09.26.23:234][ 44]PIE: Play in editor total start time 0.579 seconds.
+[2024.06.18-09.26.23:259][ 44]LogViewport: Scene viewport resized to 1912x992, mode Windowed.
+[2024.06.18-09.26.23:268][ 45]AssetCheck: New page: Asset Save: multiple assets
+[2024.06.18-09.26.23:268][ 45]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.18-09.26.23:268][ 45]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Construction.WBP_Construction
+[2024.06.18-09.26.28:050][544]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_WedgeConnector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.18-09.26.29:551][704]LogActor: Warning: BP_WedgeConnector_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_WedgeConnector_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.18-09.26.30:923][706]LogRHI: Error: Breadcrumbs 'RHIThread'
+Context 1/2
+	00 Scene
+	01 Scene
+	02 LumenSceneLighting
+	03 DiffuseIndirectAndAO
+	04 Translucency
+
+[2024.06.18-09.26.30:923][706]LogWindows: Error: === Critical error: ===
+[2024.06.18-09.26.30:923][706]LogWindows: Error: 
+[2024.06.18-09.26.30:923][706]LogWindows: Error: Fatal error!
+[2024.06.18-09.26.30:923][706]LogWindows: Error: 
+[2024.06.18-09.26.30:923][706]LogWindows: Error: Unhandled Exception: EXCEPTION_STACK_OVERFLOW
+[2024.06.18-09.26.30:923][706]LogWindows: Error: 
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffc3f8b654 UnrealEditor-Core.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffc4043428 UnrealEditor-Core.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffc3f169a8 UnrealEditor-Core.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffb2d04af8 UnrealEditor-Engine.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffb2ca0ac4 UnrealEditor-Engine.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffb2ccff06 UnrealEditor-Engine.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffb2cdf510 UnrealEditor-Engine.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fffb2ce1733 UnrealEditor-Engine.dll!UnknownFunction []
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127676 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 UnrealEditor-projProblox-0012.dll!APickupableMaster::GetDescendents() [C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.cpp:627]
+[2024.06.18-09.26.30:923][706]LogWindows: Error: [Callstack] 0x00007fff90127788 U
