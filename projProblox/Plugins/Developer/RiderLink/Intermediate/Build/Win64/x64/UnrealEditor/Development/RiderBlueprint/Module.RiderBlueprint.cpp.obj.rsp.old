@@ -1,8 +1,8 @@
-"D:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Module.RiderBlueprint.cpp"
-/FI"D:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Definitions.h"
-/Fo"D:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Module.RiderBlueprint.cpp.obj"
-/sourceDependencies "D:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Module.RiderBlueprint.cpp.dep.json"
-@"D:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\RiderBlueprint.Shared.rsp"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Module.RiderBlueprint.cpp"
+/FI"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Definitions.h"
+/Fo"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Module.RiderBlueprint.cpp.obj"
+/sourceDependencies "C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\Module.RiderBlueprint.cpp.dep.json"
+@"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderBlueprint\RiderBlueprint.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
