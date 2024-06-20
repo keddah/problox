@@ -3,7 +3,7 @@
 
 #include "LevelManager.h"
 
-#include "SpawnSaves.h"
+#include "SaveFiles.h"
 #include "Cells/CellSpawner.h"
 #include "Pickupables/Cores/CubeCore.h"
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
@@ -216,38 +216,20 @@ void ALevelManager::FindCore()
 
 void ALevelManager::FindSpawns()
 {
-	// Whether the spawns have been loaded from a spawn save...
-	bool fromSave = false;
-	if(USpawnSaves* savedSpawns = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot("SpawnSaves", 0)))
+	// Get all the spawn points from the PERSISTENT level
+	TArray<AActor*> spawns;
+	UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
+	for (auto& spawn : spawns) 
 	{
-		allSpawns = savedSpawns->GetAllSpawns();
-		fromSave = true;
-	}
+		ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
+		if(!point) continue;
 
-	// If no spawn save was found, find all the spawns
-	else
-	{
-		// Get all the spawn points from the PERSISTENT level
-		TArray<AActor*> spawns;
-		UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
-		for (auto& spawn : spawns) 
-		{
-			ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
-			if(!point) continue;
+		allSpawns.Add(point);
 
-			allSpawns.Add(point);
-		}
-		SaveSpawns();
-	}
-
-	PrintInt(allSpawns.Num(), 4)
-	
-	// Sorts the spawns into their levels
-	for (auto& point : allSpawns)
-	{
 		// Foreach spawn point add a delegate to save whenever it has been unlocked
 		point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
 
+		// Sorts the spawns into their levels
 		// Add the points to their respective arrays
 		switch (point->GetLevelEnum())
 		{
@@ -255,17 +237,17 @@ void ALevelManager::FindSpawns()
 				point->SetLevelIndex(0);
 				lvl0Spawn = point;
 				break;
-				
+					
 			case ELevel::Bedroom:
 				point->SetLevelIndex(1);
 				lvl1Spawns.Add(point);
 				break;
-				
+					
 			case ELevel::Kitchen:
 				point->SetLevelIndex(2);
 				lvl2Spawns.Add(point);
 				break;
-				
+					
 			case ELevel::Bathroom:
 				point->SetLevelIndex(3);
 				lvl3Spawns.Add(point);
@@ -273,26 +255,22 @@ void ALevelManager::FindSpawns()
 		}
 	}
 
-	// If it's from the save, its unlock status would be saved.
-	if(fromSave) return;
-	
-	// Lock all the spawn points except the first (then unlock the ones that have been saved to a file)
-	TArray<TArray<ASpawnPoint*>> spawnsArray = {lvl1Spawns, lvl1Spawns };
-
-	// For each array of spawn arrays...
-	for (auto& array : spawnsArray)
+	// If there wasn't a save file
+	if (UnlockSavedSpawns())
 	{
-		for (int i = 0; i < 0; i++)
+		TArray<TArray<ASpawnPoint*>> spawnsArray = {lvl1Spawns, lvl2Spawns, lvl3Spawns};
+		for (auto& array : spawnsArray)
 		{
-			// Ignore the first spawn point
-			if(i == 0) continue;
-
-			// Lock the rest
-			array[i]->LockPoint();
+			if (!array.IsEmpty()) array[0]->UnlockPoint();
 		}
-	}
-}
+		
+		lvl0Spawn->UnlockPoint();
 
+		// The only time this should be called - when the first spawn area for each level is unlocked (the rest will be called from the delegate)
+		SaveSpawns();
+	}
+	
+}
 void ALevelManager::InitLevel1Spawners()
 {
 	if(lvl1Loaded) return;
@@ -343,15 +321,34 @@ void ALevelManager::InitLevel3Spawners()
 
 void ALevelManager::SaveSpawns()
 {
-	// Try to load the spawn save...
-	USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot("SpawnSaves", 0));
-
-	// If one was found, append to the save
-	if(spawnSave) spawnSave->SaveSpawnUnlock(allSpawns);
-	else
+	TArray<short> unlockedIndices;
+	USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0));
+	if (!spawnSave)
 	{
-		// Otherwise create a new save
 		spawnSave = Cast<USpawnSaves>(UGameplayStatics::CreateSaveGameObject(USpawnSaves::StaticClass()));
-		spawnSave->SaveSpawnUnlock(allSpawns);
+		Print("New save made", 5);
 	}
+	
+	for (short i = 0; i < allSpawns.Num(); i++)
+	{
+		if (allSpawns[i]->IsUnlocked()) unlockedIndices.Add(i);
+	}
+	for (const auto& index : unlockedIndices) spawnSave->AddUnlock(index);
+}
+
+bool ALevelManager::UnlockSavedSpawns()
+{
+	if (USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0)))
+	{
+		for (const auto& index : spawnSave->GetUnlockedIndices())
+		{
+			if (!allSpawns.IsValidIndex(index)) return false;
+
+			allSpawns[index]->UnlockPoint();
+		}
+		return true;
+	}
+
+	Print("There was no spawn save found so one was created", 8);
+	return false;
 }

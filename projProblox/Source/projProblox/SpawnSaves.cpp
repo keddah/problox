@@ -1,18 +1,22 @@
 // Created by Dean Atkinson-Walker 2024
 
 
-#include "SpawnSaves.h"
+#include "SaveFiles.h"
 
 #include "Kismet/GameplayStatics.h"
 
-void USpawnSaves::SaveSpawnUnlock(const TArray<ASpawnPoint*>& spawns)
+void USpawnSaves::AddUnlock(short newUnlock)
 {
-	if(spawns.IsEmpty())
+	if(newUnlock == -1)
 	{
-		Print("Couldn't save spawns because the passed spawns array reference was empty...", 9)
+		Print("Couldn't save spawns because the passed index was bad...", 9)
 		return;
 	}
 
-	allSpawns = spawns;
-	UGameplayStatics::SaveGameToSlot(this, "SpawnSaves", 0);
+	// Adding rather than setting the array so that elements can't be removed (once something is unlocked... it stays unlocked).
+	unlocks.AddUnique(newUnlock);
+	PrintUnlockedIndices();
+	
+	if(UGameplayStatics::SaveGameToSlot(this, spawnSaveSlot, 0)) Print("Save successful", 5)
+	else Print("Save failed", 5)
 }

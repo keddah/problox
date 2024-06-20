@@ -19,7 +19,7 @@ UCLASS()
 class PROJPROBLOX_API ALevelManager : public AActor
 {
 	GENERATED_BODY()
-
+	
 	void UnloadLevel(short lvlIndex);
 	UCustomGameInstance* instance;
 	APlayerCharacter* player;
@@ -50,6 +50,10 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	UFUNCTION()
 	void SaveSpawns();
 
+	// Unlocks the spawns that have previously been unlocked (and saved)
+	// Returns whether a load file was found
+	bool UnlockSavedSpawns();
+	
 public:	
 	// Sets default values for this actor's properties
 	ALevelManager();
