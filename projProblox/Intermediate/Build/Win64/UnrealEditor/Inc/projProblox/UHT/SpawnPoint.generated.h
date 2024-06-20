@@ -23,7 +23,8 @@ PROJPROBLOX_API void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate&
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_27_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetLevelIndex);
+	DECLARE_FUNCTION(execGetLevelIndex); \
+	DECLARE_FUNCTION(execUnlockPoint);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_27_ACCESSORS

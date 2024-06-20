@@ -255,22 +255,23 @@ void ALevelManager::FindSpawns()
 		}
 	}
 
-	// If there wasn't a save file
-	if (UnlockSavedSpawns())
-	{
-		TArray<TArray<ASpawnPoint*>> spawnsArray = {lvl1Spawns, lvl2Spawns, lvl3Spawns};
-		for (auto& array : spawnsArray)
-		{
-			if (!array.IsEmpty()) array[0]->UnlockPoint();
-		}
-		
-		lvl0Spawn->UnlockPoint();
-
-		// The only time this should be called - when the first spawn area for each level is unlocked (the rest will be called from the delegate)
-		SaveSpawns();
-	}
-	
+	// If there wasn't a save file...
+	LoadUnlockedSpawns();
 }
+
+// void ALevelManager::UnlockInitialSpawns()
+// {
+// 	// Unlock the first spawn point from each level if not loaded from save
+// 	TArray<TArray<ASpawnPoint*>> spawnsArray = {lvl1Spawns, lvl2Spawns, lvl3Spawns};
+// 	for (auto& array : spawnsArray)
+// 	{
+// 		if (!array.IsEmpty()) array[0]->UnlockPoint();
+// 	}
+//
+// 	// Calling unlock point broadcasts the new spawn delegate...
+// 	if (lvl0Spawn) lvl0Spawn->UnlockPoint();
+// }
+
 void ALevelManager::InitLevel1Spawners()
 {
 	if(lvl1Loaded) return;
@@ -328,7 +329,7 @@ void ALevelManager::SaveSpawns()
 		spawnSave = Cast<USpawnSaves>(UGameplayStatics::CreateSaveGameObject(USpawnSaves::StaticClass()));
 		Print("New save made", 5);
 	}
-	
+
 	for (short i = 0; i < allSpawns.Num(); i++)
 	{
 		if (allSpawns[i]->IsUnlocked()) unlockedIndices.Add(i);
@@ -336,19 +337,16 @@ void ALevelManager::SaveSpawns()
 	for (const auto& index : unlockedIndices) spawnSave->AddUnlock(index);
 }
 
-bool ALevelManager::UnlockSavedSpawns()
+bool ALevelManager::LoadUnlockedSpawns()
 {
 	if (USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0)))
 	{
-		for (const auto& index : spawnSave->GetUnlockedIndices())
-		{
-			if (!allSpawns.IsValidIndex(index)) return false;
-
-			allSpawns[index]->UnlockPoint();
-		}
+		for (const auto& index : spawnSave->GetUnlockedIndices()) allSpawns[index]->UnlockPoint();
+		spawnSave->PrintUnlockedIndices();
 		return true;
 	}
 
 	Print("There was no spawn save found so one was created", 8);
+	// UnlockInitialSpawns();
 	return false;
 }

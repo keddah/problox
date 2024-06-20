@@ -112,13 +112,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		P_THIS->LoadLevel(Z_Param_lvlIndex,Z_Param_spawnPoint);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ALevelManager::execSaveSpawns)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SaveSpawns();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ALevelManager::execInitLevel3Spawners)
 	{
 		P_FINISH;
@@ -145,6 +138,13 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->SetLoading();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ALevelManager::execSaveSpawns)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SaveSpawns();
 		P_NATIVE_END;
 	}
 	void ALevelManager::StaticRegisterNativesALevelManager()

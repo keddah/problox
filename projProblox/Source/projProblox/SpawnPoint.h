@@ -52,8 +52,9 @@ protected:
 
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	
-public:	
-	void UnlockPoint() { unlocked = true; }
+public:
+	UFUNCTION(BlueprintCallable)
+	void UnlockPoint() { unlocked = true; onNewSpawn.Broadcast(); }
 	void LockPoint() { unlocked = false; }
 	bool IsUnlocked() const { return unlocked; }
 

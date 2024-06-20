@@ -35,6 +35,16 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	void FindCore();
 	void FindSpawns();
 
+	// Doing in BP because its being weird.
+	// void UnlockInitialSpawns();
+
+	// Unlocks the spawns that have previously been unlocked (and saved)
+	// Returns whether a load file was found
+	bool LoadUnlockedSpawns();
+	
+	UFUNCTION()
+	void SaveSpawns();
+	
 	UFUNCTION()
 	void SetLoading() { bLevelLoading = true; }
 	
@@ -47,12 +57,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	UFUNCTION()
 	void InitLevel3Spawners();
 
-	UFUNCTION()
-	void SaveSpawns();
 
-	// Unlocks the spawns that have previously been unlocked (and saved)
-	// Returns whether a load file was found
-	bool UnlockSavedSpawns();
 	
 public:	
 	// Sets default values for this actor's properties

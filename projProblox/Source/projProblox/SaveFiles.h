@@ -20,10 +20,10 @@ class PROJPROBLOX_API USpawnSaves : public USaveGame
 
 
 public:
-	// Pass the spawn pointer so that it can be found in the array.
+	// Ensure to save after calling this...
 	void AddUnlock(short newUnlock);
 
-	const TArray<short>& GetUnlockedIndices() const { PrintUnlockedIndices(); return unlocks; }
+	const TArray<short>& GetUnlockedIndices() const { return unlocks; }
 	void PrintUnlockedIndices() const 
 	{
 		FString text = "Unlocked indices: ";

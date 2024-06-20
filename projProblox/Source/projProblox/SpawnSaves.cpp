@@ -13,10 +13,7 @@ void USpawnSaves::AddUnlock(short newUnlock)
 		return;
 	}
 
-	// Adding rather than setting the array so that elements can't be removed (once something is unlocked... it stays unlocked).
 	unlocks.AddUnique(newUnlock);
 	PrintUnlockedIndices();
-	
-	if(UGameplayStatics::SaveGameToSlot(this, spawnSaveSlot, 0)) Print("Save successful", 5)
-	else Print("Save failed", 5)
+	UGameplayStatics::SaveGameToSlot(this, spawnSaveSlot, 0);
 }
