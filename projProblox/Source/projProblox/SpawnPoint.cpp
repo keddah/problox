@@ -33,10 +33,6 @@ void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
 	
 	if(OtherActor->IsA<ACubeConnector>()) return;
 	if(!Cast<ACubeCore>(OtherActor)) return;
- 	{
-		unlocked = true;
 
-		// Create/modify a save file so that it saves....
-		onNewSpawn.Broadcast();
- 	}
+	UnlockPoint();
 }

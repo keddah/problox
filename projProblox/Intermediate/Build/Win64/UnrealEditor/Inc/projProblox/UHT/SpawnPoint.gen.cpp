@@ -108,11 +108,19 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 		*(int32*)Z_Param__Result=P_THIS->GetLevelIndex();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ASpawnPoint::execUnlockPoint)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->UnlockPoint();
+		P_NATIVE_END;
+	}
 	void ASpawnPoint::StaticRegisterNativesASpawnPoint()
 	{
 		UClass* Class = ASpawnPoint::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetLevelIndex", &ASpawnPoint::execGetLevelIndex },
+			{ "UnlockPoint", &ASpawnPoint::execUnlockPoint },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -150,6 +158,28 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ASpawnPoint_UnlockPoint_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpawnPoint_UnlockPoint_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SpawnPoint.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpawnPoint_UnlockPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpawnPoint, nullptr, "UnlockPoint", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_UnlockPoint_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASpawnPoint_UnlockPoint_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ASpawnPoint_UnlockPoint()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASpawnPoint_UnlockPoint_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ASpawnPoint);
 	UClass* Z_Construct_UClass_ASpawnPoint_NoRegister()
 	{
@@ -162,6 +192,11 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_unlocked_MetaData[];
+#endif
+		static void NewProp_unlocked_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_unlocked;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_defaultScene_MetaData[];
 #endif
@@ -186,6 +221,7 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASpawnPoint_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASpawnPoint_GetLevelIndex, "GetLevelIndex" }, // 3193090826
+		{ &Z_Construct_UFunction_ASpawnPoint_UnlockPoint, "UnlockPoint" }, // 4088787721
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -194,6 +230,17 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 		{ "ModuleRelativePath", "SpawnPoint.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlocked_MetaData[] = {
+		{ "Category", "SpawnPoint" },
+		{ "ModuleRelativePath", "SpawnPoint.h" },
+	};
+#endif
+	void Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlocked_SetBit(void* Obj)
+	{
+		((ASpawnPoint*)Obj)->unlocked = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlocked = { "unlocked", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ASpawnPoint), &Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlocked_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlocked_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlocked_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene_MetaData[] = {
 		{ "Category", "SpawnPoint" },
@@ -222,6 +269,7 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 #endif
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level = { "level", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpawnPoint, level), Z_Construct_UEnum_projProblox_ELevel, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData), Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_MetaData) }; // 1235914906
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpawnPoint_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlocked,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_defaultScene,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_unlockTrigger,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnPoint_Statics::NewProp_level_Underlying,
@@ -260,19 +308,19 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASpawnPoint);
 	ASpawnPoint::~ASpawnPoint() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo[] = {
 		{ ELevel_StaticEnum, TEXT("ELevel"), &Z_Registration_Info_UEnum_ELevel, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1235914906U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 1693058136U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 4238097137U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_2892863932(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_425208072(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
