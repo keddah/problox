@@ -27,15 +27,12 @@ class PROJPROBLOX_API ASpawnPoint : public AActor
 	GENERATED_BODY()
 	
 	short levelIndex;
-
-
+	bool unlocked;
 	
 public:	
 	// Sets default values for this actor's properties
 	ASpawnPoint();
 
-	UPROPERTY(EditAnywhere)
-	bool unlocked;
 	
 protected:
 	// Called when the game starts or when spawned
