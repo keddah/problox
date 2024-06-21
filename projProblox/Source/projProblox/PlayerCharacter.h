@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "UndoRedo/ActionHistory.h"
 #include "Pickupables/PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
@@ -14,7 +15,8 @@ enum class EGameMode : uint8
 	Story,
 	Wave,
 	Assault,
-	Creative
+	Creative,
+	Build
 };
 
 UCLASS()
@@ -76,6 +78,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	float mouseDistance = 20000;
 
+	UPROPERTY(BlueprintReadOnly)
+	bool canMove = true;
+	
 	
 	/////////////// Game States ///////////////
 	UPROPERTY(BlueprintReadOnly)
@@ -92,7 +97,11 @@ public:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 	UFUNCTION(BlueprintCallable)
-	void SetGameMode(EGameMode mode) { currentMode = mode; }
+	void SetGameMode(EGameMode mode)
+	{
+		currentMode = mode;
+		canMove = currentMode != EGameMode::Build;
+	}
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
@@ -117,6 +126,7 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void Detach(const FHitResult& hit);
 
+	void BuildControls();
 	
 	/////////////// Game States ///////////////
 	UFUNCTION()

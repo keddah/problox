@@ -8,6 +8,8 @@
 #include "Components/BoxComponent.h"
 #include "BuyableAttachment.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnBoughtAttachment);
+
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
 
 UCLASS()
@@ -18,7 +20,8 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	ABuyableAttachment();
 
 	// Obtains the mesh and material from this buyable info and applies it to the static mesh comp 
-	void UseInfoMesh() const;
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Call this in the construction script so that changes are updated whenever they need to be."))
+	void UseInfoMesh();
 
 protected:
 	// Called when the game starts or when spawned
@@ -30,9 +33,15 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* mouseDetector;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	UBuyableInfo* info;
 
-public:	
-
+	UPROPERTY(EditDefaultsOnly)
+	UMaterial* lockedMaterial;
+	
+	bool unlocked;
+	
+public:
+	void UnlockAttachment();
+	FOnBoughtAttachment onBoughtAttachment;
 };

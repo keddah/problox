@@ -104,5 +104,10 @@ void AMode_Creative::BeginPlay()
 		return;
 	}
 
-	Print("Gamemode couldnt cast to player (BeginPlay)", 5)
+	Print("Gamemode couldnt cast to player (BeginPlay) ~ creative game mode", 5)
+}
+
+void AMode_Build::BeginPlay()
+{
+	Super::BeginPlay();
 }

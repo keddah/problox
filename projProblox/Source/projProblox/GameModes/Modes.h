@@ -78,3 +78,11 @@ class PROJPROBLOX_API AMode_Creative : public AGameModeBase
 
 	virtual void BeginPlay() override;
 };
+
+UCLASS()
+class PROJPROBLOX_API AMode_Build : public AGameModeBase
+{
+	GENERATED_BODY()
+
+	virtual void BeginPlay() override;
+};

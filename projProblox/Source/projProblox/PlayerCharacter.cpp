@@ -397,6 +397,12 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor())) CreateDetachHistory(obj);
 }
 
+void APlayerCharacter::BuildControls()
+{
+	if(currentMode != EGameMode::Build) return;
+
+}
+
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
 {
 	// Can't move anything whilst not in the build phase...

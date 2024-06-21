@@ -206,6 +206,51 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 template<> PROJPROBLOX_API UClass* StaticClass<class AMode_Creative>();
 
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_SPARSE_DATA
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesAMode_Build(); \
+	friend struct Z_Construct_UClass_AMode_Build_Statics; \
+public: \
+	DECLARE_CLASS(AMode_Build, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/projProblox"), NO_API) \
+	DECLARE_SERIALIZER(AMode_Build)
+
+
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API AMode_Build(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API AMode_Build(AMode_Build&&); \
+	NO_API AMode_Build(const AMode_Build&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AMode_Build); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMode_Build); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMode_Build) \
+	NO_API virtual ~AMode_Build();
+
+
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_82_PROLOG
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_SPARSE_DATA \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_INCLASS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_85_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> PROJPROBLOX_API UClass* StaticClass<class AMode_Build>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h
 

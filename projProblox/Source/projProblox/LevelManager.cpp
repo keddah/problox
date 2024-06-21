@@ -103,9 +103,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 		levels[currentLevel]->SetShouldBeLoaded(true);
 	}
 	levels[currentLevel]->SetShouldBeVisible(true);
-
-	// Broadcast the level change
-	onLevelChanged.Broadcast(currentLevel);
+	
 	instance->SetCurrentLevel(currentLevel);
 
 	// Unload all the levels apart from the current level
@@ -169,6 +167,9 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 			}
 			break;
 	}
+	
+	// Broadcast the level change
+	onLevelChanged.Broadcast(currentLevel);
 }
 
 void ALevelManager::UnloadLevel(short lvlIndex)

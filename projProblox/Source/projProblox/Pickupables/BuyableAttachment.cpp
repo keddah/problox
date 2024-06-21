@@ -10,11 +10,10 @@ ABuyableAttachment::ABuyableAttachment()
 	PrimaryActorTick.bCanEverTick = false;
 
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>("Mesh Component");
-
+	meshComp->SetSimulatePhysics(false);
+	
 	mouseDetector = CreateDefaultSubobject<UBoxComponent>("Box Collision");
 	mouseDetector->SetupAttachment(meshComp);
-
-	UseInfoMesh();
 }
 
 
@@ -23,11 +22,15 @@ ABuyableAttachment::ABuyableAttachment()
 void ABuyableAttachment::BeginPlay()
 {
 	Super::BeginPlay();
-
-	UseInfoMesh();
 }
 
-void ABuyableAttachment::UseInfoMesh() const
+void ABuyableAttachment::UnlockAttachment()
+{
+	unlocked = true;
+	onBoughtAttachment.Broadcast();
+}
+
+void ABuyableAttachment::UseInfoMesh()
 {
 	if(!info)
 	{
@@ -37,8 +40,26 @@ void ABuyableAttachment::UseInfoMesh() const
 
 	const FBuyableInfoStruct buyInfo = info->GetInfo();
 	meshComp->SetStaticMesh(buyInfo.attachmentMesh);
-	for (int i = 0; i < buyInfo.attachmentMats.Num(); i++)
+	meshComp->SetRelativeScale3D(buyInfo.defaultScale);
+
+	// Setting materials
+	if(unlocked)
 	{
-		meshComp->SetMaterial(i, buyInfo.attachmentMats[i]);
+		if(buyInfo.attachmentMats.IsEmpty())
+		{
+			meshComp->SetMaterial(0, buyInfo.attachmentMesh->GetMaterial(0));
+			return;
+		}
+		
+		for (int i = 0; i < buyInfo.attachmentMats.Num(); i++)
+		{
+			meshComp->SetMaterial(i, buyInfo.attachmentMats[i]);
+		}
+		return;
 	}
+
+	// If not unlocked...
+	if(lockedMaterial) meshComp->SetMaterial(0, lockedMaterial);
+
+	unlocked = true;
 }

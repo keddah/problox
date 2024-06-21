@@ -13,6 +13,8 @@ void EmptyLinkFunctionForGeneratedCodeModes() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACubeCore_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AMode_Assault();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AMode_Assault_NoRegister();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_AMode_Build();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_AMode_Build_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AMode_Creative();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AMode_Creative_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AMode_Story();
@@ -570,6 +572,69 @@ void FOnCoreChanged_DelegateWrapper(const FMulticastScriptDelegate& OnCoreChange
 	AMode_Creative::AMode_Creative(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AMode_Creative);
 	AMode_Creative::~AMode_Creative() {}
+	void AMode_Build::StaticRegisterNativesAMode_Build()
+	{
+	}
+	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AMode_Build);
+	UClass* Z_Construct_UClass_AMode_Build_NoRegister()
+	{
+		return AMode_Build::StaticClass();
+	}
+	struct Z_Construct_UClass_AMode_Build_Statics
+	{
+		static UObject* (*const DependentSingletons[])();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
+#endif
+		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+		static const UECodeGen_Private::FClassParams ClassParams;
+	};
+	UObject* (*const Z_Construct_UClass_AMode_Build_Statics::DependentSingletons[])() = {
+		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
+		(UObject* (*)())Z_Construct_UPackage__Script_projProblox,
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMode_Build_Statics::DependentSingletons) < 16);
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMode_Build_Statics::Class_MetaDataParams[] = {
+		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
+		{ "IncludePath", "GameModes/Modes.h" },
+		{ "ModuleRelativePath", "GameModes/Modes.h" },
+		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
+	};
+#endif
+	const FCppClassTypeInfoStatic Z_Construct_UClass_AMode_Build_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<AMode_Build>::IsAbstract,
+	};
+	const UECodeGen_Private::FClassParams Z_Construct_UClass_AMode_Build_Statics::ClassParams = {
+		&AMode_Build::StaticClass,
+		"Game",
+		&StaticCppClassTypeInfo,
+		DependentSingletons,
+		nullptr,
+		nullptr,
+		nullptr,
+		UE_ARRAY_COUNT(DependentSingletons),
+		0,
+		0,
+		0,
+		0x009002ACu,
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMode_Build_Statics::Class_MetaDataParams), Z_Construct_UClass_AMode_Build_Statics::Class_MetaDataParams)
+	};
+	UClass* Z_Construct_UClass_AMode_Build()
+	{
+		if (!Z_Registration_Info_UClass_AMode_Build.OuterSingleton)
+		{
+			UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_AMode_Build.OuterSingleton, Z_Construct_UClass_AMode_Build_Statics::ClassParams);
+		}
+		return Z_Registration_Info_UClass_AMode_Build.OuterSingleton;
+	}
+	template<> PROJPROBLOX_API UClass* StaticClass<AMode_Build>()
+	{
+		return AMode_Build::StaticClass();
+	}
+	AMode_Build::AMode_Build(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AMode_Build);
+	AMode_Build::~AMode_Build() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
@@ -579,8 +644,9 @@ void FOnCoreChanged_DelegateWrapper(const FMulticastScriptDelegate& OnCoreChange
 		{ Z_Construct_UClass_AMode_Wave, AMode_Wave::StaticClass, TEXT("AMode_Wave"), &Z_Registration_Info_UClass_AMode_Wave, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Wave), 2659252905U) },
 		{ Z_Construct_UClass_AMode_Assault, AMode_Assault::StaticClass, TEXT("AMode_Assault"), &Z_Registration_Info_UClass_AMode_Assault, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Assault), 875086127U) },
 		{ Z_Construct_UClass_AMode_Creative, AMode_Creative::StaticClass, TEXT("AMode_Creative"), &Z_Registration_Info_UClass_AMode_Creative, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Creative), 1613074281U) },
+		{ Z_Construct_UClass_AMode_Build, AMode_Build::StaticClass, TEXT("AMode_Build"), &Z_Registration_Info_UClass_AMode_Build, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Build), 2849129638U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_3019407924(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_1595263407(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
