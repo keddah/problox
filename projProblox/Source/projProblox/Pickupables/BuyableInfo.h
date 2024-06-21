@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PickupableMaster.h"
 #include "Engine/DataAsset.h"
 #include "BuyableInfo.generated.h"
 
@@ -27,6 +28,9 @@ struct FBuyableInfoStruct
 
 	UPROPERTY(VisibleAnywhere)
 	FVector defaultScale;
+
+	UPROPERTY(VisibleAnywhere)
+	TSubclassOf<APickupableMaster> classToSpawn;
 };
 
 UCLASS(BlueprintType)
@@ -53,6 +57,9 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 	UPROPERTY(EditAnywhere)
 	FVector defaultScale {1,1,1};
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<APickupableMaster> classToSpawn;
+
 public:
-	FBuyableInfoStruct GetInfo() const { return {name, description, price, attachmentMesh, attachmentMats, defaultScale }; }
+	FBuyableInfoStruct GetInfo() const { return {name, description, price, attachmentMesh, attachmentMats, defaultScale, classToSpawn }; }
 };

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
 #include "Components/SceneCaptureComponent2D.h"
@@ -42,6 +43,9 @@ protected:
 	USceneComponent* defaultScene;
 	
 	UPROPERTY(EditDefaultsOnly)
+	UArrowComponent* direction;
+	
+	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* unlockTrigger;
 	
 	UPROPERTY(EditAnywhere, meta = (ToolTip = "The level that the spawn point should be valid for."))
@@ -55,6 +59,8 @@ public:
 	void LockPoint() { unlocked = false; }
 	bool IsUnlocked() const { return unlocked; }
 
+	FRotator GetRot() const { return direction->GetComponentRotation(); }
+	
 	UFUNCTION(BlueprintCallable)
 	int GetLevelIndex() const { return levelIndex; }
 	void SetLevelIndex(const short index) { levelIndex = index; }

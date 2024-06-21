@@ -397,18 +397,14 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor())) CreateDetachHistory(obj);
 }
 
-void APlayerCharacter::BuildControls()
-{
-	if(currentMode != EGameMode::Build) return;
-
-}
-
 void APlayerCharacter::MoveSelection(const FVector& mousePos)
 {
+	if(!selectedObj) return;
+	
 	// Can't move anything whilst not in the build phase...
 	if(!buildPhase)
 	{
-		if(selectedObj) Deselect();
+		Deselect();
 		return;
 	}
 	
@@ -458,4 +454,68 @@ void APlayerCharacter::Deselect()
 	// Adding new action history entry.
 	CreateTaskHistory(opName, {selectedObj}, selectedTransform, selectedObj->GetActorTransform());
 	selectedObj = nullptr;
+}
+
+
+void APlayerCharacter::BuildControls(const FHitResult& hit)
+{
+	if(currentMode != EGameMode::Build) return;
+
+	// Only continue if the hit object is a mesh or a box collider...
+	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
+	AActor* hitActor = hit.GetActor();
+	
+	// Don't allow this to run if it's already being hovered over
+	if(hitActor == hoveredBuyable) return;
+
+	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
+	{
+		const FBuyableInfoStruct info = buyable->GetInfo();
+
+		// Hide the previous one
+		if(hoveredBuyable) hoveredBuyable->HideDescription();
+		
+		// Show the new one
+		hoveredBuyable = buyable;
+		hoveredBuyable->ShowDescription();
+	}
+}
+
+void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
+{
+	if(currentMode != EGameMode::Build) return;
+
+	// Only continue if the hit object is a mesh or a box collider...
+	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
+	AActor* hitActor = hit.GetActor();
+	
+	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
+	{
+		UWorld* wrld = GetWorld();
+		if(!wrld)
+		{
+			Print("couldnt get world to spawn from purchase...", 4)
+			return;
+		}
+		
+		FActorSpawnParameters params;
+		params.bNoFail = true;
+		
+		APickupableMaster* pickupable = wrld->SpawnActor<APickupableMaster>(buyable->GetInfo().classToSpawn, buyable->GetActorLocation(), buyable->GetActorRotation(), params);
+		if(!pickupable)
+		{
+			Print("couldnt cast after spawning from purchase...", 4)
+			return;
+		}
+
+		holding = true;
+		selectedObj = pickupable;
+		exclusions.Add(selectedObj);
+
+		selectedTransform = selectedObj->GetActorTransform();
+		selectedObj->SetSelected(true);
+
+		// Turn the player around...
+		AddControllerYawInput(360);
+	}
 }

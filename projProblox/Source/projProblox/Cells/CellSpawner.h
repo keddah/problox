@@ -107,7 +107,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void BeginSpawn();
 
-	void SpawnWithForce() const;
+	void SpawnWithForce();
 
 	int GetSpawnAmount() const { return spawnAmount; }
 	

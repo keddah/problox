@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_ABuyableAttachment_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACubeCore_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APickupableMaster_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APlayerCharacter();
@@ -93,6 +94,22 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->EndGame();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APlayerCharacter::execSpawnFromBuyable)
+	{
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_hit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SpawnFromBuyable(Z_Param_Out_hit);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APlayerCharacter::execBuildControls)
+	{
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_hit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->BuildControls(Z_Param_Out_hit);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(APlayerCharacter::execDetach)
@@ -183,6 +200,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	{
 		UClass* Class = APlayerCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "BuildControls", &APlayerCharacter::execBuildControls },
 			{ "CreateDetachHistory", &APlayerCharacter::execCreateDetachHistory },
 			{ "Deselect", &APlayerCharacter::execDeselect },
 			{ "Detach", &APlayerCharacter::execDetach },
@@ -195,9 +213,52 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "Redo", &APlayerCharacter::execRedo },
 			{ "SelectObject", &APlayerCharacter::execSelectObject },
 			{ "SetGameMode", &APlayerCharacter::execSetGameMode },
+			{ "SpawnFromBuyable", &APlayerCharacter::execSpawnFromBuyable },
 			{ "Undo", &APlayerCharacter::execUndo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics
+	{
+		struct PlayerCharacter_eventBuildControls_Parms
+		{
+			FHitResult hit;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_hit_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_hit;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::NewProp_hit_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::NewProp_hit = { "hit", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventBuildControls_Parms, hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::NewProp_hit_MetaData), Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::NewProp_hit_MetaData) }; // 1891709922
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::NewProp_hit,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "BuildControls", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::PlayerCharacter_eventBuildControls_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::PlayerCharacter_eventBuildControls_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_BuildControls()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory_Statics
 	{
@@ -630,6 +691,48 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics
+	{
+		struct PlayerCharacter_eventSpawnFromBuyable_Parms
+		{
+			FHitResult hit;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_hit_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_hit;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::NewProp_hit_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::NewProp_hit = { "hit", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventSpawnFromBuyable_Parms, hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::NewProp_hit_MetaData), Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::NewProp_hit_MetaData) }; // 1891709922
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::NewProp_hit,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "SpawnFromBuyable", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::PlayerCharacter_eventSpawnFromBuyable_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::PlayerCharacter_eventSpawnFromBuyable_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_APlayerCharacter_Undo_Statics
 	{
 #if WITH_METADATA
@@ -706,6 +809,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		static void NewProp_canMove_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_canMove;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_hoveredBuyable_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_hoveredBuyable;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_gameEnded_MetaData[];
 #endif
 		static void NewProp_gameEnded_SetBit(void* Obj);
@@ -730,6 +837,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_APlayerCharacter_BuildControls, "BuildControls" }, // 241909419
 		{ &Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory, "CreateDetachHistory" }, // 2649000216
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 959344020
 		{ &Z_Construct_UFunction_APlayerCharacter_Detach, "Detach" }, // 1541612637
@@ -742,6 +850,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_Redo, "Redo" }, // 2675371083
 		{ &Z_Construct_UFunction_APlayerCharacter_SelectObject, "SelectObject" }, // 1727888823
 		{ &Z_Construct_UFunction_APlayerCharacter_SetGameMode, "SetGameMode" }, // 2129562915
+		{ &Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable, "SpawnFromBuyable" }, // 2435491414
 		{ &Z_Construct_UFunction_APlayerCharacter_Undo, "Undo" }, // 1218169235
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::FuncInfo) < 2048);
@@ -851,6 +960,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_canMove = { "canMove", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APlayerCharacter), &Z_Construct_UClass_APlayerCharacter_Statics::NewProp_canMove_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_canMove_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_canMove_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable_MetaData[] = {
+		{ "Category", "PlayerCharacter" },
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable = { "hoveredBuyable", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, hoveredBuyable), Z_Construct_UClass_ABuyableAttachment_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_gameEnded_MetaData[] = {
 		{ "Category", "PlayerCharacter" },
 #if !UE_BUILD_SHIPPING
@@ -900,6 +1016,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_holding,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_mouseDistance,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_canMove,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_gameEnded,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_buildPhase,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_currentMode_Underlying,
@@ -947,9 +1064,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1877747702U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 3972014313U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 3010878149U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3892812474(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_2481731387(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

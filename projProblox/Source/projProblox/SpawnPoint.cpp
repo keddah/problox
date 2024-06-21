@@ -14,6 +14,9 @@ ASpawnPoint::ASpawnPoint()
 	defaultScene = CreateDefaultSubobject<USceneComponent>("Default Scene Root");
 	unlockTrigger = CreateDefaultSubobject<UBoxComponent>("Unlock Trigger");
 	unlockTrigger->SetupAttachment(defaultScene);
+
+	direction = CreateDefaultSubobject<UArrowComponent>("Direction Indicator");
+	direction->SetupAttachment(defaultScene);
 }
 
 
