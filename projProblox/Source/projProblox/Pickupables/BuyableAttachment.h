@@ -6,9 +6,12 @@
 #include "GameFramework/Actor.h"
 #include "BuyableInfo.h"
 #include "Components/BoxComponent.h"
+#include "Components/WidgetComponent.h"
 #include "BuyableAttachment.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnBoughtAttachment);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnShowDisplay, const ABuyableAttachment*, checker);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnHideDisplay, const ABuyableAttachment*, checker);
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
 
@@ -27,9 +30,12 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* meshComp;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UWidgetComponent* infoWidget;
+	
 	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* mouseDetector;
 	
@@ -40,8 +46,19 @@ protected:
 	UMaterial* lockedMaterial;
 	
 	bool unlocked;
-	
+
 public:
 	void UnlockAttachment();
 	FOnBoughtAttachment onBoughtAttachment;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnShowDisplay onShow;
+	UPROPERTY(BlueprintAssignable)
+	FOnHideDisplay onHide;
+
+	FBuyableInfoStruct GetInfo() const { return info->GetInfo(); }
+
+	void ShowDescription() const { onShow.Broadcast(this); }
+	void HideDescription() const { onHide.Broadcast(this);}
+
 };

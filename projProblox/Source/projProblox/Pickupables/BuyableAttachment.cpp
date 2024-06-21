@@ -9,10 +9,12 @@ ABuyableAttachment::ABuyableAttachment()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
+	infoWidget = CreateDefaultSubobject<UWidgetComponent>("Display Widget");
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>("Mesh Component");
-	meshComp->SetSimulatePhysics(false);
-	
 	mouseDetector = CreateDefaultSubobject<UBoxComponent>("Box Collision");
+	
+	meshComp->SetSimulatePhysics(false);
+	meshComp->SetupAttachment(infoWidget);
 	mouseDetector->SetupAttachment(meshComp);
 }
 

@@ -39,7 +39,6 @@ void ACellSpawner::BeginPlay()
 
 void ACellSpawner::Init(ACubeCore* core)
 {
-	Print("initing", 4)
 	wrld = GetWorld();
 
 	if (!wrld)
@@ -58,7 +57,7 @@ void ACellSpawner::Overlap(AActor* otherActor)
 {
 	// If the trigger's relative location is unchanged, don't do anything..
 	if(!triggerable) return;
-
+	
 	// Only do something if the core collides (not connectors)....
 	if(otherActor->IsA<ACubeConnector>()) return;
 
@@ -80,7 +79,7 @@ void ACellSpawner::Overlap(AActor* otherActor)
 		SpawnWithForce();
 		if(otherCore) otherCore->BroadcastNewCells();
 	}
-	active = false;
+	triggerable = false;
 }
 
 ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
@@ -142,7 +141,7 @@ void ACellSpawner::BeginSpawn()
 	active = false;
 }
 
-void ACellSpawner::SpawnWithForce() const
+void ACellSpawner::SpawnWithForce()
 {
 	if(!wrld)
 	{
@@ -158,7 +157,7 @@ void ACellSpawner::SpawnWithForce() const
 	params.bNoFail = true;
 	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
 	{
-		params.OverrideLevel = wrld->GetLevel(instance->GetCurrentLevel());
+		params.OverrideLevel = wrld->GetStreamingLevels()[instance->GetCurrentLevel()]->GetLoadedLevel();
 	}
 
 	TArray<ACell*> spawnedCells;
@@ -173,4 +172,5 @@ void ACellSpawner::SpawnWithForce() const
 		const FVector direction = GetActorForwardVector().RotateAngleAxis(FMath::RandRange(0, coneRadius), {1,0,0});
 		cell->GetMesh()->AddImpulse(direction * spawnForce, "", true);
 	}
+	active = false;
 }

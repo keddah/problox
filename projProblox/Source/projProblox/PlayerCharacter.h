@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Pickupables/BuyableAttachment.h"
 #include "UndoRedo/ActionHistory.h"
 #include "Pickupables/PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
@@ -47,6 +48,7 @@ private:
 	// Detaches everything from the inputted core or the pickupable's parent then creates task histories for each thing that was detached.  
 	UFUNCTION(BlueprintCallable)
 	void CreateDetachHistory(APickupableMaster* obj);
+
 	
 protected:
 	// Called when the game starts or when spawned
@@ -81,6 +83,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool canMove = true;
 	
+	UPROPERTY(BlueprintReadOnly)
+	ABuyableAttachment* hoveredBuyable;
+
 	
 	/////////////// Game States ///////////////
 	UPROPERTY(BlueprintReadOnly)
@@ -126,7 +131,12 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void Detach(const FHitResult& hit);
 
-	void BuildControls();
+	UFUNCTION(BlueprintCallable)
+	void BuildControls(const FHitResult& hit);
+
+	UFUNCTION(BlueprintCallable)
+	void SpawnFromBuyable(const FHitResult& hit);
+	
 	
 	/////////////// Game States ///////////////
 	UFUNCTION()

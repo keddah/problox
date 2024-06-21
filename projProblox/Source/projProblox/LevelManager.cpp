@@ -124,13 +124,14 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 	core->RemoveVelocity();
 	
 	FVector spawnPos;
+	const FVector spawnOffset = {-1000,0,50};
 	switch (currentLevel)
 	{
 		case 0:
 			if(!lvl0Spawn) break;
 			spawnPos = lvl0Spawn->GetActorLocation();
-			player->SetActorRotation(lvl0Spawn->GetActorRotation());
-			player->SetActorLocation(spawnPos + FVector(0,0,300));
+			player->SetActorRotation(lvl0Spawn->GetRot().GetInverse());
+			player->SetActorLocation(spawnPos + spawnOffset);
 			core->SetActorLocation(spawnPos);
 			break;
 
@@ -139,8 +140,8 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 			if(lvl1Spawns.IsValidIndex(spawnPoint))
 			{
 				spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
-				player->SetActorRotation(lvl1Spawns[spawnPoint]->GetActorRotation());
-				player->SetActorLocation(spawnPos + FVector(0,0,300));
+				player->SetActorRotation(lvl1Spawns[spawnPoint]->GetRot());
+				player->SetActorLocation(spawnPos + spawnOffset);
 				core->SetActorLocation(spawnPos);
 			}
 			break;
@@ -150,8 +151,8 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 			if(lvl2Spawns.IsValidIndex(spawnPoint))
 			{
 				spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
-				player->SetActorRotation(lvl2Spawns[spawnPoint]->GetActorRotation());
-				player->SetActorLocation(spawnPos + FVector(0,0,300));
+				player->SetActorRotation(lvl2Spawns[spawnPoint]->GetRot());
+				player->SetActorLocation(spawnPos + spawnOffset);
 				core->SetActorLocation(spawnPos);
 			}
 			break;
@@ -161,8 +162,8 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 			if(lvl3Spawns.IsValidIndex(spawnPoint))
 			{
 				spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
-				player->SetActorRotation(lvl3Spawns[spawnPoint]->GetActorRotation());
-				player->SetActorLocation(spawnPos + FVector(0,0,300));
+				player->SetActorRotation(lvl3Spawns[spawnPoint]->GetRot());
+				player->SetActorLocation(spawnPos + spawnOffset);
 				core->SetActorLocation(spawnPos);
 			}
 			break;
@@ -343,7 +344,7 @@ bool ALevelManager::LoadUnlockedSpawns()
 	if (USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0)))
 	{
 		for (const auto& index : spawnSave->GetUnlockedIndices()) allSpawns[index]->UnlockPoint();
-		spawnSave->PrintUnlockedIndices();
+		// spawnSave->PrintUnlockedIndices();
 		return true;
 	}
 
