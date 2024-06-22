@@ -52,12 +52,13 @@ private:
 
 	FName FindSuggestedSlot(APickupableMaster* obj) const;
 	FName selectedSocket = "FRONT";
+	short currentSlot = 0;
 	
 	UFUNCTION(BlueprintCallable)
 	void NextPreviousSlot(const bool next);
-
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same as NextPreviousSlot() except it goes 2 spaces ahead instead of one."))
 	void AboveBelowSlot(const bool above);
+	void GoToSlot() const;
 	
 protected:
 	// Called when the game starts or when spawned

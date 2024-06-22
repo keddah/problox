@@ -263,9 +263,11 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 	if(!core) return;
 
 	const TArray<FName> freeSockets = core->GetFreeSlots();
-	const int index = freeSockets.IndexOfByKey(selectedSocket) + next? 1 : -1;
-
-	if(freeSockets.IsValidIndex(index)) selectedSocket = freeSockets[index];
+	currentSlot += next? 1 : -1;
+	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
+	else if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
+		
+	if(freeSockets.IsValidIndex(currentSlot)) selectedSocket = freeSockets[currentSlot];
 
 	// If going forwards... go to the last element if the index is bad
 	else if(next) selectedSocket = freeSockets.Last();
@@ -273,6 +275,7 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 	// Otherwise go to the first
 	else if(!freeSockets.IsEmpty()) selectedSocket = freeSockets[0];
 	else Print("All sockets full...", 5)
+	GoToSlot();
 }
 
 void APlayerCharacter::AboveBelowSlot(const bool above)
@@ -281,9 +284,11 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 	if(!core) return;
 
 	const TArray<FName> freeSockets = core->GetFreeSlots();
-	const int index = freeSockets.IndexOfByKey(selectedSocket) + above? 2 : -2;
-
-	if(freeSockets.IsValidIndex(index)) selectedSocket = freeSockets[index];
+	currentSlot += above? 2 : -2;
+	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
+	else if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
+		
+	if(freeSockets.IsValidIndex(currentSlot)) selectedSocket = freeSockets[currentSlot];
 
 	// If going forwards... go to the last element if the index is bad
 	else if(above) selectedSocket = freeSockets.Last();
@@ -291,6 +296,24 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 	// Otherwise go to the first
 	else if(!freeSockets.IsEmpty()) selectedSocket = freeSockets[0];
 	else Print("All sockets full...", 5)
+	GoToSlot();
+}
+
+void APlayerCharacter::GoToSlot() const
+{
+	if(!selectedObj)
+	{
+		Print("Couldn't go to slot because theres no selected obj", 4)
+		return;
+	}
+
+	if(!core)
+	{
+		Print("Couldn't go to slot because the core is invalid", 4)
+		return;
+	}
+
+	selectedObj->PlacementAgain(core, selectedSocket);
 }
 
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
@@ -379,22 +402,21 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 
 void APlayerCharacter::OtherSelectObject(APickupableMaster* obj)
 {
+	Print("Other select1", 5)
 	// When the hold button is let go
 	if(!holding)
 	{
-		Deselect();
-		return;
+		// Deselect();
+		// return;
 	}
 	
 	// Can't select anything whilst not in the build phase...
 	if(currentMode != EGameMode::Build) return;
-
-	// Don't do anything if the selected object is already valid
-	if(IsValid(selectedObj)) return;
+	Print("Other select2", 5)
 
 	selectedSocket = FindSuggestedSlot(obj);
 	if(selectedSocket == NAME_None) selectedSocket = core->GetFreeSlots()[0];
-	selectedObj->PlacementAgain(core, selectedSocket);
+	GoToSlot();
 }
 
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
@@ -634,7 +656,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		OtherSelectObject(selectedObj);
 
 		selectedTransform = selectedObj->GetActorTransform();
-		selectedObj->SetSelected(true);
+		// selectedObj->SetSelected(true);
 
 		// Turn the player around...
 		AddControllerYawInput(360);

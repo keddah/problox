@@ -111,6 +111,8 @@ void APickupableMaster::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	Print(silhouette->bHiddenInGame? "hiddem" : "Sjpw", 4)
+	
 	Placement();
 	Ability(DeltaTime);
 }
@@ -160,44 +162,44 @@ void APickupableMaster::SetPlaceIndicator()
 
 void APickupableMaster::Placement()
 {
-	if(!selected) return;
-
-	RemoveVelocity();
-	
-	FHitResult hit;
-	const FVector direction = GetActorRotation().RotateVector(placeDir);
-
-	FCollisionQueryParams collisionParams;
-	collisionParams.AddIgnoredActor(this);
-	collisionParams.MobilityType = EQueryMobilityType::Any;
-	
-	// Debug Draw
-	const FVector start = arrow->GetComponentLocation();
-	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
-	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
-
-	if(!hit.bBlockingHit)
-	{
-		parentCore = 0;
-		ResetGhost();
-		return;
-	}
-
-	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
-	
-	if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
-	else parentCore = nullptr;
-	
-	if(!parentCore)
-	{
-		ResetGhost();
-		return;
-	}
-	
-	FName closestSocket = NearestSocket(parentCore, hit.Location);
-
-	if(closestSocket != NAME_None) attachedSocket = closestSocket;
-	GhostPlacement();
+	// if(!selected) return;
+	//
+	// RemoveVelocity();
+	//
+	// FHitResult hit;
+	// const FVector direction = GetActorRotation().RotateVector(placeDir);
+	//
+	// FCollisionQueryParams collisionParams;
+	// collisionParams.AddIgnoredActor(this);
+	// collisionParams.MobilityType = EQueryMobilityType::Any;
+	//
+	// // Debug Draw
+	// const FVector start = arrow->GetComponentLocation();
+	// // DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
+	// wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
+	//
+	// if(!hit.bBlockingHit)
+	// {
+	// 	parentCore = 0;
+	// 	ResetGhost();
+	// 	return;
+	// }
+	//
+	// // DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
+	//
+	// if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
+	// else parentCore = nullptr;
+	//
+	// if(!parentCore)
+	// {
+	// 	ResetGhost();
+	// 	return;
+	// }
+	//
+	// FName closestSocket = NearestSocket(parentCore, hit.Location);
+	//
+	// if(closestSocket != NAME_None) attachedSocket = closestSocket;
+	// GhostPlacement();
 }
 
 // Should only be called in the Placement Function at the very end....
@@ -205,7 +207,11 @@ void APickupableMaster::GhostPlacement()
 {
 	RemoveVelocity();
 	
-	if(!parentCore) return;
+	if(!parentCore)
+	{
+		Print("Couldn't do ghost placement because there's no core", 4)
+		return;
+	}
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(false);
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
@@ -213,6 +219,7 @@ void APickupableMaster::GhostPlacement()
 	silhouette->SetRelativeLocation({attachOffset,0,0});
 	
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	Print("Ghoseing", 4)
 	
 	if(snapRot)
 	{
@@ -316,7 +323,7 @@ void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
 	if(!core)
 	{
 		Print("The given core was invalid... ~ OtherPlacement.", 7)
-		ResetGhost();
+		// ResetGhost();
 		return;
 	}
 
