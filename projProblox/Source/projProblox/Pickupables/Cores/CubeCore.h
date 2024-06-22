@@ -122,7 +122,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	
 	UFUNCTION(BlueprintCallable)
 	void AddMoney(const int amount = 10) { money += amount; }
-	int money = 300;
+	int money = 30000000;
 	UCustomGameInstance* instance;
 	
 protected:
