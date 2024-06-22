@@ -42,6 +42,43 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
+void ATreads::GhostPlacement()
+{
+	RemoveVelocity();
+	
+	if(!parentCore)
+	{
+		Print("Couldn't do ghost placement because there's no core", 4)
+		return;
+	}
+	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	silhouette->SetHiddenInGame(false);
+	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
+	
+	silhouette->SetRelativeLocation({attachOffset,0,0});
+	
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(parentMesh->GetSocketRotation(attachedSocket));
+
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	// Rotate to match the socket rotation
+	silhouette->SetWorldRotation(rot);
+
+	// Whether or not the attached socket is the diagonal side of a wedge...
+	const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90;
+	const FRotator roundRot = RoundRotation(silhouette->GetRelativeRotation(), -float(rounder));
+
+	// Round it to the socket rotation
+	silhouette->SetRelativeRotation({roundRot.Pitch, -roundRot.Yaw, roundRot.Roll});
+	
+	SetGhostBlocked();
+}
+
 void ATreads::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);

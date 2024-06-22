@@ -29,6 +29,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	// Unable to place the treads (only cores can attach to it)
 	//virtual void Placement() override { }
+	virtual void GhostPlacement() override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UBoxComponent* driveTrigger;
