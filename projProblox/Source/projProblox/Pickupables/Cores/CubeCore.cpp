@@ -18,8 +18,10 @@
 #include "Connectors/WedgeConnector.h"
 #include "./projProblox/Pickupables/Wheel.h"
 #include "Kismet/GameplayStatics.h"
-#include "projProblox/CustomGameInstance.h"
+#include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
+#include "projProblox/Pickupables/Balloon.h"
+
 
 ACubeCore::ACubeCore()
 {
@@ -45,6 +47,7 @@ ACubeCore::ACubeCore()
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 
 	// Create a socket info for each cube (also inherited to connectors)
@@ -325,6 +328,25 @@ void ACubeCore::Start()
 	buildPhase = false;
 }
 
+void ACubeCore::SaveMoney()
+{
+	if(!instance)
+	{
+		if(wrld) instance = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld));
+	}
+	
+	if(!instance)
+	{
+		Print("Couldn't cast to game instance... ~ core", 7)
+		return;
+	}
+	
+	if(money == instance->GetMoney()) return;
+
+	Print("Saving...", 5)
+	instance->SaveMoney(money);
+}
+
 void ACubeCore::CalculateRating()
 {
 	if(attempts <= moveRatings[3]) rating = 3;
@@ -414,6 +436,8 @@ void ACubeCore::SetAllAbilityActive(bool value) const
 
 float ACubeCore::GetMass() const
 {
+	if(!mesh->IsSimulatingPhysics()) return 0;
+	
 	float mass = mesh->GetMass();
 
 	const AActor* self = this;
@@ -484,6 +508,16 @@ int ACubeCore::SelectSocket(int socket)
 	
 	selectedObj->ActivateOutline(selectedMat);
 	return socket;
+}
+
+void ACubeCore::Teleport(const FVector& pos)
+{
+	for (auto& obj : GetCloseAttachments())
+	{
+		if(obj->IsA<ABalloon>()) obj->SetActorLocation(pos + obj->GetActorForwardVector() * 150);
+	}
+
+	SetActorLocation(pos);
 }
 
 

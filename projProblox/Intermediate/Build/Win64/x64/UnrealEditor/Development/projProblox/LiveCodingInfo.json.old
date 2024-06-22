@@ -6,6 +6,8 @@
 			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
+			"BuyableAttachment.gen.cpp.obj",
+			"BuyableInfo.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
 			"CellSpawner.gen.cpp.obj",
 			"Collector.gen.cpp.obj",
@@ -21,9 +23,7 @@
 			"Grappler.gen.cpp.obj",
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
-			"Hoverer.gen.cpp.obj",
-			"BuyableAttachment.gen.cpp.obj",
-			"BuyableInfo.gen.cpp.obj"
+			"Hoverer.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"LevelManager.gen.cpp.obj",
@@ -32,7 +32,11 @@
 			"Modes.gen.cpp.obj",
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
+			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
+			"SaveFiles.gen.cpp.obj",
+			"SpawnPoint.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
@@ -42,22 +46,19 @@
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
-			"CellVariations.cpp.obj",
+			"CellVariations.cpp.obj"
+		],
+		"Module.projProblox.3.cpp.obj": [
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
-			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
-			"SaveFiles.gen.cpp.obj",
-			"SpawnPoint.gen.cpp.obj"
-		],
-		"Module.projProblox.3.cpp.obj": [
-			"Balloon.cpp.obj",
+			"LevelManager.cpp.obj",
 			"BounceSpring.cpp.obj",
+			"BuyableAttachment.cpp.obj",
+			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -74,14 +75,13 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
-			"projProblox.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"LevelManager.cpp.obj",
-			"BuyableAttachment.cpp.obj",
-			"BuyableInfo.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
-			"SpawnSaves.cpp.obj"
+			"SpawnSaves.cpp.obj",
+			"ActionHistory.cpp.obj",
+			"Balloon.cpp.obj",
+			"CubeCore.cpp.obj"
 		]
 	}
 }

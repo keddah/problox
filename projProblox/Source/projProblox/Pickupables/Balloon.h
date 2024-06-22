@@ -14,7 +14,6 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	GENERATED_BODY()
 	ABalloon();
 	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaSeconds) override;
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;

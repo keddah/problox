@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ABuyableAttachment;
+struct FBuyableInfoStruct;
 #ifdef PROJPROBLOX_BuyableAttachment_generated_h
 #error "BuyableAttachment.generated.h already included, missing '#pragma once' in BuyableAttachment.h"
 #endif
@@ -32,6 +33,8 @@ PROJPROBLOX_API void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelega
 #define FID_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_21_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execIsUnlocked); \
+	DECLARE_FUNCTION(execGetInfo); \
 	DECLARE_FUNCTION(execUseInfoMesh);
 
 

@@ -43,11 +43,6 @@ void ABalloon::BeginPlay()
 	}
 }
 
-void ABalloon::Tick(float DeltaSeconds)
-{
-	Super::Tick(DeltaSeconds);
-}
-
 void ABalloon::Ability(float deltaTime)
 {
 	Super::Ability(deltaTime);

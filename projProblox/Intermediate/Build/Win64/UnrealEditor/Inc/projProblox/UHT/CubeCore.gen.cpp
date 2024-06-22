@@ -385,6 +385,21 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->DetachAll(Z_Param_push);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ACubeCore::execAddMoney)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_amount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddMoney(Z_Param_amount);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACubeCore::execSaveMoney)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SaveMoney();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACubeCore::execStartStoryGame)
 	{
 		P_GET_TARRAY_REF(int32,Z_Param_Out_delays);
@@ -413,6 +428,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	{
 		UClass* Class = ACubeCore::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AddMoney", &ACubeCore::execAddMoney },
 			{ "BroadcastNewCells", &ACubeCore::execBroadcastNewCells },
 			{ "DetachAll", &ACubeCore::execDetachAll },
 			{ "GetAttempts", &ACubeCore::execGetAttempts },
@@ -422,6 +438,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 			{ "GetSocketCount", &ACubeCore::execGetSocketCount },
 			{ "NextWave", &ACubeCore::execNextWave },
 			{ "ObjectInSocket", &ACubeCore::execObjectInSocket },
+			{ "SaveMoney", &ACubeCore::execSaveMoney },
 			{ "SelectSocket", &ACubeCore::execSelectSocket },
 			{ "SetAllAbilityActive", &ACubeCore::execSetAllAbilityActive },
 			{ "Start", &ACubeCore::execStart },
@@ -429,6 +446,49 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 			{ "StartStoryGame", &ACubeCore::execStartStoryGame },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACubeCore_AddMoney_Statics
+	{
+		struct CubeCore_eventAddMoney_Parms
+		{
+			int32 amount;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_amount_MetaData[];
+#endif
+		static const UECodeGen_Private::FIntPropertyParams NewProp_amount;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_AddMoney_Statics::NewProp_amount_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ACubeCore_AddMoney_Statics::NewProp_amount = { "amount", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventAddMoney_Parms, amount), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_AddMoney_Statics::NewProp_amount_MetaData), Z_Construct_UFunction_ACubeCore_AddMoney_Statics::NewProp_amount_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_AddMoney_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_AddMoney_Statics::NewProp_amount,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_AddMoney_Statics::Function_MetaDataParams[] = {
+		{ "CPP_Default_amount", "10" },
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_AddMoney_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "AddMoney", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_AddMoney_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_AddMoney_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_AddMoney_Statics::CubeCore_eventAddMoney_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_AddMoney_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_AddMoney_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_AddMoney_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_AddMoney_Statics::CubeCore_eventAddMoney_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ACubeCore_AddMoney()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_AddMoney_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ACubeCore_BroadcastNewCells_Statics
 	{
@@ -747,6 +807,34 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACubeCore_SaveMoney_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_SaveMoney_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/////////////// Other ///////////////\n" },
+#endif
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Other" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_SaveMoney_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "SaveMoney", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SaveMoney_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_SaveMoney_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACubeCore_SaveMoney()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_SaveMoney_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1076,6 +1164,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACubeCore_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACubeCore_AddMoney, "AddMoney" }, // 3681972939
 		{ &Z_Construct_UFunction_ACubeCore_BroadcastNewCells, "BroadcastNewCells" }, // 666054514
 		{ &Z_Construct_UFunction_ACubeCore_DetachAll, "DetachAll" }, // 1080256491
 		{ &Z_Construct_UFunction_ACubeCore_GetAttempts, "GetAttempts" }, // 3140650196
@@ -1085,6 +1174,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{ &Z_Construct_UFunction_ACubeCore_GetSocketCount, "GetSocketCount" }, // 2642918207
 		{ &Z_Construct_UFunction_ACubeCore_NextWave, "NextWave" }, // 3722595611
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3391374434
+		{ &Z_Construct_UFunction_ACubeCore_SaveMoney, "SaveMoney" }, // 4116564741
 		{ &Z_Construct_UFunction_ACubeCore_SelectSocket, "SelectSocket" }, // 1004249041
 		{ &Z_Construct_UFunction_ACubeCore_SetAllAbilityActive, "SetAllAbilityActive" }, // 212583021
 		{ &Z_Construct_UFunction_ACubeCore_Start, "Start" }, // 3487294909
@@ -1381,15 +1471,15 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACubeCore);
 	ACubeCore::~ACubeCore() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 2716192263U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 996361865U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_3637155923(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_4220518133(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

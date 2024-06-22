@@ -28,7 +28,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 
 	// Unable to place the treads (only cores can attach to it)
-	virtual void Placement() override { }
+	//virtual void Placement() override { }
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UBoxComponent* driveTrigger;

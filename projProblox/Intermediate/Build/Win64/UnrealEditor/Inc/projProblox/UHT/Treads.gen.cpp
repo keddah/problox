@@ -61,8 +61,14 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Treads" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Unable to place the treads (only cores can attach to it)\n//virtual void Placement() override { }\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/Treads.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Unable to place the treads (only cores can attach to it)\nvirtual void Placement() override { }" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger = { "driveTrigger", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATreads, driveTrigger), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData), Z_Construct_UClass_ATreads_Statics::NewProp_driveTrigger_MetaData) };
@@ -132,15 +138,15 @@ void EmptyLinkFunctionForGeneratedCodeTreads() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATreads);
 	ATreads::~ATreads() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Treads_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 232564866U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ATreads, ATreads::StaticClass, TEXT("ATreads"), &Z_Registration_Info_UClass_ATreads, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATreads), 2969513126U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Treads_h_389668368(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_2786153657(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Treads_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

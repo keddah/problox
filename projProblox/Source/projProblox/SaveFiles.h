@@ -72,11 +72,49 @@ class PROJPROBLOX_API UMoneySave : public USaveGame
 	GENERATED_BODY()
 
 	// contains the indices of all the unlocked spawn points
-	int money;
+	int money = 0;
 
 
 public:
-	// Ensure to save after calling this...
-	void AddMoney(short amount) { money += amount; 	UGameplayStatics::SaveGameToSlot(this, moneySlot, 0); }
-	int GetBalance() const { return money; }
+	void AddMoney(const int amount)
+	{
+		if(UMoneySave* previous = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0)))
+		{
+			money = previous->money + amount;
+		}
+		else money += amount;
+		UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
+		Print("Saving balance (adding): " + FString::FromInt(money), 5);
+	}
+
+	void LoseMoney(const int amount)
+	{
+		money -= amount;
+		UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
+		Print("Saving balance (losing): " + FString::FromInt(money), 5);
+	}
+
+	int32 GetBalance() const { return money; }
+
+	bool SaveBalance(const int balance)
+	{
+		if(!UGameplayStatics::DoesSaveGameExist(moneySlot, 0))
+		{
+			Print("unable to save because the save slot wasnt created...", 4)
+			return false;
+		}
+		
+		money = balance;
+		const bool success = UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
+		
+		if(success) Print("Save successful.", 4)
+		else Print("Save failed.", 5)
+		return success;
+	}
+
+	void PrintBalance(float time = 3) const
+	{
+		Print("Current Balance: " + FString::FromInt(money), time);
+	}
 }; 
+//

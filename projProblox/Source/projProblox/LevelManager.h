@@ -12,7 +12,7 @@
 
 #include "LevelManager.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedLevels, int, levelIndex);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, bool, save);
 
 
 UCLASS()
@@ -87,7 +87,7 @@ public:
 	
 	// Returns whether the loaded level. 
 	UFUNCTION(BlueprintCallable)
-	void LoadLevel(int lvlIndex, int spawnPoint = 0);
+	void LoadLevel(int lvlIndex, int spawnPoint = 0, const bool initialLoad = false);
 
 	int GetLevelIndex(ULevel* lvl) const
 	{
