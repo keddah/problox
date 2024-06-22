@@ -16,7 +16,7 @@ class ASpawnPoint;
 #define PROJPROBLOX_LevelManager_generated_h
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_15_DELEGATE \
-PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedLevels, int32 levelIndex);
+PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedLevels, int32 levelIndex, bool save);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_21_SPARSE_DATA

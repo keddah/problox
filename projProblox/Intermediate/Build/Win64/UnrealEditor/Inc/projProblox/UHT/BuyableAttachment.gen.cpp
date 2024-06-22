@@ -154,6 +154,13 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 	Parms.checker=checker;
 	OnHideDisplay.ProcessMulticastDelegate<UObject>(&Parms);
 }
+	DEFINE_FUNCTION(ABuyableAttachment::execIsUnlocked)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsUnlocked();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ABuyableAttachment::execGetInfo)
 	{
 		P_FINISH;
@@ -173,6 +180,7 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 		UClass* Class = ABuyableAttachment::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetInfo", &ABuyableAttachment::execGetInfo },
+			{ "IsUnlocked", &ABuyableAttachment::execIsUnlocked },
 			{ "UseInfoMesh", &ABuyableAttachment::execUseInfoMesh },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -208,6 +216,45 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABuyableAttachment_GetInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics
+	{
+		struct BuyableAttachment_eventIsUnlocked_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((BuyableAttachment_eventIsUnlocked_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(BuyableAttachment_eventIsUnlocked_Parms), &Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Pickupables/BuyableAttachment.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuyableAttachment, nullptr, "IsUnlocked", nullptr, nullptr, Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::BuyableAttachment_eventIsUnlocked_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::BuyableAttachment_eventIsUnlocked_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ABuyableAttachment_IsUnlocked()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABuyableAttachment_IsUnlocked_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -287,6 +334,7 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABuyableAttachment_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABuyableAttachment_GetInfo, "GetInfo" }, // 3529197808
+		{ &Z_Construct_UFunction_ABuyableAttachment_IsUnlocked, "IsUnlocked" }, // 1858993600
 		{ &Z_Construct_UFunction_ABuyableAttachment_UseInfoMesh, "UseInfoMesh" }, // 427336234
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::FuncInfo) < 2048);
@@ -393,9 +441,9 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABuyableAttachment, ABuyableAttachment::StaticClass, TEXT("ABuyableAttachment"), &Z_Registration_Info_UClass_ABuyableAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuyableAttachment), 2495153441U) },
+		{ Z_Construct_UClass_ABuyableAttachment, ABuyableAttachment::StaticClass, TEXT("ABuyableAttachment"), &Z_Registration_Info_UClass_ABuyableAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuyableAttachment), 1589640883U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_3292240078(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_638944700(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -28,7 +28,15 @@ void ABuyableAttachment::BeginPlay()
 
 void ABuyableAttachment::UnlockAttachment()
 {
+	if(unlocked)
+	{
+		Print("Already unlocked...", 4)
+		return;
+	}
+	
 	unlocked = true;
+	SetHide(false);
+	Print("Unlocked", 5)
 	onBoughtAttachment.Broadcast();
 }
 
@@ -45,23 +53,30 @@ void ABuyableAttachment::UseInfoMesh()
 	meshComp->SetRelativeScale3D(buyInfo.defaultScale);
 
 	// Setting materials
-	if(unlocked)
+	if(unlocked) SetHide(false);
+
+	// If not unlocked...
+	else SetHide(true);
+
+	// unlocked = true;
+}
+
+void ABuyableAttachment::SetHide(const bool hide)
+{
+	if(!hide)
 	{
+		const FBuyableInfoStruct buyInfo = info->GetInfo();
 		if(buyInfo.attachmentMats.IsEmpty())
 		{
 			meshComp->SetMaterial(0, buyInfo.attachmentMesh->GetMaterial(0));
 			return;
 		}
-		
+			
 		for (int i = 0; i < buyInfo.attachmentMats.Num(); i++)
 		{
 			meshComp->SetMaterial(i, buyInfo.attachmentMats[i]);
 		}
 		return;
 	}
-
-	// If not unlocked...
 	if(lockedMaterial) meshComp->SetMaterial(0, lockedMaterial);
-
-	unlocked = true;
 }

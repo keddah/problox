@@ -328,8 +328,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const
 	{
-		if(mesh->IsSimulatingPhysics()) return mesh->GetMass();
-		return mesh->CalculateMass();
+		if(!mesh->IsSimulatingPhysics()) return 0;
+		
+		return mesh->GetMass();
 	}
 
 	// Returns whether or not the player is able to pick this up.

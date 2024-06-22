@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CustomGameInstance.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Pickupables/BuyableAttachment.h"
@@ -74,6 +75,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	ACubeCore* core;
 
+	UPROPERTY(BlueprintReadOnly)
+	UCustomGameInstance* instance;
+	
 	UPROPERTY(BlueprintReadWrite, Category = "Controls")
 	bool holding;
 	

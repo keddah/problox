@@ -27,6 +27,8 @@
 
 #include "CoreMinimal.h"
 #include "./projProblox/Collector.h"
+#include "projProblox/CustomGameInstance.h"
+#include "projProblox/SaveFiles.h"
 #include "SocketInfo/CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
@@ -116,12 +118,12 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	/////////////// Other ///////////////
 	UFUNCTION(BlueprintCallable)
-	void AddMoney(const int amount = 10) { money+= amount; PrintInt(money, 3) }
-	UFUNCTION(BlueprintCallable)
-	void LoadMoney();
-	UFUNCTION(BlueprintCallable)
 	void SaveMoney();
-	int money;
+	
+	UFUNCTION(BlueprintCallable)
+	void AddMoney(const int amount = 10) { money += amount; }
+	int money = 300;
+	UCustomGameInstance* instance;
 	
 protected:
 	ACubeCore();
@@ -129,7 +131,7 @@ protected:
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	
 	
 ///////////////////////////// PROPERTIES /////////////////////////////
 	/////////////// Components ///////////////
@@ -342,4 +344,6 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category = "Socket")
 	int SelectSocket(int socket);
+
+	void LoseMoney(const short amount) { money -= amount; }
 };

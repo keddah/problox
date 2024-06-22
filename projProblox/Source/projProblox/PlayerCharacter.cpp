@@ -20,8 +20,12 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	TArray<AActor*> coreActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), coreActors);
-
+	UWorld* wrld = GetWorld();
+	instance = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld));
+	if(!instance) Print("Player failed to cast to game instance...", 7)
+	
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACubeCore::StaticClass(), coreActors);
+	
 	// Since the connectors inherit from the core and are technically cube cores...
 	for (const auto& coreObj: coreActors)
 	{
@@ -491,6 +495,28 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 	
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
 	{
+		const FBuyableInfoStruct buyInfo = buyable->GetInfo();
+		if(!buyable->IsUnlocked())
+		{
+			if(!core)
+			{
+				Print("Couldn't buy object because the core was invalid...", 4)
+				return;
+			}
+
+			const int money = instance->GetMoney();
+			if(!(money >= buyInfo.price))
+			{
+				Print("Couldn't afford it...: " + FString::FromInt(money), 4)
+				return;
+			}
+
+			instance->LoseMoney(buyInfo.price);
+			Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
+			buyable->UnlockAttachment();
+			return;
+		}
+		
 		UWorld* wrld = GetWorld();
 		if(!wrld)
 		{
@@ -501,7 +527,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		FActorSpawnParameters params;
 		params.bNoFail = true;
 		
-		APickupableMaster* pickupable = wrld->SpawnActor<APickupableMaster>(buyable->GetInfo().classToSpawn, buyable->GetActorLocation(), buyable->GetActorRotation(), params);
+		APickupableMaster* pickupable = wrld->SpawnActor<APickupableMaster>(buyInfo.classToSpawn, buyable->GetActorLocation(), buyable->GetActorRotation(), params);
 		if(!pickupable)
 		{
 			Print("couldnt cast after spawning from purchase...", 4)

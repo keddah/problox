@@ -67,7 +67,7 @@ void ALevelManager::Tick(float DeltaSeconds)
 	}
 }
 
-void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
+void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bool initialLoad)
 {
 	if(!levels.IsValidIndex(lvlIndex))
 	{
@@ -170,7 +170,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 	}
 	
 	// Broadcast the level change
-	onLevelChanged.Broadcast(currentLevel);
+	onLevelChanged.Broadcast(currentLevel, !initialLoad && currentLevel == 0);
 }
 
 void ALevelManager::UnloadLevel(short lvlIndex)

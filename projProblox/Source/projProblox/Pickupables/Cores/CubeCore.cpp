@@ -18,23 +18,9 @@
 #include "Connectors/WedgeConnector.h"
 #include "./projProblox/Pickupables/Wheel.h"
 #include "Kismet/GameplayStatics.h"
-#include "projProblox/CustomGameInstance.h"
 #include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
 
-void ACubeCore::LoadMoney()
-{
-	if(UMoneySave* moneySave = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0))) money = moneySave->GetBalance();
-}
-
-void ACubeCore::SaveMoney()
-{
-	if(UMoneySave* moneySave = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0)))
-	{
-		moneySave->AddMoney(money);
-	}
-	else Cast<UMoneySave>(UGameplayStatics::CreateSaveGameObject(StaticClass()))->SaveBalance(money);
-}
 
 ACubeCore::ACubeCore()
 {
@@ -60,7 +46,7 @@ ACubeCore::ACubeCore()
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 
 	// Create a socket info for each cube (also inherited to connectors)
@@ -341,6 +327,25 @@ void ACubeCore::Start()
 	buildPhase = false;
 }
 
+void ACubeCore::SaveMoney()
+{
+	if(!instance)
+	{
+		if(wrld) instance = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld));
+	}
+	
+	if(!instance)
+	{
+		Print("Couldn't cast to game instance... ~ core", 7)
+		return;
+	}
+	
+	if(money == instance->GetMoney()) return;
+
+	Print("Saving...", 5)
+	instance->SaveMoney(money);
+}
+
 void ACubeCore::CalculateRating()
 {
 	if(attempts <= moveRatings[3]) rating = 3;
@@ -430,6 +435,8 @@ void ACubeCore::SetAllAbilityActive(bool value) const
 
 float ACubeCore::GetMass() const
 {
+	if(!mesh->IsSimulatingPhysics()) return 0;
+	
 	float mass = mesh->GetMass();
 
 	const AActor* self = this;

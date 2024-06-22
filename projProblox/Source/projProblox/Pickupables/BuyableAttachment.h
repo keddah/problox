@@ -26,6 +26,8 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Call this in the construction script so that changes are updated whenever they need to be."))
 	void UseInfoMesh();
 
+	void SetHide(const bool hide);
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -62,4 +64,6 @@ public:
 	void ShowDescription() const { onShow.Broadcast(this); }
 	void HideDescription() const { onHide.Broadcast(this);}
 
+	UFUNCTION(BlueprintCallable)
+	bool IsUnlocked() const { return unlocked; }
 };
