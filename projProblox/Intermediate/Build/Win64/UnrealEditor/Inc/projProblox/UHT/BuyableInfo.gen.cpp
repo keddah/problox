@@ -87,28 +87,28 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name = { "name", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, name), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name_MetaData) };
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name = { "name", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, name), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description_MetaData[] = {
 		{ "Category", "BuyableInfoStruct" },
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description = { "description", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, description), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description_MetaData) };
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description = { "description", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, description), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData[] = {
 		{ "Category", "BuyableInfoStruct" },
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price = { "price", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, price), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price = { "price", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, price), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh_MetaData[] = {
 		{ "Category", "BuyableInfoStruct" },
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh = { "attachmentMesh", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, attachmentMesh), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh = { "attachmentMesh", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, attachmentMesh), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh_MetaData) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats_Inner = { "attachmentMats", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats_MetaData[] = {
@@ -116,21 +116,24 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats = { "attachmentMats", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, attachmentMats), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats_MetaData) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats = { "attachmentMats", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, attachmentMats), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_defaultScale_MetaData[] = {
 		{ "Category", "BuyableInfoStruct" },
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_defaultScale = { "defaultScale", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, defaultScale), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_defaultScale_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_defaultScale_MetaData) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_defaultScale = { "defaultScale", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, defaultScale), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_defaultScale_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_defaultScale_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_classToSpawn_MetaData[] = {
 		{ "Category", "BuyableInfoStruct" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n" },
+#endif
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_classToSpawn = { "classToSpawn", nullptr, (EPropertyFlags)0x0014000000020001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, classToSpawn), Z_Construct_UClass_UClass, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_classToSpawn_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_classToSpawn_MetaData) };
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_classToSpawn = { "classToSpawn", nullptr, (EPropertyFlags)0x0014000000020015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, classToSpawn), Z_Construct_UClass_UClass, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_classToSpawn_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_classToSpawn_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description,
@@ -321,12 +324,12 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo[] = {
-		{ FBuyableInfoStruct::StaticStruct, Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewStructOps, TEXT("BuyableInfoStruct"), &Z_Registration_Info_UScriptStruct_BuyableInfoStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBuyableInfoStruct), 1824884628U) },
+		{ FBuyableInfoStruct::StaticStruct, Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewStructOps, TEXT("BuyableInfoStruct"), &Z_Registration_Info_UScriptStruct_BuyableInfoStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBuyableInfoStruct), 975805931U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UBuyableInfo, UBuyableInfo::StaticClass, TEXT("UBuyableInfo"), &Z_Registration_Info_UClass_UBuyableInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuyableInfo), 2539175680U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_4188394679(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_3971957083(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo),
 		nullptr, 0);

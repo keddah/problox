@@ -56,6 +56,7 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnHideDisplay onHide;
 
+	UFUNCTION(BlueprintCallable)
 	FBuyableInfoStruct GetInfo() const { return info->GetInfo(); }
 
 	void ShowDescription() const { onShow.Broadcast(this); }

@@ -115,7 +115,13 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 
 	/////////////// Other ///////////////
-
+	UFUNCTION(BlueprintCallable)
+	void AddMoney(const int amount = 10) { money+= amount; PrintInt(money, 3) }
+	UFUNCTION(BlueprintCallable)
+	void LoadMoney();
+	UFUNCTION(BlueprintCallable)
+	void SaveMoney();
+	int money;
 	
 protected:
 	ACubeCore();

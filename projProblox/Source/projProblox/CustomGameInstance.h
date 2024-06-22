@@ -23,5 +23,7 @@ protected:
 public:
 	void SetCurrentLevel(const short index) { currentLevel = index; }
 	short GetCurrentLevel() const { return currentLevel; }
+
+	UFUNCTION(BlueprintCallable)
 	bool HasGameStarted() const { return gameStarted; }
 };

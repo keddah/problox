@@ -77,6 +77,23 @@ class PROJPROBLOX_API UMoneySave : public USaveGame
 
 public:
 	// Ensure to save after calling this...
-	void AddMoney(short amount) { money += amount; 	UGameplayStatics::SaveGameToSlot(this, moneySlot, 0); }
-	int GetBalance() const { return money; }
+	void AddMoney(short amount)
+	{
+		if(UMoneySave* previousSave = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0)))
+		{
+			money = previousSave->money + amount;
+			UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
+		}
+		else
+		{
+			money += amount;
+			previousSave = Cast<UMoneySave>(UGameplayStatics::CreateSaveGameObject(StaticClass()));
+			UGameplayStatics::SaveGameToSlot(previousSave, moneySlot, 0);
+		}
+		
+		PrintBalance();
+	}
+	int GetBalance() const { Print("got from core", 5) return money; }
+	void SaveBalance(const int balance) { money = balance; UGameplayStatics::SaveGameToSlot(this, moneySlot, 0); Print("Saving balance: " + FString::FromInt(money), 5); }
+	void PrintBalance(const float time = 3) const { Print("Current Balance: " + FString::FromInt(money), time) }
 }; 

@@ -61,6 +61,9 @@ PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegat
 	DECLARE_FUNCTION(execSetAllAbilityActive); \
 	DECLARE_FUNCTION(execObjectInSocket); \
 	DECLARE_FUNCTION(execDetachAll); \
+	DECLARE_FUNCTION(execSaveMoney); \
+	DECLARE_FUNCTION(execLoadMoney); \
+	DECLARE_FUNCTION(execAddMoney); \
 	DECLARE_FUNCTION(execStartStoryGame); \
 	DECLARE_FUNCTION(execStartGame); \
 	DECLARE_FUNCTION(execStart);

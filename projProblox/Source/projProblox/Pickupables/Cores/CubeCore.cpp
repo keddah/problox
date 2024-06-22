@@ -19,7 +19,22 @@
 #include "./projProblox/Pickupables/Wheel.h"
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/CustomGameInstance.h"
+#include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
+
+void ACubeCore::LoadMoney()
+{
+	if(UMoneySave* moneySave = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0))) money = moneySave->GetBalance();
+}
+
+void ACubeCore::SaveMoney()
+{
+	if(UMoneySave* moneySave = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0)))
+	{
+		moneySave->AddMoney(money);
+	}
+	else Cast<UMoneySave>(UGameplayStatics::CreateSaveGameObject(StaticClass()))->SaveBalance(money);
+}
 
 ACubeCore::ACubeCore()
 {
@@ -45,6 +60,7 @@ ACubeCore::ACubeCore()
 void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
+
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 
 	// Create a socket info for each cube (also inherited to connectors)
