@@ -46,18 +46,21 @@
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
-			"CellVariations.cpp.obj"
+			"CellVariations.cpp.obj",
+			"Collector.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
-			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
+			"LevelManager.cpp.obj",
+			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -78,10 +81,7 @@
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"LevelManager.cpp.obj",
-			"Balloon.cpp.obj",
-			"CubeCore.cpp.obj"
+			"ActionHistory.cpp.obj"
 		]
 	}
 }
