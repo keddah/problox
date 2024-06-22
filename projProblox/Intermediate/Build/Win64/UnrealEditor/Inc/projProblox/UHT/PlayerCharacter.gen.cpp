@@ -175,6 +175,22 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->SetGameMode(EGameMode(Z_Param_mode));
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APlayerCharacter::execAboveBelowSlot)
+	{
+		P_GET_UBOOL(Z_Param_above);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AboveBelowSlot(Z_Param_above);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APlayerCharacter::execNextPreviousSlot)
+	{
+		P_GET_UBOOL(Z_Param_next);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->NextPreviousSlot(Z_Param_next);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APlayerCharacter::execCreateDetachHistory)
 	{
 		P_GET_OBJECT(APickupableMaster,Z_Param_obj);
@@ -201,6 +217,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	{
 		UClass* Class = APlayerCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AboveBelowSlot", &APlayerCharacter::execAboveBelowSlot },
 			{ "BuildControls", &APlayerCharacter::execBuildControls },
 			{ "CreateDetachHistory", &APlayerCharacter::execCreateDetachHistory },
 			{ "Deselect", &APlayerCharacter::execDeselect },
@@ -211,6 +228,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "GroupSelect", &APlayerCharacter::execGroupSelect },
 			{ "ManualSelectObject", &APlayerCharacter::execManualSelectObject },
 			{ "MoveSelection", &APlayerCharacter::execMoveSelection },
+			{ "NextPreviousSlot", &APlayerCharacter::execNextPreviousSlot },
 			{ "Redo", &APlayerCharacter::execRedo },
 			{ "SelectObject", &APlayerCharacter::execSelectObject },
 			{ "SetGameMode", &APlayerCharacter::execSetGameMode },
@@ -218,6 +236,56 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "Undo", &APlayerCharacter::execUndo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics
+	{
+		struct PlayerCharacter_eventAboveBelowSlot_Parms
+		{
+			bool above;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_above_MetaData[];
+#endif
+		static void NewProp_above_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_above;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::NewProp_above_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	void Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::NewProp_above_SetBit(void* Obj)
+	{
+		((PlayerCharacter_eventAboveBelowSlot_Parms*)Obj)->above = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::NewProp_above = { "above", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayerCharacter_eventAboveBelowSlot_Parms), &Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::NewProp_above_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::NewProp_above_MetaData), Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::NewProp_above_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::NewProp_above,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The same as NextPreviousSlot() except it goes 2 spaces ahead instead of one." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "AboveBelowSlot", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::PlayerCharacter_eventAboveBelowSlot_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::PlayerCharacter_eventAboveBelowSlot_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_APlayerCharacter_BuildControls_Statics
 	{
@@ -584,6 +652,53 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics
+	{
+		struct PlayerCharacter_eventNextPreviousSlot_Parms
+		{
+			bool next;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_next_MetaData[];
+#endif
+		static void NewProp_next_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_next;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::NewProp_next_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	void Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::NewProp_next_SetBit(void* Obj)
+	{
+		((PlayerCharacter_eventNextPreviousSlot_Parms*)Obj)->next = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::NewProp_next = { "next", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayerCharacter_eventNextPreviousSlot_Parms), &Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::NewProp_next_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::NewProp_next_MetaData), Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::NewProp_next_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::NewProp_next,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "NextPreviousSlot", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::PlayerCharacter_eventNextPreviousSlot_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::PlayerCharacter_eventNextPreviousSlot_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_APlayerCharacter_Redo_Statics
 	{
 #if WITH_METADATA
@@ -842,6 +957,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_APlayerCharacter_AboveBelowSlot, "AboveBelowSlot" }, // 1245471134
 		{ &Z_Construct_UFunction_APlayerCharacter_BuildControls, "BuildControls" }, // 241909419
 		{ &Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory, "CreateDetachHistory" }, // 2649000216
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 959344020
@@ -852,6 +968,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_GroupSelect, "GroupSelect" }, // 2137927514
 		{ &Z_Construct_UFunction_APlayerCharacter_ManualSelectObject, "ManualSelectObject" }, // 163528957
 		{ &Z_Construct_UFunction_APlayerCharacter_MoveSelection, "MoveSelection" }, // 767853428
+		{ &Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot, "NextPreviousSlot" }, // 2140460848
 		{ &Z_Construct_UFunction_APlayerCharacter_Redo, "Redo" }, // 2675371083
 		{ &Z_Construct_UFunction_APlayerCharacter_SelectObject, "SelectObject" }, // 1727888823
 		{ &Z_Construct_UFunction_APlayerCharacter_SetGameMode, "SetGameMode" }, // 2129562915
@@ -1077,9 +1194,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1877747702U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2366777998U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 3870113015U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_1410358101(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3248198088(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

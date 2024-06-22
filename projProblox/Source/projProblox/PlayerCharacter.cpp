@@ -218,6 +218,81 @@ void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)
 	Print("No parent / core found when detaching all", 5)
 }
 
+FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
+{
+	if(!obj)
+	{
+		Print("no selected object... couldnt find favoured socket", 4)
+		return NAME_None;
+	}
+	
+	if(!core)
+	{
+		Print("Core invalid.... couldn't find slot.", 5)
+		return NAME_None;
+	}
+
+	FName suggestion = "FRONT";
+	
+	switch (obj->GetFavouredSocket())
+	{
+		case ECoreSockets::Front:
+			suggestion = "FRONT";
+		case ECoreSockets::Back:
+			suggestion = "BACK";
+		case ECoreSockets::Right:
+			suggestion = "RIGHT";
+		case ECoreSockets::Left:
+			suggestion = "LEFT";
+		case ECoreSockets::Up:
+			suggestion = "UP";
+		case ECoreSockets::Down:
+			suggestion = "DOWN";
+	}
+
+	// If the socket isn't occupied, return it
+	if(!core->ObjectInSocket(suggestion)) return suggestion;
+
+	// Otherwise return nothing
+	return NAME_None;
+}
+
+void APlayerCharacter::NextPreviousSlot(const bool next)
+{
+	if(currentMode != EGameMode::Build) return;
+	if(!core) return;
+
+	const TArray<FName> freeSockets = core->GetFreeSlots();
+	const int index = freeSockets.IndexOfByKey(selectedSocket) + next? 1 : -1;
+
+	if(freeSockets.IsValidIndex(index)) selectedSocket = freeSockets[index];
+
+	// If going forwards... go to the last element if the index is bad
+	else if(next) selectedSocket = freeSockets.Last();
+
+	// Otherwise go to the first
+	else if(!freeSockets.IsEmpty()) selectedSocket = freeSockets[0];
+	else Print("All sockets full...", 5)
+}
+
+void APlayerCharacter::AboveBelowSlot(const bool above)
+{
+	if(currentMode != EGameMode::Build) return;
+	if(!core) return;
+
+	const TArray<FName> freeSockets = core->GetFreeSlots();
+	const int index = freeSockets.IndexOfByKey(selectedSocket) + above? 2 : -2;
+
+	if(freeSockets.IsValidIndex(index)) selectedSocket = freeSockets[index];
+
+	// If going forwards... go to the last element if the index is bad
+	else if(above) selectedSocket = freeSockets.Last();
+
+	// Otherwise go to the first
+	else if(!freeSockets.IsEmpty()) selectedSocket = freeSockets[0];
+	else Print("All sockets full...", 5)
+}
+
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
 {
 	if(!IsValid(obj)) return;
@@ -300,6 +375,26 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 	{
 		exclusions.Append(obj->GetAttachedActorObjects());
 	}
+}
+
+void APlayerCharacter::OtherSelectObject(APickupableMaster* obj)
+{
+	// When the hold button is let go
+	if(!holding)
+	{
+		Deselect();
+		return;
+	}
+	
+	// Can't select anything whilst not in the build phase...
+	if(currentMode != EGameMode::Build) return;
+
+	// Don't do anything if the selected object is already valid
+	if(IsValid(selectedObj)) return;
+
+	selectedSocket = FindSuggestedSlot(obj);
+	if(selectedSocket == NAME_None) selectedSocket = core->GetFreeSlots()[0];
+	selectedObj->PlacementAgain(core, selectedSocket);
 }
 
 void APlayerCharacter::GroupSelect(const FHitResult& hit)
@@ -536,7 +631,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 
 		holding = true;
 		selectedObj = pickupable;
-		exclusions.Add(selectedObj);
+		OtherSelectObject(selectedObj);
 
 		selectedTransform = selectedObj->GetActorTransform();
 		selectedObj->SetSelected(true);

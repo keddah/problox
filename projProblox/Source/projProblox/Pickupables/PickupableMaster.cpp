@@ -311,6 +311,23 @@ EOperations APickupableMaster::SetGroupSelected(const bool value)
 	return EOperations::Move;
 }
 
+void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
+{
+	if(!core)
+	{
+		Print("The given core was invalid... ~ OtherPlacement.", 7)
+		ResetGhost();
+		return;
+	}
+
+	parentCore = core;
+	if(socket != NAME_None)
+	{
+		attachedSocket = socket;
+	}
+	GhostPlacement();
+}
+
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	attachedSocket = socket;

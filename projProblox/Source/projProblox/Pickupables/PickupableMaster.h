@@ -30,6 +30,17 @@
 
 class ACubeCore;
 
+UENUM(BlueprintType)
+enum class ECoreSockets : uint8
+{	// Same order as socket info...
+	Front,
+	Back,
+	Right,
+	Left,
+	Up,
+	Down
+};
+
 UCLASS()
 class PROJPROBLOX_API APickupableMaster : public AActor
 {
@@ -80,6 +91,9 @@ protected:
 	// When group selected, you're unable to place cores...
 	bool canPlace;
 
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The slot that will automatically be selected (if availble) when an object is first selected."))
+	ECoreSockets favouredSlot = ECoreSockets::Front;
+	
 	// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.
 	UPROPERTY(BlueprintReadWrite)
 	bool canPickup = true;
@@ -245,6 +259,8 @@ public:
 	void ManualSetSelected(const bool value) { selected = value; };
 	virtual EOperations SetGroupSelected(const bool value);
 
+	virtual void PlacementAgain(ACubeCore* core, const FName& socket);
+	
 	virtual void Detach(bool push = false);
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
@@ -332,6 +348,8 @@ public:
 		
 		return mesh->GetMass();
 	}
+
+	ECoreSockets GetFavouredSocket() const { return favouredSlot; }
 
 	// Returns whether or not the player is able to pick this up.
 	bool GetCanPickup() const { return canPickup; }

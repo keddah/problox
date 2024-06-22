@@ -50,6 +50,14 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void CreateDetachHistory(APickupableMaster* obj);
 
+	FName FindSuggestedSlot(APickupableMaster* obj) const;
+	FName selectedSocket = "FRONT";
+	
+	UFUNCTION(BlueprintCallable)
+	void NextPreviousSlot(const bool next);
+
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same as NextPreviousSlot() except it goes 2 spaces ahead instead of one."))
+	void AboveBelowSlot(const bool above);
 	
 protected:
 	// Called when the game starts or when spawned
@@ -122,6 +130,8 @@ private:
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void SelectObject(const FHitResult& hit);
+
+	void OtherSelectObject(APickupableMaster* obj);
 
 	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void GroupSelect(const FHitResult& hit);
