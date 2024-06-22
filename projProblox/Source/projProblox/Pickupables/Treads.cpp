@@ -23,7 +23,7 @@ ATreads::ATreads()
 	mesh->SetAngularDamping(1);
 	
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
-	snapRot = false;
+	snapRot = true;
 	rotOffset = {90,0,180};
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
 
