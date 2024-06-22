@@ -160,7 +160,11 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\levelstreamingdynamic.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\levelstreamingdynamic.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\cellspawner.generated.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\modes.generated.h"
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\modes.generated.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\balloon.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\cablecomponent\\source\\cablecomponent\\classes\\cablecomponent.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\cablecomponent\\intermediate\\build\\win64\\unrealeditor\\inc\\cablecomponent\\uht\\cablecomponent.generated.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\balloon.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -20,6 +20,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
+#include "projProblox/Pickupables/Balloon.h"
 
 
 ACubeCore::ACubeCore()
@@ -507,6 +508,16 @@ int ACubeCore::SelectSocket(int socket)
 	
 	selectedObj->ActivateOutline(selectedMat);
 	return socket;
+}
+
+void ACubeCore::Teleport(const FVector& pos)
+{
+	for (auto& obj : GetCloseAttachments())
+	{
+		if(obj->IsA<ABalloon>()) obj->SetActorLocation(pos + obj->GetActorForwardVector() * 150);
+	}
+
+	SetActorLocation(pos);
 }
 
 

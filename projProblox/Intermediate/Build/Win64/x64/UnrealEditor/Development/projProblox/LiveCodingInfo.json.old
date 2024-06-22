@@ -53,14 +53,12 @@
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
-			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -74,6 +72,7 @@
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
+			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
@@ -81,7 +80,8 @@
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"Treads.cpp.obj"
+			"Balloon.cpp.obj",
+			"CubeCore.cpp.obj"
 		]
 	}
 }

@@ -132,7 +132,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 			spawnPos = lvl0Spawn->GetActorLocation();
 			player->SetActorRotation(lvl0Spawn->GetRot().GetInverse());
 			player->SetActorLocation(spawnPos + spawnOffset);
-			core->SetActorLocation(spawnPos);
+			core->Teleport(spawnPos);
 			break;
 
 		case 1:
@@ -142,7 +142,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 				spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
 				player->SetActorRotation(lvl1Spawns[spawnPoint]->GetRot());
 				player->SetActorLocation(spawnPos + spawnOffset);
-				core->SetActorLocation(spawnPos);
+				core->Teleport(spawnPos);
 			}
 			break;
 
@@ -153,7 +153,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 				spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
 				player->SetActorRotation(lvl2Spawns[spawnPoint]->GetRot());
 				player->SetActorLocation(spawnPos + spawnOffset);
-				core->SetActorLocation(spawnPos);
+				core->Teleport(spawnPos);
 			}
 			break;
 
@@ -164,7 +164,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 				spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
 				player->SetActorRotation(lvl3Spawns[spawnPoint]->GetRot());
 				player->SetActorLocation(spawnPos + spawnOffset);
-				core->SetActorLocation(spawnPos);
+				core->Teleport(spawnPos);
 			}
 			break;
 	}
