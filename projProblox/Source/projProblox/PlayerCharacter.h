@@ -4,8 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "CustomGameInstance.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Pickupables/BuyableAttachment.h"
 #include "UndoRedo/ActionHistory.h"
 #include "Pickupables/PickupableMaster.h"
@@ -50,21 +52,34 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void CreateDetachHistory(APickupableMaster* obj);
 
+	
+	/////////////// Building ///////////////
+	void WrapMouse();
+		
+	UFUNCTION(BlueprintCallable)
+	void OrbitControls(float deltaTime);
+
+	UFUNCTION(BlueprintCallable)
+	void Zoom();
+	
 	FName FindSuggestedSlot(APickupableMaster* obj) const;
 	FName selectedSocket = "FRONT";
 	short currentSlot = 0;
 	
 	UFUNCTION(BlueprintCallable)
 	void NextPreviousSlot(const bool next);
+	
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same as NextPreviousSlot() except it goes 2 spaces ahead instead of one."))
 	void AboveBelowSlot(const bool above);
+
 	void GoToSlot() const;
+
 	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
-
+	
 	
 	/////////////// Selection / Placement ///////////////
 	UPROPERTY(BlueprintReadOnly, Category = "Picking up")
@@ -79,6 +94,32 @@ protected:
 	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	TArray<AActor*> exclusions;
 
+	
+	/////////////// Camera ///////////////
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FVector2f sensitivity {1.8f, 1.2f};
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (Delta = .1f))
+	float orbitSpeed = 100;
+	
+	UPROPERTY(EditDefaultsOnly, meta = (Delta = .1f))
+	float zoomSpeed = 100;
+	
+	UPROPERTY(EditDefaultsOnly)
+	USpringArmComponent* camBoom;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UCameraComponent* playerCam;
+	
+	UPROPERTY(BlueprintReadWrite)
+	FVector2f mouseValues;
+	
+	UPROPERTY(BlueprintReadWrite)
+	bool orbiting;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool zooming;
+	
 	
 	/////////////// Other ///////////////
 	UPROPERTY(BlueprintReadOnly)
@@ -140,14 +181,14 @@ private:
 	UFUNCTION(BlueprintCallable, Category = "Picking up")
 	void MoveSelection(const FVector& mousePos);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void Deselect();
 
 	UFUNCTION(BlueprintCallable)
 	void Detach(const FHitResult& hit);
 
 	UFUNCTION(BlueprintCallable)
-	void BuildControls(const FHitResult& hit);
+	void BuildControls(const FHitResult& hit, const float deltaTime);
 
 	UFUNCTION(BlueprintCallable)
 	void SpawnFromBuyable(const FHitResult& hit);

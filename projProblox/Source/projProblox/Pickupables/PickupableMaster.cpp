@@ -111,8 +111,6 @@ void APickupableMaster::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	Print(silhouette->bHiddenInGame? "hiddem" : "Sjpw", 4)
-	
 	Placement();
 	Ability(DeltaTime);
 }

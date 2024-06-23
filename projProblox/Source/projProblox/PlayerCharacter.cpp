@@ -3,6 +3,7 @@
 
 #include "PlayerCharacter.h"
 
+#include "Components/CapsuleComponent.h"
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -12,6 +13,12 @@ APlayerCharacter::APlayerCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	camBoom = CreateDefaultSubobject<USpringArmComponent>("Camera Boom");
+	camBoom->SetupAttachment(GetCapsuleComponent());
+	camBoom->TargetArmLength = -1000;
+	
+	playerCam = CreateDefaultSubobject<UCameraComponent>("Camera");
+	playerCam->SetupAttachment(camBoom);
 }
 
 // Called when the game starts or when spawned
@@ -33,11 +40,7 @@ void APlayerCharacter::BeginPlay()
 
 		core = Cast<ACubeCore>(coreObj);
 	}
-	if(!IsValid(core))
-	{
-		Print("Core Invalid... ~ player", 5);
-		return;
-	}
+	if(!IsValid(core)) Print("Core Invalid... ~ player", 5);
 	
 	// core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
 
@@ -218,6 +221,39 @@ void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)
 	Print("No parent / core found when detaching all", 5)
 }
 
+void APlayerCharacter::WrapMouse()
+{
+	FVector2D screenSize;
+	GEngine->GameViewport->GetViewportSize(screenSize);
+
+	bool bWrap = false;
+	FVector2D NewMousePosition = FVector2D(mouseValues.X, mouseValues.Y);
+
+	if (mouseValues.X <= 0)
+	{
+		NewMousePosition.X = screenSize.X - 1;
+		bWrap = true;
+	}
+	else if (mouseValues.X >= screenSize.X - 1)
+	{
+		NewMousePosition.X = 1;
+		bWrap = true;
+	}
+
+	if (mouseValues.Y <= 0)
+	{
+		NewMousePosition.Y = screenSize.Y - 1;
+		bWrap = true;
+	}
+	else if (mouseValues.Y >= screenSize.Y - 1)
+	{
+		NewMousePosition.Y = 1;
+		bWrap = true;
+	}
+
+	if (bWrap) mouseValues = FVector2f(NewMousePosition.X, NewMousePosition.Y);
+}
+
 FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
 {
 	if(!obj)
@@ -255,6 +291,55 @@ FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
 
 	// Otherwise return nothing
 	return NAME_None;
+}
+
+void APlayerCharacter::OrbitControls(const float deltaTime)
+{
+	Zoom();
+	
+	if (!core) return;
+	
+	const FVector corePos = core->GetActorLocation();
+	const FVector currentPos = GetActorLocation();
+
+	if (!orbiting) return;
+
+	FVector direction = currentPos - corePos;
+	const float radius = direction.Size();
+	direction = direction.GetSafeNormal();
+
+	// Horizontal and vertical angles in radians
+	float horiAngle = FMath::DegreesToRadians(orbitSpeed * deltaTime * mouseValues.X);
+	float vertAngle = FMath::DegreesToRadians(orbitSpeed * deltaTime * mouseValues.Y);
+
+	// Horizontal rotation
+	FQuat horiQuatRot = FQuat(FVector::UpVector, horiAngle);
+	direction = horiQuatRot.RotateVector(direction);
+
+	// Vertical rotation
+	FVector rightVec = FVector::CrossProduct(direction, FVector::UpVector).GetSafeNormal();
+	FQuat vertQuatRot = FQuat(rightVec, vertAngle);
+	direction = vertQuatRot.RotateVector(direction);
+
+	FVector newPos = corePos + direction * radius;
+	SetActorLocation(newPos);
+
+	// Manually calculate and set the rotation
+	FRotator LookAtRotation = FRotationMatrix::MakeFromX(corePos - newPos).Rotator();
+	SetActorRotation(LookAtRotation);
+
+	// Adjust the spring arm's rotation to look at the core
+	FRotator SpringArmRotation = UKismetMathLibrary::FindLookAtRotation(newPos, corePos);
+	camBoom->SetWorldRotation(SpringArmRotation);
+}
+
+void APlayerCharacter::Zoom()
+{
+	if (!core) return;
+	if (!zooming) return;
+
+	const float armLength = camBoom->TargetArmLength;
+	camBoom->TargetArmLength = (mouseValues.Y * zoomSpeed) + armLength;
 }
 
 void APlayerCharacter::NextPreviousSlot(const bool next)
@@ -578,10 +663,12 @@ void APlayerCharacter::Deselect()
 }
 
 
-void APlayerCharacter::BuildControls(const FHitResult& hit)
+void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTime)
 {
 	if(currentMode != EGameMode::Build) return;
 
+	OrbitControls(deltaTime);
+	
 	// Only continue if the hit object is a mesh or a box collider...
 	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
 	AActor* hitActor = hit.GetActor();
