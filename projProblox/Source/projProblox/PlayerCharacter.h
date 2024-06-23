@@ -109,7 +109,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Camera")
 	USpringArmComponent* camBoom;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Camera")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* playerCam;
 	
 	UPROPERTY(BlueprintReadWrite)

@@ -24,6 +24,8 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
+	virtual void SetEnableMesh(const bool enable) const override;
+	virtual void Detach(bool push = false) override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UStaticMeshComponent* flatHead;
@@ -42,9 +44,11 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "How far the flatHead should extend from the piston shaft."))
 	float pushExtent = 100;
 
-	static bool Approximately(const float a, const float b, const float tolerance)
+	static bool Approximately(const float a, const float b, const float tolerance) { return fabs(a - b) < tolerance; }
+	void ReEnablePhysics() const
 	{
-		return fabs(a - b) < tolerance;
+		mesh->SetSimulatePhysics(true);
+		flatHead->SetSimulatePhysics(true);
 	}
 	
 protected:
@@ -53,5 +57,7 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Ability", meta = (ToolTip = "Whether or not the piston head is currently pushing"))
 	bool moving;
+
+public:
 
 };

@@ -232,12 +232,6 @@ protected:
 	
 	/////////////// Other ///////////////
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
-	void SetEnableMesh(const bool enable) const
-	{
-		mesh->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
-		mesh->SetHiddenInGame(!enable);
-		mesh->SetSimulatePhysics(enable);
-	}
 		
 	
 public:	
@@ -370,7 +364,13 @@ public:
 	
 	/////////////// Other ///////////////
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
-
+	
+	virtual void SetEnableMesh(const bool enable) const
+	{
+		mesh->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
+		mesh->SetHiddenInGame(!enable);
+	}
+	
 	// Enable/Disable gravity when selected/deselected
 	virtual void ToggleGravity() const
 	{

@@ -21,6 +21,7 @@
 #include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
 #include "projProblox/Pickupables/Balloon.h"
+#include "projProblox/Pickupables/Piston.h"
 
 
 ACubeCore::ACubeCore()
@@ -520,8 +521,10 @@ int ACubeCore::SelectSocket(int socket)
 
 void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 {
+	SetEnableMesh(true);
 	for (auto& obj : GetCloseAttachments())
 	{
+		obj->SetEnableMesh(true);
 		if(obj->IsA<ABalloon>()) obj->SetActorLocation(pos + obj->GetActorForwardVector() * 150);
 	}
 

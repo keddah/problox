@@ -25,6 +25,7 @@ void APiston::Ability(const float deltaTime)
 	Super::Ability(deltaTime);
 
 	if(!parentCore) return;
+	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 
 	const FVector targetPos = active? FVector::UpVector * pushExtent : FVector::ZeroVector;
 	const FVector relativePos = flatHead->GetRelativeLocation();
@@ -44,7 +45,6 @@ void APiston::Ability(const float deltaTime)
 	moving = !Approximately(relativePos.Length(), targetPos.Length(), 2);
 
 	wrld->LineTraceSingleByChannel(hit, start, end, ECC_Visibility, collisionParams);
-	flatHead->SetCollisionResponseToAllChannels(moving? ECR_Ignore : ECR_Block);
 	
 	if(!hit.bBlockingHit) return;
 
@@ -78,4 +78,56 @@ void APiston::SetAbilityActive(const bool value)
 
 	// So that you can't push yourself by activating whilst the piston is fully extended..
 	canPush = flatHead->GetRelativeLocation().Length() < 20;
+}
+
+void APiston::SetEnableMesh(const bool enable) const
+{
+	mesh->SetHiddenInGame(!enable);
+	flatHead->SetHiddenInGame(!enable);
+}
+
+void APiston::Detach(bool push)
+{
+	ResetGhost();
+	
+	if(!parentCore && !previousObj)
+	{
+		Print("Couldn't detach... parent was invalid..", 4)
+		return;
+	}
+
+	SetAbilityActive(false);
+
+	ResetMaterial();
+	RemoveVelocity();
+	
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	if(push && parentCore)
+	{
+		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
+		const float launchForce = GetMass();
+		constexpr float maxVelocity = 1000;
+
+		SetEnableMesh(true);
+		ReEnablePhysics(); // The only change
+		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
+	}
+	
+	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	else previousObj->RemoveAttachment(attachedSocket);
+	
+	silhouette->SetupAttachment(mesh);
+	
+	if(parentCore)
+	{
+		previousObj = parentCore;
+		parentCore = nullptr;
+		
+		// Only play the detach sound if there was a parent core
+		if(soundPlayer) soundPlayer->PlayDetach();
+		else Print("Sfx manager is invalid.....", 5)
+	}
+
+	ToggleGravity(true);
+	isAttached = false;
 }

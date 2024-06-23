@@ -97,7 +97,6 @@ EOperations ABalloon::SetSelected(const bool value)
 
 	if(!previousObj) previousObj = parentCore;
 	
-	Attach();
 	SetEnableMesh(true);
 	UseSilhouetteTransform();
 	ResetGhost();
