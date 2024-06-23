@@ -54,11 +54,9 @@ private:
 
 	
 	/////////////// Building ///////////////
-	void WrapMouse();
-		
 	UFUNCTION(BlueprintCallable)
 	void OrbitControls(float deltaTime);
-
+	
 	UFUNCTION(BlueprintCallable)
 	void Zoom();
 	
@@ -96,28 +94,31 @@ protected:
 
 	
 	/////////////// Camera ///////////////
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Camera", BlueprintReadOnly)
 	FVector2f sensitivity {1.8f, 1.2f};
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (Delta = .1f))
+	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = .1f))
 	float orbitSpeed = 100;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = 1))
+	float maxOrbitDistance = 2750;
 	
-	UPROPERTY(EditDefaultsOnly, meta = (Delta = .1f))
-	float zoomSpeed = 100;
+	UPROPERTY(EditDefaultsOnly, Category = "Orbit",  BlueprintReadOnly, meta = (Delta = 1))
+	float minOrbitDistance = 15;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Camera")
 	USpringArmComponent* camBoom;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Camera")
 	UCameraComponent* playerCam;
 	
 	UPROPERTY(BlueprintReadWrite)
 	FVector2f mouseValues;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Orbit")
 	bool orbiting;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = "Orbit")
 	bool zooming;
 	
 	
@@ -183,6 +184,9 @@ private:
 
 	UFUNCTION(BlueprintCallable)
 	void Deselect();
+
+	UFUNCTION(BlueprintCallable)
+	void Confirm();
 
 	UFUNCTION(BlueprintCallable)
 	void Detach(const FHitResult& hit);

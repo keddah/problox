@@ -46,6 +46,12 @@ void APlayerCharacter::BeginPlay()
 
 	history = NewObject<UActionHistory>();
 	buildPhase = true;
+
+	zooming = true;
+	Zoom();
+	zooming = false;
+	
+	// InitOrbit();
 }
 
 void APlayerCharacter::Tick(float DeltaSeconds)
@@ -221,38 +227,38 @@ void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)
 	Print("No parent / core found when detaching all", 5)
 }
 
-void APlayerCharacter::WrapMouse()
-{
-	FVector2D screenSize;
-	GEngine->GameViewport->GetViewportSize(screenSize);
-
-	bool bWrap = false;
-	FVector2D NewMousePosition = FVector2D(mouseValues.X, mouseValues.Y);
-
-	if (mouseValues.X <= 0)
-	{
-		NewMousePosition.X = screenSize.X - 1;
-		bWrap = true;
-	}
-	else if (mouseValues.X >= screenSize.X - 1)
-	{
-		NewMousePosition.X = 1;
-		bWrap = true;
-	}
-
-	if (mouseValues.Y <= 0)
-	{
-		NewMousePosition.Y = screenSize.Y - 1;
-		bWrap = true;
-	}
-	else if (mouseValues.Y >= screenSize.Y - 1)
-	{
-		NewMousePosition.Y = 1;
-		bWrap = true;
-	}
-
-	if (bWrap) mouseValues = FVector2f(NewMousePosition.X, NewMousePosition.Y);
-}
+// void APlayerCharacter::WrapMouse()
+// {
+// 	FVector2D screenSize;
+// 	GEngine->GameViewport->GetViewportSize(screenSize);
+//
+// 	bool bWrap = false;
+// 	FVector2D NewMousePosition = FVector2D(mouseValues.X, mouseValues.Y);
+//
+// 	if (mouseValues.X <= 0)
+// 	{
+// 		NewMousePosition.X = screenSize.X - 1;
+// 		bWrap = true;
+// 	}
+// 	else if (mouseValues.X >= screenSize.X - 1)
+// 	{
+// 		NewMousePosition.X = 1;
+// 		bWrap = true;
+// 	}
+//
+// 	if (mouseValues.Y <= 0)
+// 	{
+// 		NewMousePosition.Y = screenSize.Y - 1;
+// 		bWrap = true;
+// 	}
+// 	else if (mouseValues.Y >= screenSize.Y - 1)
+// 	{
+// 		NewMousePosition.Y = 1;
+// 		bWrap = true;
+// 	}
+//
+// 	if (bWrap) mouseValues = FVector2f(NewMousePosition.X, NewMousePosition.Y);
+// }
 
 FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
 {
@@ -333,7 +339,7 @@ void APlayerCharacter::Zoom()
 	if (!zooming) return;
 
 	const float armLength = camBoom->TargetArmLength;
-	camBoom->TargetArmLength = (mouseValues.Y * zoomSpeed) + armLength;
+	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
 
 void APlayerCharacter::NextPreviousSlot(const bool next)
@@ -481,7 +487,6 @@ void APlayerCharacter::SelectObject(const FHitResult& hit)
 
 void APlayerCharacter::OtherSelectObject(APickupableMaster* obj)
 {
-	Print("Other select1", 5)
 	// When the hold button is let go
 	if(!holding)
 	{
@@ -491,7 +496,6 @@ void APlayerCharacter::OtherSelectObject(APickupableMaster* obj)
 	
 	// Can't select anything whilst not in the build phase...
 	if(currentMode != EGameMode::Build) return;
-	Print("Other select2", 5)
 
 	selectedSocket = FindSuggestedSlot(obj);
 	if(selectedSocket == NAME_None) selectedSocket = core->GetFreeSlots()[0];
@@ -656,6 +660,19 @@ void APlayerCharacter::Deselect()
 	selectedObj = nullptr;
 }
 
+void APlayerCharacter::Confirm()
+{
+	if(!selectedObj)
+	{
+		Print("Couldnt confirm because there was no selected object...", 6)
+		return;
+	}
+
+	selectedObj->SetCore(core);
+	selectedObj->SetSelected(false);
+	Deselect();
+}
+
 
 void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTime)
 {
@@ -709,6 +726,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 				return;
 			}
 
+			if(selectedObj) selectedObj->Deselect();
 			instance->LoseMoney(buyInfo.price);
 			Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
 			buyable->UnlockAttachment();
@@ -733,13 +751,12 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		}
 
 		holding = true;
+		if(selectedObj) selectedObj->Deselect();
 		selectedObj = pickupable;
 		OtherSelectObject(selectedObj);
 
 		selectedTransform = selectedObj->GetActorTransform();
-		// selectedObj->SetSelected(true);
-
-		// Turn the player around...
-		AddControllerYawInput(360);
 	}
+
+	else if(selectedObj) selectedObj->Deselect();
 }

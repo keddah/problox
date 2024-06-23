@@ -217,7 +217,6 @@ void APickupableMaster::GhostPlacement()
 	silhouette->SetRelativeLocation({attachOffset,0,0});
 	
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	Print("Ghoseing", 4)
 	
 	if(snapRot)
 	{
@@ -292,6 +291,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	if(attachedSocket == NAME_None) return wasDetached? EOperations::Detach : EOperations::Move;
 
 	if(!previousObj) previousObj = parentCore;
+	SetEnableMesh(true);
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	parentCore->AddAttachment(this, attachedSocket);
@@ -304,6 +304,12 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	if(soundPlayer) soundPlayer->PlayAttach();
 	else Print("Sfx manager is invalid....", 5)
 	return EOperations::Attach;
+}
+
+void APickupableMaster::Deselect()
+{
+	// ...
+	Destroy();
 }
 
 EOperations APickupableMaster::SetGroupSelected(const bool value)
@@ -330,6 +336,7 @@ void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
 	{
 		attachedSocket = socket;
 	}
+	SetEnableMesh(false);
 	GhostPlacement();
 }
 
@@ -551,6 +558,46 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
 }
 
+void APickupableMaster::GhostRotateVert(float axis, const float rotSpeed)
+{
+	if(vertAxis.X != 0) silhouette->AddWorldRotation({0,0, axis * rotSpeed});
+	else if(vertAxis.Y != 0) silhouette->AddWorldRotation({axis * rotSpeed, 0, 0});
+	else if(vertAxis.Z != 0) silhouette->AddWorldRotation({0, axis * rotSpeed, 0});
+}
+
+void APickupableMaster::GhostRotateHori(float axis, const float rotSpeed)
+{
+	if(horiAxis.X != 0) silhouette->AddWorldRotation({0,0, axis * rotSpeed});
+	else if(horiAxis.Y != 0) silhouette->AddWorldRotation({axis * rotSpeed, 0, 0});
+	else if(horiAxis.Z != 0) silhouette->AddWorldRotation({0, axis * rotSpeed, 0});
+	appliedYaw += axis * rotSpeed;
+	
+	// Wrap appliedYaw to -180 / 180
+	if (appliedYaw > 180) appliedYaw -= 360;
+	else if (appliedYaw < -180) appliedYaw += 360;
+}
+
+void APickupableMaster::GhostSnapRotateMesh(bool hori, FString keypress)
+{
+	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
+		
+	if(hori)
+	{
+		if(horiAxis.X != 0) silhouette->AddWorldRotation({0,0, turn});
+		else if(horiAxis.Y != 0) silhouette->AddWorldRotation({turn, 0, 0});
+		else if(horiAxis.Z != 0) silhouette->AddWorldRotation({0, turn, 0});
+		appliedYaw += turn;
+		
+		// Wrap appliedYaw to -180 / 180
+		if (appliedYaw > 180) appliedYaw -= 360;
+		else if (appliedYaw < -180) appliedYaw += 360;
+		return;
+	}
+
+	if(vertAxis.X != 0) silhouette->AddWorldRotation({0,0, turn});
+	else if(vertAxis.Y != 0) silhouette->AddWorldRotation({turn, 0, 0});
+	else if(vertAxis.Z != 0) silhouette->AddWorldRotation({0, turn, 0});
+}
 
 
 FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hitPos) const

@@ -124,6 +124,7 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "When not snapRotating, lock any of the axis. Set the axis to lock to a value other than 0."))
 	FVector lockAxis;
+
 	
 	/////////////// Attachments ///////////////
 	UPROPERTY(BlueprintReadOnly)
@@ -231,7 +232,13 @@ protected:
 	
 	/////////////// Other ///////////////
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
-
+	void SetEnableMesh(const bool enable) const
+	{
+		mesh->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
+		mesh->SetHiddenInGame(!enable);
+		mesh->SetSimulatePhysics(enable);
+	}
+		
 	
 public:	
 	// Called every frame
@@ -247,6 +254,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
 	virtual void SnapRotateMesh(bool hori, FString keypress);
 
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void GhostRotateVert(float axis, const float rotSpeed);
+
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void GhostRotateHori(float axis, const float rotSpeed);
+	
+	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
+	virtual void GhostSnapRotateMesh(bool hori, FString keypress);
+
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
 
@@ -256,6 +272,9 @@ public:
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
 	virtual EOperations SetSelected(const bool value);
+	
+	void Deselect();
+
 	void ManualSetSelected(const bool value) { selected = value; };
 	virtual EOperations SetGroupSelected(const bool value);
 

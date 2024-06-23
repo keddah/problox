@@ -510,7 +510,7 @@ int ACubeCore::SelectSocket(int socket)
 	return socket;
 }
 
-void ACubeCore::Teleport(const FVector& pos)
+void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 {
 	for (auto& obj : GetCloseAttachments())
 	{
@@ -518,6 +518,7 @@ void ACubeCore::Teleport(const FVector& pos)
 	}
 
 	SetActorLocation(pos);
+	SetActorRotation(rot);
 }
 
 

@@ -34,6 +34,9 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execSetCanPickup); \
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execResetRotation); \
+	DECLARE_FUNCTION(execGhostSnapRotateMesh); \
+	DECLARE_FUNCTION(execGhostRotateHori); \
+	DECLARE_FUNCTION(execGhostRotateVert); \
 	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateHori); \
 	DECLARE_FUNCTION(execRotateVert); \

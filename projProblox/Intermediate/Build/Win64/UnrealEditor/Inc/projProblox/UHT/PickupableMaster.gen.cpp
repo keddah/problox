@@ -171,6 +171,33 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		P_THIS->ResetRotation(Z_Param_resetVelocity);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APickupableMaster::execGhostSnapRotateMesh)
+	{
+		P_GET_UBOOL(Z_Param_hori);
+		P_GET_PROPERTY(FStrProperty,Z_Param_keypress);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GhostSnapRotateMesh(Z_Param_hori,Z_Param_keypress);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APickupableMaster::execGhostRotateHori)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_axis);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_rotSpeed);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GhostRotateHori(Z_Param_axis,Z_Param_rotSpeed);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APickupableMaster::execGhostRotateVert)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_axis);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_rotSpeed);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GhostRotateVert(Z_Param_axis,Z_Param_rotSpeed);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APickupableMaster::execSnapRotateMesh)
 	{
 		P_GET_UBOOL(Z_Param_hori);
@@ -230,6 +257,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 			{ "GetMass", &APickupableMaster::execGetMass },
 			{ "GetMesh", &APickupableMaster::execGetMesh },
 			{ "GetUIDisplayName", &APickupableMaster::execGetUIDisplayName },
+			{ "GhostRotateHori", &APickupableMaster::execGhostRotateHori },
+			{ "GhostRotateVert", &APickupableMaster::execGhostRotateVert },
+			{ "GhostSnapRotateMesh", &APickupableMaster::execGhostSnapRotateMesh },
 			{ "IsTimerRequired", &APickupableMaster::execIsTimerRequired },
 			{ "ResetOutline", &APickupableMaster::execResetOutline },
 			{ "ResetRotation", &APickupableMaster::execResetRotation },
@@ -443,6 +473,147 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_GetUIDisplayName_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics
+	{
+		struct PickupableMaster_eventGhostRotateHori_Parms
+		{
+			float axis;
+			float rotSpeed;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_axis;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_rotSpeed_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_rotSpeed;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::NewProp_axis = { "axis", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventGhostRotateHori_Parms, axis), METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::NewProp_rotSpeed_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::NewProp_rotSpeed = { "rotSpeed", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventGhostRotateHori_Parms, rotSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::NewProp_rotSpeed_MetaData), Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::NewProp_rotSpeed_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::NewProp_axis,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::NewProp_rotSpeed,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "GhostRotateHori", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::PickupableMaster_eventGhostRotateHori_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::PickupableMaster_eventGhostRotateHori_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APickupableMaster_GhostRotateHori()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_GhostRotateHori_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics
+	{
+		struct PickupableMaster_eventGhostRotateVert_Parms
+		{
+			float axis;
+			float rotSpeed;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_axis;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_rotSpeed_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_rotSpeed;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::NewProp_axis = { "axis", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventGhostRotateVert_Parms, axis), METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::NewProp_rotSpeed_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::NewProp_rotSpeed = { "rotSpeed", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventGhostRotateVert_Parms, rotSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::NewProp_rotSpeed_MetaData), Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::NewProp_rotSpeed_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::NewProp_axis,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::NewProp_rotSpeed,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "GhostRotateVert", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::PickupableMaster_eventGhostRotateVert_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::PickupableMaster_eventGhostRotateVert_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APickupableMaster_GhostRotateVert()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_GhostRotateVert_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics
+	{
+		struct PickupableMaster_eventGhostSnapRotateMesh_Parms
+		{
+			bool hori;
+			FString keypress;
+		};
+		static void NewProp_hori_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_hori;
+		static const UECodeGen_Private::FStrPropertyParams NewProp_keypress;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::NewProp_hori_SetBit(void* Obj)
+	{
+		((PickupableMaster_eventGhostSnapRotateMesh_Parms*)Obj)->hori = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::NewProp_hori = { "hori", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PickupableMaster_eventGhostSnapRotateMesh_Parms), &Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::NewProp_hori_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::NewProp_keypress = { "keypress", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventGhostSnapRotateMesh_Parms, keypress), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::NewProp_hori,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::NewProp_keypress,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "GhostSnapRotateMesh", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::PickupableMaster_eventGhostSnapRotateMesh_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::PickupableMaster_eventGhostSnapRotateMesh_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1094,6 +1265,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 1738982093
 		{ &Z_Construct_UFunction_APickupableMaster_GetMesh, "GetMesh" }, // 627417709
 		{ &Z_Construct_UFunction_APickupableMaster_GetUIDisplayName, "GetUIDisplayName" }, // 1097727041
+		{ &Z_Construct_UFunction_APickupableMaster_GhostRotateHori, "GhostRotateHori" }, // 1644806401
+		{ &Z_Construct_UFunction_APickupableMaster_GhostRotateVert, "GhostRotateVert" }, // 265731191
+		{ &Z_Construct_UFunction_APickupableMaster_GhostSnapRotateMesh, "GhostSnapRotateMesh" }, // 109141192
 		{ &Z_Construct_UFunction_APickupableMaster_IsTimerRequired, "IsTimerRequired" }, // 2822607283
 		{ &Z_Construct_UFunction_APickupableMaster_ResetOutline, "ResetOutline" }, // 41556477
 		{ &Z_Construct_UFunction_APickupableMaster_ResetRotation, "ResetRotation" }, // 3818178389
@@ -1410,9 +1584,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ ECoreSockets_StaticEnum, TEXT("ECoreSockets"), &Z_Registration_Info_UEnum_ECoreSockets, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1022227656U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 1095535863U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 810541857U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_600088003(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_3416326033(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::EnumInfo));

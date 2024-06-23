@@ -345,7 +345,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Socket")
 	int SelectSocket(int socket);
 
-	void Teleport(const FVector& pos);
+	void Teleport(const FVector& pos, const FRotator& rot);
 	
 	void LoseMoney(const short amount) { money -= amount; }
 };
