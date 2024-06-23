@@ -30,5 +30,6 @@ public:
 
 	void SaveMoney(const int value) const;
 	void LoseMoney(const int value);
+	void AddMoney(const int value);
 	int GetMoney();
 };

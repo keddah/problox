@@ -62,6 +62,8 @@ void ABounceSpring::Ability(float deltaTime)
 	// DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
 
 	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
+
+	if(GetVelocity().Length() < 20) return;
 	if(!soundPlayer->IsPlaying()) soundPlayer->PlayAbility();
 }
 
@@ -86,6 +88,13 @@ void ABounceSpring::RemoveVelocity() const
 
 	end->SetPhysicsLinearVelocity(FVector::ZeroVector);
 	end->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
+}
+
+void ABounceSpring::SetEnableMesh(const bool enable) const
+{
+	Super::SetEnableMesh(enable);
+	end->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
+	end->SetHiddenInGame(!enable);
 }
 
 float ABounceSpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const

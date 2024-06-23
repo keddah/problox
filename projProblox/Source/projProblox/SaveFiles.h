@@ -76,39 +76,44 @@ class PROJPROBLOX_API UMoneySave : public USaveGame
 
 
 public:
-	void AddMoney(const int amount)
-	{
-		if(UMoneySave* previous = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0)))
-		{
-			money = previous->money + amount;
-		}
-		else money += amount;
-		UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
-		Print("Saving balance (adding): " + FString::FromInt(money), 5);
-	}
-
-	void LoseMoney(const int amount)
-	{
-		money -= amount;
-		UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
-		Print("Saving balance (losing): " + FString::FromInt(money), 5);
-	}
-
 	int32 GetBalance() const { return money; }
 
 	bool SaveBalance(const int balance)
 	{
-		if(!UGameplayStatics::DoesSaveGameExist(moneySlot, 0))
+		if(!UGameplayStatics::LoadGameFromSlot(moneySlot, 0))
 		{
-			Print("unable to save because the save slot wasnt created...", 4)
+			// If it can't load, it can't save
+			Print("unable to save because the save slot couldn't be loaded...", 4)
 			return false;
 		}
 		
 		money = balance;
-		const bool success = UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
-		
-		if(success) Print("Save successful.", 4)
-		else Print("Save failed.", 5)
+
+		if (!this)
+		{
+			Print("Couldnt save money because the save instance was invalid...", 8);
+			return false;
+		}
+
+		if (moneySlot.IsEmpty())
+		{
+			Print("couldn't save because Slot name is empty", 6);
+			return false;
+		}
+
+		bool success = false;
+
+		try
+		{
+			success = UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
+			if (!success) Print("money save failed...", 6);
+		}
+		catch (const std::exception& e)
+		{
+			Print("Exception Caught: " + FString(e.what()), 6);
+		}
+		catch (...) Print("Unknown exception caught during save game.", 7);
+
 		return success;
 	}
 
@@ -117,4 +122,3 @@ public:
 		Print("Current Balance: " + FString::FromInt(money), time);
 	}
 }; 
-//

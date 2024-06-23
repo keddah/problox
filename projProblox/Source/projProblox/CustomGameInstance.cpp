@@ -41,6 +41,18 @@ void UCustomGameInstance::LoseMoney(const int value)
 	moneySave->SaveBalance(moneySave->GetBalance() - value);
 }
 
+void UCustomGameInstance::AddMoney(const int value)
+{
+	if(!moneySave) moneySave = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0));
+	if(!moneySave)
+	{
+		Print("no money save..", 5)
+		return;
+	}
+
+	moneySave->SaveBalance(moneySave->GetBalance() + value);
+}
+
 int UCustomGameInstance::GetMoney()
 {
 	if(!moneySave)
