@@ -20,6 +20,7 @@ AThruster::AThruster()
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_thruster.MS_thruster'"));
 
 	uiName = "Thruster";
+	favouredSlot = ECoreSockets::Right;
 }
 
 void AThruster::BeginPlay()

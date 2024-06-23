@@ -25,6 +25,7 @@ ABalloon::ABalloon()
 	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
 
 	uiName = "Balloon";
+	favouredSlot = ECoreSockets::Up;
 }
 
 void ABalloon::BeginPlay()
@@ -39,7 +40,7 @@ void ABalloon::BeginPlay()
 		if(coreActor->IsA<ACubeConnector>()) continue;
 
 		Cast<ACubeCore>(coreActor)->onReset.AddDynamic(this, &ABalloon::ResetBalloon);
-		Cast<ACubeCore>(coreActor)->onStartGame.AddDynamic(this, &ABalloon::SaveRestTransform);
+		Cast<ACubeCore>(coreActor)->onStartGame.AddDynamic(this, &ABalloon::SaveResetTransform);
 	}
 }
 
@@ -47,11 +48,8 @@ void ABalloon::Ability(float deltaTime)
 {
 	Super::Ability(deltaTime);
 	if(!parentCore || !active) return;
+	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 
-	PrintFloat(GetActorLocation().Z - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z, .1)
-	PrintFloat(constraint->ConstraintInstance.GetLinearLimit() * 2, .1)
-	Print("", .1)
-	
 	const bool atLimit = GetActorLocation().Z - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit() * 1.15f;
 	
 	FVector velocity = mesh->GetPhysicsLinearVelocity();
@@ -62,16 +60,16 @@ void ABalloon::Ability(float deltaTime)
 	mesh->SetPhysicsLinearVelocity(velocity);
 }
 
-void ABalloon::SetAbilityActive(const bool value)
-{
-	Super::SetAbilityActive(value);
-
-	if(value) return;
-	mesh->SetHiddenInGame(true);
-	string->bAttachStart = false;
-	string->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	constraint->BreakConstraint();
-}
+// void ABalloon::SetAbilityActive(const bool value)
+// {
+// 	Super::SetAbilityActive(value);
+//
+// 	if(value) return;
+// 	mesh->SetHiddenInGame(true);
+// 	string->bAttachStart = false;
+// 	string->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+// 	constraint->BreakConstraint();
+// }
 
 EOperations ABalloon::SetSelected(const bool value)
 {
@@ -100,6 +98,7 @@ EOperations ABalloon::SetSelected(const bool value)
 	if(!previousObj) previousObj = parentCore;
 	
 	Attach();
+	SetEnableMesh(true);
 	UseSilhouetteTransform();
 	ResetGhost();
 
@@ -138,7 +137,6 @@ APickupableMaster* ABalloon::GetParent()
 void ABalloon::Detach(const bool push)
 {
 	ResetGhost();
-	SetHideOutlineMesh(true);
 
 	if(!parentCore && !previousObj)
 	{
@@ -160,6 +158,7 @@ void ABalloon::Detach(const bool push)
 		const float launchForce = GetMass();
 
 		constexpr float maxVelocity = 1000;
+		SetEnableMesh(true);
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
 	
@@ -205,13 +204,46 @@ void ABalloon::Reattach(const bool sound)
 	Cast<APickupableMaster>(parentCore)->RemoveVelocity();
 }
 
+void ABalloon::GhostPlacement()
+{
+	if(!parentCore)
+	{
+		Print("Couldn't do ghost placement because there's no core", 4)
+		return;
+	}
+	silhouette->SetHiddenInGame(false);
+
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	SetActorLocation(parentMesh->GetSocketLocation(attachedSocket));
+	
+	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(parentMesh->GetSocketRotation(attachedSocket));
+	FRotator rot;
+	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
+	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
+	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
+
+	// Rotate to match the socket rotation
+	SetActorRotation(rot);
+}
+
+void ABalloon::UseSilhouetteTransform(const UStaticMeshComponent* ghost)
+{
+	// If a silhouette wasn't given, use this one.
+	if(!ghost) ghost = silhouette;
+		
+	const FTransform silhouetteTransform = ghost->GetComponentTransform();
+	SetActorRotation(silhouetteTransform.GetRotation());
+	savedAttachTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
+}
+
 void ABalloon::ResetBalloon(const int empty)
 {
 	mesh->SetHiddenInGame(false);
 	string->bAttachStart = true;
 	string->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	string->SetRelativeLocation({0,0,50});
-	SetActorTransform(resetTransform);
+	// SetActorTransform(resetTransform);
+	Attach();
 	
 	if(!parentCore) return;
 

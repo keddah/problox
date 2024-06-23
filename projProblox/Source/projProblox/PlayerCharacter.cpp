@@ -280,16 +280,27 @@ FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
 	{
 		case ECoreSockets::Front:
 			suggestion = "FRONT";
+			break;
+		
 		case ECoreSockets::Back:
 			suggestion = "BACK";
+			break;
+
 		case ECoreSockets::Right:
 			suggestion = "RIGHT";
+			break;
+
 		case ECoreSockets::Left:
 			suggestion = "LEFT";
+			break;
+
 		case ECoreSockets::Up:
 			suggestion = "UP";
+			break;
+
 		case ECoreSockets::Down:
 			suggestion = "DOWN";
+			break;
 	}
 
 	// If the socket isn't occupied, return it
@@ -759,4 +770,28 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 	}
 
 	else if(selectedObj) selectedObj->Deselect();
+}
+
+void APlayerCharacter::EjectObject(const FHitResult& hit)
+{
+	if(currentMode != EGameMode::Build) return;
+
+	AActor* hitActor = hit.GetActor();
+	if(hitActor == core) return;
+	
+	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
+	{
+		if(!obj->GetIsAttached()) return;
+
+		core->EjectObject(obj);
+		
+		UWorld* wrld = GetWorld();
+		if(!wrld) return;
+
+		FTimerHandle destroyHandle;
+		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
+		
+		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 3, false);
+	}
+
 }

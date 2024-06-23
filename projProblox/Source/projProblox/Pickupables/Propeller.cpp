@@ -29,6 +29,7 @@ APropeller::APropeller()
 	Tags.Add("NO");
 
 	uiName = "Propeller";
+	favouredSlot = ECoreSockets::Up;
 }
 
 

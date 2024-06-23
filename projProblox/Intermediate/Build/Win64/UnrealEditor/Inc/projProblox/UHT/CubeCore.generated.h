@@ -59,6 +59,7 @@ PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegat
 	DECLARE_FUNCTION(execGetCloseAttachments); \
 	DECLARE_FUNCTION(execGetSocketCount); \
 	DECLARE_FUNCTION(execSetAllAbilityActive); \
+	DECLARE_FUNCTION(execEjectObject); \
 	DECLARE_FUNCTION(execObjectInSocket); \
 	DECLARE_FUNCTION(execDetachAll); \
 	DECLARE_FUNCTION(execAddMoney); \

@@ -203,21 +203,18 @@ void APickupableMaster::Placement()
 // Should only be called in the Placement Function at the very end....
 void APickupableMaster::GhostPlacement()
 {
-	RemoveVelocity();
-	
 	if(!parentCore)
 	{
 		Print("Couldn't do ghost placement because there's no core", 4)
 		return;
 	}
+	
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(false);
 	silhouette->AttachToComponent(parentCore->GetMesh(), ghostRules, attachedSocket);
-	
 	silhouette->SetRelativeLocation({attachOffset,0,0});
 	
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	
 	if(snapRot)
 	{
 		const FVector forwardVec = UKismetMathLibrary::GetForwardVector(parentMesh->GetSocketRotation(attachedSocket));
@@ -236,7 +233,7 @@ void APickupableMaster::GhostPlacement()
 
 		// Round it to the socket rotation
 		silhouette->SetRelativeRotation({roundRot.Pitch, roundRot.Yaw, roundRot.Roll});
-		
+
 		SetGhostBlocked();
 		return;
 	}
@@ -246,7 +243,6 @@ void APickupableMaster::GhostPlacement()
 	const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
 	socketRot = socketRot.RotateVector(socketForward).Rotation();
 	silhouette->SetWorldRotation(RoundRotation(GetActorRotation(), socketRot));
-
 	
 	// Rounded is true if the xyz relative rotations are factors of 45 (rounded to 45 degrees).
 	const bool roundX = lockAxis.X == 0;
@@ -327,15 +323,11 @@ void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
 	if(!core)
 	{
 		Print("The given core was invalid... ~ OtherPlacement.", 7)
-		// ResetGhost();
 		return;
 	}
 
 	parentCore = core;
-	if(socket != NAME_None)
-	{
-		attachedSocket = socket;
-	}
+	if(socket != NAME_None) attachedSocket = socket;
 	SetEnableMesh(false);
 	GhostPlacement();
 }
@@ -366,8 +358,9 @@ void APickupableMaster::Detach(const bool push)
 	{
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 		const float launchForce = GetMass();
-
 		constexpr float maxVelocity = 1000;
+
+		SetEnableMesh(true);
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
 	
@@ -558,45 +551,17 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
 }
 
-void APickupableMaster::GhostRotateVert(float axis, const float rotSpeed)
+void APickupableMaster::GhostSnapRotateMesh(const FString& keypress)
 {
-	if(vertAxis.X != 0) silhouette->AddWorldRotation({0,0, axis * rotSpeed});
-	else if(vertAxis.Y != 0) silhouette->AddWorldRotation({axis * rotSpeed, 0, 0});
-	else if(vertAxis.Z != 0) silhouette->AddWorldRotation({0, axis * rotSpeed, 0});
-}
-
-void APickupableMaster::GhostRotateHori(float axis, const float rotSpeed)
-{
-	if(horiAxis.X != 0) silhouette->AddWorldRotation({0,0, axis * rotSpeed});
-	else if(horiAxis.Y != 0) silhouette->AddWorldRotation({axis * rotSpeed, 0, 0});
-	else if(horiAxis.Z != 0) silhouette->AddWorldRotation({0, axis * rotSpeed, 0});
-	appliedYaw += axis * rotSpeed;
+	if(snapRot) return;
 	
+	const float turn = keypress == "Q" ? -90 : 90;
+	silhouette->AddRelativeRotation({0,0,turn});
+
 	// Wrap appliedYaw to -180 / 180
+	appliedYaw += turn;
 	if (appliedYaw > 180) appliedYaw -= 360;
 	else if (appliedYaw < -180) appliedYaw += 360;
-}
-
-void APickupableMaster::GhostSnapRotateMesh(bool hori, FString keypress)
-{
-	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
-		
-	if(hori)
-	{
-		if(horiAxis.X != 0) silhouette->AddWorldRotation({0,0, turn});
-		else if(horiAxis.Y != 0) silhouette->AddWorldRotation({turn, 0, 0});
-		else if(horiAxis.Z != 0) silhouette->AddWorldRotation({0, turn, 0});
-		appliedYaw += turn;
-		
-		// Wrap appliedYaw to -180 / 180
-		if (appliedYaw > 180) appliedYaw -= 360;
-		else if (appliedYaw < -180) appliedYaw += 360;
-		return;
-	}
-
-	if(vertAxis.X != 0) silhouette->AddWorldRotation({0,0, turn});
-	else if(vertAxis.Y != 0) silhouette->AddWorldRotation({turn, 0, 0});
-	else if(vertAxis.Z != 0) silhouette->AddWorldRotation({0, turn, 0});
 }
 
 
@@ -647,26 +612,28 @@ void APickupableMaster::ResetGhost() const
 
 void APickupableMaster::SetGhostBlocked()
 {
-	// TArray<UPrimitiveComponent*> overlaps;
-	// silhouette->GetOverlappingComponents(overlaps);
-	// PrintVector(silhouette->GetRelativeLocation(), 1)
-	//
-	// TArray<AActor*> owners;
-	// for(const auto& obj: overlaps)
-	// {
-	// 	AActor* owner = obj->GetOwner();
-	// 	if(owner == this) continue;
-	//
-	// 	// only include things that are solid (ignores triggers)
-	// 	if(obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Block) owners.Add(owner);
-	// }
-	//
-	// for(const auto& obj : owners)
-	// {
-	// 	Print(obj->GetName(), 1)
-	// 	// If there is a successful cast, there is a collision with another pickupable
-	// 	const APickupableMaster* valid = Cast<APickupableMaster>(obj);
-	// }
+	TArray<UPrimitiveComponent*> overlaps;
+	silhouette->GetOverlappingComponents(overlaps);
+	
+	TArray<AActor*> owners;
+	for(const auto& obj: overlaps)
+	{
+		if(!obj->IsA<UStaticMeshComponent>()) continue;
+		
+		AActor* owner = obj->GetOwner();
+		if(owner == this) continue;
+	
+		// only include things that are solid (ignores triggers)
+		if(obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Block) owners.Add(owner);
+	}
+
+	bool overlap = false;
+	for(const auto& obj : owners)
+	{
+		// If there is a successful cast, there is a collision with another pickupable
+		overlap = IsValid(Cast<APickupableMaster>(obj));
+		if(overlap) Print("Overlapping with: " + obj->GetName(), 4)
+	}
 }
 
 

@@ -248,6 +248,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Socket")
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
 
+	UFUNCTION(BlueprintCallable)
+	void EjectObject(APickupableMaster* toEject);
 	
 	/////////////// Abilities ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Ablility")

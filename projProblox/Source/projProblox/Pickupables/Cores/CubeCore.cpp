@@ -423,6 +423,14 @@ void ACubeCore::SetAbilityActive(bool value)
 	if(IsValid(selectedObj)) selectedObj->SetAbilityActive(value);
 }
 
+void ACubeCore::EjectObject(APickupableMaster* toEject)
+{
+	if(!toEject) return;
+
+	toEject->Detach(true);
+	soundPlayer->PlayDetachAll();
+}
+
 void ACubeCore::SetAllAbilityActive(bool value) const
 {
 	const AActor* self = this;

@@ -254,14 +254,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
 	virtual void SnapRotateMesh(bool hori, FString keypress);
 
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void GhostRotateVert(float axis, const float rotSpeed);
-
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void GhostRotateHori(float axis, const float rotSpeed);
-	
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
-	virtual void GhostSnapRotateMesh(bool hori, FString keypress);
+	virtual void GhostSnapRotateMesh(const FString& keypress);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);

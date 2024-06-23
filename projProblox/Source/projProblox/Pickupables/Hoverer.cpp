@@ -31,6 +31,7 @@ AHoverer::AHoverer()
 	sideRight->SetupAttachment(mesh);
 
 	uiName = "Hoverer";
+	favouredSlot = ECoreSockets::Down;
 }
 
 void AHoverer::BeginPlay()

@@ -25,6 +25,7 @@ struct FHitResult;
  \
 	DECLARE_FUNCTION(execGetCore); \
 	DECLARE_FUNCTION(execEndGame); \
+	DECLARE_FUNCTION(execEjectObject); \
 	DECLARE_FUNCTION(execSpawnFromBuyable); \
 	DECLARE_FUNCTION(execBuildControls); \
 	DECLARE_FUNCTION(execDetach); \

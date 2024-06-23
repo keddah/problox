@@ -196,6 +196,9 @@ private:
 
 	UFUNCTION(BlueprintCallable)
 	void SpawnFromBuyable(const FHitResult& hit);
+
+	UFUNCTION(BlueprintCallable)
+	void EjectObject(const FHitResult& hit);
 	
 	
 	/////////////// Game States ///////////////

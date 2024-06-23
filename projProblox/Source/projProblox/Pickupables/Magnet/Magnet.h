@@ -22,7 +22,7 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	AMagnet() { uiName = "Magnet"; }
+	AMagnet() { uiName = "Magnet"; favouredSlot = ECoreSockets::Up; }
 	
 	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* positiveMat;

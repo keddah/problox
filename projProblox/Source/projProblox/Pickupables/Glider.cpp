@@ -14,9 +14,10 @@
 
 AGlider::AGlider()
 {
-	snapRot = false;
+	snapRot = true;
 	needsTimer = false;
 
+	favouredSlot = ECoreSockets::Up;
 	uiName = "Glider";
 }
 
