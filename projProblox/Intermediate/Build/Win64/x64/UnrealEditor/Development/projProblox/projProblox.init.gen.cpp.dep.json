@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\projproblox.init.gen.cpp",
+        "Source": "d:\\uni\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\projproblox.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\projprobloxeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "PCH": "d:\\uni\\problox\\projproblox\\intermediate\\build\\win64\\x64\\projprobloxeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projproblox\\definitions.projproblox.h"
+            "d:\\uni\\problox\\projproblox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projproblox\\definitions.projproblox.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

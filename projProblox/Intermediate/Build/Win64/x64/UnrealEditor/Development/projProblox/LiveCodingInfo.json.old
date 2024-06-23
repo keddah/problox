@@ -22,10 +22,10 @@
 			"GrappleHead.gen.cpp.obj",
 			"Grappler.gen.cpp.obj",
 			"HexagonSocketInfo.gen.cpp.obj",
-			"HexCore.gen.cpp.obj"
+			"HexCore.gen.cpp.obj",
+			"Hoverer.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
-			"Hoverer.gen.cpp.obj",
 			"LevelManager.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
@@ -36,12 +36,12 @@
 			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"SaveFiles.gen.cpp.obj",
-			"SpawnPoint.gen.cpp.obj"
-		],
-		"Module.projProblox.3.cpp.obj": [
+			"SpawnPoint.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
-			"WedgeConnector.gen.cpp.obj",
+			"WedgeConnector.gen.cpp.obj"
+		],
+		"Module.projProblox.3.cpp.obj": [
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
 			"Wheels.gen.cpp.obj",
@@ -54,6 +54,7 @@
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
+			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
@@ -80,8 +81,7 @@
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"BounceSpring.cpp.obj"
+			"ActionHistory.cpp.obj"
 		]
 	}
 }
