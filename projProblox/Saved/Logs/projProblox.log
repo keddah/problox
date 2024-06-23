@@ -26016,3 +26016,343 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.06.23-10.01.54:801][927]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
 [2024.06.23-10.01.54:835][928]LogPlayLevel: Display: Destroying online subsystem :Context_98
 [2024.06.23-10.01.54:848][928]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.06.23-10.03.33:284][169]LogHotReload: New module detected: UnrealEditor-projProblox-0043.dll
+[2024.06.23-10.03.34:231][268]LogHotReload: Starting Hot-Reload from IDE
+[2024.06.23-10.03.34:231][268]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.06.23-10.03.34:262][268]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.06.23-10.03.34:511][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:513][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:513][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:514][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:515][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:516][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:516][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:517][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:518][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:518][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:520][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:520][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:521][268]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:522][268]LogActor: Warning: BP_BuyableObject_C /Engine/Transient.World_3:PersistentLevel.BP_BuyableObject_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.34:590][268]LogPython: Warning: 'Level' and 'ELevel' have the same name (Level) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.23-10.03.34:590][268]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.23-10.03.34:668][268]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2024.06.23-10.03.34:710][268]Display: HotReload took  0.5s.
+[2024.06.23-10.03.34:710][268]Display: Reload/Re-instancing Complete: 1 package changed, 47 classes unchanged, 5 enums unchanged, 2 scriptstructs unchanged, 93 functions remapped, 2 scriptstructs remapped
+[2024.06.23-10.03.57:516][478]LogHotReload: New module detected: UnrealEditor-projProblox-0044.dll
+[2024.06.23-10.03.58:279][569]LogHotReload: Starting Hot-Reload from IDE
+[2024.06.23-10.03.58:401][569]LogUObjectHash: Compacting FUObjectHashTables data took   2.21ms
+[2024.06.23-10.03.58:626][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:627][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:628][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:630][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:630][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:631][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:632][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:633][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:633][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:634][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:635][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:636][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:636][569]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:637][569]LogActor: Warning: BP_BuyableObject_C /Engine/Transient.World_3:PersistentLevel.BP_BuyableObject_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.03.58:701][569]LogPython: Warning: 'Level' and 'ELevel' have the same name (Level) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.23-10.03.58:701][569]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.23-10.03.58:773][569]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.06.23-10.03.58:820][569]Display: HotReload took  0.5s.
+[2024.06.23-10.03.58:820][569]Display: Reload/Re-instancing Complete: 1 package changed, 47 classes unchanged, 5 enums unchanged, 2 scriptstructs unchanged, 93 functions remapped, 2 scriptstructs remapped
+[2024.06.23-10.03.59:697][626]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.23-10.03.59:710][626]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.06.23-10.03.59:716][626]LogPlayLevel: [PlayLevel] Compiling BP_PlayerCharacter before play...
+[2024.06.23-10.03.59:901][626]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.23-10.03.59:928][626]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.06.23-10.04.00:013][626]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.06.23-10.04.00:013][626]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter0914D4CE4979E0181C12B3B1DE84E24E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.06.23-10.04.00:021][626]LogFileHelpers: InternalPromptForCheckoutAndSave took 119 ms (total: 4.05 sec)
+[2024.06.23-10.04.00:070][626]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2024.06.23-10.04.00:078][626]LogPlayLevel: PlayLevel: Blueprint regeneration took 368 ms (1 blueprints)
+[2024.06.23-10.04.00:078][626]PIE: New page: PIE session: Lvl_Combined (23 Jun 2024, 12:04:00)
+[2024.06.23-10.04.00:110][626]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.23-10.04.00:119][626]LogPlayLevel: PIE: StaticDuplicateObject took: (0.008145s)
+[2024.06.23-10.04.00:119][626]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.008183s)
+[2024.06.23-10.04.00:130][626]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.06.23-10.04.00:131][626]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.23-10.04.00:131][626]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.23-10.04.00:132][626]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.06.23-10.04.00:132][626]LogPlayLevel: PIE: World Init took: (0.000799s)
+[2024.06.23-10.04.00:132][626]LogAudio: Display: Creating Audio Device:                 Id: 72, Scope: Unique, Realtime: True
+[2024.06.23-10.04.00:132][626]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.23-10.04.00:132][626]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.23-10.04.00:132][626]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.23-10.04.00:132][626]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.23-10.04.00:132][626]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.23-10.04.00:132][626]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.23-10.04.00:132][626]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.23-10.04.00:132][626]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.23-10.04.00:132][626]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.23-10.04.00:132][626]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.23-10.04.00:132][626]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.23-10.04.00:134][626]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.23-10.04.00:159][626]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.06.23-10.04.00:160][626]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.23-10.04.00:160][626]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.23-10.04.00:160][626]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.23-10.04.00:160][626]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=72
+[2024.06.23-10.04.00:160][626]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=72
+[2024.06.23-10.04.00:162][626]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=72
+[2024.06.23-10.04.00:162][626]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=72
+[2024.06.23-10.04.00:162][626]LogInit: FAudioDevice initialized with ID 72.
+[2024.06.23-10.04.00:162][626]LogAudio: Display: Audio Device (ID: 72) registered with world 'Lvl_Combined'.
+[2024.06.23-10.04.00:162][626]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 72
+[2024.06.23-10.04.00:190][626]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.23-10.04.00:190][626]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.23-10.04.00:191][626]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.23-10.04.00:191][626]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.23-10.04.00:193][626]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.06.23-11.04.00
+[2024.06.23-10.04.00:193][626]LogWorld: Bringing up level for play took: 0.002787
+[2024.06.23-10.04.00:195][626]LogOnline: OSS: Created online subsystem instance for: :Context_99
+[2024.06.23-10.04.00:196][626]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2024.06.23-10.04.00:198][626]PIE: Server logged in
+[2024.06.23-10.04.00:198][626]PIE: Play in editor total start time 0.489 seconds.
+[2024.06.23-10.04.00:246][626]LogViewport: Scene viewport resized to 1912x992, mode Windowed.
+[2024.06.23-10.04.00:256][627]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.06.23-10.04.00:256][627]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.23-10.04.00:288][627]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.06.23-10.04.00:288][627]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_70.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.06.23-10.04.00:369][627]LogStreaming: Display: UWorld::AddToWorld: updating components for /Game/Levels/UEDPIE_0_Lvl_BuildArea took (less than) 74.28 ms
+[2024.06.23-10.04.04:051][994]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.23-10.04.04:051][994]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.23-10.04.04:051][994]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.06.23-10.04.04:057][994]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.06.23-10.04.04:057][994]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.23-10.04.04:059][994]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.06.23-10.04.04:063][994]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.23-10.04.04:075][994]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 72
+[2024.06.23-10.04.04:075][994]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=72
+[2024.06.23-10.04.04:077][994]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=72
+[2024.06.23-10.04.04:084][994]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.06.23-10.04.04:132][995]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2024.06.23-10.04.04:145][996]LogPlayLevel: Display: Destroying online subsystem :Context_99
+[2024.06.23-10.04.08:224][467]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.23-10.04.08:238][467]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.06.23-10.04.08:245][467]LogPlayLevel: [PlayLevel] Compiling BP_PlayerCharacter before play...
+[2024.06.23-10.04.08:433][467]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.23-10.04.08:464][467]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.06.23-10.04.08:548][467]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.06.23-10.04.08:548][467]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacterCDF6FDF845B667C5EBA6E1AFA3921D5C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.06.23-10.04.08:554][467]LogFileHelpers: InternalPromptForCheckoutAndSave took 122 ms (total: 4.17 sec)
+[2024.06.23-10.04.08:568][467]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.06.23-10.04.08:572][467]LogPlayLevel: PlayLevel: Blueprint regeneration took 333 ms (1 blueprints)
+[2024.06.23-10.04.08:572][467]PIE: New page: PIE session: Lvl_Combined (23 Jun 2024, 12:04:08)
+[2024.06.23-10.04.08:572][467]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.23-10.04.08:580][467]LogPlayLevel: PIE: StaticDuplicateObject took: (0.007830s)
+[2024.06.23-10.04.08:580][467]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.007858s)
+[2024.06.23-10.04.08:590][467]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.06.23-10.04.08:591][467]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.23-10.04.08:591][467]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.23-10.04.08:592][467]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.06.23-10.04.08:592][467]LogPlayLevel: PIE: World Init took: (0.000689s)
+[2024.06.23-10.04.08:592][467]LogAudio: Display: Creating Audio Device:                 Id: 73, Scope: Unique, Realtime: True
+[2024.06.23-10.04.08:592][467]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.23-10.04.08:592][467]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.23-10.04.08:592][467]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.23-10.04.08:592][467]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.23-10.04.08:592][467]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.23-10.04.08:592][467]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.23-10.04.08:592][467]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.23-10.04.08:592][467]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.23-10.04.08:592][467]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.23-10.04.08:592][467]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.23-10.04.08:592][467]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.23-10.04.08:594][467]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.23-10.04.08:620][467]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.06.23-10.04.08:620][467]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.23-10.04.08:620][467]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.23-10.04.08:620][467]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.23-10.04.08:620][467]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=73
+[2024.06.23-10.04.08:620][467]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=73
+[2024.06.23-10.04.08:622][467]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=73
+[2024.06.23-10.04.08:622][467]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=73
+[2024.06.23-10.04.08:622][467]LogInit: FAudioDevice initialized with ID 73.
+[2024.06.23-10.04.08:622][467]LogAudio: Display: Audio Device (ID: 73) registered with world 'Lvl_Combined'.
+[2024.06.23-10.04.08:622][467]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 73
+[2024.06.23-10.04.08:650][467]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.23-10.04.08:650][467]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.23-10.04.08:652][467]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.23-10.04.08:652][467]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.23-10.04.08:653][467]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.06.23-11.04.08
+[2024.06.23-10.04.08:654][467]LogWorld: Bringing up level for play took: 0.002750
+[2024.06.23-10.04.08:656][467]LogOnline: OSS: Created online subsystem instance for: :Context_100
+[2024.06.23-10.04.08:656][467]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2024.06.23-10.04.08:658][467]PIE: Server logged in
+[2024.06.23-10.04.08:658][467]PIE: Play in editor total start time 0.421 seconds.
+[2024.06.23-10.04.08:717][467]LogViewport: Scene viewport resized to 1912x992, mode Windowed.
+[2024.06.23-10.04.08:725][468]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.06.23-10.04.08:725][468]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.23-10.04.08:758][468]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.06.23-10.04.08:758][468]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_71.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.06.23-10.04.08:837][468]LogStreaming: Display: UWorld::AddToWorld: updating components for /Game/Levels/UEDPIE_0_Lvl_BuildArea took (less than) 72.95 ms
+[2024.06.23-10.04.13:471][899]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.23-10.04.13:471][899]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.23-10.04.13:471][899]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.06.23-10.04.13:477][899]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.06.23-10.04.13:477][899]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.23-10.04.13:479][899]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.06.23-10.04.13:484][899]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.23-10.04.13:498][899]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 73
+[2024.06.23-10.04.13:499][899]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=73
+[2024.06.23-10.04.13:501][899]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=73
+[2024.06.23-10.04.13:510][899]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.06.23-10.04.13:539][900]LogPlayLevel: Display: Destroying online subsystem :Context_100
+[2024.06.23-10.04.13:551][900]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2024.06.23-10.04.16:078][191]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.23-10.04.16:094][191]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.06.23-10.04.16:100][191]LogPlayLevel: [PlayLevel] Compiling BP_PlayerCharacter before play...
+[2024.06.23-10.04.16:278][191]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.23-10.04.16:295][191]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.06.23-10.04.16:377][191]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.06.23-10.04.16:377][191]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter7A7A8C464E8B3E4D61C383970706DA90.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.06.23-10.04.16:384][191]LogFileHelpers: InternalPromptForCheckoutAndSave took 105 ms (total: 4.28 sec)
+[2024.06.23-10.04.16:402][191]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.06.23-10.04.16:405][191]LogPlayLevel: PlayLevel: Blueprint regeneration took 311 ms (1 blueprints)
+[2024.06.23-10.04.16:405][191]PIE: New page: PIE session: Lvl_Combined (23 Jun 2024, 12:04:16)
+[2024.06.23-10.04.16:405][191]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.23-10.04.16:413][191]LogPlayLevel: PIE: StaticDuplicateObject took: (0.007678s)
+[2024.06.23-10.04.16:413][191]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.007702s)
+[2024.06.23-10.04.16:424][191]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.06.23-10.04.16:425][191]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.23-10.04.16:425][191]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.23-10.04.16:426][191]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.06.23-10.04.16:426][191]LogPlayLevel: PIE: World Init took: (0.000677s)
+[2024.06.23-10.04.16:426][191]LogAudio: Display: Creating Audio Device:                 Id: 74, Scope: Unique, Realtime: True
+[2024.06.23-10.04.16:426][191]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.23-10.04.16:426][191]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.23-10.04.16:426][191]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.23-10.04.16:426][191]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.23-10.04.16:426][191]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.23-10.04.16:426][191]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.23-10.04.16:426][191]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.23-10.04.16:426][191]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.23-10.04.16:426][191]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.23-10.04.16:426][191]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.23-10.04.16:426][191]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.23-10.04.16:428][191]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.23-10.04.16:454][191]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.06.23-10.04.16:455][191]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.23-10.04.16:455][191]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.23-10.04.16:455][191]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.23-10.04.16:455][191]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=74
+[2024.06.23-10.04.16:455][191]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=74
+[2024.06.23-10.04.16:457][191]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=74
+[2024.06.23-10.04.16:457][191]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=74
+[2024.06.23-10.04.16:457][191]LogInit: FAudioDevice initialized with ID 74.
+[2024.06.23-10.04.16:457][191]LogAudio: Display: Audio Device (ID: 74) registered with world 'Lvl_Combined'.
+[2024.06.23-10.04.16:457][191]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 74
+[2024.06.23-10.04.16:476][191]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.23-10.04.16:476][191]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.23-10.04.16:477][191]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.23-10.04.16:477][191]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.23-10.04.16:478][191]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.06.23-11.04.16
+[2024.06.23-10.04.16:478][191]LogWorld: Bringing up level for play took: 0.002611
+[2024.06.23-10.04.16:480][191]LogOnline: OSS: Created online subsystem instance for: :Context_101
+[2024.06.23-10.04.16:481][191]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2024.06.23-10.04.16:483][191]PIE: Server logged in
+[2024.06.23-10.04.16:484][191]PIE: Play in editor total start time 0.391 seconds.
+[2024.06.23-10.04.16:540][191]LogViewport: Scene viewport resized to 1912x992, mode Windowed.
+[2024.06.23-10.04.16:548][192]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.06.23-10.04.16:548][192]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.23-10.04.16:578][192]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.06.23-10.04.16:578][192]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_72.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.06.23-10.04.16:655][192]LogStreaming: Display: UWorld::AddToWorld: updating components for /Game/Levels/UEDPIE_0_Lvl_BuildArea took (less than) 70.79 ms
+[2024.06.23-10.04.20:491][541]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.23-10.04.20:491][541]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.23-10.04.20:492][541]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.06.23-10.04.20:498][541]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.06.23-10.04.20:498][541]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.23-10.04.20:500][541]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.06.23-10.04.20:504][541]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.06.23-10.04.20:520][541]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 74
+[2024.06.23-10.04.20:520][541]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=74
+[2024.06.23-10.04.20:521][541]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=74
+[2024.06.23-10.04.20:532][541]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.06.23-10.04.20:564][542]LogPlayLevel: Display: Destroying online subsystem :Context_101
+[2024.06.23-10.04.20:574][542]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2024.06.23-10.04.29:619][223]LogHotReload: New module detected: UnrealEditor-projProblox-0045.dll
+[2024.06.23-10.04.30:475][325]LogHotReload: Starting Hot-Reload from IDE
+[2024.06.23-10.04.30:522][325]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.06.23-10.04.30:739][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:740][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:741][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:742][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:743][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:744][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:745][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:746][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:747][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:748][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:749][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:750][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:751][325]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:752][325]LogActor: Warning: BP_BuyableObject_C /Engine/Transient.World_3:PersistentLevel.BP_BuyableObject_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.23-10.04.30:815][325]LogPython: Warning: 'Level' and 'ELevel' have the same name (Level) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.23-10.04.30:815][325]LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.06.23-10.04.30:888][325]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.06.23-10.04.30:925][325]Display: HotReload took  0.5s.
+[2024.06.23-10.04.30:925][325]Display: Reload/Re-instancing Complete: 1 package changed, 47 classes unchanged, 5 enums unchanged, 2 scriptstructs unchanged, 93 functions remapped, 2 scriptstructs remapped
+[2024.06.23-10.04.37:662][ 66]BlueprintLog: New page: Compile BP_PlayerCharacter
+[2024.06.23-10.04.37:785][ 66]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.06.23-10.04.37:900][ 66]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.23-10.04.37:928][ 66]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.06.23-10.04.38:010][ 66]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.06.23-10.04.38:010][ 66]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacterF4AB909D40C5DC6B4A7BA18D98813FF4.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.06.23-10.04.38:016][ 66]LogFileHelpers: InternalPromptForCheckoutAndSave took 116 ms (total: 4.40 sec)
+[2024.06.23-10.04.38:019][ 66]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.06.23-10.04.38:019][ 66]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.23-10.04.38:353][100]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.06.23-10.04.38:367][100]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.06.23-10.04.38:367][100]PIE: New page: PIE session: Lvl_Combined (23 Jun 2024, 12:04:38)
+[2024.06.23-10.04.38:367][100]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.06.23-10.04.38:374][100]LogPlayLevel: PIE: StaticDuplicateObject took: (0.007866s)
+[2024.06.23-10.04.38:374][100]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.007893s)
+[2024.06.23-10.04.38:385][100]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2024.06.23-10.04.38:388][100]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.23-10.04.38:388][100]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.23-10.04.38:389][100]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.06.23-10.04.38:389][100]LogPlayLevel: PIE: World Init took: (0.000731s)
+[2024.06.23-10.04.38:389][100]LogAudio: Display: Creating Audio Device:                 Id: 75, Scope: Unique, Realtime: True
+[2024.06.23-10.04.38:389][100]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.06.23-10.04.38:389][100]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.06.23-10.04.38:389][100]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.06.23-10.04.38:389][100]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.06.23-10.04.38:389][100]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.06.23-10.04.38:389][100]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.06.23-10.04.38:389][100]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.06.23-10.04.38:389][100]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.06.23-10.04.38:390][100]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.06.23-10.04.38:390][100]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.06.23-10.04.38:390][100]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.06.23-10.04.38:391][100]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.06.23-10.04.38:417][100]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.06.23-10.04.38:417][100]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.06.23-10.04.38:417][100]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.06.23-10.04.38:417][100]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.06.23-10.04.38:417][100]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=75
+[2024.06.23-10.04.38:417][100]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=75
+[2024.06.23-10.04.38:419][100]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=75
+[2024.06.23-10.04.38:419][100]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=75
+[2024.06.23-10.04.38:419][100]LogInit: FAudioDevice initialized with ID 75.
+[2024.06.23-10.04.38:419][100]LogAudio: Display: Audio Device (ID: 75) registered with world 'Lvl_Combined'.
+[2024.06.23-10.04.38:419][100]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 75
+[2024.06.23-10.04.38:447][100]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.06.23-10.04.38:448][100]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.06.23-10.04.38:448][100]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.23-10.04.38:449][100]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.23-10.04.38:450][100]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.06.23-11.04.38
+[2024.06.23-10.04.38:450][100]LogWorld: Bringing up level for play took: 0.002658
+[2024.06.23-10.04.38:452][100]LogOnline: OSS: Created online subsystem instance for: :Context_102
+[2024.06.23-10.04.38:453][100]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2024.06.23-10.04.38:455][100]PIE: Server logged in
+[2024.06.23-10.04.38:456][100]PIE: Play in editor total start time 0.089 seconds.
+[2024.06.23-10.04.38:463][100]LogViewport: Scene viewport resized to 1912x992, mode Windowed.
+[2024.06.23-10.04.38:475][101]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.06.23-10.04.38:475][101]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_73.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect

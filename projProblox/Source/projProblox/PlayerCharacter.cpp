@@ -324,13 +324,7 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 	FVector newPos = corePos + direction * radius;
 	SetActorLocation(newPos);
 
-	// Manually calculate and set the rotation
-	FRotator LookAtRotation = FRotationMatrix::MakeFromX(corePos - newPos).Rotator();
-	SetActorRotation(LookAtRotation);
-
-	// Adjust the spring arm's rotation to look at the core
-	FRotator SpringArmRotation = UKismetMathLibrary::FindLookAtRotation(newPos, corePos);
-	camBoom->SetWorldRotation(SpringArmRotation);
+	if(AController* controller = GetController()) controller->SetControlRotation( UKismetMathLibrary::FindLookAtRotation(newPos, corePos));
 }
 
 void APlayerCharacter::Zoom()
