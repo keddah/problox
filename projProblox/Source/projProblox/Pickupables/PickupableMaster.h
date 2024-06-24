@@ -365,12 +365,7 @@ public:
 	/////////////// Other ///////////////
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	
-	virtual void SetEnableMesh(const bool enable) const
-	{
-		mesh->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
-		mesh->SetHiddenInGame(!enable);
-		mesh->SetSimulatePhysics(enable);
-	}
+	virtual void SetShowMesh(const bool show) const { mesh->SetHiddenInGame(!show); }
 	
 	// Enable/Disable gravity when selected/deselected
 	virtual void ToggleGravity() const

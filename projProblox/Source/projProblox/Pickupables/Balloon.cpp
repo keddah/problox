@@ -42,6 +42,8 @@ void ABalloon::BeginPlay()
 		Cast<ACubeCore>(coreActor)->onReset.AddDynamic(this, &ABalloon::ResetBalloon);
 		Cast<ACubeCore>(coreActor)->onStartGame.AddDynamic(this, &ABalloon::SaveResetTransform);
 	}
+
+	mesh->SetSimulatePhysics(false);
 }
 
 void ABalloon::Ability(float deltaTime)
@@ -87,6 +89,7 @@ EOperations ABalloon::SetSelected(const bool value)
 	{
 		wasDetached = isAttached;
 		Detach(false);
+		mesh->SetEnableGravity(false);
 		
 		canPlace = true;
 		return {EOperations::Detach};
@@ -97,9 +100,11 @@ EOperations ABalloon::SetSelected(const bool value)
 
 	if(!previousObj) previousObj = parentCore;
 	
-	SetEnableMesh(true);
+	SetShowMesh(true);
+	
 	UseSilhouetteTransform();
 	ResetGhost();
+	Attach();
 
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
@@ -157,7 +162,8 @@ void ABalloon::Detach(const bool push)
 		const float launchForce = GetMass();
 
 		constexpr float maxVelocity = 1000;
-		SetEnableMesh(true);
+		SetShowMesh(true);
+		mesh->SetSimulatePhysics(true);
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
 	

@@ -179,7 +179,7 @@ void ACubeConnector::PlacementAgain(ACubeCore* core, const FName& socket)
 
 	parentCore = core;
 	if(socket != NAME_None) attachedSocket = socket;
-	SetEnableMesh(false);
+	SetShowMesh(false);
 	GhostPlacement();
 }
 
@@ -261,7 +261,7 @@ EOperations ACubeConnector::SetSelected(const bool value)
 
 	// Reset the ghost's rotation
 	ResetGhost();
-	SetEnableMesh(true);
+	SetShowMesh(true);
 
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);

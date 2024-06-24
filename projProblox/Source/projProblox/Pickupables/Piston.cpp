@@ -26,6 +26,7 @@ void APiston::Ability(const float deltaTime)
 
 	if(!parentCore) return;
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
+	flatHead->SetCollisionResponseToAllChannels(moving? ECR_Block : ECR_Overlap);
 
 	const FVector targetPos = active? FVector::UpVector * pushExtent : FVector::ZeroVector;
 	const FVector relativePos = flatHead->GetRelativeLocation();
@@ -38,7 +39,6 @@ void APiston::Ability(const float deltaTime)
 	// The center of the core...
 	const FVector start = parentCore->GetActorLocation();
 	const FVector end = flatHead->GetComponentLocation() + flatHead->GetUpVector() * 10 / flatHead->GetRelativeScale3D().Z; 
-	
 	flatHead->SetRelativeLocation(UKismetMathLibrary::VLerp(relativePos, targetPos, pushSpeed * deltaTime));
 
 	// If the target position hasn't been met and the relative position is towards the middle of the movement.
@@ -80,7 +80,7 @@ void APiston::SetAbilityActive(const bool value)
 	canPush = flatHead->GetRelativeLocation().Length() < 20;
 }
 
-void APiston::SetEnableMesh(const bool enable) const
+void APiston::SetShowMesh(const bool enable) const
 {
 	mesh->SetHiddenInGame(!enable);
 	flatHead->SetHiddenInGame(!enable);
@@ -108,7 +108,7 @@ void APiston::Detach(bool push)
 		const float launchForce = GetMass();
 		constexpr float maxVelocity = 1000;
 
-		SetEnableMesh(true);
+		SetShowMesh(true);
 		ReEnablePhysics(); // The only change
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}

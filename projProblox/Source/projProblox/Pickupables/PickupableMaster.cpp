@@ -287,7 +287,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	if(attachedSocket == NAME_None) return wasDetached? EOperations::Detach : EOperations::Move;
 
 	if(!previousObj) previousObj = parentCore;
-	SetEnableMesh(true);
+	SetShowMesh(true);
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
 	parentCore->AddAttachment(this, attachedSocket);
@@ -328,7 +328,7 @@ void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
 
 	parentCore = core;
 	if(socket != NAME_None) attachedSocket = socket;
-	SetEnableMesh(false);
+	SetShowMesh(false);
 	GhostPlacement();
 }
 
@@ -360,7 +360,9 @@ void APickupableMaster::Detach(const bool push)
 		const float launchForce = GetMass();
 		constexpr float maxVelocity = 1000;
 
-		SetEnableMesh(true);
+		SetShowMesh(true);
+		mesh->SetSimulatePhysics(true);
+
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
 	

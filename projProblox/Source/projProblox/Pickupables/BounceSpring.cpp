@@ -90,9 +90,9 @@ void ABounceSpring::RemoveVelocity() const
 	end->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
-void ABounceSpring::SetEnableMesh(const bool enable) const
+void ABounceSpring::SetShowMesh(const bool enable) const
 {
-	Super::SetEnableMesh(enable);
+	Super::SetShowMesh(enable);
 	end->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
 	end->SetHiddenInGame(!enable);
 }

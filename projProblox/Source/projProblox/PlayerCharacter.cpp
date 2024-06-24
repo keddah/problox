@@ -775,8 +775,9 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 	if(currentMode != EGameMode::Build) return;
 
 	AActor* hitActor = hit.GetActor();
+	if(!hitActor) return;
 	if(hitActor == core) return;
-
+	
 	// Never eject the actual core
 	if(hitActor->IsA<ACubeCore>() && !hitActor->IsA<ACubeConnector>()) return;
 	

@@ -521,11 +521,14 @@ int ACubeCore::SelectSocket(int socket)
 
 void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 {
-	SetEnableMesh(true);
+	mesh->SetSimulatePhysics(true);
 	for (auto& obj : GetCloseAttachments())
 	{
-		obj->SetEnableMesh(true);
-		if(obj->IsA<ABalloon>()) obj->SetActorLocation(pos + obj->GetActorForwardVector() * 150);
+		if(obj->IsA<ABalloon>())
+		{
+			obj->GetMesh()->SetSimulatePhysics(true);
+			obj->SetActorLocation(pos + obj->GetActorForwardVector() * 150);
+		}
 	}
 
 	SetActorLocation(pos);

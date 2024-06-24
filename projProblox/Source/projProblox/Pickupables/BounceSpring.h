@@ -17,7 +17,7 @@ class PROJPROBLOX_API ABounceSpring : public APickupableMaster
 	virtual void ToggleGravity() const override;
 	virtual void ToggleGravity(bool gravityOn) override;
 	virtual void RemoveVelocity() const override;
-	virtual void SetEnableMesh(const bool enable) const override;
+	virtual void SetShowMesh(const bool enable) const override;
 	
 	bool contracting;
 
