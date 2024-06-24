@@ -33,7 +33,7 @@ public:
 	virtual FName GetOppositeSocket(const FName& origin) const;
 	virtual FName GetOppositeSocket(int index) const;
 	
-	// Returns an array of all of the available sockets.
+	// Returns an array of all of the available sockets (if attached to something else it won't be found (for connectors set the oppositeSocket as the opposite of the attached socket and use that for checks...).
 	TArray<FName> GetFreeSockets() const;
 	
 	// Returns an array of all of the sockets that have objects in them.

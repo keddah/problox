@@ -50,8 +50,6 @@ void APlayerCharacter::BeginPlay()
 	zooming = true;
 	Zoom();
 	zooming = false;
-	
-	// InitOrbit();
 }
 
 void APlayerCharacter::Tick(float DeltaSeconds)
@@ -778,6 +776,9 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 
 	AActor* hitActor = hit.GetActor();
 	if(hitActor == core) return;
+
+	// Never eject the actual core
+	if(hitActor->IsA<ACubeCore>() && !hitActor->IsA<ACubeConnector>()) return;
 	
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
@@ -793,5 +794,58 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 		
 		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 3, false);
 	}
+}
 
+void APlayerCharacter::EjectAll()
+{
+	if(currentMode != EGameMode::Build) return;
+
+	if(!core) return;
+
+	for (auto& obj : core->GetCloseAttachments())
+	{
+		core->EjectObject(obj);
+		
+		UWorld* wrld = GetWorld();
+		if(!wrld) return;
+
+		FTimerHandle destroyHandle;
+		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
+		
+		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 3, false);
+	}
+}
+
+void APlayerCharacter::ChangeCore(const float value)
+{
+	if(value == 0) return;
+	if(!core) return;
+
+	TArray<ACubeCore*> connectors;
+	connectors.AddUnique(core);
+	for(const auto& obj : core->AllObjsInHierarchy())
+	{
+		if(ACubeCore* connector = Cast<ACubeCore>(obj)) connectors.AddUnique(connector);
+	}
+	
+	short index = connectors.IndexOfByKey(core) + value;
+	if(index >= connectors.Num()) index = 0;
+	if(index < 0) index = connectors.Num() - 1;
+	
+	core = connectors[index];
+
+	// The camera fixates on the new core.
+	orbiting = true;
+	zooming = true;
+	OrbitControls(1);
+	zooming = false;
+	orbiting = false;
+
+	if(selectedObj != core && IsValid(selectedObj))
+	{
+		selectedObj->SetCore(core);
+		selectedObj->PlacementAgain(core, selectedSocket);
+	}
+	else Print("Tried to set the core as the selected object...", 4)
+	
 }

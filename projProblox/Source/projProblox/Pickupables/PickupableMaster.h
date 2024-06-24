@@ -369,6 +369,7 @@ public:
 	{
 		mesh->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
 		mesh->SetHiddenInGame(!enable);
+		mesh->SetSimulatePhysics(enable);
 	}
 	
 	// Enable/Disable gravity when selected/deselected

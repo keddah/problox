@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.projProblox.1.cpp.obj": [
+			"AudioManager.cpp.obj",
 			"ActionHistory.gen.cpp.obj",
 			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
@@ -23,9 +24,7 @@
 			"Grappler.gen.cpp.obj",
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
-			"Hoverer.gen.cpp.obj"
-		],
-		"Module.projProblox.2.cpp.obj": [
+			"Hoverer.gen.cpp.obj",
 			"LevelManager.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
@@ -39,13 +38,12 @@
 			"SpawnPoint.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
-			"WedgeConnector.gen.cpp.obj"
-		],
-		"Module.projProblox.3.cpp.obj": [
+			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
-			"Wheels.gen.cpp.obj",
-			"AudioManager.cpp.obj",
+			"Wheels.gen.cpp.obj"
+		],
+		"Module.projProblox.2.cpp.obj": [
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
@@ -57,13 +55,8 @@
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
-			"CubeConnector.cpp.obj",
-			"CuboidConnector.cpp.obj",
-			"WedgeConnector.cpp.obj",
-			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
-			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
@@ -77,11 +70,16 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj"
+			"ActionHistory.cpp.obj",
+			"CubeConnector.cpp.obj",
+			"CuboidConnector.cpp.obj",
+			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
+			"CubeSocketInfo.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }

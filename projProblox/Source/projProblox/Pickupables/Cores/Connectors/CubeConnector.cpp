@@ -169,6 +169,20 @@ void ACubeConnector::Placement()
 	GhostPlacement();
 }
 
+void ACubeConnector::PlacementAgain(ACubeCore* core, const FName& socket)
+{
+	if(!core)
+	{
+		Print("The given core was invalid... ~ OtherPlacement.", 7)
+		return;
+	}
+
+	parentCore = core;
+	if(socket != NAME_None) attachedSocket = socket;
+	SetEnableMesh(false);
+	GhostPlacement();
+}
+
 void ACubeConnector::GhostPlacement()
 {
 	RemoveVelocity();
@@ -247,12 +261,15 @@ EOperations ACubeConnector::SetSelected(const bool value)
 
 	// Reset the ghost's rotation
 	ResetGhost();
-	
+	SetEnableMesh(true);
+
 	// Attach the actor to the parent with the target socket
 	AttachToActor(parentCore, attachRules, attachedSocket);
 
 	isAttached = true;
 	parentCore->AddAttachment(this, attachedSocket);
+	FindOppositeSocket();
+	
 	soundPlayer->PlayAttach();
 	return EOperations::Attach;
 }
@@ -310,6 +327,16 @@ void ACubeConnector::Reattach(const bool sound)
 	isAttached = true;
 }
 
+void ACubeConnector::FindOppositeSocket()
+{
+	if(attachedSocket == "FRONT") oppositeSocket = "BACK";
+	else if(attachedSocket == "BACK") oppositeSocket = "FRONT";
+	else if(attachedSocket == "LEFT") oppositeSocket = "RIGHT";
+	else if(attachedSocket == "RIGHT") oppositeSocket = "LEFT";
+	else if(attachedSocket == "UP") oppositeSocket = "DOWN";
+	else if(attachedSocket == "DOWN") oppositeSocket = "UP";
+}
+
 void ACubeConnector::Detach(const bool push)
 {
 	ResetGhost();
@@ -358,7 +385,8 @@ void ACubeConnector::Detach(const bool push)
 void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
 {
 	attachedSocket = socket;
-
+	FindOppositeSocket();
+	
 	if(!useDirection) return;
 
 	RearrangeSockets();
@@ -375,6 +403,23 @@ void ACubeConnector::SetAbilityActive(bool value)
 	GetDescendents(self, children);
 	
 	for (const auto& obj : children) obj->SetAbilityActive(value);
+}
+
+void ACubeConnector::CycleRaySocket(const bool next)
+{
+	const TArray<FName> freeSockets = GetFreeSlots();
+
+	if(freeSockets.IsEmpty()) return;
+
+	short index = freeSockets.IndexOfByKey(raySocket) + (next? 1: -1);
+	if(index >= freeSockets.Num()) index = 0;
+	if(index < 0) index = freeSockets.Num() - 1;
+	
+	if(freeSockets.IsValidIndex(index)) raySocket = freeSockets[index];
+	else Print("Bad socket index when cycling ray socket...", 5)
+	Print(raySocket.ToString(), 4)
+	
+	GhostPlacement();
 }
 
 

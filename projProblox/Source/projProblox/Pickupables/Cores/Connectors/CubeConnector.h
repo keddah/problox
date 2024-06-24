@@ -49,6 +49,9 @@ public:
 	virtual EOperations SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 
+	UFUNCTION(BlueprintCallable)
+	void CycleRaySocket(bool next);
+	
 	// The parameter is the parentCore
 	virtual void ApplyOffset(const ACubeCore* core) override;
 	
@@ -68,15 +71,16 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* downArrow;
 
-	
 	virtual void BeginPlay() override;
 	virtual void Placement() override;
+	virtual void PlacementAgain(ACubeCore* core, const FName& socket) override;
 	virtual void GhostPlacement() override;
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual void SetupPlaceIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	virtual void Reattach(bool sound) override;
-
+	virtual void FindOppositeSocket();
+	
 	// Overriding so that it reverts back to the PickupableMaster version of "Detach"
 	virtual void Detach(bool push = false) override;
 };

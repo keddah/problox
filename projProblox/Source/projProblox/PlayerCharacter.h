@@ -200,6 +200,12 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(const FHitResult& hit);
 	
+	UFUNCTION(BlueprintCallable)
+	void EjectAll();
+
+	UFUNCTION(BlueprintCallable)
+	void ChangeCore(float value);
+
 	
 	/////////////// Game States ///////////////
 	UFUNCTION()

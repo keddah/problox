@@ -33,6 +33,7 @@ class PROJPROBLOX_API ACuboidConnector : public ACubeConnector
 	virtual void SetupPlaceIndicator() override;
 	virtual void SetHideIndicator(const bool hide) override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
+	virtual void FindOppositeSocket() override;
 	
 	TArray<FVector> socketDifferences;
 	
@@ -40,5 +41,5 @@ class PROJPROBLOX_API ACuboidConnector : public ACubeConnector
 	const FVector& GetSocketDifference(const FName& socket);
 
 public:
-	void AlignSockets(const FName& socket, ACubeCore* parent = 0);
+	void AlignSockets(const FName& socket, const ACubeCore* parent = 0);
 };

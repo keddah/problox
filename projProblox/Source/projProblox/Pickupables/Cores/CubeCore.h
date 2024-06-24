@@ -161,6 +161,9 @@ protected:
 	/////////////// Selection/Placement ///////////////
 	// The socket that the placement ray from this object is firing from
 	FName raySocket = "DOWN";
+
+	// The socket opposite to the attached socket (should always be blocked)
+	FName oppositeSocket;
 	
 	
 	/////////////// Collection ///////////////
@@ -286,7 +289,13 @@ public:
 		return out;
 	}
 
-	TArray<FName> GetFreeSlots() const { return socketInfo->GetFreeSockets(); };
+	TArray<FName> GetFreeSlots() const
+	{
+		Print(oppositeSocket.ToString(), 4)
+		TArray<FName> slots = socketInfo->GetFreeSockets();
+		if(slots.Contains(oppositeSocket)) slots.Remove(oppositeSocket);
+		return slots;
+	}
 
 	virtual bool GetIsAttached() const override { return parentCore || isAttached; }
 	

@@ -102,6 +102,20 @@ float ACuboidConnector::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
+void ACuboidConnector::FindOppositeSocket()
+{
+	if(attachedSocket == "FRONT") oppositeSocket = "BACK";
+	else if(attachedSocket == "BACK") oppositeSocket = "FRONT";
+	else if(attachedSocket == "LEFT1") oppositeSocket = "RIGHT1";
+	else if(attachedSocket == "RIGHT1") oppositeSocket = "LEFT1";
+	else if(attachedSocket == "LEFT2") oppositeSocket = "RIGHT2";
+	else if(attachedSocket == "RIGHT2") oppositeSocket = "LEFT2";
+	else if(attachedSocket == "UP1") oppositeSocket = "DOWN1";
+	else if(attachedSocket == "DOWN1") oppositeSocket = "UP1";
+	else if(attachedSocket == "UP2") oppositeSocket = "DOWN2";
+	else if(attachedSocket == "DOWN2") oppositeSocket = "UP2";
+}
+
 void ACuboidConnector::GhostPlacement()
 {
 	// Keep all the rotations stuff the same...
@@ -138,7 +152,7 @@ const FVector& ACuboidConnector::GetSocketDifference(const FName& socket)
 	return {};
 }
 
-void ACuboidConnector::AlignSockets(const FName& socket, ACubeCore* parent)
+void ACuboidConnector::AlignSockets(const FName& socket, const ACubeCore* parent)
 {
 	if(!parent) parent = parentCore; 
 	
@@ -150,5 +164,6 @@ void ACuboidConnector::AlignSockets(const FName& socket, ACubeCore* parent)
 	const float offset = addOffset? GetAttachOffset(*parent) + 50 : GetAttachOffset(*parent);
 	const FVector relativePos = silhouette->GetRelativeLocation();
 
+	PrintVector(FVector(offset, relativePos.Y,relativePos.Z), 4)
 	silhouette->SetRelativeLocation({offset, relativePos.Y,relativePos.Z});
 }
