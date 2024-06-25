@@ -71,7 +71,6 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
@@ -81,7 +80,8 @@
 			"CubeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
 			"PickupableMaster.cpp.obj",
-			"Piston.cpp.obj"
+			"Piston.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }
