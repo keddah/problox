@@ -34,7 +34,7 @@ ACellSpawner::ACellSpawner()
 void ACellSpawner::BeginPlay()
 {
 	Super::BeginPlay();
-
+	previewed = !triggerable;
 }
 
 void ACellSpawner::Init(ACubeCore* core)
@@ -47,10 +47,10 @@ void ACellSpawner::Init(ACubeCore* core)
 		return;
 	}
 
-	active = !triggerable;
+	// if (!triggerable && core) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
+	if (core) core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
 
-	if (!triggerable && core) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
-	else if (core) core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
+	EarlySpawn();
 }
 
 void ACellSpawner::Overlap(AActor* otherActor)
@@ -116,13 +116,19 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FAct
 
 void ACellSpawner::BeginSpawn()
 {
+	if(previewed) return;
 	if(!wrld)
 	{
 		Print("World was invalid... couldn't spawn cells.", 5)
 		return;
 	}
-	if(!active) return;
 
+	if(spawned)
+	{
+		Print("Already spawned...", 4)
+		return;
+	}
+	
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
@@ -138,7 +144,41 @@ void ACellSpawner::BeginSpawn()
 
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
-	active = false;
+	spawned = true;
+}
+
+void ACellSpawner::EarlySpawn()
+{
+	if(!previewed) return;
+	if(triggerable) return;
+	if(!wrld)
+	{
+		Print("World was invalid... couldn't spawn cells.", 5)
+		return;
+	}
+	if(spawned)
+	{
+		Print("Already spawned...", 4)
+		return;
+	}
+	
+	const FVector thisPos = GetActorLocation();
+	const FRotator rot = GetActorRotation();
+
+	FActorSpawnParameters params;
+	params.bNoFail = true;
+	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
+	{
+		params.OverrideLevel = wrld->GetStreamingLevels()[instance->GetCurrentLevel()]->GetLoadedLevel();
+	}
+
+	// If spawn radius isn't set, the spawn position will be this position.
+	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
+
+	// Spawn a new Thing for however many spawnAmount says to.
+	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
+	Print("Spawning", 4)
+	spawned = true;
 }
 
 void ACellSpawner::SpawnWithForce()
@@ -172,5 +212,5 @@ void ACellSpawner::SpawnWithForce()
 		const FVector direction = GetActorForwardVector().RotateAngleAxis(FMath::RandRange(0, coneRadius), {1,0,0});
 		cell->GetMesh()->AddImpulse(direction * spawnForce, "", true);
 	}
-	active = false;
+	spawned = true;
 }

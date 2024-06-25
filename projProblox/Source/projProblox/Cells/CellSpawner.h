@@ -32,7 +32,7 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 {
 	GENERATED_BODY()
 
-	bool active;
+	bool spawned = false;
 
 	UFUNCTION(BlueprintCallable)
 	virtual void Overlap(AActor* otherActor);
@@ -74,7 +74,10 @@ protected:
 	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
 	int32 spawnAmount = 1;
-
+	
+	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "Whether to spawn the cells as soon as the level is loaded"))
+	bool previewed = true;
+		
 	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "The maximum amount of cells that can spawn from this spawner..."))
 	int32 maxSpawnAmount = 50;
 
@@ -99,13 +102,14 @@ public:
 	void Init(ACubeCore* core);
 	
 	UFUNCTION(BlueprintCallable)
-	bool IsActive() const { return active; }
+	bool IsActive() const { return spawned; }
 
 	UFUNCTION(BlueprintCallable)
-	void Activate() { active = true; }
+	void Activate() { spawned = true; }
 	
 	UFUNCTION(BlueprintCallable)
 	void BeginSpawn();
+	void EarlySpawn();
 
 	void SpawnWithForce();
 
