@@ -671,6 +671,7 @@ void APlayerCharacter::Deselect()
 
 void APlayerCharacter::Confirm()
 {
+	if(currentMode != EGameMode::Build) return;
 	if(!selectedObj)
 	{
 		Print("Couldnt confirm because there was no selected object...", 6)
@@ -819,6 +820,7 @@ void APlayerCharacter::EjectAll()
 
 void APlayerCharacter::ChangeCore(const float value)
 {
+	if(currentMode != EGameMode::Build) return;
 	if(value == 0) return;
 	if(!core) return;
 

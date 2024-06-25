@@ -181,6 +181,7 @@ void ACubeConnector::PlacementAgain(ACubeCore* core, const FName& socket)
 	if(socket != NAME_None) attachedSocket = socket;
 	SetShowMesh(false);
 	GhostPlacement();
+	GhostSnapRotateMesh(true, "Q");
 }
 
 void ACubeConnector::GhostPlacement()
