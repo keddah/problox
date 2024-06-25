@@ -105,7 +105,7 @@ public:
 
 		try
 		{
-			success = UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
+			// success = UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
 			if (!success) Print("money save failed...", 6);
 		}
 		catch (const std::exception& e)

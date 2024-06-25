@@ -111,9 +111,6 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin vertically (On the global axis)."))
 	FVector vertAxis {0, 1,0};
 
-	// Used to properly denote the amount of horizontal rotation the player has applied whilst the object has been held.
-	float appliedYaw = 0;
-	
 	UPROPERTY(EditDefaultsOnly)
 	float ascensionSpeed = 2.5f;
 	
@@ -249,7 +246,7 @@ public:
 	virtual void SnapRotateMesh(bool hori, FString keypress);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
-	virtual void GhostSnapRotateMesh(const FString& keypress);
+	virtual void GhostSnapRotateMesh(bool hori, const FString& keypress);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);

@@ -330,6 +330,7 @@ void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
 	if(socket != NAME_None) attachedSocket = socket;
 	SetShowMesh(false);
 	GhostPlacement();
+	// GhostSnapRotateMesh(true, "Q");
 }
 
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -508,8 +509,8 @@ void APickupableMaster::AlignSocketRot(const bool useDirection)
 void APickupableMaster::ResetRotation(const bool resetVelocity)
 {
 	SetActorRotation(defaultRot);
-	appliedYaw = 0;
 	if(resetVelocity) RemoveVelocity();
+	GhostPlacement();
 }
 
 void APickupableMaster::RotateVert(const float axis, const float rotSpeed)
@@ -524,11 +525,6 @@ void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
 	if(horiAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
 	else if(horiAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
 	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
-	appliedYaw += axis * rotSpeed;
-	
-	// Wrap appliedYaw to -180 / 180
-	if (appliedYaw > 180) appliedYaw -= 360;
-	else if (appliedYaw < -180) appliedYaw += 360;
 }
 
 void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
@@ -540,11 +536,6 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
 		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
 		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-		appliedYaw += turn;
-		
-		// Wrap appliedYaw to -180 / 180
-		if (appliedYaw > 180) appliedYaw -= 360;
-		else if (appliedYaw < -180) appliedYaw += 360;
 		return;
 	}
 
@@ -553,17 +544,12 @@ void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
 	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
 }
 
-void APickupableMaster::GhostSnapRotateMesh(const FString& keypress)
+void APickupableMaster::GhostSnapRotateMesh(const bool hori, const FString& keypress)
 {
 	if(snapRot) return;
 	
 	const float turn = keypress == "Q" ? -90 : 90;
 	silhouette->AddRelativeRotation({0,0,turn});
-
-	// Wrap appliedYaw to -180 / 180
-	appliedYaw += turn;
-	if (appliedYaw > 180) appliedYaw -= 360;
-	else if (appliedYaw < -180) appliedYaw += 360;
 }
 
 

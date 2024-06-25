@@ -72,57 +72,62 @@ void AWedgeConnector::GhostPlacement()
 	
 	///////////// Rotation
 	// If the diagonal sides of 2 wedges are trying to attach...
-	if(attachDiag && isDiag)
+	if(isDiag)
 	{
-		// Always make the slopes touch each other.
-		silhouette->SetRelativeRotation({135,0,0});
-		SetGhostBlocked();
+		silhouette->SetRelativeRotation({135, 0, 0});
 		return;
 	}
-
-	const FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
-	FRotator attachRot = DiagRoundRot(GetActorRotation(), socketRot, isDiag);
-	silhouette->SetWorldRotation(attachRot);
-
-	// Ignore if the X and Y vectors aren't low...
-	constexpr float aboveThreshold = .075f;
-	const bool upright = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
-
-	// Whether the attached socket is the diagonal side of a wedge...
-	const unsigned short rounder = attachDiag? 45 : 90; 
+	// if(attachDiag && isDiag)
+	// {
+	// 	// Always make the slopes touch each other.
+	// 	silhouette->SetRelativeRotation({135,0,0});
+	// 	SetGhostBlocked();
+	// 	return;
+	// }
+	//
+	// const FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
+	// FRotator attachRot = DiagRoundRot(GetActorRotation(), socketRot, isDiag);
+	// silhouette->SetWorldRotation(attachRot);
+	//
+	// // Ignore if the X and Y vectors aren't low...
+	// constexpr float aboveThreshold = .075f;
+	// const bool upright = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
+	//
+	// // Whether the attached socket is the diagonal side of a wedge...
+	const unsigned short rounder = isDiag? 45 : 90; 
 	const FRotator relativeRot = mesh->GetSocketTransform(raySocket).GetRelativeTransform(parentCore->GetActorTransform()).Rotator();
-	
-	// Rounded is true if the xyz relative rotations are factors of the rounder (45/90)
+	//
+	// // Rounded is true if the xyz relative rotations are factors of the rounder (45/90)
 	const bool rounded = FMath::RoundToInt(relativeRot.Roll) % rounder == 0 && FMath::RoundToInt(relativeRot.Pitch) % rounder == 0 && FMath::RoundToInt(relativeRot.Yaw) % rounder == 0;  
 	// if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
-
-	if(attachDiag && !upright) attachRot.Yaw = socketRot.Yaw;
-	silhouette->SetWorldRotation(attachRot);
-	
-	// Ensure that when above an object and the raySocket is the hypotenuse side, the hyp side always faces the bottom but the other axis can still be used..
-	if(isDiag && upright)
-	{
-		// Basically just used to round the hypotenuse side...
-		FRotator roundRot = RoundAxis(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), {-45,90,90});
-		roundRot.Pitch = FMath::Clamp(roundRot.Pitch, -45, 0);
-
-		const FRotator roundYaw = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation());
-		silhouette->SetWorldRotation({roundRot.Pitch, roundYaw.Yaw, roundRot.Roll});
-		SetGhostBlocked();
-		return;
-	}
-
-	else if(isDiag)
-	{
-		silhouette->SetRelativeRotation({135,0,0});
-		SetGhostBlocked();
-		return;
-	}
-
-	// If the current rotation isn't aligned with the socket rotation (the relative rotation since it's already attached)...
-	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
+	//
+	// if(attachDiag && !upright) attachRot.Yaw = socketRot.Yaw;
+	// silhouette->SetWorldRotation(attachRot);
+	//
+	// // Ensure that when above an object and the raySocket is the hypotenuse side, the hyp side always faces the bottom but the other axis can still be used..
+	// if(isDiag && upright)
+	// {
+	// 	// Basically just used to round the hypotenuse side...
+	// 	FRotator roundRot = RoundAxis(silhouette->GetComponentRotation(), parentCore->GetActorRotation(), {-45,90,90});
+	// 	roundRot.Pitch = FMath::Clamp(roundRot.Pitch, -45, 0);
+	//
+	// 	const FRotator roundYaw = RoundRotation(silhouette->GetComponentRotation(), parentCore->GetActorRotation());
+	// 	silhouette->SetWorldRotation({roundRot.Pitch, roundYaw.Yaw, roundRot.Roll});
+	// 	SetGhostBlocked();
+	// 	return;
+	// }
+	//
+	// else if(isDiag)
+	// {
+	// 	silhouette->SetRelativeRotation({135,0,0});
+	// 	SetGhostBlocked();
+	// 	return;
+	// }
+	//
+	// // If the current rotation isn't aligned with the socket rotation (the relative rotation since it's already attached)...
+	// // just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
 	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
-	SetGhostBlocked();
+	// SetGhostBlocked();
 }
 
 void AWedgeConnector::SnapRotateMesh(bool hori, FString keypress)
@@ -136,17 +141,38 @@ void AWedgeConnector::SnapRotateMesh(bool hori, FString keypress)
 		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
 		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
 		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-		appliedYaw += turn;
-		
-		// Wrap appliedYaw to -180 / 180
-		if (appliedYaw > 180) appliedYaw -= 360;
-		else if (appliedYaw < -180) appliedYaw += 360;
 		return;
 	}
 
 	if(vertAxis.X != 0) AddActorWorldRotation({0,0, turn});
 	else if(vertAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
 	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
+}
+
+void AWedgeConnector::GhostSnapRotateMesh(const bool hori, const FString& keypress)
+{
+	// If rotating horizontally use 90 degree turns.
+	const float angle = hori? 90 : 45;
+	const float turn = keypress == "Q" ? -angle : angle;
+		
+	// Horizontal rotations
+	if(hori)
+	{
+		if(raySocket == "DOWN" || raySocket == "BACK")
+		{
+			const FRotator relRot = silhouette->GetRelativeRotation();
+			silhouette->SetRelativeRotation({0,0, relRot.Roll});
+			silhouette->AddRelativeRotation({0,0,turn});
+		}
+	}
+
+	// Vertical rotations
+	else silhouette->AddRelativeRotation({turn,0,0});
+	Print(raySocket.ToString(), 4);
+
+	if(!parentCore) return;
+
+	silhouette->SetRelativeLocation({GetAttachOffset(*parentCore),0,0});
 }
 
 void AWedgeConnector::Tick(float DeltaSeconds)

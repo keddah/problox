@@ -34,6 +34,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 
 	void FindCore();
 	void FindSpawns();
+	void SpawnPreviewCells();
 
 	// Doing in BP because its being weird.
 	// void UnlockInitialSpawns();
@@ -88,7 +89,7 @@ public:
 	// Returns whether the loaded level. 
 	UFUNCTION(BlueprintCallable)
 	void LoadLevel(int lvlIndex, int spawnPoint = 0, const bool initialLoad = false);
-
+	
 	int GetLevelIndex(ULevel* lvl) const
 	{
 		if (!lvl) return -1;

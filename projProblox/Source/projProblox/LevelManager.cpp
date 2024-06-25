@@ -97,7 +97,8 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	currentLevel = lvlIndex;
 	if(!levels.IsValidIndex(currentLevel)) return;
 	if(!levels[currentLevel]) return;
-	
+	// SpawnPreviewCells();
+
 	if(!levels[currentLevel]->IsLevelLoaded())
 	{
 		levels[currentLevel]->SetShouldBeLoaded(true);
@@ -255,6 +256,18 @@ void ALevelManager::FindSpawns()
 
 	// If there wasn't a save file...
 	LoadUnlockedSpawns();
+}
+
+void ALevelManager::SpawnPreviewCells()
+{
+	UWorld* streamingWrld = levels[currentLevel]->GetStreamingWorld();
+	TArray<AActor*> cellActors;
+	
+	UGameplayStatics::GetAllActorsOfClass(streamingWrld, ACellSpawner::StaticClass(), cellActors);
+	for (auto& cellActor : cellActors)
+	{
+		if(ACellSpawner* cell = Cast<ACellSpawner>(cellActor)) cell->EarlySpawn();
+	}
 }
 
 // void ALevelManager::UnlockInitialSpawns()
