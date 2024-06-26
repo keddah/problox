@@ -243,7 +243,7 @@ void ABalloon::UseSilhouetteTransform(const UStaticMeshComponent* ghost)
 	savedAttachTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
 }
 
-void ABalloon::ResetBalloon(const int empty)
+void ABalloon::ResetBalloon()
 {
 	mesh->SetHiddenInGame(false);
 	string->bAttachStart = true;

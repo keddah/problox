@@ -26,6 +26,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGetCore); \
 	DECLARE_FUNCTION(execEndGame); \
 	DECLARE_FUNCTION(execChangeCore); \
+	DECLARE_FUNCTION(execAdjustCore); \
 	DECLARE_FUNCTION(execEjectObject); \
 	DECLARE_FUNCTION(execSpawnFromBuyable); \
 	DECLARE_FUNCTION(execBuildControls); \
@@ -36,6 +37,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGroupSelect); \
 	DECLARE_FUNCTION(execSelectObject); \
 	DECLARE_FUNCTION(execEjectAll); \
+	DECLARE_FUNCTION(execGoToCore); \
 	DECLARE_FUNCTION(execManualSelectObject); \
 	DECLARE_FUNCTION(execGetGameMode); \
 	DECLARE_FUNCTION(execSetGameMode); \

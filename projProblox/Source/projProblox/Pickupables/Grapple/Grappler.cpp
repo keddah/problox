@@ -38,18 +38,19 @@ void AGrappler::Ability(const float deltaTime)
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
 
 	if(!active) return;
+
+	// STILL CRASHES SOMEHOW....
+	if(!wrld) return;
+	
 	FActorSpawnParameters params;
 	params.Owner = this;
 	params.bNoFail = true;
-	
+
 	// Destroy the hook if one is already valid.
 	if(hook) hook->Destroy();
 
 	// Spawn and set the hook
-	// STILL CRASHES SOMEHOW....
-	// if(!wrld) return;
-
-	if(wrld != nullptr) if(grappleSpawn && grappleHeadClass) hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	if(grappleSpawn && grappleHeadClass) hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
 //
 	// Deactivate so that this doesn't happen repeatedly

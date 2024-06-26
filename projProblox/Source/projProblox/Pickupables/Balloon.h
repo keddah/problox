@@ -28,7 +28,7 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = 0) override;
 	
 	UFUNCTION(BlueprintCallable)
-	void ResetBalloon(int empty);
+	void ResetBalloon();
 
 	UFUNCTION()
 	void SaveResetTransform() { resetTransform = GetActorTransform(); }

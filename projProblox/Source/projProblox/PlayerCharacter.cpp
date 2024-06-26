@@ -42,7 +42,7 @@ void APlayerCharacter::BeginPlay()
 	}
 	if(!IsValid(core)) Print("Core Invalid... ~ player", 5);
 	
-	// core->onGameEnd.AddDynamic(this, &APlayerCharacter::EndGame);
+	core->onReset.AddDynamic(this, &APlayerCharacter::GoToCore);
 
 	history = NewObject<UActionHistory>();
 	buildPhase = true;
@@ -349,7 +349,7 @@ void APlayerCharacter::Zoom()
 {
 	if(currentMode != EGameMode::Build) return;
 	if (!zooming) return;
-
+	
 	const float armLength = camBoom->TargetArmLength;
 	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
@@ -454,6 +454,18 @@ void APlayerCharacter::Respawn(const FVector& pos, const FRotator& rot)
 	orbiting = false;
 	
 	camBoom->TargetArmLength = 0;
+}
+
+void APlayerCharacter::GoToCore()
+{
+	if(!core) return;
+
+	const FVector corePos = core->GetActorLocation();
+	const FVector direction = -GetActorForwardVector();
+	const FVector newPos = corePos + (direction * 600) + FVector(0,0,300);
+	
+	SetActorLocation(newPos);
+	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(newPos, corePos));
 }
 
 void APlayerCharacter::SelectObject(const FHitResult& hit)
@@ -765,6 +777,9 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 			buyable->UnlockAttachment();
 			return;
 		}
+
+		// Don't do anything if there aren't any free slots...
+		if(core->GetFreeSlots().IsEmpty()) return;
 		
 		UWorld* wrld = GetWorld();
 		if(!wrld)
@@ -819,6 +834,61 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 		
 		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 3, false);
 	}
+}
+
+void APlayerCharacter::AdjustCore(const FHitResult& hit)
+{
+	// Can't do it if the core is moving
+	if(core->GetVelocity().Length() > adjustSpeedThreshold) return;
+		
+	// Only when the game isn't playing but in the actual levels
+	if(currentMode != EGameMode::Story) return;
+	if(!buildPhase) return;
+	
+	if(!hit.bBlockingHit) return;
+	AActor* AHit = hit.GetActor();
+	if(!core) return;
+
+	Print(hit.GetComponent()->GetName(), 3)
+	APickupableMaster* hitObj = Cast<APickupableMaster>(AHit);
+	if(!hitObj) return;
+
+	// If the cast is successful... Try to get its parent
+	selectedObj = hitObj->GetParent();
+
+	// If the object's parent is valid...
+	if(IsValid(selectedObj))
+	{
+		// Its parent is always a core.
+		// Prevent the core from being picked up if it's out of range
+		if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
+		{
+			if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
+			{
+				// Return if can't pickup
+				holding = false;
+				selectedObj = 0;
+				return;
+			}
+		}
+	}
+
+	// If the object doesn't have a parent....
+	else selectedObj = hitObj;
+
+	if(!IsValid(selectedObj)) return;
+
+	selectedObj->SetGroupSelected(true);
+
+	selectedObj = core;
+	constexpr float heightOffset = 100;
+	const FVector corePos = core->GetActorLocation();
+
+	core->SetSelected(true);
+	core->SetActorLocation({corePos.X, corePos.Y, corePos.Z + heightOffset});
+	const FRotator forwardRot = GetActorForwardVector().Rotation();
+	
+	core->SetActorRotation({0, forwardRot.Yaw, 0});
 }
 
 void APlayerCharacter::EjectAll()

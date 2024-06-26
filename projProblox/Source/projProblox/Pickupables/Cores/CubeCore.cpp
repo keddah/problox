@@ -316,7 +316,7 @@ void ACubeCore::ResetToStart()
 	//
 	// attempts++;
 	buildPhase = true;
-	onReset.Broadcast(attempts);
+	onReset.Broadcast();
 }
 
 // When the start button is pressed....

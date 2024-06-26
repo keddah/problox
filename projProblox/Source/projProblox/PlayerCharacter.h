@@ -97,6 +97,9 @@ protected:
 	UPROPERTY(BlueprintReadWrite, Category = "Controls", meta = (ToolTip = "Whether to rotate on the horizontal or vertical axis"))
 	bool rotateHori = true;
 	
+	UPROPERTY(EditDefaultsOnly, Category = "Controls",  BlueprintReadOnly, meta = (ToolTip = "The max speed the core is allowed to be going when trying to adjust the core's rotation.", Delta = .05f))
+	float adjustSpeedThreshold = .6;
+	
 	
 	/////////////// Camera ///////////////
 	UPROPERTY(EditDefaultsOnly, Category = "Camera", BlueprintReadOnly)
@@ -176,6 +179,9 @@ public:
 
 	void Respawn(const FVector& pos, const FRotator& rot);
 
+	UFUNCTION()
+	void GoToCore();
+	
 	UFUNCTION(BlueprintCallable)
 	void EjectAll();
 	
@@ -210,6 +216,9 @@ private:
 
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(const FHitResult& hit);
+
+	UFUNCTION(BlueprintCallable)
+	void AdjustCore(const FHitResult& hit);
 	
 	UFUNCTION(BlueprintCallable)
 	void ChangeCore(float value);

@@ -53,7 +53,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttemptEnding);
 
 // Should be broadcast when the reset timer has elapsed.. 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnReset, int, tries);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnReset);
 
 // Should be broadcast when a "Thing" collides with any of the things that are attached to the cube.
 // This has been declared so that a Blueprint function can be called.

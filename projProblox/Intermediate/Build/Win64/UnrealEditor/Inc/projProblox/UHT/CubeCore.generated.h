@@ -38,7 +38,7 @@ PROJPROBLOX_API void FOnAttemptEnding_DelegateWrapper(const FMulticastScriptDele
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_56_DELEGATE \
-PROJPROBLOX_API void FOnReset_DelegateWrapper(const FMulticastScriptDelegate& OnReset, int32 tries);
+PROJPROBLOX_API void FOnReset_DelegateWrapper(const FMulticastScriptDelegate& OnReset);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_60_DELEGATE \

@@ -49,7 +49,7 @@ class PROJPROBLOX_API APickupableMaster : public AActor
 	UFUNCTION()
 	void ResetOutline() { SetHideOutlineMesh(true); }
 	UFUNCTION()
-	void ShowOutline(int empty) { SetHideOutlineMesh(false); }
+	void ShowOutline() { SetHideOutlineMesh(false); }
 	
 public:	
 	// Sets default values for this actor's properties

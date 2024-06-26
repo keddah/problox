@@ -45,7 +45,7 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xC7239A1E,
+				0xCF221757,
 				0xC0ACE96F,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -53,5 +53,5 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC7239A1E, 0xC0ACE96F));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xCF221757, 0xC0ACE96F));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
