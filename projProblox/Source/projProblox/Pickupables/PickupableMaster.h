@@ -380,6 +380,9 @@ public:
 	
 	void ResetMaterial()
 	{
+		// Pending kill.
+		if(!IsValid(this)) return;
+
 		if(silhouette && silhouetteMat) silhouette->SetMaterial(0, silhouetteMat);
 		SetHideOutlineMesh(true);
 	}

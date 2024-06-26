@@ -131,7 +131,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 		case 0:
 			if(!lvl0Spawn) break;
 			spawnPos = lvl0Spawn->GetActorLocation();
-			player->SetActorLocation(spawnPos + spawnOffset);
+			player->Respawn(spawnPos + spawnOffset, lvl0Spawn->GetRot());
 			core->Teleport(spawnPos, lvl0Spawn->GetRot());
 			break;
 
@@ -140,7 +140,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 			if(lvl1Spawns.IsValidIndex(spawnPoint))
 			{
 				spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
-				player->SetActorLocation(spawnPos + spawnOffset);
+				player->Respawn(spawnPos + spawnOffset, lvl1Spawns[spawnPoint]->GetRot());
 				core->Teleport(spawnPos, lvl1Spawns[spawnPoint]->GetRot());
 			}
 			break;
@@ -150,7 +150,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 			if(lvl2Spawns.IsValidIndex(spawnPoint))
 			{
 				spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
-				player->SetActorLocation(spawnPos + spawnOffset);
+				player->Respawn(spawnPos + spawnOffset, lvl2Spawns[spawnPoint]->GetRot());
 				core->Teleport(spawnPos, lvl2Spawns[spawnPoint]->GetRot());
 			}
 			break;
@@ -160,7 +160,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 			if(lvl3Spawns.IsValidIndex(spawnPoint))
 			{
 				spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
-				player->SetActorLocation(spawnPos + spawnOffset);
+				player->Respawn(spawnPos + spawnOffset, lvl3Spawns[spawnPoint]->GetRot());
 				core->Teleport(spawnPos, lvl3Spawns[spawnPoint]->GetRot());
 			}
 			break;

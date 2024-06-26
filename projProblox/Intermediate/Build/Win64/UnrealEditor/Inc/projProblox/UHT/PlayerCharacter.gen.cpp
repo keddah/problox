@@ -108,13 +108,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->ChangeCore(Z_Param_value);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(APlayerCharacter::execEjectAll)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->EjectAll();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(APlayerCharacter::execEjectObject)
 	{
 		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_hit);
@@ -186,6 +179,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->SelectObject(Z_Param_Out_hit);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APlayerCharacter::execEjectAll)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->EjectAll();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APlayerCharacter::execManualSelectObject)
 	{
 		P_GET_OBJECT(APickupableMaster,Z_Param_obj);
@@ -223,6 +223,14 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->NextPreviousSlot(Z_Param_next);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(APlayerCharacter::execScrollZoom)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_input);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ScrollZoom(Z_Param_input);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(APlayerCharacter::execZoom)
@@ -284,6 +292,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "NextPreviousSlot", &APlayerCharacter::execNextPreviousSlot },
 			{ "OrbitControls", &APlayerCharacter::execOrbitControls },
 			{ "Redo", &APlayerCharacter::execRedo },
+			{ "ScrollZoom", &APlayerCharacter::execScrollZoom },
 			{ "SelectObject", &APlayerCharacter::execSelectObject },
 			{ "SetGameMode", &APlayerCharacter::execSetGameMode },
 			{ "SpawnFromBuyable", &APlayerCharacter::execSpawnFromBuyable },
@@ -568,7 +577,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "EjectAll", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "EjectAll", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams) };
 	UFunction* Z_Construct_UFunction_APlayerCharacter_EjectAll()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -948,6 +957,43 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics
+	{
+		struct PlayerCharacter_eventScrollZoom_Parms
+		{
+			float input;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_input;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::NewProp_input = { "input", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventScrollZoom_Parms, input), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::NewProp_input,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The same build mode zoom except this uses the scroll wheel instead of the mouse-Y value." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "ScrollZoom", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::PlayerCharacter_eventScrollZoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::PlayerCharacter_eventScrollZoom_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_ScrollZoom()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_APlayerCharacter_SelectObject_Statics
 	{
 		struct PlayerCharacter_eventSelectObject_Parms
@@ -1256,7 +1302,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_CreateDetachHistory, "CreateDetachHistory" }, // 2649000216
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 2189380603
 		{ &Z_Construct_UFunction_APlayerCharacter_Detach, "Detach" }, // 1541612637
-		{ &Z_Construct_UFunction_APlayerCharacter_EjectAll, "EjectAll" }, // 3060479289
+		{ &Z_Construct_UFunction_APlayerCharacter_EjectAll, "EjectAll" }, // 853812392
 		{ &Z_Construct_UFunction_APlayerCharacter_EjectObject, "EjectObject" }, // 1744087027
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
 		{ &Z_Construct_UFunction_APlayerCharacter_GetCore, "GetCore" }, // 344276006
@@ -1267,6 +1313,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot, "NextPreviousSlot" }, // 2140460848
 		{ &Z_Construct_UFunction_APlayerCharacter_OrbitControls, "OrbitControls" }, // 193451463
 		{ &Z_Construct_UFunction_APlayerCharacter_Redo, "Redo" }, // 2675371083
+		{ &Z_Construct_UFunction_APlayerCharacter_ScrollZoom, "ScrollZoom" }, // 2530486982
 		{ &Z_Construct_UFunction_APlayerCharacter_SelectObject, "SelectObject" }, // 1727888823
 		{ &Z_Construct_UFunction_APlayerCharacter_SetGameMode, "SetGameMode" }, // 2129562915
 		{ &Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable, "SpawnFromBuyable" }, // 2435491414
@@ -1589,19 +1636,19 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APlayerCharacter);
 	APlayerCharacter::~APlayerCharacter() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1877747702U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2359769264U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 172363807U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_1755497861(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_4286827748(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

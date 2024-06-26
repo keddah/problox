@@ -15,7 +15,7 @@ APlayerCharacter::APlayerCharacter()
 
 	camBoom = CreateDefaultSubobject<USpringArmComponent>("Camera Boom");
 	camBoom->SetupAttachment(GetCapsuleComponent());
-	camBoom->TargetArmLength = -1000;
+	camBoom->TargetArmLength = 0;
 	
 	playerCam = CreateDefaultSubobject<UCameraComponent>("Camera");
 	playerCam->SetupAttachment(camBoom);
@@ -48,8 +48,10 @@ void APlayerCharacter::BeginPlay()
 	buildPhase = true;
 
 	zooming = true;
-	Zoom();
+	orbiting = true;
+	OrbitControls(0);
 	zooming = false;
+	orbiting = false;
 }
 
 void APlayerCharacter::Tick(float DeltaSeconds)
@@ -310,6 +312,7 @@ FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
 
 void APlayerCharacter::OrbitControls(const float deltaTime)
 {
+	if(currentMode != EGameMode::Build) return;
 	Zoom();
 	
 	if (!core) return;
@@ -344,11 +347,19 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 
 void APlayerCharacter::Zoom()
 {
-	if (!core) return;
+	if(currentMode != EGameMode::Build) return;
 	if (!zooming) return;
 
 	const float armLength = camBoom->TargetArmLength;
 	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
+}
+
+void APlayerCharacter::ScrollZoom(const float input)
+{
+	if(currentMode != EGameMode::Build) return;
+	
+	const float armLength = camBoom->TargetArmLength;
+	camBoom->TargetArmLength = FMath::Clamp((-input * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
 
 void APlayerCharacter::NextPreviousSlot(const bool next)
@@ -431,6 +442,18 @@ void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
 	{
 		exclusions.Append(obj->GetAttachedActorObjects());
 	}
+}
+
+void APlayerCharacter::Respawn(const FVector& pos, const FRotator& rot)
+{
+	SetActorLocation(pos);
+	SetActorRotation(rot);
+
+	orbiting = true;
+	OrbitControls(1);
+	orbiting = false;
+	
+	camBoom->TargetArmLength = 0;
 }
 
 void APlayerCharacter::SelectObject(const FHitResult& hit)
@@ -814,7 +837,7 @@ void APlayerCharacter::EjectAll()
 		FTimerHandle destroyHandle;
 		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
 		
-		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 3, false);
+		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 1.5f, false);
 	}
 }
 
@@ -830,7 +853,7 @@ void APlayerCharacter::ChangeCore(const float value)
 	{
 		if(ACubeCore* connector = Cast<ACubeCore>(obj)) connectors.AddUnique(connector);
 	}
-	
+
 	short index = connectors.IndexOfByKey(core) + value;
 	if(index >= connectors.Num()) index = 0;
 	if(index < 0) index = connectors.Num() - 1;

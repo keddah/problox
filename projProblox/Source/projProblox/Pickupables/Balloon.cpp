@@ -182,6 +182,8 @@ void ABalloon::Detach(const bool push)
 
 void ABalloon::Attach()
 {
+	if(!parentCore) return;
+	
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);

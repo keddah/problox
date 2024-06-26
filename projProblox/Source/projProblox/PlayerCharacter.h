@@ -59,6 +59,8 @@ private:
 	
 	UFUNCTION(BlueprintCallable)
 	void Zoom();
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same build mode zoom except this uses the scroll wheel instead of the mouse-Y value."))
+	void ScrollZoom(float input);
 	
 	FName FindSuggestedSlot(APickupableMaster* obj) const;
 	FName selectedSocket = "FRONT";
@@ -172,6 +174,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void ManualSelectObject(APickupableMaster* obj);
 
+	void Respawn(const FVector& pos, const FRotator& rot);
+
+	UFUNCTION(BlueprintCallable)
+	void EjectAll();
+	
+	
 private:
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Picking up")
@@ -203,9 +211,6 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(const FHitResult& hit);
 	
-	UFUNCTION(BlueprintCallable)
-	void EjectAll();
-
 	UFUNCTION(BlueprintCallable)
 	void ChangeCore(float value);
 
