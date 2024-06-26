@@ -366,20 +366,15 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 {
 	if(currentMode != EGameMode::Build) return;
 	if(!core) return;
-
+	
 	const TArray<FName> freeSockets = core->GetFreeSlots();
+	if(freeSockets.IsEmpty()) return;
+	
 	currentSlot += next? 1 : -1;
 	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
-	else if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
+	if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
 		
 	if(freeSockets.IsValidIndex(currentSlot)) selectedSocket = freeSockets[currentSlot];
-
-	// If going forwards... go to the last element if the index is bad
-	else if(next) selectedSocket = freeSockets.Last();
-
-	// Otherwise go to the first
-	else if(!freeSockets.IsEmpty()) selectedSocket = freeSockets[0];
-	else Print("All sockets full...", 5)
 	GoToSlot();
 }
 
@@ -387,20 +382,15 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 {
 	if(currentMode != EGameMode::Build) return;
 	if(!core) return;
-
+	
 	const TArray<FName> freeSockets = core->GetFreeSlots();
+	if(freeSockets.IsEmpty()) return;
+
 	currentSlot += above? 2 : -2;
 	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
 	else if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
 		
 	if(freeSockets.IsValidIndex(currentSlot)) selectedSocket = freeSockets[currentSlot];
-
-	// If going forwards... go to the last element if the index is bad
-	else if(above) selectedSocket = freeSockets.Last();
-
-	// Otherwise go to the first
-	else if(!freeSockets.IsEmpty()) selectedSocket = freeSockets[0];
-	else Print("All sockets full...", 5)
 	GoToSlot();
 }
 

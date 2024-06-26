@@ -624,10 +624,8 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 
 	if(objs.IsEmpty())
 	{
-		Print("objects array empty", 6)
 		const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
-		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
-		Print("Reset timer set", 4)
+		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, 3, false);
 		return;
 	}
 
@@ -640,6 +638,11 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 		FTimerDelegate activateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, true);
 		FTimerDelegate deactivateDelegate = FTimerDelegate::CreateUObject(objs[i], &APickupableMaster::SetAbilityActive, false);
 
+		if(!(delays.IsValidIndex(i) && durations.IsValidIndex(i)))
+		{
+			Print("The delay / duration was out of range...", 4)
+			continue;
+		}
 		const float delayTime = delays[i] < 1? .01f : delays[i];
 		const float durationTime = durations[i] < 1? .1f : durations[i];
 		
