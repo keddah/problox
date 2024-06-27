@@ -60,6 +60,7 @@
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -76,12 +77,11 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"CubeCore.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"ActionHistory.cpp.obj"
 		]
 	}
 }
