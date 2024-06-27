@@ -74,7 +74,7 @@ void ACellSpawner::Overlap(AActor* otherActor)
 	}
 
 	// Otherwise, it is the core.
-	else if((otherCore = Cast<ACubeCore>(other)))
+	else if(IsValid(otherCore = Cast<ACubeCore>(other)))
 	{
 		SpawnWithForce();
 		if(otherCore) otherCore->BroadcastNewCells();

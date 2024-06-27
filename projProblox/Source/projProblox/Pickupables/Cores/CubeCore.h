@@ -70,7 +70,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	// UFUNCTION(BlueprintCallable)
 	// void StartEndingGame() { onEndingGame.Broadcast(); }
 
-	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, int longestDuration);
+	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, float longestDuration);
 	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
@@ -109,7 +109,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void StartGame() { onStartGame.Broadcast(); } 
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
-	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const int longestDuration)
+	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const float longestDuration)
 	{
 		TimedObjectActivation(delays, durations, longestDuration);
 		StartGame();
