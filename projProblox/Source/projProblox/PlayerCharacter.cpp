@@ -450,7 +450,7 @@ void APlayerCharacter::GoToCore()
 {
 	if(!core) return;
 
-	const FVector corePos = core->GetActorLocation();
+	const FVector corePos = core->GetActorLocation() + core->GetVelocity();
 	const FVector direction = -GetActorForwardVector();
 	const FVector newPos = corePos + (direction * 600) + FVector(0,0,300);
 	

@@ -618,7 +618,7 @@ void ACubeCore::RearrangeSockets()
 }
 
 
-void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const int longestDuration)
+void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const float longestDuration)
 {
 	 TArray<APickupableMaster*> objs = GetCloseAttachments();
 

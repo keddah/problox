@@ -28,6 +28,9 @@ AGrappler::AGrappler()
 	grappleLine->NumSides = 4;
 	grappleLine->NumSegments = 128;
 
+	params.Owner = this;
+	params.bNoFail = true;
+
 	uiName = "Grapple";
 }
 
@@ -40,19 +43,16 @@ void AGrappler::Ability(const float deltaTime)
 	if(!active) return;
 
 	// STILL CRASHES SOMEHOW....
-	if(!wrld) return;
+	UWorld* world = GetWorld();
+	if(!world) return;
 	
-	FActorSpawnParameters params;
-	params.Owner = this;
-	params.bNoFail = true;
-
 	// Destroy the hook if one is already valid.
 	if(hook) hook->Destroy();
 
 	// Spawn and set the hook
-	if(grappleSpawn && grappleHeadClass) hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	if(grappleSpawn && grappleHeadClass) hook = world->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
-//
+
 	// Deactivate so that this doesn't happen repeatedly
 	active = false;
 }

@@ -47,7 +47,6 @@
 			"Wheels.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
-			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
@@ -65,7 +64,6 @@
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
-			"Grappler.cpp.obj",
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
@@ -80,7 +78,9 @@
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
+			"CellSpawner.cpp.obj",
 			"CubeCore.cpp.obj",
+			"Grappler.cpp.obj",
 			"PlayerCharacter.cpp.obj"
 		]
 	}
