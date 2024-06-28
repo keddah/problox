@@ -18,10 +18,10 @@ enum class EOperations : uint8;
 #endif
 #define PROJPROBLOX_PickupableMaster_generated_h
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_SPARSE_DATA
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_SPARSE_DATA
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSetHideOutlineMesh); \
 	DECLARE_FUNCTION(execSetOutlineMaterial); \
@@ -34,6 +34,7 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execSetCanPickup); \
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execResetRotation); \
+	DECLARE_FUNCTION(execGhostSnapRotateMesh); \
 	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateHori); \
 	DECLARE_FUNCTION(execRotateVert); \
@@ -42,8 +43,8 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execResetOutline);
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_ACCESSORS
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_INCLASS_NO_PURE_DECLS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPickupableMaster(); \
 	friend struct Z_Construct_UClass_APickupableMaster_Statics; \
@@ -52,7 +53,7 @@ public: \
 	DECLARE_SERIALIZER(APickupableMaster)
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_ENHANCED_CONSTRUCTORS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APickupableMaster(APickupableMaster&&); \
@@ -64,17 +65,17 @@ public: \
 	NO_API virtual ~APickupableMaster();
 
 
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_33_PROLOG
-#define FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_GENERATED_BODY \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_44_PROLOG
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_SPARSE_DATA \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_ACCESSORS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_INCLASS_NO_PURE_DECLS \
-	FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_36_ENHANCED_CONSTRUCTORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_SPARSE_DATA \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_INCLASS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_47_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -82,7 +83,19 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJPROBLOX_API UClass* StaticClass<class APickupableMaster>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_GitHub_FMP_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h
+#define CURRENT_FILE_ID FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h
 
+
+#define FOREACH_ENUM_ECORESOCKETS(op) \
+	op(ECoreSockets::Front) \
+	op(ECoreSockets::Back) \
+	op(ECoreSockets::Right) \
+	op(ECoreSockets::Left) \
+	op(ECoreSockets::Up) \
+	op(ECoreSockets::Down) 
+
+enum class ECoreSockets : uint8;
+template<> struct TIsUEnumClass<ECoreSockets> { enum { Value = true }; };
+template<> PROJPROBLOX_API UEnum* StaticEnum<ECoreSockets>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

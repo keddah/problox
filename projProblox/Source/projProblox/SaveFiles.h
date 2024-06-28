@@ -70,9 +70,9 @@ UCLASS()
 class PROJPROBLOX_API UMoneySave : public USaveGame
 {
 	GENERATED_BODY()
+	UMoneySave() { money = 10000;  }
 
-	// contains the indices of all the unlocked spawn points
-	int money = 0;
+	int money;
 
 
 public:
@@ -80,39 +80,18 @@ public:
 
 	bool SaveBalance(const int balance)
 	{
-		if(!UGameplayStatics::LoadGameFromSlot(moneySlot, 0))
+		if (!UGameplayStatics::DoesSaveGameExist(moneySlot, 0))
 		{
-			// If it can't load, it can't save
-			Print("unable to save because the save slot couldn't be loaded...", 4)
-			return false;
-		}
-		
-		money = balance;
-
-		if (!this)
-		{
-			Print("Couldnt save money because the save instance was invalid...", 8);
+			Print("Couldn't save balance because the money slot doesn't exist...", 4)
 			return false;
 		}
 
-		if (moneySlot.IsEmpty())
-		{
-			Print("couldn't save because Slot name is empty", 6);
-			return false;
-		}
+		this->money = balance;
 
 		bool success = false;
 
-		try
-		{
-			// success = UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
-			if (!success) Print("money save failed...", 6);
-		}
-		catch (const std::exception& e)
-		{
-			Print("Exception Caught: " + FString(e.what()), 6);
-		}
-		catch (...) Print("Unknown exception caught during save game.", 7);
+		success = UGameplayStatics::SaveGameToSlot(this, moneySlot, 0);
+		if (!success) Print("money save failed...", 6);
 
 		return success;
 	}

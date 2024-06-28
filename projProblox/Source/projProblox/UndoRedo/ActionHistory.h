@@ -36,7 +36,7 @@ struct FTask
 	FTransform endTransform;
 
 	UPROPERTY(VisibleAnywhere)
-	EOperations operation;
+	EOperations operation = EOperations::Move;
 
 	bool operator==(const FTask& task) const
 	{

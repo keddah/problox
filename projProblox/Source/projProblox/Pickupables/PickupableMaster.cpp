@@ -95,7 +95,7 @@ void APickupableMaster::BeginPlay()
 		{
 			if(core->IsA<ACubeConnector>()) continue;
 
-			core->onStartGame.AddDynamic(this, &APickupableMaster::ResetOutline);
+			core->onTurnStarted.AddDynamic(this, &APickupableMaster::ResetOutline);
 			core->onReset.AddDynamic(this, &APickupableMaster::ShowOutline);
 			break;
 		}

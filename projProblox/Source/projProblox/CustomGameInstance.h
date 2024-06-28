@@ -17,6 +17,7 @@ class PROJPROBLOX_API UCustomGameInstance : public UGameInstance
 	
 	short currentLevel;
 	UMoneySave* moneySave;
+	int money;
 
 	UFUNCTION()
 	void LoadSave();
@@ -28,7 +29,7 @@ public:
 	void SetCurrentLevel(const short index) { currentLevel = index; }
 	short GetCurrentLevel() const { return currentLevel; }
 
-	void SaveMoney(const int value) const;
+	void SaveMoney() const;
 	void LoseMoney(const int value);
 	void AddMoney(const int value);
 	int GetMoney();

@@ -50,7 +50,7 @@ void ABuyableAttachment::UseInfoMesh()
 
 	const FBuyableInfoStruct buyInfo = info->GetInfo();
 	meshComp->SetStaticMesh(buyInfo.attachmentMesh);
-	meshComp->SetRelativeScale3D(buyInfo.defaultScale);
+	if(!buyInfo.editScale) meshComp->SetRelativeScale3D(buyInfo.defaultScale);
 
 	// Setting materials
 	if(unlocked) SetHide(false);

@@ -87,11 +87,11 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		P_THIS->BeginSpawn();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ACellSpawner::execActivate)
+	DEFINE_FUNCTION(ACellSpawner::execActivateSpawner)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->Activate();
+		P_THIS->ActivateSpawner();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACellSpawner::execIsActive)
@@ -113,14 +113,14 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	{
 		UClass* Class = ACellSpawner::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "Activate", &ACellSpawner::execActivate },
+			{ "ActivateSpawner", &ACellSpawner::execActivateSpawner },
 			{ "BeginSpawn", &ACellSpawner::execBeginSpawn },
 			{ "IsActive", &ACellSpawner::execIsActive },
 			{ "Overlap", &ACellSpawner::execOverlap },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_ACellSpawner_Activate_Statics
+	struct Z_Construct_UFunction_ACellSpawner_ActivateSpawner_Statics
 	{
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -128,17 +128,17 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_Activate_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_ActivateSpawner_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACellSpawner_Activate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACellSpawner, nullptr, "Activate", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_Activate_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACellSpawner_Activate_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_ACellSpawner_Activate()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACellSpawner_ActivateSpawner_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACellSpawner, nullptr, "ActivateSpawner", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_ActivateSpawner_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACellSpawner_ActivateSpawner_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACellSpawner_ActivateSpawner()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACellSpawner_Activate_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACellSpawner_ActivateSpawner_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -326,7 +326,7 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACellSpawner_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACellSpawner_Activate, "Activate" }, // 1333075796
+		{ &Z_Construct_UFunction_ACellSpawner_ActivateSpawner, "ActivateSpawner" }, // 3064812121
 		{ &Z_Construct_UFunction_ACellSpawner_BeginSpawn, "BeginSpawn" }, // 3883282272
 		{ &Z_Construct_UFunction_ACellSpawner_IsActive, "IsActive" }, // 4174767182
 		{ &Z_Construct_UFunction_ACellSpawner_Overlap, "Overlap" }, // 2137492442
@@ -547,19 +547,19 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACellSpawner);
 	ACellSpawner::~ACellSpawner() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo[] = {
 		{ ECellType_StaticEnum, TEXT("ECellType"), &Z_Registration_Info_UEnum_ECellType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 653651803U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 3378672713U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 2596623310U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_1779596064(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_2012954918(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -19,7 +19,7 @@ struct FBuyableInfoStruct
 	FString description;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	int price;
+	int price = 0;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UStaticMesh* attachmentMesh;
@@ -27,8 +27,11 @@ struct FBuyableInfoStruct
 	TArray<UMaterial*> attachmentMats;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	FVector defaultScale;
-//
+	bool editScale = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FVector defaultScale = { 1,1,1 };
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TSubclassOf<APickupableMaster> classToSpawn;
 };
@@ -55,11 +58,14 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 	int price = 100;
 
 	UPROPERTY(EditAnywhere)
+	bool editScale;
+
+	UPROPERTY(EditAnywhere)
 	FVector defaultScale {1,1,1};
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<APickupableMaster> classToSpawn;
 
 public:
-	FBuyableInfoStruct GetInfo() const { return {name, description, price, attachmentMesh, attachmentMats, defaultScale, classToSpawn }; }
+	FBuyableInfoStruct GetInfo() const { return {name, description, price, attachmentMesh, attachmentMats, editScale, defaultScale, classToSpawn }; }
 };

@@ -1,4 +1,4 @@
-#include "C:/GitHub/FMP/problox/projProblox/Intermediate/Build/Win64/x64/projProblox/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/x64/projProblox/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
 #undef UE_IS_ENGINE_MODULE
 #undef DEPRECATED_FORGAME
 #define DEPRECATED_FORGAME DEPRECATED
@@ -22,4 +22,27 @@
 #define DEPRECATED_FORGAME DEPRECATED
 #define UE_DEPRECATED_FORGAME UE_DEPRECATED
 #define CABLECOMPONENT_API 
+#define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS 1
+#define _WINSOCK_DEPRECATED_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_NONSTDC_NO_DEPRECATE 1
+#define SPDLOG_WCHAR_FILENAMES 1
+#define SPDLOG_WCHAR_TO_UTF8_SUPPORT 1
+#define SPDLOG_NO_EXCEPTIONS 1
+#define SPDLOG_COMPILED_LIB 1
+#define SPDLOG_SHARED_LIB 1
+#define nssv_CONFIG_SELECT_STRING_VIEW nssv_STRING_VIEW_NONSTD
+#define FMT_SHARED 1
+#define RD_API 
 #define PROJPROBLOX_API 
+#define UMG_API 
+#define HTTP_PACKAGE 1
+#define CURL_ENABLE_DEBUG_CALLBACK 1
+#define CURL_ENABLE_NO_TIMEOUTS_OPTION 1
+#define WITH_WINHTTP 1
+#define HTTP_API 
+#define MOVIESCENE_API 
+#define TIMEMANAGEMENT_API 
+#define MOVIESCENETRACKS_API 
+#define CONSTRAINTS_API 
+#define PROPERTYPATH_API 

@@ -57,7 +57,7 @@ void ACubeCore::BeginPlay()
 	
 	SetupPlaceIndicator();
 	
-	onStartGame.AddDynamic(this, &ACubeCore::Start);
+	onTurnStarted.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Story;
@@ -66,6 +66,12 @@ void ACubeCore::BeginPlay()
 	else if(Cast<AMode_Creative>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Creative;
 
 	resetTransform = GetActorTransform();
+	
+	if (UCustomGameInstance* customInst = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld)))
+	{
+		instance = customInst;
+	}
+	else Print("Couldn't cast to game instance...", 4)
 }
 
 void ACubeCore::SetupPlaceIndicator()
@@ -327,25 +333,6 @@ void ACubeCore::Start()
 	// Save the transform...
 	resetTransform = GetActorTransform();
 	buildPhase = false;
-}
-
-void ACubeCore::SaveMoney()
-{
-	if(!instance)
-	{
-		if(wrld) instance = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld));
-	}
-	
-	if(!instance)
-	{
-		Print("Couldn't cast to game instance... ~ core", 7)
-		return;
-	}
-	
-	if(money == instance->GetMoney()) return;
-
-	Print("Saving...", 5)
-	instance->SaveMoney(money);
 }
 
 void ACubeCore::CalculateRating()
