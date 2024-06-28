@@ -1,3 +1,8 @@
-2024/06/19-10:44:18.897 651c Reusing MANIFEST C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
-2024/06/19-10:44:18.900 651c Recovering log #4
-2024/06/19-10:44:18.901 651c Reusing old log C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/000004.log 
+2024/06/28-19:49:41.235 15c Reusing MANIFEST C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2024/06/28-19:49:41.236 15c Recovering log #3
+2024/06/28-19:49:41.236 15c Level-0 table #3: started
+2024/06/28-19:49:41.242 15c Level-0 table #3: 17621 bytes OK
+2024/06/28-19:49:41.242 15c Recovering log #4
+2024/06/28-19:49:41.243 15c Reusing old log C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/000004.log 
+2024/06/28-19:49:41.248 15c Delete type=0 #3
+2024/06/28-19:49:41.248 15c Delete type=2 #5
