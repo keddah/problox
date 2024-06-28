@@ -25,6 +25,9 @@ ACellSpawner::ACellSpawner()
 	scene = CreateDefaultSubobject<USceneComponent>("Root Scene");
 	spawnTrigger = CreateDefaultSubobject<UBoxComponent>("Trigger");
 
+	soundPlayer = CreateDefaultSubobject<UAudioComponent>("Audio Player");
+	soundPlayer->SetupAttachment(scene);
+
 	forceDirection = CreateDefaultSubobject<UArrowComponent>("Direction indicator");
 	forceDirection->SetupAttachment(scene);
 	forceDirection->ArrowSize = 7.5f;
@@ -79,7 +82,28 @@ void ACellSpawner::Overlap(AActor* otherActor)
 		SpawnWithForce();
 		if(otherCore) otherCore->BroadcastNewCells();
 	}
+
+	PlaySound();
 	triggerable = false;
+}
+
+void ACellSpawner::PlaySound()
+{
+	if (!soundPlayer)
+	{
+		Print("The sound player was invalid...", 4)
+		return;
+	}
+	
+	if (!soundToPlay)
+	{
+		Print("There was no sound given...", 4)
+		return;
+	}
+
+	soundToPlay->bLooping = loopingSound;
+	soundPlayer->SetSound(soundToPlay);
+	soundPlayer->Play(soundDelay);
 }
 
 ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const

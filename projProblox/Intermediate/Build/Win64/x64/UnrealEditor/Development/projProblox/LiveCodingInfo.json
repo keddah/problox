@@ -9,7 +9,6 @@
 			"BuyableAttachment.gen.cpp.obj",
 			"BuyableInfo.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
-			"CellSpawner.gen.cpp.obj",
 			"Collector.gen.cpp.obj",
 			"CubeSocketInfo.gen.cpp.obj",
 			"CuboidSocketInfo.gen.cpp.obj",
@@ -17,6 +16,7 @@
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
 			"Grappler.gen.cpp.obj",
+			"CellSpawner.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
 			"CuboidConnector.gen.cpp.obj",
@@ -46,7 +46,6 @@
 			"Wheels.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
-			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
@@ -75,13 +74,14 @@
 			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
-			"CubeCore.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"CellSpawner.cpp.obj",
+			"CubeCore.cpp.obj"
 		]
 	}
 }

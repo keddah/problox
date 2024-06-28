@@ -37,6 +37,8 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	UFUNCTION(BlueprintCallable)
 	virtual void Overlap(AActor* otherActor);
 
+	void PlaySound();
+
 public:	
 	// Sets default values for this actor's properties
 	ACellSpawner();
@@ -44,6 +46,19 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Sound", meta = (ToolTip = "The sound will play at the location of this sound player..."))
+	UAudioComponent* soundPlayer;
+
+	UPROPERTY(EditInstanceOnly, Category = "Sound")
+	USoundWave* soundToPlay;
+
+	UPROPERTY(EditInstanceOnly, Category = "Sound", meta = (Delta = .5f, ToolTip = "Setting to 0 means the sound plays instantly"))
+	float soundDelay = 0;
+
+	UPROPERTY(EditInstanceOnly, Category = "Sound")
+	bool loopingSound = false;
+
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ACell> normalThing;
