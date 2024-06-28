@@ -450,7 +450,7 @@ void APlayerCharacter::GoToCore()
 {
 	if(!core) return;
 
-	const FVector corePos = core->GetActorLocation() + core->GetVelocity();
+	const FVector corePos = core->GetActorLocation();
 	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), corePos));
 
 	// Look at the core first so that you can move in the opposite direction...
