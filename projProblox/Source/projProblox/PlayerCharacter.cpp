@@ -455,7 +455,7 @@ void APlayerCharacter::GoToCore()
 
 	// Look at the core first so that you can move in the opposite direction...
 	const FVector direction = -GetActorForwardVector();
-	const FVector newPos = corePos + (direction * 300) + FVector(0,0,150);
+	const FVector newPos = corePos + (direction * 300);
 	
 	SetActorLocation(newPos);
 }

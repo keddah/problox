@@ -246,6 +246,8 @@ protected:
 		Super::ToggleGravity(gravityOn);
 		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(gravityOn);
 	}
+
+	void SetEnableCollisions(bool enable);
 	
 public:
 	/////////////// Attachments ///////////////

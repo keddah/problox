@@ -258,7 +258,7 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	mesh->SetUseCCD(selected);
-	mesh->SetCollisionResponseToAllChannels(selected ? ECR_Ignore : ECR_Block);
+	SetEnableCollisions(!selected);
 
 	ToggleGravity();
 	SetHideIndicator(!selected);
@@ -345,6 +345,15 @@ void ACubeCore::CalculateRating()
 	else if(attempts >= moveRatings[0]) rating = 0;
 }
 
+
+void ACubeCore::SetEnableCollisions(const bool enable)
+{
+	mesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
+	for(auto& obj : GetCloseAttachments())
+	{
+		obj->GetMesh()->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
+	}
+}
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
