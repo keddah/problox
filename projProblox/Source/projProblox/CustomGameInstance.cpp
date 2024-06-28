@@ -3,13 +3,6 @@
 
 #include "CustomGameInstance.h"
 
-void UCustomGameInstance::LoadSave()
-{
-	if(UMoneySave* save = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0))) moneySave = save;
-	else moneySave = Cast<UMoneySave>(UGameplayStatics::CreateSaveGameObject(UMoneySave::StaticClass()));
-
-	Print("loaded balance = " + FString::FromInt(moneySave->GetBalance()), 5)
-}
 
 void UCustomGameInstance::Init()
 {
@@ -18,7 +11,20 @@ void UCustomGameInstance::Init()
 	LoadSave();
 }
 
-void UCustomGameInstance::SaveMoney(const int value) const
+void UCustomGameInstance::LoadSave()
+{
+	if(UMoneySave* save = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0))) moneySave = save;
+	else
+	{
+		moneySave = Cast<UMoneySave>(UGameplayStatics::CreateSaveGameObject(UMoneySave::StaticClass()));
+		UGameplayStatics::SaveGameToSlot(moneySave, moneySlot, 0);
+	}
+
+	money = moneySave->GetBalance();
+	Print("loaded balance = " + FString::FromInt(money), 5)
+}
+
+void UCustomGameInstance::SaveMoney() const
 {
 	if(!moneySave)
 	{
@@ -26,7 +32,7 @@ void UCustomGameInstance::SaveMoney(const int value) const
 		return;
 	}
 
-	moneySave->SaveBalance(value);
+	moneySave->SaveBalance(money);
 }
 
 void UCustomGameInstance::LoseMoney(const int value)
@@ -38,7 +44,8 @@ void UCustomGameInstance::LoseMoney(const int value)
 		return;
 	}
 
-	moneySave->SaveBalance(moneySave->GetBalance() - value);
+	money -= value;
+	//SaveMoney();
 }
 
 void UCustomGameInstance::AddMoney(const int value)
@@ -50,20 +57,11 @@ void UCustomGameInstance::AddMoney(const int value)
 		return;
 	}
 
-	moneySave->SaveBalance(moneySave->GetBalance() + value);
+	money += value;
+	//SaveMoney();
 }
 
 int UCustomGameInstance::GetMoney()
 {
-	if(!moneySave)
-	{
-		moneySave = Cast<UMoneySave>(UGameplayStatics::LoadGameFromSlot(moneySlot, 0));
-	}
-	if(!moneySave)
-	{
-		Print("no money save..", 5)
-		return 0;
-	}
-	
-	return moneySave->GetBalance();
+	return money;
 }

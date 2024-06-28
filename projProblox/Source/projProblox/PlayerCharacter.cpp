@@ -451,11 +451,13 @@ void APlayerCharacter::GoToCore()
 	if(!core) return;
 
 	const FVector corePos = core->GetActorLocation() + core->GetVelocity();
+	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), corePos));
+
+	// Look at the core first so that you can move in the opposite direction...
 	const FVector direction = -GetActorForwardVector();
-	const FVector newPos = corePos + (direction * 600) + FVector(0,0,300);
+	const FVector newPos = corePos + (direction * 300) + FVector(0,0,150);
 	
 	SetActorLocation(newPos);
-	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(newPos, corePos));
 }
 
 void APlayerCharacter::SelectObject(const FHitResult& hit)
@@ -740,7 +742,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 	if(currentMode != EGameMode::Build) return;
 
 	// Only continue if the hit object is a mesh or a box collider...
-	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
+	if (!(Cast<UStaticMeshComponent>(hit.GetComponent()) || Cast<UBoxComponent>(hit.GetComponent()))) return;
 	AActor* hitActor = hit.GetActor();
 	
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
@@ -751,6 +753,11 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 			if(!core)
 			{
 				Print("Couldn't buy object because the core was invalid...", 4)
+				return;
+			}
+			if (!instance) 
+			{
+				Print("Couldn't buy because instance was invald...", 4)
 				return;
 			}
 

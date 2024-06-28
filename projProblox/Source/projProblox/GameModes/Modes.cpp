@@ -46,7 +46,7 @@ bool AMode_Wave::ActivateSpawner()
 	{
 		if(spawner->IsActive()) continue;
 
-		spawner->Activate();
+		spawner->ActivateSpawner();
 		activeSpawners.Add(spawner);
 		break; // Don't continue to do all of them.
 	}

@@ -48,7 +48,7 @@ void ACellSpawner::Init(ACubeCore* core)
 	}
 
 	// if (!triggerable && core) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
-	if (core) core->onStartGame.AddDynamic(this, &ACellSpawner::Activate);
+	if (core) core->onTurnStarted.AddDynamic(this, &ACellSpawner::ActivateSpawner);
 
 	EarlySpawn();
 }
@@ -177,7 +177,6 @@ void ACellSpawner::EarlySpawn()
 
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
-	Print("Spawning", 4)
 	spawned = true;
 }
 

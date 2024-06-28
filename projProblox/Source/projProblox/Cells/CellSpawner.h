@@ -105,7 +105,7 @@ public:
 	bool IsActive() const { return spawned; }
 
 	UFUNCTION(BlueprintCallable)
-	void Activate() { spawned = true; }
+	void ActivateSpawner() { spawned = true; }
 	
 	UFUNCTION(BlueprintCallable)
 	void BeginSpawn();

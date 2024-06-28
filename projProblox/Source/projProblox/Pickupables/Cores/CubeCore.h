@@ -32,7 +32,7 @@
 #include "SocketInfo/CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartGame);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnTurnStarted);
 
 // Should be broadcast whenever more cells are spawned in after the game has already started.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSpawnedCells);
@@ -106,7 +106,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void Start();
 	
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
-	void StartGame() { onStartGame.Broadcast(); } 
+	void StartGame() { onTurnStarted.Broadcast(); } 
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
 	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const float longestDuration)
@@ -118,11 +118,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	/////////////// Other ///////////////
 	UFUNCTION(BlueprintCallable)
-	void SaveMoney();
-	
-	UFUNCTION(BlueprintCallable)
-	void AddMoney(const int amount = 10) { money += amount; }
-	int money = 30000000;
+	void AddMoney(const int amount = 10) { if (instance) instance->AddMoney(amount); else Print("Instance was invalid", 4) }
 	UCustomGameInstance* instance;
 	
 protected:
@@ -325,7 +321,7 @@ public:
 	// FOnOutOfRange onRangeExceeded;
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
-	FOnStartGame onStartGame;
+	FOnTurnStarted onTurnStarted;
 
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnReset onReset;
@@ -358,5 +354,5 @@ public:
 
 	void Teleport(const FVector& pos, const FRotator& rot);
 	
-	void LoseMoney(const short amount) { money -= amount; }
+	void LoseMoney(const short amount) { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }
 };

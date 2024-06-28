@@ -12,6 +12,7 @@
 
 #include "LevelManager.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedSpawn, int, spawn);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, bool, save);
 
 
@@ -58,6 +59,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	UFUNCTION()
 	void InitLevel3Spawners();
 
+	void SelectSpawn(int spawnPoint);
 
 	
 public:	
@@ -117,6 +119,9 @@ public:
 
 	UPROPERTY(BlueprintAssignable)
 	FOnChangedLevels onLevelChanged;
+	
+	UPROPERTY(BlueprintAssignable)
+	FOnChangedSpawn onSpawnChanged;
 
 	UFUNCTION(BlueprintCallable)
 	TArray<ASpawnPoint*> GetLevel1Spawns() const { return lvl1Spawns; }

@@ -40,7 +40,7 @@ void ABalloon::BeginPlay()
 		if(coreActor->IsA<ACubeConnector>()) continue;
 
 		Cast<ACubeCore>(coreActor)->onReset.AddDynamic(this, &ABalloon::ResetBalloon);
-		Cast<ACubeCore>(coreActor)->onStartGame.AddDynamic(this, &ABalloon::SaveResetTransform);
+		Cast<ACubeCore>(coreActor)->onTurnStarted.AddDynamic(this, &ABalloon::SaveResetTransform);
 	}
 
 	mesh->SetSimulatePhysics(false);

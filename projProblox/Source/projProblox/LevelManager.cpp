@@ -85,6 +85,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	{
 		Print("The level that's trying to be loaded is already loaded...: Index = " + FString::FromInt(lvlIndex), 5)
 		Print("Level name = " + levels[currentLevel]->GetWorld()->GetName(), 5)
+		SelectSpawn(spawnPoint);
 		return;
 	}
 
@@ -97,7 +98,6 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	currentLevel = lvlIndex;
 	if(!levels.IsValidIndex(currentLevel)) return;
 	if(!levels[currentLevel]) return;
-	// SpawnPreviewCells();
 
 	if(!levels[currentLevel]->IsLevelLoaded())
 	{
@@ -110,61 +110,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	// Unload all the levels apart from the current level
 	UnloadAllLevels();
 
-	if(!player)
-	{
-		Print("Couldn't set spawn because the player was invalid...", 5)
-		return;
-	}
-
-	if(!core)
-	{
-		Print("Couldn't set spawn because the core was invalid...", 5)
-		return;
-	}
-
-	core->RemoveVelocity();
-	
-	FVector spawnPos;
-	const FVector spawnOffset = {-1000,0, 0};
-	switch (currentLevel)
-	{
-		case 0:
-			if(!lvl0Spawn) break;
-			spawnPos = lvl0Spawn->GetActorLocation();
-			player->Respawn(spawnPos + spawnOffset, lvl0Spawn->GetRot());
-			core->Teleport(spawnPos, lvl0Spawn->GetRot());
-			break;
-
-		case 1:
-			if(lvl1Spawns.IsEmpty()) break;
-			if(lvl1Spawns.IsValidIndex(spawnPoint))
-			{
-				spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
-				player->Respawn(spawnPos + spawnOffset, lvl1Spawns[spawnPoint]->GetRot());
-				core->Teleport(spawnPos, lvl1Spawns[spawnPoint]->GetRot());
-			}
-			break;
-
-		case 2:
-			if(lvl2Spawns.IsEmpty()) break;
-			if(lvl2Spawns.IsValidIndex(spawnPoint))
-			{
-				spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
-				player->Respawn(spawnPos + spawnOffset, lvl2Spawns[spawnPoint]->GetRot());
-				core->Teleport(spawnPos, lvl2Spawns[spawnPoint]->GetRot());
-			}
-			break;
-
-		case 3:
-			if(lvl3Spawns.IsEmpty()) break;
-			if(lvl3Spawns.IsValidIndex(spawnPoint))
-			{
-				spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
-				player->Respawn(spawnPos + spawnOffset, lvl3Spawns[spawnPoint]->GetRot());
-				core->Teleport(spawnPos, lvl3Spawns[spawnPoint]->GetRot());
-			}
-			break;
-	}
+	SelectSpawn(spawnPoint);
 	
 	// Broadcast the level change
 	onLevelChanged.Broadcast(currentLevel, !initialLoad && currentLevel == 0);
@@ -329,6 +275,68 @@ void ALevelManager::InitLevel3Spawners()
 	}
 
 	lvl3Loaded = true;
+}
+
+void ALevelManager::SelectSpawn(const int spawnPoint)
+{
+
+	if (!player)
+	{
+		Print("Couldn't set spawn because the player was invalid...", 5)
+			return;
+	}
+
+	if (!core)
+	{
+		Print("Couldn't set spawn because the core was invalid...", 5)
+			return;
+	}
+
+	core->RemoveVelocity();
+
+	FVector spawnPos;
+	const FVector spawnOffset = { -1000,0, 0 };
+	switch (currentLevel)
+	{
+	case 0:
+		if (!lvl0Spawn) break;
+		spawnPos = lvl0Spawn->GetActorLocation();
+		player->Respawn(spawnPos + spawnOffset, lvl0Spawn->GetRot());
+		core->Teleport(spawnPos, lvl0Spawn->GetRot());
+		break;
+
+	case 1:
+		if (lvl1Spawns.IsEmpty()) break;
+		if (lvl1Spawns.IsValidIndex(spawnPoint))
+		{
+			spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
+			player->Respawn(spawnPos + spawnOffset, lvl1Spawns[spawnPoint]->GetRot());
+			core->Teleport(spawnPos, lvl1Spawns[spawnPoint]->GetRot());
+		}
+		break;
+
+	case 2:
+		if (lvl2Spawns.IsEmpty()) break;
+		if (lvl2Spawns.IsValidIndex(spawnPoint))
+		{
+			spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
+			player->Respawn(spawnPos + spawnOffset, lvl2Spawns[spawnPoint]->GetRot());
+			core->Teleport(spawnPos, lvl2Spawns[spawnPoint]->GetRot());
+		}
+		break;
+
+	case 3:
+		if (lvl3Spawns.IsEmpty()) break;
+		if (lvl3Spawns.IsValidIndex(spawnPoint))
+		{
+			spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
+			player->Respawn(spawnPos + spawnOffset, lvl3Spawns[spawnPoint]->GetRot());
+			core->Teleport(spawnPos, lvl3Spawns[spawnPoint]->GetRot());
+		}
+		break;
+	}
+
+	onSpawnChanged.Broadcast(spawnPoint);
 }
 
 void ALevelManager::SaveSpawns()

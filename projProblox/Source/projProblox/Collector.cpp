@@ -49,7 +49,7 @@ void ACollector::BeginPlay()
 	if(!core) return;
 
 	// core->onStartGame.AddDynamic(this, &ACollector::ResetCells);
-	core->onStartGame.AddDynamic(this, &ACollector::CalculateCellCount);
+	core->onTurnStarted.AddDynamic(this, &ACollector::CalculateCellCount);
 }
 
 // void ACollector::ResetCells()
