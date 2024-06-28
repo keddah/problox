@@ -46,7 +46,6 @@
 		"Module.projProblox.2.cpp.obj": [
 			"Cell.cpp.obj",
 			"CellVariations.cpp.obj",
-			"Modes.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
@@ -71,6 +70,7 @@
 			"CellSpawner.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
+			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BuyableAttachment.cpp.obj",
