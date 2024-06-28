@@ -166,7 +166,7 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		P_GET_UBOOL(Z_Param_initialLoad);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->LoadLevel(Z_Param_lvlIndex,Z_Param_spawnPoint,Z_Param_initialLoad);
+		*(bool*)Z_Param__Result=P_THIS->LoadLevel(Z_Param_lvlIndex,Z_Param_spawnPoint,Z_Param_initialLoad);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ALevelManager::execInitLevel3Spawners)
@@ -444,6 +444,7 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 			int32 lvlIndex;
 			int32 spawnPoint;
 			bool initialLoad;
+			bool ReturnValue;
 		};
 		static const UECodeGen_Private::FIntPropertyParams NewProp_lvlIndex;
 		static const UECodeGen_Private::FIntPropertyParams NewProp_spawnPoint;
@@ -452,6 +453,8 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 #endif
 		static void NewProp_initialLoad_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_initialLoad;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -470,21 +473,27 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		((LevelManager_eventLoadLevel_Parms*)Obj)->initialLoad = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_initialLoad = { "initialLoad", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(LevelManager_eventLoadLevel_Parms), &Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_initialLoad_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_initialLoad_MetaData), Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_initialLoad_MetaData) };
+	void Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((LevelManager_eventLoadLevel_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(LevelManager_eventLoadLevel_Parms), &Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_lvlIndex,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_spawnPoint,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_initialLoad,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_LoadLevel_Statics::Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// Returns whether the loaded level. \n" },
+		{ "Comment", "// Returns whether the loaded level. Initial load is only for the build level (when it's first loaded up in the level manager blueprint) \n" },
 #endif
 		{ "CPP_Default_initialLoad", "false" },
 		{ "CPP_Default_spawnPoint", "0" },
 		{ "ModuleRelativePath", "LevelManager.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Returns whether the loaded level." },
+		{ "ToolTip", "Returns whether the loaded level. Initial load is only for the build level (when it's first loaded up in the level manager blueprint)" },
 #endif
 	};
 #endif
@@ -638,7 +647,7 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		{ &Z_Construct_UFunction_ALevelManager_InitLevel1Spawners, "InitLevel1Spawners" }, // 2920715197
 		{ &Z_Construct_UFunction_ALevelManager_InitLevel2Spawners, "InitLevel2Spawners" }, // 3208538388
 		{ &Z_Construct_UFunction_ALevelManager_InitLevel3Spawners, "InitLevel3Spawners" }, // 3051060635
-		{ &Z_Construct_UFunction_ALevelManager_LoadLevel, "LoadLevel" }, // 1967238262
+		{ &Z_Construct_UFunction_ALevelManager_LoadLevel, "LoadLevel" }, // 1725365563
 		{ &Z_Construct_UFunction_ALevelManager_PrintCurrentLevel, "PrintCurrentLevel" }, // 4221123980
 		{ &Z_Construct_UFunction_ALevelManager_SaveSpawns, "SaveSpawns" }, // 227645982
 		{ &Z_Construct_UFunction_ALevelManager_SetLoading, "SetLoading" }, // 1979334078
@@ -727,9 +736,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 2556660347U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 3976144898U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_1794600403(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_3779915657(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

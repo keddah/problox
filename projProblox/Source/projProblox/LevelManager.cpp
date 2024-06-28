@@ -67,18 +67,18 @@ void ALevelManager::Tick(float DeltaSeconds)
 	}
 }
 
-void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bool initialLoad)
+bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bool initialLoad)
 {
 	if(!levels.IsValidIndex(lvlIndex))
 	{
 		Print("Level index is out of range....: Index = " + FString::FromInt(lvlIndex), 5)
-		return;
+		return false;
 	}
 
 	if (bLevelLoading)
 	{
 		Print("Already loading a level...", 5);
-		return;
+		return false;
 	}
 	
 	if(lvlIndex == currentLevel)
@@ -86,18 +86,18 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 		Print("The level that's trying to be loaded is already loaded...: Index = " + FString::FromInt(lvlIndex), 5)
 		Print("Level name = " + levels[currentLevel]->GetWorld()->GetName(), 5)
 		SelectSpawn(spawnPoint);
-		return;
+		return false;
 	}
 
 	if(!wrld)
 	{
 		Print("World was invalid when trying to load a levels...", 8)
-		return;
+		return false;
 	}
 
 	currentLevel = lvlIndex;
-	if(!levels.IsValidIndex(currentLevel)) return;
-	if(!levels[currentLevel]) return;
+	if(!levels.IsValidIndex(currentLevel)) return false;
+	if(!levels[currentLevel]) return false;
 
 	if(!levels[currentLevel]->IsLevelLoaded())
 	{
@@ -114,6 +114,7 @@ void ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	
 	// Broadcast the level change
 	onLevelChanged.Broadcast(currentLevel, !initialLoad && currentLevel == 0);
+	return true;
 }
 
 void ALevelManager::UnloadLevel(short lvlIndex)
