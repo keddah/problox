@@ -53,14 +53,69 @@ UTexture* ASpawnPoint::CaptureScreenshot()
     SceneCaptureComponent->ShowFlags.SetDynamicShadows(true);
     SceneCaptureComponent->ShowFlags.SetAntiAliasing(false);
 
+    // Adjust Post-Processing Settings for Brightness
     FPostProcessSettings& PostProcessSettings = SceneCaptureComponent->PostProcessSettings;
-    PostProcessSettings.bOverride_AutoExposureMethod = true;
-    PostProcessSettings.AutoExposureMethod = AEM_MAX;
-    PostProcessSettings.bOverride_AutoExposureBias = true;
-    PostProcessSettings.AutoExposureBias = 10;
 
-    // Capture the scene
-    SceneCaptureComponent->CaptureScene();
+	// Camera settings
+	PostProcessSettings.bOverride_CameraShutterSpeed = true;
+	PostProcessSettings.CameraShutterSpeed = 1/30.0f;  
+	PostProcessSettings.bOverride_CameraISO = true;
+	PostProcessSettings.CameraISO = 400;  
+
+	// Auto exposure settings
+	PostProcessSettings.bOverride_AutoExposureMethod = true;
+	PostProcessSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
+	PostProcessSettings.bOverride_AutoExposureBias = true;
+	PostProcessSettings.AutoExposureBias = 2; 
+
+	// Bloom settings
+	PostProcessSettings.bOverride_BloomIntensity = true;
+	PostProcessSettings.BloomIntensity = 0.3f;
+	PostProcessSettings.bOverride_BloomThreshold = true;
+	PostProcessSettings.BloomThreshold = -1.0f; 
+	PostProcessSettings.bOverride_BloomSizeScale = true;
+	PostProcessSettings.BloomSizeScale = 1.0f; 
+
+	// Lens flare settings
+	PostProcessSettings.bOverride_LensFlareIntensity = true;
+	PostProcessSettings.LensFlareIntensity = 0.2f;  
+
+	// Color grading settings
+	PostProcessSettings.bOverride_FilmToe = true;
+	PostProcessSettings.FilmToe = 0.5f;  
+	PostProcessSettings.bOverride_FilmShoulder = true;
+	PostProcessSettings.FilmShoulder = 0.5f;  
+	PostProcessSettings.bOverride_FilmWhiteClip = true;
+	PostProcessSettings.FilmWhiteClip = 1.0f;
+	PostProcessSettings.bOverride_FilmBlackClip = true;
+	PostProcessSettings.FilmBlackClip = 0.0f; 
+
+	// Depth of field settings
+	PostProcessSettings.bOverride_DepthOfFieldFstop = true;
+	PostProcessSettings.DepthOfFieldFstop = 5.6f; 
+
+	// Ambient occlusion settings
+	PostProcessSettings.bOverride_AmbientOcclusionIntensity = true;
+	PostProcessSettings.AmbientOcclusionIntensity = 0.8f;  
+	PostProcessSettings.bOverride_AmbientOcclusionRadius = true;
+	PostProcessSettings.AmbientOcclusionRadius = 200.0f; 
+
+	// Motion blur settings
+	PostProcessSettings.bOverride_MotionBlurAmount = true;
+	PostProcessSettings.MotionBlurAmount = 0.3f;  
+	PostProcessSettings.bOverride_MotionBlurMax = true;
+	PostProcessSettings.MotionBlurMax = 0.3f; 
+
+	// Screen space reflection settings
+	PostProcessSettings.bOverride_ScreenSpaceReflectionIntensity = true;
+	PostProcessSettings.ScreenSpaceReflectionIntensity = 100.0f; 
+	PostProcessSettings.bOverride_ScreenSpaceReflectionQuality = true;
+	PostProcessSettings.ScreenSpaceReflectionQuality = 100.0f;  
+	PostProcessSettings.bOverride_ScreenSpaceReflectionMaxRoughness = true;
+	PostProcessSettings.ScreenSpaceReflectionMaxRoughness = 0.5f; 
+
+	
+	SceneCaptureComponent->CaptureScene();
 
     // Read the pixels from the Render Target
     TArray<FColor> OutBMP;
@@ -88,3 +143,4 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 
     return ScreenshotTexture;
 }
+

@@ -46,7 +46,6 @@ class PROJPROBLOX_API ALevelManager : public AActor
 
 	void FindCore();
 	void FindSpawns();
-	void SpawnPreviewCells();
 
 	// Doing in BP because its being weird.
 	// void UnlockInitialSpawns();
@@ -67,12 +66,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	UFUNCTION()
 	void SetLoading() { bLevelLoading = true; }
 	
-	UFUNCTION()
-	void InitSpawns();
 	void InitSpawners();
-	void InitLevel1Spawners();
-	void InitLevel2Spawners();
-	void InitLevel3Spawners();
 
 	void SelectSpawn(int spawnPoint);
 

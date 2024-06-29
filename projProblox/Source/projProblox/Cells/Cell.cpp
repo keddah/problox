@@ -60,6 +60,8 @@ void ACell::GoHome() const
 
 void ACell::SetDormant(const bool dormant)
 {
+	if(safe) return;
+	
 	// Enable/disable physics and hide/show actor
 	body->SetSimulatePhysics(!dormant);
 	SetActorHiddenInGame(dormant);

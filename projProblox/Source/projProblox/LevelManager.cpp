@@ -42,11 +42,11 @@ void ALevelManager::BeginPlay()
 		}
 	}
 
-	FindSpawns();
 	InitSpawners();
-	
-	// Unload every level apart from the first.
-	// for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
+
+	// Finding spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at beginplay)
+	FTimerHandle UnusedHandle;
+	wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.05f, false); 
 }
 
 void ALevelManager::Tick(float DeltaSeconds)
@@ -170,7 +170,6 @@ void ALevelManager::FindSpawns()
 		// Foreach spawn point add a delegate to save whenever it has been unlocked
 		point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
 
-		UnloadAllLevels();
 		// Sorts the spawns into their levels
 		// Add the points to their respective arrays
 		switch (point->GetLevelEnum())
@@ -183,21 +182,18 @@ void ALevelManager::FindSpawns()
 			case ELevel::Bedroom:
 				point->SetLevelIndex(1);
 				lvl1Spawns.Add(point);
-				UnHideLevel(1);
 				lvl1Screenshots.Add(point->CaptureScreenshot());
 				break;
 					
 			case ELevel::Kitchen:
 				point->SetLevelIndex(2);
 				lvl2Spawns.Add(point);
-				UnHideLevel(2);
 				lvl2Screenshots.Add(point->CaptureScreenshot());
 				break;
 					
 			case ELevel::Bathroom:
 				point->SetLevelIndex(3);
 				lvl3Spawns.Add(point);
-				UnHideLevel(3);
 				lvl3Screenshots.Add(point->CaptureScreenshot());
 				break;
 		}
@@ -205,39 +201,6 @@ void ALevelManager::FindSpawns()
 
 	// If there wasn't a save file...
 	LoadUnlockedSpawns();
-}
-
-void ALevelManager::SpawnPreviewCells()
-{
-	UWorld* streamingWrld = levels[currentLevel]->GetStreamingWorld();
-	TArray<AActor*> cellActors;
-	
-	UGameplayStatics::GetAllActorsOfClass(streamingWrld, ACellSpawner::StaticClass(), cellActors);
-	for (auto& cellActor : cellActors)
-	{
-		if(ACellSpawner* cell = Cast<ACellSpawner>(cellActor)) cell->EarlySpawn();
-	}
-}
-
-// void ALevelManager::UnlockInitialSpawns()
-// {
-// 	// Unlock the first spawn point from each level if not loaded from save
-// 	TArray<TArray<ASpawnPoint*>> spawnsArray = {lvl1Spawns, lvl2Spawns, lvl3Spawns};
-// 	for (auto& array : spawnsArray)
-// 	{
-// 		if (!array.IsEmpty()) array[0]->UnlockPoint();
-// 	}
-//
-// 	// Calling unlock point broadcasts the new spawn delegate...
-// 	if (lvl0Spawn) lvl0Spawn->UnlockPoint();
-// }
-
-void ALevelManager::InitSpawns()
-{
-	Print("Trying init", 4)
-	// if(currentLevel == 1) InitLevel1Spawners();
-	// else if(currentLevel == 2) InitLevel2Spawners();
-	// else if(currentLevel == 3) InitLevel3Spawners();
 }
 
 void ALevelManager::InitSpawners()
@@ -253,65 +216,13 @@ void ALevelManager::InitSpawners()
 		cellSpawners.Add(spawner);
 		spawner->Init(core);
 	}
-}
 
-void ALevelManager::InitLevel1Spawners()
-{
-	if(lvl1Loaded) return;
-
-	TArray<AActor*> spawns;
-	UWorld* streamWrld = levels[1]->GetStreamingWorld();
-
-	UGameplayStatics::GetAllActorsOfClass(streamWrld, ACellSpawner::StaticClass(), spawns);
-	PrintInt(spawns.Num(), 4)
-
-	for (auto& spawnActor : spawns)
-	{
-		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
-	}
-
-	lvl1Loaded = true;
-}
-
-void ALevelManager::InitLevel2Spawners()
-{
-	if(lvl2Loaded) return;
-
-	TArray<AActor*> spawns;
-	UWorld* streamWrld = levels[2]->GetStreamingWorld();
-
-	UGameplayStatics::GetAllActorsOfClass(streamWrld, ACellSpawner::StaticClass(), spawns);
-	PrintInt(spawns.Num(), 4)
-
-	for (auto& spawnActor : spawns)
-	{
-		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
-	}
-
-	lvl2Loaded = true;
-}
-
-void ALevelManager::InitLevel3Spawners()
-{
-	if(lvl3Loaded) return;
-
-	TArray<AActor*> spawns;
-	UWorld* streamWrld = levels[3]->GetStreamingWorld();
-
-	UGameplayStatics::GetAllActorsOfClass(streamWrld, ACellSpawner::StaticClass(), spawns);
-	PrintInt(spawns.Num(), 4)
-
-	for (auto& spawnActor : spawns)
-	{
-		if (ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor)) spawner->Init(core);
-	}
-
-	lvl3Loaded = true;
+	// Unload every level apart from the first.
+	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
 }
 
 void ALevelManager::SelectSpawn(const int spawnPoint)
 {
-
 	if (!player)
 	{
 		Print("Couldn't set spawn because the player was invalid...", 5)
