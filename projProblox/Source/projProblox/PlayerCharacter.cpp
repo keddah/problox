@@ -316,7 +316,7 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 	Zoom();
 	
 	if (!core) return;
-	
+
 	const FVector corePos = core->GetActorLocation();
 	const FVector currentPos = GetActorLocation();
 
@@ -327,22 +327,32 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 	direction = direction.GetSafeNormal();
 
 	// Horizontal and vertical angles in radians
-	float horiAngle = FMath::DegreesToRadians(orbitSpeed * deltaTime * mouseValues.X);
-	float vertAngle = FMath::DegreesToRadians(orbitSpeed * deltaTime * mouseValues.Y);
+	const float horiAngle = FMath::DegreesToRadians(orbitSpeed * deltaTime * mouseValues.X);
+	const float vertAngle = FMath::DegreesToRadians(orbitSpeed * deltaTime * mouseValues.Y);
 
 	// Horizontal rotation
-	FQuat horiQuatRot = FQuat(FVector::UpVector, horiAngle);
+	const FQuat horiQuatRot = FQuat(FVector::UpVector, horiAngle);
 	direction = horiQuatRot.RotateVector(direction);
 
 	// Vertical rotation
-	FVector rightVec = FVector::CrossProduct(direction, FVector::UpVector).GetSafeNormal();
-	FQuat vertQuatRot = FQuat(rightVec, vertAngle);
-	direction = vertQuatRot.RotateVector(direction);
+	const FVector rightVec = FVector::CrossProduct(direction, FVector::UpVector).GetSafeNormal();
+	const FQuat vertQuatRot = FQuat(rightVec, vertAngle);
 
-	FVector newPos = corePos + direction * radius;
+	const FVector newDirection = vertQuatRot.RotateVector(direction);
+	const float dotProduct = FVector::DotProduct(newDirection, FVector::UpVector);
+
+	// Clamps the rotation
+	const float tolerance = 0.95f; 
+	if (FMath::Abs(dotProduct) < tolerance) direction = newDirection;
+
+	const FVector newPos = corePos + direction * radius;
 	SetActorLocation(newPos);
 
-	if(AController* controller = GetController()) controller->SetControlRotation( UKismetMathLibrary::FindLookAtRotation(newPos, corePos));
+	if (AController* controller = GetController())
+	{
+		controller->SetControlRotation(UKismetMathLibrary::FindLookAtRotation(newPos, corePos));
+	}
+
 }
 
 void APlayerCharacter::Zoom()
