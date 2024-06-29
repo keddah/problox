@@ -201,7 +201,19 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
 	float levelEndDelay = 5;
 
-	
+	UPROPERTY(EditDefaultsOnly, Category = "Drag", meta = (ToolTip = "The drag that the mesh should have when a turn is active."))
+	float defaultDrag = .01f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Drag", meta = (ToolTip = "The drag that the mesh should have at the end of a turn."))
+	float heavyDrag = 3;
+		
+	UPROPERTY(EditDefaultsOnly, Category = "Angular Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
+	float defaultAngularDrag = .05f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Angular Drag", meta = (ToolTip = "The angular drag that the mesh should have at the end of a turn."))
+	float heavyAngularDrag = 1;
+
+
 	/////////////// Game States ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	EGameMode currentMode;
@@ -234,6 +246,8 @@ protected:
 		Super::ToggleGravity(gravityOn);
 		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(gravityOn);
 	}
+
+	void SetEnableCollisions(bool enable);
 	
 public:
 	/////////////// Attachments ///////////////

@@ -439,9 +439,10 @@ void APlayerCharacter::Respawn(const FVector& pos, const FRotator& rot)
 	SetActorLocation(pos);
 	SetActorRotation(rot);
 
-	orbiting = true;
-	OrbitControls(1);
-	orbiting = false;
+	 orbiting = true;
+	 mouseValues = { .1f, 0 };
+	 OrbitControls(1);
+	 orbiting = false;
 	
 	camBoom->TargetArmLength = 0;
 }
@@ -449,13 +450,13 @@ void APlayerCharacter::Respawn(const FVector& pos, const FRotator& rot)
 void APlayerCharacter::GoToCore()
 {
 	if(!core) return;
-
-	const FVector corePos = core->GetActorLocation() + core->GetVelocity();
+	Print("Going", 3)
+	const FVector corePos = core->GetActorLocation();
 	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), corePos));
 
 	// Look at the core first so that you can move in the opposite direction...
 	const FVector direction = -GetActorForwardVector();
-	const FVector newPos = corePos + (direction * 300) + FVector(0,0,150);
+	const FVector newPos = corePos + (direction * 300);
 	
 	SetActorLocation(newPos);
 }

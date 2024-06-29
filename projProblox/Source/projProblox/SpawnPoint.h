@@ -62,6 +62,9 @@ public:
 	FRotator GetRot() const { return direction->GetComponentRotation(); }
 	
 	UFUNCTION(BlueprintCallable)
+	UTexture* CaptureScreenshot();
+
+	UFUNCTION(BlueprintCallable)
 	int GetLevelIndex() const { return levelIndex; }
 	void SetLevelIndex(const short index) { levelIndex = index; }
 

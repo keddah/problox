@@ -258,7 +258,8 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	mesh->SetUseCCD(selected);
-	
+	SetEnableCollisions(!selected);
+
 	ToggleGravity();
 	SetHideIndicator(!selected);
 
@@ -317,10 +318,8 @@ void ACubeCore::Detach(const bool push)
 
 void ACubeCore::ResetToStart()
 {
-	// SetActorTransform(resetTransform);
-	// RemoveVelocity();
-	//
-	// attempts++;
+	mesh->SetLinearDamping(heavyDrag);
+	mesh->SetAngularDamping(heavyAngularDrag);
 	buildPhase = true;
 	onReset.Broadcast();
 }
@@ -333,6 +332,8 @@ void ACubeCore::Start()
 	// Save the transform...
 	resetTransform = GetActorTransform();
 	buildPhase = false;
+	mesh->SetLinearDamping(defaultDrag);
+	mesh->SetAngularDamping(defaultAngularDrag);
 }
 
 void ACubeCore::CalculateRating()
@@ -344,6 +345,15 @@ void ACubeCore::CalculateRating()
 	else if(attempts >= moveRatings[0]) rating = 0;
 }
 
+
+void ACubeCore::SetEnableCollisions(const bool enable)
+{
+	mesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
+	for(auto& obj : GetCloseAttachments())
+	{
+		obj->GetMesh()->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
+	}
+}
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
