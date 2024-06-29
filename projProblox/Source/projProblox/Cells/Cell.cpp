@@ -19,6 +19,9 @@ ACell::ACell()
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
 	body->SetRelativeScale3D({.7f, .7f,.7f});
 	body->SetSimulatePhysics(true);
+	RootComponent = body;
+
+	bAsyncPhysicsTickEnabled = true;
 }
 
 // Called when the game starts or when spawned
@@ -26,14 +29,16 @@ void ACell::BeginPlay()
 {
 	Super::BeginPlay();
 
-	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
+	wrld = GetWorld();
+
+	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
 	// if(core) core->onRangeExceeded.AddDynamic(this, &ACell::DeactivateHoming);
 }
 
-// Called every frame
-void ACell::Tick(float DeltaTime)
+void ACell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
 {
-	Super::Tick(DeltaTime);
+	Super::AsyncPhysicsTickActor(DeltaTime, SimTime); //Add this if you want it to work in Blueprints, this should be at the bottom, after your c++ code
+	ReceiveAsyncPhysicsTick(DeltaTime, SimTime);
 
 	GoHome();
 }
@@ -49,5 +54,14 @@ void ACell::GoHome() const
 	const FVector direction = corePos - thisPos;
 	const float squareDist = FVector::DistSquared(corePos, thisPos);
 	
-	body->AddForce(direction * (attractionForce * 10000) / squareDist);
+	if(IsValid(body) && squareDist != 0) body->AddForce(direction * (attractionForce * 10000) / squareDist);
+	else{}
 }
+
+void ACell::SetDormant(const bool dormant)
+{
+	// Enable/disable physics and hide/show actor
+	body->SetSimulatePhysics(!dormant);
+	SetActorHiddenInGame(dormant);
+}
+

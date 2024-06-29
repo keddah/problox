@@ -6,6 +6,7 @@
 #include "CustomGameInstance.h"
 #include "PlayerCharacter.h"
 #include "SpawnPoint.h"
+#include "Cells/CellSpawner.h"
 #include "Engine/LevelStreamingDynamic.h"
 #include "GameFramework/Actor.h"
 #include "Kismet/GameplayStatics.h"
@@ -37,6 +38,12 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	TArray<UTexture*> lvl2Screenshots;
 	TArray<UTexture*> lvl3Screenshots;
 
+	TArray<ACellSpawner*> cellSpawners;
+	
+	bool lvl1Loaded;
+	bool lvl2Loaded;
+	bool lvl3Loaded;
+
 	void FindCore();
 	void FindSpawns();
 	void SpawnPreviewCells();
@@ -49,22 +56,27 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	bool LoadUnlockedSpawns();
 	
 	UFUNCTION()
+	void OnHidden();
+	
+	UFUNCTION()
+	void OnShown();
+	
+	UFUNCTION()
 	void SaveSpawns();
 	
 	UFUNCTION()
 	void SetLoading() { bLevelLoading = true; }
 	
 	UFUNCTION()
+	void InitSpawns();
+	void InitSpawners();
 	void InitLevel1Spawners();
-
-	UFUNCTION()
 	void InitLevel2Spawners();
-
-	UFUNCTION()
 	void InitLevel3Spawners();
 
 	void SelectSpawn(int spawnPoint);
 
+	void WakeSleepCells();
 	
 public:	
 	// Sets default values for this actor's properties
@@ -85,10 +97,6 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TArray<ULevelStreamingDynamic*> levels;
 
-	bool lvl1Loaded;
-	bool lvl2Loaded;
-	bool lvl3Loaded;
-
 public:
 	virtual void Tick(float DeltaSeconds) override;
 	
@@ -96,7 +104,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool LoadLevel(int lvlIndex, int spawnPoint = 0, const bool initialLoad = false);
 	
-	int GetLevelIndex(ULevel* lvl) const
+	int GetLevelIndex(const ULevel* lvl) const
 	{
 		if (!lvl) return -1;
 

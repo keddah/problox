@@ -20,8 +20,6 @@ class AActor;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_33_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execBeginSpawn); \
-	DECLARE_FUNCTION(execActivateSpawner); \
 	DECLARE_FUNCTION(execIsActive); \
 	DECLARE_FUNCTION(execOverlap);
 

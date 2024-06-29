@@ -38,7 +38,6 @@ UTexture* ASpawnPoint::CaptureScreenshot()
     // Create a SceneCaptureComponent2D
     USceneCaptureComponent2D* SceneCaptureComponent = NewObject<USceneCaptureComponent2D>(this);
     SceneCaptureComponent->SetupAttachment(RootComponent);
-    SceneCaptureComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 100.0f));
     SceneCaptureComponent->RegisterComponent();
 
     // Create a Render Target
@@ -56,9 +55,9 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 
     FPostProcessSettings& PostProcessSettings = SceneCaptureComponent->PostProcessSettings;
     PostProcessSettings.bOverride_AutoExposureMethod = true;
-    PostProcessSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
+    PostProcessSettings.AutoExposureMethod = AEM_MAX;
     PostProcessSettings.bOverride_AutoExposureBias = true;
-    PostProcessSettings.AutoExposureBias = 5;
+    PostProcessSettings.AutoExposureBias = 10;
 
     // Capture the scene
     SceneCaptureComponent->CaptureScene();

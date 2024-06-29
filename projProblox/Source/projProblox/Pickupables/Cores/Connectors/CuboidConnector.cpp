@@ -139,7 +139,7 @@ void ACuboidConnector::SetDifferenceFromSockets()
 	}
 }
 
-const FVector& ACuboidConnector::GetSocketDifference(const FName& socket)
+FVector ACuboidConnector::GetSocketDifference(const FName& socket)
 {
 	TArray<FName> sockets = socketInfo->GetSockets();
 	for(int i = 0; i < sockets.Num(); i++)

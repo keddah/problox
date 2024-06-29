@@ -38,12 +38,26 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	virtual void Overlap(AActor* otherActor);
 
 	void PlaySound();
+	ACell* Spawn(const FVector& spawn, const FRotator& rot) const;
+
+	// Spawn parameters
+	FActorSpawnParameters params;
+
 
 public:	
 	// Sets default values for this actor's properties
 	ACellSpawner();
 
+	void SetCellsDormant(bool dormant);
+	
 protected:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	USceneComponent* scene;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UArrowComponent* forceDirection;
+	
+private:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -58,7 +72,6 @@ protected:
 
 	UPROPERTY(EditInstanceOnly, Category = "Sound")
 	bool loopingSound = false;
-
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ACell> normalThing;
@@ -76,16 +89,13 @@ protected:
 	TSubclassOf<ACell> stickyThing;
 	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
+	ELevel level;
+	
+	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
 	ECellType thingType = ECellType::Normal;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	USceneComponent* scene;
-
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "If the relative location is 0, this has no affect."))
 	UBoxComponent* spawnTrigger;
-	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UArrowComponent* forceDirection;
 	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
 	int32 spawnAmount = 1;
@@ -107,11 +117,11 @@ protected:
 
 	UWorld* wrld;
 
+	TArray<ACell*> spawnedCells;
+	
 	UPROPERTY(EditInstanceOnly)
 	bool triggerable;
 	
-	ACell* Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const;
-
 	
 public:
 	void Init(ACubeCore* core);
@@ -119,15 +129,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsActive() const { return spawned; }
 
-	UFUNCTION(BlueprintCallable)
-	void ActivateSpawner() { spawned = true; }
+	const ELevel& GetLevelEnum() const { return level; }
 	
-	UFUNCTION(BlueprintCallable)
-	void BeginSpawn();
 	void EarlySpawn();
-
 	void SpawnWithForce();
 
+	void ActivateSpawner() { spawned = true; }
 	int GetSpawnAmount() const { return spawnAmount; }
 	
 	void IncreaseSpawnCount(unsigned short additions)

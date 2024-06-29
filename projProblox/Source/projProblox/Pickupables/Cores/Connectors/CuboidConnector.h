@@ -38,7 +38,7 @@ class PROJPROBLOX_API ACuboidConnector : public ACubeConnector
 	TArray<FVector> socketDifferences;
 	
 	void SetDifferenceFromSockets();
-	const FVector& GetSocketDifference(const FName& socket);
+	FVector GetSocketDifference(const FName& socket);
 
 public:
 	void AlignSockets(const FName& socket, const ACubeCore* parent = 0);

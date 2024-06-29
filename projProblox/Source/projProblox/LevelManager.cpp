@@ -4,7 +4,6 @@
 #include "LevelManager.h"
 
 #include "SaveFiles.h"
-#include "Cells/CellSpawner.h"
 #include "Pickupables/Cores/CubeCore.h"
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
 
@@ -37,23 +36,17 @@ void ALevelManager::BeginPlay()
 
 			// Add the level if it's valid.
 			levels.AddUnique(lvl);
+
+			lvl->OnLevelHidden.AddDynamic(this, &ALevelManager::OnHidden);
+			lvl->OnLevelShown.AddDynamic(this, &ALevelManager::OnShown);
 		}
 	}
 
-
-	// Unload every level apart from the first.
-	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
-	
 	FindSpawns();
-
-	for (int i = 0; i < levels.Num(); i++)
-	{
-		ULevelStreamingDynamic* level = levels[i];
-		if (!level) continue;
-		if(i == 1) level->OnLevelShown.AddDynamic(this, &ALevelManager::ALevelManager::InitLevel1Spawners);
-		if(i == 2) level->OnLevelShown.AddDynamic(this, &ALevelManager::ALevelManager::InitLevel2Spawners);
-		if(i == 3) level->OnLevelShown.AddDynamic(this, &ALevelManager::ALevelManager::InitLevel3Spawners);
-	}
+	InitSpawners();
+	
+	// Unload every level apart from the first.
+	// for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
 }
 
 void ALevelManager::Tick(float DeltaSeconds)
@@ -104,8 +97,8 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	{
 		levels[currentLevel]->SetShouldBeLoaded(true);
 	}
-	levels[currentLevel]->SetShouldBeVisible(true);
 	
+	levels[currentLevel]->SetShouldBeVisible(true);
 	instance->SetCurrentLevel(currentLevel);
 
 	// Unload all the levels apart from the current level
@@ -132,6 +125,7 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 		return;
 	}
 
+	levels[lvlIndex]->SetShouldBeVisible(false);
 	levels[lvlIndex]->SetShouldBeVisible(false);
 }
 
@@ -170,13 +164,13 @@ void ALevelManager::FindSpawns()
 	{
 		ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
 		if(!point) continue;
-		UnloadAllLevels();
 
 		allSpawns.Add(point);
 
 		// Foreach spawn point add a delegate to save whenever it has been unlocked
 		point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
 
+		UnloadAllLevels();
 		// Sorts the spawns into their levels
 		// Add the points to their respective arrays
 		switch (point->GetLevelEnum())
@@ -238,13 +232,38 @@ void ALevelManager::SpawnPreviewCells()
 // 	if (lvl0Spawn) lvl0Spawn->UnlockPoint();
 // }
 
+void ALevelManager::InitSpawns()
+{
+	Print("Trying init", 4)
+	// if(currentLevel == 1) InitLevel1Spawners();
+	// else if(currentLevel == 2) InitLevel2Spawners();
+	// else if(currentLevel == 3) InitLevel3Spawners();
+}
+
+void ALevelManager::InitSpawners()
+{
+	TArray<AActor*> actors;
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), actors);
+
+	for(auto& cellSpawner: actors)
+	{
+		ACellSpawner* spawner = Cast<ACellSpawner>(cellSpawner);
+		if(!spawner) continue;
+
+		cellSpawners.Add(spawner);
+		spawner->Init(core);
+	}
+}
+
 void ALevelManager::InitLevel1Spawners()
 {
 	if(lvl1Loaded) return;
 
 	TArray<AActor*> spawns;
-	UGameplayStatics::GetAllActorsOfClass(levels[1]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
-	Print(levels[1]->GetName(), 4)
+	UWorld* streamWrld = levels[1]->GetStreamingWorld();
+
+	UGameplayStatics::GetAllActorsOfClass(streamWrld, ACellSpawner::StaticClass(), spawns);
+	PrintInt(spawns.Num(), 4)
 
 	for (auto& spawnActor : spawns)
 	{
@@ -259,8 +278,10 @@ void ALevelManager::InitLevel2Spawners()
 	if(lvl2Loaded) return;
 
 	TArray<AActor*> spawns;
-	UGameplayStatics::GetAllActorsOfClass(levels[2]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
-	Print(levels[2]->GetName(), 4)
+	UWorld* streamWrld = levels[2]->GetStreamingWorld();
+
+	UGameplayStatics::GetAllActorsOfClass(streamWrld, ACellSpawner::StaticClass(), spawns);
+	PrintInt(spawns.Num(), 4)
 
 	for (auto& spawnActor : spawns)
 	{
@@ -275,8 +296,10 @@ void ALevelManager::InitLevel3Spawners()
 	if(lvl3Loaded) return;
 
 	TArray<AActor*> spawns;
-	UGameplayStatics::GetAllActorsOfClass(levels[3]->GetStreamingWorld(), ACellSpawner::StaticClass(), spawns);
-	Print(levels[3]->GetName(), 4)
+	UWorld* streamWrld = levels[3]->GetStreamingWorld();
+
+	UGameplayStatics::GetAllActorsOfClass(streamWrld, ACellSpawner::StaticClass(), spawns);
+	PrintInt(spawns.Num(), 4)
 
 	for (auto& spawnActor : spawns)
 	{
@@ -348,6 +371,20 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	onSpawnChanged.Broadcast(spawnPoint);
 }
 
+void ALevelManager::WakeSleepCells()
+{
+	for(auto& spawner : cellSpawners)
+	{
+		ELevel levelEnum = ELevel::BuildArea;
+		
+		if(currentLevel == 1) levelEnum = ELevel::Bedroom;
+		else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
+		else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
+
+		spawner->SetCellsDormant(spawner->GetLevelEnum() != levelEnum);
+	}
+}
+
 void ALevelManager::SaveSpawns()
 {
 	TArray<short> unlockedIndices;
@@ -377,4 +414,13 @@ bool ALevelManager::LoadUnlockedSpawns()
 	Print("There was no spawn save found so one was created", 8);
 	// UnlockInitialSpawns();
 	return false;
+}
+
+void ALevelManager::OnHidden()
+{
+}
+
+void ALevelManager::OnShown()
+{
+	WakeSleepCells();
 }

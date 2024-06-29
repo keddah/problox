@@ -28,6 +28,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
+	UWorld* wrld;
+
 	UPROPERTY(EditDefaultsOnly)
     UStaticMeshComponent* body;
 
@@ -51,14 +53,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
 
+	void SetDormant(bool dormant);
+	
 	UFUNCTION()
 	void DeactivateHoming() { isHoming = false;}
 	
 	UFUNCTION(BlueprintCallable)
 	bool IsSafe() const { return safe; }
 
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
 
 	UStaticMeshComponent* GetMesh() const { return body; }
 };
@@ -76,7 +79,7 @@ class PROJPROBLOX_API ABouncyCell : public ACell
 	float bounciness = 4;
 	
 public:
-	virtual void Tick(float DeltaSeconds) override;
+	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
 };
 
 
@@ -86,8 +89,8 @@ class PROJPROBLOX_API AHoverCell : public ACell
 {
 	GENERATED_BODY()
 
-	virtual void Tick(float DeltaSeconds) override;
-	
+	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
+
 };
 
 
@@ -104,7 +107,7 @@ class PROJPROBLOX_API AStickyCell : public ACell
 	FVector previousVelocity;
 	
 	void Unstick(float deltaTime) const;
-	
-	virtual void Tick(float DeltaSeconds) override;
+
+	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
 	virtual void NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 };

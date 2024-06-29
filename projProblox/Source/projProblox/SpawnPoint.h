@@ -58,7 +58,6 @@ public:
 
 	FRotator GetRot() const { return direction->GetComponentRotation(); }
 	
-	UFUNCTION(BlueprintCallable)
 	UTexture* CaptureScreenshot();
 
 	UFUNCTION(BlueprintCallable)

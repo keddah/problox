@@ -31,6 +31,15 @@ ACellSpawner::ACellSpawner()
 	forceDirection = CreateDefaultSubobject<UArrowComponent>("Direction indicator");
 	forceDirection->SetupAttachment(scene);
 	forceDirection->ArrowSize = 7.5f;
+
+	params.bNoFail = true;
+}
+
+void ACellSpawner::SetCellsDormant(const bool dormant)
+{
+	if(spawnedCells.IsEmpty()) return;
+
+	for(auto& cell : spawnedCells) cell->SetDormant(dormant);
 }
 
 // Called when the game starts or when spawned
@@ -42,6 +51,11 @@ void ACellSpawner::BeginPlay()
 
 void ACellSpawner::Init(ACubeCore* core)
 {
+	if (!core) 
+	{
+		Print("Couldnt init cell spawner because core was invalid...", 4)
+		return;
+	}
 	wrld = GetWorld();
 
 	if (!wrld)
@@ -51,7 +65,7 @@ void ACellSpawner::Init(ACubeCore* core)
 	}
 
 	// if (!triggerable && core) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
-	if (core) core->onTurnStarted.AddDynamic(this, &ACellSpawner::ActivateSpawner);
+	//if (core) core->onTurnStarted.AddDynamic(this, &ACellSpawner::ActivateSpawner);
 
 	EarlySpawn();
 }
@@ -106,7 +120,7 @@ void ACellSpawner::PlaySound()
 	soundPlayer->Play(soundDelay);
 }
 
-ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FActorSpawnParameters& params) const
+ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 {
 	TSubclassOf<ACell> subClass;
 	switch (thingType)
@@ -138,39 +152,6 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot, const FAct
 	return wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
 }
 
-void ACellSpawner::BeginSpawn()
-{
-	if(previewed) return;
-	if(!wrld)
-	{
-		Print("World was invalid... couldn't spawn cells.", 5)
-		return;
-	}
-
-	if(spawned)
-	{
-		Print("Already spawned...", 4)
-		return;
-	}
-	
-	const FVector thisPos = GetActorLocation();
-	const FRotator rot = GetActorRotation();
-
-	FActorSpawnParameters params;
-	params.bNoFail = true;
-	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
-	{
-		params.OverrideLevel = wrld->GetStreamingLevels()[instance->GetCurrentLevel()]->GetLoadedLevel();
-	}
-
-	// If spawn radius isn't set, the spawn position will be this position.
-	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
-
-	// Spawn a new Thing for however many spawnAmount says to.
-	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
-	spawned = true;
-}
-
 void ACellSpawner::EarlySpawn()
 {
 	if(!previewed) return;
@@ -182,25 +163,28 @@ void ACellSpawner::EarlySpawn()
 	}
 	if(spawned)
 	{
-		Print("Already spawned...", 4)
+		// Print("Already spawned...", 4)
 		return;
 	}
 	
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
-	FActorSpawnParameters params;
-	params.bNoFail = true;
-	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
-	{
-		params.OverrideLevel = wrld->GetStreamingLevels()[instance->GetCurrentLevel()]->GetLoadedLevel();
-	}
-
 	// If spawn radius isn't set, the spawn position will be this position.
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 
+	Print("Early spawning..", 3)
+
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(int i = 0; i < spawnAmount; i++) Spawn(spawn, rot, params);
+	for(int i = 0; i < spawnAmount; i++)
+	{
+		ACell* cell = Spawn(spawn, rot);
+
+		// Spawns a cell then deactivates it...
+		cell->SetDormant(true);
+
+		spawnedCells.Add(cell);
+	}
 	spawned = true;
 }
 
@@ -216,18 +200,10 @@ void ACellSpawner::SpawnWithForce()
 	const FRotator rot = GetActorRotation();
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 	
-	FActorSpawnParameters params;
-	params.bNoFail = true;
-	if(UCustomGameInstance* instance = Cast<UCustomGameInstance>(wrld->GetGameInstance()))
-	{
-		params.OverrideLevel = wrld->GetStreamingLevels()[instance->GetCurrentLevel()]->GetLoadedLevel();
-	}
-
-	TArray<ACell*> spawnedCells;
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++)
 	{
-		if(ACell* newCell = Spawn(spawn, rot, params)) spawnedCells.Add(newCell);
+		if(ACell* newCell = Spawn(spawn, rot)) spawnedCells.Add(newCell);
 	}
 
 	for (auto& cell : spawnedCells)
