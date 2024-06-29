@@ -20,13 +20,6 @@ ASpawnPoint::ASpawnPoint()
 }
 
 
-// Called when the game starts or when spawned
-void ASpawnPoint::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
-
 void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
@@ -48,8 +41,6 @@ UTexture* ASpawnPoint::CaptureScreenshot()
     SceneCaptureComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 100.0f));
     SceneCaptureComponent->RegisterComponent();
 
-
-
     // Create a Render Target
     UTextureRenderTarget2D* RenderTarget = NewObject<UTextureRenderTarget2D>();
     RenderTarget->InitAutoFormat(600, 600);
@@ -69,7 +60,6 @@ UTexture* ASpawnPoint::CaptureScreenshot()
     PostProcessSettings.bOverride_AutoExposureBias = true;
     PostProcessSettings.AutoExposureBias = 5;
 
-
     // Capture the scene
     SceneCaptureComponent->CaptureScene();
 
@@ -80,10 +70,7 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 
     // Create a new Texture2D
     UTexture2D* ScreenshotTexture = UTexture2D::CreateTransient(RenderTarget->SizeX, RenderTarget->SizeY, PF_B8G8R8A8);
-    if (!ScreenshotTexture)
-    {
-        return nullptr;
-    }
+    if (!ScreenshotTexture) return nullptr;
 
     // Lock the texture for editing
     FTexture2DMipMap& Mip = ScreenshotTexture->PlatformData->Mips[0];

@@ -40,10 +40,11 @@ void ALevelManager::BeginPlay()
 		}
 	}
 
-	FindSpawns();
 
 	// Unload every level apart from the first.
 	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
+	
+	FindSpawns();
 
 	for (int i = 0; i < levels.Num(); i++)
 	{
@@ -108,7 +109,7 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	instance->SetCurrentLevel(currentLevel);
 
 	// Unload all the levels apart from the current level
-	UnloadAllLevels();
+	UnloadUnusedLevels();
 
 	SelectSpawn(spawnPoint);
 	
@@ -134,7 +135,7 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 	levels[lvlIndex]->SetShouldBeVisible(false);
 }
 
-void ALevelManager::UnloadAllLevels()
+void ALevelManager::UnloadUnusedLevels()
 {
 	// Unload all levels
 	for(int i = 0; i < levels.Num(); i++)
@@ -169,6 +170,7 @@ void ALevelManager::FindSpawns()
 	{
 		ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
 		if(!point) continue;
+		UnloadAllLevels();
 
 		allSpawns.Add(point);
 
@@ -187,16 +189,22 @@ void ALevelManager::FindSpawns()
 			case ELevel::Bedroom:
 				point->SetLevelIndex(1);
 				lvl1Spawns.Add(point);
+				UnHideLevel(1);
+				lvl1Screenshots.Add(point->CaptureScreenshot());
 				break;
 					
 			case ELevel::Kitchen:
 				point->SetLevelIndex(2);
 				lvl2Spawns.Add(point);
+				UnHideLevel(2);
+				lvl2Screenshots.Add(point->CaptureScreenshot());
 				break;
 					
 			case ELevel::Bathroom:
 				point->SetLevelIndex(3);
 				lvl3Spawns.Add(point);
+				UnHideLevel(3);
+				lvl3Screenshots.Add(point->CaptureScreenshot());
 				break;
 		}
 	}

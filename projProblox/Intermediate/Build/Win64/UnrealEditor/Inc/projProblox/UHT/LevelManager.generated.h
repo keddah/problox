@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ASpawnPoint;
+class UTexture;
 #ifdef PROJPROBLOX_LevelManager_generated_h
 #error "LevelManager.generated.h already included, missing '#pragma once' in LevelManager.h"
 #endif
@@ -28,12 +29,16 @@ PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDele
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_22_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetLevel3Screenshots); \
+	DECLARE_FUNCTION(execGetLevel2Screenshots); \
+	DECLARE_FUNCTION(execGetLevel1Screenshots); \
 	DECLARE_FUNCTION(execGetLevel3Spawns); \
 	DECLARE_FUNCTION(execGetLevel2Spawns); \
 	DECLARE_FUNCTION(execGetLevel1Spawns); \
 	DECLARE_FUNCTION(execPrintCurrentLevel); \
 	DECLARE_FUNCTION(execGetCurrentLevel); \
 	DECLARE_FUNCTION(execUnloadAllLevels); \
+	DECLARE_FUNCTION(execUnloadUnusedLevels); \
 	DECLARE_FUNCTION(execLoadLevel); \
 	DECLARE_FUNCTION(execInitLevel3Spawners); \
 	DECLARE_FUNCTION(execInitLevel2Spawners); \

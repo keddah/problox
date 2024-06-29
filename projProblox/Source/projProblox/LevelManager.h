@@ -33,6 +33,10 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
 
+	TArray<UTexture*> lvl1Screenshots;
+	TArray<UTexture*> lvl2Screenshots;
+	TArray<UTexture*> lvl3Screenshots;
+
 	void FindCore();
 	void FindSpawns();
 	void SpawnPreviewCells();
@@ -108,8 +112,20 @@ public:
 		return -1;
 	}
 
-	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Unloads all the levels apart from the current level."))
-	void UnloadAllLevels();
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Hides all the levels apart from the current level."))
+	void UnloadUnusedLevels();
+	
+	// Hides every single level.
+	UFUNCTION(BlueprintCallable)
+	void UnloadAllLevels() { for (int i = 0; i < levels.Num(); i++)	UnloadLevel(i); }
+	
+	void UnHideLevel(const short lvl = -1)
+	{
+		if (lvl == -1) levels[currentLevel]->SetShouldBeVisible(true);
+		else if (levels.IsValidIndex(lvl)) levels[currentLevel]->SetShouldBeVisible(true);
+		else Print("The given level index was out of range..." , 4)
+	}
+
 	
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Returns the level index of the current level."))
 	int GetCurrentLevel() const { return currentLevel; }
@@ -131,5 +147,14 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	TArray<ASpawnPoint*> GetLevel3Spawns() const { return lvl3Spawns; }
+
+	UFUNCTION(BlueprintCallable)
+	const TArray<UTexture*>& GetLevel1Screenshots() const { return lvl1Screenshots; }
+
+	UFUNCTION(BlueprintCallable)
+	const TArray<UTexture*>& GetLevel2Screenshots() const { return lvl2Screenshots; }
+
+	UFUNCTION(BlueprintCallable)
+	const TArray<UTexture*>& GetLevel3Screenshots() const { return lvl3Screenshots; }
 
 };
