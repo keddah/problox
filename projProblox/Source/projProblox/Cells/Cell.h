@@ -48,7 +48,7 @@ private:
 
 public:	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
-	void Teleport(const FVector& pos) { SetActorLocation(pos); safe = true; }
+	void Teleport(const FVector& pos) { SetActorLocation(pos); safe = true; body->SetRelativeScale3D({10,10,10});}
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }

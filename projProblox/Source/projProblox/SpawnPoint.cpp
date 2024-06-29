@@ -51,22 +51,26 @@ UTexture* ASpawnPoint::CaptureScreenshot()
     SceneCaptureComponent->bCaptureEveryFrame = false;
     SceneCaptureComponent->bCaptureOnMovement = false;
     SceneCaptureComponent->ShowFlags.SetDynamicShadows(true);
-    SceneCaptureComponent->ShowFlags.SetAntiAliasing(false);
+    SceneCaptureComponent->ShowFlags.SetAntiAliasing(true);
 
     // Adjust Post-Processing Settings for Brightness
     FPostProcessSettings& PostProcessSettings = SceneCaptureComponent->PostProcessSettings;
 
 	// Camera settings
 	PostProcessSettings.bOverride_CameraShutterSpeed = true;
-	PostProcessSettings.CameraShutterSpeed = 1/30.0f;  
+	PostProcessSettings.CameraShutterSpeed = 1/300;  
 	PostProcessSettings.bOverride_CameraISO = true;
-	PostProcessSettings.CameraISO = 400;  
+	PostProcessSettings.CameraISO = 8000;  
 
 	// Auto exposure settings
 	PostProcessSettings.bOverride_AutoExposureMethod = true;
 	PostProcessSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
 	PostProcessSettings.bOverride_AutoExposureBias = true;
-	PostProcessSettings.AutoExposureBias = 2; 
+	PostProcessSettings.AutoExposureBias = 3; 
+	PostProcessSettings.bOverride_AutoExposureMaxBrightness = true; 
+	PostProcessSettings.bOverride_AutoExposureMinBrightness = true; 
+	PostProcessSettings.AutoExposureMaxBrightness = 20000; 
+	PostProcessSettings.AutoExposureMinBrightness = 9000; 
 
 	// Bloom settings
 	PostProcessSettings.bOverride_BloomIntensity = true;
@@ -76,15 +80,16 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	PostProcessSettings.bOverride_BloomSizeScale = true;
 	PostProcessSettings.BloomSizeScale = 1.0f; 
 
+
 	// Lens flare settings
 	PostProcessSettings.bOverride_LensFlareIntensity = true;
 	PostProcessSettings.LensFlareIntensity = 0.2f;  
 
 	// Color grading settings
 	PostProcessSettings.bOverride_FilmToe = true;
-	PostProcessSettings.FilmToe = 0.5f;  
+	PostProcessSettings.FilmToe = .1f;  
 	PostProcessSettings.bOverride_FilmShoulder = true;
-	PostProcessSettings.FilmShoulder = 0.5f;  
+	PostProcessSettings.FilmShoulder = 0.9f;  
 	PostProcessSettings.bOverride_FilmWhiteClip = true;
 	PostProcessSettings.FilmWhiteClip = 1.0f;
 	PostProcessSettings.bOverride_FilmBlackClip = true;
@@ -96,9 +101,9 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 
 	// Ambient occlusion settings
 	PostProcessSettings.bOverride_AmbientOcclusionIntensity = true;
-	PostProcessSettings.AmbientOcclusionIntensity = 0.8f;  
+	PostProcessSettings.AmbientOcclusionIntensity = 0.9f;  
 	PostProcessSettings.bOverride_AmbientOcclusionRadius = true;
-	PostProcessSettings.AmbientOcclusionRadius = 200.0f; 
+	PostProcessSettings.AmbientOcclusionRadius = 250.0f; 
 
 	// Motion blur settings
 	PostProcessSettings.bOverride_MotionBlurAmount = true;

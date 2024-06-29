@@ -173,8 +173,6 @@ void ACellSpawner::EarlySpawn()
 	// If spawn radius isn't set, the spawn position will be this position.
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 
-	Print("Early spawning..", 3)
-
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(int i = 0; i < spawnAmount; i++)
 	{

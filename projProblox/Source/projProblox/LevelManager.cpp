@@ -46,7 +46,7 @@ void ALevelManager::BeginPlay()
 
 	// Finding spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at beginplay)
 	FTimerHandle UnusedHandle;
-	wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.05f, false); 
+	wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.25f, false); 
 }
 
 void ALevelManager::Tick(float DeltaSeconds)
@@ -218,7 +218,7 @@ void ALevelManager::InitSpawners()
 	}
 
 	// Unload every level apart from the first.
-	for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
+	// for(int i = 1; i < levels.Num(); i++) UnloadLevel(i);
 }
 
 void ALevelManager::SelectSpawn(const int spawnPoint)
@@ -238,7 +238,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	core->RemoveVelocity();
 
 	FVector spawnPos;
-	const FVector spawnOffset = { -1000,0, 0 };
+	const FVector spawnOffset = { -500,0, 0 };
 	switch (currentLevel)
 	{
 	case 0:
