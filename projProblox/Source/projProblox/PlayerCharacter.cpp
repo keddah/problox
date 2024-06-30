@@ -856,7 +856,6 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 	AActor* AHit = hit.GetActor();
 	if(!core) return;
 
-	Print(hit.GetComponent()->GetName(), 3)
 	APickupableMaster* hitObj = Cast<APickupableMaster>(AHit);
 	if(!hitObj) return;
 
