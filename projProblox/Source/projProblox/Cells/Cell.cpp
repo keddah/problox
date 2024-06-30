@@ -15,6 +15,7 @@ ACell::ACell()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	bAsyncPhysicsTickEnabled = false;
 
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
 	body->SetRelativeScale3D({.7f, .7f,.7f});
@@ -26,7 +27,6 @@ ACell::ACell()
 	hitBox->SetRelativeScale3D({.05f,.05f,.05f});
 	hitBox->SetSphereRadius(100);
 	
-	bAsyncPhysicsTickEnabled = true;
 }
 
 // Called when the game starts or when spawned
@@ -43,32 +43,26 @@ void ACell::BeginPlay()
 
 void ACell::Tick(float DeltaSeconds)
 {
-	Super::Tick(DeltaSeconds);
-
-	// Doesn't work as intended when done in asyncTick
-	thisPos = GetActorLocation();
-	if(core) corePos = core->GetActorLocation();
-}
-
-void ACell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
-{
-	Super::AsyncPhysicsTickActor(DeltaTime, SimTime); //Add this if you want it to work in Blueprints, this should be at the bottom, after your c++ code
-	ReceiveAsyncPhysicsTick(DeltaTime, SimTime);
-
+	if(safe) return;
 	GoHome();
+
+	Super::Tick(DeltaSeconds);
 }
 
 void ACell::GoHome() const
 {
-	if(safe) return;
-	if(!isHoming) return;
 	if(!core) return;
+	if(!body) return;
 	if(!body->IsSimulatingPhysics()) return;
+	if(!isHoming) return;
 
+	const FVector corePos = core->GetActorLocation();
+	const FVector thisPos = GetActorLocation();
+	
 	const FVector direction = corePos - thisPos;
 	const float squareDist = FVector::DistSquared(corePos, thisPos);
 	
-	body->AddForce(direction * (attractionForce * 10000) / squareDist);
+	if(squareDist != 0) body->AddForce(direction * (attractionForce * 10000) / squareDist);
 }
 
 void ACell::SetDormant(const bool dormant)

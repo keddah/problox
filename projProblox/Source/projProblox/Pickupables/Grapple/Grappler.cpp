@@ -46,9 +46,6 @@ void AGrappler::Ability(const float deltaTime)
 	UWorld* world = GetWorld();
 	if(!world) return;
 	
-	// Destroy the hook if one is already valid.
-	if(hook) hook->Destroy();
-
 	// Spawn and set the hook
 	if(grappleSpawn && grappleHeadClass) hook = world->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();

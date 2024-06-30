@@ -214,7 +214,13 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACell_Teleport_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Collection" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// When the core collects it...\n" },
+#endif
 		{ "ModuleRelativePath", "Cells/Cell.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "When the core collects it..." },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACell_Teleport_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACell, nullptr, "Teleport", nullptr, nullptr, Z_Construct_UFunction_ACell_Teleport_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_Teleport_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACell_Teleport_Statics::Cell_eventTeleport_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C20401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_Teleport_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACell_Teleport_Statics::Function_MetaDataParams) };
@@ -262,7 +268,7 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		{ &Z_Construct_UFunction_ACell_DeactivateHoming, "DeactivateHoming" }, // 403852407
 		{ &Z_Construct_UFunction_ACell_IsSafe, "IsSafe" }, // 1178903231
 		{ &Z_Construct_UFunction_ACell_SetHoming, "SetHoming" }, // 3000311673
-		{ &Z_Construct_UFunction_ACell_Teleport, "Teleport" }, // 1809261216
+		{ &Z_Construct_UFunction_ACell_Teleport, "Teleport" }, // 785156750
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACell_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -404,6 +410,7 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 	{
 		return ABouncyCell::StaticClass();
 	}
+	ABouncyCell::ABouncyCell() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABouncyCell);
 	ABouncyCell::~ABouncyCell() {}
 	void AHoverCell::StaticRegisterNativesAHoverCell()
@@ -564,12 +571,12 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 3536936606U) },
-		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 1851493228U) },
-		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 2541248689U) },
-		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 58852419U) },
+		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 2799871051U) },
+		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 3735393697U) },
+		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 1569889136U) },
+		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 1561910215U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_1402053761(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_3774313678(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

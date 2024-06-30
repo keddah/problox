@@ -40,8 +40,6 @@ protected:
 
 private:
 	ACubeCore* core;
-	FVector thisPos;
-	FVector corePos;
 	
 	float attractionForce;
 	
@@ -61,9 +59,17 @@ private:
 		return true;
 	}
 	
-public:	
+public:
+	// When the core collects it...
 	UFUNCTION(BlueprintCallable, Category = "Collection")
-	void Teleport(const FVector& pos) { SetActorLocation(pos); safe = true; body->SetRelativeScale3D({10,10,10});}
+	void Teleport(const FVector& pos)
+	{
+		SetActorLocation(pos); safe = true;
+		body->SetRelativeScale3D({10,10,10});
+		body->SetPhysicsLinearVelocity({});
+		PrimaryActorTick.bCanEverTick = true;
+		bAsyncPhysicsTickEnabled = true;
+	}
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
@@ -76,8 +82,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsSafe() const { return safe; }
 
-	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
-
 	UStaticMeshComponent* GetMesh() const { return body; }
 };
 
@@ -87,7 +91,6 @@ UCLASS()
 class PROJPROBLOX_API ABouncyCell : public ACell
 {
 	GENERATED_BODY()
-	ABouncyCell() { }
 	
 	float zVelocity;
 
@@ -95,7 +98,7 @@ class PROJPROBLOX_API ABouncyCell : public ACell
 	float bounciness = 4;
 	
 public:
-	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
+	virtual void Tick(float DeltaSeconds) override;
 };
 
 
@@ -105,7 +108,7 @@ class PROJPROBLOX_API AHoverCell : public ACell
 {
 	GENERATED_BODY()
 
-	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
+	virtual void Tick(float DeltaSeconds) override;
 
 };
 
@@ -124,6 +127,6 @@ class PROJPROBLOX_API AStickyCell : public ACell
 	
 	void Unstick(float deltaTime) const;
 
-	virtual void AsyncPhysicsTickActor(float DeltaTime, float SimTime) override;
+	virtual void Tick(float DeltaSeconds) override;
 	virtual void NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 };

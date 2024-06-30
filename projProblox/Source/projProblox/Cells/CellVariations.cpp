@@ -9,10 +9,8 @@
 #include "Cell.h"
 
 /////////////// BOUNCY ///////////////
-void ABouncyCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
+void ABouncyCell::Tick(float DeltaSeconds)
 {
-	if(DeltaTime == NAN || SimTime == NAN) return;
-	Super::AsyncPhysicsTickActor(DeltaTime, SimTime);
 	if(!body) return;
 	if(!body->IsSimulatingPhysics()) return;
 
@@ -25,26 +23,31 @@ void ABouncyCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
 	}
 
 	zVelocity = velocity.Z;
+	
+	Super::Tick(DeltaSeconds);
 }
 
+
+
 /////////////// HOVER ///////////////
-void AHoverCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
+void AHoverCell::Tick(float DeltaSeconds)
 {
-	if(DeltaTime == NAN || SimTime == NAN) return;
-	Super::AsyncPhysicsTickActor(DeltaTime, SimTime);
 	if(!body) return;
 	if(!body->IsSimulatingPhysics()) return;
 
 	const FVector velocity = body->GetPhysicsLinearVelocity();
-	body->SetPhysicsLinearVelocity({ velocity.X, velocity.Y, DeltaTime * -wrld->GetGravityZ() });//8.2f});
+	body->SetPhysicsLinearVelocity({ velocity.X, velocity.Y, DeltaSeconds * -wrld->GetGravityZ() });//8.2f});
+	
+	Super::Tick(DeltaSeconds);
 }
 
 
 /////////////// STICKY ///////////////
-void AStickyCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
+void AStickyCell::Tick(float DeltaSeconds)
 {
-	Super::AsyncPhysicsTickActor(DeltaTime, SimTime);
-	Unstick(DeltaTime);
+	Unstick(DeltaSeconds);
+
+	Super::Tick(DeltaSeconds);
 }
 
 void AStickyCell::Unstick(const float deltaTime) const
@@ -59,9 +62,8 @@ void AStickyCell::Unstick(const float deltaTime) const
 	body->SetPhysicsAngularVelocityInDegrees({0,0,0});
 }
 
-
 void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp,
-                             bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+                            bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 	if(!body) return;
