@@ -105,9 +105,6 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	UnloadUnusedLevels();
 
 	SelectSpawn(spawnPoint);
-	
-	// Broadcast the level change
-	onLevelChanged.Broadcast(currentLevel, !initialLoad && currentLevel == 0);
 	return true;
 }
 
@@ -334,4 +331,7 @@ void ALevelManager::OnHidden()
 void ALevelManager::OnShown()
 {
 	WakeSleepCells();
+
+	// Broadcast the level change
+	onLevelChanged.Broadcast(currentLevel, false);
 }
