@@ -170,7 +170,7 @@ protected:
 	bool canCollect = true;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
-	float thingAttraction = 42000;
+	float thingAttraction = 4200000;
 	
 	
 	/////////////// Delegates ///////////////
@@ -301,7 +301,6 @@ public:
 
 	TArray<FName> GetFreeSlots() const
 	{
-		Print(oppositeSocket.ToString(), 4)
 		TArray<FName> slots = socketInfo->GetFreeSockets();
 		if(slots.Contains(oppositeSocket)) slots.Remove(oppositeSocket);
 		return slots;

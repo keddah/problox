@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 // Cross Module References
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ABouncyCell();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ABouncyCell_NoRegister();
@@ -245,9 +246,9 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_body;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_attractionForce_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_hitBox_MetaData[];
 #endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_attractionForce;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_hitBox;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -279,15 +280,16 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACell_Statics::NewProp_body = { "body", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACell, body), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACell_Statics::NewProp_body_MetaData), Z_Construct_UClass_ACell_Statics::NewProp_body_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACell_Statics::NewProp_attractionForce_MetaData[] = {
-		{ "Category", "Collection" },
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACell_Statics::NewProp_hitBox_MetaData[] = {
+		{ "Category", "Cell" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Cells/Cell.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACell_Statics::NewProp_attractionForce = { "attractionForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACell, attractionForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACell_Statics::NewProp_attractionForce_MetaData), Z_Construct_UClass_ACell_Statics::NewProp_attractionForce_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACell_Statics::NewProp_hitBox = { "hitBox", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACell, hitBox), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACell_Statics::NewProp_hitBox_MetaData), Z_Construct_UClass_ACell_Statics::NewProp_hitBox_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACell_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACell_Statics::NewProp_body,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACell_Statics::NewProp_attractionForce,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACell_Statics::NewProp_hitBox,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACell_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACell>::IsAbstract,
@@ -402,7 +404,6 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 	{
 		return ABouncyCell::StaticClass();
 	}
-	ABouncyCell::ABouncyCell() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABouncyCell);
 	ABouncyCell::~ABouncyCell() {}
 	void AHoverCell::StaticRegisterNativesAHoverCell()
@@ -563,12 +564,12 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 735402740U) },
-		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 4170314364U) },
-		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 3608662366U) },
-		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 724073589U) },
+		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 3536936606U) },
+		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 1851493228U) },
+		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 2541248689U) },
+		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 58852419U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_718312317(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_1402053761(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

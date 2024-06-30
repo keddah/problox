@@ -168,7 +168,6 @@ void AWedgeConnector::GhostSnapRotateMesh(const bool hori, const FString& keypre
 
 	// Vertical rotations
 	else silhouette->AddRelativeRotation({turn,0,0});
-	Print(raySocket.ToString(), 4);
 
 	if(!parentCore) return;
 

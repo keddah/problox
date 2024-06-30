@@ -11,6 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USplineMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ABounceSpring();
@@ -60,6 +61,10 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_start_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_start;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_spline_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_spline;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_end_MetaData[];
 #endif
@@ -136,12 +141,20 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABounceSpring_Statics::NewProp_springHit = { "springHit", nullptr, (EPropertyFlags)0x0020088000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABounceSpring, springHit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABounceSpring_Statics::NewProp_springHit_MetaData), Z_Construct_UClass_ABounceSpring_Statics::NewProp_springHit_MetaData) }; // 1891709922
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABounceSpring_Statics::NewProp_start_MetaData[] = {
-		{ "Category", "Ability" },
+		{ "Category", "BounceSpring" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/BounceSpring.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABounceSpring_Statics::NewProp_start = { "start", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABounceSpring, start), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABounceSpring_Statics::NewProp_start_MetaData), Z_Construct_UClass_ABounceSpring_Statics::NewProp_start_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABounceSpring_Statics::NewProp_spline_MetaData[] = {
+		{ "Category", "BounceSpring" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Pickupables/BounceSpring.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABounceSpring_Statics::NewProp_spline = { "spline", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABounceSpring, spline), Z_Construct_UClass_USplineMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABounceSpring_Statics::NewProp_spline_MetaData), Z_Construct_UClass_ABounceSpring_Statics::NewProp_spline_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABounceSpring_Statics::NewProp_end_MetaData[] = {
 		{ "Category", "BounceSpring" },
@@ -158,6 +171,7 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABounceSpring_Statics::NewProp_damping,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABounceSpring_Statics::NewProp_springHit,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABounceSpring_Statics::NewProp_start,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABounceSpring_Statics::NewProp_spline,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABounceSpring_Statics::NewProp_end,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABounceSpring_Statics::StaticCppClassTypeInfo = {
@@ -198,9 +212,9 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABounceSpring, ABounceSpring::StaticClass, TEXT("ABounceSpring"), &Z_Registration_Info_UClass_ABounceSpring, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABounceSpring), 4171808369U) },
+		{ Z_Construct_UClass_ABounceSpring, ABounceSpring::StaticClass, TEXT("ABounceSpring"), &Z_Registration_Info_UClass_ABounceSpring, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABounceSpring), 1108502383U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_3383325920(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_3676882387(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

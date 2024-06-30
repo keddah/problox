@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PickupableMaster.h"
+#include "Components/SplineMeshComponent.h"
 #include "BounceSpring.generated.h"
 
 UCLASS()
@@ -44,8 +45,11 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	FHitResult springHit;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ability")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	USceneComponent* start;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	USplineMeshComponent* spline;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* end;

@@ -153,8 +153,6 @@ APickupableMaster* AWheel::GetParent()
 	// Starts with the thing the wheel is attached to rather than itself...
 	if(AActor* current = compParent->GetOwner())
 	{
-		Print(current->GetName(),3)
-		
 		while (current->GetAttachParentActor() != nullptr)
 		{
 			current = current->GetAttachParentActor();

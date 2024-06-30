@@ -418,7 +418,6 @@ void ACubeConnector::CycleRaySocket(const bool next)
 	
 	if(freeSockets.IsValidIndex(index)) raySocket = freeSockets[index];
 	else Print("Bad socket index when cycling ray socket...", 5)
-	Print(raySocket.ToString(), 4)
 	
 	GhostPlacement();
 }

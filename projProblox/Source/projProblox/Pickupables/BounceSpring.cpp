@@ -15,6 +15,11 @@ ABounceSpring::ABounceSpring()
 	end->SetSimulatePhysics(false);
 	end->SetCollisionResponseToAllChannels(ECR_Ignore);
 
+	spline = CreateDefaultSubobject<USplineMeshComponent>("Spline Mesh");
+	spline->SetupAttachment(start);
+	spline->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	spline->ForwardAxis = ESplineMeshAxis::Z;
+	spline->SetMobility(EComponentMobility::Movable);
 
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
 	
@@ -95,6 +100,9 @@ void ABounceSpring::SetShowMesh(const bool enable) const
 	Super::SetShowMesh(enable);
 	end->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
 	end->SetHiddenInGame(!enable);
+
+	spline->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
+	spline->SetHiddenInGame(!enable);
 }
 
 float ABounceSpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const

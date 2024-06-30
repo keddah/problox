@@ -12,6 +12,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/SphereComponent.h"
 #include "./projProblox/Pickupables/Cores/CubeCore.h"
 #include "GameFramework/Actor.h"
 #include "Cell.generated.h"
@@ -27,25 +28,39 @@ protected:
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
 	
 	UWorld* wrld;
 
 	UPROPERTY(EditDefaultsOnly)
     UStaticMeshComponent* body;
 
+	UPROPERTY(EditDefaultsOnly)
+    USphereComponent* hitBox;
+
 private:
 	ACubeCore* core;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Collection")
-	float attractionForce = 1.2f;
+	FVector thisPos;
+	FVector corePos;
 	
-	FVector goal;
+	float attractionForce;
 	
 	bool isHoming;
 	bool safe;
 	
 	void GoHome() const;
 
+	static bool IsValidVector(const FVector& Vec)
+	{
+		// Check if any component is NaN
+		if (Vec.X == NAN || Vec.Y == NAN || Vec.Z == NAN) return false;
+    
+		// Check if any component is infinity
+		if (FMath::IsFinite(Vec.X) == false || FMath::IsFinite(Vec.Y) == false || FMath::IsFinite(Vec.Z) == false) return false;
+    
+		return true;
+	}
+	
 public:	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void Teleport(const FVector& pos) { SetActorLocation(pos); safe = true; body->SetRelativeScale3D({10,10,10});}
@@ -72,7 +87,8 @@ UCLASS()
 class PROJPROBLOX_API ABouncyCell : public ACell
 {
 	GENERATED_BODY()
-
+	ABouncyCell() { }
+	
 	float zVelocity;
 
 	UPROPERTY(EditDefaultsOnly)

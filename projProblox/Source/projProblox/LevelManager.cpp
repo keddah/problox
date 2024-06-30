@@ -244,8 +244,8 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	case 0:
 		if (!lvl0Spawn) break;
 		spawnPos = lvl0Spawn->GetActorLocation();
-		player->Respawn(spawnPos + spawnOffset, lvl0Spawn->GetRot());
 		core->Teleport(spawnPos, lvl0Spawn->GetRot());
+		player->Respawn(spawnPos + spawnOffset, lvl0Spawn->GetRot());
 		break;
 
 	case 1:
@@ -253,8 +253,8 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		if (lvl1Spawns.IsValidIndex(spawnPoint))
 		{
 			spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
-			player->Respawn(spawnPos + spawnOffset, lvl1Spawns[spawnPoint]->GetRot());
 			core->Teleport(spawnPos, lvl1Spawns[spawnPoint]->GetRot());
+			player->Respawn(spawnPos + spawnOffset, lvl1Spawns[spawnPoint]->GetRot());
 		}
 		break;
 
@@ -263,8 +263,8 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		if (lvl2Spawns.IsValidIndex(spawnPoint))
 		{
 			spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
-			player->Respawn(spawnPos + spawnOffset, lvl2Spawns[spawnPoint]->GetRot());
 			core->Teleport(spawnPos, lvl2Spawns[spawnPoint]->GetRot());
+			player->Respawn(spawnPos + spawnOffset, lvl2Spawns[spawnPoint]->GetRot());
 		}
 		break;
 
@@ -273,8 +273,8 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		if (lvl3Spawns.IsValidIndex(spawnPoint))
 		{
 			spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
-			player->Respawn(spawnPos + spawnOffset, lvl3Spawns[spawnPoint]->GetRot());
 			core->Teleport(spawnPos, lvl3Spawns[spawnPoint]->GetRot());
+			player->Respawn(spawnPos + spawnOffset, lvl3Spawns[spawnPoint]->GetRot());
 		}
 		break;
 	}

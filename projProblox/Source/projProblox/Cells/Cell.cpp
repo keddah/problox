@@ -21,6 +21,11 @@ ACell::ACell()
 	body->SetSimulatePhysics(true);
 	RootComponent = body;
 
+	hitBox = CreateDefaultSubobject<USphereComponent>("Collision Box");
+	hitBox->SetupAttachment(body);
+	hitBox->SetRelativeScale3D({.05f,.05f,.05f});
+	hitBox->SetSphereRadius(100);
+	
 	bAsyncPhysicsTickEnabled = true;
 }
 
@@ -32,7 +37,17 @@ void ACell::BeginPlay()
 	wrld = GetWorld();
 
 	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
+	if(!core) Print("Couldnt get core ~ cell", 5)
 	// if(core) core->onRangeExceeded.AddDynamic(this, &ACell::DeactivateHoming);
+}
+
+void ACell::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	// Doesn't work as intended when done in asyncTick
+	thisPos = GetActorLocation();
+	if(core) corePos = core->GetActorLocation();
 }
 
 void ACell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
@@ -47,15 +62,13 @@ void ACell::GoHome() const
 {
 	if(safe) return;
 	if(!isHoming) return;
+	if(!core) return;
+	if(!body->IsSimulatingPhysics()) return;
 
-	const FVector thisPos = GetActorLocation();
-	const FVector corePos = core->GetActorLocation();
-	
 	const FVector direction = corePos - thisPos;
 	const float squareDist = FVector::DistSquared(corePos, thisPos);
 	
-	if(IsValid(body) && squareDist != 0) body->AddForce(direction * (attractionForce * 10000) / squareDist);
-	else{}
+	body->AddForce(direction * (attractionForce * 10000) / squareDist);
 }
 
 void ACell::SetDormant(const bool dormant)

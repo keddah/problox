@@ -460,7 +460,6 @@ void APlayerCharacter::Respawn(const FVector& pos, const FRotator& rot)
 void APlayerCharacter::GoToCore()
 {
 	if(!core) return;
-	Print("Going", 3)
 	const FVector corePos = core->GetActorLocation();
 	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), corePos));
 

@@ -11,7 +11,10 @@
 /////////////// BOUNCY ///////////////
 void ABouncyCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
 {
+	if(DeltaTime == NAN || SimTime == NAN) return;
 	Super::AsyncPhysicsTickActor(DeltaTime, SimTime);
+	if(!body) return;
+	if(!body->IsSimulatingPhysics()) return;
 
 	const FVector velocity = body->GetPhysicsLinearVelocity();
 
@@ -27,10 +30,12 @@ void ABouncyCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
 /////////////// HOVER ///////////////
 void AHoverCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
 {
+	if(DeltaTime == NAN || SimTime == NAN) return;
 	Super::AsyncPhysicsTickActor(DeltaTime, SimTime);
+	if(!body) return;
+	if(!body->IsSimulatingPhysics()) return;
 
 	const FVector velocity = body->GetPhysicsLinearVelocity();
-
 	body->SetPhysicsLinearVelocity({ velocity.X, velocity.Y, DeltaTime * -wrld->GetGravityZ() });//8.2f});
 }
 
@@ -44,7 +49,10 @@ void AStickyCell::AsyncPhysicsTickActor(float DeltaTime, float SimTime)
 
 void AStickyCell::Unstick(const float deltaTime) const
 {
+	if(!body) return;
 	if(!stuck) return;
+	if(!body->IsSimulatingPhysics()) return;
+	if(deltaTime == NAN) return;
 
 	// Stop the Thing from moving...
 	body->SetPhysicsLinearVelocity({0,0, deltaTime * -wrld->GetGravityZ()});
@@ -56,6 +64,7 @@ void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimiti
                              bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
+	if(!body) return;
 
 	// Stop the Thing from moving...
 	body->SetPhysicsLinearVelocity({0,0,0});
