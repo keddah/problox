@@ -9168,3 +9168,96 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.06.30-16.35.50:468][251]LogFileHelpers: InternalPromptForCheckoutAndSave took 123 ms (total: 251 ms)
 [2024.06.30-16.35.50:477][251]AssetCheck: New page: Asset Save: BP_PlayerCharacter
 [2024.06.30-16.35.50:477][251]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.30-16.37.10:758][168]BlueprintLog: New page: Compile WBP_AreaSelect
+[2024.06.30-16.37.10:809][168]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.06.30-16.37.11:060][168]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.30-16.37.11:089][168]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_AreaSelect" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_AreaSelect.uasset" SILENT=true
+[2024.06.30-16.37.11:142][168]LogSavePackage: Moving output files for package: /Game/UI/WBP_AreaSelect
+[2024.06.30-16.37.11:143][168]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_AreaSelect98E9CCB24D914F31D6862DB7E1414E3F.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_AreaSelect.uasset'
+[2024.06.30-16.37.11:149][168]LogFileHelpers: InternalPromptForCheckoutAndSave took 89 ms (total: 340 ms)
+[2024.06.30-16.37.11:152][168]AssetCheck: New page: Asset Save: WBP_AreaSelect
+[2024.06.30-16.37.11:152][168]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_AreaSelect.WBP_AreaSelect
+[2024.06.30-16.38.24:025][715]LogOutputDevice: Warning: 
+
+Script Stack (0 frames) :
+
+[2024.06.30-16.38.25:704][715]LogOutputDevice: Error: Ensure condition failed: !bGraphDataInvalid [File:D:\build\++UE5\Sync\Engine\Source\Editor\GraphEditor\Private\SGraphPin.cpp] [Line: 914] 
+The Graph Pin Object has been invalidated. Someone is keeping a hard ref on the SGraphPin (SGraphPinObject [NodeFactory.cpp(293)]). See InvalidateGraphData for more info
+
+[2024.06.30-16.38.25:705][715]LogStats:             FDebug::EnsureFailed -  0.000 s
+[2024.06.30-16.40.09:216][745]BlueprintLog: New page: Compile WBP_AreaSelect
+[2024.06.30-16.40.09:267][745]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.06.30-16.40.09:385][745]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.30-16.40.09:415][745]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_AreaSelect" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_AreaSelect.uasset" SILENT=true
+[2024.06.30-16.40.09:466][745]LogSavePackage: Moving output files for package: /Game/UI/WBP_AreaSelect
+[2024.06.30-16.40.09:467][745]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_AreaSelect2F7BC8B249A37729EC01C2853AF2DD92.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_AreaSelect.uasset'
+[2024.06.30-16.40.09:473][745]LogFileHelpers: InternalPromptForCheckoutAndSave took 88 ms (total: 429 ms)
+[2024.06.30-16.40.09:476][745]AssetCheck: New page: Asset Save: WBP_AreaSelect
+[2024.06.30-16.40.09:476][745]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_AreaSelect.WBP_AreaSelect
+[2024.06.30-16.40.25:038][637]BlueprintLog: New page: Compile BP_PlayerCharacter
+[2024.06.30-16.40.25:125][637]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.06.30-16.40.25:329][637]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.30-16.40.25:357][637]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.06.30-16.40.25:448][637]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.06.30-16.40.25:449][637]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter3ADE0CD649D06C17343E148E3529F1C0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.06.30-16.40.25:455][637]LogFileHelpers: InternalPromptForCheckoutAndSave took 126 ms (total: 556 ms)
+[2024.06.30-16.40.25:458][637]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.06.30-16.40.25:458][637]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.06.30-16.40.41:925][465]BlueprintLog: New page: Compile WBP_LevelSelect
+[2024.06.30-16.40.41:954][465]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.06.30-16.40.42:172][465]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.30-16.40.42:201][465]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_LevelSelect" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_LevelSelect.uasset" SILENT=true
+[2024.06.30-16.40.42:213][465]LogSavePackage: Moving output files for package: /Game/UI/WBP_LevelSelect
+[2024.06.30-16.40.42:214][465]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_LevelSelectEE91201E4CE9E7370E9742925C117212.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_LevelSelect.uasset'
+[2024.06.30-16.40.42:219][465]LogFileHelpers: InternalPromptForCheckoutAndSave took 47 ms (total: 603 ms)
+[2024.06.30-16.40.42:222][465]AssetCheck: New page: Asset Save: WBP_LevelSelect
+[2024.06.30-16.40.42:222][465]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_LevelSelect.WBP_LevelSelect
+[2024.06.30-16.40.43:984][638]LogShaderCompilers: Display: ================================================
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: Total job queries 151, among them cache hits 22 (14.57%)
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: Tracking 129 distinct input hashes that result in 88 distinct outputs (68.22%)
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: RAM used: 3.24 MiB of 1.60 GiB budget. Usage: 0.20%
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.06.30-16.40.43:985][638]LogShaderCompilers: Display: ================================================
+[2024.06.30-16.40.46:567][936]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.46:567][936]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.30-16.40.46:567][936]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.46:567][936]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.06.30-16.40.48:611][159]BlueprintLog: New page: Compile BP_CubeCore
+[2024.06.30-16.40.48:637][159]LogActor: Warning: BP_CubeCore_C /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.30-16.40.48:639][159]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.48:639][159]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.30-16.40.48:639][159]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.30-16.40.48:640][159]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.48:640][159]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.06.30-16.40.48:657][159]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.06.30-16.40.48:669][159]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.48:669][159]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.30-16.40.48:669][159]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.48:670][159]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.06.30-16.40.48:699][159]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.48:699][159]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.06.30-16.40.48:699][159]LogPhysics: Warning: Scale for /Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.06.30-16.40.48:699][159]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_1:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.06.30-16.40.48:788][159]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.06.30-16.40.48:817][159]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.30-16.40.48:822][159]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_12:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.30-16.40.48:871][159]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.30-16.40.48:877][159]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_13:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.30-16.40.48:909][159]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCore
+[2024.06.30-16.40.48:910][159]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCore696A849D4F943B09EDFE6B80AF263916.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset'
+[2024.06.30-16.40.48:917][159]LogFileHelpers: InternalPromptForCheckoutAndSave took 128 ms (total: 732 ms)
+[2024.06.30-16.40.48:919][159]AssetCheck: New page: Asset Save: BP_CubeCore
+[2024.06.30-16.40.48:919][159]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore
+[2024.06.30-16.40.49:067][160]LogSlate: Took 0.000128 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.06.30-16.40.49:111][165]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.30-16.40.49:152][166]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.30-16.40.49:157][166]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_15:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.06.30-16.40.50:356][297]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_GrappleHead.BP_GrappleHead
+[2024.06.30-16.40.50:357][297]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.06.30-16.40.50:357][297]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.06.30-16.40.59:361][320]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2024.06.30-16.40.59:361][320]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated

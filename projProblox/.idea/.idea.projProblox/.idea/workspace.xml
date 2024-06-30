@@ -10,9 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
-    </list>
+    <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -431,7 +429,7 @@
       <workItem from="1719514737747" duration="1489000" />
       <workItem from="1719668636317" duration="5383000" />
       <workItem from="1719742054363" duration="9259000" />
-      <workItem from="1719759637821" duration="5259000" />
+      <workItem from="1719759637821" duration="5690000" />
     </task>
     <servers />
   </component>
