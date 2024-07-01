@@ -2,12 +2,14 @@
 	"RemapUnityFiles": 
 	{
 		"Module.projProblox.1.cpp.obj": [
+			"AudioManager.cpp.obj",
 			"ActionHistory.gen.cpp.obj",
 			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
 			"BuyableAttachment.gen.cpp.obj",
 			"BuyableInfo.gen.cpp.obj",
+			"Cell.gen.cpp.obj",
 			"CellSpawner.gen.cpp.obj",
 			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
@@ -20,21 +22,18 @@
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
 			"Grappler.gen.cpp.obj",
-			"Cell.gen.cpp.obj"
-		],
-		"Module.projProblox.2.cpp.obj": [
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
 			"LevelManager.gen.cpp.obj",
+			"LevelObjectives.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
 			"Modes.gen.cpp.obj",
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
-			"PlayerCharacter.gen.cpp.obj"
-		],
-		"Module.projProblox.3.cpp.obj": [
+			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"SaveFiles.gen.cpp.obj",
 			"SpawnPoint.gen.cpp.obj",
@@ -43,13 +42,15 @@
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
 			"Wheel.gen.cpp.obj",
-			"Wheels.gen.cpp.obj",
-			"AudioManager.cpp.obj",
+			"Wheels.gen.cpp.obj"
+		],
+		"Module.projProblox.2.cpp.obj": [
+			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
+			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
-			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
@@ -63,6 +64,7 @@
 			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
+			"Grappler.cpp.obj",
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
@@ -78,10 +80,8 @@
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
-			"Cell.cpp.obj",
-			"CellVariations.cpp.obj",
-			"Grappler.cpp.obj"
+			"LevelManager.cpp.obj",
+			"LevelObjectives.cpp.obj"
 		]
 	}
 }
