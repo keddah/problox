@@ -824,6 +824,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALevelManager_Statics::Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n" },
+#endif
 		{ "IncludePath", "LevelManager.h" },
 		{ "ModuleRelativePath", "LevelManager.h" },
 	};
@@ -904,9 +907,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 1328954530U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 2904713794U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_1294384150(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_3247893188(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
