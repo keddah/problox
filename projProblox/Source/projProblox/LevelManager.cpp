@@ -332,6 +332,13 @@ void ALevelManager::OnShown()
 {
 	WakeSleepCells();
 
+	ELevel lvl;
+	
 	// Broadcast the level change
-	onLevelChanged.Broadcast(currentLevel, false);
+	if(currentLevel == 0) lvl = ELevel::BuildArea;
+	else if(currentLevel == 1) lvl = ELevel::Bedroom;
+	else if(currentLevel == 2) lvl = ELevel::Kitchen;
+	else lvl = ELevel::Bathroom;
+	PrintInt(currentLevel, 5)
+	onLevelChanged.Broadcast(currentLevel, lvl);
 }

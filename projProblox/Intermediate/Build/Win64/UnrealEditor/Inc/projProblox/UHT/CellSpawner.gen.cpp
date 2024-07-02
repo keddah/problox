@@ -20,10 +20,56 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACell_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACellSpawner();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACellSpawner_NoRegister();
+	PROJPROBLOX_API UClass* Z_Construct_UClass_ULevelObjective_NoRegister();
 	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_ECellType();
 	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_ELevel();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics
+	{
+		struct _Script_projProblox_eventOnSpawnTriggered_Parms
+		{
+			ACellSpawner* triggeredSpawner;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_triggeredSpawner;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::NewProp_triggeredSpawner = { "triggeredSpawner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_projProblox_eventOnSpawnTriggered_Parms, triggeredSpawner), Z_Construct_UClass_ACellSpawner_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::NewProp_triggeredSpawner,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnSpawnTriggered__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::_Script_projProblox_eventOnSpawnTriggered_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::_Script_projProblox_eventOnSpawnTriggered_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+void FOnSpawnTriggered_DelegateWrapper(const FMulticastScriptDelegate& OnSpawnTriggered, ACellSpawner* triggeredSpawner)
+{
+	struct _Script_projProblox_eventOnSpawnTriggered_Parms
+	{
+		ACellSpawner* triggeredSpawner;
+	};
+	_Script_projProblox_eventOnSpawnTriggered_Parms Parms;
+	Parms.triggeredSpawner=triggeredSpawner;
+	OnSpawnTriggered.ProcessMulticastDelegate<UObject>(&Parms);
+}
 	static FEnumRegistrationInfo Z_Registration_Info_UEnum_ECellType;
 	static UEnum* ECellType_StaticEnum()
 	{
@@ -83,6 +129,27 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		}
 		return Z_Registration_Info_UEnum_ECellType.InnerSingleton;
 	}
+	DEFINE_FUNCTION(ACellSpawner::execGetObjective)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(const ULevelObjective**)Z_Param__Result=P_THIS->GetObjective();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACellSpawner::execHasObjective)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->HasObjective();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACellSpawner::execGetLevelEnum)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(ELevel*)Z_Param__Result=P_THIS->GetLevelEnum();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACellSpawner::execIsActive)
 	{
 		P_FINISH;
@@ -102,10 +169,139 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	{
 		UClass* Class = ACellSpawner::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetLevelEnum", &ACellSpawner::execGetLevelEnum },
+			{ "GetObjective", &ACellSpawner::execGetObjective },
+			{ "HasObjective", &ACellSpawner::execHasObjective },
 			{ "IsActive", &ACellSpawner::execIsActive },
 			{ "Overlap", &ACellSpawner::execOverlap },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics
+	{
+		struct CellSpawner_eventGetLevelEnum_Parms
+		{
+			ELevel ReturnValue;
+		};
+		static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000008000582, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CellSpawner_eventGetLevelEnum_Parms, ReturnValue), Z_Construct_UEnum_projProblox_ELevel, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::NewProp_ReturnValue_MetaData) }; // 1235914906
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::NewProp_ReturnValue_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACellSpawner, nullptr, "GetLevelEnum", nullptr, nullptr, Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::CellSpawner_eventGetLevelEnum_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::CellSpawner_eventGetLevelEnum_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ACellSpawner_GetLevelEnum()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACellSpawner_GetLevelEnum_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACellSpawner_GetObjective_Statics
+	{
+		struct CellSpawner_eventGetObjective_Parms
+		{
+			const ULevelObjective* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000582, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CellSpawner_eventGetObjective_Parms, ReturnValue), Z_Construct_UClass_ULevelObjective_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::NewProp_ReturnValue_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACellSpawner, nullptr, "GetObjective", nullptr, nullptr, Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::CellSpawner_eventGetObjective_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::CellSpawner_eventGetObjective_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ACellSpawner_GetObjective()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACellSpawner_GetObjective_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACellSpawner_HasObjective_Statics
+	{
+		struct CellSpawner_eventHasObjective_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((CellSpawner_eventHasObjective_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CellSpawner_eventHasObjective_Parms), &Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACellSpawner, nullptr, "HasObjective", nullptr, nullptr, Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::CellSpawner_eventHasObjective_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::CellSpawner_eventHasObjective_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ACellSpawner_HasObjective()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACellSpawner_HasObjective_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ACellSpawner_IsActive_Statics
 	{
@@ -201,6 +397,10 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_forceDirection;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_objective_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_objective;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_soundPlayer_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_soundPlayer;
@@ -281,6 +481,10 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 #endif
 		static void NewProp_triggerable_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_triggerable;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_onTriggered_MetaData[];
+#endif
+		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onTriggered;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -291,6 +495,9 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACellSpawner_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACellSpawner_GetLevelEnum, "GetLevelEnum" }, // 1532561874
+		{ &Z_Construct_UFunction_ACellSpawner_GetObjective, "GetObjective" }, // 41837920
+		{ &Z_Construct_UFunction_ACellSpawner_HasObjective, "HasObjective" }, // 602619484
 		{ &Z_Construct_UFunction_ACellSpawner_IsActive, "IsActive" }, // 4174767182
 		{ &Z_Construct_UFunction_ACellSpawner_Overlap, "Overlap" }, // 2137492442
 	};
@@ -317,6 +524,13 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_forceDirection = { "forceDirection", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, forceDirection), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_forceDirection_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_forceDirection_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACellSpawner_Statics::NewProp_objective_MetaData[] = {
+		{ "Category", "CellSpawner" },
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_objective = { "objective", nullptr, (EPropertyFlags)0x0020080000000801, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, objective), Z_Construct_UClass_ULevelObjective_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_objective_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_objective_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACellSpawner_Statics::NewProp_soundPlayer_MetaData[] = {
 		{ "Category", "Sound" },
@@ -510,9 +724,16 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		((ACellSpawner*)Obj)->triggerable = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_triggerable = { "triggerable", nullptr, (EPropertyFlags)0x0040000000000801, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACellSpawner), &Z_Construct_UClass_ACellSpawner_Statics::NewProp_triggerable_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_triggerable_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_triggerable_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACellSpawner_Statics::NewProp_onTriggered_MetaData[] = {
+		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
+	};
+#endif
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACellSpawner_Statics::NewProp_onTriggered = { "onTriggered", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACellSpawner, onTriggered), Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::NewProp_onTriggered_MetaData), Z_Construct_UClass_ACellSpawner_Statics::NewProp_onTriggered_MetaData) }; // 4114899187
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACellSpawner_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_scene,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_forceDirection,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_objective,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_soundPlayer,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_soundToPlay,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_soundDelay,
@@ -534,6 +755,7 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_coneRadius,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_spawnForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_triggerable,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACellSpawner_Statics::NewProp_onTriggered,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACellSpawner_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACellSpawner>::IsAbstract,
@@ -577,9 +799,9 @@ void EmptyLinkFunctionForGeneratedCodeCellSpawner() {}
 		{ ECellType_StaticEnum, TEXT("ECellType"), &Z_Registration_Info_UEnum_ECellType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 653651803U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 2610223903U) },
+		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 5418957U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_2922595396(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_133596472(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo));
