@@ -141,7 +141,14 @@ public:
 	void SpawnWithForce();
 
 	void ActivateSpawner() { spawned = true; }
-	int GetSpawnAmount() const { return spawnAmount; }
+	int GetSpawnAmount() const
+	{
+		// If this spawner has an objective, if it's already been completed... return 0 
+		// if(HasObjective()) if(objective->IsCompleted()) return 0;
+
+		// Otherwise return the amount
+		return spawnAmount;
+	}
 	
 	void IncreaseSpawnCount(unsigned short additions)
 	{

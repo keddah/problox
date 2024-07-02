@@ -188,6 +188,9 @@ void ACellSpawner::EarlySpawn()
 
 void ACellSpawner::SpawnWithForce()
 {
+	// Don't allow things to spawn if the objective has already been done.
+	// if(HasObjective()) if(objective->IsCompleted()) return;
+	
 	if(!wrld)
 	{
 		Print("World was invalid... couldn't spawn cells.", 5)
