@@ -94,9 +94,6 @@ protected:
 	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
 	TArray<AActor*> exclusions;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Controls", meta = (ToolTip = "Whether to rotate on the horizontal or vertical axis"))
-	bool rotateHori = true;
-	
 	UPROPERTY(EditDefaultsOnly, Category = "Controls",  BlueprintReadOnly, meta = (ToolTip = "The max speed the core is allowed to be going when trying to adjust the core's rotation.", Delta = .05f))
 	float adjustSpeedThreshold = .6;
 	
