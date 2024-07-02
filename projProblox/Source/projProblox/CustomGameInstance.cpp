@@ -61,7 +61,7 @@ void UCustomGameInstance::AddMoney(const int value)
 	//SaveMoney();
 }
 
-int UCustomGameInstance::GetMoney()
+int UCustomGameInstance::GetMoney() const
 {
 	return money;
 }
