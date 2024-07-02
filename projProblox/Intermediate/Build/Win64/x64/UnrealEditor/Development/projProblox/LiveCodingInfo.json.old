@@ -55,7 +55,6 @@
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"Interactable.cpp.obj",
-			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
@@ -84,7 +83,8 @@
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj"
+			"ActionHistory.cpp.obj",
+			"LevelManager.cpp.obj"
 		]
 	}
 }
