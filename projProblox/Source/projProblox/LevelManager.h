@@ -14,7 +14,7 @@
 #include "LevelManager.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedSpawn, int, spawn);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, bool, save);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, ELevel, newLevel);
 
 
 UCLASS()

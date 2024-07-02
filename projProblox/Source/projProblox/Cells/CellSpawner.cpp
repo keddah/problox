@@ -210,4 +210,7 @@ void ACellSpawner::SpawnWithForce()
 		cell->GetMesh()->AddImpulse(direction * spawnForce, "", true);
 	}
 	spawned = true;
+
+	onTriggered.Broadcast(this);
+	if(objective) objective->SetCompleted();
 }

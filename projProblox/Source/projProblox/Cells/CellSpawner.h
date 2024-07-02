@@ -13,8 +13,10 @@
 #include "Cell.h"
 #include "Engine/LevelStreamingDynamic.h"
 #include "GameFramework/Actor.h"
+#include "projProblox/LevelObjective.h"
 #include "CellSpawner.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSpawnTriggered, ACellSpawner*, triggeredSpawner);
 
 UENUM(BlueprintType)
 enum class ECellType : uint8
@@ -56,6 +58,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UArrowComponent* forceDirection;
+
+	UPROPERTY(EditInstanceOnly)
+	ULevelObjective* objective;
 	
 private:
 	// Called when the game starts or when spawned
@@ -129,6 +134,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsActive() const { return spawned; }
 
+	UFUNCTION(BlueprintCallable)
 	const ELevel& GetLevelEnum() const { return level; }
 	
 	void EarlySpawn();
@@ -142,5 +148,16 @@ public:
 		spawnAmount += additions;
 		spawnAmount = FMath::Clamp(spawnAmount, 1, maxSpawnAmount);
 	}
+
+	UPROPERTY(BlueprintAssignable)
+	FOnSpawnTriggered onTriggered;
+
+	UFUNCTION(BlueprintCallable)
+	bool HasObjective() const { return IsValid(objective); }
 	
+	UFUNCTION(BlueprintCallable)
+	const ULevelObjective* GetObjective() const
+	{
+		return objective;
+	}
 };

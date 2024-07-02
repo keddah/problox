@@ -1555,6 +1555,12 @@
     <ClInclude Include="..\..\Source\projProblox\CustomGameInstance.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Interactable.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Interactable.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\LevelManager.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>

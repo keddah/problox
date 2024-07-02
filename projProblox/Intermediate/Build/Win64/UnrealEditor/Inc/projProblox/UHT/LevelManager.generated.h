@@ -11,6 +11,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ASpawnPoint;
 class UTexture;
+enum class ELevel : uint8;
 #ifdef PROJPROBLOX_LevelManager_generated_h
 #error "LevelManager.generated.h already included, missing '#pragma once' in LevelManager.h"
 #endif
@@ -21,7 +22,7 @@ PROJPROBLOX_API void FOnChangedSpawn_DelegateWrapper(const FMulticastScriptDeleg
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_17_DELEGATE \
-PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedLevels, int32 levelIndex, bool save);
+PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedLevels, int32 levelIndex, ELevel newLevel);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_23_SPARSE_DATA
