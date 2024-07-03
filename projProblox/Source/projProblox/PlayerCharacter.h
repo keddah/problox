@@ -72,9 +72,8 @@ private:
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same as NextPreviousSlot() except it goes 2 spaces ahead instead of one."))
 	void AboveBelowSlot(const bool above);
 
-	void GoToSlot() const;
+	void GoToSlot(bool move = false, bool next = false);
 
-	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
