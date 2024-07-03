@@ -379,13 +379,26 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 	
 	const TArray<FName> freeSockets = core->GetFreeSlots();
 	if(freeSockets.IsEmpty()) return;
-	
+
+	// Array to hold reordered sockets
+	TArray<FName> reorderedSockets;
+
+	// Define the desired order of sockets
+	const TArray<FName> desiredOrder = { "FRONT", "RIGHT", "BACK", "LEFT" };
+
+	for (const auto& orderSocket : desiredOrder)
+	{
+		if (freeSockets.Contains(orderSocket))
+		{
+			reorderedSockets.Add(orderSocket);
+		}
+	}
 	currentSlot += next? 1 : -1;
-	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
-	if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
+	if(currentSlot >= reorderedSockets.Num()) currentSlot = 0;
+	if(currentSlot < 0) currentSlot = reorderedSockets.Num() - 1;
 		
-	if(freeSockets.IsValidIndex(currentSlot)) selectedSocket = freeSockets[currentSlot];
-	GoToSlot();
+	if(reorderedSockets.IsValidIndex(currentSlot)) selectedSocket = reorderedSockets[currentSlot];
+	GoToSlot(true, next);
 }
 
 void APlayerCharacter::AboveBelowSlot(const bool above)
@@ -396,6 +409,20 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 	const TArray<FName> freeSockets = core->GetFreeSlots();
 	if(freeSockets.IsEmpty()) return;
 
+	if(freeSockets.Contains("UP") && above)
+	{
+		selectedSocket = "UP";
+		GoToSlot();
+		return;
+	}
+
+	if(freeSockets.Contains("DOWN") && !above)
+	{
+		selectedSocket = "DOWN";
+		GoToSlot();
+		return;
+	}
+	
 	currentSlot += above? 2 : -2;
 	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
 	else if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
@@ -404,7 +431,7 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 	GoToSlot();
 }
 
-void APlayerCharacter::GoToSlot() const
+void APlayerCharacter::GoToSlot(const bool move, const bool next)
 {
 	if(!selectedObj)
 	{
@@ -419,6 +446,15 @@ void APlayerCharacter::GoToSlot() const
 	}
 
 	selectedObj->PlacementAgain(core, selectedSocket);
+
+	// Move in relation to the new socket placement...
+	if(!move) return;
+
+	// constexpr float moveAmount = 9;
+	// mouseValues.X += next? moveAmount : -moveAmount;
+	// orbiting = true;
+	// OrbitControls(.1f);
+	// orbiting = false;
 }
 
 void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
@@ -438,9 +474,9 @@ void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
 	if(!selectedObj->IsA<ACubeCore>()) return;
 
 	// Add the things that are connected to the core/connector to the things to ignore
-	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
+	if(ACubeCore* object = Cast<ACubeCore>(selectedObj))
 	{
-		exclusions.Append(obj->GetAttachedActorObjects());
+		exclusions.Append(object->GetAttachedActorObjects());
 	}
 }
 

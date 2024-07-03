@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Game Instance - Header
+* 
+* The header file for the custom game instance. Defines its class...
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -7,9 +14,6 @@
 #include "Engine/GameInstance.h"
 #include "CustomGameInstance.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class PROJPROBLOX_API UCustomGameInstance : public UGameInstance
 {
@@ -32,5 +36,5 @@ public:
 	void SaveMoney() const;
 	void LoseMoney(const int value);
 	void AddMoney(const int value);
-	int GetMoney() const;
+	int GetMoney() const { return money; }
 };

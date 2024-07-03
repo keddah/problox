@@ -77,9 +77,6 @@ void EmptyLinkFunctionForGeneratedCodeCustomGameInstance() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomGameInstance_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCustomGameInstance_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "CustomGameInstance.h" },
 		{ "ModuleRelativePath", "CustomGameInstance.h" },
 	};
@@ -122,9 +119,9 @@ void EmptyLinkFunctionForGeneratedCodeCustomGameInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CustomGameInstance_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCustomGameInstance, UCustomGameInstance::StaticClass, TEXT("UCustomGameInstance"), &Z_Registration_Info_UClass_UCustomGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomGameInstance), 2135972205U) },
+		{ Z_Construct_UClass_UCustomGameInstance, UCustomGameInstance::StaticClass, TEXT("UCustomGameInstance"), &Z_Registration_Info_UClass_UCustomGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomGameInstance), 2649682719U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CustomGameInstance_h_1101512166(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CustomGameInstance_h_3975231566(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CustomGameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_CustomGameInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -14,7 +14,8 @@
 #include "CubeSocketInfo.h"
 #include "WedgeSocketInfo.generated.h"
 
-UCLASS()
+
+UCLASS(Transient)
 class PROJPROBLOX_API UWedgeSocketInfo : public UCubeSocketInfo
 {
 	GENERATED_BODY()

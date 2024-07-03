@@ -219,9 +219,15 @@ void EmptyLinkFunctionForGeneratedCodeLevelObjective() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ULevelObjective_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// When naming the file use the level name then a clue to what the objective is... like 'Bedroom_Bed'. Doing this ensures the level name is correct (The level name needs to match in order\n// for the UI to understand...)\n" },
+#endif
 		{ "IncludePath", "LevelObjective.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "LevelObjective.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "When naming the file use the level name then a clue to what the objective is... like 'Bedroom_Bed'. Doing this ensures the level name is correct (The level name needs to match in order\nfor the UI to understand...)" },
+#endif
 	};
 #endif
 #if WITH_METADATA
@@ -292,9 +298,9 @@ void EmptyLinkFunctionForGeneratedCodeLevelObjective() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelObjective_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ULevelObjective, ULevelObjective::StaticClass, TEXT("ULevelObjective"), &Z_Registration_Info_UClass_ULevelObjective, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULevelObjective), 3414038547U) },
+		{ Z_Construct_UClass_ULevelObjective, ULevelObjective::StaticClass, TEXT("ULevelObjective"), &Z_Registration_Info_UClass_ULevelObjective, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULevelObjective), 923470252U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelObjective_h_1141449886(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelObjective_h_4218524750(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelObjective_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelObjective_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

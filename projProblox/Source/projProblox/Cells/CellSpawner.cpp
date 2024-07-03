@@ -16,10 +16,8 @@
 #include "projProblox/Pickupables/Cores/Connectors/CubeConnector.h"
 
 
-// Sets default values
 ACellSpawner::ACellSpawner()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
 	scene = CreateDefaultSubobject<USceneComponent>("Root Scene");
@@ -42,20 +40,29 @@ void ACellSpawner::SetCellsDormant(const bool dormant)
 	for(auto& cell : spawnedCells) cell->SetDormant(dormant);
 }
 
-// Called when the game starts or when spawned
+void ACellSpawner::WakeSleepCollectedCells(bool dormant)
+{
+	if(spawnedCells.IsEmpty()) return;
+	
+	for(const auto& cell : spawnedCells)
+	{
+		// Only if the cell is safe (SetCellsDormant handles unsafe cells) 
+		if(!cell->IsSafe()) continue;
+
+		cell->SetDormant(dormant);
+	}
+}
+
 void ACellSpawner::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Can't preview if triggerable 
 	previewed = !triggerable;
 }
 
-void ACellSpawner::Init(ACubeCore* core)
+void ACellSpawner::Init()
 {
-	if (!core) 
-	{
-		Print("Couldnt init cell spawner because core was invalid...", 4)
-		return;
-	}
 	wrld = GetWorld();
 
 	if (!wrld)
@@ -63,9 +70,6 @@ void ACellSpawner::Init(ACubeCore* core)
 		Print("World was invalid at begin play ~ spawner", 5);
 		return;
 	}
-
-	// if (!triggerable && core) core->onStartGame.AddDynamic(this, &ACellSpawner::BeginSpawn);
-	//if (core) core->onTurnStarted.AddDynamic(this, &ACellSpawner::ActivateSpawner);
 
 	EarlySpawn();
 }
@@ -101,7 +105,7 @@ void ACellSpawner::Overlap(AActor* otherActor)
 	triggerable = false;
 }
 
-void ACellSpawner::PlaySound()
+void ACellSpawner::PlaySound() const
 {
 	if (!soundPlayer)
 	{
@@ -111,7 +115,7 @@ void ACellSpawner::PlaySound()
 	
 	if (!soundToPlay)
 	{
-		Print("There was no sound given...", 4)
+		// Print("There was no sound given...", 4)
 		return;
 	}
 
@@ -154,19 +158,19 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 
 void ACellSpawner::EarlySpawn()
 {
-	if(!previewed) return;
+	if(spawned) return;
+
+	// Don't spawn on begin play if triggerable
 	if(triggerable) return;
+
+	if(!previewed) return;
 	if(!wrld)
 	{
 		Print("World was invalid... couldn't spawn cells.", 5)
 		return;
 	}
-	if(spawned)
-	{
-		// Print("Already spawned...", 4)
-		return;
-	}
-	
+
+	// Doing outside the loop so it's not done unnecessarily
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
@@ -174,7 +178,7 @@ void ACellSpawner::EarlySpawn()
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(int i = 0; i < spawnAmount; i++)
+	for(unsigned int i = 0; i < spawnAmount; i++)
 	{
 		ACell* cell = Spawn(spawn, rot);
 
@@ -202,7 +206,7 @@ void ACellSpawner::SpawnWithForce()
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 	
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(int i = 0; i < spawnAmount; i++)
+	for(unsigned int i = 0; i < spawnAmount; i++)
 	{
 		if(ACell* newCell = Spawn(spawn, rot)) spawnedCells.Add(newCell);
 	}

@@ -28,7 +28,6 @@ void ABouncyCell::Tick(float DeltaSeconds)
 }
 
 
-
 /////////////// HOVER ///////////////
 void AHoverCell::Tick(float DeltaSeconds)
 {
@@ -73,5 +72,7 @@ void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimiti
 	body->SetPhysicsAngularVelocityInDegrees({0,0,0});
 	
 	stuck = true;
+
+	// GEngine check needed (sometimes crashes withou)
 	if(GEngine) body->SetMassOverrideInKg("", 100000);
 }
