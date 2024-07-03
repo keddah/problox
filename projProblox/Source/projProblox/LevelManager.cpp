@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Level Manager - Code
+* 
+* The code file for the level manager. In charge of keeping track of all the player and cells spawns as well as allowing/managing the process of loading and
+* unloading levels.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "LevelManager.h"
@@ -8,7 +15,6 @@
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
 
 
-// Sets default values
 ALevelManager::ALevelManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
@@ -26,9 +32,8 @@ void ALevelManager::BeginPlay()
 	FindCore();
 
 	// Get the level instances that are a part of the main world
-	for (int i = 0; i < wrld->GetStreamingLevels().Num(); i++)
+	for (auto& levelStream : wrld->GetStreamingLevels())
 	{
-		ULevelStreaming* levelStream = wrld->GetStreamingLevels()[i];
 		if (levelStream && levelStream->IsA<ULevelStreamingDynamic>())
 		{
 			ULevelStreamingDynamic* lvl = Cast<ULevelStreamingDynamic>(levelStream);
@@ -41,11 +46,14 @@ void ALevelManager::BeginPlay()
 			lvl->OnLevelShown.AddDynamic(this, &ALevelManager::OnShown);
 		}
 	}
+
+	// Add a delegate for when loading begins (used for the loading screen)
 	onLoadingLevel.AddDynamic(this, &ALevelManager::BeginLoading);
-	
+
+	// Initialise the cell spawns (spawns all the cells from every level then makes them dormant)
 	InitSpawners();
 
-	// Finding spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at beginplay)
+	// Finding the player spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at BeginPlay)
 	FTimerHandle UnusedHandle;
 	wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.25f, false); 
 }
@@ -66,8 +74,7 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	
 	if(lvlIndex == currentLevel)
 	{
-		Print("The level that's trying to be loaded is already loaded...: Index = " + FString::FromInt(lvlIndex), 5)
-		Print("Level name = " + levels[currentLevel]->GetWorld()->GetName(), 5)
+		// If already in the level, just go to the given spawn point.
 		SelectSpawn(spawnPoint);
 		return false;
 	}
@@ -82,18 +89,22 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	if(!levels.IsValidIndex(currentLevel)) return false;
 	if(!levels[currentLevel]) return false;
 
+	onLoadingLevel.Broadcast();
+
+	// Load the level if it's not loaded yet...
 	if(!levels[currentLevel]->IsLevelLoaded())
 	{
 		levels[currentLevel]->SetShouldBeLoaded(true);
 	}
-	
+
+	// Un hide it (load it)
 	levels[currentLevel]->SetShouldBeVisible(true);
 	instance->SetCurrentLevel(currentLevel);
-	onLoadingLevel.Broadcast();
 	
 	// Unload all the levels apart from the current level
 	UnloadUnusedLevels();
 
+	// Then spawn the player and core in the chosen location
 	SelectSpawn(spawnPoint);
 	return true;
 }
@@ -113,14 +124,13 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 	}
 
 	levels[lvlIndex]->SetShouldBeVisible(false);
-	levels[lvlIndex]->SetShouldBeVisible(false);
 }
 
 void ALevelManager::UnloadUnusedLevels()
 {
-	// Unload all levels
 	for(int i = 0; i < levels.Num(); i++)
 	{
+		// Ignore the current level
 		if(i == currentLevel) continue;
 		UnloadLevel(i);
 	}
@@ -130,6 +140,7 @@ void ALevelManager::FindCore()
 {
 	if(!wrld) return;
 
+	// Isn't really necessary anymore since connectors aren't being used.
 	TArray<AActor*> coreActors;
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACubeCore::StaticClass(), coreActors);
 	for (auto& ACore: coreActors)

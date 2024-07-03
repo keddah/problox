@@ -1763,3 +1763,66 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.03-15.21.03:465][437]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
 [2024.07.03-15.21.04:597][535]LogSlate: Window 'Message Log' being destroyed
 [2024.07.03-15.21.04:601][535]LogSlate: Window 'Message Log' being destroyed
+[2024.07.03-15.40.28:255][ 67]LogShaderCompilers: Display: ================================================
+[2024.07.03-15.40.28:255][ 67]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.03-15.40.28:255][ 67]LogShaderCompilers: Display: Total job queries 367, among them cache hits 97 (26.43%)
+[2024.07.03-15.40.28:255][ 67]LogShaderCompilers: Display: Tracking 270 distinct input hashes that result in 172 distinct outputs (63.70%)
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: RAM used: 6.60 MiB of 1.60 GiB budget. Usage: 0.40%
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Shaders Compiled: 10
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Jobs assigned 10, completed 10 (100%)
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Average time worker was idle: 21.50 s
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Time job spent in pending queue: average 0.09 s, longest 0.10 s
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Job execution time: average 0.57 s, max 0.75 s
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Job life time (pending + execution): average 0.66 s, max 0.85
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Shader code size: average 40.376 KiB, min 32.031 KiB, max 62.887 KiB
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 1.36 s
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Jobs were issued in 10 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Average processing rate: 7.34 jobs/sec
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Total thread time: 2.259 s
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Total thread preprocess time: 0.292 s
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Percentage time preprocessing: 12.94%
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Effective parallelization: 1.66 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.07.03-15.40.28:256][ 67]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display: TBasePassPSFPrecomputedVolumetricLightmapLightingPolicySkylight (compiled    2 times, average 0.32 sec, max 0.33 sec, min 0.31 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:      TBasePassVSFPrecomputedVolumetricLightmapLightingPolicy (compiled    2 times, average 0.27 sec, max 0.28 sec, min 0.26 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:                                                 FLumenCardVS (compiled    2 times, average 0.23 sec, max 0.26 sec, min 0.19 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    1 times, average 0.21 sec, max 0.21 sec, min 0.21 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    1 times, average 0.19 sec, max 0.19 sec, min 0.19 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display: TBasePassPSFPrecomputedVolumetricLightmapLightingPolicySkylight - 28.42% of total time (compiled    2 times, average 0.32 sec, max 0.33 sec, min 0.31 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:      TBasePassVSFPrecomputedVolumetricLightmapLightingPolicy - 23.63% of total time (compiled    2 times, average 0.27 sec, max 0.28 sec, min 0.26 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:                                                 FLumenCardVS - 20.00% of total time (compiled    2 times, average 0.23 sec, max 0.26 sec, min 0.19 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 10.50% of total time (compiled    2 times, average 0.12 sec, max 0.15 sec, min 0.08 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 9.11% of total time (compiled    1 times, average 0.21 sec, max 0.21 sec, min 0.21 sec)
+[2024.07.03-15.40.28:257][ 67]LogShaderCompilers: Display: ================================================
+[2024.07.03-15.56.02:599][857]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.07.03-15.56.15:585][896]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_0.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_0.exp
+[2024.07.03-15.56.15:879][897]LogClass: UClass LevelManager Reload.
+[2024.07.03-15.56.15:879][897]LogClass: Could not find existing class LevelManager in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.03-15.56.15:879][897]LogClass: Function BeginLoading is new or belongs to a modified class.
+[2024.07.03-15.56.15:879][897]LogClass: Function GetCurrentLevel is new or belongs to a modified class.
+[2024.07.03-15.56.15:879][897]LogClass: Function GetLevel1Screenshots is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function GetLevel1Spawns is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function GetLevel2Screenshots is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function GetLevel2Spawns is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function GetLevel3Screenshots is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function GetLevel3Spawns is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function LoadLevel is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function OnHidden is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function OnShown is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function PrintCurrentLevel is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function SaveSpawns is new or belongs to a modified class.
+[2024.07.03-15.56.15:880][897]LogClass: Function UnloadUnusedLevels is new or belongs to a modified class.
+[2024.07.03-15.56.15:906][897]Re-instancing LevelManager after reload.
+[2024.07.03-15.56.15:964][897]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.03-15.56.15:964][897]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.03-15.56.15:965][897]LogPhysics: Warning: Scale for /Engine/Transient.World_17:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.03-15.56.15:965][897]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_17:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.03-15.56.15:991][897]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.03-15.56.15:991][897]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.03-15.56.15:992][897]LogPhysics: Warning: Scale for /Engine/Transient.World_17:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.03-15.56.15:992][897]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_17:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.03-15.56.16:090][897]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
+[2024.07.03-15.56.16:644][898]Display: Reload/Re-instancing Complete: 1 class changed, 2 scriptstructs remapped
+[2024.07.03-15.56.16:644][898]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
