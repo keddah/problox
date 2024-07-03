@@ -10,16 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Timeline/WBP_TimelineBarAgain.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Timeline/WBP_TimelineBarAgain.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/FileSystemMappings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/FileSystemMappings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/SaveGames/SpawnSaves.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SaveGames/SpawnSaves.sav" afterDir="false" />
-    </list>
+    <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
