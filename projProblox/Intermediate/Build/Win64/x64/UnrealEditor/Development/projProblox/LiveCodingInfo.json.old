@@ -55,6 +55,7 @@
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"Interactable.cpp.obj",
+			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
@@ -76,15 +77,14 @@
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
-			"Treads.cpp.obj",
 			"Wheel.cpp.obj",
 			"Wheels.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"LevelManager.cpp.obj"
+			"Treads.cpp.obj",
+			"SpawnPoint.cpp.obj"
 		]
 	}
 }

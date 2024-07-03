@@ -58,19 +58,19 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 
 	// Camera settings
 	PostProcessSettings.bOverride_CameraShutterSpeed = true;
-	PostProcessSettings.CameraShutterSpeed = 1/300;  
+	PostProcessSettings.CameraShutterSpeed = 1/30;  
 	PostProcessSettings.bOverride_CameraISO = true;
-	PostProcessSettings.CameraISO = 8000;  
+	PostProcessSettings.CameraISO = 400;  
 
 	// Auto exposure settings
 	PostProcessSettings.bOverride_AutoExposureMethod = true;
 	PostProcessSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
 	PostProcessSettings.bOverride_AutoExposureBias = true;
-	PostProcessSettings.AutoExposureBias = 3; 
+	PostProcessSettings.AutoExposureBias = 2; 
 	PostProcessSettings.bOverride_AutoExposureMaxBrightness = true; 
 	PostProcessSettings.bOverride_AutoExposureMinBrightness = true; 
-	PostProcessSettings.AutoExposureMaxBrightness = 20000; 
-	PostProcessSettings.AutoExposureMinBrightness = 9000; 
+	PostProcessSettings.AutoExposureMaxBrightness = 10; 
+	PostProcessSettings.AutoExposureMinBrightness = 5; 
 
 	// Bloom settings
 	PostProcessSettings.bOverride_BloomIntensity = true;

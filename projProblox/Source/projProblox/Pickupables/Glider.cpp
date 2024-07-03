@@ -18,6 +18,7 @@ AGlider::AGlider()
 	needsTimer = false;
 
 	favouredSlot = ECoreSockets::Up;
+	rotOffset = {-90,0,0};
 	uiName = "Glider";
 }
 

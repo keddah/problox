@@ -24,7 +24,7 @@ ATreads::ATreads()
 	
 	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
 	snapRot = true;
-	rotOffset = {90,0,180};
+	rotOffset = {90,0,0};
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
 
 	uiName = "Tank Tracks";
@@ -73,7 +73,8 @@ void ATreads::GhostPlacement()
 
 	// Round it to the socket rotation
 	silhouette->SetRelativeRotation({roundRot.Pitch, -roundRot.Yaw, roundRot.Roll});
-		
+	silhouette->AddRelativeRotation(rotOffset);
+	
 	SetGhostBlocked();
 }
 

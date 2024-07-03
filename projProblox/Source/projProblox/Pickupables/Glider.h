@@ -21,10 +21,10 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 	GENERATED_BODY()
 
 	AGlider();
-	virtual void BeginPlay() override { Super::BeginPlay(); }
 	
 	virtual void Ability(float deltaTime) override;
-
+	virtual void GhostPlacement() override { Super::GhostPlacement(); silhouette->AddRelativeRotation(rotOffset); }
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
 	float glideSpeed = 2000;
 
