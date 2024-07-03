@@ -43,6 +43,7 @@ void ACell::BeginPlay()
 
 void ACell::Tick(float DeltaSeconds)
 {
+	// Don't do anything if already collected
 	if(safe) return;
 	GoHome();
 

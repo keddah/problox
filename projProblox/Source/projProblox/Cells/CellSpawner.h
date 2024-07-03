@@ -51,6 +51,9 @@ public:
 	ACellSpawner();
 
 	void SetCellsDormant(bool dormant);
+
+	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
+	void WakeSleepCollectedCells(bool dormant);
 	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

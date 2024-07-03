@@ -13,6 +13,7 @@
 
 #include "LevelManager.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLoadingLevel);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedSpawn, int, spawn);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, ELevel, newLevel);
 
@@ -57,14 +58,15 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	UFUNCTION()
 	void OnHidden();
 	
+	
 	UFUNCTION()
 	void OnShown();
 	
 	UFUNCTION()
-	void SaveSpawns();
+	void BeginLoading() { bLevelLoading = true; }
 	
 	UFUNCTION()
-	void SetLoading() { bLevelLoading = true; }
+	void SaveSpawns();
 	
 	void InitSpawners();
 
@@ -91,9 +93,10 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TArray<ULevelStreamingDynamic*> levels;
 
-public:
-	virtual void Tick(float DeltaSeconds) override;
+	UPROPERTY(BlueprintAssignable)
+	FOnLoadingLevel onLoadingLevel;
 	
+public:
 	// Returns whether the loaded level. Initial load is only for the build level (when it's first loaded up in the level manager blueprint) 
 	UFUNCTION(BlueprintCallable)
 	bool LoadLevel(int lvlIndex, int spawnPoint = 0, const bool initialLoad = false);

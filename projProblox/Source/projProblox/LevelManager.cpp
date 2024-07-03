@@ -11,7 +11,7 @@
 // Sets default values
 ALevelManager::ALevelManager()
 {
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 // Called when the game starts or when spawned
@@ -41,24 +41,13 @@ void ALevelManager::BeginPlay()
 			lvl->OnLevelShown.AddDynamic(this, &ALevelManager::OnShown);
 		}
 	}
-
+	onLoadingLevel.AddDynamic(this, &ALevelManager::BeginLoading);
+	
 	InitSpawners();
 
 	// Finding spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at beginplay)
 	FTimerHandle UnusedHandle;
 	wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.25f, false); 
-}
-
-void ALevelManager::Tick(float DeltaSeconds)
-{
-	Super::Tick(DeltaSeconds);
-
-	if(levels.IsEmpty()) return;
-
-	if(levels.IsValidIndex(currentLevel))
-	{
-		bLevelLoading = levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::MakingVisible || levels[currentLevel]->GetLevelStreamingState() == ELevelStreamingState::Loading;
-	}
 }
 
 bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bool initialLoad)
@@ -100,7 +89,8 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	
 	levels[currentLevel]->SetShouldBeVisible(true);
 	instance->SetCurrentLevel(currentLevel);
-
+	onLoadingLevel.Broadcast();
+	
 	// Unload all the levels apart from the current level
 	UnloadUnusedLevels();
 
@@ -289,6 +279,7 @@ void ALevelManager::WakeSleepCells()
 		else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
 		else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
 
+		spawner->WakeSleepCollectedCells(levelEnum != ELevel::BuildArea);
 		spawner->SetCellsDormant(spawner->GetLevelEnum() != levelEnum);
 	}
 }
@@ -339,6 +330,7 @@ void ALevelManager::OnShown()
 	else if(currentLevel == 1) lvl = ELevel::Bedroom;
 	else if(currentLevel == 2) lvl = ELevel::Kitchen;
 	else lvl = ELevel::Bathroom;
-	PrintInt(currentLevel, 5)
+	
 	onLevelChanged.Broadcast(currentLevel, lvl);
+	bLevelLoading = false;
 }

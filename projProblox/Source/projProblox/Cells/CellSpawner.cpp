@@ -42,6 +42,20 @@ void ACellSpawner::SetCellsDormant(const bool dormant)
 	for(auto& cell : spawnedCells) cell->SetDormant(dormant);
 }
 
+void ACellSpawner::WakeSleepCollectedCells(bool dormant)
+{
+	if(spawnedCells.IsEmpty()) return;
+	
+	for(const auto& cell : spawnedCells)
+	{
+		if(!cell->IsSafe()) continue;
+
+		cell->SetDormant(dormant);
+	}
+
+	Print(dormant? "sleeping collected" : "waking collected", 4)
+}
+
 // Called when the game starts or when spawned
 void ACellSpawner::BeginPlay()
 {
