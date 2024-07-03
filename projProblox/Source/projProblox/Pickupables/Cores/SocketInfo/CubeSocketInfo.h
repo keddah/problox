@@ -15,7 +15,9 @@
 #include "Engine/DataAsset.h"
 #include "CubeSocketInfo.generated.h"
 
-UCLASS()
+
+// Should never save and only to be made while the game is running
+UCLASS(Transient)
 class PROJPROBLOX_API UCubeSocketInfo : public UPrimaryDataAsset
 {
 	GENERATED_BODY()

@@ -178,7 +178,7 @@ void ACellSpawner::EarlySpawn()
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(int i = 0; i < spawnAmount; i++)
+	for(unsigned int i = 0; i < spawnAmount; i++)
 	{
 		ACell* cell = Spawn(spawn, rot);
 
@@ -206,7 +206,7 @@ void ACellSpawner::SpawnWithForce()
 	const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 	
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(int i = 0; i < spawnAmount; i++)
+	for(unsigned int i = 0; i < spawnAmount; i++)
 	{
 		if(ACell* newCell = Spawn(spawn, rot)) spawnedCells.Add(newCell);
 	}

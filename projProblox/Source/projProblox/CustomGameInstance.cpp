@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Game Instance - Code
+* 
+* The code for the custom game instance. Used to  manage things that need to be saved no matter what state the game is in.
+* Responsible for saving money and unlocked attachments (if that ever becomes a thing)
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "CustomGameInstance.h"
@@ -8,6 +15,7 @@ void UCustomGameInstance::Init()
 {
 	Super::Init();
 
+	// Try to load the money save as soon as the game starts.
 	LoadSave();
 }
 
@@ -59,9 +67,4 @@ void UCustomGameInstance::AddMoney(const int value)
 
 	money += value;
 	//SaveMoney();
-}
-
-int UCustomGameInstance::GetMoney() const
-{
-	return money;
 }

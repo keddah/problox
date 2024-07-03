@@ -57,7 +57,7 @@ void EmptyLinkFunctionForGeneratedCodeWedgeSocketInfo() {}
 		0,
 		0,
 		0,
-		0x001000A0u,
+		0x001000A8u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UWedgeSocketInfo_Statics::Class_MetaDataParams), Z_Construct_UClass_UWedgeSocketInfo_Statics::Class_MetaDataParams)
 	};
 	UClass* Z_Construct_UClass_UWedgeSocketInfo()
@@ -79,9 +79,9 @@ void EmptyLinkFunctionForGeneratedCodeWedgeSocketInfo() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_WedgeSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UWedgeSocketInfo, UWedgeSocketInfo::StaticClass, TEXT("UWedgeSocketInfo"), &Z_Registration_Info_UClass_UWedgeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWedgeSocketInfo), 351357171U) },
+		{ Z_Construct_UClass_UWedgeSocketInfo, UWedgeSocketInfo::StaticClass, TEXT("UWedgeSocketInfo"), &Z_Registration_Info_UClass_UWedgeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWedgeSocketInfo), 543946244U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_WedgeSocketInfo_h_515949945(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_WedgeSocketInfo_h_1671883692(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_WedgeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_WedgeSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

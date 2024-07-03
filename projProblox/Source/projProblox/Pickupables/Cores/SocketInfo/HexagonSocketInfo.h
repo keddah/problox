@@ -6,10 +6,7 @@
 #include "CubeSocketInfo.h"
 #include "HexagonSocketInfo.generated.h"
 
-/**
- * 
- */
-UCLASS()
+UCLASS(Transient)
 class PROJPROBLOX_API UHexagonSocketInfo : public UCubeSocketInfo
 {
 	GENERATED_BODY()
