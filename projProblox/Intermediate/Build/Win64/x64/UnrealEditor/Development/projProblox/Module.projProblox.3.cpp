@@ -33,7 +33,6 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Grapple/GrappleHead.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Grapple/Grappler.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Hoverer.cpp"
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Magnet/Magnet.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Magnet/MagPole.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/PickupableMaster.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Piston.cpp"

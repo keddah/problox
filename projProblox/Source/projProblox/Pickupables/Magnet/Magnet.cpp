@@ -42,28 +42,32 @@ void AMagnet::Ability(const float deltaTime)
 
 	const FVector thisPos = GetActorLocation();
 
-	for (const auto& mag : poles)
+	if(!poles.IsEmpty())
 	{
-		if(!IsValid(mag)) continue;
-		const FVector otherPos = mag->GetMagPosition(this);
+		for (const auto& mag : poles)
+		{
+			if(!IsValid(mag)) continue;
+			const FVector otherPos = mag->GetMagPosition(this);
 
-		// Go to the next iteration if it's out of range
-		if(FVector::Distance(otherPos, thisPos) > fieldRange) continue;
-		
-		const FVector direction = otherPos - thisPos;
-		
-		const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
-		
-		// If the charges aren't matching
-		const bool attract = mag->GetPositiveCharge() != positive;
-		
-		// Scale the force by the distance of the involved blocks
-		mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
+			// Go to the next iteration if it's out of range
+			if(FVector::Distance(otherPos, thisPos) > fieldRange) continue;
+			
+			const FVector direction = otherPos - thisPos;
+			
+			const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
+			
+			// If the charges aren't matching
+			const bool attract = mag->GetPositiveCharge() != positive;
+			
+			// Scale the force by the distance of the involved blocks
+			mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
+		}
 	}
-	
+
+	if(otherMagnets.IsEmpty()) return;
 	for (const auto& mag : otherMagnets)
 	{
-		if(!IsValid(mag)) continue;
+		if(!mag) continue;
 		const FVector otherPos = mag->GetActorLocation();
 
 		// Go to the next iteration if it's out of range
