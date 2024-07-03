@@ -50,9 +50,6 @@ void ALevelManager::BeginPlay()
 	// Add a delegate for when loading begins (used for the loading screen)
 	onLoadingLevel.AddDynamic(this, &ALevelManager::BeginLoading);
 
-	// Initialise the cell spawns (spawns all the cells from every level then makes them dormant)
-	InitSpawners();
-
 	// Finding the player spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at BeginPlay)
 	FTimerHandle UnusedHandle;
 	wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.25f, false); 
@@ -196,9 +193,15 @@ void ALevelManager::FindSpawns()
 				break;
 		}
 	}
-
+	
 	// If there wasn't a save file...
 	LoadUnlockedSpawns();
+
+	// Initialise the cell spawns (spawns all the cells from every level then makes them dormant)
+	InitSpawners();
+	
+	// In blueprint... load the build area when this is broadcast so that it can load the build level (hiding the rest of the levels)
+	onScreenshotsTaken.Broadcast();
 }
 
 void ALevelManager::InitSpawners()

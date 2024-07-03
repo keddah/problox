@@ -15,11 +15,14 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnCoreChanged__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnHideDisplay__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnShowDisplay__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnSpawnedCells__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_projProblox;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_projProblox()
@@ -35,11 +38,14 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnCoreChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnHideDisplay__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnShowDisplay__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnSpawnedCells__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnSpawnTriggered__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
@@ -47,13 +53,13 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x14FA820C,
-				0x6B611E44,
+				0xE48D0070,
+				0x64ED3FAA,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x14FA820C, 0x6B611E44));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xE48D0070, 0x64ED3FAA));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

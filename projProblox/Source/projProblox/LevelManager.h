@@ -21,6 +21,7 @@
 #include "LevelManager.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLoadingLevel);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnScreenshotsTaken);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedSpawn, int, spawn);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, ELevel, newLevel);
 
@@ -124,6 +125,9 @@ protected:
 
 	UPROPERTY(BlueprintAssignable)
 	FOnLoadingLevel onLoadingLevel;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnScreenshotsTaken onScreenshotsTaken;
 	
 public:
 	/////////////////////////// VARIABLES ///////////////////////////

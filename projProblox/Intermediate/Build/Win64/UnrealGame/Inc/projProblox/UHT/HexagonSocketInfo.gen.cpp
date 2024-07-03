@@ -38,9 +38,6 @@ void EmptyLinkFunctionForGeneratedCodeHexagonSocketInfo() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UHexagonSocketInfo_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHexagonSocketInfo_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "Pickupables/Cores/SocketInfo/HexagonSocketInfo.h" },
 		{ "ModuleRelativePath", "Pickupables/Cores/SocketInfo/HexagonSocketInfo.h" },
 	};
@@ -60,7 +57,7 @@ void EmptyLinkFunctionForGeneratedCodeHexagonSocketInfo() {}
 		0,
 		0,
 		0,
-		0x001000A0u,
+		0x001000A8u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UHexagonSocketInfo_Statics::Class_MetaDataParams), Z_Construct_UClass_UHexagonSocketInfo_Statics::Class_MetaDataParams)
 	};
 	UClass* Z_Construct_UClass_UHexagonSocketInfo()
@@ -82,9 +79,9 @@ void EmptyLinkFunctionForGeneratedCodeHexagonSocketInfo() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_HexagonSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UHexagonSocketInfo, UHexagonSocketInfo::StaticClass, TEXT("UHexagonSocketInfo"), &Z_Registration_Info_UClass_UHexagonSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHexagonSocketInfo), 704186011U) },
+		{ Z_Construct_UClass_UHexagonSocketInfo, UHexagonSocketInfo::StaticClass, TEXT("UHexagonSocketInfo"), &Z_Registration_Info_UClass_UHexagonSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHexagonSocketInfo), 437322222U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_HexagonSocketInfo_h_158222744(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_HexagonSocketInfo_h_2092940224(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_HexagonSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_HexagonSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
