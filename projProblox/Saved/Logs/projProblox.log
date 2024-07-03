@@ -1826,3 +1826,51 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.03-15.56.16:090][897]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
 [2024.07.03-15.56.16:644][898]Display: Reload/Re-instancing Complete: 1 class changed, 2 scriptstructs remapped
 [2024.07.03-15.56.16:644][898]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2024.07.03-16.07.41:717][621]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.03-16.07.42:557][694]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/BP_Spawner.BP_Spawner
+[2024.07.03-16.07.42:557][694]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.03-16.07.42:558][694]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.03-16.07.42:722][694]LogActor: Warning: BP_Spawner_C /Engine/Transient.World_20:PersistentLevel.BP_Spawner_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.03-16.07.43:351][744]LogShaderCompilers: Display: ================================================
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Total job queries 375, among them cache hits 101 (26.93%)
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Tracking 273 distinct input hashes that result in 175 distinct outputs (64.10%)
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: RAM used: 6.65 MiB of 1.60 GiB budget. Usage: 0.41%
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Shaders Compiled: 11
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Jobs assigned 12, completed 11 (91.67%)
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Average time worker was idle: 1052.33 s
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Time job spent in pending queue: average 0.08 s, longest 0.10 s
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Job execution time: average 0.66 s, max 1.62 s
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Job life time (pending + execution): average 0.75 s, max 1.62
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Shader code size: average 40.865 KiB, min 32.031 KiB, max 62.887 KiB
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 2.98 s
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Jobs were issued in 12 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Average processing rate: 3.69 jobs/sec
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Total thread time: 3.464 s
+[2024.07.03-16.07.43:352][744]LogShaderCompilers: Display: Total thread preprocess time: 0.854 s
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display: Percentage time preprocessing: 24.66%
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display: Effective parallelization: 1.16 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    2 times, average 0.71 sec, max 1.20 sec, min 0.21 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display: TBasePassPSFPrecomputedVolumetricLightmapLightingPolicySkylight (compiled    2 times, average 0.32 sec, max 0.33 sec, min 0.31 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:      TBasePassVSFPrecomputedVolumetricLightmapLightingPolicy (compiled    2 times, average 0.27 sec, max 0.28 sec, min 0.26 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:                                                 FLumenCardVS (compiled    2 times, average 0.23 sec, max 0.26 sec, min 0.19 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    1 times, average 0.19 sec, max 0.19 sec, min 0.19 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 40.73% of total time (compiled    2 times, average 0.71 sec, max 1.20 sec, min 0.21 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display: TBasePassPSFPrecomputedVolumetricLightmapLightingPolicySkylight - 18.53% of total time (compiled    2 times, average 0.32 sec, max 0.33 sec, min 0.31 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:      TBasePassVSFPrecomputedVolumetricLightmapLightingPolicy - 15.41% of total time (compiled    2 times, average 0.27 sec, max 0.28 sec, min 0.26 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:                                                 FLumenCardVS - 13.04% of total time (compiled    2 times, average 0.23 sec, max 0.26 sec, min 0.19 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 6.85% of total time (compiled    2 times, average 0.12 sec, max 0.15 sec, min 0.08 sec)
+[2024.07.03-16.07.43:353][744]LogShaderCompilers: Display: ================================================
+[2024.07.03-16.08.30:625][764]LogSlate: Took 0.004542 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2024.07.03-16.08.57:527][825]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2024.07.03-16.08.57:529][825]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.056
+[2024.07.03-16.08.57:532][825]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Blueprints/Cells/BP_Spawner] ([2] browsable assets)...
+[2024.07.03-16.08.57:532][825]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Cells/BP_Spawner]
+[2024.07.03-16.08.57:545][825]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.011019 seconds
+[2024.07.03-16.08.57:556][825]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Cells/BP_Spawner_Auto1
+[2024.07.03-16.08.57:556][825]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Spawner_Auto10513D829462D632BBAC3BCA855740611.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Cells/BP_Spawner_Auto1.uasset'
+[2024.07.03-16.08.57:559][825]LogFileHelpers: Auto-saving content packages took 0.029
+[2024.07.03-16.17.13:441][313]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:38.682 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 19962 files in 22281 folders with total size 1112 MiB.

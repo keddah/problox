@@ -212,7 +212,7 @@ void ALevelManager::InitSpawners()
 		if(!spawner) continue;
 
 		cellSpawners.Add(spawner);
-		spawner->Init(core);
+		spawner->Init();
 	}
 
 	// Unload every level apart from the first.

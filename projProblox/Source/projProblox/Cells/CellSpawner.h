@@ -34,44 +34,20 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 {
 	GENERATED_BODY()
 
-	bool spawned = false;
-
-	UFUNCTION(BlueprintCallable)
-	virtual void Overlap(AActor* otherActor);
-
-	void PlaySound();
-	ACell* Spawn(const FVector& spawn, const FRotator& rot) const;
-
-	// Spawn parameters
-	FActorSpawnParameters params;
-
-
-public:	
-	// Sets default values for this actor's properties
-	ACellSpawner();
-
-	void SetCellsDormant(bool dormant);
-
-	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
-	void WakeSleepCollectedCells(bool dormant);
-	
-protected:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	USceneComponent* scene;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UArrowComponent* forceDirection;
-
-	UPROPERTY(EditInstanceOnly)
-	ULevelObjective* objective;
-	
-private:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	
+	/////////////////////////// VARIABLES ///////////////////////////
+	/////////// COMPONENTS ///////////
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "If the relative location is 0, this has no affect."))
+	UBoxComponent* spawnTrigger;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Sound", meta = (ToolTip = "The sound will play at the location of this sound player..."))
 	UAudioComponent* soundPlayer;
 
+	
+	/////////// SOUND ///////////
 	UPROPERTY(EditInstanceOnly, Category = "Sound")
 	USoundWave* soundToPlay;
 
@@ -81,6 +57,8 @@ private:
 	UPROPERTY(EditInstanceOnly, Category = "Sound")
 	bool loopingSound = false;
 
+
+	/////////// CELL CLASSES ///////////
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ACell> normalThing;
 	
@@ -97,61 +75,89 @@ private:
 	TSubclassOf<ACell> stickyThing;
 	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
+	ECellType thingType = ECellType::Normal;
+
+	
+	/////////// EDITABLE PROPERTIES ///////////
+	UPROPERTY(EditInstanceOnly, Category = "Objective")
+	ULevelObjective* objective;
+
+	UPROPERTY(EditInstanceOnly, Category = "Level Assignment", meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
 	ELevel level;
 	
-	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
-	ECellType thingType = ECellType::Normal;
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Amount", meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
+	unsigned int spawnAmount = 1;
 	
-	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "If the relative location is 0, this has no affect."))
-	UBoxComponent* spawnTrigger;
-	
-	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
-	int32 spawnAmount = 1;
-	
-	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "Whether to spawn the cells as soon as the level is loaded"))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Activation", meta = (EditInlineNew, ToolTip = "Whether to spawn the cells as soon as the level is loaded"))
 	bool previewed = true;
 		
-	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "The maximum amount of cells that can spawn from this spawner..."))
-	int32 maxSpawnAmount = 50;
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Amount", meta = (EditInlineNew, ToolTip = "The maximum amount of cells that can spawn from this spawner..."))
+	unsigned int maxSpawnAmount = 50;
 
-	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
 	unsigned int spawnRadius = 50;
 
-	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
 	unsigned int coneRadius = 20;
 
-	UPROPERTY(EditAnywhere, meta = (EditInlineNew, ToolTip = "This only applies when cells are spawned using the triggers."))
-	float spawnForce = 2000;
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ToolTip = "This only applies when cells are spawned using the triggers."))
+	int spawnForce = 2000;
 
-	UWorld* wrld;
-
-	TArray<ACell*> spawnedCells;
-	
-	UPROPERTY(EditInstanceOnly)
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Activation", meta = (ToolTip = "Whether to spawn cells on collision rather than when the game starts..."))
 	bool triggerable;
+
+
+	/////////// OTHER ///////////
+	UWorld* wrld;
+	TArray<ACell*> spawnedCells;
+
 	
+	bool spawned = false;
+
+	UFUNCTION(BlueprintCallable)
+	virtual void Overlap(AActor* otherActor);
+
+	void PlaySound() const;
+	ACell* Spawn(const FVector& spawn, const FRotator& rot) const;
+
+	// Spawn parameters
+	FActorSpawnParameters params;
+
+
+public:	
+	// Sets default values for this actor's properties
+	ACellSpawner();
+
+	// Hides and deactivates the physics for all its spawned cells
+	void SetCellsDormant(bool dormant);
+
+	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
+	void WakeSleepCollectedCells(bool dormant);
+
+	
+protected:
+	/////////// COMPONENTS ///////////
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	USceneComponent* scene;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UArrowComponent* forceDirection;
+
 	
 public:
-	void Init(ACubeCore* core);
-	
-	UFUNCTION(BlueprintCallable)
-	bool IsActive() const { return spawned; }
+	/////////////////////////// VARIABLES ///////////////////////////
+	/////////// DELEGATES ///////////
+	UPROPERTY(BlueprintAssignable)
+	FOnSpawnTriggered onTriggered;
 
-	UFUNCTION(BlueprintCallable)
-	const ELevel& GetLevelEnum() const { return level; }
-	
+
+	/////////////////////////// FUNCTIONS ///////////////////////////
+	void Init();
+
 	void EarlySpawn();
 	void SpawnWithForce();
 
 	void ActivateSpawner() { spawned = true; }
-	int GetSpawnAmount() const
-	{
-		// If this spawner has an objective, if it's already been completed... return 0 
-		// if(HasObjective()) if(objective->IsCompleted()) return 0;
-
-		// Otherwise return the amount
-		return spawnAmount;
-	}
 	
 	void IncreaseSpawnCount(unsigned short additions)
 	{
@@ -159,15 +165,26 @@ public:
 		spawnAmount = FMath::Clamp(spawnAmount, 1, maxSpawnAmount);
 	}
 
-	UPROPERTY(BlueprintAssignable)
-	FOnSpawnTriggered onTriggered;
 
+	/////////// GETTERS ///////////
+	UFUNCTION(BlueprintCallable)
+	bool IsActive() const { return spawned; }
+
+	UFUNCTION(BlueprintCallable)
+	const ELevel& GetLevelEnum() const { return level; }
+	
 	UFUNCTION(BlueprintCallable)
 	bool HasObjective() const { return IsValid(objective); }
 	
 	UFUNCTION(BlueprintCallable)
-	const ULevelObjective* GetObjective() const
+	const ULevelObjective* GetObjective() const { return objective; }
+
+	int GetSpawnAmount() const
 	{
-		return objective;
+		// If this spawner has an objective, if it's already been completed... return 0 
+		// if(HasObjective()) if(objective->IsCompleted()) return 0;
+
+		// Otherwise return the amount
+		return spawnAmount;
 	}
 };

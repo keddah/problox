@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Modes - Code
+* 
+* The code file for the different game mode classes. Mostly unused (there were supposed to be several game modes).
+* 
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "Modes.h"

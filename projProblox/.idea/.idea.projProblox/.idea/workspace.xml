@@ -12,8 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Cells/CellVariations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Cells/CellVariations.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/GameModes/Modes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/GameModes/Modes.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/GameModes/Modes.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/GameModes/Modes.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/projProblox/LevelManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/LevelManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +370,7 @@
       <workItem from="1719857734429" duration="4184000" />
       <workItem from="1719911644710" duration="11765000" />
       <workItem from="1719992235016" duration="1722000" />
-      <workItem from="1720018353797" duration="3800000" />
+      <workItem from="1720018353797" duration="5673000" />
     </task>
     <servers />
   </component>
