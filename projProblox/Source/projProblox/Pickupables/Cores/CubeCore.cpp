@@ -320,9 +320,10 @@ void ACubeCore::Detach(const bool push)
 
 void ACubeCore::ResetToStart()
 {
-	mesh->SetLinearDamping(heavyDrag);
-	mesh->SetAngularDamping(heavyAngularDrag);
-	buildPhase = true;
+	if(mesh)
+	{
+		if(mesh->IsSimulatingPhysics()) mesh->SetAngularDamping(heavyAngularDrag);
+	}
 	onReset.Broadcast();
 }
 
@@ -333,9 +334,11 @@ void ACubeCore::Start()
 	
 	// Save the transform...
 	resetTransform = GetActorTransform();
-	buildPhase = false;
-	mesh->SetLinearDamping(defaultDrag);
-	mesh->SetAngularDamping(defaultAngularDrag);
+
+	if(mesh)
+	{
+		if(mesh->IsSimulatingPhysics()) mesh->SetAngularDamping(defaultAngularDrag);
+	}
 }
 
 void ACubeCore::CalculateRating()

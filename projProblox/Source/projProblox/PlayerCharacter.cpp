@@ -42,7 +42,7 @@ void APlayerCharacter::BeginPlay()
 	}
 	if(!IsValid(core)) Print("Core Invalid... ~ player", 5);
 	
-	core->onReset.AddDynamic(this, &APlayerCharacter::GoToCore);
+	// core->onReset.AddDynamic(this, &APlayerCharacter::GoToCore);
 
 	history = NewObject<UActionHistory>();
 	buildPhase = true;
@@ -921,7 +921,6 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 	if(!IsValid(selectedObj)) return;
 
 	selectedObj->SetGroupSelected(true);
-	Print("Tryna move", 4)
 	selectedObj = core;
 	constexpr float heightOffset = 100;
 	const FVector corePos = core->GetActorLocation();

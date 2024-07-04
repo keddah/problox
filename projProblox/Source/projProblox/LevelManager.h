@@ -69,7 +69,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	
 	// Function called when the loading delegate is broadcast..
 	UFUNCTION()
-	void BeginLoading() { bLevelLoading = true; }
+	void SetIsLoading() { bLevelLoading = true; }
 
 	// Function called when the new spawn unlocked delegate is broadcast..
 	UFUNCTION()

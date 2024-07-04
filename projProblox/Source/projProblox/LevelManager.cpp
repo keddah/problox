@@ -48,11 +48,12 @@ void ALevelManager::BeginPlay()
 	}
 
 	// Add a delegate for when loading begins (used for the loading screen)
-	onLoadingLevel.AddDynamic(this, &ALevelManager::BeginLoading);
-
+	onLoadingLevel.AddDynamic(this, &ALevelManager::SetIsLoading);
+	FindSpawns();
+	
 	// Finding the player spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at BeginPlay)
-	FTimerHandle UnusedHandle;
-	wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.25f, false); 
+	// FTimerHandle UnusedHandle;
+	// wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.2f, false); 
 }
 
 bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bool initialLoad)
