@@ -170,6 +170,9 @@ void ALevelManager::FindCore()
 
 void ALevelManager::FindSpawns()
 {
+	// Only do this once. (will be called everytime a level loads)
+	if(!(lvl1Screenshots.IsEmpty() && lvl2Screenshots.IsEmpty() && lvl3Screenshots.IsEmpty())) return;
+	
 	// Get all the spawn points from the PERSISTENT level
 	TArray<AActor*> spawns;
 	UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
@@ -221,6 +224,11 @@ void ALevelManager::FindSpawns()
 	
 	// In blueprint... load the build area when this is broadcast so that it can load the build level (hiding the rest of the levels)
 	onScreenshotsTaken.Broadcast();
+
+
+	// Remove the delegate so that it doesn't happen again
+	if(levels.IsEmpty()) return;
+	levels[levels.Num() - 1]->OnLevelShown.RemoveDynamic(this, &ALevelManager::FindSpawns);
 }
 
 void ALevelManager::InitSpawners()
