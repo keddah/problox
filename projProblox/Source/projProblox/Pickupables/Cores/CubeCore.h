@@ -87,14 +87,14 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 	unsigned short rating;
 
-	UPROPERTY(EditInstanceOnly, EditFixedSize, meta = (TitleProperty = "Soimets", AllowPrivateAccess = true, ToolTip = "Index 0 = no stars.\n index 3 = three stars."))
+	UPROPERTY(EditInstanceOnly, EditFixedSize, meta = (ToolTip = "Index 0 = no stars.\n index 3 = three stars."))
 	TArray<unsigned int> moveRatings { 4,3,2,1 };
 	
 	unsigned short attempts = 0;
 	unsigned short maxAttempts = 5;
 
 	void CalculateRating();
-	
+
 	
 	/////////////// Game States ///////////////
 	bool buildPhase = true;
@@ -225,11 +225,12 @@ protected:
 	void OtherGhostPlacement();
 	virtual void Placement() override;
 
+	
 	/////////////// Rotations ///////////////
 	// Sets rotations depending on the attachee's type / snapRot variable...
 	void OtherRotations(APickupableMaster* other);
-
 	virtual void ResetRotation(bool resetVelocity) override;
+
 	
 	/////////////// Attachments ///////////////
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
@@ -246,7 +247,10 @@ protected:
 		Super::ToggleGravity(gravityOn);
 		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(gravityOn);
 	}
-
+	
+	UFUNCTION(BlueprintCallable)
+	void PlayCollectSound() { soundPlayer->PlayAbility(); }
+	
 	void SetEnableCollisions(bool enable);
 	
 public:

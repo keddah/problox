@@ -36,6 +36,14 @@ public:
 	{
 		sounds.Add(LoadObject<USoundWave>(0,reference));
 	}
+
+	// This override is to be used by the core so that the collection sound can be added...
+	void AddAbilitySFX(const TCHAR* sfxRef, const TCHAR* collectionRef)
+	{
+		// Add the collection first so that it's the second last element...
+		sounds.Add(LoadObject<USoundWave>(0,collectionRef));
+		sounds.Add(LoadObject<USoundWave>(0,sfxRef));
+	}
 	
 	bool IsPlaying() const { return player->IsPlaying(); }
 
@@ -52,4 +60,6 @@ public:
 	void SetIntParam(const FName& key, const int value) const { player->SetIntParameter(key, value); }
 	void SetBoolParam(const FName& key, const bool value) const { player->SetBoolParameter(key, value); }
 	void RunAudioFunction(const FName& key) const { player->SetTriggerParameter(key); }
+
+	void SetIs2DSound(const bool ui) const { player->SetUISound(ui); }
 };
