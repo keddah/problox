@@ -2,6 +2,7 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/GrappleHead.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Grappler.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/HexagonSocketInfo.gen.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/HexCore.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Hoverer.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/LevelManager.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/LevelObjective.gen.cpp"
