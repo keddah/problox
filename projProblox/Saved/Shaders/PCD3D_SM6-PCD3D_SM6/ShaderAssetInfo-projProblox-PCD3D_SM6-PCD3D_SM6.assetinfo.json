@@ -531,12 +531,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "BF117754AB20765705180DA7EC7D0A0914155AFA",
-			"Assets": [
-				"/Game/Materials/Magnet/MM_Magnet"
-			]
-		},
-		{
 			"ShaderMapHash": "FC8C1355E6FB7E551CE71B8C213A13F7CAE58FF2",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Basic_Wall"
@@ -854,6 +848,12 @@
 			"ShaderMapHash": "647167904D2A6DEB1973FC11DCAC035A462AB3C1",
 			"Assets": [
 				"/Game/MSPresets/M_MS_Surface_Material/M_MS_Surface_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "F5EB06927A7950B460621B6AA3A7A6E15CFA0B51",
+			"Assets": [
+				"/Game/Materials/Magnet/MM_Magnet"
 			]
 		},
 		{

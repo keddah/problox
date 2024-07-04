@@ -47,11 +47,23 @@ void ALevelManager::BeginPlay()
 		}
 	}
 
+	// Unhide all the levels (apart from build level)
+	if(levels.Num() > 3)
+	{
+		for(int i = 1; i < levels.Num(); i++)
+		{
+			levels[i]->SetShouldBeLoaded(true);
+			levels[i]->SetShouldBeVisible(true);
+		}
+	}
+
+	// find the spawns once the last level has been loaded so that screenshots can be taken with everything loaded in. 
+	levels[levels.Num() - 1]->OnLevelShown.AddDynamic(this, &ALevelManager::FindSpawns);
+	
 	// Add a delegate for when loading begins (used for the loading screen)
 	onLoadingLevel.AddDynamic(this, &ALevelManager::SetIsLoading);
-	FindSpawns();
-	
-	// Finding the player spawns after a delay so that the spawn area screenshot isn't dark (the lighting isn't initialised properly at BeginPlay)
+	// FindSpawns();
+	// Finding the player spawns after a delay so that the levels load int (things like lighting aren't initialised properly at BeginPlay)
 	// FTimerHandle UnusedHandle;
 	// wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.2f, false); 
 }
@@ -126,6 +138,7 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 
 void ALevelManager::UnloadUnusedLevels()
 {
+	Print("Unloading unused", 4)
 	for(int i = 0; i < levels.Num(); i++)
 	{
 		// Ignore the current level
@@ -194,6 +207,7 @@ void ALevelManager::FindSpawns()
 				break;
 		}
 	}
+	Print("screenshots taken..", 4)
 	
 	// If there wasn't a save file...
 	LoadUnlockedSpawns();

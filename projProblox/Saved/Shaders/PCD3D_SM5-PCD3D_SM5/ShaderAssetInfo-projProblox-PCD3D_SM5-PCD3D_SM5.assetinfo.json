@@ -1097,12 +1097,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "744076C99F77E042A34AC96892FC9630EDF3224D",
-			"Assets": [
-				"/Game/Materials/Magnet/MM_Magnet"
-			]
-		},
-		{
 			"ShaderMapHash": "1873EAC90491014DB48003F0EF5605E409E71914",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Statue"
@@ -1450,6 +1444,12 @@
 			"ShaderMapHash": "6E048AFE07B4CAAEA54AD3A048DDD85898C7BDE9",
 			"Assets": [
 				"/Game/Levels/StoryMode/DesertPrototype"
+			]
+		},
+		{
+			"ShaderMapHash": "7298ACFE43AFB711AE0435F2618A857EE863E6D2",
+			"Assets": [
+				"/Game/Materials/Magnet/MM_Magnet"
 			]
 		}
 	]

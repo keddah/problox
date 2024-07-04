@@ -84,6 +84,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	void FindCore();
 	
 	// Run on beginPlay
+	UFUNCTION()
 	void FindSpawns();
 
 
