@@ -2,7 +2,8 @@
 * Level Manager - Code
 * 
 * The code file for the level manager. In charge of keeping track of all the player and cells spawns as well as allowing/managing the process of loading and
-* unloading levels.
+* unloading levels. The game can be made expandable using this system. The persistent level is essentially a "house" and all the streamed levels are "rooms".
+* Placing a level manager in each "house" would allow you to switch between "rooms". Other UI could be used to select other "houses" by selecting persistent levels.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -20,7 +21,6 @@ ALevelManager::ALevelManager()
 	PrimaryActorTick.bCanEverTick = false;
 }
 
-// Called when the game starts or when spawned
 void ALevelManager::BeginPlay()
 {
 	Super::BeginPlay();
@@ -46,9 +46,22 @@ void ALevelManager::BeginPlay()
 			lvl->OnLevelShown.AddDynamic(this, &ALevelManager::OnShown);
 		}
 	}
+	
+	// Add a delegate for when loading begins (used for the loading screen)
+	onLoadingLevel.AddDynamic(this, &ALevelManager::SetIsLoading);
+
+	if(levels.IsEmpty())
+	{
+		Print("No levels were found in the persistent level.", 4)
+		return;
+	}
+
+	// Find the spawns once the last level has been loaded so that screenshots can be taken with everything loaded in.
+	// In the Levels tab of the persistent level, ensure that all the levels have initially visible and loaded unchecked.
+	levels[levels.Num() - 1]->OnLevelShown.AddDynamic(this, &ALevelManager::FindSpawns);
 
 	// Unhide all the levels (apart from build level)
-	if(levels.Num() > 3)
+	if(levels.Num() > 1)
 	{
 		for(int i = 1; i < levels.Num(); i++)
 		{
@@ -56,16 +69,7 @@ void ALevelManager::BeginPlay()
 			levels[i]->SetShouldBeVisible(true);
 		}
 	}
-
-	// find the spawns once the last level has been loaded so that screenshots can be taken with everything loaded in. 
-	levels[levels.Num() - 1]->OnLevelShown.AddDynamic(this, &ALevelManager::FindSpawns);
-	
-	// Add a delegate for when loading begins (used for the loading screen)
-	onLoadingLevel.AddDynamic(this, &ALevelManager::SetIsLoading);
-	// FindSpawns();
-	// Finding the player spawns after a delay so that the levels load int (things like lighting aren't initialised properly at BeginPlay)
-	// FTimerHandle UnusedHandle;
-	// wrld->GetTimerManager().SetTimer(UnusedHandle, [this](){FindSpawns();}, 0.2f, false); 
+	else Print("Not enough levels..?", 4)
 }
 
 bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bool initialLoad)
