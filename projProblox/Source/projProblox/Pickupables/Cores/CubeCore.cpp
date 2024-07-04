@@ -43,6 +43,8 @@ ACubeCore::ACubeCore()
 	mouseDetector->SetBoxExtent({});
 	
 	placeRange = 50;
+
+	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_collect.MS_collect'"));
 }
 
 void ACubeCore::BeginPlay()

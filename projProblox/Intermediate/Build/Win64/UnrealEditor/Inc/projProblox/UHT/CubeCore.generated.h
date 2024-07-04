@@ -62,6 +62,7 @@ PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegat
 	DECLARE_FUNCTION(execEjectObject); \
 	DECLARE_FUNCTION(execObjectInSocket); \
 	DECLARE_FUNCTION(execDetachAll); \
+	DECLARE_FUNCTION(execPlayCollectSound); \
 	DECLARE_FUNCTION(execAddMoney); \
 	DECLARE_FUNCTION(execStartStoryGame); \
 	DECLARE_FUNCTION(execStartGame); \

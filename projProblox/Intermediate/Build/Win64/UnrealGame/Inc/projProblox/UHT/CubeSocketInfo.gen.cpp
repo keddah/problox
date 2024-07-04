@@ -50,8 +50,14 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCubeSocketInfo_Statics::Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Should never save and only to be made while the game is running\n" },
+#endif
 		{ "IncludePath", "Pickupables/Cores/SocketInfo/CubeSocketInfo.h" },
 		{ "ModuleRelativePath", "Pickupables/Cores/SocketInfo/CubeSocketInfo.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Should never save and only to be made while the game is running" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_Inner = { "sockets", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
@@ -92,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::PropPointers),
 		0,
-		0x001000A0u,
+		0x001000A8u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::Class_MetaDataParams), Z_Construct_UClass_UCubeSocketInfo_Statics::Class_MetaDataParams)
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::PropPointers) < 2048);
@@ -116,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 3872882617U) },
+		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 3440768335U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_4053217356(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_4042079248(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
