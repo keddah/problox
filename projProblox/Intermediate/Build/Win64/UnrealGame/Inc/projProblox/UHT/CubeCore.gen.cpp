@@ -375,6 +375,13 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->DetachAll(Z_Param_push);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ACubeCore::execPlayCollectSound)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PlayCollectSound();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACubeCore::execAddMoney)
 	{
 		P_GET_PROPERTY(FIntProperty,Z_Param_amount);
@@ -422,6 +429,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 			{ "GetSocketCount", &ACubeCore::execGetSocketCount },
 			{ "NextWave", &ACubeCore::execNextWave },
 			{ "ObjectInSocket", &ACubeCore::execObjectInSocket },
+			{ "PlayCollectSound", &ACubeCore::execPlayCollectSound },
 			{ "SelectSocket", &ACubeCore::execSelectSocket },
 			{ "SetAllAbilityActive", &ACubeCore::execSetAllAbilityActive },
 			{ "Start", &ACubeCore::execStart },
@@ -833,6 +841,28 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "PlayCollectSound", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACubeCore_PlayCollectSound()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ACubeCore_SelectSocket_Statics
 	{
 		struct CubeCore_eventSelectSocket_Parms
@@ -1186,6 +1216,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{ &Z_Construct_UFunction_ACubeCore_GetSocketCount, "GetSocketCount" }, // 2642918207
 		{ &Z_Construct_UFunction_ACubeCore_NextWave, "NextWave" }, // 3722595611
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3391374434
+		{ &Z_Construct_UFunction_ACubeCore_PlayCollectSound, "PlayCollectSound" }, // 2315332400
 		{ &Z_Construct_UFunction_ACubeCore_SelectSocket, "SelectSocket" }, // 1004249041
 		{ &Z_Construct_UFunction_ACubeCore_SetAllAbilityActive, "SetAllAbilityActive" }, // 212583021
 		{ &Z_Construct_UFunction_ACubeCore_Start, "Start" }, // 3487294909
@@ -1212,10 +1243,8 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_moveRatings_Inner = { "moveRatings", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_moveRatings_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "CubeCore" },
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-		{ "TitleProperty", "Soimets" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Index 0 = no stars.\n index 3 = three stars." },
 #endif
@@ -1531,9 +1560,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 2533685191U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3861869934U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_2301163383(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_2505346874(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
