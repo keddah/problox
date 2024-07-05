@@ -282,7 +282,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		{
 			spawnPos = lvl1Spawns[spawnPoint]->GetActorLocation();
 			core->Teleport(spawnPos, lvl1Spawns[spawnPoint]->GetRot());
-			player->Respawn(spawnPos + spawnOffset, lvl1Spawns[spawnPoint]->GetRot());
+			// player->Respawn(spawnPos + spawnOffset, lvl1Spawns[spawnPoint]->GetRot());
 		}
 		break;
 
@@ -292,7 +292,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		{
 			spawnPos = lvl2Spawns[spawnPoint]->GetActorLocation();
 			core->Teleport(spawnPos, lvl2Spawns[spawnPoint]->GetRot());
-			player->Respawn(spawnPos + spawnOffset, lvl2Spawns[spawnPoint]->GetRot());
+			// player->Respawn(spawnPos + spawnOffset, lvl2Spawns[spawnPoint]->GetRot());
 		}
 		break;
 
@@ -302,7 +302,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		{
 			spawnPos = lvl3Spawns[spawnPoint]->GetActorLocation();
 			core->Teleport(spawnPos, lvl3Spawns[spawnPoint]->GetRot());
-			player->Respawn(spawnPos + spawnOffset, lvl3Spawns[spawnPoint]->GetRot());
+			// player->Respawn(spawnPos + spawnOffset, lvl3Spawns[spawnPoint]->GetRot());
 		}
 		break;
 	}

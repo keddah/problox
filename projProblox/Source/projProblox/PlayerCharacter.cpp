@@ -45,7 +45,6 @@ void APlayerCharacter::BeginPlay()
 	// core->onReset.AddDynamic(this, &APlayerCharacter::GoToCore);
 
 	history = NewObject<UActionHistory>();
-	buildPhase = true;
 
 	zooming = true;
 	orbiting = true;
@@ -457,38 +456,15 @@ void APlayerCharacter::GoToSlot(const bool move, const bool next)
 	// orbiting = false;
 }
 
-void APlayerCharacter::ManualSelectObject(APickupableMaster* obj)
-{
-	if(!IsValid(obj)) return;
-	
-	holding = true;
-	selectedObj = obj;
-	selectedObj->SetSelected(true);
-
-	// Need to set the start position...
-	// Only add a new action after deselecting since that's what confirms the task.
-	selectedTransform = selectedObj->GetActorTransform();
-	
-	// Includes if the selected object is the core
-	exclusions.Add(selectedObj);
-	if(!selectedObj->IsA<ACubeCore>()) return;
-
-	// Add the things that are connected to the core/connector to the things to ignore
-	if(ACubeCore* object = Cast<ACubeCore>(selectedObj))
-	{
-		exclusions.Append(object->GetAttachedActorObjects());
-	}
-}
-
 void APlayerCharacter::Respawn(const FVector& pos, const FRotator& rot)
 {
 	SetActorLocation(pos);
 	SetActorRotation(rot);
 
-	 orbiting = true;
-	 mouseValues = { .1f, 0 };
-	 OrbitControls(1);
-	 orbiting = false;
+	 // orbiting = true;
+	 // mouseValues = { .1f, 0 };
+	 // OrbitControls(1);
+	 // orbiting = false;
 	
 	camBoom->TargetArmLength = 0;
 }
@@ -506,76 +482,69 @@ void APlayerCharacter::GoToCore()
 	SetActorLocation(newPos);
 }
 
-void APlayerCharacter::SelectObject(const FHitResult& hit)
+// void APlayerCharacter::SelectObject(const FHitResult& hit)
+// {
+// 	// When the hold button is let go
+// 	if(!holding)
+// 	{
+// 		Deselect();
+// 		return;
+// 	}
+// 	
+// 	// Can't select anything whilst not in the build phase...
+// 	if(!buildPhase) return;
+//
+// 	// Don't do anything if the selected object is already valid
+// 	if(IsValid(selectedObj)) return;
+// 	
+// 	if(!hit.bBlockingHit)
+// 	{
+// 		holding = false;
+// 		return;
+// 	}
+//
+// 	AActor* hitActor = hit.GetActor();
+// 	
+// 	if(!IsValid(hitActor))
+// 	{
+// 		holding = false;
+// 		return;
+// 	}
+//
+// 	// Cast to the selected object..
+// 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
+// 	{
+// 		// If the player can't pick it up... return.
+// 		if(!obj->GetCanPickup() && (obj->IsA<ACubeCore>() && !obj->IsA<ACubeConnector>()) ) return;
+// 		
+// 		selectedObj = obj;
+// 		selectedTransform = selectedObj->GetActorTransform();
+// 		selectedObj->SetSelected(true);
+//
+// 		// Need to set the start position...
+// 		// Only add a new action after deselecting since that's what confirms the task.
+// 	}
+// 	else holding = false;
+// 	
+// 	if(!IsValid(selectedObj))
+// 	{
+// 		holding = false;
+// 		return;
+// 	}
+//
+// 	// Includes if the selected object is the core
+// 	exclusions.Add(selectedObj);
+// 	if(!selectedObj->IsA<ACubeCore>()) return;
+//
+// 	// Add the things that are connected to the core/connector to the things to ignore
+// 	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
+// 	{
+// 		exclusions.Append(obj->GetAttachedActorObjects());
+// 	}
+// }
+
+void APlayerCharacter::SelectObject(APickupableMaster* obj)
 {
-	// When the hold button is let go
-	if(!holding)
-	{
-		Deselect();
-		return;
-	}
-	
-	// Can't select anything whilst not in the build phase...
-	if(!buildPhase) return;
-
-	// Don't do anything if the selected object is already valid
-	if(IsValid(selectedObj)) return;
-	
-	if(!hit.bBlockingHit)
-	{
-		holding = false;
-		return;
-	}
-
-	AActor* hitActor = hit.GetActor();
-	
-	if(!IsValid(hitActor))
-	{
-		holding = false;
-		return;
-	}
-
-	// Cast to the selected object..
-	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
-	{
-		// If the player can't pick it up... return.
-		if(!obj->GetCanPickup() && (obj->IsA<ACubeCore>() && !obj->IsA<ACubeConnector>()) ) return;
-		
-		selectedObj = obj;
-		selectedTransform = selectedObj->GetActorTransform();
-		selectedObj->SetSelected(true);
-
-		// Need to set the start position...
-		// Only add a new action after deselecting since that's what confirms the task.
-	}
-	else holding = false;
-	
-	if(!IsValid(selectedObj))
-	{
-		holding = false;
-		return;
-	}
-
-	// Includes if the selected object is the core
-	exclusions.Add(selectedObj);
-	if(!selectedObj->IsA<ACubeCore>()) return;
-
-	// Add the things that are connected to the core/connector to the things to ignore
-	if(ACubeCore* obj = Cast<ACubeCore>(selectedObj))
-	{
-		exclusions.Append(obj->GetAttachedActorObjects());
-	}
-}
-
-void APlayerCharacter::OtherSelectObject(APickupableMaster* obj)
-{
-	// When the hold button is let go
-	if(!holding)
-	{
-		// Deselect();
-		// return;
-	}
-	
 	// Can't select anything whilst not in the build phase...
 	if(currentMode != EGameMode::Build) return;
 
@@ -584,82 +553,82 @@ void APlayerCharacter::OtherSelectObject(APickupableMaster* obj)
 	GoToSlot();
 }
 
-void APlayerCharacter::GroupSelect(const FHitResult& hit)
-{
-	if(!holding)
-	{
-		Deselect();
-		return;
-	}
-	
-	// Can't select anything whilst not in the build phase...
-	if(!buildPhase) return;
-
-	// Don't do anything if there's already something selected.
-	if(IsValid(selectedObj)) return;
-
-	// If the trace didn't hit anything don't do anything...
-	if(!hit.bBlockingHit)
-	{
-		holding = false;
-		return;
-	}
-
-	AActor* hitActor = hit.GetActor();
-
-	// If the hit actor is invalid exit the function...
-	if(!IsValid(hitActor))
-	{
-		holding = false;
-		return;
-	}
-
-	// Try to cast to an object
-	if(APickupableMaster* hitObj = Cast<APickupableMaster>(hitActor))
-	{
-		// If the cast is successful... Try to get its parent
-		selectedObj = hitObj->GetParent();
-
-		// If the object's parent is valid...
-		if(IsValid(selectedObj))
-		{
-			// Its parent is always a core.
-			// Prevent the core from being picked up if it's out of range
-			if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
-			{
-				if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
-				{
-					// Return if can't pickup
-					holding = false;
-					selectedObj = 0;
-					return;
-				}
-			}
-		}
-
-		// If the object doesn't have a parent....
-		else selectedObj = hitObj;
-
-		if(!IsValid(selectedObj)) return;
-
-		selectedObj->SetGroupSelected(true);
-	}
-	else holding = false;
-
-	if(!IsValid(selectedObj)) return;
-
-	// Setting the undo/redo transform
-	selectedTransform = selectedObj->GetActorTransform();
-	
-	// Setup mouse hit exclusions
-	exclusions.Add(selectedObj);
-	
-	if(!selectedObj->IsA<ACubeCore>()) return;
-
-	// Add the things that are connected to the core/connector to the things to ignore
-	ACubeCore* obj = Cast<ACubeCore>(selectedObj);
-	exclusions.Append(obj->GetAttachedActorObjects());
-}
+// void APlayerCharacter::GroupSelect(const FHitResult& hit)
+// {
+// 	if(!holding)
+// 	{
+// 		Deselect();
+// 		return;
+// 	}
+// 	
+// 	// Can't select anything whilst not in the build phase...
+// 	if(!buildPhase) return;
+//
+// 	// Don't do anything if there's already something selected.
+// 	if(IsValid(selectedObj)) return;
+//
+// 	// If the trace didn't hit anything don't do anything...
+// 	if(!hit.bBlockingHit)
+// 	{
+// 		holding = false;
+// 		return;
+// 	}
+//
+// 	AActor* hitActor = hit.GetActor();
+//
+// 	// If the hit actor is invalid exit the function...
+// 	if(!IsValid(hitActor))
+// 	{
+// 		holding = false;
+// 		return;
+// 	}
+//
+// 	// Try to cast to an object
+// 	if(APickupableMaster* hitObj = Cast<APickupableMaster>(hitActor))
+// 	{
+// 		// If the cast is successful... Try to get its parent
+// 		selectedObj = hitObj->GetParent();
+//
+// 		// If the object's parent is valid...
+// 		if(IsValid(selectedObj))
+// 		{
+// 			// Its parent is always a core.
+// 			// Prevent the core from being picked up if it's out of range
+// 			if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
+// 			{
+// 				if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
+// 				{
+// 					// Return if can't pickup
+// 					holding = false;
+// 					selectedObj = 0;
+// 					return;
+// 				}
+// 			}
+// 		}
+//
+// 		// If the object doesn't have a parent....
+// 		else selectedObj = hitObj;
+//
+// 		if(!IsValid(selectedObj)) return;
+//
+// 		selectedObj->SetGroupSelected(true);
+// 	}
+// 	else holding = false;
+//
+// 	if(!IsValid(selectedObj)) return;
+//
+// 	// Setting the undo/redo transform
+// 	selectedTransform = selectedObj->GetActorTransform();
+// 	
+// 	// Setup mouse hit exclusions
+// 	exclusions.Add(selectedObj);
+// 	
+// 	if(!selectedObj->IsA<ACubeCore>()) return;
+//
+// 	// Add the things that are connected to the core/connector to the things to ignore
+// 	ACubeCore* obj = Cast<ACubeCore>(selectedObj);
+// 	exclusions.Append(obj->GetAttachedActorObjects());
+// }
 
 void APlayerCharacter::Detach(const FHitResult& hit)
 {
@@ -683,22 +652,22 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor())) CreateDetachHistory(obj);
 }
 
-void APlayerCharacter::MoveSelection(const FVector& mousePos)
-{
-	if(!selectedObj) return;
-	
-	// Can't move anything whilst not in the build phase...
-	if(!buildPhase)
-	{
-		Deselect();
-		return;
-	}
-	
-	if(selectedObj->IsA<ACubeCore>()) exclusions.AddUnique(selectedObj);
-	else exclusions.AddUnique(selectedObj);
-
-	selectedObj->SetActorLocation({mousePos.X, mousePos.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
-}
+// void APlayerCharacter::MoveSelection(const FVector& mousePos)
+// {
+// 	if(!selectedObj) return;
+// 	
+// 	// Can't move anything whilst not in the build phase...
+// 	if(!buildPhase)
+// 	{
+// 		Deselect();
+// 		return;
+// 	}
+// 	
+// 	if(selectedObj->IsA<ACubeCore>()) exclusions.AddUnique(selectedObj);
+// 	else exclusions.AddUnique(selectedObj);
+//
+// 	selectedObj->SetActorLocation({mousePos.X, mousePos.Y, selectedObj->GetMesh()->GetComponentLocation().Z});
+// }
 
 void APlayerCharacter::Deselect()
 {
@@ -844,7 +813,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		holding = true;
 		if(selectedObj) selectedObj->Deselect();
 		selectedObj = pickupable;
-		OtherSelectObject(selectedObj);
+		SelectObject(selectedObj);
 
 		selectedTransform = selectedObj->GetActorTransform();
 	}
@@ -886,7 +855,7 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 		
 	// Only when the game isn't playing but in the actual levels
 	if(currentMode != EGameMode::Story) return;
-	if(!buildPhase) return;
+	if(!adjustPhase) return;
 	
 	if(!hit.bBlockingHit) return;
 	AActor* AHit = hit.GetActor();
@@ -952,37 +921,37 @@ void APlayerCharacter::EjectAll()
 	}
 }
 
-void APlayerCharacter::ChangeCore(const float value)
-{
-	if(currentMode != EGameMode::Build) return;
-	if(value == 0) return;
-	if(!core) return;
-
-	TArray<ACubeCore*> connectors;
-	connectors.AddUnique(core);
-	for(const auto& obj : core->AllObjsInHierarchy())
-	{
-		if(ACubeCore* connector = Cast<ACubeCore>(obj)) connectors.AddUnique(connector);
-	}
-
-	short index = connectors.IndexOfByKey(core) + value;
-	if(index >= connectors.Num()) index = 0;
-	if(index < 0) index = connectors.Num() - 1;
-	
-	core = connectors[index];
-
-	// The camera fixates on the new core.
-	orbiting = true;
-	zooming = true;
-	OrbitControls(1);
-	zooming = false;
-	orbiting = false;
-
-	if(selectedObj != core && IsValid(selectedObj))
-	{
-		selectedObj->SetCore(core);
-		selectedObj->PlacementAgain(core, selectedSocket);
-	}
-	else Print("Tried to set the core as the selected object...", 4)
-	
-}
+// void APlayerCharacter::ChangeCore(const float value)
+// {
+// 	if(currentMode != EGameMode::Build) return;
+// 	if(value == 0) return;
+// 	if(!core) return;
+//
+// 	TArray<ACubeCore*> connectors;
+// 	connectors.AddUnique(core);
+// 	for(const auto& obj : core->AllObjsInHierarchy())
+// 	{
+// 		if(ACubeCore* connector = Cast<ACubeCore>(obj)) connectors.AddUnique(connector);
+// 	}
+//
+// 	short index = connectors.IndexOfByKey(core) + value;
+// 	if(index >= connectors.Num()) index = 0;
+// 	if(index < 0) index = connectors.Num() - 1;
+// 	
+// 	core = connectors[index];
+//
+// 	// The camera fixates on the new core.
+// 	orbiting = true;
+// 	zooming = true;
+// 	OrbitControls(1);
+// 	zooming = false;
+// 	orbiting = false;
+//
+// 	if(selectedObj != core && IsValid(selectedObj))
+// 	{
+// 		selectedObj->SetCore(core);
+// 		selectedObj->PlacementAgain(core, selectedSocket);
+// 	}
+// 	else Print("Tried to set the core as the selected object...", 4)
+// 	
+// }
