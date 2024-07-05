@@ -266,14 +266,14 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	core->RemoveVelocity();
 
 	FVector spawnPos;
-	const FVector spawnOffset = { -500,0, 0 };
+	const FVector spawnOffset = { 1000,0, 0 };
 	switch (currentLevel)
 	{
 	case 0:
 		if (!lvl0Spawn) break;
 		spawnPos = lvl0Spawn->GetActorLocation();
 		core->Teleport(spawnPos, lvl0Spawn->GetRot());
-		player->Respawn(spawnPos + spawnOffset, lvl0Spawn->GetRot());
+		// player->Respawn(spawnPos + spawnOffset, lvl0Spawn->GetRot());
 		break;
 
 	case 1:

@@ -46,11 +46,11 @@ void APlayerCharacter::BeginPlay()
 
 	history = NewObject<UActionHistory>();
 
-	zooming = true;
-	orbiting = true;
-	OrbitControls(0);
-	zooming = false;
-	orbiting = false;
+	// zooming = true;
+	// orbiting = true;
+	// OrbitControls(0);
+	// zooming = false;
+	// orbiting = false;
 }
 
 void APlayerCharacter::Tick(float DeltaSeconds)
