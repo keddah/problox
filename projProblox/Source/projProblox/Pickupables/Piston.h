@@ -4,6 +4,9 @@
 * The header file for one of the pickupable objects.
 * OVERRIDES:
 *	Ability
+*	SetAbilityActive
+*	SetShowMesh
+*	Detach
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -57,7 +60,4 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Ability", meta = (ToolTip = "Whether or not the piston head is currently pushing"))
 	bool moving;
-
-public:
-
 };

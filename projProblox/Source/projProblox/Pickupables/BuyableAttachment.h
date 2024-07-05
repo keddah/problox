@@ -26,29 +26,26 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Call this in the construction script so that changes are updated whenever they need to be."))
 	void UseInfoMesh();
 
-	void SetHide(const bool hide);
+	void SetHide(const bool hide) const;
+
+	bool unlocked;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UBoxComponent* mouseDetector;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UMaterial* lockedMaterial;
+
+	UPROPERTY(EditAnywhere)
+	UBuyableInfo* info;
 	
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* meshComp;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UWidgetComponent* infoWidget;
 	
-	UPROPERTY(EditDefaultsOnly)
-	UBoxComponent* mouseDetector;
-	
-	UPROPERTY(EditAnywhere)
-	UBuyableInfo* info;
-
-	UPROPERTY(EditDefaultsOnly)
-	UMaterial* lockedMaterial;
-	
-	bool unlocked;
-
 public:
 	void UnlockAttachment();
 	FOnBoughtAttachment onBoughtAttachment;

@@ -18,14 +18,13 @@ struct FHitResult;
 #endif
 #define PROJPROBLOX_PlayerCharacter_generated_h
 
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_SPARSE_DATA
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_SPARSE_DATA
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetCore); \
 	DECLARE_FUNCTION(execEndGame); \
-	DECLARE_FUNCTION(execChangeCore); \
 	DECLARE_FUNCTION(execAdjustCore); \
 	DECLARE_FUNCTION(execEjectObject); \
 	DECLARE_FUNCTION(execSpawnFromBuyable); \
@@ -33,12 +32,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execDetach); \
 	DECLARE_FUNCTION(execConfirm); \
 	DECLARE_FUNCTION(execDeselect); \
-	DECLARE_FUNCTION(execMoveSelection); \
-	DECLARE_FUNCTION(execGroupSelect); \
-	DECLARE_FUNCTION(execSelectObject); \
 	DECLARE_FUNCTION(execEjectAll); \
 	DECLARE_FUNCTION(execGoToCore); \
-	DECLARE_FUNCTION(execManualSelectObject); \
 	DECLARE_FUNCTION(execGetGameMode); \
 	DECLARE_FUNCTION(execSetGameMode); \
 	DECLARE_FUNCTION(execAboveBelowSlot); \
@@ -51,8 +46,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execUndo);
 
 
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_ACCESSORS
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_INCLASS_NO_PURE_DECLS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -61,7 +56,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_ENHANCED_CONSTRUCTORS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APlayerCharacter(APlayerCharacter&&); \
@@ -73,17 +68,17 @@ public: \
 	NO_API virtual ~APlayerCharacter();
 
 
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_26_PROLOG
-#define FID_projProblox_Source_projProblox_PlayerCharacter_h_29_GENERATED_BODY \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_33_PROLOG
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_projProblox_Source_projProblox_PlayerCharacter_h_29_SPARSE_DATA \
-	FID_projProblox_Source_projProblox_PlayerCharacter_h_29_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_projProblox_Source_projProblox_PlayerCharacter_h_29_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_projProblox_Source_projProblox_PlayerCharacter_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_projProblox_Source_projProblox_PlayerCharacter_h_29_ACCESSORS \
-	FID_projProblox_Source_projProblox_PlayerCharacter_h_29_INCLASS_NO_PURE_DECLS \
-	FID_projProblox_Source_projProblox_PlayerCharacter_h_29_ENHANCED_CONSTRUCTORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_SPARSE_DATA \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_INCLASS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -91,7 +86,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJPROBLOX_API UClass* StaticClass<class APlayerCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_projProblox_Source_projProblox_PlayerCharacter_h
+#define CURRENT_FILE_ID FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h
 
 
 #define FOREACH_ENUM_EGAMEMODE(op) \

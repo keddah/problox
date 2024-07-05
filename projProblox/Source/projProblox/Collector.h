@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Collector - Header
+* 
+* The header file for the cell collector. Defines all the components that this blueprint will need.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -42,31 +49,21 @@ protected:
 
 
 	/////////////// Cells ///////////////
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (ToolTip = "Minimum percentage the player has to get in order to win.", Delta = .01f, ClampMin = .25f, ClampMax = .95f))
-	float minPercentage;
-
 	UPROPERTY(BlueprintReadWrite)
 	int32 cellsInLevel;
 
 	UPROPERTY(BlueprintReadOnly)
 	int32 cellCount;
 
-	// UFUNCTION(BlueprintCallable)
-	// void ResetCells();
-	
 	/////////////// Other ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	APlayerCharacter* player;
 
 	
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	UFUNCTION(BlueprintCallable)
 	FVector GetCollectPoint() const { return depoPoint->GetComponentLocation(); }
 
 	UFUNCTION(BlueprintCallable)
 	void AddThing() { cellCount++; }
-	
 };

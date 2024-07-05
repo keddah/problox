@@ -7,15 +7,11 @@
 * OVERRIDES:
 *	SetAttachedSocket
 *	ApplyOffset
-*	Placement
 *	GhostPlacement
-*	SetHideIndicator
-*	SetupIndicator
 *	GetAttachOffset
 *	Reattach
 *	SetSelect
 *	SetAbilityActive
-*	SetGroupSelected
 *
 * PROBLEMS:
 *	The ghost placement isn't always perfect... If the thing it's trying to attach to is slightly at an angle the place rotation is off
@@ -43,7 +39,6 @@ public:
 	
 private:
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
-	virtual EOperations SetGroupSelected(const bool value) override;
 
 public:
 	virtual EOperations SetSelected(const bool value) override;
@@ -72,11 +67,8 @@ protected:
 	UArrowComponent* downArrow;
 
 	virtual void BeginPlay() override;
-	virtual void Placement() override;
 	virtual void PlacementAgain(ACubeCore* core, const FName& socket) override;
 	virtual void GhostPlacement() override;
-	virtual void SetHideIndicator(const bool hide) override;
-	virtual void SetupPlaceIndicator() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	virtual void Reattach(bool sound) override;
 	virtual void FindOppositeSocket();

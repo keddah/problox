@@ -6,7 +6,6 @@
 // Sets default values
 ABuyableAttachment::ABuyableAttachment()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
 	infoWidget = CreateDefaultSubobject<UWidgetComponent>("Display Widget");
@@ -18,25 +17,15 @@ ABuyableAttachment::ABuyableAttachment()
 	mouseDetector->SetupAttachment(meshComp);
 }
 
-
-
-// Called when the game starts or when spawned
-void ABuyableAttachment::BeginPlay()
-{
-	Super::BeginPlay();
-}
-
 void ABuyableAttachment::UnlockAttachment()
 {
 	if(unlocked)
 	{
-		Print("Already unlocked...", 4)
 		return;
 	}
 	
 	unlocked = true;
 	SetHide(false);
-	Print("Unlocked", 5)
 	onBoughtAttachment.Broadcast();
 }
 
@@ -57,11 +46,9 @@ void ABuyableAttachment::UseInfoMesh()
 
 	// If not unlocked...
 	else SetHide(true);
-
-	// unlocked = true;
 }
 
-void ABuyableAttachment::SetHide(const bool hide)
+void ABuyableAttachment::SetHide(const bool hide) const
 {
 	if(!hide)
 	{

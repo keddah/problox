@@ -1,4 +1,11 @@
-// A file containing all the save related classes
+/**************************************************************************************************************
+* Level Manager - Header
+* 
+* The header file for the anything related to saving (MoneySave, SpawnSaves, BoughtAttachments). This defines the save slot names and gives functionality to saving player data.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 

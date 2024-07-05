@@ -1,4 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Player - Header
+* 
+* The header file for the player. Defines the gamemodes enum and the player class.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -77,7 +84,6 @@ private:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaSeconds) override;
 	
 	
 	/////////////// Selection / Placement ///////////////
@@ -151,7 +157,7 @@ protected:
 	bool gameEnded = false;
 
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
-	bool buildPhase;
+	bool adjustPhase;
 	
 	UPROPERTY(BlueprintReadOnly)
 	EGameMode currentMode = EGameMode::Story;
@@ -170,10 +176,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
 	
-	UFUNCTION(BlueprintCallable)
-	void ManualSelectObject(APickupableMaster* obj);
-
-	void Respawn(const FVector& pos, const FRotator& rot);
+	// Used when teleporting to the build area... (resets the camera boom length)
+	void ResetBoom() const { camBoom->TargetArmLength = 0; }
 
 	UFUNCTION()
 	void GoToCore();
@@ -184,16 +188,16 @@ public:
 	
 private:
 	/////////////// Selection / Placement ///////////////
-	UFUNCTION(BlueprintCallable, Category = "Picking up")
-	void SelectObject(const FHitResult& hit);
+	// UFUNCTION(BlueprintCallable, Category = "Picking up")
+	// void SelectObject(const FHitResult& hit);
 
-	void OtherSelectObject(APickupableMaster* obj);
+	void SelectObject(APickupableMaster* obj);
 
-	UFUNCTION(BlueprintCallable, Category = "Picking up")
-	void GroupSelect(const FHitResult& hit);
+	// UFUNCTION(BlueprintCallable, Category = "Picking up")
+	// void GroupSelect(const FHitResult& hit);
 
-	UFUNCTION(BlueprintCallable, Category = "Picking up")
-	void MoveSelection(const FVector& mousePos);
+	// UFUNCTION(BlueprintCallable, Category = "Picking up")
+	// void MoveSelection(const FVector& mousePos);
 
 	UFUNCTION(BlueprintCallable)
 	void Deselect();
@@ -210,14 +214,15 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void SpawnFromBuyable(const FHitResult& hit);
 
+	// MAKE AN EJECT ALL (WHEN MIDDLE MOUSE IS CLICKED)
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(const FHitResult& hit);
 
 	UFUNCTION(BlueprintCallable)
 	void AdjustCore(const FHitResult& hit);
 	
-	UFUNCTION(BlueprintCallable)
-	void ChangeCore(float value);
+	// UFUNCTION(BlueprintCallable)
+	// void ChangeCore(float value);
 
 	
 	/////////////// Game States ///////////////

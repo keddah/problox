@@ -1,3 +1,17 @@
+/**************************************************************************************************************
+* Balloon - Code
+* 
+* The code file for one of the pickupable objects. The only attachment that doesn't directly attach itself to the core.
+* Instead, it uses a physics constraint. This file Creates the required components for this attachment and sets up their parameters. 
+* 
+* Problems:
+*	GetAttachedOffset
+*	Ability
+*	GhostPlacement
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 // Created by Dean Atkinson-Walker 2024
 #include "Balloon.h"
 
@@ -62,17 +76,6 @@ void ABalloon::Ability(float deltaTime)
 	mesh->SetPhysicsLinearVelocity(velocity);
 }
 
-// void ABalloon::SetAbilityActive(const bool value)
-// {
-// 	Super::SetAbilityActive(value);
-//
-// 	if(value) return;
-// 	mesh->SetHiddenInGame(true);
-// 	string->bAttachStart = false;
-// 	string->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-// 	constraint->BreakConstraint();
-// }
-
 EOperations ABalloon::SetSelected(const bool value)
 {
 	selected = value;
@@ -81,7 +84,6 @@ EOperations ABalloon::SetSelected(const bool value)
 	mesh->SetUseCCD(selected);
 	
 	ToggleGravity();
-	SetHideIndicator(!selected);
 
 	savedDetachTransform = GetActorTransform();
 
@@ -110,18 +112,6 @@ EOperations ABalloon::SetSelected(const bool value)
 	isAttached = true;
 	
 	return {EOperations::Attach};
-}
-
-EOperations ABalloon::SetGroupSelected(const bool value)
-{
-	groupSelected = value;
-	
-	ToggleGravity(!groupSelected);
-	SetParentDominates(!groupSelected);
-	canPlace = !groupSelected;
-
-	// If the player has unselected... the operation is move
-	return EOperations::Move;
 }
 
 APickupableMaster* ABalloon::GetParent()

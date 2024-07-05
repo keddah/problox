@@ -40,9 +40,6 @@ APickupableMaster::APickupableMaster()
 	outlineMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	outlineMesh->SetStaticMesh(mesh->GetStaticMesh());
 	
-	arrow = CreateDefaultSubobject<UArrowComponent>("Indicator");
-	arrow->SetupAttachment(mesh);
-	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
 	silhouette->SetCollisionResponseToAllChannels(ECR_Overlap);
 	silhouette->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
@@ -83,7 +80,6 @@ void APickupableMaster::BeginPlay()
 	
 	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
 	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
-	SetPlaceIndicator();
 
 	wrld = GetWorld();
 	
@@ -111,7 +107,6 @@ void APickupableMaster::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	Placement();
 	Ability(DeltaTime);
 }
 
@@ -125,79 +120,6 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 
 	// Successful cast???
 	if(Cast<ACell>(OtherActor)) parentCore->AddThing(OtherActor);
-}
-
-
-
-void APickupableMaster::ScaleIndicator()
-{
-    if(!arrow) return;
-	
-	arrow->ArrowColor.A = .5f;
-
-	const FVector actorScale = GetActorRelativeScale3D();
-	const FVector indiScale = arrow->GetRelativeScale3D();
-	
-	FVector scale;
-	scale.X = indiScale.X / actorScale.X;
-	scale.Y = indiScale.Y / actorScale.Y;
-	scale.Z = indiScale.Z / actorScale.Z;
-
-	// Removes the scale relativity so that the place range is accurate... 
-	arrow->SetRelativeScale3D(scale);
-	arrow->ArrowLength = placeRange;
-}
-
-void APickupableMaster::SetPlaceIndicator()
-{
-	if(!arrow) return;
-
-	const FRotator rot = UKismetMathLibrary::MakeRotFromX(placeDir);
-	arrow->SetRelativeRotation(rot);
-	ScaleIndicator();
-}
-
-
-void APickupableMaster::Placement()
-{
-	// if(!selected) return;
-	//
-	// RemoveVelocity();
-	//
-	// FHitResult hit;
-	// const FVector direction = GetActorRotation().RotateVector(placeDir);
-	//
-	// FCollisionQueryParams collisionParams;
-	// collisionParams.AddIgnoredActor(this);
-	// collisionParams.MobilityType = EQueryMobilityType::Any;
-	//
-	// // Debug Draw
-	// const FVector start = arrow->GetComponentLocation();
-	// // DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
-	// wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Camera, collisionParams);
-	//
-	// if(!hit.bBlockingHit)
-	// {
-	// 	parentCore = 0;
-	// 	ResetGhost();
-	// 	return;
-	// }
-	//
-	// // DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
-	//
-	// if(ACubeCore* core = Cast<ACubeCore>(hit.GetActor())) parentCore = core;
-	// else parentCore = nullptr;
-	//
-	// if(!parentCore)
-	// {
-	// 	ResetGhost();
-	// 	return;
-	// }
-	//
-	// FName closestSocket = NearestSocket(parentCore, hit.Location);
-	//
-	// if(closestSocket != NAME_None) attachedSocket = closestSocket;
-	// GhostPlacement();
 }
 
 // Should only be called in the Placement Function at the very end....
@@ -269,7 +191,6 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	mesh->SetUseCCD(selected);
 	
 	ToggleGravity();
-	SetHideIndicator(!selected);
 	
 	wasDetached = false;
 	savedDetachTransform = GetActorTransform();
@@ -302,22 +223,6 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	return EOperations::Attach;
 }
 
-void APickupableMaster::Deselect()
-{
-	// ...
-	Destroy();
-}
-
-EOperations APickupableMaster::SetGroupSelected(const bool value)
-{
-	groupSelected = value;
-	ToggleGravity(!groupSelected);
-	canPlace = !groupSelected;
-
-	// If the player has unselected... the operation is move
-	return EOperations::Move;
-}
-
 void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
 {
 	if(!core)
@@ -330,7 +235,6 @@ void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
 	if(socket != NAME_None) attachedSocket = socket;
 	SetShowMesh(false);
 	GhostPlacement();
-	// GhostSnapRotateMesh(true, "Q");
 }
 
 void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -352,17 +256,16 @@ void APickupableMaster::Detach(const bool push)
 	SetAbilityActive(false);
 
 	ResetMaterial();
-	RemoveVelocity();
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	if(push && parentCore)
 	{
+		mesh->SetSimulatePhysics(true);
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 		const float launchForce = GetMass();
 		constexpr float maxVelocity = 1000;
 
 		SetShowMesh(true);
-		mesh->SetSimulatePhysics(true);
 
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
 	}
@@ -511,13 +414,6 @@ void APickupableMaster::ResetRotation(const bool resetVelocity)
 	SetActorRotation(defaultRot);
 	if(resetVelocity) RemoveVelocity();
 	GhostPlacement();
-}
-
-void APickupableMaster::RotateVert(const float axis, const float rotSpeed)
-{
-	if(vertAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
-	else if(vertAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
-	else if(vertAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
 }
 
 void APickupableMaster::RotateHori(const float axis, const float rotSpeed)

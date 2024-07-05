@@ -30,8 +30,6 @@ class PROJPROBLOX_API ACuboidConnector : public ACubeConnector
 	UArrowComponent* downArrow2;
 	
 	virtual void GhostPlacement() override;
-	virtual void SetupPlaceIndicator() override;
-	virtual void SetHideIndicator(const bool hide) override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	virtual void FindOppositeSocket() override;
 	

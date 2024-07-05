@@ -1,7 +1,7 @@
 /**************************************************************************************************************
 * Grapple Head - Header
 * 
-* Declares all of the components that the grapple head blueprint needs as well as its variables. 
+* Declares all the components that the grapple head blueprint needs as well as its variables. 
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -24,8 +24,6 @@ public:
 	AGrappleHead();
 
 protected:
-	virtual void BeginPlay() override;
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* mesh;
 

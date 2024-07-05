@@ -16,7 +16,6 @@
 #include "Connectors/CuboidConnector.h"
 #include "./projProblox/Cells/Cell.h"
 #include "Connectors/WedgeConnector.h"
-#include "./projProblox/Pickupables/Wheel.h"
 #include "Kismet/GameplayStatics.h"
 #include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
@@ -57,8 +56,6 @@ void ACubeCore::BeginPlay()
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
 	
-	SetupPlaceIndicator();
-	
 	onTurnStarted.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 
@@ -67,94 +64,11 @@ void ACubeCore::BeginPlay()
 	else if(Cast<AMode_Assault>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Assault;
 	else if(Cast<AMode_Creative>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Creative;
 
-	resetTransform = GetActorTransform();
-	
 	if (UCustomGameInstance* customInst = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld)))
 	{
 		instance = customInst;
 	}
 	else Print("Couldn't cast to game instance...", 4)
-}
-
-void ACubeCore::SetupPlaceIndicator()
-{
-	if(!arrow) return;
-
-	// ScaleIndicator();
-	
-	arrow->ArrowColor.A = .5f;
-
-	const float length = placeRange * 2;
-	arrow->ArrowLength = length;
-
-	const FRotator rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	arrow->SetRelativeRotation(rot);
-
-	arrow->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
-	SetHideIndicator(true);
-}
-
-void ACubeCore::Placement()
-{
-	if(!canPlace) return;
-	if(!selected) return;
-
-	// Unhide the indicator...
-	SetHideIndicator(false);
-	if(ObjectInSocket(raySocket))
-	{
-		// Hide it if blocked...
-		SetHideIndicator(true);
-		return;
-	}
-	// if(blockedSilhouette)
-	// {
-	// 	silhouette->SetRelativeLocationAndRotation({0,0,0}, {0,0,0});
-	// 	hitObj = 0;
-	// 	Print("Silhouette blocked...", 1)
-	// 	return;
-	// }
-
-	RemoveVelocity();
-	
-	FHitResult hit;
-	FCollisionQueryParams collisionParams;
-	collisionParams.AddIgnoredActor(this);
-	collisionParams.MobilityType = EQueryMobilityType::Any;
-	collisionParams.bDebugQuery = true;
-
-	const FVector direction = mesh->GetComponentRotation().RotateVector(placeDir);
-	
-	// Debug Draw
-	const FVector start = mesh->GetSocketLocation(raySocket);
-	// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, 5);	
-	wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
-
-	AActor* hitActor = hit.GetActor();
-	if(!hit.bBlockingHit)
-	{
-		hitObj = 0;
-		ResetGhost();
-		return;
-	}
-
-	// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, 5);
-	
-	if(!hitActor)
-	{
-		hitObj = 0;
-		ResetGhost();
-		return;
-	}
-	
-	// If the cast was unsuccessful....
-	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
-	else hitObj = 0;
-	
-	if(!IsValid(hitObj)) return;
-
-	OtherGhostPlacement();
-	attachedSocket = raySocket;
 }
 
 void ACubeCore::OtherGhostPlacement()
@@ -263,7 +177,6 @@ EOperations ACubeCore::SetSelected(const bool value)
 	SetEnableCollisions(!selected);
 
 	ToggleGravity();
-	SetHideIndicator(!selected);
 
 	// If selected, don't need to do any of the attachment stuff
 	if(selected)
@@ -271,8 +184,6 @@ EOperations ACubeCore::SetSelected(const bool value)
 		canPlace = true;
 		return EOperations::Detach;
 	}
-
-	arrow->SetHiddenInGame(true);
 
 	// If there is no hit object.
 	if(!IsValid(hitObj)) return EOperations::Move;
@@ -301,13 +212,6 @@ EOperations ACubeCore::SetSelected(const bool value)
 	return EOperations::Attach;
 }
 
-EOperations ACubeCore::SetGroupSelected(const bool value)
-{
-	if(!canCollect) return {};
-
-	return Super::SetGroupSelected(value);
-}
-
 void ACubeCore::Detach(const bool push)
 {
 	if(!ObjectInSocket(raySocket)) return;
@@ -318,7 +222,7 @@ void ACubeCore::Detach(const bool push)
 	obj->Detach(push);
 }
 
-void ACubeCore::ResetToStart()
+void ACubeCore::ResetToStart() const
 {
 	if(mesh)
 	{
@@ -330,28 +234,15 @@ void ACubeCore::ResetToStart()
 // When the start button is pressed....
 void ACubeCore::Start()
 {
-	if(currentMode == EGameMode::Wave) SetActorTransform(resetTransform);
-	
-	// Save the transform...
-	resetTransform = GetActorTransform();
-
 	if(mesh)
 	{
 		if(mesh->IsSimulatingPhysics()) mesh->SetAngularDamping(defaultAngularDrag);
 	}
 }
 
-void ACubeCore::CalculateRating()
-{
-	if(attempts <= moveRatings[3]) rating = 3;
-	else if(attempts > moveRatings[3] && attempts <= moveRatings[2]) rating = 2;
-	else if(attempts > moveRatings[2] && attempts <= moveRatings[1]) rating = 1;
-	
-	else if(attempts >= moveRatings[0]) rating = 0;
-}
 
 
-void ACubeCore::SetEnableCollisions(const bool enable)
+void ACubeCore::SetEnableCollisions(const bool enable) const
 {
 	mesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
 	for(auto& obj : GetCloseAttachments())
@@ -486,12 +377,6 @@ void ACubeCore::AddThing(AActor* _thing) const
 		thing->Teleport(collector->GetCollectPoint());
 		onAddedThing.Broadcast(thing);
 	}
-}
-
-void ACubeCore::NextWave()
-{
-	attempts++;
-	onNewWave.Broadcast(attempts);
 }
 
 int ACubeCore::SelectSocket(int socket)
@@ -657,34 +542,6 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 
 	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
 	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
-}
-
-void ACubeCore::SetCanPickup(bool can)
-{
-	// // Only broadcast when there's a change
-	// const bool change = can != canPickup;
-	// Super::SetCanPickup(can);
-	//
-	// SetCanCollect(can || !selected);
-	//
-	// // if(!canPickup && change) onRangeExceeded.Broadcast();
-	//
-	// distanceLine->SetHiddenInGame(selected || groupSelected);
-	//
-	// if(can) return;
-	// distanceLine->SetHiddenInGame(!buildPhase);
-	//
-	// distanceLine->SetWorldLocation(mesh->GetComponentLocation());
-	//
-	// const FVector thisPos = distanceLine->GetComponentLocation();
-	// const FVector collectorPos = collector->GetActorLocation() + FVector(0,0,750);
-	//
-	// const FRotator lookRot = UKismetMathLibrary::FindLookAtRotation(thisPos, collectorPos);
-	// distanceLine->SetWorldRotation(lookRot);
-	//
-	// const float distance = FVector::Distance(collectorPos, thisPos);
-	// const FVector lineSize = distanceLine->GetRelativeScale3D();
-	// distanceLine->SetRelativeScale3D({distance * .01f, lineSize.Y, lineSize.Z});
 }
 
 void ACubeCore::SetCanCollect(bool collectable)
