@@ -161,10 +161,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_light;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_minPercentage_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_minPercentage;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_cellsInLevel_MetaData[];
 #endif
 		static const UECodeGen_Private::FIntPropertyParams NewProp_cellsInLevel;
@@ -244,22 +240,15 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_light = { "light", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, light), Z_Construct_UClass_UPointLightComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_light_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_light_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_minPercentage_MetaData[] = {
-		{ "Category", "Collector" },
-		{ "ClampMax", "0.950000" },
-		{ "ClampMin", "0.250000" },
-		{ "Delta", "0.010000" },
-		{ "ModuleRelativePath", "Collector.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Minimum percentage the player has to get in order to win." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_minPercentage = { "minPercentage", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, minPercentage), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_minPercentage_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_minPercentage_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_cellsInLevel_MetaData[] = {
 		{ "Category", "Collector" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/////////////// Cells ///////////////\n" },
+#endif
 		{ "ModuleRelativePath", "Collector.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Cells" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_cellsInLevel = { "cellsInLevel", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, cellsInLevel), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_cellsInLevel_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_cellsInLevel_MetaData) };
@@ -289,7 +278,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_tube,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_lid,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_light,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_minPercentage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_cellsInLevel,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_cellCount,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_player,
@@ -327,15 +315,15 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACollector);
 	ACollector::~ACollector() {}
-	struct Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Collector_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 1997870868U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 2688448509U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Collector_h_974970464(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_1390983321(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

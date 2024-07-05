@@ -42,9 +42,6 @@ protected:
 
 
 	/////////////// Cells ///////////////
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (ToolTip = "Minimum percentage the player has to get in order to win.", Delta = .01f, ClampMin = .25f, ClampMax = .95f))
-	float minPercentage;
-
 	UPROPERTY(BlueprintReadWrite)
 	int32 cellsInLevel;
 
