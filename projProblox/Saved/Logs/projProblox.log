@@ -1287,3 +1287,13 @@ Make sure 'BP_Collector_C' has been compiled for  Get Pass Percentage
 [2024.07.05-14.11.18:611][423]LogD3D12RHI: Warning: Descriptor cache ran out of sub allocated descriptor blocks! Moving to Context local View heap strategy
 [2024.07.05-14.11.18:611][423]LogD3D12RHI: This should only happen in the Editor where it doesn't matter as much. If it happens in game you should increase the device global heap size!
 [2024.07.05-14.12.08:210][589]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2024.07.05-14.24.01:992][650]LogEditorTransaction: Undo Break Pin Links
+[2024.07.05-14.24.05:085][881]LogEditorTransaction: Undo Break Pin Links
+[2024.07.05-14.24.39:429][516]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.07.05-14.24.39:431][516]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.016
+[2024.07.05-14.24.39:432][516]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/BP_Collector] ([2] browsable assets)...
+[2024.07.05-14.24.39:479][516]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/BP_Collector.BP_Collector]
+[2024.07.05-14.24.39:480][516]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/BP_Collector]
+[2024.07.05-14.24.39:501][516]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/BP_Collector_Auto1
+[2024.07.05-14.24.39:502][516]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Collector_Auto115C2D99C4DE9BEB36C208E94091D14DE.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/BP_Collector_Auto1.uasset'
+[2024.07.05-14.24.39:503][516]LogFileHelpers: Auto-saving content packages took 0.071

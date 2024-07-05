@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Collector - Header
+* 
+* The header file for the cell collector. Defines all the components that this blueprint will need.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -48,22 +55,15 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	int32 cellCount;
 
-	// UFUNCTION(BlueprintCallable)
-	// void ResetCells();
-	
 	/////////////// Other ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	APlayerCharacter* player;
 
 	
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	UFUNCTION(BlueprintCallable)
 	FVector GetCollectPoint() const { return depoPoint->GetComponentLocation(); }
 
 	UFUNCTION(BlueprintCallable)
 	void AddThing() { cellCount++; }
-	
 };

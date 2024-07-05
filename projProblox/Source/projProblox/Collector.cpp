@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Collector - Code
+* 
+* The code file for the cell collector. Creates the defined components and finds the player so that it can be used in blueprint.
+* Also calculates all the cells in the level.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "Collector.h"
@@ -8,11 +15,10 @@
 #include "Components/LightComponent.h"
 #include "Kismet/GameplayStatics.h"
 
-// Sets default values
 ACollector::ACollector()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	scene = CreateDefaultSubobject<USceneComponent>("Default Scene");
 
@@ -44,33 +50,11 @@ void ACollector::BeginPlay()
 	Super::BeginPlay();
 
 	if(APlayerCharacter* rPlayer = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass()))) player = rPlayer;
-	ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
-
-	if(!core) return;
-
-	// core->onStartGame.AddDynamic(this, &ACollector::ResetCells);
-	core->onTurnStarted.AddDynamic(this, &ACollector::CalculateCellCount);
 }
 
-// void ACollector::ResetCells()
-// {
-// 	TArray<AActor*> cellActors;
-// 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACell::StaticClass(), cellActors);
-//
-// 	// Destroy all the cells in the level
-// 	for (const auto& cell : cellActors) cell->Destroy();
-//
-// 	// ... Then get all the spawners in the level to spawn the cells again.
-// 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), cellActors);
-// 	for (auto& spawner : cellActors) Cast<ACellSpawner>(spawner)->BeginSpawn();
-// }
 
-// Called every frame
-void ACollector::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
-
+// Gets the number of all the potential cells. Since some spawners are triggered and not activated at the start of the game,
+// The spawners are used to calculate all the cells in the levels.
 void ACollector::CalculateCellCount()
 {
 	const UWorld* wrld = GetWorld();
@@ -100,4 +84,5 @@ void ACollector::CalculateCellCount()
 		}
 	}
 
+	Print("Calculated the cells in level: " + FString::FromInt(cellsInLevel), 5)
 }
