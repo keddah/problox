@@ -48,127 +48,6 @@ void ACubeConnector::BeginPlay()
 	Super::BeginPlay();
 }
 
-void ACubeConnector::SetupPlaceIndicator()
-{
-	// Setting the position and orientation
-	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
-	arrow->SetRelativeRotation(rot);
-	arrow->SetWorldLocation(mesh->GetSocketLocation("FRONT"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
-	backArrow->SetRelativeRotation(rot);
-	backArrow->SetWorldLocation(mesh->GetSocketLocation("BACK"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,-1,0});
-	leftArrow->SetRelativeRotation(rot);
-	leftArrow->SetWorldLocation(mesh->GetSocketLocation("LEFT"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,1,0});
-	rightArrow->SetRelativeRotation(rot);
-	rightArrow->SetWorldLocation(mesh->GetSocketLocation("RIGHT"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,1});
-	upArrow->SetRelativeRotation(rot);
-	upArrow->SetWorldLocation(mesh->GetSocketLocation("UP"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	downArrow->SetRelativeRotation(rot);
-	downArrow->SetWorldLocation(mesh->GetSocketLocation("DOWN"));
-	
-	ScaleIndicator();
-	SetHideIndicator(true);
-}
-
-void ACubeConnector::Placement()
-{
-	if(!canPlace) return;
-	if(!selected) return;
-
-	RemoveVelocity();
-
-	FCollisionQueryParams collisionParams;
-	collisionParams.AddIgnoredActor(this);
-	collisionParams.MobilityType = EQueryMobilityType::Any;
-	collisionParams.bDebugQuery = true;
-
-	// Change the direction to each face of the cube
-	for(int i = 0; i < socketInfo->GetSockets().Num(); i++)
-	{
-		// Don't do anything if there's already something in the current direction slot.
-		if(socketInfo->ObjectInSocket(i)) continue;
-		
-		FHitResult hit;
-		const FVector direction = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(socketInfo->GetSockets()[i]));
-		const FVector start = mesh->GetSocketLocation(socketInfo->GetSockets()[i]);
-
-		// Debug Draw
-		// DrawDebugLine(wrld, start, start + direction * placeRange, FColor::Red, false, .2f);	
-		wrld->LineTraceSingleByChannel(hit, start, start + direction * placeRange, ECC_Visibility, collisionParams);
-		
-		// Go to the next ray if it didn't hit anything...
-		if(!hit.bBlockingHit)
-		{
-			hitObj = 0;
-			parentCore = 0;
-			ResetGhost();
-			continue;
-		}
-
-		// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
-
-		// Go to the next ray if it didn't hit an actor...
-		AActor* hitActor = hit.GetActor();
-		if(!hitActor) continue;
-
-		if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor)) hitObj = obj;
-		else
-		{
-			parentCore = 0;
-			hitObj = 0;
-			ResetGhost();
-		}
-		if(!IsValid(hitObj)) continue;
-
-		// Don't do anything if the hit object is anywhere in this actor's hierarchy
-		if(IsChildOf(hitObj)) continue;
-		if(hitObj->IsChildOf(this)) continue;
-
-		// Attempt to cast to the cubecore
-		if(hitObj->IsA<ACubeCore>())
-		{
-			raySocket = socketInfo->GetSockets()[i];
-
-			// All the previous checks ensure that the cast is valid
-			parentCore = Cast<ACubeCore>(hitObj);
-			
-			FName closestSocket = NearestSocket(parentCore, hit.Location);
-			attachedSocket = closestSocket;
-			break;
-		}
-
-		// Foreach of the connector's sockets
-		// for(const auto& socket: objMesh->GetAllSocketNames())
-		// {
-		// 	// If the socket is free...
-		// 	if(ObjectInSocket(socket)) continue;
-		//
-		// 	// Compare the distances between the current socket and the impact point
-		// 	const float distance = FVector::Distance(objMesh->GetSocketLocation(socket), hit.ImpactPoint);
-		// 	if(distance < shortestDistance)
-		// 	{
-		// 		shortestDistance = distance;
-		// 		closestSocket = socket;
-		// 	}
-		// }
-
-		// if(tempSocket != NAME_None) tempSocket = closestSocket;
-		// hitObj->SetCore(this);
-		break;
-	}
-
-	GhostPlacement();
-}
-
 void ACubeConnector::PlacementAgain(ACubeCore* core, const FName& socket)
 {
 	if(!core)
@@ -235,8 +114,6 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	mesh->SetUseCCD(selected);
 	
-	SetHideIndicator(!selected);
-
 	const AActor* self = this;
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
@@ -273,27 +150,6 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	
 	soundPlayer->PlayAttach();
 	return EOperations::Attach;
-}
-
-EOperations ACubeConnector::SetGroupSelected(const bool value)
-{
-	groupSelected = value;
-	ToggleGravity(!groupSelected);
-	
-	canPlace = !groupSelected;
-	
-	return EOperations::Move;
-}
-
-
-void ACubeConnector::SetHideIndicator(const bool hide)
-{
-	Super::SetHideIndicator(hide);
-	backArrow->SetHiddenInGame(hide);
-	leftArrow->SetHiddenInGame(hide);
-	rightArrow->SetHiddenInGame(hide);
-	upArrow->SetHiddenInGame(hide);
-	downArrow->SetHiddenInGame(hide);
 }
 
 float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)

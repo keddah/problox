@@ -66,6 +66,22 @@ void ACell::GoHome() const
 	if(squareDist != 0) body->AddForce(direction * (attractionForce * 10000) / squareDist);
 }
 
+void ACell::Teleport(const FVector& pos)
+{
+	// Shrink so that more can fit in the collector
+	body->SetRelativeScale3D({10,10,10});
+
+	// Remove its velocity
+	body->SetPhysicsLinearVelocity({});
+
+	SetActorLocation(pos);
+	safe = true;
+
+	// Stop doing ticks.
+	PrimaryActorTick.bCanEverTick = false;
+	bAsyncPhysicsTickEnabled = false;
+}
+
 void ACell::SetDormant(const bool dormant)
 {
 	if(safe) return;

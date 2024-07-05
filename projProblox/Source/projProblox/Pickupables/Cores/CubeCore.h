@@ -14,10 +14,8 @@
 *	ToggleGravity
 *	AddAttachment
 *	RemoveAttachment
-*	RemoveAttachment
 *	SetAbilityActive
 *	SetSelected
-*	SetGroupSelected
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -71,7 +69,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	// void StartEndingGame() { onEndingGame.Broadcast(); }
 
 	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, float longestDuration);
-	virtual void SetCanPickup(const bool can) override;
 	void SetCanCollect(bool collectable);
 
 
@@ -79,27 +76,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	virtual void Reattach(bool sound) override;
 
 	
-	/////////////// Turn System ///////////////
-	FTransform resetTransform;
-	
-	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The time in seconds before the attempt is reset (This timer starts after the highest intiation delay + duration)."))
-	float resetDelay = 5;
-
-	unsigned short rating;
-
-	UPROPERTY(EditInstanceOnly, EditFixedSize, meta = (ToolTip = "Index 0 = no stars.\n index 3 = three stars."))
-	TArray<unsigned int> moveRatings { 4,3,2,1 };
-	
-	unsigned short attempts = 0;
-	unsigned short maxAttempts = 5;
-
-	void CalculateRating();
-
-	
 	/////////////// Game States ///////////////
-	// UFUNCTION(BlueprintCallable)
-	// void EndGame() { CalculateRating(); onGameEnd.Broadcast(); } // Calculate rating before broadcasting...
-
 	UFUNCTION()
 	void Start();
 	
@@ -121,7 +98,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	
 protected:
 	ACubeCore();
-	virtual void SetupPlaceIndicator();
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -215,8 +191,6 @@ protected:
 	/////////////// Selection/Placement ///////////////
 	// Ghost placement except the other object's silhouette is affected 
 	void OtherGhostPlacement();
-	virtual void Placement() override;
-
 	
 	/////////////// Rotations ///////////////
 	// Sets rotations depending on the attachee's type / snapRot variable...
@@ -243,7 +217,7 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void PlayCollectSound() { soundPlayer->PlayAbility(); }
 	
-	void SetEnableCollisions(bool enable);
+	void SetEnableCollisions(bool enable) const;
 	
 public:
 	/////////////// Attachments ///////////////
@@ -268,14 +242,11 @@ public:
 	
 	/////////////// Selection/Placement ///////////////
 	virtual EOperations SetSelected(const bool value) override;
-	virtual EOperations SetGroupSelected(const bool value) override;
 	virtual void Detach(bool push) override;
 	
 	/////////////// Turn System ///////////////
-	void SetMaxAttempts(const short& max) { maxAttempts = max; }
-	void ResetToStart();
+	void ResetToStart() const;
 	void InitiateReset() const { onAttemptEnding.Broadcast(); }
-	FTransform GetResetTransform() const { return resetTransform; }
 
 
 	/////////////// Getters ///////////////
@@ -314,12 +285,6 @@ public:
 	bool CanCollect() const { return canCollect; }
 
 	UFUNCTION(BlueprintCallable)
-	int GetAttempts() const { return attempts; }
-
-	UFUNCTION(BlueprintCallable)
-	int GetRating() const { return rating; }
-
-	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
 
 
@@ -355,9 +320,6 @@ public:
 
 	void AddThing(AActor* thing) const;
 
-	UFUNCTION(BlueprintCallable)
-	void NextWave();
-	
 	UFUNCTION(BlueprintCallable, Category = "Socket")
 	int SelectSocket(int socket);
 

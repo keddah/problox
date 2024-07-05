@@ -76,9 +76,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* centerMass;
 	
-	UPROPERTY(EditDefaultsOnly)
-	UArrowComponent* arrow;
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UAudioManager* soundPlayer;
 
@@ -86,7 +83,6 @@ protected:
 	/////////////// Selection / Placement ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
-	bool groupSelected;
 
 	// When group selected, you're unable to place cores...
 	bool canPlace;
@@ -177,7 +173,6 @@ protected:
 ///////////////////////////// Functions /////////////////////////////
 
 	/////////////// Selection / Placement ///////////////
-	virtual void Placement();
 	FName NearestSocket(const ACubeCore* core, const FVector& hitPos) const;
 	
 	// Shows a preview of what the placed object would look like.
@@ -196,15 +191,6 @@ protected:
 		}
 	}
 
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void AscendDescend(const float inputValue) { AddActorWorldOffset(FVector::UpVector * inputValue * ascensionSpeed); }
-
-	
-	/////////////// Indicator ///////////////
-	virtual void SetHideIndicator(const bool hide) { arrow->SetHiddenInGame(hide); }
-	virtual void ScaleIndicator();
-	virtual void SetPlaceIndicator();
-
 	
 	/////////////// Attachments ///////////////
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket);
@@ -222,7 +208,6 @@ protected:
 	static FRotator RoundAxis(const FRotator& rotation, const FRotator& axis = {90,90,90});
 	static FRotator RoundAxis(const FRotator& rotation, const FRotator& referenceRot, const FRotator& axis);
 
-
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 
@@ -236,9 +221,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	/////////////// Rotations ///////////////
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void RotateVert(float axis, const float rotSpeed);
-
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void RotateHori(float axis, const float rotSpeed);
 	
@@ -257,21 +239,16 @@ public:
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
 	virtual EOperations SetSelected(const bool value);
-	
-	void Deselect();
 
+	// ...
+	void Deselect() { Destroy(); }
 	void ManualSetSelected(const bool value) { selected = value; };
-	virtual EOperations SetGroupSelected(const bool value);
 
 	virtual void PlacementAgain(ACubeCore* core, const FName& socket);
-	
 	virtual void Detach(bool push = false);
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
-
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	virtual void SetCanPickup(const bool can) { canPickup = can; }
 
 	// Since this is used a lot...
 	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr);
@@ -380,9 +357,6 @@ public:
 	
 	void ResetMaterial()
 	{
-		// Pending kill.
-		if(!IsValid(this)) return;
-
 		if(silhouette && silhouetteMat) silhouette->SetMaterial(0, silhouetteMat);
 		SetHideOutlineMesh(true);
 	}

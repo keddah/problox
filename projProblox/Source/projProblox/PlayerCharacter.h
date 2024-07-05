@@ -84,7 +84,6 @@ private:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaSeconds) override;
 	
 	
 	/////////////// Selection / Placement ///////////////
@@ -177,8 +176,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
 	
-	// Used when teleporting between spawn locations
-	void Respawn(const FVector& pos, const FRotator& rot);
+	// Used when teleporting to the build area... (resets the camera boom length)
+	void ResetBoom() const { camBoom->TargetArmLength = 0; }
 
 	UFUNCTION()
 	void GoToCore();

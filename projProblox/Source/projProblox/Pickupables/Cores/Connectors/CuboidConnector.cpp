@@ -29,65 +29,6 @@ void ACuboidConnector::BeginPlay()
 	SetDifferenceFromSockets();
 }
 
-void ACuboidConnector::SetupPlaceIndicator()
-{
-	socketInfo = NewObject<UCuboidSocketInfo>();
-
-	// Setting the position and orientation
-	FRotator rot = UKismetMathLibrary::MakeRotFromX({1,0,0});
-	arrow->SetRelativeRotation(rot);
-	arrow->SetWorldLocation(mesh->GetSocketLocation("FRONT"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({-1,0,0});
-	backArrow->SetRelativeRotation(rot);
-	backArrow->SetWorldLocation(mesh->GetSocketLocation("BACK"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,-1,0});
-	leftArrow->SetRelativeRotation(rot);
-	leftArrow->SetWorldLocation(mesh->GetSocketLocation("LEFT1"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,1,0});
-	rightArrow->SetRelativeRotation(rot);
-	rightArrow->SetWorldLocation(mesh->GetSocketLocation("RIGHT1"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,1});
-	upArrow->SetRelativeRotation(rot);
-	upArrow->SetWorldLocation(mesh->GetSocketLocation("UP1"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	downArrow->SetRelativeRotation(rot);
-	downArrow->SetWorldLocation(mesh->GetSocketLocation("DOWN1"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,-1,0});
-	leftArrow2->SetRelativeRotation(rot);
-	leftArrow2->SetWorldLocation(mesh->GetSocketLocation("LEFT2"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,1,0});
-	rightArrow2->SetRelativeRotation(rot);
-	rightArrow2->SetWorldLocation(mesh->GetSocketLocation("RIGHT2"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,1});
-	upArrow2->SetRelativeRotation(rot);
-	upArrow2->SetWorldLocation(mesh->GetSocketLocation("UP2"));
-
-	rot = UKismetMathLibrary::MakeRotFromX({0,0,-1});
-	downArrow2->SetRelativeRotation(rot);
-	downArrow2->SetWorldLocation(mesh->GetSocketLocation("DOWN2"));
-	
-	ScaleIndicator();
-	SetHideIndicator(true);
-}
-
-void ACuboidConnector::SetHideIndicator(const bool hide)
-{
-	Super::SetHideIndicator(hide);
-
-	leftArrow2->SetHiddenInGame(hide);
-	rightArrow2->SetHiddenInGame(hide);
-	upArrow2->SetHiddenInGame(hide);
-	downArrow2->SetHiddenInGame(hide);
-}
-
 float ACuboidConnector::GetAttachOffset(const APickupableMaster& attachee)
 {
 	float distance;

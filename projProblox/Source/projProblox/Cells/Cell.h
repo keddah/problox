@@ -51,21 +51,7 @@ private:
 public:
 	// When the core collects it...
 	UFUNCTION(BlueprintCallable, Category = "Collection")
-	void Teleport(const FVector& pos)
-	{
-		SetActorLocation(pos);
-		safe = true;
-
-		// Shrink so that more can fit in the collector
-		body->SetRelativeScale3D({10,10,10});
-
-		// Remove its velocity
-		body->SetPhysicsLinearVelocity({});
-
-		// Stop doing ticks.
-		PrimaryActorTick.bCanEverTick = false;
-		bAsyncPhysicsTickEnabled = false;
-	}
+	void Teleport(const FVector& pos);
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
