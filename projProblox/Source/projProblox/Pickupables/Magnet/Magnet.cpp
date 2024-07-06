@@ -16,7 +16,7 @@ void AMagnet::BeginPlay()
 {
 	Super::BeginPlay();
 
-	ConfigureCharge();
+	ConfigureMat();
 
 	TArray<AActor*> magActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), StaticClass(), magActors);
@@ -32,7 +32,7 @@ void AMagnet::BeginPlay()
 	// Telling the other magnets in the level that this one was made...
 	for (const auto& mag : otherMagnets) mag->AddMagnet(this);
 
-	mesh->SetMaterial(0, positive? positiveMat : negativeMat);
+	ConfigureMat();
 }
 
 void AMagnet::Ability(const float deltaTime)

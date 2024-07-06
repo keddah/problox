@@ -44,12 +44,15 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	TArray<AMagnet*> otherMagnets;
 	TArray<AMagPole*> poles;
 
-	void ConfigureCharge() const { mesh->SetMaterial(0, positive? positiveMat : negativeMat); }
+	void ConfigureMat() const
+	{
+		for(int i = 0; i < mesh->GetNumMaterials(); i++) mesh->SetMaterial(i, positive? positiveMat : negativeMat);
+	}
 	void AddMagnet(AMagnet* mag) { otherMagnets.AddUnique(mag); }
 	
 public:
 	UFUNCTION(BlueprintCallable)
-	void SetCharge(const bool pos) { positive = pos; ConfigureCharge(); }
+	void SetCharge(const bool pos) { positive = pos; ConfigureMat(); }
 
 	UFUNCTION(BlueprintCallable)
 	bool GetIsPositive() const { return positive; }

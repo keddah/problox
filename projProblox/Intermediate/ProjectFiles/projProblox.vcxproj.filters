@@ -1555,22 +1555,13 @@
     <ClInclude Include="..\..\Source\projProblox\CustomGameInstance.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Interactable.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Interactable.h">
-      <Filter>Source\projProblox</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\LevelManager.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\LevelManager.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\LevelObjectives.cpp">
-      <Filter>Source\projProblox</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\LevelObjectives.h">
+    <ClInclude Include="..\..\Source\projProblox\LevelObjective.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\projProblox\PlayerCharacter.cpp">
@@ -1694,18 +1685,6 @@
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Treads.h">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Pickupables\Wheel.cpp">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Pickupables\Wheel.h">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\projProblox\Pickupables\Wheels.cpp">
-      <Filter>Source\projProblox\Pickupables</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\Pickupables\Wheels.h">
       <Filter>Source\projProblox\Pickupables</Filter>
     </ClInclude>
     <Filter Include="Source\projProblox\Pickupables\Cores">

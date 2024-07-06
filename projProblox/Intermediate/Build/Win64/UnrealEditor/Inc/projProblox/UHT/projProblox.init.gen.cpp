@@ -9,7 +9,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature();
-	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnBoughtAttachment__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnChangedLevels__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature();
@@ -17,7 +16,6 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnHideDisplay__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature();
-	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnShowDisplay__DelegateSignature();
@@ -32,7 +30,6 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnBoughtAttachment__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnChangedLevels__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature,
@@ -40,7 +37,6 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnHideDisplay__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnShowDisplay__DelegateSignature,
@@ -53,13 +49,13 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xDFB9E4F3,
-				0x09C4046C,
+				0xE256AE38,
+				0x5B74A6BA,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xDFB9E4F3, 0x09C4046C));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xE256AE38, 0x5B74A6BA));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

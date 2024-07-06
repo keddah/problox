@@ -42,13 +42,7 @@ ACubeConnector::ACubeConnector()
 	uiName = "Cube";
 }
 
-void ACubeConnector::BeginPlay()
-{
-	distanceLine->DestroyComponent();
-	Super::BeginPlay();
-}
-
-void ACubeConnector::PlacementAgain(ACubeCore* core, const FName& socket)
+void ACubeConnector::Placement(ACubeCore* core, const FName& socket)
 {
 	if(!core)
 	{
@@ -60,7 +54,7 @@ void ACubeConnector::PlacementAgain(ACubeCore* core, const FName& socket)
 	if(socket != NAME_None) attachedSocket = socket;
 	SetShowMesh(false);
 	GhostPlacement();
-	GhostSnapRotateMesh(true, "Q");
+	GhostSnapRotate("Q");
 }
 
 void ACubeConnector::GhostPlacement()
@@ -102,7 +96,6 @@ void ACubeConnector::GhostPlacement()
 	// just round the relative rotation to either 45 or 90 depending on whether the attaching socket isDiag.
 	// Ensures that the final rotation is always aligned.
 	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
-	SetGhostBlocked();
 }
 
 // The final position when attached is dependent on the silhouette/ghost's position and rotation
@@ -124,7 +117,6 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	if(selected)
 	{
 		wasDetached = isAttached;
-		canPlace = true;
 		Detach(false);
 
 		return wasDetached? EOperations::Detach : EOperations::Move;
@@ -207,7 +199,7 @@ void ACubeConnector::Detach(const bool push)
 
 	SetAbilityActive(false);
 
-	ResetMaterial();
+	SetHideOutlineMesh(true);
 	RemoveVelocity();
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
@@ -237,17 +229,6 @@ void ACubeConnector::Detach(const bool push)
 
 	ToggleGravity(true);
 	isAttached = false;
-}
-
-void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
-{
-	attachedSocket = socket;
-	FindOppositeSocket();
-	
-	if(!useDirection) return;
-
-	RearrangeSockets();
-	AlignSocketRot();
 }
 
 // Sets the ability active value for everything that's attached to it

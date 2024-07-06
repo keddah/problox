@@ -35,20 +35,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnTurnStarted);
 // Should be broadcast whenever more cells are spawned in after the game has already started.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSpawnedCells);
 
-// Should be broadcast whenever all the cells have been collected whilst in wave mode.
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNewWave, int, wave);
-
 // Should be broadcast whenever an object is added/removed from this cube.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
-
-// Should be broadcast when the cube goes too far away from the container.
-// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
-
-// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
-// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
-
-// Should be broadcast when the reset delay + longest duration has elapsed.. 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttemptEnding);
 
 // Should be broadcast when the reset timer has elapsed.. 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnReset);
@@ -65,15 +53,10 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	// The object that is attached to this cube and selected...
 	APickupableMaster* selectedObj;
 
-	// UFUNCTION(BlueprintCallable)
-	// void StartEndingGame() { onEndingGame.Broadcast(); }
-
 	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, float longestDuration);
-	void SetCanCollect(bool collectable);
 
 
 	/////////////// Undo/Redo ///////////////
-	virtual void Reattach(bool sound) override;
 
 	
 	/////////////// Game States ///////////////
@@ -110,12 +93,6 @@ protected:
 	UCubeSocketInfo* socketInfo;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
-	UMaterial* inactiveMat;
-
-	UPROPERTY(EditDefaultsOnly)
-	UMaterialInstance* selectedMat;
-	
-	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* thingCollector;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
@@ -124,9 +101,6 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Collection", BlueprintReadOnly)
 	float fairBounds = 6500;
 	
-	UPROPERTY(VisibleAnywhere, Category = "Collection", meta = (ToolTip = "This arrow should be shown when the cube is too far away from the collector"))
-	UArrowComponent* distanceLine;
-
 
 	/////////////// Selection/Placement ///////////////
 	// The socket that the placement ray from this object is firing from
@@ -154,11 +128,6 @@ protected:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
 	FOnAttachmentChange onChangeAttachments;
 
-	// UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
-	// FOnEndingGame onEndingGame;
-
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
-	FOnAttemptEnding onAttemptEnding;
 
 	/////////////// Undo/Redo ///////////////
 	TArray<APickupableMaster*> previousAttachments;
@@ -169,12 +138,6 @@ protected:
 	FTimerHandle resetTimer;
 
 	/////////////// Other ///////////////
-	UMaterial* defaultMat;
-	APickupableMaster* hitObj;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
-	float levelEndDelay = 5;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Angular Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
 	float defaultAngularDrag = .05f;
 
@@ -188,22 +151,8 @@ protected:
 
 	
 ///////////////////////////// Functions /////////////////////////////
-	/////////////// Selection/Placement ///////////////
-	// Ghost placement except the other object's silhouette is affected 
-	void OtherGhostPlacement();
-	
 	/////////////// Rotations ///////////////
-	// Sets rotations depending on the attachee's type / snapRot variable...
-	void OtherRotations(APickupableMaster* other);
 	virtual void ResetRotation(bool resetVelocity) override;
-
-	
-	/////////////// Attachments ///////////////
-	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
-	
-	// Need to change the attaching socket if there's something in the bottom socket since cubes always attach to the bottom
-	// (since the pivot is at the bottom).
-	void RearrangeSockets();
 
 	
 	/////////////// Other ///////////////
@@ -235,8 +184,6 @@ public:
 	void EjectObject(APickupableMaster* toEject);
 	
 	/////////////// Abilities ///////////////
-	UFUNCTION(BlueprintCallable, Category = "Ablility")
-	void SetAllAbilityActive(bool value) const;
 	virtual void SetAbilityActive(bool value) override;
 
 	
@@ -246,18 +193,10 @@ public:
 	
 	/////////////// Turn System ///////////////
 	void ResetToStart() const;
-	void InitiateReset() const { onAttemptEnding.Broadcast(); }
 
 
 	/////////////// Getters ///////////////
-	// UFUNCTION(BlueprintCallable, Category = "Socket")
-	TArray<AActor*> GetAttachedActorObjects() const
-	{
-		TArray<AActor*> out;
-		GetDescendentsActors(this, out);
-
-		return out;
-	}
+	// Returns all the objects that are attached to this (including things attached to the attached things)
 	TArray<APickupableMaster*> GetAttachedObjs() const
 	{
 		TArray<APickupableMaster*> out;
@@ -275,9 +214,6 @@ public:
 
 	virtual bool GetIsAttached() const override { return parentCore || isAttached; }
 	
-	UFUNCTION(BlueprintCallable, Category = "Socket")
-	int GetSocketCount() const { return socketInfo->GetSockets().Num(); };
-	
 	UFUNCTION(BlueprintCallable, Category = "Socket", meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
 	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
 
@@ -289,11 +225,6 @@ public:
 
 
 	/////////////// Delegates ///////////////
-	// UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the countdown has finished it completely ends the level."))
-	// FOnGameEnd onGameEnd;
-	//
-	// FOnOutOfRange onRangeExceeded;
-
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
 	FOnTurnStarted onTurnStarted;
 
@@ -306,24 +237,12 @@ public:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when more cells are spawned in whilst the game has already started."))
 	FOnSpawnedCells onCellsSpawned;
 	
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the all the cells have been collected (in wave mode)."))
-	FOnNewWave onNewWave;
-	
-	/////////////// Undo/Redo ///////////////
-	// If something was attached to this core, when undoing/redoing, it detaches the objects that weren't there before the change
-	// THIS SHOULDN'T BE NEEDED BUT THE OVERWRITE FUNCTION ISN'T WORKING PROPERLY...
-	void RevertAttachments();
-
-	
 	/////////////// Other ///////////////
 	virtual void RemoveVelocity() const override;
 
 	void AddThing(AActor* thing) const;
 
-	UFUNCTION(BlueprintCallable, Category = "Socket")
-	int SelectSocket(int socket);
-
 	void Teleport(const FVector& pos, const FRotator& rot);
 	
-	void LoseMoney(const short amount) { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }
+	void LoseMoney(const short amount) const { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }
 };

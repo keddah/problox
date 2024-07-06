@@ -17,7 +17,11 @@ ABounceSpring::ABounceSpring()
 
 	spline = CreateDefaultSubobject<USplineMeshComponent>("Spline Mesh");
 	spline->SetupAttachment(start);
-	spline->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	spline->SetCollisionResponseToAllChannels(ECR_Ignore);
+	spline->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	spline->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	
 	spline->ForwardAxis = ESplineMeshAxis::Z;
 	spline->SetMobility(EComponentMobility::Movable);
 

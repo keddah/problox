@@ -78,9 +78,6 @@ void APickupableMaster::BeginPlay()
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
 	else if(placeDir.Z != 0) placeRange *= mesh->GetRelativeScale3D().Z;
 	
-	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
-	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
-
 	wrld = GetWorld();
 	
 	TArray<AActor*> coreActors;
@@ -98,7 +95,8 @@ void APickupableMaster::BeginPlay()
 	}
 	
 	// Only set a custom center of mass if it has been moved... 
-	if(centerMass->GetRelativeLocation().Length() <= .005f) return;
+	const FVector massOffset = centerMass->GetRelativeLocation();
+	if(!(massOffset.X == 0 && massOffset.Y == 0 && massOffset.Z == 0)) return;
 	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
 }
 
@@ -155,8 +153,7 @@ void APickupableMaster::GhostPlacement()
 
 		// Round it to the socket rotation
 		silhouette->SetRelativeRotation({roundRot.Pitch, roundRot.Yaw, roundRot.Roll});
-
-		SetGhostBlocked();
+		silhouette->AddRelativeRotation(rotOffset);
 		return;
 	}
 
@@ -178,9 +175,7 @@ void APickupableMaster::GhostPlacement()
 
 	// Depending on the locked axis, set the relative rotation to the new rounded rotation
 	silhouette->SetRelativeRotation(FRotator(roundY? roundRot.Pitch : 0, roundZ? roundRot.Yaw : 0, roundX? roundRot.Roll : 0));
-	
-	// Ensures that the final rotation is always aligned.
-	SetGhostBlocked();
+	silhouette->AddRelativeRotation(rotOffset);
 }
 
 EOperations APickupableMaster::SetSelected(const bool value)
@@ -200,7 +195,6 @@ EOperations APickupableMaster::SetSelected(const bool value)
 		wasDetached = isAttached;
 		Detach(false);
 		
-		canPlace = true;
 		return wasDetached? EOperations::Detach : EOperations::Move;
 	}
 
@@ -223,7 +217,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	return EOperations::Attach;
 }
 
-void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
+void APickupableMaster::Placement(ACubeCore* core, const FName& socket)
 {
 	if(!core)
 	{
@@ -255,8 +249,7 @@ void APickupableMaster::Detach(const bool push)
 
 	SetAbilityActive(false);
 
-	ResetMaterial();
-	
+	SetHideOutlineMesh(true);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	if(push && parentCore)
 	{
@@ -416,31 +409,7 @@ void APickupableMaster::ResetRotation(const bool resetVelocity)
 	GhostPlacement();
 }
 
-void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
-{
-	if(horiAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
-	else if(horiAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
-	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
-}
-
-void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
-{
-	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
-		
-	if(hori)
-	{
-		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
-		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
-		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-		return;
-	}
-
-	if(vertAxis.X != 0) AddActorWorldRotation({0,0, turn});
-	else if(vertAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
-	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-}
-
-void APickupableMaster::GhostSnapRotateMesh(const bool hori, const FString& keypress)
+void APickupableMaster::GhostSnapRotate(const FString& keypress)
 {
 	if(snapRot) return;
 	
@@ -492,49 +461,6 @@ void APickupableMaster::ResetGhost() const
 
 	silhouette->SetRelativeRotation({0,0,0});
 	silhouette->SetRelativeLocation({0,0,0});
-}
-
-void APickupableMaster::SetGhostBlocked()
-{
-	TArray<UPrimitiveComponent*> overlaps;
-	silhouette->GetOverlappingComponents(overlaps);
-	
-	TArray<AActor*> owners;
-	for(const auto& obj: overlaps)
-	{
-		if(!obj->IsA<UStaticMeshComponent>()) continue;
-		
-		AActor* owner = obj->GetOwner();
-		if(owner == this) continue;
-	
-		// only include things that are solid (ignores triggers)
-		if(obj->GetCollisionResponseToChannel(ECC_WorldDynamic) == ECR_Block) owners.Add(owner);
-	}
-
-	bool overlap = false;
-	for(const auto& obj : owners)
-	{
-		// If there is a successful cast, there is a collision with another pickupable
-		overlap = IsValid(Cast<APickupableMaster>(obj));
-		if(overlap) Print("Overlapping with: " + obj->GetName(), 4)
-	}
-}
-
-
-void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
-{
-	silhouette->SetHiddenInGame(false);
-	silhouette->SetMaterial(0, mat);
-
-	silhouette->AttachToComponent(mesh, ghostRules);
-	silhouette->SetWorldRotation(mesh->GetComponentRotation());
-	silhouette->SetWorldLocation(mesh->GetComponentLocation());
-}
-
-void APickupableMaster::DeactivateOutline()
-{
-	ResetGhost();
-	ResetMaterial();
 }
 
 void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray)

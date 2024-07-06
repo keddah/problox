@@ -34,7 +34,6 @@ void AMode_Wave::BeginPlay()
 	}
 
 	ActivateSpawner();
-	core->onNewWave.AddDynamic(this, &AMode_Wave::IncreaseSpawns);
 }
 
 bool AMode_Wave::ActivateSpawner()

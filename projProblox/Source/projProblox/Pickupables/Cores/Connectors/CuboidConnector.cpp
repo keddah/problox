@@ -65,7 +65,6 @@ void ACuboidConnector::GhostPlacement()
 	if(!parentCore) return;
 	
 	AlignSockets(raySocket);
-	SetGhostBlocked();
 }
 
 // Call at beginPlay after socketInfo has been made.....

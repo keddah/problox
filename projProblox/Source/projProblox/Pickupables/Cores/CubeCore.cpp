@@ -33,12 +33,6 @@ ACubeCore::ACubeCore()
 	thingCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
 	thingCollector->SetupAttachment(mesh);
 
-	distanceLine = CreateDefaultSubobject<UArrowComponent>("Line");
-	distanceLine->ArrowSize = 1;
-	distanceLine->ArrowLength = 100;
-	distanceLine->SetRelativeScale3D({1,7,7});
-	distanceLine->SetHiddenInGame(true);
-
 	mouseDetector->SetBoxExtent({});
 	
 	placeRange = 50;
@@ -50,8 +44,6 @@ void ACubeCore::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
-
 	// Create a socket info for each cube (also inherited to connectors)
 	// Need to create one for each cube otherwise the information would be shared/overrided.
 	socketInfo = NewObject<UCubeSocketInfo>();
@@ -71,145 +63,20 @@ void ACubeCore::BeginPlay()
 	else Print("Couldn't cast to game instance...", 4)
 }
 
-void ACubeCore::OtherGhostPlacement()
-{
-	RemoveVelocity();
-
-	if(!hitObj) return;
-	
-	// The cube core uses the silhouette of the other thing since the other thing is being attached to this. 
-	silhouette = hitObj->GetSilhouette();
-	attachOffset = hitObj->GetAttachOffset(*this);
-	
-	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	
-	silhouette->SetHiddenInGame(false);
-	silhouette->AttachToComponent(mesh, ghostRules, raySocket);
-	
-	silhouette->SetRelativeLocation({hitObj->GetAttachOffset(*this),0,0});
-
-	OtherRotations(hitObj);
-}
-
-void ACubeCore::OtherRotations(APickupableMaster* other)
-{
-	if(!IsValid(other)) return;
-
-	silhouette = other->GetSilhouette();
-	FRotator socketRot = mesh->GetSocketRotation(raySocket);
-
-	// Need to start with the class at the bottom of the inheritance chain and go up from there... 
-	if(other->IsA<AWedgeConnector>())
-	{
-		silhouette->SetRelativeRotation({135,0,0});
-		silhouette->SetRelativeLocation({0,0,0});
-	}
-	if(other->IsA<ACuboidConnector>())
-	{
-		ACuboidConnector* cuboid = Cast<ACuboidConnector>(other);
-		const FName closestSocket = NearestSocket(cuboid, mesh->GetSocketLocation(raySocket));
-		cuboid->AlignSockets(closestSocket, this);
-	}
-	else if(other->IsA<ACubeConnector>())
-	{
-		// Ignore if the X and Y vectors aren't low...
-		constexpr float aboveThreshold = .075f;
-		const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
-	
-		if(above)
-		{
-			// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
-			const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
-			socketRot = socketRot.RotateVector(socketForward).Rotation();
-		}
-		else socketRot = RoundRotation(other->GetActorRotation(), socketRot);
-
-		silhouette->SetWorldRotation(socketRot);
-
-		// Ensure that it's aligned with this core.
-		silhouette->SetWorldRotation(RoundRotation(silhouette->GetComponentRotation(), GetActorRotation(), -90));
-	}
-	else if(!other->IsA<ACubeCore>())
-	{
-		if(other->ShouldSnapRotation())
-		{
-			const FVector forwardVec = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(raySocket));
-
-			FRotator rot;
-			const FVector otherPlaceDir = other->GetPlaceDir();
-			
-			if(otherPlaceDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-			else if(otherPlaceDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-			else if(otherPlaceDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-
-			// Rotate to match the socket rotation
-			silhouette->SetWorldRotation(rot);
-			return;
-		}
-
-		// Ignore if the X and Y vectors aren't low...
-		constexpr float aboveThreshold = .075f;
-		const bool above = abs(socketRot.Vector().X) < aboveThreshold && abs(socketRot.Vector().Y) < aboveThreshold;
-		
-		if(above)
-		{
-			// Rotate the socket since the axis aren't the same orientation when the object is pointing upwards/downwards.
-			const FVector socketForward = UKismetMathLibrary::GetForwardVector(socketRot);
-			socketRot = socketRot.RotateVector(socketForward).Rotation();
-		}
-		else socketRot = RoundRotation(GetActorRotation(), socketRot);
-
-		silhouette->SetWorldRotation(socketRot);
-
-		const FRotator relativeRot = silhouette->GetComponentTransform().GetRelativeTransform(GetTransform()).Rotator();
-		silhouette->SetRelativeRotation(relativeRot + other->GetRotOffset());
-	}
-}
 
 EOperations ACubeCore::SetSelected(const bool value)
 {
 	// Not allowed to drop the cube if unable to collect 
-	if(canPickup) selected = value;
-	else selected = true;
+	selected = value;
 
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	mesh->SetUseCCD(selected);
 	SetEnableCollisions(!selected);
-
 	ToggleGravity();
-
-	// If selected, don't need to do any of the attachment stuff
-	if(selected)
-	{
-		canPlace = true;
-		return EOperations::Detach;
-	}
-
-	// If there is no hit object.
-	if(!IsValid(hitObj)) return EOperations::Move;
-
-	// Attach to the thing to this.
-	hitObj->AttachToComponent(mesh, attachRules, raySocket);
-
-	// Syncing the socket info
-	AddAttachment(hitObj, raySocket);
-	hitObj->SetAttachedSocket(raySocket);
-	hitObj->SetCore(this);
-	
-	// Teleport the hit object to the silhouette
-	hitObj->UseSilhouetteTransform(silhouette);
 
 	// Reset the silhouette after using its transform
 	ResetGhost();
-	
-	// Set the previous object (for undo/redo) before getting rid of hit object.
-	previousObj = hitObj;
-
-	// Remove the reference to the hit object so that this part of SetSelected doesn't get called
-	hitObj = 0;
-
-	soundPlayer->PlayAttach();
-	return EOperations::Attach;
+	return EOperations::Move;
 }
 
 void ACubeCore::Detach(const bool push)
@@ -244,11 +111,18 @@ void ACubeCore::Start()
 
 void ACubeCore::SetEnableCollisions(const bool enable) const
 {
+	mesh->SetSimulatePhysics(enable);
 	mesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
+	
 	for(auto& obj : GetCloseAttachments())
 	{
-		obj->GetMesh()->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
+		UStaticMeshComponent* objMesh = obj->GetMesh();
+		objMesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
+		objMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+		objMesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
 	}
+	mesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	mesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
 }
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
@@ -325,17 +199,6 @@ void ACubeCore::EjectObject(APickupableMaster* toEject)
 	soundPlayer->PlayDetachAll();
 }
 
-void ACubeCore::SetAllAbilityActive(bool value) const
-{
-	const AActor* self = this;
-
-	// The get descendents function ensures that every single thing that is attached to the core (even if it's connected in a chain) is set. 
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-	
-	for (const auto& obj : children) obj->SetAbilityActive(value);
-}
-
 float ACubeCore::GetMass() const
 {
 	if(!mesh->IsSimulatingPhysics()) return 0;
@@ -350,21 +213,6 @@ float ACubeCore::GetMass() const
 	return mass;
 }
 
-void ACubeCore::RevertAttachments()
-{
-	TArray<APickupableMaster*> currentAttachments = GetAttachedObjs();
-
-	// Removes all the attachments that weren't there before the undo/redo
-	for (auto& obj : currentAttachments)
-	{
-		if(!previousAttachments.Contains(obj))
-		{
-			obj->Detach(false);
-			RemoveAttachment(obj);
-		}
-	}
-}
-
 // Passing an actor to work around the #include dependency loop.....
 void ACubeCore::AddThing(AActor* _thing) const
 {
@@ -377,33 +225,6 @@ void ACubeCore::AddThing(AActor* _thing) const
 		thing->Teleport(collector->GetCollectPoint());
 		onAddedThing.Broadcast(thing);
 	}
-}
-
-int ACubeCore::SelectSocket(int socket)
-{
-	if(!IsValid(socketInfo))
-	{
-		Print("Socket info invalid...", 5)
-		return -1;
-	}
-	
-	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
-	if(objs.IsEmpty()) return -1;
-
-	for (const auto& obj : objs) if(obj) obj->DeactivateOutline();
-	
-	// Set socket to -1 if the first element is the same element
-	if(objs.Find(selectedObj) == socket && socket == 0) socket = objs.Num() - 1;
-	if(!objs.IsValidIndex(socket))
-	{
-		if(socket > objs.Num() - 1) socket = objs.Num() - 1;
-		else socket = 0;
-	}
-
-	if(objs.IsValidIndex(socket)) selectedObj = objs[socket];
-	
-	selectedObj->ActivateOutline(selectedMat);
-	return socket;
 }
 
 void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
@@ -455,56 +276,6 @@ void ACubeCore::ToggleGravity() const
 	for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(!selected);
 }
 
-void ACubeCore::SetAttachedSocket(FName socket, const bool useDirection)
-{
-	if(socket != raySocket)
-	{
-		attachedSocket = socket;
-		return;
-	}
-
-	RearrangeSockets();
-}
-
-void ACubeCore::RearrangeSockets()
-{
-	// This only needs to happen if there's an object in the bottom slot when trying to attach to a cube..
-	if(!ObjectInSocket(raySocket))
-	{
-		Print("down is blocked.", 4)
-		return;
-	}
-
-	TArray<APickupableMaster*> objects = socketInfo->GetObjectsArray();
-	TArray<FName> sockets = socketInfo->GetSockets();
-	
-	for(int i = 0; i < objects.Num(); i++)
-	{
-		// Continue if the object is invalid
-		if(!objects[i]) continue;
-
-		const FName oppSocket = socketInfo->GetOppositeSocket(i);
-
-		// Kick out the thing that's in the opposite socket if there's something there....
-		if(socketInfo->ObjectInSocket(oppSocket))
-		{
-			socketInfo->GetObjectInSocket(oppSocket)->Detach(false);
-			RemoveAttachment(oppSocket);
-		}
-
-		// Then replace it with the new thing
-		RemoveAttachment(sockets[i]);
-		AddAttachment(objects[i], oppSocket);
-
-		objects[i]->AttachToActor(this, attachRules, oppSocket);
-		objects[i]->ApplyOffset(this);
-		objects[i]->SetAttachedSocket(oppSocket, false);
-	}
-
-	attachedSocket = "Up";
-}
-
-
 void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const float longestDuration)
 {
 	 TArray<APickupableMaster*> objs = GetCloseAttachments();
@@ -542,24 +313,4 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 
 	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
 	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
-}
-
-void ACubeCore::SetCanCollect(bool collectable)
-{
-	mesh->SetMaterial(0, !collectable? inactiveMat: defaultMat);
-	canCollect = collectable;
-}
-
-void ACubeCore::Reattach(const bool sound)
-{
-	// The previous object needs to be valid
-	if(!previousObj) return;
-	
-	hitObj = previousObj;
-	hitObj->SetCore(this);
-	hitObj->Reattach(sound);
-	RevertAttachments();
-	
-	const FTransform objTransform = hitObj->GetActorTransform();
-	silhouette->SetWorldLocationAndRotation(objTransform.GetLocation(), objTransform.Rotator());
 }

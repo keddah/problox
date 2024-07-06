@@ -93,7 +93,6 @@ EOperations ABalloon::SetSelected(const bool value)
 		Detach(false);
 		mesh->SetEnableGravity(false);
 		
-		canPlace = true;
 		return {EOperations::Detach};
 	}
 
@@ -138,7 +137,7 @@ void ABalloon::Detach(const bool push)
 		return;
 	}
 
-	ResetMaterial();
+	SetHideOutlineMesh(true);
 	RemoveVelocity();
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
