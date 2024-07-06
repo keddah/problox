@@ -53,11 +53,13 @@
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
+			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -76,9 +78,7 @@
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"BounceSpring.cpp.obj",
-			"CubeCore.cpp.obj"
+			"ActionHistory.cpp.obj"
 		]
 	}
 }

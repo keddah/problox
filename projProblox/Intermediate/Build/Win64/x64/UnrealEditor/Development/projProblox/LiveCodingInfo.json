@@ -66,7 +66,6 @@
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
-			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
 			"PickupableMaster.cpp.obj",
@@ -78,7 +77,8 @@
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj"
+			"ActionHistory.cpp.obj",
+			"Hoverer.cpp.obj"
 		]
 	}
 }
