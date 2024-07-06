@@ -31,14 +31,11 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execAllObjsInHierarchy); \
 	DECLARE_FUNCTION(execSetAbilityActive); \
-	DECLARE_FUNCTION(execSetCanPickup); \
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execGhostSnapRotateMesh); \
 	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateHori); \
-	DECLARE_FUNCTION(execRotateVert); \
-	DECLARE_FUNCTION(execAscendDescend); \
 	DECLARE_FUNCTION(execShowOutline); \
 	DECLARE_FUNCTION(execResetOutline);
 

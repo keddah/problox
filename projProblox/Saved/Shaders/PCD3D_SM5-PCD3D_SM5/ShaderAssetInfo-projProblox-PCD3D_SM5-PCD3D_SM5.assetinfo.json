@@ -87,6 +87,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "FD339F0EBA344E29FA94329C8C90CD567B150ED5",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/Material_016"
+			]
+		},
+		{
 			"ShaderMapHash": "0B04B40E49BD5E920A5D27E53A91106ABB3C8987",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_Default_Mask_DS"
@@ -203,6 +209,12 @@
 			"Assets": [
 				"/Game/Levels/LowPolyInterior/Materials/M_LowPolyInterior_Fire",
 				"/Game/LowPolyInterior/Materials/M_LowPolyInterior_Fire"
+			]
+		},
+		{
+			"ShaderMapHash": "817CA21A853A7CD2FECEE4A3DAF3A5C7B9750B91",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/silver"
 			]
 		},
 		{
@@ -341,6 +353,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "9757BC3B7432A5A4DCD6EF455ED654CF1FD8BB31",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/Darkred"
+			]
+		},
+		{
 			"ShaderMapHash": "4E68E73C213DB8182D32EC6DFED98DEE438DABCB",
 			"Assets": [
 				"/Engine/EngineMaterials/DefaultDeferredDecalMaterial"
@@ -380,6 +398,12 @@
 			"ShaderMapHash": "2D4D6A41394CC671E1818C93D06227BF83677539",
 			"Assets": [
 				"/Game/Models/BlenderModelsReece/OpaieGrey"
+			]
+		},
+		{
+			"ShaderMapHash": "B24D8F4205033347462C679D6FA06EF83412297C",
+			"Assets": [
+				"/Game/StarterContent/Materials/M_TiledFloorCeramic"
 			]
 		},
 		{
@@ -459,6 +483,12 @@
 			"ShaderMapHash": "0D31D94E7CDD27664AE757CF7F2958F40879800B",
 			"Assets": [
 				"/Game/Materials/Blueglow"
+			]
+		},
+		{
+			"ShaderMapHash": "E08F6E4F027AE7BC7538D27DE91D25E2668F611F",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/Darkerstone"
 			]
 		},
 		{
@@ -776,8 +806,14 @@
 		{
 			"ShaderMapHash": "E7A586918DE7FE950E0D47691FD6975A6E455B85",
 			"Assets": [
+				"/Game/Models/BlenderModelsReece/Wood",
 				"/Game/Models/EllaModels/lambert1",
 				"/Game/Models/HassanModels/lambert1",
+				"/Game/Models/MechanicModels/Materials/Grey",
+				"/Game/Models/MechanicModels/Materials/Material_003",
+				"/Game/Models/MechanicModels/Materials/Material_005",
+				"/Game/Models/MechanicModels/Materials/Material_008",
+				"/Game/Models/MechanicModels/Materials/Material_011",
 				"/Game/Models/Sketchfab/AlarmClock/back",
 				"/Game/Models/Sketchfab/AlarmClock/Matériau",
 				"/Game/Models/Sketchfab/AlarmClock/plastic_button_1",
@@ -880,7 +916,8 @@
 		{
 			"ShaderMapHash": "4C6DACA1E2AA4B4DEA225B86D582B9EBF63D075D",
 			"Assets": [
-				"/Game/StarterContent/Materials/M_Ceramic_Tile_Checker"
+				"/Game/StarterContent/Materials/M_Ceramic_Tile_Checker",
+				"/Game/StarterContent/Materials/M_Ceramic_Tile_Checker1"
 			]
 		},
 		{
@@ -1097,6 +1134,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "950C84C700010450DE2B333B901572B9A755BC93",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/Stone"
+			]
+		},
+		{
 			"ShaderMapHash": "1873EAC90491014DB48003F0EF5605E409E71914",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Statue"
@@ -1187,6 +1230,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "37C2A1D5A5F5EDB082814EE2F2473DBE97312A96",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/Darkgold"
+			]
+		},
+		{
 			"ShaderMapHash": "9B8646D844DFAC98F83855342CA48625FE49D077",
 			"Assets": [
 				"/Game/Megascans/Surfaces/MaterialsMade/M_Carpet"
@@ -1238,7 +1287,6 @@
 			"ShaderMapHash": "F9506EDF1C4EFA38AC0002A537C3173507C6B07F",
 			"Assets": [
 				"/Engine/VREditor/TransformGizmo/Xray",
-				"/Game/Blueprints/Pickupables/Cores/Prototype_Cores/Material",
 				"/Game/Levels/Levels/BuildLevel/Material_001",
 				"/Game/Levels/Levels/BuildLevel/Material_002",
 				"/Game/Levels/Levels/BuildLevel/Material_003",
@@ -1269,11 +1317,23 @@
 				"/Game/Models/BlenderModelsReece/MoreOpaqueGlow",
 				"/Game/Models/BlenderModelsReece/Red",
 				"/Game/Models/BlenderModelsReece/Stone",
-				"/Game/Models/BlenderModelsReece/Wood",
 				"/Game/Models/Hassan/PM3D_Sphere3D2",
 				"/Game/Models/Hassan/PolySphere1",
 				"/Game/Models/HassanModels/cell/PM3D_Sphere3D2",
 				"/Game/Models/HassanModels/cell/PolySphere1",
+				"/Game/Models/MechanicModels/Materials/Brown",
+				"/Game/Models/MechanicModels/Materials/Gold",
+				"/Game/Models/MechanicModels/Materials/Material",
+				"/Game/Models/MechanicModels/Materials/Material_001",
+				"/Game/Models/MechanicModels/Materials/Material_002",
+				"/Game/Models/MechanicModels/Materials/Material_004",
+				"/Game/Models/MechanicModels/Materials/Material_006",
+				"/Game/Models/MechanicModels/Materials/Material_007",
+				"/Game/Models/MechanicModels/Materials/Material_009",
+				"/Game/Models/MechanicModels/Materials/Material_010",
+				"/Game/Models/MechanicModels/Materials/Material_012",
+				"/Game/Models/MechanicModels/Materials/Material_014",
+				"/Game/Models/MechanicModels/Materials/Material_018",
 				"/Game/Models/OutsourcedModels/Helice",
 				"/Game/Models/OutsourcedModels/Pottery_Bowl_Mat",
 				"/Game/Models/Sketchfab/AlarmClock/clear"
