@@ -1281,3 +1281,834 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.06-17.33.34:615][671]LogFileHelpers: InternalPromptForCheckoutAndSave took 129 ms
 [2024.07.06-17.33.34:639][671]AssetCheck: New page: Asset Save: BP_Rocket
 [2024.07.06-17.33.34:640][671]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Rocket.BP_Rocket
+[2024.07.06-17.34.36:171][507]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:01:09.211 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 36777 files in 36615 folders with total size 1702 MiB.
+[2024.07.06-17.34.37:907][512]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.07.06-17.34.37:978][512]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_BuildArea_Auto1
+[2024.07.06-17.34.37:979][512]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Lvl_BuildArea_Auto1CBF3AC4241FB060F64DC5B99E15CDB1E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto1.umap'
+[2024.07.06-17.34.37:981][512]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto1.umap is in the /Temp path, will not scan.
+[2024.07.06-17.34.37:982][512]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.088
+[2024.07.06-17.34.37:982][512]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.088
+[2024.07.06-17.34.37:983][512]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Models/MechanicModels/thrusternew] ([1] browsable assets)...
+[2024.07.06-17.34.38:030][512]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Models/MechanicModels/thrusternew.thrusternew]
+[2024.07.06-17.34.38:030][512]OBJ SavePackage: Finished generating thumbnails for package [/Game/Models/MechanicModels/thrusternew]
+[2024.07.06-17.34.38:036][512]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Models/MechanicModels/thrusternew_Auto1
+[2024.07.06-17.34.38:036][512]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/thrusternew_Auto12790ACA9471DD4FB1D81AE9A43EF16B0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Models/MechanicModels/thrusternew_Auto1.uasset'
+[2024.07.06-17.34.38:038][512]LogFileHelpers: Auto-saving content packages took 0.055
+[2024.07.06-17.35.41:580][947]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2024.07.06-17.35.41:721][947]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.06-17.35.41:759][947]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.07.06-17.35.41:826][947]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea
+[2024.07.06-17.35.41:826][947]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Lvl_BuildAreaB88AF0384E9C9B127810EDBA299841B0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Lvl_BuildArea.umap'
+[2024.07.06-17.35.41:832][947]LogFileHelpers: All files are already saved.
+[2024.07.06-17.35.41:832][947]LogFileHelpers: Saving map 'Lvl_BuildArea' took 0.085
+[2024.07.06-17.35.41:836][947]LogSavePackage: Moving output files for package: /Game/Models/MechanicModels/thrusternew
+[2024.07.06-17.35.41:837][947]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/thrusternew13D3E20643F579CD13F74AA5207B0F6F.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Models/MechanicModels/thrusternew.uasset'
+[2024.07.06-17.35.41:845][947]LogFileHelpers: InternalPromptForCheckoutAndSave took 123 ms (total: 253 ms)
+[2024.07.06-17.35.41:847][947]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.06-17.35.41:847][947]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_BuildArea.Lvl_BuildArea
+[2024.07.06-17.35.41:847][947]LogContentValidation: Display: Validating /Script/Engine.StaticMesh /Game/Models/MechanicModels/thrusternew.thrusternew
+[2024.07.06-17.35.54:388][ 57]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Models/MechanicModels/spring.spring
+[2024.07.06-17.35.54:400][ 57]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.35.54:400][ 57]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.06-17.35.54:922][ 57]LogShaderCompilers: Display: ================================================
+[2024.07.06-17.35.54:922][ 57]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.06-17.35.54:922][ 57]LogShaderCompilers: Display: Total job queries 81, among them cache hits 44 (54.32%)
+[2024.07.06-17.35.54:922][ 57]LogShaderCompilers: Display: Tracking 37 distinct input hashes that result in 27 distinct outputs (72.97%)
+[2024.07.06-17.35.54:922][ 57]LogShaderCompilers: Display: RAM used: 868.16 KiB of 1.60 GiB budget. Usage: 0.05%
+[2024.07.06-17.35.54:922][ 57]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.06-17.35.54:922][ 57]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.06-17.35.54:923][ 57]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.06-17.35.54:923][ 57]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.06-17.35.54:923][ 57]LogShaderCompilers: Display: ================================================
+[2024.07.06-17.35.54:926][ 57]LogViewport: Scene viewport resized to 1405x894, mode Windowed.
+[2024.07.06-17.36.38:605][334]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.38:611][334]LogActor: Warning: BP_MagPole_C /Engine/Transient.World_10:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.38:626][335]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.38:631][335]LogActor: Warning: BP_Collector_C /Engine/Transient.World_11:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:210][481]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:215][481]LogActor: Warning: BP_Treads_C /Engine/Transient.World_12:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:233][482]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:240][482]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_13:PersistentLevel.BP_Pusher_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:260][483]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:265][483]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_14:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:284][484]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:290][484]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:312][485]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:318][485]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_16:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:337][486]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:342][486]LogActor: Warning: BP_Glider_C /Engine/Transient.World_17:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:424][487]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:430][487]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.40:489][488]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.40:509][488]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_19:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.43:015][690]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_BounceSpring.BP_BounceSpring
+[2024.07.06-17.36.43:015][690]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.36.43:015][690]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.06-17.36.43:149][690]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_20:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.36.44:833][841]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.07.06-17.36.50:353][346]LogMaterial: Display: Material /Game/Models/MechanicModels/Materials/silver.silver needed to have new flag set bUsedWithSplineMeshes !
+[2024.07.06-17.38.26:325][761]LogEditorTransaction: Undo Modify Component(s)
+[2024.07.06-17.38.52:749][224]BlueprintLog: New page: Compile BP_BounceSpring
+[2024.07.06-17.38.52:781][224]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.38.52:782][224]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_20:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.38.52:802][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.07.06-17.38.52:805][224]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.38.52:887][224]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.06-17.38.52:906][224]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.38.52:912][224]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_21:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.38.52:973][224]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_BounceSpring
+[2024.07.06-17.38.52:974][224]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_BounceSpring82A77BB04CF8C25C6EC20E836F9519EB.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_BounceSpring.uasset'
+[2024.07.06-17.38.52:981][224]LogFileHelpers: InternalPromptForCheckoutAndSave took 93 ms (total: 347 ms)
+[2024.07.06-17.38.53:010][224]AssetCheck: New page: Asset Save: BP_BounceSpring
+[2024.07.06-17.38.53:010][224]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_BounceSpring.BP_BounceSpring
+[2024.07.06-17.38.55:295][437]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.06-17.38.55:316][437]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.06-17.38.55:321][437]PIE: New page: PIE session: Lvl_Combined (6 Jul 2024, 19:38:55)
+[2024.07.06-17.38.55:329][437]LogOnline: OSS: Created online subsystem instance for: NULL
+[2024.07.06-17.38.55:330][437]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+[2024.07.06-17.38.55:332][437]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.06-17.38.55:446][437]LogPlayLevel: PIE: StaticDuplicateObject took: (0.113670s)
+[2024.07.06-17.38.55:446][437]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.113999s)
+[2024.07.06-17.38.55:458][437]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.07.06-17.38.55:461][437]LogWindows: WindowsPlatformFeatures enabled
+[2024.07.06-17.38.55:468][437]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.38.55:468][437]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.06-17.38.55:469][437]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.06-17.38.55:471][437]LogPlayLevel: PIE: World Init took: (0.004156s)
+[2024.07.06-17.38.55:471][437]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2024.07.06-17.38.55:471][437]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.06-17.38.55:472][437]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.06-17.38.55:472][437]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.06-17.38.55:472][437]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.06-17.38.55:472][437]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.06-17.38.55:472][437]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.06-17.38.55:472][437]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.06-17.38.55:472][437]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.06-17.38.55:472][437]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.06-17.38.55:472][437]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.06-17.38.55:472][437]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.06-17.38.55:474][437]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.06-17.38.55:508][437]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.07.06-17.38.55:508][437]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.06-17.38.55:508][437]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.06-17.38.55:508][437]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.06-17.38.55:509][437]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2024.07.06-17.38.55:509][437]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2024.07.06-17.38.55:511][437]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2024.07.06-17.38.55:511][437]LogInit: FAudioDevice initialized with ID 2.
+[2024.07.06-17.38.55:511][437]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2024.07.06-17.38.55:511][437]LogAudio: Display: Audio Device (ID: 2) registered with world 'Lvl_Combined'.
+[2024.07.06-17.38.55:511][437]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 2
+[2024.07.06-17.38.55:538][437]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.06-17.38.55:545][437]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.06-17.38.55:557][437]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.06-17.38.55:558][437]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.06-17.38.55:558][437]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.06-18.38.55
+[2024.07.06-17.38.55:561][437]LogWorld: Bringing up level for play took: 0.015616
+[2024.07.06-17.38.55:564][437]LogOnline: OSS: Created online subsystem instance for: :Context_23
+[2024.07.06-17.38.55:607][437]PIE: Server logged in
+[2024.07.06-17.38.55:609][437]PIE: Play in editor total start time 0.296 seconds.
+[2024.07.06-17.38.55:649][437]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.06-17.38.55:723][437]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.06-17.38.56:283][437]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.06-17.38.56:315][438]LogBlueprintUserMessages: [BP_LevelManager_C_1] loading
+[2024.07.06-17.38.56:317][438]LogBlueprintUserMessages: [BP_LevelManager_C_1] loaded level
+[2024.07.06-17.38.56:319][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_55.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:319][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_71.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:319][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_101.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:319][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_110.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:319][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_112.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:319][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_132.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:320][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_184.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:320][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_185.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:320][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_186.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:320][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_187.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_196.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_198.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_199.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_200.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_201.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_203.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_204.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:321][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_206.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:322][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_104.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:322][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_114.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:322][438]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_121.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:798][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_143.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:798][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_155.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:798][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_176.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:798][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_221.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:799][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_225.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:799][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_226.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:799][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_171.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:800][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_214.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:800][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:800][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_252.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:800][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_253.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:801][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_254.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:801][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_255.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:801][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_256.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:801][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_257.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:801][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_258.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:801][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_261.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:801][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_263.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:802][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_265.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:802][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_266.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:802][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_267.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:802][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_269.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:802][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_271.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:802][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_272.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:802][439]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_273.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:960][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_275.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:960][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_276.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:960][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_277.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:960][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_159.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:961][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_209.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:961][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_234.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:961][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_268.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:961][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_270.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:961][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_300.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:961][440]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_303.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.38.56:965][440]LogBlueprintUserMessages: [WBP_AreaSelect] screenshots saved
+[2024.07.06-17.38.57:398][444]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.38.57:398][444]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.38.57:398][444]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.38.57:398][444]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.38.57:399][444]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.38.59:322][586]LogActor: Warning: BP_BounceSpring_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.39.00:970][691]LogActor: Warning: BP_BounceSpring_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_BounceSpring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.39.01:618][739]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:636][740]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:650][741]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:669][742]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:681][743]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:693][744]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:705][745]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:716][746]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:728][747]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:738][748]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:750][749]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:761][750]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:773][751]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:786][752]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:798][753]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:812][754]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:825][755]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:837][756]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:850][757]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:864][758]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:877][759]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:889][760]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:903][761]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:915][762]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:927][763]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:939][764]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:955][765]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:966][766]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:978][767]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.01:992][768]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:004][769]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:018][770]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:029][771]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:041][772]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:055][773]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:068][774]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:081][775]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:095][776]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:109][777]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:123][778]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:134][779]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:149][780]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:164][781]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:178][782]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:192][783]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:206][784]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:218][785]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:231][786]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:246][787]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:259][788]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:274][789]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:288][790]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:301][791]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:315][792]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:328][793]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:342][794]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:356][795]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:374][796]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:385][797]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:397][798]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:412][799]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:427][800]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:440][801]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:452][802]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:465][803]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:479][804]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:493][805]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:507][806]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:520][807]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:535][808]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:551][809]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:564][810]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:578][811]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:594][812]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:609][813]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:621][814]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:633][815]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:647][816]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:661][817]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:675][818]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:689][819]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:703][820]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:716][821]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:730][822]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:744][823]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:757][824]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:769][825]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:782][826]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:795][827]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:808][828]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:819][829]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:832][830]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:845][831]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:858][832]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:871][833]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:884][834]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:898][835]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:914][836]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:924][837]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:936][838]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:948][839]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:962][840]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:975][841]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.02:988][842]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:002][843]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:016][844]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:028][845]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:042][846]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:054][847]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:067][848]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:082][849]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:095][850]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:109][851]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:122][852]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:137][853]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:151][854]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:166][855]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:181][856]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:194][857]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:207][858]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:220][859]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:233][860]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:247][861]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:261][862]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:276][863]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:292][864]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:307][865]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:319][866]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:331][867]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:343][868]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:358][869]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:372][870]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:386][871]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:398][872]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:412][873]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:425][874]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:437][875]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:450][876]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:464][877]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:478][878]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:491][879]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:505][880]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:519][881]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:532][882]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:547][883]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:560][884]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:573][885]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:586][886]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:599][887]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:613][888]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:628][889]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:642][890]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:654][891]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:666][892]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:679][893]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:696][894]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:710][895]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:722][896]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:734][897]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:749][898]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:761][899]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:774][900]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:789][901]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:801][902]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:813][903]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:827][904]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:839][905]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:852][906]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:865][907]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:879][908]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:891][909]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:906][910]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:917][911]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:931][912]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:944][913]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:956][914]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:969][915]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:982][916]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.03:996][917]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:009][918]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:021][919]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:033][920]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:048][921]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:062][922]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:076][923]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:088][924]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:100][925]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:115][926]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:129][927]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:142][928]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:156][929]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:169][930]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:183][931]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:196][932]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:209][933]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:223][934]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:236][935]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:250][936]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:264][937]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:277][938]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:291][939]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:304][940]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:317][941]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:331][942]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:345][943]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:358][944]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:373][945]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:386][946]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:400][947]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:414][948]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:429][949]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:445][950]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:458][951]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:469][952]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:482][953]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:495][954]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:510][955]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:523][956]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:537][957]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:550][958]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:563][959]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:578][960]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:590][961]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:605][962]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:617][963]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:631][964]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:644][965]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:666][966]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:678][967]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:691][968]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:703][969]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:717][970]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:730][971]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:743][972]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:757][973]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:772][974]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:789][975]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:801][976]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:815][977]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:829][978]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:841][979]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:853][980]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:866][981]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:879][982]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:892][983]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:906][984]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:918][985]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:932][986]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:945][987]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:957][988]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:971][989]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:984][990]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.04:999][991]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:012][992]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:026][993]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:039][994]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:052][995]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:067][996]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:079][997]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:096][998]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:111][999]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:127][  0]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:142][  1]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:156][  2]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:170][  3]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:184][  4]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:201][  5]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:213][  6]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:227][  7]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:239][  8]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:251][  9]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:266][ 10]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:280][ 11]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:294][ 12]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:307][ 13]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:320][ 14]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:333][ 15]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:347][ 16]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:361][ 17]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:375][ 18]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:390][ 19]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:408][ 20]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:422][ 21]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:434][ 22]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:451][ 23]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:465][ 24]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:477][ 25]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:489][ 26]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:504][ 27]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:517][ 28]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:531][ 29]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:545][ 30]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:559][ 31]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:573][ 32]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:586][ 33]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:598][ 34]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:612][ 35]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:625][ 36]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:639][ 37]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:653][ 38]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:665][ 39]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:678][ 40]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:690][ 41]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:704][ 42]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:718][ 43]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:729][ 44]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:742][ 45]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:755][ 46]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:769][ 47]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:781][ 48]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:795][ 49]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:808][ 50]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:822][ 51]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:835][ 52]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:848][ 53]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:861][ 54]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:875][ 55]PIE: Warning: BP_BounceSpring_C_1.Mesh Shape_Cube has to have 'Simulate Physics' enabled if you'd like to AddForceAtLocation. 
+[2024.07.06-17.39.05:904][ 55]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.06-17.39.05:905][ 55]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.06-17.39.05:906][ 55]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.06-17.39.05:918][ 55]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.06-17.39.05:931][ 55]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.06-17.39.05:937][ 55]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.06-17.39.05:945][ 55]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.06-17.39.05:958][ 55]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.07.06-17.39.05:965][ 55]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2024.07.06-17.39.05:966][ 55]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.07.06-17.39.05:969][ 55]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.07.06-17.39.06:026][ 55]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2024.07.06-17.39.06:122][ 56]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2024.07.06-17.39.06:137][ 56]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.07.06-17.39.07:460][168]LogSlate: Window 'Message Log' being destroyed
+[2024.07.06-17.39.07:464][168]LogSlate: Window 'Message Log' being destroyed
+[2024.07.06-17.39.26:670][957]BlueprintLog: New page: Compile BP_BounceSpring
+[2024.07.06-17.39.26:701][957]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_20:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.39.26:703][957]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.39.26:704][957]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_21:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.39.26:723][957]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2024.07.06-17.39.26:724][957]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.39.26:826][957]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.06-17.39.26:903][957]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_BounceSpring
+[2024.07.06-17.39.26:904][957]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_BounceSpring7472E9C64708E7B00D8B1F89ADAEEA62.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_BounceSpring.uasset'
+[2024.07.06-17.39.26:911][957]LogFileHelpers: InternalPromptForCheckoutAndSave took 85 ms (total: 432 ms)
+[2024.07.06-17.39.26:942][957]AssetCheck: New page: Asset Save: BP_BounceSpring
+[2024.07.06-17.39.26:942][957]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_BounceSpring.BP_BounceSpring
+[2024.07.06-17.39.42:878][443]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/ArtTools/RenderToTexture/Meshes/ShadowTestMesh.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/ArtTools/RenderToTexture/Meshes/ShadowTestMesh.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.07.06-17.40.04:264][ 17]BlueprintLog: New page: Compile BP_BounceSpring
+[2024.07.06-17.40.04:293][ 17]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_20:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.04:294][ 17]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_21:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.04:295][ 17]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.04:316][ 17]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.07.06-17.40.04:318][ 17]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.04:411][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.06-17.40.04:487][ 17]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_BounceSpring
+[2024.07.06-17.40.04:488][ 17]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_BounceSpring962F62D94A77A5A9E6EDA8823B9BE3F3.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_BounceSpring.uasset'
+[2024.07.06-17.40.04:495][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave took 83 ms (total: 515 ms)
+[2024.07.06-17.40.04:521][ 17]AssetCheck: New page: Asset Save: BP_BounceSpring
+[2024.07.06-17.40.04:521][ 17]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_BounceSpring.BP_BounceSpring
+[2024.07.06-17.40.05:523][ 98]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.06-17.40.05:540][ 98]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.06-17.40.05:541][ 98]PIE: New page: PIE session: Lvl_Combined (6 Jul 2024, 19:40:05)
+[2024.07.06-17.40.05:541][ 98]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.06-17.40.05:668][ 98]LogPlayLevel: PIE: StaticDuplicateObject took: (0.126859s)
+[2024.07.06-17.40.05:668][ 98]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.127080s)
+[2024.07.06-17.40.05:679][ 98]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2024.07.06-17.40.05:682][ 98]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.40.05:682][ 98]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.06-17.40.05:683][ 98]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.06-17.40.05:683][ 98]LogPlayLevel: PIE: World Init took: (0.001721s)
+[2024.07.06-17.40.05:684][ 98]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.07.06-17.40.05:684][ 98]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.06-17.40.05:684][ 98]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.06-17.40.05:684][ 98]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.06-17.40.05:684][ 98]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.06-17.40.05:684][ 98]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.06-17.40.05:684][ 98]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.06-17.40.05:684][ 98]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.06-17.40.05:684][ 98]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.06-17.40.05:685][ 98]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.06-17.40.05:685][ 98]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.06-17.40.05:685][ 98]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.06-17.40.05:687][ 98]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.06-17.40.05:718][ 98]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.07.06-17.40.05:718][ 98]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.06-17.40.05:718][ 98]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.06-17.40.05:718][ 98]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.06-17.40.05:718][ 98]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.07.06-17.40.05:719][ 98]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2024.07.06-17.40.05:721][ 98]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.07.06-17.40.05:721][ 98]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.07.06-17.40.05:721][ 98]LogInit: FAudioDevice initialized with ID 3.
+[2024.07.06-17.40.05:721][ 98]LogAudio: Display: Audio Device (ID: 3) registered with world 'Lvl_Combined'.
+[2024.07.06-17.40.05:722][ 98]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2024.07.06-17.40.05:753][ 98]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.06-17.40.05:753][ 98]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.06-17.40.05:766][ 98]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.06-17.40.05:767][ 98]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.06-17.40.05:767][ 98]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.06-18.40.05
+[2024.07.06-17.40.05:768][ 98]LogWorld: Bringing up level for play took: 0.014934
+[2024.07.06-17.40.05:771][ 98]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2024.07.06-17.40.05:778][ 98]PIE: Server logged in
+[2024.07.06-17.40.05:779][ 98]PIE: Play in editor total start time 0.239 seconds.
+[2024.07.06-17.40.05:787][ 98]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.06-17.40.05:888][ 98]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.06-17.40.06:470][ 98]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.06-17.40.06:483][ 99]LogBlueprintUserMessages: [BP_LevelManager_C_1] loading
+[2024.07.06-17.40.06:483][ 99]LogBlueprintUserMessages: [BP_LevelManager_C_1] loaded level
+[2024.07.06-17.40.06:528][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:528][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:529][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:529][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:530][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:532][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:532][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:532][ 99]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:593][100]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_67.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:594][100]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_81.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:594][100]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_94.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:595][100]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_214.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:595][100]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_215.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:596][100]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_365.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:598][100]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.06:644][101]LogBlueprintUserMessages: [WBP_AreaSelect] screenshots saved
+[2024.07.06-17.40.08:385][220]LogActor: Warning: BP_BounceSpring_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.15:861][789]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.06-17.40.15:861][789]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.06-17.40.15:861][789]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.06-17.40.15:868][789]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.06-17.40.15:880][789]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.06-17.40.15:883][789]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.06-17.40.15:891][789]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.06-17.40.15:917][789]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2024.07.06-17.40.15:917][789]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.07.06-17.40.15:918][789]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.07.06-17.40.15:958][789]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.07.06-17.40.16:046][790]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2024.07.06-17.40.16:062][790]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2024.07.06-17.40.16:865][851]LogSlate: Window 'Message Log' being destroyed
+[2024.07.06-17.40.16:868][851]LogSlate: Window 'Message Log' being destroyed
+[2024.07.06-17.40.28:236][895]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.06-17.40.28:253][895]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.07.06-17.40.28:254][895]LogPlayLevel: [PlayLevel] Compiling BP_BounceSpring before play...
+[2024.07.06-17.40.28:284][895]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_20:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.28:286][895]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_21:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.28:287][895]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.28:294][895]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.28:380][895]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.06-17.40.28:461][895]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_BounceSpring
+[2024.07.06-17.40.28:462][895]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_BounceSpring32EE87AF485C7DC232447488C55EBAD3.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_BounceSpring.uasset'
+[2024.07.06-17.40.28:468][895]LogFileHelpers: InternalPromptForCheckoutAndSave took 88 ms (total: 604 ms)
+[2024.07.06-17.40.28:480][895]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.07.06-17.40.28:482][895]LogPlayLevel: PlayLevel: Blueprint regeneration took 229 ms (1 blueprints)
+[2024.07.06-17.40.28:482][895]PIE: New page: PIE session: Lvl_Combined (6 Jul 2024, 19:40:28)
+[2024.07.06-17.40.28:482][895]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.06-17.40.28:594][895]LogPlayLevel: PIE: StaticDuplicateObject took: (0.110827s)
+[2024.07.06-17.40.28:594][895]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.111061s)
+[2024.07.06-17.40.28:606][895]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.07.06-17.40.28:607][895]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.06-17.40.28:607][895]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.06-17.40.28:607][895]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.06-17.40.28:608][895]LogPlayLevel: PIE: World Init took: (0.001551s)
+[2024.07.06-17.40.28:608][895]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.07.06-17.40.28:608][895]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.06-17.40.28:608][895]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.06-17.40.28:608][895]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.06-17.40.28:608][895]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.06-17.40.28:608][895]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.06-17.40.28:609][895]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.06-17.40.28:609][895]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.06-17.40.28:609][895]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.06-17.40.28:610][895]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.06-17.40.28:610][895]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.06-17.40.28:610][895]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.06-17.40.28:612][895]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.06-17.40.28:642][895]LogAudioMixer: Display: Using Audio Hardware Device 27G1G4 (NVIDIA High Definition Audio)
+[2024.07.06-17.40.28:642][895]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.06-17.40.28:642][895]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.06-17.40.28:642][895]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.06-17.40.28:643][895]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.07.06-17.40.28:643][895]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2024.07.06-17.40.28:646][895]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.07.06-17.40.28:646][895]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.07.06-17.40.28:646][895]LogInit: FAudioDevice initialized with ID 4.
+[2024.07.06-17.40.28:646][895]LogAudio: Display: Audio Device (ID: 4) registered with world 'Lvl_Combined'.
+[2024.07.06-17.40.28:646][895]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2024.07.06-17.40.28:670][895]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.06-17.40.28:671][895]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.06-17.40.28:684][895]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.06-17.40.28:684][895]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.06-17.40.28:685][895]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.06-18.40.28
+[2024.07.06-17.40.28:686][895]LogWorld: Bringing up level for play took: 0.014546
+[2024.07.06-17.40.28:688][895]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2024.07.06-17.40.28:695][895]PIE: Server logged in
+[2024.07.06-17.40.28:696][895]PIE: Play in editor total start time 0.444 seconds.
+[2024.07.06-17.40.28:762][895]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.06-17.40.28:810][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:810][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:810][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:810][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:811][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:813][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:813][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:813][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:814][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_67.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:814][895]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_81.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:874][896]AssetCheck: New page: Asset Save: BP_BounceSpring
+[2024.07.06-17.40.28:874][896]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_BounceSpring.BP_BounceSpring
+[2024.07.06-17.40.28:891][896]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl1' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.06-17.40.28:891][896]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.06-17.40.28:892][896]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl2' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.06-17.40.28:892][896]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.06-17.40.28:892][896]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.06-17.40.28:892][896]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.06-17.40.28:898][896]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_94.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:901][896]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_214.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:901][896]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_215.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.28:902][896]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_365.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:039][897]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:044][897]LogBlueprintUserMessages: [WBP_AreaSelect] screenshots saved
+[2024.07.06-17.40.29:071][899]LogBlueprintUserMessages: [WBP_AreaSelect] screenshots saved
+[2024.07.06-17.40.29:078][899]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.06-17.40.29:552][899]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.06-17.40.29:563][900]LogBlueprintUserMessages: [BP_LevelManager_C_1] loading
+[2024.07.06-17.40.29:564][900]LogBlueprintUserMessages: [BP_LevelManager_C_1] loaded level
+[2024.07.06-17.40.29:610][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_55.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:610][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_71.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:611][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_101.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:611][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_110.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:611][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_112.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:612][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_132.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:612][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_184.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:612][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_185.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:612][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_186.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:612][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_187.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_196.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_198.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_199.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_200.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_201.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_203.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_204.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:613][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_206.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:614][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_104.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:614][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_114.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:614][900]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_121.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:628][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_143.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:629][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_155.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:629][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_176.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:630][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_221.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:630][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_225.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:630][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_226.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:630][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_171.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:631][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_214.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:631][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:631][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_252.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:631][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_253.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_254.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_255.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_256.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_257.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_258.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_261.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_263.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:632][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_265.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:633][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_266.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:633][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_267.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:633][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_269.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:633][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_271.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:633][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_272.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:633][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_273.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:633][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_275.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:634][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_276.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:634][901]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_277.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:648][902]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_159.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:648][902]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_209.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:648][902]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_234.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:648][902]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_268.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:648][902]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_270.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:648][902]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_300.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:649][902]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_303.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.06-17.40.29:652][902]LogBlueprintUserMessages: [WBP_AreaSelect] screenshots saved
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:652][902]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:653][902]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:653][902]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:653][902]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:653][902]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:702][905]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:703][905]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:703][905]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.29:703][905]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.06-17.40.29:703][905]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.06-17.40.30:865][986]LogActor: Warning: BP_BounceSpring_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.06-17.40.34:812][253]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.06-17.40.34:812][253]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.06-17.40.34:812][253]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.06-17.40.34:818][253]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.06-17.40.34:830][253]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.06-17.40.34:834][253]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.06-17.40.34:842][253]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.06-17.40.34:874][253]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2024.07.06-17.40.34:875][253]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.07.06-17.40.34:876][253]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.07.06-17.40.34:912][253]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
+[2024.07.06-17.40.34:999][254]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2024.07.06-17.40.35:013][254]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.07.06-17.40.35:917][321]LogSlate: Window 'Message Log' being destroyed
+[2024.07.06-17.40.35:920][321]LogSlate: Window 'Message Log' being destroyed
+[2024.07.06-17.40.37:850][500]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2024.07.06-17.40.37:936][500]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.06-17.40.37:973][500]LogSavePackage: Moving output files for package: /Game/Models/MechanicModels/Materials/silver
+[2024.07.06-17.40.37:973][500]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/silver91CF97374B288F5F5252D4984D2EA50E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Models/MechanicModels/Materials/silver.uasset'
+[2024.07.06-17.40.37:980][500]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 647 ms)
+[2024.07.06-17.40.37:981][500]AssetCheck: New page: Asset Save: silver
+[2024.07.06-17.40.37:981][500]LogContentValidation: Display: Validating /Script/Engine.Material /Game/Models/MechanicModels/Materials/silver.silver
