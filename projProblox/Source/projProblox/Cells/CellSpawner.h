@@ -187,4 +187,12 @@ public:
 		// Otherwise return the amount
 		return spawnAmount;
 	}
+
+	// Returns the number of cells spawned from this spawner that have been collected
+	int GetCollectedAmount() const
+	{
+		int count = 0;
+		for(const auto& cell : spawnedCells) if(cell->IsSafe()) count++; 
+		return count;
+	}
 };

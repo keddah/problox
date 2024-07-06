@@ -63,16 +63,6 @@ void ACollector::CalculateCellCount()
 
 	// Only count the cells that aren't captured
 	cellsInLevel = 0;
-	cellCount = 0;
-	
-	UGameplayStatics::GetAllActorsOfClass(wrld, ACell::StaticClass(), countArr);
-	for (const auto& cellActor: countArr)
-	{
-		if(const ACell* cell = Cast<ACell>(cellActor))
-		{
-			if(!cell->IsSafe()) cellsInLevel++;
-		}
-	}
 	
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
 	for (const auto& spawnActor: countArr)
@@ -80,9 +70,56 @@ void ACollector::CalculateCellCount()
 		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
 		{
 			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
-			cellsInLevel+= spawner->GetSpawnAmount();
+			cellsInLevel += spawner->GetSpawnAmount();
 		}
 	}
 
-	Print("Calculated the cells in level: " + FString::FromInt(cellsInLevel), 5)
+	Print("Calculated the cells in all levels: " + FString::FromInt(cellsInLevel), 5)
+}
+
+int ACollector::GetLevelCellCount(ELevel lvl) const
+{
+	TArray<AActor*> countArr;
+
+	// Only count the cells that aren't captured
+	int count = 0;
+	
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), countArr);
+	for (const auto& spawnActor: countArr)
+	{
+		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
+		{
+			// Don't add to the count if not the inputted level.
+			if(spawner->GetLevelEnum() != lvl) continue;
+			
+			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
+			count += spawner->GetSpawnAmount();
+		}
+	}
+
+	Print("Calculated the cells in level: " + FString::FromInt(count), 5)
+	return count;
+}
+
+int ACollector::GetCollectedCountInLvl(ELevel lvl) const
+{
+	TArray<AActor*> countArr;
+
+	// Only count the cells that aren't captured
+	int count = 0;
+	
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACellSpawner::StaticClass(), countArr);
+	for (const auto& spawnActor: countArr)
+	{
+		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
+		{
+			// Don't add to the count if not the inputted level.
+			if(spawner->GetLevelEnum() != lvl) continue;
+
+			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
+			count += spawner->GetCollectedAmount();
+		}
+	}
+
+	return count;
 }

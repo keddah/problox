@@ -22,6 +22,7 @@ class PROJPROBLOX_API ACollector : public AActor
 
 	UFUNCTION(BlueprintCallable)
 	void CalculateCellCount();
+
 	
 public:	
 	// Sets default values for this actor's properties
@@ -66,4 +67,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void AddThing() { cellCount++; }
+
+	UFUNCTION(BlueprintCallable)
+	int GetLevelCellCount(ELevel lvl) const;
+
+	UFUNCTION(BlueprintCallable)
+	int GetCollectedCountInLvl(ELevel lvl) const;
 };
