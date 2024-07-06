@@ -41,8 +41,7 @@ void AThruster::SetAbilityActive(const bool value)
 
 void AThruster::GhostSnapRotate(const FString& keypress)
 {
-	Super::GhostSnapRotate(keypress);
-	// const float turn = keypress == "Q" ? -90 : 90;
-	// silhouette->AddLocalRotation({turn,0,0});
-	// Print(silhouette->GetAttachParent()->GetName(), 4)
+	// The override is going in the opposite direction
+	const float turn = keypress != "Q" ? -90 : 90;
+	silhouette->AddRelativeRotation({0,0,turn});
 }
