@@ -9,7 +9,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class APickupableMaster;
 class UMaterialInstance;
 class UStaticMeshComponent;
 enum class EOperations : uint8;
@@ -29,12 +28,10 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execGetUIDisplayName); \
 	DECLARE_FUNCTION(execIsTimerRequired); \
 	DECLARE_FUNCTION(execGetMesh); \
-	DECLARE_FUNCTION(execAllObjsInHierarchy); \
 	DECLARE_FUNCTION(execSetAbilityActive); \
 	DECLARE_FUNCTION(execSetSelected); \
 	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execGhostSnapRotateMesh); \
-	DECLARE_FUNCTION(execSnapRotateMesh); \
 	DECLARE_FUNCTION(execRotateHori); \
 	DECLARE_FUNCTION(execShowOutline); \
 	DECLARE_FUNCTION(execResetOutline);

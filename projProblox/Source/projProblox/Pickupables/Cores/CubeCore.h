@@ -35,20 +35,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnTurnStarted);
 // Should be broadcast whenever more cells are spawned in after the game has already started.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSpawnedCells);
 
-// Should be broadcast whenever all the cells have been collected whilst in wave mode.
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNewWave, int, wave);
-
 // Should be broadcast whenever an object is added/removed from this cube.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
-
-// Should be broadcast when the cube goes too far away from the container.
-// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOutOfRange);
-
-// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGameEnd);
-// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndingGame);
-
-// Should be broadcast when the reset delay + longest duration has elapsed.. 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttemptEnding);
 
 // Should be broadcast when the reset timer has elapsed.. 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnReset);
@@ -154,12 +142,6 @@ protected:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
 	FOnAttachmentChange onChangeAttachments;
 
-	// UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the min percentage of Things has been collected."))
-	// FOnEndingGame onEndingGame;
-
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
-	FOnAttemptEnding onAttemptEnding;
-
 	/////////////// Undo/Redo ///////////////
 	TArray<APickupableMaster*> previousAttachments;
 
@@ -170,7 +152,6 @@ protected:
 
 	/////////////// Other ///////////////
 	UMaterial* defaultMat;
-	APickupableMaster* hitObj;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
 	float levelEndDelay = 5;
@@ -188,22 +169,12 @@ protected:
 
 	
 ///////////////////////////// Functions /////////////////////////////
-	/////////////// Selection/Placement ///////////////
-	// Ghost placement except the other object's silhouette is affected 
-	void OtherGhostPlacement();
-	
 	/////////////// Rotations ///////////////
-	// Sets rotations depending on the attachee's type / snapRot variable...
-	void OtherRotations(APickupableMaster* other);
 	virtual void ResetRotation(bool resetVelocity) override;
 
 	
 	/////////////// Attachments ///////////////
 	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
-	
-	// Need to change the attaching socket if there's something in the bottom socket since cubes always attach to the bottom
-	// (since the pivot is at the bottom).
-	void RearrangeSockets();
 
 	
 	/////////////// Other ///////////////
@@ -229,7 +200,7 @@ public:
 	TArray<APickupableMaster*> DetachAll(bool push = true);
 	
 	UFUNCTION(BlueprintCallable, Category = "Socket")
-	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
+	bool ObjectInSocket(const FName& socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
 
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(APickupableMaster* toEject);
@@ -246,18 +217,10 @@ public:
 	
 	/////////////// Turn System ///////////////
 	void ResetToStart() const;
-	void InitiateReset() const { onAttemptEnding.Broadcast(); }
 
 
 	/////////////// Getters ///////////////
 	// UFUNCTION(BlueprintCallable, Category = "Socket")
-	TArray<AActor*> GetAttachedActorObjects() const
-	{
-		TArray<AActor*> out;
-		GetDescendentsActors(this, out);
-
-		return out;
-	}
 	TArray<APickupableMaster*> GetAttachedObjs() const
 	{
 		TArray<APickupableMaster*> out;
@@ -305,9 +268,6 @@ public:
 	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when more cells are spawned in whilst the game has already started."))
 	FOnSpawnedCells onCellsSpawned;
-	
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the all the cells have been collected (in wave mode)."))
-	FOnNewWave onNewWave;
 	
 	/////////////// Undo/Redo ///////////////
 	// If something was attached to this core, when undoing/redoing, it detaches the objects that weren't there before the change

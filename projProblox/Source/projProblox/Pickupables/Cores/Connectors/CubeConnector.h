@@ -67,7 +67,7 @@ protected:
 	UArrowComponent* downArrow;
 
 	virtual void BeginPlay() override;
-	virtual void PlacementAgain(ACubeCore* core, const FName& socket) override;
+	virtual void Placement(ACubeCore* core, const FName& socket) override;
 	virtual void GhostPlacement() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	virtual void Reattach(bool sound) override;

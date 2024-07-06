@@ -131,13 +131,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		*(UStaticMeshComponent**)Z_Param__Result=P_THIS->GetMesh();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(APickupableMaster::execAllObjsInHierarchy)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->AllObjsInHierarchy();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(APickupableMaster::execSetAbilityActive)
 	{
 		P_GET_UBOOL(Z_Param_value);
@@ -171,15 +164,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		P_THIS->GhostSnapRotateMesh(Z_Param_hori,Z_Param_keypress);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(APickupableMaster::execSnapRotateMesh)
-	{
-		P_GET_UBOOL(Z_Param_hori);
-		P_GET_PROPERTY(FStrProperty,Z_Param_keypress);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SnapRotateMesh(Z_Param_hori,Z_Param_keypress);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(APickupableMaster::execRotateHori)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_axis);
@@ -207,7 +191,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	{
 		UClass* Class = APickupableMaster::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "AllObjsInHierarchy", &APickupableMaster::execAllObjsInHierarchy },
 			{ "GetMass", &APickupableMaster::execGetMass },
 			{ "GetMesh", &APickupableMaster::execGetMesh },
 			{ "GetUIDisplayName", &APickupableMaster::execGetUIDisplayName },
@@ -221,46 +204,8 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 			{ "SetOutlineMaterial", &APickupableMaster::execSetOutlineMaterial },
 			{ "SetSelected", &APickupableMaster::execSetSelected },
 			{ "ShowOutline", &APickupableMaster::execShowOutline },
-			{ "SnapRotateMesh", &APickupableMaster::execSnapRotateMesh },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics
-	{
-		struct PickupableMaster_eventAllObjsInHierarchy_Parms
-		{
-			TArray<APickupableMaster*> ReturnValue;
-		};
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
-		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventAllObjsInHierarchy_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue_Inner,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "AllObjsInHierarchy", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PickupableMaster_eventAllObjsInHierarchy_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::PickupableMaster_eventAllObjsInHierarchy_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_APickupableMaster_GetMass_Statics
 	{
@@ -682,7 +627,13 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Called by the timeline.\n" },
+#endif
 		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Called by the timeline." },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "SetHideOutlineMesh", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh_Statics::PickupableMaster_eventSetHideOutlineMesh_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh_Statics::Function_MetaDataParams) };
@@ -716,7 +667,13 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// To be called by the timeline so that the colours matchup with the timeline slot.\n" },
+#endif
 		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "To be called by the timeline so that the colours matchup with the timeline slot." },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "SetOutlineMaterial", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial_Statics::PickupableMaster_eventSetOutlineMaterial_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial_Statics::Function_MetaDataParams) };
@@ -813,53 +770,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics
-	{
-		struct PickupableMaster_eventSnapRotateMesh_Parms
-		{
-			bool hori;
-			FString keypress;
-		};
-		static void NewProp_hori_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_hori;
-		static const UECodeGen_Private::FStrPropertyParams NewProp_keypress;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	void Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::NewProp_hori_SetBit(void* Obj)
-	{
-		((PickupableMaster_eventSnapRotateMesh_Parms*)Obj)->hori = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::NewProp_hori = { "hori", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PickupableMaster_eventSnapRotateMesh_Parms), &Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::NewProp_hori_SetBit, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::NewProp_keypress = { "keypress", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PickupableMaster_eventSnapRotateMesh_Parms, keypress), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::NewProp_hori,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::NewProp_keypress,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "SnapRotateMesh", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::PickupableMaster_eventSnapRotateMesh_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::PickupableMaster_eventSnapRotateMesh_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_APickupableMaster_SnapRotateMesh()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupableMaster_SnapRotateMesh_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(APickupableMaster);
 	UClass* Z_Construct_UClass_APickupableMaster_NoRegister()
 	{
@@ -907,11 +817,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #endif
 		static const UECodeGen_Private::FEnumPropertyParams NewProp_favouredSlot;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_canPickup_MetaData[];
-#endif
-		static void NewProp_canPickup_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_canPickup;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_placeDir_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_placeDir;
@@ -919,18 +824,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_placeRange_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_placeRange;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_horiAxis_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_horiAxis;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_vertAxis_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_vertAxis;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_ascensionSpeed_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_ascensionSpeed;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_lockAxis_MetaData[];
 #endif
@@ -970,7 +863,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APickupableMaster_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_APickupableMaster_AllObjsInHierarchy, "AllObjsInHierarchy" }, // 1895914710
 		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 1738982093
 		{ &Z_Construct_UFunction_APickupableMaster_GetMesh, "GetMesh" }, // 627417709
 		{ &Z_Construct_UFunction_APickupableMaster_GetUIDisplayName, "GetUIDisplayName" }, // 1097727041
@@ -980,11 +872,10 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ &Z_Construct_UFunction_APickupableMaster_ResetRotation, "ResetRotation" }, // 3818178389
 		{ &Z_Construct_UFunction_APickupableMaster_RotateHori, "RotateHori" }, // 3554726670
 		{ &Z_Construct_UFunction_APickupableMaster_SetAbilityActive, "SetAbilityActive" }, // 2477835677
-		{ &Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh, "SetHideOutlineMesh" }, // 3401940881
-		{ &Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial, "SetOutlineMaterial" }, // 3323848797
+		{ &Z_Construct_UFunction_APickupableMaster_SetHideOutlineMesh, "SetHideOutlineMesh" }, // 2697587731
+		{ &Z_Construct_UFunction_APickupableMaster_SetOutlineMaterial, "SetOutlineMaterial" }, // 1849679186
 		{ &Z_Construct_UFunction_APickupableMaster_SetSelected, "SetSelected" }, // 1639520225
 		{ &Z_Construct_UFunction_APickupableMaster_ShowOutline, "ShowOutline" }, // 221526900
-		{ &Z_Construct_UFunction_APickupableMaster_SnapRotateMesh, "SnapRotateMesh" }, // 692444575
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -1076,23 +967,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #endif
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_favouredSlot = { "favouredSlot", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, favouredSlot), Z_Construct_UEnum_projProblox_ECoreSockets, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_favouredSlot_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_favouredSlot_MetaData) }; // 1022227656
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup_MetaData[] = {
-		{ "Category", "PickupableMaster" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.\n" },
-#endif
-		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read." },
-#endif
-	};
-#endif
-	void Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup_SetBit(void* Obj)
-	{
-		((APickupableMaster*)Obj)->canPickup = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup = { "canPickup", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APickupableMaster), &Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeDir_MetaData[] = {
 		{ "Category", "PickupableMaster" },
 		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
@@ -1110,33 +984,6 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeRange = { "placeRange", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, placeRange), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeRange_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeRange_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_horiAxis_MetaData[] = {
-		{ "Category", "PickupableMaster" },
-		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The axis the mesh should spin on when trying to spin horizontally (On the global axis)." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_horiAxis = { "horiAxis", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, horiAxis), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_horiAxis_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_horiAxis_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_vertAxis_MetaData[] = {
-		{ "Category", "PickupableMaster" },
-		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The axis the mesh should spin on when trying to spin vertically (On the global axis)." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_vertAxis = { "vertAxis", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, vertAxis), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_vertAxis_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_vertAxis_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_ascensionSpeed_MetaData[] = {
-		{ "Category", "PickupableMaster" },
-		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APickupableMaster_Statics::NewProp_ascensionSpeed = { "ascensionSpeed", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupableMaster, ascensionSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::NewProp_ascensionSpeed_MetaData), Z_Construct_UClass_APickupableMaster_Statics::NewProp_ascensionSpeed_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_lockAxis_MetaData[] = {
 		{ "Category", "PickupableMaster" },
@@ -1224,12 +1071,8 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_selected,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_favouredSlot_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_favouredSlot,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_canPickup,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeDir,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_placeRange,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_horiAxis,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_vertAxis,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_ascensionSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_lockAxis,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_parentCore,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupableMaster_Statics::NewProp_attachOffset,
@@ -1280,9 +1123,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ ECoreSockets_StaticEnum, TEXT("ECoreSockets"), &Z_Registration_Info_UEnum_ECoreSockets, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1022227656U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 825529961U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 363675669U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_2049844523(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_2612736228(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::EnumInfo));

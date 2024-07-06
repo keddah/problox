@@ -128,7 +128,7 @@ void UCubeSocketInfo::AddAttachment(APickupableMaster* attachment, FName socket)
 	socketObjects[index] = attachment;
 }
 
-void UCubeSocketInfo::RemoveAttachment(FName socket)
+void UCubeSocketInfo::RemoveAttachment(const FName& socket)
 {
 	const FString str_socket = socket.ToString().ToUpper();
 	const int index = sockets.Find(FName(str_socket));
@@ -152,19 +152,6 @@ void UCubeSocketInfo::RemoveAttachment(APickupableMaster* obj)
 	}
 
 	socketObjects.Remove(obj);
-}
-
-TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const
-{
-	TArray<AActor*> output;
-	for (const auto& obj : socketObjects)
-	{
-		if(!IsValid(obj)) continue;
-
-		output.Add(obj);
-	}
-
-	return output;
 }
 
 TArray<APickupableMaster*> UCubeSocketInfo::GetAttachments() const

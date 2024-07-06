@@ -98,7 +98,7 @@ void APiston::Detach(bool push)
 
 	SetAbilityActive(false);
 
-	ResetMaterial();
+	SetHideOutlineMesh(true);
 	RemoveVelocity();
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);

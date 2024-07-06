@@ -28,7 +28,6 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 	AWedgeConnector();
 	virtual void ApplyOffset(const ACubeCore* core) override;
 	virtual void GhostPlacement() override;
-	virtual void SnapRotateMesh(bool hori, FString keypress) override;
 	virtual void GhostSnapRotateMesh(bool hori, const FString& keypress) override;
 	virtual void FindOppositeSocket() override { /* There are no opposites... */ }
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override

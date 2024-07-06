@@ -48,7 +48,7 @@ void ACubeConnector::BeginPlay()
 	Super::BeginPlay();
 }
 
-void ACubeConnector::PlacementAgain(ACubeCore* core, const FName& socket)
+void ACubeConnector::Placement(ACubeCore* core, const FName& socket)
 {
 	if(!core)
 	{
@@ -124,7 +124,6 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	if(selected)
 	{
 		wasDetached = isAttached;
-		canPlace = true;
 		Detach(false);
 
 		return wasDetached? EOperations::Detach : EOperations::Move;
@@ -207,7 +206,7 @@ void ACubeConnector::Detach(const bool push)
 
 	SetAbilityActive(false);
 
-	ResetMaterial();
+	SetHideOutlineMesh(true);
 	RemoveVelocity();
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
@@ -246,7 +245,6 @@ void ACubeConnector::SetAttachedSocket(FName socket, const bool useDirection)
 	
 	if(!useDirection) return;
 
-	RearrangeSockets();
 	AlignSocketRot();
 }
 

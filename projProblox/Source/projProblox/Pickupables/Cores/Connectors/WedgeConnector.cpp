@@ -130,25 +130,6 @@ void AWedgeConnector::GhostPlacement()
 	// SetGhostBlocked();
 }
 
-void AWedgeConnector::SnapRotateMesh(bool hori, FString keypress)
-{
-	// If rotating horizontally use 90 degree turns.
-	const float angle = hori? 90 : 45;
-	const float turn = keypress == "Q" || keypress == "R"? -angle : angle;
-		
-	if(hori)
-	{
-		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
-		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
-		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-		return;
-	}
-
-	if(vertAxis.X != 0) AddActorWorldRotation({0,0, turn});
-	else if(vertAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
-	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-}
-
 void AWedgeConnector::GhostSnapRotateMesh(const bool hori, const FString& keypress)
 {
 	// If rotating horizontally use 90 degree turns.

@@ -270,7 +270,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	case 0:
 		if (!lvl0Spawn) break;
 		core->Teleport(lvl0Spawn->GetActorLocation(), lvl0Spawn->GetRot());
-		player->ResetBoom();
+		player->EnterLevel(false);
 		break;
 
 	case 1:
@@ -279,6 +279,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		{
 			core->Teleport(lvl1Spawns[spawnPoint]->GetActorLocation(), lvl1Spawns[spawnPoint]->GetRot());
 		}
+		player->EnterLevel();
 		break;
 
 	case 2:
@@ -287,6 +288,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		{
 			core->Teleport(lvl2Spawns[spawnPoint]->GetActorLocation(), lvl2Spawns[spawnPoint]->GetRot());
 		}
+		player->EnterLevel();
 		break;
 
 	case 3:
@@ -295,6 +297,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		{
 			core->Teleport(lvl3Spawns[spawnPoint]->GetActorLocation(), lvl3Spawns[spawnPoint]->GetRot());
 		}
+		player->EnterLevel();
 		break;
 	}
 

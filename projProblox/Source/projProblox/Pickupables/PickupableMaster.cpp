@@ -78,9 +78,6 @@ void APickupableMaster::BeginPlay()
 	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
 	else if(placeDir.Z != 0) placeRange *= mesh->GetRelativeScale3D().Z;
 	
-	defaultMat = Cast<UMaterial>(mesh->GetMaterial(0));
-	silhouetteMat = Cast<UMaterial>(silhouette->GetMaterial(0));
-
 	wrld = GetWorld();
 	
 	TArray<AActor*> coreActors;
@@ -199,8 +196,6 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	{
 		wasDetached = isAttached;
 		Detach(false);
-		
-		canPlace = true;
 		return wasDetached? EOperations::Detach : EOperations::Move;
 	}
 
@@ -223,7 +218,7 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	return EOperations::Attach;
 }
 
-void APickupableMaster::PlacementAgain(ACubeCore* core, const FName& socket)
+void APickupableMaster::Placement(ACubeCore* core, const FName& socket)
 {
 	if(!core)
 	{
@@ -255,7 +250,7 @@ void APickupableMaster::Detach(const bool push)
 
 	SetAbilityActive(false);
 
-	ResetMaterial();
+	SetHideOutlineMesh(true);
 	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	if(push && parentCore)
@@ -416,30 +411,6 @@ void APickupableMaster::ResetRotation(const bool resetVelocity)
 	GhostPlacement();
 }
 
-void APickupableMaster::RotateHori(const float axis, const float rotSpeed)
-{
-	if(horiAxis.X != 0) AddActorWorldRotation({0,0, axis * rotSpeed});
-	else if(horiAxis.Y != 0) AddActorWorldRotation({axis * rotSpeed, 0, 0});
-	else if(horiAxis.Z != 0) AddActorWorldRotation({0, axis * rotSpeed, 0});
-}
-
-void APickupableMaster::SnapRotateMesh(const bool hori, const FString keypress)
-{
-	const float turn = keypress == "Q" || keypress == "R"? -90 : 90;
-		
-	if(hori)
-	{
-		if(horiAxis.X != 0) AddActorWorldRotation({0,0, turn});
-		else if(horiAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
-		else if(horiAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-		return;
-	}
-
-	if(vertAxis.X != 0) AddActorWorldRotation({0,0, turn});
-	else if(vertAxis.Y != 0) AddActorWorldRotation({turn, 0, 0});
-	else if(vertAxis.Z != 0) AddActorWorldRotation({0, turn, 0});
-}
-
 void APickupableMaster::GhostSnapRotateMesh(const bool hori, const FString& keypress)
 {
 	if(snapRot) return;
@@ -457,7 +428,7 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hit
 	FName closestSocket;
 	const UStaticMeshComponent* coreMesh = core->GetMesh();
 	
-	for(const auto& socket: coreMesh->GetAllSocketNames())
+	for(const auto& socket: core->GetFreeSlots())
 	{
 		// Don't incorporate sockets if there's already an object attached to it
 		if(core) if(core->ObjectInSocket(socket)) continue;
@@ -534,7 +505,7 @@ void APickupableMaster::ActivateOutline(UMaterialInstance* mat) const
 void APickupableMaster::DeactivateOutline()
 {
 	ResetGhost();
-	ResetMaterial();
+	SetHideOutlineMesh(true);
 }
 
 void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray)
@@ -549,24 +520,10 @@ void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableM
 		if (APickupableMaster* objChild = Cast<APickupableMaster>(child))
 		{
 			outArray.Add(objChild);
+			
 			// Recursively get descendants of this child actor
 			GetDescendents(child, outArray);
 		}
-	}
-}
-
-void APickupableMaster::GetDescendentsActors(const AActor* parent, TArray<AActor*>& outArray)
-{
-	if (!parent) return;
-
-	TArray<AActor*> children;
-	parent->GetAttachedActors(children);
-
-	for (AActor* child : children)
-	{
-		outArray.Add(child);
-		// Recursively get descendants of this child actor
-		GetDescendentsActors(child, outArray);
 	}
 }
 
@@ -584,27 +541,6 @@ void APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMas
 			GetAscendants(parent, outArray);
 		}
 	}
-}
-
-void APickupableMaster::GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray)
-{
-	if (!child) return;
-
-	if (AActor* parent = child->GetAttachParentActor())
-	{
-		outArray.Add(parent);
-		// Recursively get ascendants of this parent actor
-		GetAscendantsActors(parent, outArray);
-	}
-}
-
-TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
-{
-	TArray<APickupableMaster*> all;
-
-	GetDescendents(this, all);
-	GetAscendants(this, all);
-	return all;
 }
 
 APickupableMaster* APickupableMaster::GetParent()

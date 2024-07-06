@@ -176,8 +176,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
 	
-	// Used when teleporting to the build area... (resets the camera boom length)
-	void ResetBoom() const { camBoom->TargetArmLength = 0; }
+	// Called from level manager whenever changing spawns...
+	void EnterLevel(const bool canAdjust = true) { camBoom->TargetArmLength = 0; adjustPhase = canAdjust; }
+	
 
 	UFUNCTION()
 	void GoToCore();
