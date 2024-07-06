@@ -177,7 +177,11 @@ public:
 	EGameMode GetGameMode() const { return currentMode; }
 	
 	// Used when teleporting to the build area... (resets the camera boom length)
-	void ResetBoom() const { camBoom->TargetArmLength = 0; }
+	void EnterLevel(const bool canAdjust = true)
+	{
+		camBoom->TargetArmLength = 0;
+		adjustPhase = canAdjust;
+	}
 
 	UFUNCTION()
 	void GoToCore();
@@ -188,16 +192,7 @@ public:
 	
 private:
 	/////////////// Selection / Placement ///////////////
-	// UFUNCTION(BlueprintCallable, Category = "Picking up")
-	// void SelectObject(const FHitResult& hit);
-
 	void SelectObject(APickupableMaster* obj);
-
-	// UFUNCTION(BlueprintCallable, Category = "Picking up")
-	// void GroupSelect(const FHitResult& hit);
-
-	// UFUNCTION(BlueprintCallable, Category = "Picking up")
-	// void MoveSelection(const FVector& mousePos);
 
 	UFUNCTION(BlueprintCallable)
 	void Deselect();

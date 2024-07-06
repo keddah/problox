@@ -398,7 +398,7 @@ void APlayerCharacter::GoToSlot(const bool move, const bool next)
 		return;
 	}
 
-	selectedObj->PlacementAgain(core, selectedSocket);
+	selectedObj->Placement(core, selectedSocket);
 
 	// Move in relation to the new socket placement...
 	if(!move) return;

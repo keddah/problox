@@ -30,33 +30,29 @@ protected:
 	TArray<APickupableMaster*> socketObjects { 0, 0, 0, 0, 0, 0 };
 	
 public:
+	void AddAttachment(APickupableMaster* attachment, FName socket);
+	
+	void RemoveAttachment(FName socket);
+	void RemoveAttachment(APickupableMaster* obj);
+	void ClearAttachments() { for(const auto& name : sockets) RemoveAttachment(name);}
+
+	
+	/////////////// Getters  ///////////////
 	virtual bool ObjectInSocket(const FName& socket) const;
 	virtual bool ObjectInSocket(int index) const;
 	virtual FName GetOppositeSocket(const FName& origin) const;
 	virtual FName GetOppositeSocket(int index) const;
 	
+	APickupableMaster* GetObjectInSocket(const int index) const { return socketObjects[index]; }
+	APickupableMaster* GetObjectInSocket(const FName& name) const;
+	
 	// Returns an array of all of the available sockets (if attached to something else it won't be found (for connectors set the oppositeSocket as the opposite of the attached socket and use that for checks...).
 	TArray<FName> GetFreeSockets() const;
-	
 	// Returns an array of all of the sockets that have objects in them.
 	TArray<FName> GetOccupiedSockets() const;
-	
-	void AddAttachment(APickupableMaster* attachment, FName socket);
-	void RemoveAttachment(FName socket);
-	void RemoveAttachment(APickupableMaster* obj);
-	void ClearAttachments() { for(const auto& name : sockets) RemoveAttachment(name);}
-
-	// Use this when an array of only valid elements is wanted
-	TArray<AActor*> GetAttachmentActors() const;
 	
 	// Use this when an array of only valid elements is wanted
 	TArray<APickupableMaster*> GetAttachments() const;
 
-	
-	// Use these when the entire array of objects is wanted (even invalid ones)
-	TArray<APickupableMaster*> GetObjectsArray() const { return socketObjects; }
 	const TArray<FName>& GetSockets() const { return sockets; }
-	
-	APickupableMaster* GetObjectInSocket(const int index) const { return socketObjects[index]; }
-	APickupableMaster* GetObjectInSocket(const FName& name) const;
 };

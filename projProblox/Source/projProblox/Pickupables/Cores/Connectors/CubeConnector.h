@@ -37,10 +37,6 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 public:
 	ACubeConnector();
 	
-private:
-	virtual void SetAttachedSocket(FName socket, const bool useDirection) override;
-
-public:
 	virtual EOperations SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 
@@ -66,8 +62,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UArrowComponent* downArrow;
 
-	virtual void BeginPlay() override;
-	virtual void PlacementAgain(ACubeCore* core, const FName& socket) override;
+	virtual void Placement(ACubeCore* core, const FName& socket) override;
 	virtual void GhostPlacement() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 	virtual void Reattach(bool sound) override;

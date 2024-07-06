@@ -27,7 +27,6 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
-	virtual void GhostPlacement() override;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UBoxComponent* driveTrigger;

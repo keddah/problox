@@ -9,6 +9,8 @@
 
 #include "Thruster.h"
 
+#include "Cores/CubeCore.h"
+
 AThruster::AThruster()
 {
 	thrusterComp = CreateDefaultSubobject<UPhysicsThrusterComponent>("Thruster");
@@ -35,4 +37,12 @@ void AThruster::SetAbilityActive(const bool value)
 
 	if(value) soundPlayer->PlayAbility();
 	else soundPlayer->StopAbility();
+}
+
+void AThruster::GhostSnapRotate(const FString& keypress)
+{
+	Super::GhostSnapRotate(keypress);
+	// const float turn = keypress == "Q" ? -90 : 90;
+	// silhouette->AddLocalRotation({turn,0,0});
+	// Print(silhouette->GetAttachParent()->GetName(), 4)
 }

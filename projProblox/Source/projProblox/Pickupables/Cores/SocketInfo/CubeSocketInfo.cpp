@@ -154,19 +154,6 @@ void UCubeSocketInfo::RemoveAttachment(APickupableMaster* obj)
 	socketObjects.Remove(obj);
 }
 
-TArray<AActor*> UCubeSocketInfo::GetAttachmentActors() const
-{
-	TArray<AActor*> output;
-	for (const auto& obj : socketObjects)
-	{
-		if(!IsValid(obj)) continue;
-
-		output.Add(obj);
-	}
-
-	return output;
-}
-
 TArray<APickupableMaster*> UCubeSocketInfo::GetAttachments() const
 {
 	if(socketObjects.IsEmpty()) return {};

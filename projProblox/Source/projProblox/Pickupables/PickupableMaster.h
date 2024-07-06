@@ -84,16 +84,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool selected;
 
-	// When group selected, you're unable to place cores...
-	bool canPlace;
-
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The slot that will automatically be selected (if availble) when an object is first selected."))
 	ECoreSockets favouredSlot = ECoreSockets::Front;
 	
-	// This is in the PickupMaster class instead of the cube core (the only time it's used) to make it easier for the player to read.
-	UPROPERTY(BlueprintReadWrite)
-	bool canPickup = true;
-
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
 
@@ -101,15 +94,6 @@ protected:
 	float placeRange = 180;
 	
 	/////////////// Rotations ///////////////
-	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin horizontally (On the global axis)."))
-	FVector horiAxis {0, 0,1};
-	
-	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The axis the mesh should spin on when trying to spin vertically (On the global axis)."))
-	FVector vertAxis {0, 1,0};
-
-	UPROPERTY(EditDefaultsOnly)
-	float ascensionSpeed = 2.5f;
-	
 	FRotator defaultRot{};
 	
 	// Whether or not to use the parent core's socket's forward rotation when attaching...
@@ -146,8 +130,6 @@ protected:
 	bool needsTimer = true;
 	
 	/////////////// Other ///////////////
-	UMaterial* defaultMat;
-	UMaterial* silhouetteMat;
 	UMaterialInstance* outlineMat;
 
 	UPROPERTY(EditDefaultsOnly)
@@ -179,9 +161,6 @@ protected:
 	virtual void GhostPlacement();
 	void ResetGhost() const;
 
-	// Should be ran at the end of GhostPlacement (+ before returns)
-	void SetGhostBlocked();
-	
 	virtual void Ability(float deltaTime)
 	{
 		if(active)
@@ -221,16 +200,13 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	/////////////// Rotations ///////////////
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-	void RotateHori(float axis, const float rotSpeed);
+	UFUNCTION(BlueprintCallable, Category = "Movement|Rotating")
+	void RotateHori(float axis, const float rotSpeed) { AddActorWorldRotation({0, axis * rotSpeed, 0}); }
 	
-	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
-	virtual void SnapRotateMesh(bool hori, FString keypress);
+	UFUNCTION(BlueprintCallable, Category = "Movement|Rotating", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
+	virtual void GhostSnapRotate(const FString& keypress);
 
-	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Quarter parameter = whether of not to rotate in 45 degree intervals... (Recommended for Wedges)"))
-	virtual void GhostSnapRotateMesh(bool hori, const FString& keypress);
-
-	UFUNCTION(BlueprintCallable, Category = "Movement", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
+	UFUNCTION(BlueprintCallable, Category = "Movement|Rotating", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
 
 	bool ShouldSnapRotation() const { return snapRot; }
@@ -244,7 +220,7 @@ public:
 	void Deselect() { Destroy(); }
 	void ManualSetSelected(const bool value) { selected = value; };
 
-	virtual void PlacementAgain(ACubeCore* core, const FName& socket);
+	virtual void Placement(ACubeCore* core, const FName& socket);
 	virtual void Detach(bool push = false);
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
@@ -273,7 +249,7 @@ public:
 
 
 	/////////////// Attachments ///////////////
-	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; AlignSocketRot(useDirection); isAttached = true; }
+	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; isAttached = true; }
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
 
@@ -332,10 +308,7 @@ public:
 
 	ECoreSockets GetFavouredSocket() const { return favouredSlot; }
 
-	// Returns whether or not the player is able to pick this up.
-	bool GetCanPickup() const { return canPickup; }
 
-	
 	/////////////// Other ///////////////
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	
@@ -355,12 +328,6 @@ public:
 	
 	virtual void RemoveVelocity() const;
 	
-	void ResetMaterial()
-	{
-		if(silhouette && silhouetteMat) silhouette->SetMaterial(0, silhouetteMat);
-		SetHideOutlineMesh(true);
-	}
-
 	UFUNCTION(BlueprintCallable)
 	void SetOutlineMaterial(UMaterialInstance* mat) { outlineMat = mat; }
 
@@ -368,14 +335,11 @@ public:
 	void SetHideOutlineMesh(const bool hide)
 	{
 		if(!outlineMat || !outlineMesh) return;
-		
-		outlineMesh->SetMaterial(0, outlineMat);
+
+		for(int i = 0; i < outlineMesh->GetNumMaterials(); i++)	outlineMesh->SetMaterial(i, outlineMat);
 		outlineMesh->SetHiddenInGame(hide);
 	}
 	
-	virtual void ActivateOutline(UMaterialInstance* mat) const;
-	void DeactivateOutline();
-
 	void AddVelocity(const FVector& velocity) const
 	{
 		const FVector currentVel = GetVelocity();
