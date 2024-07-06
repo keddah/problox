@@ -11,6 +11,7 @@
 
 #include "Treads.h"
 
+#include "Components/StaticMeshComponent.h"
 #include "Cores/CubeCore.h"
 #include "Cores/Connectors/WedgeConnector.h"
 
@@ -45,11 +46,16 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 void ATreads::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
-
+	
+	// When the treads are active, make the tread material pan.
+	// mesh->SetScalarParameterValueOnMaterials("SpeedX", active? forward.Y * 1: 0);
+	// mesh->SetScalarParameterValueOnMaterials("SpeedY", active? forward.X * 1: 0);
+	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
-	parentCore->GetMesh()->AddForceAtLocation(GetActorForwardVector() * moveSpeed * parentCore->GetMass(), parentCore->GetMesh()->GetSocketLocation(attachedSocket));
+	mesh->AddForce(GetActorForwardVector() * moveSpeed * parentCore->GetMass());
+	
 }
 
 void ATreads::SetAbilityActive(const bool value)
