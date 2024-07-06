@@ -95,7 +95,8 @@ void APickupableMaster::BeginPlay()
 	}
 	
 	// Only set a custom center of mass if it has been moved... 
-	if(centerMass->GetRelativeLocation().Length() <= .005f) return;
+	const FVector massOffset = centerMass->GetRelativeLocation();
+	if(!(massOffset.X == 0 && massOffset.Y == 0 && massOffset.Z == 0)) return;
 	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
 }
 

@@ -17,7 +17,11 @@ ABounceSpring::ABounceSpring()
 
 	spline = CreateDefaultSubobject<USplineMeshComponent>("Spline Mesh");
 	spline->SetupAttachment(start);
-	spline->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	
+	spline->SetCollisionResponseToAllChannels(ECR_Ignore);
+	spline->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	spline->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	
 	spline->ForwardAxis = ESplineMeshAxis::Z;
 	spline->SetMobility(EComponentMobility::Movable);
 
@@ -56,11 +60,11 @@ void ABounceSpring::Ability(float deltaTime)
 	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
 	end->SetWorldLocation(springHit.Location);
 
-	// Don't add force if in the adjust phase (but still calculate hits so the spline can update). 
-	if(parentCore->InAdjustPhase()) return;
-	
 	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
-	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
+	
+	// Add a reduced force if in the adjust phase (but still calculate hits so the spline can update). 
+	const float springEnergy = GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass();
+	mesh->AddForceAtLocation(springHit.ImpactNormal * (parentCore->InAdjustPhase()? springEnergy * .05f : springEnergy), springHit.Location);
 
 	if(GetVelocity().Length() < 20) return;
 	if(!soundPlayer->IsPlaying()) soundPlayer->PlayAbility();
