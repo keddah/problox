@@ -29,14 +29,11 @@ ABounceSpring::ABounceSpring()
 
 void ABounceSpring::Ability(float deltaTime)
 {
-	Super::Ability(deltaTime);
-	
 	if(!wrld)
 	{
 		Print("Bad world ~ Spring", 5)
 		return;
 	}
-	// if(!isAttached) return;
 
 	const FVector startPos = start->GetComponentLocation();
 	const FVector direction = start->GetForwardVector(); 
@@ -46,9 +43,7 @@ void ABounceSpring::Ability(float deltaTime)
 	collisionParams.AddIgnoredActor(this);
 	collisionParams.AddIgnoredActor(parentCore);
 	
-	// DrawDebugLine(wrld, startPos, endPos, FColor::Red);
 	wrld->LineTraceSingleByChannel(springHit, startPos, endPos, ECC_Visibility, collisionParams);
-
 	mouseDetector->SetWorldLocation(end->GetComponentLocation());
 
 	if(!springHit.bBlockingHit)
@@ -60,12 +55,11 @@ void ABounceSpring::Ability(float deltaTime)
 	}
 	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
 	end->SetWorldLocation(springHit.Location);
+
+	// Don't add force if in the adjust phase (but still calculate hits so the spline can update). 
+	if(parentCore->InAdjustPhase()) return;
 	
-	// DrawDebugPoint(wrld, springHit.ImpactPoint, 10, FColor::Green, false, .2f);
-
 	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
-	// DrawDebugLine(wrld, springHit.Location, springHit.Location + springHit.ImpactNormal * 200, FColor::Cyan);
-
 	mesh->AddForceAtLocation(springHit.ImpactNormal * GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass(), springHit.Location);
 
 	if(GetVelocity().Length() < 20) return;

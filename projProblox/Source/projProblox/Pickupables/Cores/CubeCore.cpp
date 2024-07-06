@@ -112,7 +112,7 @@ void ACubeCore::Start()
 
 void ACubeCore::SetEnableCollisions(const bool enable) const
 {
-	mesh->SetSimulatePhysics(enable);
+	// mesh->SetSimulatePhysics(enable);
 	mesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
 	for(auto& obj : GetCloseAttachments())
 	{
@@ -199,17 +199,6 @@ void ACubeCore::EjectObject(APickupableMaster* toEject)
 	soundPlayer->PlayDetachAll();
 }
 
-void ACubeCore::SetAllAbilityActive(bool value) const
-{
-	const AActor* self = this;
-
-	// The get descendents function ensures that every single thing that is attached to the core (even if it's connected in a chain) is set. 
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-	
-	for (const auto& obj : children) obj->SetAbilityActive(value);
-}
-
 float ACubeCore::GetMass() const
 {
 	if(!mesh->IsSimulatingPhysics()) return 0;
@@ -282,12 +271,21 @@ int ACubeCore::SelectSocket(int socket)
 
 void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 {
+	if(!mesh)
+	{
+		Print("Mesh is invalid ~ core", 5)
+		return;
+	}
 	mesh->SetSimulatePhysics(true);
+	mesh->SetAngularDamping(heavyAngularDrag);
+
 	for (auto& obj : GetCloseAttachments())
 	{
+		UStaticMeshComponent* objMesh = obj->GetMesh();
+		
 		if(obj->IsA<ABalloon>())
 		{
-			obj->GetMesh()->SetSimulatePhysics(true);
+			objMesh->SetSimulatePhysics(true);
 			obj->SetActorLocation(pos + obj->GetActorForwardVector() * 150);
 		}
 	}

@@ -164,14 +164,7 @@ protected:
 	// Should be ran at the end of GhostPlacement (+ before returns)
 	void SetGhostBlocked();
 	
-	virtual void Ability(float deltaTime)
-	{
-		if(active)
-		{
-			silhouette->SetWorldRotation(mesh->GetComponentRotation());
-			silhouette->SetWorldLocation(mesh->GetComponentLocation());
-		}
-	}
+	virtual void Ability(float deltaTime) { }
 
 	
 	/////////////// Attachments ///////////////

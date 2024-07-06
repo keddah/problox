@@ -206,8 +206,6 @@ public:
 	void EjectObject(APickupableMaster* toEject);
 	
 	/////////////// Abilities ///////////////
-	UFUNCTION(BlueprintCallable, Category = "Ablility")
-	void SetAllAbilityActive(bool value) const;
 	virtual void SetAbilityActive(bool value) override;
 
 	
@@ -236,6 +234,9 @@ public:
 		return slots;
 	}
 
+	// When the drag is set to the heavy drag it means the player is in the adjust phase.
+	bool InAdjustPhase() const { return mesh->GetAngularDamping() == heavyAngularDrag; }
+	
 	virtual bool GetIsAttached() const override { return parentCore || isAttached; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Socket")
