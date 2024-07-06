@@ -223,6 +223,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
 
+	bool InAdjustPhase() const
+	{
+		// When the angular drag is increased, the player is in the adjust phase.
+		return mesh->GetAngularDamping() == heavyAngularDrag;
+	}
+	
 
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
