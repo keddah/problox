@@ -32,6 +32,7 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Piston.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Propeller.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Thruster.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Treads.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/PlayerCharacter.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/projProblox.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/SpawnPoint.cpp"
