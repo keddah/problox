@@ -1,4 +1,14 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Hoverer - Header
+* 
+* The header file for one of the pickupable objects.
+* 
+* OVERRIDES:
+*	SetAbilityActive
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -12,11 +22,10 @@ class PROJPROBLOX_API AHoverer : public APickupableMaster
 	GENERATED_BODY()
 
 	AHoverer();
-	virtual void BeginPlay() override;
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
-	
+
 	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* topLeft;
 

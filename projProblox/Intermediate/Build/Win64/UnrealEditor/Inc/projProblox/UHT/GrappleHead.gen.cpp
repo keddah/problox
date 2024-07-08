@@ -31,6 +31,10 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_cancelDistance_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_cancelDistance;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_mesh_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_mesh;
@@ -46,10 +50,6 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_pullSpeed_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_pullSpeed;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_cancelDistance_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_cancelDistance;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -65,6 +65,13 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		{ "ModuleRelativePath", "Pickupables/Grapple/GrappleHead.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData[] = {
+		{ "Category", "GrappleHead" },
+		{ "ModuleRelativePath", "Pickupables/Grapple/GrappleHead.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance = { "cancelDistance", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, cancelDistance), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_mesh_MetaData[] = {
 		{ "Category", "GrappleHead" },
@@ -90,24 +97,17 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce = { "launchForce", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, launchForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData[] = {
-		{ "Category", "Ability" },
+		{ "Category", "GrappleHead" },
 		{ "ModuleRelativePath", "Pickupables/Grapple/GrappleHead.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed = { "pullSpeed", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, pullSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData[] = {
-		{ "Category", "Ability" },
-		{ "ModuleRelativePath", "Pickupables/Grapple/GrappleHead.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance = { "cancelDistance", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrappleHead, cancelDistance), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData), Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGrappleHead_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_mesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_collider,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_launchForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_pullSpeed,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrappleHead_Statics::NewProp_cancelDistance,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGrappleHead_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGrappleHead>::IsAbstract,
@@ -147,9 +147,9 @@ void EmptyLinkFunctionForGeneratedCodeGrappleHead() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Grapple_GrappleHead_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 635226480U) },
+		{ Z_Construct_UClass_AGrappleHead, AGrappleHead::StaticClass, TEXT("AGrappleHead"), &Z_Registration_Info_UClass_AGrappleHead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrappleHead), 2527468807U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Grapple_GrappleHead_h_793944010(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Grapple_GrappleHead_h_2582999526(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Grapple_GrappleHead_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Grapple_GrappleHead_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

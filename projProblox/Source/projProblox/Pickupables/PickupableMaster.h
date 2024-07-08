@@ -149,22 +149,16 @@ protected:
 
 	
 ///////////////////////////// Functions /////////////////////////////
+	/////////////// Ability ///////////////
+	virtual void Ability(float deltaTime) { }
+
 
 	/////////////// Selection / Placement ///////////////
-	FName NearestSocket(const ACubeCore* core, const FVector& hitPos) const;
-	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
+	
+	FName NearestSocket(const ACubeCore* core, const FVector& hitPos) const;
 	void ResetGhost() const;
-
-	virtual void Ability(float deltaTime)
-	{
-		if(active)
-		{
-			silhouette->SetWorldRotation(mesh->GetComponentRotation());
-			silhouette->SetWorldLocation(mesh->GetComponentLocation());
-		}
-	}
 
 	
 	/////////////// Attachments ///////////////
@@ -213,16 +207,7 @@ public:
 	virtual EOperations SetSelected(const bool value);
 
 	// Teleport to 0,0,0
-	void Deselect()
-	{
-		SetActorLocation({});
-
-		FTimerHandle destroyHandle;
-		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(this, &APickupableMaster::DestroySelf);
-
-		// Destroy after 30 seconds (gives time for the player to undo/redo
-		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 30, false);
-	}
+	void Deselect() { Destroy(); }
 
 	virtual void Placement(ACubeCore* core, const FName& socket);
 	virtual void Detach(bool push = false);

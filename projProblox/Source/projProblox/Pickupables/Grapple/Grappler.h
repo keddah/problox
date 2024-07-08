@@ -4,7 +4,6 @@
 * The header file for one of the pickupable objects.
 * OVERRIDES:
 *	SetAbilityActive
-*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

@@ -18,11 +18,16 @@ UCLASS()
 class PROJPROBLOX_API AGrappleHead : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AGrappleHead();
 
+	UPROPERTY(EditDefaultsOnly)
+	float cancelDistance = 500;
+
+	
+public:
+	AGrappleHead();
+	UStaticMeshComponent* GetMesh() const { return mesh; }
+
+	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* mesh;
@@ -33,12 +38,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	float launchForce = 3;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	float pullSpeed = 9;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float cancelDistance = 500;
-	
-public:	
-	UStaticMeshComponent* GetMesh() const { return mesh; }
 };

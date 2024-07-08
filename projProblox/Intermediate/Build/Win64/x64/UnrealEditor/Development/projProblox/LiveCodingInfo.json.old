@@ -33,10 +33,10 @@
 			"Modes.gen.cpp.obj",
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
-			"Propeller.gen.cpp.obj",
-			"SaveFiles.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj"
+			"projProblox.init.gen.cpp.obj",
+			"Propeller.gen.cpp.obj",
+			"SaveFiles.gen.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
 			"SpawnPoint.gen.cpp.obj",
@@ -44,11 +44,9 @@
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
-			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
-			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
@@ -59,6 +57,7 @@
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -77,7 +76,8 @@
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"CubeCore.cpp.obj",
+			"AudioManager.cpp.obj",
+			"Collector.cpp.obj",
 			"PlayerCharacter.cpp.obj"
 		]
 	}

@@ -1,4 +1,12 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Hoverer - Code
+* 
+* The code file for one of the pickupable objects.
+* 
+* Problems:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "Hoverer.h"
@@ -32,11 +40,6 @@ AHoverer::AHoverer()
 
 	uiName = "Hoverer";
 	favouredSlot = ECoreSockets::Down;
-}
-
-void AHoverer::BeginPlay()
-{
-	Super::BeginPlay();
 }
 
 void AHoverer::Ability(float deltaTime)
@@ -91,7 +94,6 @@ void AHoverer::Ability(float deltaTime)
 			
 				const float power = (hoverStrength * -1000) / distanceSquared;
 				mesh->AddForceAtLocation(forwardVec * power, end);
-	
 				// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 			}
 		}
@@ -101,5 +103,7 @@ void AHoverer::Ability(float deltaTime)
 void AHoverer::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
+
+	// Make it harder to turn whilst the hover is active
 	if(parentCore) parentCore->GetMesh()->SetAngularDamping(active? 5 : 0);
 }

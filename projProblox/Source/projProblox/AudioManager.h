@@ -1,4 +1,12 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Audio Manager - Header
+* 
+* The header file for the audio manager. This class will be a component that will be attached to every attachment. The references for the sounds to be played
+* will need to be set in blueprint (but defaults will be set)
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -8,7 +16,7 @@
 #include "AudioManager.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class PROJPROBLOX_API UAudioManager : public UActorComponent
 {
 	GENERATED_BODY()
@@ -23,7 +31,7 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	TArray<USoundWave*> sounds;
 
-	void PlaySound(int index, float startTime = 0);
+	void PlaySound(short index, float startTime = 0);
 	void StopSound(const float delay = 0) const { player->StopDelayed(delay); }
 	void LoadSoundFiles();
 	
@@ -47,6 +55,7 @@ public:
 	
 	bool IsPlaying() const { return player->IsPlaying(); }
 
+	// The attach, detach and detach all will always be these indices.
 	void PlayAttach(float startTime = 0) { PlaySound(0, startTime); }
 	void PlayDetach(float startTime = 0) { PlaySound(1, startTime); }
 	void PlayDetachAll(const float startTime = 0) { PlaySound(2, startTime); }
@@ -56,6 +65,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void StopAbility() { if(player->Sound == sounds.Last()) StopSound(); }
 
+	// To be used with metaSounds to set parameters...
 	void SetFloatParam(const FName& key, const float value) const { player->SetFloatParameter(key, value); }
 	void SetIntParam(const FName& key, const int value) const { player->SetIntParameter(key, value); }
 	void SetBoolParam(const FName& key, const bool value) const { player->SetBoolParameter(key, value); }

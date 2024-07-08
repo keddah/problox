@@ -1,4 +1,13 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Spring - Code
+* 
+* The code file for one of the pickupables.
+*
+* Problems:
+*
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "BounceSpring.h"

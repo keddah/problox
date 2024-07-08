@@ -9,7 +9,6 @@
 
 #include "GrappleHead.h"
 
-// Sets default values
 AGrappleHead::AGrappleHead()
 {
 	PrimaryActorTick.bCanEverTick = false;

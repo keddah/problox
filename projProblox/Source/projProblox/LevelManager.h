@@ -1,7 +1,7 @@
 /**************************************************************************************************************
 * Level Manager - Header
 * 
-* The header file for the level manager. Creates delegates for loading, changing spawns and changing levels. Defines the functions and functions that the level manger
+* The header file for the level manager. Creates delegates for loading, changing spawns and changing levels. Defines variables and the functions that the level manger
 * needs
 *
 * Created by Dean Atkinson-Walker 2024

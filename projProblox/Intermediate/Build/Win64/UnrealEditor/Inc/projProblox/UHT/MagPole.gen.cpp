@@ -16,68 +16,8 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AMagPole_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
-	DEFINE_FUNCTION(AMagPole::execSetPositiveCharge)
-	{
-		P_GET_UBOOL(Z_Param_pos);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SetPositiveCharge(Z_Param_pos);
-		P_NATIVE_END;
-	}
 	void AMagPole::StaticRegisterNativesAMagPole()
 	{
-		UClass* Class = AMagPole::StaticClass();
-		static const FNameNativePtrPair Funcs[] = {
-			{ "SetPositiveCharge", &AMagPole::execSetPositiveCharge },
-		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics
-	{
-		struct MagPole_eventSetPositiveCharge_Parms
-		{
-			bool pos;
-		};
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_pos_MetaData[];
-#endif
-		static void NewProp_pos_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_pos;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::NewProp_pos_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	void Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::NewProp_pos_SetBit(void* Obj)
-	{
-		((MagPole_eventSetPositiveCharge_Parms*)Obj)->pos = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::NewProp_pos = { "pos", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(MagPole_eventSetPositiveCharge_Parms), &Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::NewProp_pos_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::NewProp_pos_MetaData), Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::NewProp_pos_MetaData) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::NewProp_pos,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Pickupables/Magnet/MagPole.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMagPole, nullptr, "SetPositiveCharge", nullptr, nullptr, Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::PropPointers), sizeof(Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::MagPole_eventSetPositiveCharge_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::MagPole_eventSetPositiveCharge_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_AMagPole_SetPositiveCharge()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMagPole_SetPositiveCharge_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AMagPole);
 	UClass* Z_Construct_UClass_AMagPole_NoRegister()
@@ -87,7 +27,6 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 	struct Z_Construct_UClass_AMagPole_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -121,10 +60,6 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_projProblox,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMagPole_Statics::DependentSingletons) < 16);
-	const FClassFunctionLinkInfo Z_Construct_UClass_AMagPole_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMagPole_SetPositiveCharge, "SetPositiveCharge" }, // 957420590
-	};
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMagPole_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMagPole_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "Pickupables/Magnet/MagPole.h" },
@@ -190,11 +125,11 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		Z_Construct_UClass_AMagPole_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AMagPole_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -220,9 +155,9 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMagPole, AMagPole::StaticClass, TEXT("AMagPole"), &Z_Registration_Info_UClass_AMagPole, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagPole), 3468512923U) },
+		{ Z_Construct_UClass_AMagPole, AMagPole::StaticClass, TEXT("AMagPole"), &Z_Registration_Info_UClass_AMagPole, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagPole), 1288959553U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_1398933210(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_1612018874(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

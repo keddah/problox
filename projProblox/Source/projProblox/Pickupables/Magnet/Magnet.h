@@ -3,7 +3,6 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	Ability
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -21,8 +20,11 @@ UCLASS()
 class PROJPROBLOX_API AMagnet : public APickupableMaster	
 {
 	GENERATED_BODY()
-
 	AMagnet() { uiName = "Magnet"; favouredSlot = ECoreSockets::Up; }
+
+	virtual void BeginPlay() override;
+	virtual void Ability(float deltaTime) override;
+	
 	
 	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* positiveMat;
@@ -52,17 +54,10 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	
 public:
 	UFUNCTION(BlueprintCallable)
-	void SetCharge(const bool pos) { positive = pos; ConfigureMat(); }
-
-	UFUNCTION(BlueprintCallable)
 	bool GetIsPositive() const { return positive; }
 
 	float GetAttraction() const { return attractionForce; }
 
 	// For when a new magpole is created in creative mode...
 	void AddMagPole(AMagPole* newPole) { poles.AddUnique(newPole); }
-	
-protected:
-	virtual void BeginPlay() override;
-	virtual void Ability(float deltaTime) override;
 };

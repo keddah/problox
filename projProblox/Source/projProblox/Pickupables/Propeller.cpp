@@ -66,8 +66,6 @@ void APropeller::Ability(const float deltaTime)
 	const FVector force = power * mesh->GetForwardVector();
 	
 	parentCore->GetMesh()->AddForceAtLocation(force, mesh->GetComponentLocation());
-
-	
 }
 
 void APropeller::SetAbilityActive(const bool value)

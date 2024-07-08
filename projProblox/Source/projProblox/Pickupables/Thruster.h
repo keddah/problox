@@ -3,7 +3,6 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	Ability
 *	SetAbilityActive
 *	GhostSnapRotate
 *

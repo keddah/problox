@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Buyable's Information - Header
+* 
+* The header file for the buyable information data asset. Defines a struct to make these easier to manage.
+* 
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -41,7 +48,7 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 {
 	GENERATED_BODY()
 
-	UBuyableInfo();
+	UBuyableInfo() { name = GetName(); }
 	
 	UPROPERTY(EditAnywhere)
 	FString name = "No description given...";

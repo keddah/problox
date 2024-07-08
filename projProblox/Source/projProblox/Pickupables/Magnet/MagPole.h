@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Mag Pole - Header
+* 
+* The header file for one of the mag pole class. Imitates the pickupable's Magnet except will be used for stationary objects (can't be attached).
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -45,10 +52,7 @@ public:
 		return out;
 	}
 
-	UFUNCTION(BlueprintCallable)
-	void SetPositiveCharge(const bool pos) { positive = pos; ConfigureCharge(); }
-	
 protected:
 	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	virtual void BeginPlay() override { ConfigureCharge(); Super::BeginPlay(); }
 };

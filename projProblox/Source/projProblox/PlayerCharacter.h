@@ -74,7 +74,7 @@ private:
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same as NextPreviousSlot() except it goes 2 spaces ahead instead of one."))
 	void AboveBelowSlot(const bool above);
 
-	void GoToSlot(bool move = false, bool next = false);
+	void GoToSlot();
 
 	UFUNCTION(BlueprintCallable)
 	void EndTurnEarly();
@@ -165,7 +165,7 @@ protected:
 	
 public:	
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override { Super::SetupPlayerInputComponent(PlayerInputComponent); }
 
 	UFUNCTION(BlueprintCallable)
 	void SetGameMode(EGameMode mode)
@@ -217,10 +217,7 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void AdjustCore(const FHitResult& hit);
 	
-	// UFUNCTION(BlueprintCallable)
-	// void ChangeCore(float value);
 
-	
 	/////////////// Game States ///////////////
 	UFUNCTION()
 	void EndGame() { gameEnded = true; }

@@ -41,7 +41,6 @@ void AMagnet::Ability(const float deltaTime)
 	if(!active) return;
 
 	const FVector thisPos = GetActorLocation();
-
 	if(!poles.IsEmpty())
 	{
 		for (const auto& mag : poles)
@@ -82,5 +81,4 @@ void AMagnet::Ability(const float deltaTime)
 		// Scale the force by the distance of the involved blocks 
 		mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 	}
-	
 }

@@ -3,11 +3,9 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	Ability
 *	SetSelected
 *	GetParent
 *	Detach
-*	Reattach
 *	GhostPlacement
 *	UseSilhouetteTransform
 *

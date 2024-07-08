@@ -23,11 +23,8 @@ class PROJPROBLOX_API ACollector : public AActor
 	UFUNCTION(BlueprintCallable)
 	void CalculateCellCount();
 	
-public:	
-	// Sets default values for this actor's properties
 	ACollector();
 
-protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -41,13 +38,14 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	UStaticMeshComponent* tube;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UStaticMeshComponent* lid;
-
 	UPROPERTY(EditDefaultsOnly)
 	UPointLightComponent* light;
 
-
+	
+protected:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UStaticMeshComponent* lid;
+	
 	/////////////// Cells ///////////////
 	UPROPERTY(BlueprintReadWrite)
 	int32 cellsInLevel;

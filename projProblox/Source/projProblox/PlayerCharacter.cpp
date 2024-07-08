@@ -1,4 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Player - Code
+* 
+* The code file for the player. Creates the camera and boom components and sets the core..
+* This file also contains the logic for the build controls
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "PlayerCharacter.h"
@@ -45,12 +52,6 @@ void APlayerCharacter::BeginPlay()
 	// core->onReset.AddDynamic(this, &APlayerCharacter::GoToCore);
 
 	history = NewObject<UActionHistory>();
-}
-
-// Called to bind functionality to input
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
 void APlayerCharacter::UndoRedo(const bool redo)
@@ -240,7 +241,7 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 	const float dotProduct = FVector::DotProduct(newDirection, FVector::UpVector);
 
 	// Clamps the rotation
-	const float tolerance = 0.95f; 
+	constexpr float tolerance = 0.95f; 
 	if (FMath::Abs(dotProduct) < tolerance) direction = newDirection;
 
 	const FVector newPos = corePos + direction * radius;
@@ -283,20 +284,17 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 
 	// Define the desired order of sockets
 	const TArray<FName> desiredOrder = { "FRONT", "RIGHT", "BACK", "LEFT" };
-
 	for (const auto& orderSocket : desiredOrder)
 	{
-		if (freeSockets.Contains(orderSocket))
-		{
-			reorderedSockets.Add(orderSocket);
-		}
+		if (freeSockets.Contains(orderSocket)) reorderedSockets.Add(orderSocket);
 	}
+
 	currentSlot += next? 1 : -1;
 	if(currentSlot >= reorderedSockets.Num()) currentSlot = 0;
 	if(currentSlot < 0) currentSlot = reorderedSockets.Num() - 1;
 		
 	if(reorderedSockets.IsValidIndex(currentSlot)) selectedSocket = reorderedSockets[currentSlot];
-	GoToSlot(true, next);
+	GoToSlot();
 }
 
 void APlayerCharacter::AboveBelowSlot(const bool above)
@@ -321,7 +319,7 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 		return;
 	}
 	
-	currentSlot += above? 2 : -2;
+	currentSlot += above? 1 : -1;
 	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
 	else if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
 		
@@ -329,7 +327,7 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 	GoToSlot();
 }
 
-void APlayerCharacter::GoToSlot(const bool move, const bool next)
+void APlayerCharacter::GoToSlot()
 {
 	if(!selectedObj)
 	{
@@ -346,7 +344,7 @@ void APlayerCharacter::GoToSlot(const bool move, const bool next)
 	selectedObj->Placement(core, selectedSocket);
 
 	// Move in relation to the new socket placement...
-	if(!move) return;
+	// if(!move) return;
 
 	// constexpr float moveAmount = 9;
 	// mouseValues.X += next? moveAmount : -moveAmount;

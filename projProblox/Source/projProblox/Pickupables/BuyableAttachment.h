@@ -1,4 +1,12 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Buyable Attachment - Header
+* 
+* The header file for the buyable attachment. This class allows the player to purchase attachments. A widget is also created to allow for information
+* like the price, description and name to be displayed.
+* 
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 

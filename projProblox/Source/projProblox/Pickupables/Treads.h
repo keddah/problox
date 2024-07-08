@@ -5,7 +5,6 @@
 * OVERRIDES:
 *	GetAttachedOffset
 *	Ability
-*	GhostPlacement
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -32,11 +31,10 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	UBoxComponent* driveTrigger;
 	
 	/////////////// Ability ///////////////
-
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
 	float moveSpeed = 5000;
 
 protected:
-	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
+	UPROPERTY(BlueprintReadWrite, Category = "Ability", meta = (ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
 	bool grounded;
 };

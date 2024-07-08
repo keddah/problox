@@ -1,13 +1,10 @@
 /**************************************************************************************************************
 * Balloon - Code
 * 
-* The code file for one of the pickupable objects. The only attachment that doesn't directly attach itself to the core.
-* Instead, it uses a physics constraint. This file Creates the required components for this attachment and sets up their parameters. 
+* The code file for one of the pickupable objects. Provides the overrides to allow this to work. This attachment uses constraints instead of actually
+* attaching to the core. Also manages the state of the cable component. 
 * 
 * Problems:
-*	GetAttachedOffset
-*	Ability
-*	GhostPlacement
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

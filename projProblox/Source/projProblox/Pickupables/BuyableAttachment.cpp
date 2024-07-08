@@ -1,4 +1,10 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Buyable Attachment - Code
+* 
+* The code file for the buyable attachment. Gives functionality to allow the buyable to interact whenever it's bought.
+* 
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "BuyableAttachment.h"
@@ -19,10 +25,7 @@ ABuyableAttachment::ABuyableAttachment()
 
 void ABuyableAttachment::UnlockAttachment()
 {
-	if(unlocked)
-	{
-		return;
-	}
+	if(unlocked) return;
 	
 	unlocked = true;
 	SetHide(false);
