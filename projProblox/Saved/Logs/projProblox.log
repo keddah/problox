@@ -7164,3 +7164,419 @@ Script Stack (0 frames) :
 [2024.07.08-15.22.37:278][559]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
 [2024.07.08-15.26.20:537][265]LogSlate: Window 'Message Log' being destroyed
 [2024.07.08-15.26.20:550][265]LogSlate: Window 'Message Log' being destroyed
+[2024.07.08-15.27.16:297][182]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2024.07.08-15.27.16:482][182]LogContentBrowser: Creating deferred item: NewFolder
+[2024.07.08-15.27.16:510][183]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2024.07.08-15.27.20:253][338]LogContentBrowser: Attempting asset rename: NewFolder -> SFX
+[2024.07.08-15.27.20:270][338]LogContentBrowser: End creating deferred item NewFolder
+[2024.07.08-15.27.54:605][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# AC Unit .wav)
+[2024.07.08-15.27.54:623][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __AC_Unit_...
+[2024.07.08-15.27.54:717][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__AC_Unit_.__AC_Unit_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.54:725][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __AC_Unit_...
+[2024.07.08-15.27.54:812][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__AC_Unit_.__AC_Unit_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.55:016][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Balloon Pop.wav)
+[2024.07.08-15.27.55:018][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Balloon_Pop...
+[2024.07.08-15.27.55:022][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Balloon_Pop.__Balloon_Pop: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.55:023][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Balloon_Pop...
+[2024.07.08-15.27.55:025][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Balloon_Pop.__Balloon_Pop: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.55:280][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Breaking Glass (bulb).wav)
+[2024.07.08-15.27.55:283][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Breaking_Glass__bulb_...
+[2024.07.08-15.27.55:293][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Breaking_Glass__bulb_.__Breaking_Glass__bulb_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.55:295][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Breaking_Glass__bulb_...
+[2024.07.08-15.27.55:303][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Breaking_Glass__bulb_.__Breaking_Glass__bulb_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.55:546][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Carpet Hit.wav)
+[2024.07.08-15.27.55:548][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Carpet_Hit...
+[2024.07.08-15.27.55:551][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Carpet_Hit.__Carpet_Hit: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.55:552][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Carpet_Hit...
+[2024.07.08-15.27.55:555][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Carpet_Hit.__Carpet_Hit: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.55:839][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Ceiling Fan.wav)
+[2024.07.08-15.27.55:852][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Ceiling_Fan...
+[2024.07.08-15.27.56:054][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Ceiling_Fan.__Ceiling_Fan: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.56:058][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Ceiling_Fan...
+[2024.07.08-15.27.56:283][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Ceiling_Fan.__Ceiling_Fan: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.56:295][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Connecting attachments .wav)
+[2024.07.08-15.27.56:296][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Connecting_attachments_...
+[2024.07.08-15.27.56:298][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Connecting_attachments_.__Connecting_attachments_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.56:299][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Connecting_attachments_...
+[2024.07.08-15.27.56:300][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Connecting_attachments_.__Connecting_attachments_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.56:543][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Door Lock.wav)
+[2024.07.08-15.27.56:545][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Door_Lock...
+[2024.07.08-15.27.56:550][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Door_Lock.__Door_Lock: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.56:551][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Door_Lock...
+[2024.07.08-15.27.56:555][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Door_Lock.__Door_Lock: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.56:837][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Extractor Fan.wav)
+[2024.07.08-15.27.56:845][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Extractor_Fan...
+[2024.07.08-15.27.56:980][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Extractor_Fan.__Extractor_Fan: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.56:985][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Extractor_Fan...
+[2024.07.08-15.27.57:223][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Extractor_Fan.__Extractor_Fan: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.57:246][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Glass Breaking (mirror) .wav)
+[2024.07.08-15.27.57:250][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Glass_Breaking__mirror__...
+[2024.07.08-15.27.57:264][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Glass_Breaking__mirror__.__Glass_Breaking__mirror__: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.57:266][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Glass_Breaking__mirror__...
+[2024.07.08-15.27.57:279][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Glass_Breaking__mirror__.__Glass_Breaking__mirror__: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.57:537][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Glass Falling .wav)
+[2024.07.08-15.27.57:541][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Glass_Falling_...
+[2024.07.08-15.27.57:549][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Glass_Falling_.__Glass_Falling_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.57:550][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Glass_Falling_...
+[2024.07.08-15.27.57:559][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Glass_Falling_.__Glass_Falling_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.57:820][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Glider.wav)
+[2024.07.08-15.27.57:828][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Glider...
+[2024.07.08-15.27.57:899][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Glider.__Glider: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.57:901][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Glider...
+[2024.07.08-15.27.58:124][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Glider.__Glider: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.58:141][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Grapple Gun.wav)
+[2024.07.08-15.27.58:143][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Grapple_Gun...
+[2024.07.08-15.27.58:147][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Grapple_Gun.__Grapple_Gun: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.58:148][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Grapple_Gun...
+[2024.07.08-15.27.58:151][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Grapple_Gun.__Grapple_Gun: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.58:404][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Hair Dryer.wav)
+[2024.07.08-15.27.58:409][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Hair_Dryer...
+[2024.07.08-15.27.58:469][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Hair_Dryer.__Hair_Dryer: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.58:472][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Hair_Dryer...
+[2024.07.08-15.27.58:700][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Hair_Dryer.__Hair_Dryer: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.58:757][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Kettle Boiling.wav)
+[2024.07.08-15.27.58:816][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Kettle_Boiling...
+[2024.07.08-15.27.59:803][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Kettle_Boiling.__Kettle_Boiling: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.27.59:829][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Kettle_Boiling...
+[2024.07.08-15.28.00:095][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# KthenHob.wav)
+[2024.07.08-15.28.00:102][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __KthenHob...
+[2024.07.08-15.28.00:230][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__KthenHob.__KthenHob: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.00:234][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __KthenHob...
+[2024.07.08-15.28.00:516][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Light Bulb Buzz.wav)
+[2024.07.08-15.28.00:548][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Light_Bulb_Buzz...
+[2024.07.08-15.28.00:933][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Kettle_Boiling.__Kettle_Boiling: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.00:933][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Light_Bulb_Buzz.__Light_Bulb_Buzz: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.00:958][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Light_Bulb_Buzz...
+[2024.07.08-15.28.00:964][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__KthenHob.__KthenHob: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.01:302][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Light Switch Fail.wav)
+[2024.07.08-15.28.01:305][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Light_Switch_Fail...
+[2024.07.08-15.28.01:323][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Light_Switch_Fail.__Light_Switch_Fail: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.01:328][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Light_Switch_Fail...
+[2024.07.08-15.28.01:377][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Light_Bulb_Buzz.__Light_Bulb_Buzz: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.01:394][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Light_Switch_Fail.__Light_Switch_Fail: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.01:630][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Piston.wav)
+[2024.07.08-15.28.01:631][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Piston...
+[2024.07.08-15.28.01:633][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Piston.__Piston: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.01:633][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Piston...
+[2024.07.08-15.28.01:637][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Piston.__Piston: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.01:954][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Pottery falling .wav)
+[2024.07.08-15.28.01:955][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Pottery_falling_...
+[2024.07.08-15.28.01:965][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Pottery_falling_.__Pottery_falling_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.01:966][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Pottery_falling_...
+[2024.07.08-15.28.01:974][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Pottery_falling_.__Pottery_falling_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.02:270][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Propellor .wav)
+[2024.07.08-15.28.02:276][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Propellor_...
+[2024.07.08-15.28.02:343][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Propellor_.__Propellor_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.02:347][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Propellor_...
+[2024.07.08-15.28.02:414][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Propellor_.__Propellor_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.02:680][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Shower.wav)
+[2024.07.08-15.28.02:685][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Shower...
+[2024.07.08-15.28.02:737][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Shower.__Shower: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.02:739][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Shower...
+[2024.07.08-15.28.02:799][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Shower.__Shower: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.03:039][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Spring.wav)
+[2024.07.08-15.28.03:042][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Spring...
+[2024.07.08-15.28.03:068][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Spring.__Spring: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.03:070][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Spring...
+[2024.07.08-15.28.03:099][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Spring.__Spring: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.03:370][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Tank Tracks .wav)
+[2024.07.08-15.28.03:377][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Tank_Tracks_...
+[2024.07.08-15.28.03:470][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Tank_Tracks_.__Tank_Tracks_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.03:474][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Tank_Tracks_...
+[2024.07.08-15.28.03:762][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Tank_Tracks_.__Tank_Tracks_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.03:790][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Thruster .wav)
+[2024.07.08-15.28.03:794][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Thruster_...
+[2024.07.08-15.28.03:836][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Thruster_.__Thruster_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.03:838][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Thruster_...
+[2024.07.08-15.28.03:883][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Thruster_.__Thruster_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.04:139][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Thud Wooden .wav)
+[2024.07.08-15.28.04:141][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Thud_Wooden_...
+[2024.07.08-15.28.04:142][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Thud_Wooden_.__Thud_Wooden_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.04:143][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Thud_Wooden_...
+[2024.07.08-15.28.04:145][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Thud_Wooden_.__Thud_Wooden_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.04:444][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Toilet Flushing .wav)
+[2024.07.08-15.28.04:447][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Toilet_Flushing_...
+[2024.07.08-15.28.04:472][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Toilet_Flushing_.__Toilet_Flushing_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.04:473][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Toilet_Flushing_...
+[2024.07.08-15.28.04:500][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Toilet_Flushing_.__Toilet_Flushing_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.04:765][486]LogFactory: FactoryCreateFile: SoundWave with SoundFactory (0 0 D:/Uni/SFX/# Water running .wav)
+[2024.07.08-15.28.04:774][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Water_running_...
+[2024.07.08-15.28.04:868][486]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Water_running_.__Water_running_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.04:872][486]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_CSZE_65536_LCF_false_ZCS_0_MCSO_0_END wave __Water_running_...
+[2024.07.08-15.28.04:964][488]LogAudio: Display: Chunk sizes for SoundWave /Game/SFX/__Water_running_.__Water_running_: Chunk0=28 bytes, Chunk1-N=256k
+[2024.07.08-15.28.08:098][548]LogUObjectHash: Compacting FUObjectHashTables data took   3.03ms
+[2024.07.08-15.28.08:116][548]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.051
+[2024.07.08-15.28.08:126][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__AC_Unit_] ([1] browsable assets)...
+[2024.07.08-15.28.08:133][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__AC_Unit_.__AC_Unit_]
+[2024.07.08-15.28.08:133][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__AC_Unit_]
+[2024.07.08-15.28.08:133][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__AC_Unit_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__AC_Unit__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:174][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__AC_Unit__Auto6
+[2024.07.08-15.28.08:174][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__AC_Unit__Auto6B9A223904CADA1F450001E84C776F71B.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__AC_Unit__Auto6.uasset'
+[2024.07.08-15.28.08:177][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Balloon_Pop] ([1] browsable assets)...
+[2024.07.08-15.28.08:182][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Balloon_Pop.__Balloon_Pop]
+[2024.07.08-15.28.08:182][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Balloon_Pop]
+[2024.07.08-15.28.08:182][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Balloon_Pop" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Balloon_Pop_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:188][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Balloon_Pop_Auto6
+[2024.07.08-15.28.08:188][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Balloon_Pop_Auto64699DFEE4F5916286D1D54A4BFBB4C2D.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Balloon_Pop_Auto6.uasset'
+[2024.07.08-15.28.08:191][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Breaking_Glass__bulb_] ([1] browsable assets)...
+[2024.07.08-15.28.08:195][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Breaking_Glass__bulb_.__Breaking_Glass__bulb_]
+[2024.07.08-15.28.08:195][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Breaking_Glass__bulb_]
+[2024.07.08-15.28.08:195][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Breaking_Glass__bulb_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Breaking_Glass__bulb__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:250][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Breaking_Glass__bulb__Auto6
+[2024.07.08-15.28.08:250][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Breaking_Glass__bulb__Auto6E815A2DE434EBDF8C85D85995D94C374.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Breaking_Glass__bulb__Auto6.uasset'
+[2024.07.08-15.28.08:256][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Carpet_Hit] ([1] browsable assets)...
+[2024.07.08-15.28.08:260][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Carpet_Hit.__Carpet_Hit]
+[2024.07.08-15.28.08:260][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Carpet_Hit]
+[2024.07.08-15.28.08:260][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Carpet_Hit" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Carpet_Hit_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:315][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Carpet_Hit_Auto6
+[2024.07.08-15.28.08:315][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Carpet_Hit_Auto632C44B204E9905A0301449ABA27832A4.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Carpet_Hit_Auto6.uasset'
+[2024.07.08-15.28.08:317][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Ceiling_Fan] ([1] browsable assets)...
+[2024.07.08-15.28.08:324][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Ceiling_Fan.__Ceiling_Fan]
+[2024.07.08-15.28.08:325][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Ceiling_Fan]
+[2024.07.08-15.28.08:325][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Ceiling_Fan" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Ceiling_Fan_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:362][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Ceiling_Fan_Auto6
+[2024.07.08-15.28.08:362][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Ceiling_Fan_Auto605FDC42042715C316E3F88B21F8EB592.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Ceiling_Fan_Auto6.uasset'
+[2024.07.08-15.28.08:365][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Connecting_attachments_] ([1] browsable assets)...
+[2024.07.08-15.28.08:369][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Connecting_attachments_.__Connecting_attachments_]
+[2024.07.08-15.28.08:369][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Connecting_attachments_]
+[2024.07.08-15.28.08:369][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Connecting_attachments_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Connecting_attachments__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:421][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Connecting_attachments__Auto6
+[2024.07.08-15.28.08:421][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Connecting_attachments__Auto63918B05B4FB2C1D9FF0FE187E32AB5D4.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Connecting_attachments__Auto6.uasset'
+[2024.07.08-15.28.08:424][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Door_Lock] ([1] browsable assets)...
+[2024.07.08-15.28.08:428][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Door_Lock.__Door_Lock]
+[2024.07.08-15.28.08:428][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Door_Lock]
+[2024.07.08-15.28.08:428][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Door_Lock" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Door_Lock_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:485][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Door_Lock_Auto6
+[2024.07.08-15.28.08:485][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Door_Lock_Auto6B54179E249E756D68D100CA6D936A3D2.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Door_Lock_Auto6.uasset'
+[2024.07.08-15.28.08:488][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Extractor_Fan] ([1] browsable assets)...
+[2024.07.08-15.28.08:495][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Extractor_Fan.__Extractor_Fan]
+[2024.07.08-15.28.08:495][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Extractor_Fan]
+[2024.07.08-15.28.08:495][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Extractor_Fan" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Extractor_Fan_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:593][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Extractor_Fan_Auto6
+[2024.07.08-15.28.08:593][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Extractor_Fan_Auto6E78AAF7846699129F819E0A59443429D.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Extractor_Fan_Auto6.uasset'
+[2024.07.08-15.28.08:595][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Glass_Breaking__mirror__] ([1] browsable assets)...
+[2024.07.08-15.28.08:601][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Glass_Breaking__mirror__.__Glass_Breaking__mirror__]
+[2024.07.08-15.28.08:601][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Glass_Breaking__mirror__]
+[2024.07.08-15.28.08:601][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Glass_Breaking__mirror__" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Glass_Breaking__mirror___Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:618][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Glass_Breaking__mirror___Auto6
+[2024.07.08-15.28.08:618][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Glass_Breaking__mirror___Auto6B2D8BDF940D21D5A579096A27E0618C2.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Glass_Breaking__mirror___Auto6.uasset'
+[2024.07.08-15.28.08:621][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Glass_Falling_] ([1] browsable assets)...
+[2024.07.08-15.28.08:625][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Glass_Falling_.__Glass_Falling_]
+[2024.07.08-15.28.08:625][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Glass_Falling_]
+[2024.07.08-15.28.08:625][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Glass_Falling_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Glass_Falling__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:686][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Glass_Falling__Auto6
+[2024.07.08-15.28.08:686][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Glass_Falling__Auto6F7F0124E4F928796BA691997467D2F29.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Glass_Falling__Auto6.uasset'
+[2024.07.08-15.28.08:689][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Glider] ([1] browsable assets)...
+[2024.07.08-15.28.08:696][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Glider.__Glider]
+[2024.07.08-15.28.08:696][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Glider]
+[2024.07.08-15.28.08:696][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Glider" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Glider_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:720][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Glider_Auto6
+[2024.07.08-15.28.08:720][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Glider_Auto6BEB23E03447837C02A5990927B2EFE0E.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Glider_Auto6.uasset'
+[2024.07.08-15.28.08:723][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Grapple_Gun] ([1] browsable assets)...
+[2024.07.08-15.28.08:728][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Grapple_Gun.__Grapple_Gun]
+[2024.07.08-15.28.08:728][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Grapple_Gun]
+[2024.07.08-15.28.08:728][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Grapple_Gun" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Grapple_Gun_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:734][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Grapple_Gun_Auto6
+[2024.07.08-15.28.08:734][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Grapple_Gun_Auto65D1CD04041E026D64D8795807D49E941.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Grapple_Gun_Auto6.uasset'
+[2024.07.08-15.28.08:738][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Hair_Dryer] ([1] browsable assets)...
+[2024.07.08-15.28.08:743][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Hair_Dryer.__Hair_Dryer]
+[2024.07.08-15.28.08:743][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Hair_Dryer]
+[2024.07.08-15.28.08:743][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Hair_Dryer" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Hair_Dryer_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.08:770][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Hair_Dryer_Auto6
+[2024.07.08-15.28.08:770][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Hair_Dryer_Auto64E86B79E4F0146F49F4A2B80D5D219A9.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Hair_Dryer_Auto6.uasset'
+[2024.07.08-15.28.08:772][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Kettle_Boiling] ([1] browsable assets)...
+[2024.07.08-15.28.08:793][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Kettle_Boiling.__Kettle_Boiling]
+[2024.07.08-15.28.08:793][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Kettle_Boiling]
+[2024.07.08-15.28.08:793][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Kettle_Boiling" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Kettle_Boiling_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:126][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Kettle_Boiling_Auto6
+[2024.07.08-15.28.09:127][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Kettle_Boiling_Auto6E36BFB0D43127F1A55D651A28AB2E076.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Kettle_Boiling_Auto6.uasset'
+[2024.07.08-15.28.09:130][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__KthenHob] ([1] browsable assets)...
+[2024.07.08-15.28.09:136][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__KthenHob.__KthenHob]
+[2024.07.08-15.28.09:136][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__KthenHob]
+[2024.07.08-15.28.09:138][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__KthenHob" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__KthenHob_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:227][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__KthenHob_Auto6
+[2024.07.08-15.28.09:227][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__KthenHob_Auto6FC445BA343CD1381C09ADBBD036575BB.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__KthenHob_Auto6.uasset'
+[2024.07.08-15.28.09:229][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Light_Bulb_Buzz] ([1] browsable assets)...
+[2024.07.08-15.28.09:240][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Light_Bulb_Buzz.__Light_Bulb_Buzz]
+[2024.07.08-15.28.09:240][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Light_Bulb_Buzz]
+[2024.07.08-15.28.09:240][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Light_Bulb_Buzz" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Light_Bulb_Buzz_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:291][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Light_Bulb_Buzz_Auto6
+[2024.07.08-15.28.09:291][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Light_Bulb_Buzz_Auto6B7E399454639FBF285A16C9D14E0993A.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Light_Bulb_Buzz_Auto6.uasset'
+[2024.07.08-15.28.09:294][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Light_Switch_Fail] ([1] browsable assets)...
+[2024.07.08-15.28.09:299][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Light_Switch_Fail.__Light_Switch_Fail]
+[2024.07.08-15.28.09:299][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Light_Switch_Fail]
+[2024.07.08-15.28.09:299][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Light_Switch_Fail" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Light_Switch_Fail_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:342][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Light_Switch_Fail_Auto6
+[2024.07.08-15.28.09:342][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Light_Switch_Fail_Auto69513C5714495A27CD95CC8AFA775D73A.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Light_Switch_Fail_Auto6.uasset'
+[2024.07.08-15.28.09:344][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Piston] ([1] browsable assets)...
+[2024.07.08-15.28.09:349][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Piston.__Piston]
+[2024.07.08-15.28.09:349][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Piston]
+[2024.07.08-15.28.09:349][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Piston" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Piston_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:354][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Piston_Auto6
+[2024.07.08-15.28.09:354][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Piston_Auto68F75521B4EB0185A0CA4BF88A55C1FF0.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Piston_Auto6.uasset'
+[2024.07.08-15.28.09:358][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Pottery_falling_] ([1] browsable assets)...
+[2024.07.08-15.28.09:363][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Pottery_falling_.__Pottery_falling_]
+[2024.07.08-15.28.09:363][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Pottery_falling_]
+[2024.07.08-15.28.09:363][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Pottery_falling_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Pottery_falling__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:389][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Pottery_falling__Auto6
+[2024.07.08-15.28.09:389][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Pottery_falling__Auto688938DB545A4FB6E7D52EE885CE8AD96.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Pottery_falling__Auto6.uasset'
+[2024.07.08-15.28.09:392][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Propellor_] ([1] browsable assets)...
+[2024.07.08-15.28.09:399][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Propellor_.__Propellor_]
+[2024.07.08-15.28.09:399][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Propellor_]
+[2024.07.08-15.28.09:399][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Propellor_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Propellor__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:420][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Propellor__Auto6
+[2024.07.08-15.28.09:420][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Propellor__Auto69F3E45E440D57F6C7D795FA35D34826A.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Propellor__Auto6.uasset'
+[2024.07.08-15.28.09:424][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Shower] ([1] browsable assets)...
+[2024.07.08-15.28.09:431][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Shower.__Shower]
+[2024.07.08-15.28.09:431][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Shower]
+[2024.07.08-15.28.09:432][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Shower" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Shower_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:501][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Shower_Auto6
+[2024.07.08-15.28.09:501][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Shower_Auto694D337494964BC294BBB8489A11A0993.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Shower_Auto6.uasset'
+[2024.07.08-15.28.09:503][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Spring] ([1] browsable assets)...
+[2024.07.08-15.28.09:508][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Spring.__Spring]
+[2024.07.08-15.28.09:508][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Spring]
+[2024.07.08-15.28.09:508][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Spring" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Spring_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:529][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Spring_Auto6
+[2024.07.08-15.28.09:529][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Spring_Auto6BD672ED64912EE967201378C5B76E3AC.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Spring_Auto6.uasset'
+[2024.07.08-15.28.09:532][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Tank_Tracks_] ([1] browsable assets)...
+[2024.07.08-15.28.09:537][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Tank_Tracks_.__Tank_Tracks_]
+[2024.07.08-15.28.09:538][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Tank_Tracks_]
+[2024.07.08-15.28.09:541][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Tank_Tracks_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Tank_Tracks__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:567][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Tank_Tracks__Auto6
+[2024.07.08-15.28.09:567][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Tank_Tracks__Auto63430356B47CECFDD2B615BB69B3FE12E.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Tank_Tracks__Auto6.uasset'
+[2024.07.08-15.28.09:569][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Thruster_] ([1] browsable assets)...
+[2024.07.08-15.28.09:574][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Thruster_.__Thruster_]
+[2024.07.08-15.28.09:574][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Thruster_]
+[2024.07.08-15.28.09:575][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Thruster_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Thruster__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:595][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Thruster__Auto6
+[2024.07.08-15.28.09:595][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Thruster__Auto6944D6A1D44B0B246F93AC99571A7C80C.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Thruster__Auto6.uasset'
+[2024.07.08-15.28.09:599][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Thud_Wooden_] ([1] browsable assets)...
+[2024.07.08-15.28.09:604][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Thud_Wooden_.__Thud_Wooden_]
+[2024.07.08-15.28.09:604][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Thud_Wooden_]
+[2024.07.08-15.28.09:604][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Thud_Wooden_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Thud_Wooden__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:609][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Thud_Wooden__Auto6
+[2024.07.08-15.28.09:609][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Thud_Wooden__Auto632818B514C4A3AE81AD7E2B9817B72F6.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Thud_Wooden__Auto6.uasset'
+[2024.07.08-15.28.09:612][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Toilet_Flushing_] ([1] browsable assets)...
+[2024.07.08-15.28.09:617][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Toilet_Flushing_.__Toilet_Flushing_]
+[2024.07.08-15.28.09:617][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Toilet_Flushing_]
+[2024.07.08-15.28.09:617][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Toilet_Flushing_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Toilet_Flushing__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:635][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Toilet_Flushing__Auto6
+[2024.07.08-15.28.09:637][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Toilet_Flushing__Auto68F6E3758473CA0AF8112AAA8D2E9E13E.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Toilet_Flushing__Auto6.uasset'
+[2024.07.08-15.28.09:640][548]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/SFX/__Water_running_] ([1] browsable assets)...
+[2024.07.08-15.28.09:645][548]OBJ SavePackage:     Rendered thumbnail for [SoundWave /Game/SFX/__Water_running_.__Water_running_]
+[2024.07.08-15.28.09:645][548]OBJ SavePackage: Finished generating thumbnails for package [/Game/SFX/__Water_running_]
+[2024.07.08-15.28.09:645][548]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Water_running_" FILE="D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Water_running__Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.08-15.28.09:731][548]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/SFX/__Water_running__Auto6
+[2024.07.08-15.28.09:732][548]LogSavePackage: Moving 'D:/Uni/problox/projProblox/Saved/__Water_running__Auto654EE80564E49169F9199C8B110E5E1CE.tmp' to 'D:/Uni/problox/projProblox/Saved/Autosaves/Game/SFX/__Water_running__Auto6.uasset'
+[2024.07.08-15.28.09:734][548]LogFileHelpers: Auto-saving content packages took 1.619
+[2024.07.08-15.28.37:535][688]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/Sounds/UI/Camera_Shutter.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/VREditor/Sounds/UI/Camera_Shutter.uasset' is outside repository at 'D:/Uni/problox'
+[2024.07.08-15.28.58:364][474]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.08-15.28.58:408][474]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.08-15.28.58:409][474]PIE: New page: PIE session: Lvl_Combined (8 Jul 2024, 17:28:58)
+[2024.07.08-15.28.58:433][474]LogPlayLevel: Display: Creating online subsystem for client :Context_86
+[2024.07.08-15.28.58:438][474]LogOnline: OSS: Created online subsystem instance for: :Context_86
+[2024.07.08-15.28.58:475][475]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.08-15.28.58:760][475]LogPlayLevel: PIE: StaticDuplicateObject took: (0.284706s)
+[2024.07.08-15.28.58:760][475]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.284801s)
+[2024.07.08-15.28.58:780][475]LogUObjectHash: Compacting FUObjectHashTables data took   2.84ms
+[2024.07.08-15.28.58:793][475]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-15.28.58:793][475]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-15.28.58:794][475]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.08-15.28.58:796][475]LogPlayLevel: PIE: World Init took: (0.002650s)
+[2024.07.08-15.28.58:796][475]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2024.07.08-15.28.58:796][475]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.08-15.28.58:796][475]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.08-15.28.58:796][475]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.08-15.28.58:796][475]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.08-15.28.58:796][475]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.08-15.28.58:796][475]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.08-15.28.58:796][475]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.08-15.28.58:796][475]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.08-15.28.58:797][475]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.08-15.28.58:797][475]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.08-15.28.58:797][475]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.08-15.28.58:803][475]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.08-15.28.58:846][475]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio Codec with THX Spatial Audio)
+[2024.07.08-15.28.58:847][475]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.08-15.28.58:847][475]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.08-15.28.58:847][475]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.08-15.28.58:849][475]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=21
+[2024.07.08-15.28.58:849][475]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=21
+[2024.07.08-15.28.58:854][475]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=21
+[2024.07.08-15.28.58:854][475]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=21
+[2024.07.08-15.28.58:854][475]LogInit: FAudioDevice initialized with ID 21.
+[2024.07.08-15.28.58:854][475]LogAudio: Display: Audio Device (ID: 21) registered with world 'Lvl_Combined'.
+[2024.07.08-15.28.58:854][475]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 21
+[2024.07.08-15.28.58:860][475]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.08-15.28.58:894][475]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.08-15.28.58:895][475]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.08-15.28.58:896][475]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 60) at 2024.07.08-16.28.58
+[2024.07.08-15.28.58:900][475]LogWorld: Bringing up level for play took: 0.039890
+[2024.07.08-15.28.58:920][475]PIE: Server logged in
+[2024.07.08-15.28.58:922][475]PIE: Play in editor total start time 0.513 seconds.
+[2024.07.08-15.28.58:926][475]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl1' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.08-15.28.58:926][475]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.08-15.28.58:926][475]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl2' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.08-15.28.58:926][475]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.08-15.28.58:926][475]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.08-15.28.58:926][475]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.08-15.28.59:627][476]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.08-15.29.01:501][476]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.08-15.29.01:548][477]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:549][477]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:550][477]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:550][477]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:702][478]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:881][479]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:881][479]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:881][479]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.01:961][481]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:029][483]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.08-15.29.02:532][489]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_19.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.08-15.29.08:732][699]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.08-15.29.08:733][699]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.08-15.29.08:743][699]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-15.29.08:778][699]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-15.29.08:787][699]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.08-15.29.08:814][699]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-15.29.08:876][699]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.08-15.29.08:900][699]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 21
+[2024.07.08-15.29.08:900][699]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.07.08-15.29.08:903][699]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.07.08-15.29.09:017][699]LogUObjectHash: Compacting FUObjectHashTables data took   3.32ms
+[2024.07.08-15.29.09:495][700]LogPlayLevel: Display: Destroying online subsystem :Context_86
+[2024.07.08-15.29.09:516][700]LogUObjectHash: Compacting FUObjectHashTables data took   2.34ms
+[2024.07.08-15.29.15:295][796]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2024.07.08-15.29.36:909][375]Cmd: DELETE
+[2024.07.08-15.29.36:909][375]Cmd: ACTOR DELETE
+[2024.07.08-15.29.36:911][375]LogEditorActor: Cannot delete component AudioComponent /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CellSpawner_C_316.Audio Player: Can't delete non-instanced components or the scene root.
+[2024.07.08-15.29.40:526][462]Cmd: TRANSACTION UNDO
+[2024.07.08-15.29.40:529][462]LogEditorTransaction: Undo Clicking on Component (tree view)
+[2024.07.08-15.29.41:555][491]Cmd: TRANSACTION UNDO
+[2024.07.08-15.29.41:555][491]LogEditorTransaction: Undo Edit Sound
+[2024.07.08-15.29.42:699][512]Cmd: TRANSACTION UNDO
+[2024.07.08-15.29.42:699][512]LogEditorTransaction: Undo Clicking on Component (tree view)
+[2024.07.08-15.29.43:267][522]Cmd: TRANSACTION UNDO
+[2024.07.08-15.29.43:268][522]LogEditorTransaction: Undo Clicking on Component (tree view)
