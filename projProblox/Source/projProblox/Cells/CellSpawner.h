@@ -179,6 +179,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	const ULevelObjective* GetObjective() const { return objective; }
 
+	int GetCollectedAmount() const;
+	
 	int GetSpawnAmount() const
 	{
 		// If this spawner has an objective, if it's already been completed... return 0 

@@ -170,9 +170,4 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	const TArray<UTexture*>& GetLevel3Screenshots() const { return lvl3Screenshots; }
-
-
-	////////////// OTHER ///////////
-	UFUNCTION(BlueprintCallable)
-	void PrintCurrentLevel() { Print("Current level = " +  FString::FromInt(currentLevel), 5) }
 };

@@ -1,3 +1,2 @@
-2024/07/08-17:01:57.127 7718 Reusing MANIFEST C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
-2024/07/08-17:01:57.140 7718 Recovering log #4
-2024/07/08-17:01:57.141 7718 Reusing old log C:/GitHub/FMP/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/000004.log 
+2024/07/08-19:25:04.989 7198 Creating DB C:/Users/Deany/Documents/GitHub/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb since it was missing.
+2024/07/08-19:25:05.001 7198 Reusing MANIFEST C:/Users/Deany/Documents/GitHub/problox/projProblox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001

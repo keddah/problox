@@ -23,8 +23,6 @@ ATreads::ATreads()
 
 	mesh->SetAngularDamping(1);
 	
-	// The rotation of the treads when attached to a connector should consider the rotation of the connector.
-	snapRot = true;
 	rotOffset = {90,0,0};
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
 
@@ -46,16 +44,17 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 void ATreads::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
+
+	const FVector forward = GetActorForwardVector();
 	
 	// When the treads are active, make the tread material pan.
-	// mesh->SetScalarParameterValueOnMaterials("SpeedX", active? forward.Y * 1: 0);
-	// mesh->SetScalarParameterValueOnMaterials("SpeedY", active? forward.X * 1: 0);
+	mesh->SetScalarParameterValueOnMaterials("SpeedX", forward.X * 2);
+	mesh->SetScalarParameterValueOnMaterials("SpeedY",forward.Y * 2);
 	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
-	mesh->AddForce(GetActorForwardVector() * moveSpeed * parentCore->GetMass());
-	
+	mesh->AddForce(forward * moveSpeed * parentCore->GetMass());
 }
 
 void ATreads::SetAbilityActive(const bool value)
