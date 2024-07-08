@@ -10,6 +10,7 @@
 			"BuyableInfo.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
 			"CellSpawner.gen.cpp.obj",
+			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
 			"CubeSocketInfo.gen.cpp.obj",
@@ -21,8 +22,7 @@
 			"GrappleHead.gen.cpp.obj",
 			"Grappler.gen.cpp.obj",
 			"HexagonSocketInfo.gen.cpp.obj",
-			"HexCore.gen.cpp.obj",
-			"Collector.gen.cpp.obj"
+			"HexCore.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"Hoverer.gen.cpp.obj",
@@ -34,21 +34,27 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"SaveFiles.gen.cpp.obj",
-			"SpawnPoint.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj"
+			"SpawnPoint.gen.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
+			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
+			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
+			"LevelManager.cpp.obj",
+			"Balloon.cpp.obj",
+			"BounceSpring.cpp.obj",
+			"BuyableAttachment.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
@@ -56,16 +62,6 @@
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
-			"projProblox.cpp.obj",
-			"SpawnPoint.cpp.obj",
-			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj",
-			"AudioManager.cpp.obj",
-			"Collector.cpp.obj",
-			"LevelManager.cpp.obj",
-			"Balloon.cpp.obj",
-			"BounceSpring.cpp.obj",
-			"BuyableAttachment.cpp.obj",
 			"Glider.cpp.obj",
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
@@ -77,7 +73,11 @@
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"PlayerCharacter.cpp.obj",
+			"projProblox.cpp.obj",
+			"SpawnPoint.cpp.obj",
+			"SpawnSaves.cpp.obj",
+			"ActionHistory.cpp.obj"
 		]
 	}
 }
