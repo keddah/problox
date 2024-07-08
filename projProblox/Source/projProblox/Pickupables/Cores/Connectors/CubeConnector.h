@@ -65,7 +65,6 @@ protected:
 	virtual void Placement(ACubeCore* core, const FName& socket) override;
 	virtual void GhostPlacement() override;
 	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
-	virtual void Reattach(bool sound) override;
 	virtual void FindOppositeSocket();
 	
 	// Overriding so that it reverts back to the PickupableMaster version of "Detach"

@@ -12,7 +12,6 @@
 
 #include "CoreMinimal.h"
 #include "./projProblox/UndoRedo/ActionHistory.h"
-#include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
 #include "Math/Rotator.h"
@@ -41,6 +40,8 @@ enum class ECoreSockets : uint8
 	Down
 };
 
+constexpr float despawnDelay = 1;
+
 UCLASS()
 class PROJPROBLOX_API APickupableMaster : public AActor
 {
@@ -50,6 +51,9 @@ class PROJPROBLOX_API APickupableMaster : public AActor
 	void ResetOutline() { SetHideOutlineMesh(true); }
 	UFUNCTION()
 	void ShowOutline() { SetHideOutlineMesh(false); }
+
+	UFUNCTION()
+	void DestroySelf() { if(!isAttached) Destroy(); }
 	
 public:	
 	// Sets default values for this actor's properties
@@ -92,10 +96,11 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, meta = (Delta = 1))
 	float placeRange = 180;
+
 	
 	/////////////// Rotations ///////////////
 	FRotator defaultRot{};
-	
+
 	// Whether or not to use the parent core's socket's forward rotation when attaching...
 	bool snapRot = true;
 
@@ -136,20 +141,11 @@ protected:
 	FString uiName = "No name given...";
 
 	UWorld* wrld;
-	
-	
+
+
 	/////////////// Undo/Redo ///////////////
 	// The socket that this has been removed from
 	FName removedSocket;
-	bool wasDetached;
-
-	// The relative transform that should be saved whenever attaching...
-	FTransform savedAttachTransform;
-	
-	// The world transform that should be saved whenever an object is selected...
-	FTransform savedDetachTransform;
-	
-	APickupableMaster* previousObj;
 
 	
 ///////////////////////////// Functions /////////////////////////////
@@ -216,9 +212,17 @@ public:
 	UFUNCTION(BlueprintCallable)
 	virtual EOperations SetSelected(const bool value);
 
-	// ...
-	void Deselect() { Destroy(); }
-	void ManualSetSelected(const bool value) { selected = value; };
+	// Teleport to 0,0,0
+	void Deselect()
+	{
+		SetActorLocation({});
+
+		FTimerHandle destroyHandle;
+		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(this, &APickupableMaster::DestroySelf);
+
+		// Destroy after 30 seconds (gives time for the player to undo/redo
+		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 30, false);
+	}
 
 	virtual void Placement(ACubeCore* core, const FName& socket);
 	virtual void Detach(bool push = false);
@@ -229,19 +233,10 @@ public:
 	// Since this is used a lot...
 	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr);
 
-	void UseSavedTransform()
-	{
-		if(parentCore)
-		{
-			SetActorRelativeLocation(savedAttachTransform.GetLocation());
-			SetActorRelativeRotation(savedAttachTransform.Rotator());
-			return;
-		}
-
-		SetActorLocation(savedDetachTransform.GetLocation());
-		SetActorRotation(savedDetachTransform.Rotator());
-	}
-
+	
+	/////////////// Undo/Redo ///////////////
+	void Reattach(const FName& socket);
+	
 	
 	/////////////// Ability ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Ability")
@@ -255,24 +250,13 @@ public:
 
 	/////////////// Hierarchy ///////////////
 	static void GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray);
-	static void GetDescendentsActors(const AActor* parent, TArray<AActor*>& outArray);
-	
-	static void GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray);
 	static void GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray);
 	
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	TArray<APickupableMaster*> AllObjsInHierarchy();
-
 	bool IsChildOf(const APickupableMaster* parent) const;
-
-	
-	/////////////// Undo/Redo ///////////////
-	virtual void Reattach(bool sound);
 
 	
 	/////////////// Getters ///////////////
 	ACubeCore* GetCore() const { return parentCore; }
-	APickupableMaster* GetPreviousObj() const { return previousObj; }
 
 	// Returns the APickupable at the top of this hierarchy
 	virtual APickupableMaster* GetParent();
@@ -310,7 +294,7 @@ public:
 
 
 	/////////////// Other ///////////////
-	void SetCore(ACubeCore* _core) { parentCore = _core; }
+	void SetCore(ACubeCore* _core) { parentCore = _core; Print("setting core", 4)}
 	
 	virtual void SetShowMesh(const bool show) const { mesh->SetHiddenInGame(!show); }
 	

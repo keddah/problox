@@ -82,27 +82,21 @@ EOperations ABalloon::SetSelected(const bool value)
 
 	// Only use continuous collisions while selected (to prevent objects from going through objects).
 	mesh->SetUseCCD(selected);
-	
-	ToggleGravity();
 
-	savedDetachTransform = GetActorTransform();
+	ToggleGravity();
 
 	if(selected)
 	{
-		wasDetached = isAttached;
 		Detach(false);
 		mesh->SetEnableGravity(false);
 		
 		return {EOperations::Detach};
 	}
 
-	if(!parentCore) return { wasDetached? EOperations::Detach : EOperations::Move};
-	if(attachedSocket == NAME_None) return { wasDetached? EOperations::Detach : EOperations::Move};
+	if(!parentCore) return EOperations::Detach;
+	if(attachedSocket == NAME_None) return  EOperations::Detach ;
 
-	if(!previousObj) previousObj = parentCore;
-	
 	SetShowMesh(true);
-	
 	UseSilhouetteTransform();
 	ResetGhost();
 	Attach();
@@ -131,7 +125,7 @@ void ABalloon::Detach(const bool push)
 {
 	ResetGhost();
 
-	if(!parentCore && !previousObj)
+	if(!parentCore)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
@@ -141,7 +135,6 @@ void ABalloon::Detach(const bool push)
 	RemoveVelocity();
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
-	else previousObj->RemoveAttachment(attachedSocket);
 
 	constraint->BreakConstraint();
 	string->SetAttachEndToComponent(nullptr);
@@ -158,14 +151,10 @@ void ABalloon::Detach(const bool push)
 	
 	silhouette->SetupAttachment(mesh);
 
-	if(parentCore)
-	{
-		previousObj = parentCore;
-		parentCore = nullptr;
-		soundPlayer->PlayDetach();
-	}
+	if(parentCore) soundPlayer->PlayDetach();
 
 	ToggleGravity(true);
+	parentCore = nullptr;
 	isAttached = false;
 }
 
@@ -179,25 +168,6 @@ void ABalloon::Attach()
 	if(!isAttached) soundPlayer->PlayAttach();
 	active = false;
 	isAttached = true;
-}
-
-void ABalloon::Reattach(const bool sound)
-{
-	parentCore = Cast<ACubeCore>(previousObj);
-	if(!parentCore)
-	{
-		Print("couldnt cast to core - Reattaching...", 5)
-		return;
-	}
-	
-	SetSelected(false);
-	SetActorLocation(savedAttachTransform.GetLocation() + parentCore->GetActorLocation());
-	SetActorRotation(savedDetachTransform.Rotator());
-	
-	RemoveVelocity();
-
-	// Casting to work around the protected override of this function.
-	Cast<APickupableMaster>(parentCore)->RemoveVelocity();
 }
 
 void ABalloon::GhostPlacement()
@@ -229,7 +199,6 @@ void ABalloon::UseSilhouetteTransform(const UStaticMeshComponent* ghost)
 		
 	const FTransform silhouetteTransform = ghost->GetComponentTransform();
 	SetActorRotation(silhouetteTransform.GetRotation());
-	savedAttachTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
 }
 
 void ABalloon::ResetBalloon()

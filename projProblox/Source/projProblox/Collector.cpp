@@ -84,5 +84,5 @@ void ACollector::CalculateCellCount()
 		}
 	}
 
-	Print("Calculated the cells in level: " + FString::FromInt(cellsInLevel), 5)
+	// Print("Calculated the cells in level: " + FString::FromInt(cellsInLevel), 5)
 }
