@@ -1679,3 +1679,88 @@ Script Stack (0 frames) :
 [2024.07.08-20.08.41:420][578]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
 [2024.07.08-20.08.42:683][685]LogSlate: Window 'Message Log' being destroyed
 [2024.07.08-20.08.42:689][685]LogSlate: Window 'Message Log' being destroyed
+[2024.07.08-20.09.20:280][344]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-20.09.20:380][345]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-20.09.30:327][  2]Cmd: DELETE
+[2024.07.08-20.09.30:327][  2]Cmd: ACTOR DELETE
+[2024.07.08-20.09.30:375][  2]LogEditorActor: Deleted Actor: BP_Glider_C
+[2024.07.08-20.09.30:392][  2]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.07.08-20.09.30:393][  2]LogEditorActor: Deleted 1 Actors (0.059 secs)
+[2024.07.08-20.09.31:061][ 44]Cmd: DELETE
+[2024.07.08-20.09.31:061][ 44]Cmd: ACTOR DELETE
+[2024.07.08-20.09.31:073][ 44]LogEditorActor: Deleted Actor: BP_BuyableObject_C
+[2024.07.08-20.09.31:092][ 44]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
+[2024.07.08-20.09.31:094][ 44]LogEditorActor: Deleted 1 Actors (0.033 secs)
+[2024.07.08-20.09.32:831][175]Cmd: TRANSACTION UNDO
+[2024.07.08-20.09.32:832][175]LogEditorTransaction: Undo Delete Elements
+[2024.07.08-20.09.33:939][218]Cmd: DELETE
+[2024.07.08-20.09.33:939][218]Cmd: ACTOR DELETE
+[2024.07.08-20.09.33:950][218]LogEditorActor: Deleted Actor: BP_Glider_C
+[2024.07.08-20.09.33:966][218]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.07.08-20.09.33:968][218]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2024.07.08-20.09.34:697][260]Cmd: DELETE
+[2024.07.08-20.09.34:697][260]Cmd: ACTOR DELETE
+[2024.07.08-20.09.34:708][260]LogEditorActor: Deleted Actor: BP_Glider_C
+[2024.07.08-20.09.34:724][260]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.07.08-20.09.34:726][260]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2024.07.08-20.09.36:594][383]Cmd: DELETE
+[2024.07.08-20.09.36:594][383]Cmd: ACTOR DELETE
+[2024.07.08-20.09.36:604][383]LogEditorActor: Deleted Actor: BP_Glider_C
+[2024.07.08-20.09.36:620][383]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.07.08-20.09.36:623][383]LogEditorActor: Deleted 1 Actors (0.028 secs)
+[2024.07.08-20.09.37:146][420]LogUObjectHash: Compacting FUObjectHashTables data took   0.53ms
+[2024.07.08-20.09.37:242][420]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-20.09.37:285][420]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.07.08-20.09.37:296][420]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.008864 seconds
+[2024.07.08-20.09.37:343][420]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea
+[2024.07.08-20.09.37:343][420]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Lvl_BuildAreaE03CC6A94BD45FC9D655D297353B6F5C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Lvl_BuildArea.umap'
+[2024.07.08-20.09.37:349][420]LogFileHelpers: All files are already saved.
+[2024.07.08-20.09.37:349][420]LogFileHelpers: Saving map 'Lvl_BuildArea' took 0.076
+[2024.07.08-20.09.37:359][420]LogFileHelpers: InternalPromptForCheckoutAndSave took 117 ms
+[2024.07.08-20.09.37:362][420]AssetCheck: New page: Asset Save: Lvl_BuildArea
+[2024.07.08-20.09.37:362][420]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_BuildArea.Lvl_BuildArea
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: ================================================
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: Total job queries 56, among them cache hits 18 (32.14%)
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: Tracking 38 distinct input hashes that result in 27 distinct outputs (71.05%)
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: RAM used: 869.93 KiB of 1.60 GiB budget. Usage: 0.05%
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.08-20.09.45:433][954]LogShaderCompilers: Display: ================================================
+[2024.07.08-20.09.51:476][341]Cmd: DELETE
+[2024.07.08-20.09.51:476][341]Cmd: ACTOR DELETE
+[2024.07.08-20.09.51:486][341]LogEditorActor: Deleted Actor: BP_Balloon_C
+[2024.07.08-20.09.51:502][341]LogUObjectHash: Compacting FUObjectHashTables data took   2.33ms
+[2024.07.08-20.09.51:504][341]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2024.07.08-20.09.52:213][384]Cmd: DELETE
+[2024.07.08-20.09.52:213][384]Cmd: ACTOR DELETE
+[2024.07.08-20.09.52:225][384]LogEditorActor: Deleted Actor: BP_Balloon_C
+[2024.07.08-20.09.52:241][384]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.07.08-20.09.52:243][384]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2024.07.08-20.09.52:895][425]Cmd: DELETE
+[2024.07.08-20.09.52:895][425]Cmd: ACTOR DELETE
+[2024.07.08-20.09.52:905][425]LogEditorActor: Deleted Actor: BP_Balloon_C
+[2024.07.08-20.09.52:921][425]LogUObjectHash: Compacting FUObjectHashTables data took   1.34ms
+[2024.07.08-20.09.52:924][425]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2024.07.08-20.09.53:680][474]Cmd: DELETE
+[2024.07.08-20.09.53:680][474]Cmd: ACTOR DELETE
+[2024.07.08-20.09.53:691][474]LogEditorActor: Deleted Actor: BP_Balloon_C
+[2024.07.08-20.09.53:708][474]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.07.08-20.09.53:710][474]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2024.07.08-20.09.54:273][508]Cmd: DELETE
+[2024.07.08-20.09.54:273][508]Cmd: ACTOR DELETE
+[2024.07.08-20.09.54:285][508]LogEditorActor: Deleted Actor: BP_Balloon_C
+[2024.07.08-20.09.54:300][508]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2024.07.08-20.09.54:302][508]LogEditorActor: Deleted 1 Actors (0.029 secs)
+[2024.07.08-20.09.55:234][577]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2024.07.08-20.09.55:335][577]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-20.09.55:375][577]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2024.07.08-20.09.55:414][577]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea
+[2024.07.08-20.09.55:415][577]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Lvl_BuildAreaC2F219DD47D208927D7AA8BF1A648CA5.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Lvl_BuildArea.umap'
+[2024.07.08-20.09.55:421][577]LogFileHelpers: All files are already saved.
+[2024.07.08-20.09.55:421][577]LogFileHelpers: Saving map 'Lvl_BuildArea' took 0.058
+[2024.07.08-20.09.55:430][577]LogFileHelpers: InternalPromptForCheckoutAndSave took 94 ms (total: 211 ms)
+[2024.07.08-20.09.55:433][577]AssetCheck: New page: Asset Save: Lvl_BuildArea
+[2024.07.08-20.09.55:433][577]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_BuildArea.Lvl_BuildArea
