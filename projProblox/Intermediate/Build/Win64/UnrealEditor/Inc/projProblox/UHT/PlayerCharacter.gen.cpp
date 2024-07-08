@@ -230,18 +230,12 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->CreateDetachHistory(Z_Param_obj);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(APlayerCharacter::execRedo)
+	DEFINE_FUNCTION(APlayerCharacter::execUndoRedo)
 	{
+		P_GET_UBOOL(Z_Param_redo);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->Redo();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(APlayerCharacter::execUndo)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->Undo();
+		P_THIS->UndoRedo(Z_Param_redo);
 		P_NATIVE_END;
 	}
 	void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
@@ -263,11 +257,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "GoToCore", &APlayerCharacter::execGoToCore },
 			{ "NextPreviousSlot", &APlayerCharacter::execNextPreviousSlot },
 			{ "OrbitControls", &APlayerCharacter::execOrbitControls },
-			{ "Redo", &APlayerCharacter::execRedo },
 			{ "ScrollZoom", &APlayerCharacter::execScrollZoom },
 			{ "SetGameMode", &APlayerCharacter::execSetGameMode },
 			{ "SpawnFromBuyable", &APlayerCharacter::execSpawnFromBuyable },
-			{ "Undo", &APlayerCharacter::execUndo },
+			{ "UndoRedo", &APlayerCharacter::execUndoRedo },
 			{ "Zoom", &APlayerCharacter::execZoom },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -822,28 +815,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_APlayerCharacter_Redo_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Redo_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "PlayerCharacter.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_Redo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "Redo", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Redo_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_Redo_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_APlayerCharacter_Redo()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Redo_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_APlayerCharacter_ScrollZoom_Statics
 	{
 		struct PlayerCharacter_eventScrollZoom_Parms
@@ -960,25 +931,42 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_APlayerCharacter_Undo_Statics
+	struct Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics
 	{
+		struct PlayerCharacter_eventUndoRedo_Parms
+		{
+			bool redo;
+		};
+		static void NewProp_redo_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_redo;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
+	void Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::NewProp_redo_SetBit(void* Obj)
+	{
+		((PlayerCharacter_eventUndoRedo_Parms*)Obj)->redo = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::NewProp_redo = { "redo", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayerCharacter_eventUndoRedo_Parms), &Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::NewProp_redo_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::NewProp_redo,
+	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Undo_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_Undo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "Undo", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Undo_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_Undo_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_APlayerCharacter_Undo()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "UndoRedo", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::PlayerCharacter_eventUndoRedo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::PlayerCharacter_eventUndoRedo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_UndoRedo()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Undo_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_UndoRedo_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1147,11 +1135,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_GoToCore, "GoToCore" }, // 3336930084
 		{ &Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot, "NextPreviousSlot" }, // 2140460848
 		{ &Z_Construct_UFunction_APlayerCharacter_OrbitControls, "OrbitControls" }, // 193451463
-		{ &Z_Construct_UFunction_APlayerCharacter_Redo, "Redo" }, // 2675371083
 		{ &Z_Construct_UFunction_APlayerCharacter_ScrollZoom, "ScrollZoom" }, // 2530486982
 		{ &Z_Construct_UFunction_APlayerCharacter_SetGameMode, "SetGameMode" }, // 2129562915
 		{ &Z_Construct_UFunction_APlayerCharacter_SpawnFromBuyable, "SpawnFromBuyable" }, // 2435491414
-		{ &Z_Construct_UFunction_APlayerCharacter_Undo, "Undo" }, // 1218169235
+		{ &Z_Construct_UFunction_APlayerCharacter_UndoRedo, "UndoRedo" }, // 4133270156
 		{ &Z_Construct_UFunction_APlayerCharacter_Zoom, "Zoom" }, // 495472528
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::FuncInfo) < 2048);
@@ -1476,9 +1463,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1877747702U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2602619403U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1587432479U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_2121642209(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_105463137(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

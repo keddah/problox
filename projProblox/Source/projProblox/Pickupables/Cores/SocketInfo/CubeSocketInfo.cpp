@@ -169,7 +169,7 @@ TArray<APickupableMaster*> UCubeSocketInfo::GetAttachments() const
 	return output;
 }
 
-APickupableMaster* UCubeSocketInfo::GetObjectInSocket(const FName& name) const
+APickupableMaster* UCubeSocketInfo::GetObjectFromSocket(const FName& name) const
 {
 	if (socketObjects.IsEmpty()) return 0;
 

@@ -14,10 +14,13 @@ enum class EOperations : uint8
 {
 	Attach,
 	Detach,
-	Move,
+	None,
 };
 
 class APickupableMaster;
+class ACubeCore;
+
+
 USTRUCT(BlueprintType)
 struct FTask
 {
@@ -28,20 +31,20 @@ struct FTask
 	
 	UPROPERTY(VisibleAnywhere, meta = (ToolTip = "Made to be an array just for detaching from cores (when detaching all)"))
 	TArray<APickupableMaster*> modifiedObjs;
-	
-	UPROPERTY(VisibleAnywhere)
-	FTransform startTransform;
-	
-	UPROPERTY(VisibleAnywhere)
-	FTransform endTransform;
 
 	UPROPERTY(VisibleAnywhere)
-	EOperations operation = EOperations::Move;
+	TArray<TSubclassOf<APickupableMaster>> modifiedClasses;
+	
+	UPROPERTY(VisibleAnywhere)
+	TArray<FName> attachedSockets;
+	
+	UPROPERTY(VisibleAnywhere)
+	EOperations operation = EOperations::Attach;
 
 	bool operator==(const FTask& task) const
 	{
 		// If all the values are the same...
-		const bool same = taskName == task.taskName && modifiedObjs == task.modifiedObjs && operation == task.operation && startTransform.Equals(task.startTransform) && endTransform.Equals(task.endTransform);
+		const bool same = taskName == task.taskName && attachedSockets == task.attachedSockets && modifiedObjs == task.modifiedObjs && operation == task.operation;
 		return same;
 	}
 };
@@ -62,12 +65,18 @@ class PROJPROBLOX_API UActionHistory : public UObject
 	// The max number of tasks allowed to be saved
 	unsigned short tasksLimit = 25;
 
+	TArray<TSubclassOf<APickupableMaster>> bpClasses;
+	void SetReferences();
+	
 	void Overwrite();
 
 public:
-	void NewAction(const FTask& task);
+	UActionHistory() { SetReferences(); }
 
+	void RecreateObject(UWorld* world, ACubeCore* core, TSubclassOf<APickupableMaster> respawnClass, const FName& socket);
+	void NewAction(const FTask& task);
 	short GetCurrentTaskIndex() const { return currentTask; }
+	short GetTasksLength() const { return tasks.Num(); }
 
 	// The bool in the tuple returns whether it reached the end.
 	FTask Undo();

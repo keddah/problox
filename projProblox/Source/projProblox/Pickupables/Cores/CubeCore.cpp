@@ -76,14 +76,14 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Reset the silhouette after using its transform
 	ResetGhost();
-	return EOperations::Move;
+	return EOperations::None;
 }
 
 void ACubeCore::Detach(const bool push)
 {
 	if(!ObjectInSocket(raySocket)) return;
 
-	APickupableMaster* obj = socketInfo->GetObjectInSocket(raySocket);
+	APickupableMaster* obj = socketInfo->GetObjectFromSocket(raySocket);
 	if(!obj) return;
 
 	obj->Detach(push);
@@ -127,6 +127,12 @@ void ACubeCore::SetEnableCollisions(const bool enable) const
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
+	if(socketInfo->ObjectInSocket(socket))
+	{
+		// Print("Already an object in this socket", 4)
+		return;
+	}
+	
 	attachedSocket = socket;
 
 	socketInfo->AddAttachment(attachment, socket);
@@ -199,6 +205,16 @@ void ACubeCore::EjectObject(APickupableMaster* toEject)
 	soundPlayer->PlayDetachAll();
 }
 
+void ACubeCore::EjectObject(const FName& ejectSocket) const
+{
+	APickupableMaster* toEject = socketInfo->GetObjectFromSocket(ejectSocket);
+
+	if(!toEject) return;
+
+	toEject->Detach(true);
+	soundPlayer->PlayDetachAll();
+}
+
 float ACubeCore::GetMass() const
 {
 	if(!mesh->IsSimulatingPhysics()) return 0;
@@ -241,6 +257,9 @@ void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 
 	SetActorLocation(pos);
 	SetActorRotation(rot);
+	mesh->SetAllUseCCD(true);
+
+	RemoveVelocity();
 }
 
 

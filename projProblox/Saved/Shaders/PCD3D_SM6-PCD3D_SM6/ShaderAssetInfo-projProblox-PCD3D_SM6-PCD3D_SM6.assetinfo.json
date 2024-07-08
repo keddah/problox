@@ -78,6 +78,7 @@
 		{
 			"ShaderMapHash": "E6959D08538D83DCAF1B32274FBDDEAA13B1051A",
 			"Assets": [
+				"/Game/Materials/M_Cubemap",
 				"/Game/Models/BlenderModelsReece/M_Plastic"
 			]
 		},
@@ -131,12 +132,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "5DA3DA103A8A83BB71085F07DF4BE47EE4398202",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Treads"
-			]
-		},
-		{
 			"ShaderMapHash": "0CBA1E11538F0617658F2D3F395F9E3BEF557F71",
 			"Assets": [
 				"/Engine/EngineMaterials/RemoveSurfaceMaterial",
@@ -163,6 +158,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "D039B1161D42537F27017934D3D867E8CDCFE339",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_CoreCore"
+			]
+		},
+		{
 			"ShaderMapHash": "4DF74117DE68B2E6CDD88E0BBC78CEC4AD26C858",
 			"Assets": [
 				"/Game/Levels/StoryMode/DesertPrototype"
@@ -184,12 +185,6 @@
 			"ShaderMapHash": "7C0C821A40528D2FD1A69A57E84885A86D56B072",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_ClearCoat_Mask_DS"
-			]
-		},
-		{
-			"ShaderMapHash": "5583D71AB35B4B79E877D979EFF30BCB9F74B93A",
-			"Assets": [
-				"/Game/Models/MechanicModels/Materials/silver"
 			]
 		},
 		{
@@ -399,6 +394,22 @@
 				"/Game/Models/BlenderModelsReece/Stone",
 				"/Game/Models/HassanModels/cell/PM3D_Sphere3D2",
 				"/Game/Models/HassanModels/cell/PolySphere1",
+				"/Game/Models/MechanicModels/Material_002",
+				"/Game/Models/MechanicModels/Material_003",
+				"/Game/Models/MechanicModels/Material_004",
+				"/Game/Models/MechanicModels/Material_006",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_001",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_002",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_003",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_004",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_005",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_006",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_007",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_008",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_009",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_010",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_011",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_012",
 				"/Game/Models/MechanicModels/Materials/Brown",
 				"/Game/Models/MechanicModels/Materials/Gold",
 				"/Game/Models/MechanicModels/Materials/Material",
@@ -572,6 +583,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "A22EE654D47997BEB9BD6FD85469774932C93FD9",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_OuterCore"
+			]
+		},
+		{
 			"ShaderMapHash": "FC8C1355E6FB7E551CE71B8C213A13F7CAE58FF2",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Basic_Wall"
@@ -704,12 +721,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "86971870425EE26A578E7DD26D112DC840F8EAD9",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_OuterCore"
-			]
-		},
-		{
 			"ShaderMapHash": "F613787160AFF8D16BFACF2E62AD5DCACA7C6D56",
 			"Assets": [
 				"/Game/MSPresets/M_MS_Default_Material/M_MS_Default_Material",
@@ -753,6 +764,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "956ED379FE91AD6934AC043E0930EF4975558662",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_InnerCore_2"
+			]
+		},
+		{
 			"ShaderMapHash": "1A280B7A4A55CE17788543F0841283E632915BB3",
 			"Assets": [
 				"/Game/Materials/M_GreenGlow"
@@ -787,12 +804,6 @@
 			"ShaderMapHash": "E76FCA7F9364CB8566EFA2DEA1F53D12706522A0",
 			"Assets": [
 				"/Engine/Engine_MI_Shaders/M_ES_Phong_Opaque_Master_01"
-			]
-		},
-		{
-			"ShaderMapHash": "4DA0528170AAB7AF641387D112FD525E13FC83D0",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_InnerCore_1"
 			]
 		},
 		{
@@ -1062,12 +1073,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "4B7589AA4CF2954C3237DBD0AFAA9C7C74CE18C1",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_InnerCore_2"
-			]
-		},
-		{
 			"ShaderMapHash": "6930FEAB371DABD5BA1804B647754ED603B45AE1",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Frame"
@@ -1286,6 +1291,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "3CE654D971508FB915A17A1AC4AD7B5525918D99",
+			"Assets": [
+				"/Game/Materials/Pickupables/M_Treads"
+			]
+		},
+		{
 			"ShaderMapHash": "EBD1E8D98B1E408CA7B55AEE1178D1D4D89673D7",
 			"Assets": [
 				"/Engine/EngineMaterials/AntiAliasedTextMaterialTranslucent"
@@ -1396,6 +1407,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "5736A5F055AD9BFE1FCE811D233D1E08DFD83556",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_InnerCore_1"
+			]
+		},
+		{
 			"ShaderMapHash": "DAD223F1CE9F266B4B148D1BBDFB081EEB7D88A2",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_ColorGrid_LowSpec"
@@ -1427,6 +1444,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "1978E0F5FD0FCAA9E1A9782E13796A8C521C721A",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/silver"
+			]
+		},
+		{
 			"ShaderMapHash": "87AB3FF66A29CE03E4054C675A0FFEF53374E0FC",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Rock_Sandstone"
@@ -1449,12 +1472,6 @@
 			"ShaderMapHash": "299350F7491D8E4AD194E7E1EED2F9008AB8F897",
 			"Assets": [
 				"/Game/StarterContent/Particles/Materials/M_Burst"
-			]
-		},
-		{
-			"ShaderMapHash": "0D63B9F70C45926E95831D9CFF4D5862C34C9ABF",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_CoreCore"
 			]
 		},
 		{

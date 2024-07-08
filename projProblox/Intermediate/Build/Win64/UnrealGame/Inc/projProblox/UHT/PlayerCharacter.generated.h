@@ -42,8 +42,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execZoom); \
 	DECLARE_FUNCTION(execOrbitControls); \
 	DECLARE_FUNCTION(execCreateDetachHistory); \
-	DECLARE_FUNCTION(execRedo); \
-	DECLARE_FUNCTION(execUndo);
+	DECLARE_FUNCTION(execUndoRedo);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_ACCESSORS

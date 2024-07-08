@@ -142,7 +142,6 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 
 void ALevelManager::UnloadUnusedLevels()
 {
-	Print("Unloading unused", 4)
 	for(int i = 0; i < levels.Num(); i++)
 	{
 		// Ignore the current level
@@ -214,7 +213,6 @@ void ALevelManager::FindSpawns()
 				break;
 		}
 	}
-	Print("screenshots taken..", 4)
 	
 	// If there wasn't a save file...
 	LoadUnlockedSpawns();

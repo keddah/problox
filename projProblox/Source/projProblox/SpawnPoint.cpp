@@ -132,7 +132,7 @@ UTexture* ASpawnPoint::CaptureScreenshot()
     if (!ScreenshotTexture) return nullptr;
 
     // Lock the texture for editing
-    FTexture2DMipMap& Mip = ScreenshotTexture->PlatformData->Mips[0];
+    FTexture2DMipMap& Mip = ScreenshotTexture->GetPlatformData()->Mips[0];
     void* Data = Mip.BulkData.Lock(LOCK_READ_WRITE);
 
     // Copy the pixels to the texture

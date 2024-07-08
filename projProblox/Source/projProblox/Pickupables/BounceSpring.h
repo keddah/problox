@@ -15,6 +15,7 @@ class PROJPROBLOX_API ABounceSpring : public APickupableMaster
 	virtual void BeginPlay() override { Super::BeginPlay(); damping *= .001f; }
 	
 	virtual void Ability(float deltaTime) override;
+	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); springLength = 0; }
 	virtual void ToggleGravity() const override;
 	virtual void ToggleGravity(bool gravityOn) override;
 	virtual void RemoveVelocity() const override;

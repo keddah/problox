@@ -137,12 +137,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "1C373E13BEB5CF6EA3E5D563F184B1A6C6764AEC",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_InnerCore_1"
-			]
-		},
-		{
 			"ShaderMapHash": "21D96813889AA55C4DB6BB0F011A7B58E7AB7BF3",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Shelf"
@@ -209,12 +203,6 @@
 			"Assets": [
 				"/Game/Levels/LowPolyInterior/Materials/M_LowPolyInterior_Fire",
 				"/Game/LowPolyInterior/Materials/M_LowPolyInterior_Fire"
-			]
-		},
-		{
-			"ShaderMapHash": "817CA21A853A7CD2FECEE4A3DAF3A5C7B9750B91",
-			"Assets": [
-				"/Game/Models/MechanicModels/Materials/silver"
 			]
 		},
 		{
@@ -300,6 +288,7 @@
 		{
 			"ShaderMapHash": "D2FC332DA2F00814449A41F3611C9B298C2380ED",
 			"Assets": [
+				"/Game/Materials/M_Cubemap",
 				"/Game/Models/BlenderModelsReece/M_Plastic"
 			]
 		},
@@ -474,6 +463,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "D8F6174CD56FD61066918808D25A043E23BF88CA",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_InnerCore_1"
+			]
+		},
+		{
 			"ShaderMapHash": "A43F664C50E9B1E632B5F02E014F7BF7A992988D",
 			"Assets": [
 				"/Game/StarterContent/Blueprints/Assets/M_LightStage_Arrows"
@@ -525,12 +520,6 @@
 			"ShaderMapHash": "7A530D59EE47693D543D89F6C1612F47E6AA22A3",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Rock_Slate"
-			]
-		},
-		{
-			"ShaderMapHash": "F0CC9759B7C7BEF2F442921C41E1577FFFE1A926",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_InnerCore_2"
 			]
 		},
 		{
@@ -871,6 +860,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "230AD99BF990B3283EEE67837FDC3014A71DDF78",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_InnerCore_2"
+			]
+		},
+		{
 			"ShaderMapHash": "82E6DC9C596DD6AAA8C097ED02381484874420E5",
 			"Assets": [
 				"/Paper2D/OpaqueUnlitSpriteMaterial"
@@ -927,6 +922,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "2480D2A318B9E8EE6B6657287A86185442B65D5C",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_OuterCore"
+			]
+		},
+		{
 			"ShaderMapHash": "99B01AA5A2F00069623E290F84799966F67E5E9B",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Tech_Hex_Tile"
@@ -942,12 +943,6 @@
 			"ShaderMapHash": "3FDBDAA6E2D485DB48945FBC3C9973322AF6D9B1",
 			"Assets": [
 				"/Game/Materials/Pickupables/M_Ghost"
-			]
-		},
-		{
-			"ShaderMapHash": "F63466A77B4DE3FE3EBCBECD322705E065A55C63",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Treads"
 			]
 		},
 		{
@@ -980,12 +975,6 @@
 			"ShaderMapHash": "6E9242ABE9CF09ED3921E217B6CD22050BF13DF0",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Chair"
-			]
-		},
-		{
-			"ShaderMapHash": "68AC5FABA1E7D7E31A230885AD84861D3D08F1C3",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_OuterCore"
 			]
 		},
 		{
@@ -1028,12 +1017,6 @@
 			"ShaderMapHash": "8710B1B1B89E3E88EE5B7708956B77B5FA62CA5C",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Glass"
-			]
-		},
-		{
-			"ShaderMapHash": "7EC5B6B2A0616623A68E20B2E7331A8DE9EFCB82",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_CoreCore"
 			]
 		},
 		{
@@ -1109,6 +1092,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "EF1B19C1AFC460BD67537B58464136807CA7B674",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_CoreCore"
+			]
+		},
+		{
 			"ShaderMapHash": "2B8F69C215EBFD12AAF73B462E9B4CABD3858E88",
 			"Assets": [
 				"/Interchange/gltf/M_SpecularGlossiness"
@@ -1134,9 +1123,21 @@
 			]
 		},
 		{
+			"ShaderMapHash": "382079C58A23B4B170AEE7154C4644C862CE92AE",
+			"Assets": [
+				"/Game/Materials/Pickupables/M_Treads"
+			]
+		},
+		{
 			"ShaderMapHash": "950C84C700010450DE2B333B901572B9A755BC93",
 			"Assets": [
 				"/Game/Models/MechanicModels/Materials/Stone"
+			]
+		},
+		{
+			"ShaderMapHash": "2B8A2AC828ED45E694A05DDB217812E0F5C1E3D1",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/silver"
 			]
 		},
 		{
@@ -1321,6 +1322,22 @@
 				"/Game/Models/Hassan/PolySphere1",
 				"/Game/Models/HassanModels/cell/PM3D_Sphere3D2",
 				"/Game/Models/HassanModels/cell/PolySphere1",
+				"/Game/Models/MechanicModels/Material_002",
+				"/Game/Models/MechanicModels/Material_003",
+				"/Game/Models/MechanicModels/Material_004",
+				"/Game/Models/MechanicModels/Material_006",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_001",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_002",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_003",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_004",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_005",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_006",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_007",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_008",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_009",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_010",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_011",
+				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_012",
 				"/Game/Models/MechanicModels/Materials/Brown",
 				"/Game/Models/MechanicModels/Materials/Gold",
 				"/Game/Models/MechanicModels/Materials/Material",

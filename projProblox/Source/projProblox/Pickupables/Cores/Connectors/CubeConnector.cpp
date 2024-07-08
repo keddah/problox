@@ -111,20 +111,17 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
 
-	savedDetachTransform = GetActorTransform();
-	
 	// Detach from its components if selected
 	if(selected)
 	{
-		wasDetached = isAttached;
 		Detach(false);
 
-		return wasDetached? EOperations::Detach : EOperations::Move;
+		return EOperations::Detach ;
 	}
 	
 	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return wasDetached? EOperations::Detach : EOperations::Move;
-	if(attachedSocket == NAME_None) return wasDetached? EOperations::Detach : EOperations::Move;
+	if(!IsValid(parentCore)) return EOperations::Detach;
+	if(attachedSocket == NAME_None) return EOperations::Detach;
 	
 	// Use the silhouettes position/rotation...
 	UseSilhouetteTransform();
@@ -158,24 +155,6 @@ float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
 	return attachOffset;
 }
 
-void ACubeConnector::Reattach(const bool sound)
-{
-	parentCore = Cast<ACubeCore>(previousObj);
-	if(!IsValid(parentCore))
-	{
-		Print("couldnt cast to core - Reattaching...", 5)
-		return;
-	}
-	
-	AttachToActor(parentCore, attachRules, removedSocket);
-	if(soundPlayer && sound) soundPlayer->PlayAttach();
-	SetActorRelativeLocation(savedAttachTransform.GetLocation());
-	SetActorRelativeRotation(savedAttachTransform.Rotator());
-	
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
-}
-
 void ACubeConnector::FindOppositeSocket()
 {
 	if(attachedSocket == "FRONT") oppositeSocket = "BACK";
@@ -191,7 +170,7 @@ void ACubeConnector::Detach(const bool push)
 	ResetGhost();
 	SetHideOutlineMesh(true);
 
-	if(!parentCore && !previousObj)
+	if(!parentCore)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
@@ -213,14 +192,11 @@ void ACubeConnector::Detach(const bool push)
 	}
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
-	else previousObj->RemoveAttachment(attachedSocket);
 	
 	silhouette->SetupAttachment(mesh);
 	
 	if(parentCore)
 	{
-		previousObj = parentCore;
-		parentCore = nullptr;
 		
 		// Only play the detach sound if there was a parent core
 		if(soundPlayer) soundPlayer->PlayDetach();
@@ -228,6 +204,7 @@ void ACubeConnector::Detach(const bool push)
 	}
 
 	ToggleGravity(true);
+	parentCore = nullptr;
 	isAttached = false;
 }
 
@@ -245,7 +222,7 @@ void ACubeConnector::SetAbilityActive(bool value)
 
 void ACubeConnector::CycleRaySocket(const bool next)
 {
-	const TArray<FName> freeSockets = GetFreeSlots();
+	const TArray<FName> freeSockets = GetFreeSockets();
 
 	if(freeSockets.IsEmpty()) return;
 

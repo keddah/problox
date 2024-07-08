@@ -43,8 +43,8 @@ public:
 	virtual FName GetOppositeSocket(const FName& origin) const;
 	virtual FName GetOppositeSocket(int index) const;
 	
-	APickupableMaster* GetObjectInSocket(const int index) const { return socketObjects[index]; }
-	APickupableMaster* GetObjectInSocket(const FName& name) const;
+	APickupableMaster* GetObjectFromSocket(const int index) const { return socketObjects[index]; }
+	APickupableMaster* GetObjectFromSocket(const FName& name) const;
 	
 	// Returns an array of all of the available sockets (if attached to something else it won't be found (for connectors set the oppositeSocket as the opposite of the attached socket and use that for checks...).
 	TArray<FName> GetFreeSockets() const;

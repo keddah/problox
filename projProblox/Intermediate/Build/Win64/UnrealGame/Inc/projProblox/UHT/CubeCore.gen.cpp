@@ -11,10 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UMaterial_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstance_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACollector_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACubeCore();
@@ -25,8 +22,6 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_EGameMode();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAddedThing__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature();
-	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature();
-	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnSpawnedCells__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature();
@@ -90,56 +85,6 @@ void FOnSpawnedCells_DelegateWrapper(const FMulticastScriptDelegate& OnSpawnedCe
 {
 	OnSpawnedCells.ProcessMulticastDelegate<UObject>(NULL);
 }
-	struct Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics
-	{
-		struct _Script_projProblox_eventOnNewWave_Parms
-		{
-			int32 wave;
-		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_wave;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::NewProp_wave = { "wave", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_projProblox_eventOnNewWave_Parms, wave), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::NewProp_wave,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Should be broadcast whenever all the cells have been collected whilst in wave mode.\n" },
-#endif
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Should be broadcast whenever all the cells have been collected whilst in wave mode." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnNewWave__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::_Script_projProblox_eventOnNewWave_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::_Script_projProblox_eventOnNewWave_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-void FOnNewWave_DelegateWrapper(const FMulticastScriptDelegate& OnNewWave, int32 wave)
-{
-	struct _Script_projProblox_eventOnNewWave_Parms
-	{
-		int32 wave;
-	};
-	_Script_projProblox_eventOnNewWave_Parms Parms;
-	Parms.wave=wave;
-	OnNewWave.ProcessMulticastDelegate<UObject>(&Parms);
-}
 	struct Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature_Statics
 	{
 #if WITH_METADATA
@@ -171,38 +116,6 @@ void FOnNewWave_DelegateWrapper(const FMulticastScriptDelegate& OnNewWave, int32
 void FOnAttachmentChange_DelegateWrapper(const FMulticastScriptDelegate& OnAttachmentChange)
 {
 	OnAttachmentChange.ProcessMulticastDelegate<UObject>(NULL);
-}
-	struct Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature_Statics::Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Should be broadcast when the reset delay + longest duration has elapsed.. \n" },
-#endif
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Should be broadcast when the reset delay + longest duration has elapsed.." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnAttemptEnding__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-void FOnAttemptEnding_DelegateWrapper(const FMulticastScriptDelegate& OnAttemptEnding)
-{
-	OnAttemptEnding.ProcessMulticastDelegate<UObject>(NULL);
 }
 	struct Z_Construct_UDelegateFunction_projProblox_OnReset__DelegateSignature_Statics
 	{
@@ -286,14 +199,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	Parms.thing=thing;
 	OnAddedThing.ProcessMulticastDelegate<UObject>(&Parms);
 }
-	DEFINE_FUNCTION(ACubeCore::execSelectSocket)
-	{
-		P_GET_PROPERTY(FIntProperty,Z_Param_socket);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(int32*)Z_Param__Result=P_THIS->SelectSocket(Z_Param_socket);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ACubeCore::execBroadcastNewCells)
 	{
 		P_FINISH;
@@ -313,21 +218,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->GetCloseAttachments();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACubeCore::execGetSocketCount)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(int32*)Z_Param__Result=P_THIS->GetSocketCount();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACubeCore::execSetAllAbilityActive)
-	{
-		P_GET_UBOOL(Z_Param_value);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SetAllAbilityActive(Z_Param_value);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execEjectObject)
@@ -403,11 +293,8 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 			{ "EjectObject", &ACubeCore::execEjectObject },
 			{ "GetCloseAttachments", &ACubeCore::execGetCloseAttachments },
 			{ "GetGameMode", &ACubeCore::execGetGameMode },
-			{ "GetSocketCount", &ACubeCore::execGetSocketCount },
 			{ "ObjectInSocket", &ACubeCore::execObjectInSocket },
 			{ "PlayCollectSound", &ACubeCore::execPlayCollectSound },
-			{ "SelectSocket", &ACubeCore::execSelectSocket },
-			{ "SetAllAbilityActive", &ACubeCore::execSetAllAbilityActive },
 			{ "Start", &ACubeCore::execStart },
 			{ "StartGame", &ACubeCore::execStartGame },
 			{ "StartStoryGame", &ACubeCore::execStartStoryGame },
@@ -648,41 +535,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics
-	{
-		struct CubeCore_eventGetSocketCount_Parms
-		{
-			int32 ReturnValue;
-		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventGetSocketCount_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Socket" },
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "GetSocketCount", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::CubeCore_eventGetSocketCount_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::CubeCore_eventGetSocketCount_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ACubeCore_GetSocketCount()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_GetSocketCount_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_ACubeCore_ObjectInSocket_Statics
 	{
 		struct CubeCore_eventObjectInSocket_Parms
@@ -746,91 +598,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACubeCore_SelectSocket_Statics
-	{
-		struct CubeCore_eventSelectSocket_Parms
-		{
-			int32 socket;
-			int32 ReturnValue;
-		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_socket;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::NewProp_socket = { "socket", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventSelectSocket_Parms, socket), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventSelectSocket_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::NewProp_socket,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Socket" },
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "SelectSocket", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::CubeCore_eventSelectSocket_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::CubeCore_eventSelectSocket_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ACubeCore_SelectSocket()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_SelectSocket_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics
-	{
-		struct CubeCore_eventSetAllAbilityActive_Parms
-		{
-			bool value;
-		};
-		static void NewProp_value_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_value;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	void Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::NewProp_value_SetBit(void* Obj)
-	{
-		((CubeCore_eventSetAllAbilityActive_Parms*)Obj)->value = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CubeCore_eventSetAllAbilityActive_Parms), &Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::NewProp_value_SetBit, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::NewProp_value,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Ablility" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/////////////// Abilities ///////////////\n" },
-#endif
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Abilities" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "SetAllAbilityActive", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::CubeCore_eventSetAllAbilityActive_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::CubeCore_eventSetAllAbilityActive_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ACubeCore_SetAllAbilityActive()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_SetAllAbilityActive_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -979,14 +746,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_socketInfo;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_inactiveMat_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_inactiveMat;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_selectedMat_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_selectedMat;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_thingCollector_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_thingCollector;
@@ -998,10 +757,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_fairBounds_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_fairBounds;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_distanceLine_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_distanceLine;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_collector_MetaData[];
 #endif
@@ -1024,17 +779,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onChangeAttachments;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_onAttemptEnding_MetaData[];
-#endif
-		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onAttemptEnding;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_resetTimer_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_resetTimer;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_levelEndDelay_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_levelEndDelay;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_defaultAngularDrag_MetaData[];
 #endif
@@ -1060,10 +807,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_onCellsSpawned_MetaData[];
 #endif
 		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onCellsSpawned;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_onNewWave_MetaData[];
-#endif
-		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onNewWave;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -1080,11 +823,8 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{ &Z_Construct_UFunction_ACubeCore_EjectObject, "EjectObject" }, // 4071214313
 		{ &Z_Construct_UFunction_ACubeCore_GetCloseAttachments, "GetCloseAttachments" }, // 3455939932
 		{ &Z_Construct_UFunction_ACubeCore_GetGameMode, "GetGameMode" }, // 3068884137
-		{ &Z_Construct_UFunction_ACubeCore_GetSocketCount, "GetSocketCount" }, // 2642918207
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3391374434
 		{ &Z_Construct_UFunction_ACubeCore_PlayCollectSound, "PlayCollectSound" }, // 2315332400
-		{ &Z_Construct_UFunction_ACubeCore_SelectSocket, "SelectSocket" }, // 1004249041
-		{ &Z_Construct_UFunction_ACubeCore_SetAllAbilityActive, "SetAllAbilityActive" }, // 212583021
 		{ &Z_Construct_UFunction_ACubeCore_Start, "Start" }, // 761297033
 		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 3000747638
 		{ &Z_Construct_UFunction_ACubeCore_StartStoryGame, "StartStoryGame" }, // 3732795223
@@ -1110,20 +850,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_socketInfo = { "socketInfo", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, socketInfo), Z_Construct_UClass_UCubeSocketInfo_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_socketInfo_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_socketInfo_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_inactiveMat_MetaData[] = {
-		{ "Category", "Collection" },
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_inactiveMat = { "inactiveMat", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, inactiveMat), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_inactiveMat_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_inactiveMat_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_selectedMat_MetaData[] = {
-		{ "Category", "CubeCore" },
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_selectedMat = { "selectedMat", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, selectedMat), Z_Construct_UClass_UMaterialInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_selectedMat_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_selectedMat_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_thingCollector_MetaData[] = {
 		{ "Category", "Collection" },
 		{ "EditInline", "true" },
@@ -1146,17 +872,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds = { "fairBounds", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, fairBounds), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine_MetaData[] = {
-		{ "Category", "Collection" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "This arrow should be shown when the cube is too far away from the collector" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine = { "distanceLine", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, distanceLine), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_collector_MetaData[] = {
 		{ "Category", "Collection" },
@@ -1216,15 +931,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments = { "onChangeAttachments", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onChangeAttachments), Z_Construct_UDelegateFunction_projProblox_OnAttachmentChange__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments_MetaData) }; // 3734686826
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onAttemptEnding_MetaData[] = {
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Will be fired once x seconds have passed after the last attachment deactivates." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onAttemptEnding = { "onAttemptEnding", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onAttemptEnding), Z_Construct_UDelegateFunction_projProblox_OnAttemptEnding__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onAttemptEnding_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onAttemptEnding_MetaData) }; // 1045951065
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_resetTimer_MetaData[] = {
 		{ "Category", "CubeCore" },
 #if !UE_BUILD_SHIPPING
@@ -1237,16 +943,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_resetTimer = { "resetTimer", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, resetTimer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_resetTimer_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_resetTimer_MetaData) }; // 3999327403
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_levelEndDelay_MetaData[] = {
-		{ "Category", "CubeCore" },
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_levelEndDelay = { "levelEndDelay", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, levelEndDelay), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_levelEndDelay_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_levelEndDelay_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag_MetaData[] = {
 		{ "Category", "Angular Drag" },
@@ -1308,31 +1004,17 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	};
 #endif
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onCellsSpawned = { "onCellsSpawned", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onCellsSpawned), Z_Construct_UDelegateFunction_projProblox_OnSpawnedCells__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onCellsSpawned_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onCellsSpawned_MetaData) }; // 1125928620
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onNewWave_MetaData[] = {
-		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Will be fired once the all the cells have been collected (in wave mode)." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onNewWave = { "onNewWave", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onNewWave), Z_Construct_UDelegateFunction_projProblox_OnNewWave__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onNewWave_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onNewWave_MetaData) }; // 1080361161
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACubeCore_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_socketInfo,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_inactiveMat,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_selectedMat,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_thingCollector,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_thingHomer,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_fairBounds,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_distanceLine,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_collector,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_canCollect,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_thingAttraction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedThing,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onChangeAttachments,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onAttemptEnding,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_resetTimer,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_levelEndDelay,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_heavyAngularDrag,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_currentMode_Underlying,
@@ -1340,7 +1022,6 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onCellsSpawned,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onNewWave,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACubeCore_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACubeCore>::IsAbstract,
@@ -1380,9 +1061,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 533751807U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3302046595U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_2524623193(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_4141766205(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

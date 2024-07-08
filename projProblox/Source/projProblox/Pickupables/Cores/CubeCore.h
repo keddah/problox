@@ -182,6 +182,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(APickupableMaster* toEject);
+	void EjectObject(const FName& ejectSocket) const;
 	
 	/////////////// Abilities ///////////////
 	virtual void SetAbilityActive(bool value) override;
@@ -205,7 +206,8 @@ public:
 		return out;
 	}
 
-	TArray<FName> GetFreeSlots() const
+	TArray<FName> GetOccupiedSockets() const { return socketInfo->GetOccupiedSockets(); }
+	TArray<FName> GetFreeSockets() const
 	{
 		TArray<FName> slots = socketInfo->GetFreeSockets();
 		if(slots.Contains(oppositeSocket)) slots.Remove(oppositeSocket);
@@ -226,7 +228,8 @@ public:
 	bool InAdjustPhase() const
 	{
 		// When the angular drag is increased, the player is in the adjust phase.
-		return mesh->GetAngularDamping() == heavyAngularDrag;
+		if(mesh) return mesh->GetAngularDamping() == heavyAngularDrag;
+		return false;
 	}
 	
 
