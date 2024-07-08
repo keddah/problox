@@ -11269,3 +11269,314 @@ Script Stack (0 frames) :
 [2024.07.08-18.06.56:383][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
 [2024.07.08-18.06.57:475][793]LogSlate: Window 'Message Log' being destroyed
 [2024.07.08-18.06.57:482][793]LogSlate: Window 'Message Log' being destroyed
+[2024.07.08-18.07.39:670][389]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/WBP_LoadingScreen.WBP_LoadingScreen
+[2024.07.08-18.07.39:671][389]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.07.39:671][389]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.07.39:679][389]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.07.39:679][389]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.07.51:628][387]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.08-18.08.26:000][539]BlueprintLog: New page: Compile WBP_LoadingScreen
+[2024.07.08-18.08.26:064][539]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.07.08-18.08.26:198][539]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.08.26:230][539]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_LoadingScreen" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_LoadingScreen.uasset" SILENT=true
+[2024.07.08-18.08.26:235][539]LogSavePackage: Moving output files for package: /Game/UI/WBP_LoadingScreen
+[2024.07.08-18.08.26:235][539]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_LoadingScreen482947F84C865045BA9D14B3247EA4E2.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_LoadingScreen.uasset'
+[2024.07.08-18.08.26:242][539]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 20.6 sec)
+[2024.07.08-18.08.26:255][539]AssetCheck: New page: Asset Save: WBP_LoadingScreen
+[2024.07.08-18.08.26:255][539]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_LoadingScreen.WBP_LoadingScreen
+[2024.07.08-18.08.29:834][869]LogWorld: UWorld::CleanupWorld for World_136, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.08.29:834][869]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.08.29:853][869]LogWorld: UWorld::CleanupWorld for World_135, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.08.29:853][869]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.08.52:337][148]BlueprintLog: New page: Compile WBP_Construction
+[2024.07.08-18.08.52:400][148]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2024.07.08-18.08.52:552][148]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.08.52:579][148]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/WBP_Construction" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Construction.uasset" SILENT=true
+[2024.07.08-18.08.52:595][148]LogSavePackage: Moving output files for package: /Game/UI/WBP_Construction
+[2024.07.08-18.08.52:596][148]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Construction8B4DF24A4302BF8062EF10BEDED3A376.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/WBP_Construction.uasset'
+[2024.07.08-18.08.52:602][148]LogFileHelpers: InternalPromptForCheckoutAndSave took 49 ms (total: 20.7 sec)
+[2024.07.08-18.08.52:602][148]AssetCheck: New page: Asset Save: WBP_Construction
+[2024.07.08-18.08.52:602][148]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/WBP_Construction.WBP_Construction
+[2024.07.08-18.08.57:129][546]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_Timeline.WBP_Timeline
+[2024.07.08-18.08.57:129][546]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.08.57:129][546]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.08.57:137][546]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.08.57:137][546]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.10.12:193][532]BlueprintLog: New page: Compile WBP_Timeline
+[2024.07.08-18.10.12:282][532]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2024.07.08-18.10.12:418][532]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.10.12:453][532]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_Timeline.uasset" SILENT=true
+[2024.07.08-18.10.12:510][532]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_Timeline
+[2024.07.08-18.10.12:510][532]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline53CDF18644147C621C0FD98988A3781A.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_Timeline.uasset'
+[2024.07.08-18.10.12:517][532]LogFileHelpers: InternalPromptForCheckoutAndSave took 99 ms (total: 20.8 sec)
+[2024.07.08-18.10.12:524][532]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.07.08-18.10.12:524][532]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_Timeline.WBP_Timeline
+[2024.07.08-18.10.13:438][604]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.08-18.10.13:458][604]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.08-18.10.13:458][604]PIE: New page: PIE session: Lvl_Combined (8 Jul 2024, 20:10:13)
+[2024.07.08-18.10.13:458][604]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.08-18.10.13:573][604]LogPlayLevel: PIE: StaticDuplicateObject took: (0.115250s)
+[2024.07.08-18.10.13:573][604]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.115477s)
+[2024.07.08-18.10.13:591][604]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2024.07.08-18.10.13:593][604]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.10.13:593][604]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.10.13:594][604]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.08-18.10.13:594][604]LogPlayLevel: PIE: World Init took: (0.001290s)
+[2024.07.08-18.10.13:594][604]LogAudio: Display: Creating Audio Device:                 Id: 45, Scope: Unique, Realtime: True
+[2024.07.08-18.10.13:595][604]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.08-18.10.13:595][604]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.08-18.10.13:595][604]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.08-18.10.13:595][604]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.08-18.10.13:595][604]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.08-18.10.13:595][604]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.08-18.10.13:595][604]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.08-18.10.13:595][604]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.08-18.10.13:595][604]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.08-18.10.13:596][604]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.08-18.10.13:596][604]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.08-18.10.13:597][604]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.08-18.10.13:626][604]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.07.08-18.10.13:626][604]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.08-18.10.13:626][604]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.08-18.10.13:626][604]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.08-18.10.13:627][604]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=45
+[2024.07.08-18.10.13:627][604]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=45
+[2024.07.08-18.10.13:629][604]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=45
+[2024.07.08-18.10.13:629][604]LogInit: FAudioDevice initialized with ID 45.
+[2024.07.08-18.10.13:629][604]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=45
+[2024.07.08-18.10.13:629][604]LogAudio: Display: Audio Device (ID: 45) registered with world 'Lvl_Combined'.
+[2024.07.08-18.10.13:629][604]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 45
+[2024.07.08-18.10.13:651][604]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.08-18.10.13:651][604]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.08-18.10.13:666][604]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.08-18.10.13:667][604]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.08-18.10.13:667][604]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.08-19.10.13
+[2024.07.08-18.10.13:668][604]LogWorld: Bringing up level for play took: 0.016456
+[2024.07.08-18.10.13:670][604]LogOnline: OSS: Created online subsystem instance for: :Context_147
+[2024.07.08-18.10.13:679][604]PIE: Server logged in
+[2024.07.08-18.10.13:680][604]PIE: Play in editor total start time 0.223 seconds.
+[2024.07.08-18.10.13:694][604]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.08-18.10.13:798][604]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.08-18.10.14:405][604]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.08-18.10.14:469][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_48.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:469][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_50.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:469][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_130.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:469][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_131.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:469][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_75.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:470][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_132.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:471][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_158.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:471][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_194.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:471][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_198.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:471][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_199.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:471][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_200.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:472][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_104.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:473][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_183.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:473][605]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_193.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:535][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_226.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:535][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_171.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:535][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_214.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_227.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_239.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_240.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_241.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_243.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_244.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:536][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_245.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_246.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_247.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_252.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_253.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_254.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:537][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_255.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_256.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_257.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_258.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_261.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_263.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_265.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_266.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:538][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_267.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:539][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_269.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:539][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_271.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:539][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_272.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:539][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_273.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:539][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_275.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:539][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_276.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:539][606]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_159.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:634][607]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_303.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:635][607]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_9.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:635][607]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_10.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:635][607]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_11.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:635][607]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_17.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.14:636][607]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_20.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.08-18.10.15:441][643]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.08-18.10.15:441][643]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.08-18.10.15:442][643]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.08-18.10.15:448][643]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.10.15:461][643]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.10.15:465][643]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.08-18.10.15:475][643]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.10.15:508][643]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.07.08-18.10.15:527][643]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 45
+[2024.07.08-18.10.15:527][643]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=45
+[2024.07.08-18.10.15:529][643]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=45
+[2024.07.08-18.10.15:572][643]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2024.07.08-18.10.15:698][644]LogPlayLevel: Display: Destroying online subsystem :Context_147
+[2024.07.08-18.10.15:719][644]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.07.08-18.10.16:476][704]LogSlate: Window 'Message Log' being destroyed
+[2024.07.08-18.10.16:484][704]LogSlate: Window 'Message Log' being destroyed
+[2024.07.08-18.10.45:762][393]BlueprintLog: New page: Compile WBP_Timeline
+[2024.07.08-18.10.45:847][393]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2024.07.08-18.10.45:978][393]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.10.46:014][393]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_Timeline.uasset" SILENT=true
+[2024.07.08-18.10.46:072][393]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_Timeline
+[2024.07.08-18.10.46:073][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineC3DAEDD3473E86C5650202A416B22D16.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_Timeline.uasset'
+[2024.07.08-18.10.46:078][393]LogFileHelpers: InternalPromptForCheckoutAndSave took 100 ms (total: 20.9 sec)
+[2024.07.08-18.10.46:081][393]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.07.08-18.10.46:081][393]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_Timeline.WBP_Timeline
+[2024.07.08-18.10.59:407][573]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_TimelineBarAgain.WBP_TimelineBarAgain
+[2024.07.08-18.10.59:407][573]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.10.59:407][573]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.10.59:414][573]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.10.59:415][573]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.11.30:052][445]BlueprintLog: New page: Compile WBP_TimelineBarAgain
+[2024.07.08-18.11.30:138][445]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2024.07.08-18.11.30:277][445]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.11.30:312][445]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_TimelineBarAgain" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineBarAgain.uasset" SILENT=true
+[2024.07.08-18.11.30:338][445]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_TimelineBarAgain
+[2024.07.08-18.11.30:338][445]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineBarAgain46D92F3643C9DBF39E30029F6CBF3C4B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineBarAgain.uasset'
+[2024.07.08-18.11.30:345][445]LogFileHelpers: InternalPromptForCheckoutAndSave took 67 ms (total: 20.9 sec)
+[2024.07.08-18.11.30:347][445]AssetCheck: New page: Asset Save: WBP_TimelineBarAgain
+[2024.07.08-18.11.30:347][445]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_TimelineBarAgain.WBP_TimelineBarAgain
+[2024.07.08-18.13.04:466][216]BlueprintLog: New page: Compile WBP_TimelineBarAgain
+[2024.07.08-18.13.04:552][216]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2024.07.08-18.13.04:696][216]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.13.04:725][216]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_TimelineBarAgain" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineBarAgain.uasset" SILENT=true
+[2024.07.08-18.13.04:749][216]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_TimelineBarAgain
+[2024.07.08-18.13.04:750][216]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineBarAgain6FEA0AF0450470CCA4EDEA87CA365006.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineBarAgain.uasset'
+[2024.07.08-18.13.04:757][216]LogFileHelpers: InternalPromptForCheckoutAndSave took 60 ms (total: 21.0 sec)
+[2024.07.08-18.13.04:762][216]AssetCheck: New page: Asset Save: WBP_TimelineBarAgain
+[2024.07.08-18.13.04:763][216]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_TimelineBarAgain.WBP_TimelineBarAgain
+[2024.07.08-18.13.06:861][393]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_TimelineLine.WBP_TimelineLine
+[2024.07.08-18.13.06:861][393]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.13.06:862][393]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.13.06:868][393]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.13.06:869][393]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.13.09:802][639]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2024.07.08-18.13.17:313][639]LogSlate: Window 'Delete Assets' being destroyed
+[2024.07.08-18.13.17:374][639]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/UI/Timeline/WBP_TimelinePin.WBP_TimelinePin
+	Asset Type: WidgetBlueprint
+[2024.07.08-18.13.18:066][639]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.07.08-18.13.18:086][639]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2024.07.08-18.13.18:104][639]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.07.08-18.13.18:314][639]SourceControl: Error: Updated 0 paths from the index
+[2024.07.08-18.13.18:465][639]SourceControl: rm 'projProblox/Content/UI/Timeline/WBP_TimelinePin.uasset'
+[2024.07.08-18.13.18:646][639]LogAutomationController: Ignoring very large delta of 8.96 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2024.07.08-18.13.59:359][499]BlueprintLog: New page: Compile WBP_TimelineLine
+[2024.07.08-18.13.59:430][499]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.07.08-18.13.59:577][499]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.13.59:604][499]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_TimelineLine" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineLine.uasset" SILENT=true
+[2024.07.08-18.13.59:613][499]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_TimelineLine
+[2024.07.08-18.13.59:615][499]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineLineD3521AF74D38C93636C70090E3D2669E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineLine.uasset'
+[2024.07.08-18.13.59:620][499]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 21.1 sec)
+[2024.07.08-18.13.59:626][499]AssetCheck: New page: Asset Save: WBP_TimelineLine
+[2024.07.08-18.13.59:626][499]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_TimelineLine.WBP_TimelineLine
+[2024.07.08-18.14.08:765][405]BlueprintLog: New page: Compile WBP_TimelineLine
+[2024.07.08-18.14.08:835][405]LogUObjectHash: Compacting FUObjectHashTables data took   1.70ms
+[2024.07.08-18.14.08:988][405]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.14.09:028][405]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_TimelineLine" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineLine.uasset" SILENT=true
+[2024.07.08-18.14.09:038][405]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_TimelineLine
+[2024.07.08-18.14.09:039][405]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineLineBCF4A3CF443621AA33E3DC9EC6A321C8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineLine.uasset'
+[2024.07.08-18.14.09:045][405]LogFileHelpers: InternalPromptForCheckoutAndSave took 56 ms (total: 21.1 sec)
+[2024.07.08-18.14.09:051][405]AssetCheck: New page: Asset Save: WBP_TimelineLine
+[2024.07.08-18.14.09:051][405]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_TimelineLine.WBP_TimelineLine
+[2024.07.08-18.14.11:713][622]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.07.08-18.14.13:025][743]LogWorld: UWorld::CleanupWorld for World_148, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.14.13:025][743]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.14.13:043][743]LogWorld: UWorld::CleanupWorld for World_147, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.14.13:043][743]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.14.13:387][769]LogWorld: UWorld::CleanupWorld for World_144, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.14.13:387][769]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.14.13:404][769]LogWorld: UWorld::CleanupWorld for World_143, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.14.13:405][769]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.14.13:931][809]LogWorld: UWorld::CleanupWorld for World_140, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.14.13:931][809]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.14.13:947][809]LogWorld: UWorld::CleanupWorld for World_139, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.14.13:947][809]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.14.19:513][266]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Notebook/WBP_Notebook.WBP_Notebook
+[2024.07.08-18.14.19:513][266]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.14.19:513][266]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.14.19:521][266]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.14.19:521][266]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.15.33:754][969]BlueprintLog: New page: Compile WBP_Notebook
+[2024.07.08-18.15.33:823][969]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.07.08-18.15.33:937][969]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.15.33:961][969]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/WBP_Notebook" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Notebook/WBP_Notebook.uasset" SILENT=true
+[2024.07.08-18.15.33:992][969]LogSavePackage: Moving output files for package: /Game/UI/Notebook/WBP_Notebook
+[2024.07.08-18.15.33:993][969]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_NotebookE7F645C947D7648AC15832AAC0E552C0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Notebook/WBP_Notebook.uasset'
+[2024.07.08-18.15.33:999][969]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 21.2 sec)
+[2024.07.08-18.15.34:005][969]AssetCheck: New page: Asset Save: WBP_Notebook
+[2024.07.08-18.15.34:005][969]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Notebook/WBP_Notebook.WBP_Notebook
+[2024.07.08-18.15.39:896][507]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Notebook/WBP_ObjectiveCheck.WBP_ObjectiveCheck
+[2024.07.08-18.15.39:897][507]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.15.39:897][507]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.15.39:905][507]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.15.39:905][507]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.16.00:699][510]BlueprintLog: New page: Compile WBP_ObjectiveCheck
+[2024.07.08-18.16.00:742][510]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.07.08-18.16.00:863][510]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.08-18.16.00:892][510]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/WBP_ObjectiveCheck" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Notebook/WBP_ObjectiveCheck.uasset" SILENT=true
+[2024.07.08-18.16.00:898][510]LogSavePackage: Moving output files for package: /Game/UI/Notebook/WBP_ObjectiveCheck
+[2024.07.08-18.16.00:899][510]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_ObjectiveCheck2F59468F4B5BBEA549749DB07A4F74A9.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Notebook/WBP_ObjectiveCheck.uasset'
+[2024.07.08-18.16.00:907][510]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 21.2 sec)
+[2024.07.08-18.16.00:913][510]AssetCheck: New page: Asset Save: WBP_ObjectiveCheck
+[2024.07.08-18.16.00:913][510]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Notebook/WBP_ObjectiveCheck.WBP_ObjectiveCheck
+[2024.07.08-18.16.12:017][502]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/Widgets/WB_Credits.WB_Credits
+[2024.07.08-18.16.12:017][502]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.16.12:017][502]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.16.12:025][502]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.16.12:025][502]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.17.24:572][771]LogWorld: UWorld::CleanupWorld for World_158, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.24:572][771]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.24:592][771]LogWorld: UWorld::CleanupWorld for World_157, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.24:592][771]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.24:872][793]LogWorld: UWorld::CleanupWorld for World_155, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.24:873][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.24:889][793]LogWorld: UWorld::CleanupWorld for World_154, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.24:889][793]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.25:413][836]LogWorld: UWorld::CleanupWorld for World_152, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.25:413][836]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.25:430][836]LogWorld: UWorld::CleanupWorld for World_151, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.25:430][836]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.28:293][ 81]LogWorld: UWorld::CleanupWorld for World_97, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.28:293][ 81]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.28:311][ 81]LogWorld: UWorld::CleanupWorld for World_96, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.28:311][ 81]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.29:384][165]LogWorld: UWorld::CleanupWorld for World_99, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.29:384][165]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.29:401][165]LogWorld: UWorld::CleanupWorld for World_98, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.29:401][165]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.30:046][215]LogWorld: UWorld::CleanupWorld for World_80, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.30:046][215]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.30:064][215]LogWorld: UWorld::CleanupWorld for World_79, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.30:064][215]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.30:845][276]LogWorld: UWorld::CleanupWorld for World_106, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.30:845][276]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.30:861][276]LogWorld: UWorld::CleanupWorld for World_105, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.30:862][276]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.31:695][340]LogWorld: UWorld::CleanupWorld for World_117, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.31:695][340]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.31:712][340]LogWorld: UWorld::CleanupWorld for World_116, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.31:712][340]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.32:349][391]LogWorld: UWorld::CleanupWorld for World_120, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.32:349][391]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.32:366][391]LogWorld: UWorld::CleanupWorld for World_119, bSessionEnded=true, bCleanupResources=true
+[2024.07.08-18.17.32:366][391]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.08-18.17.41:952][183]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Glider.BP_Glider
+[2024.07.08-18.17.41:953][183]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.08-18.17.41:953][183]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.08-18.17.42:112][183]LogActor: Warning: BP_Glider_C /Engine/Transient.World_159:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
