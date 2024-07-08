@@ -259,7 +259,7 @@ void APlayerCharacter::Zoom()
 	if (!zooming) return;
 	
 	const float armLength = camBoom->TargetArmLength;
-	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
+	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * camZoomSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
 
 void APlayerCharacter::ScrollZoom(const float input)
@@ -267,7 +267,7 @@ void APlayerCharacter::ScrollZoom(const float input)
 	if(currentMode != EGameMode::Build) return;
 	
 	const float armLength = camBoom->TargetArmLength;
-	camBoom->TargetArmLength = FMath::Clamp((-input * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
+	camBoom->TargetArmLength = FMath::Clamp((-input * camZoomSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
 
 void APlayerCharacter::NextPreviousSlot(const bool next)
@@ -354,6 +354,8 @@ void APlayerCharacter::GoToSlot(const bool move, const bool next)
 	// OrbitControls(.1f);
 	// orbiting = false;
 }
+
+void APlayerCharacter::EndTurnEarly() { if(currentMode != EGameMode::Build) if(core) core->EndTurn(); }
 
 void APlayerCharacter::GoToCore()
 {

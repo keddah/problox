@@ -262,6 +262,28 @@ void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 	RemoveVelocity();
 }
 
+void ACubeCore::EndTurn()
+{
+	FTimerManager& manager = wrld->GetTimerManager();
+	if(!manager.IsTimerActive(resetTimer)) return;
+	
+	const float percent = manager.GetTimerElapsed(resetTimer) / longestDuration;
+
+	// Over 60% done
+	if(percent < .6f) return;
+
+	// Play a sound???
+	
+	// Clear the timer 
+	manager.ClearTimer(resetTimer);
+
+	// Call the function the timer is supposed to call
+	ResetToStart();
+
+	// Deactivate all the attachments
+	for(const auto& obj : GetCloseAttachments()) obj->SetAbilityActive(false);
+}
+
 
 void ACubeCore::ResetRotation(bool resetVelocity)
 {
@@ -295,17 +317,20 @@ void ACubeCore::ToggleGravity() const
 	for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(!selected);
 }
 
-void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const float longestDuration)
+void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const float _longestTime)
 {
 	 TArray<APickupableMaster*> objs = GetCloseAttachments();
 
 	if(objs.IsEmpty())
 	{
+		longestDuration = 3;
 		const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
-		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, 3, false);
+		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
 		return;
 	}
 
+	longestDuration = _longestTime;
+	
 	for(int i = 0; i < objs.Num(); i++)
 	{
 		FTimerHandle activationHandle;
@@ -331,5 +356,5 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 	}
 
 	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
-	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
+	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, _longestTime, false);
 }

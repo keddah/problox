@@ -76,6 +76,9 @@ private:
 
 	void GoToSlot(bool move = false, bool next = false);
 
+	UFUNCTION(BlueprintCallable)
+	void EndTurnEarly();
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -104,6 +107,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = .1f))
 	float orbitSpeed = 100;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = .1f))
+	float camZoomSpeed = orbitSpeed;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = 1))
 	float maxOrbitDistance = 2750;

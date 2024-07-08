@@ -36,6 +36,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGoToCore); \
 	DECLARE_FUNCTION(execGetGameMode); \
 	DECLARE_FUNCTION(execSetGameMode); \
+	DECLARE_FUNCTION(execEndTurnEarly); \
 	DECLARE_FUNCTION(execAboveBelowSlot); \
 	DECLARE_FUNCTION(execNextPreviousSlot); \
 	DECLARE_FUNCTION(execScrollZoom); \

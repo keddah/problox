@@ -53,7 +53,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	// The object that is attached to this cube and selected...
 	APickupableMaster* selectedObj;
 
-	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, float longestDuration);
+	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, float _longestTime);
 
 
 	/////////////// Undo/Redo ///////////////
@@ -67,9 +67,9 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void StartGame() { onTurnStarted.Broadcast(); } 
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
-	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const float longestDuration)
+	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
 	{
-		TimedObjectActivation(delays, durations, longestDuration);
+		TimedObjectActivation(delays, durations, _longestTime);
 		StartGame();
 	}
 
@@ -136,6 +136,9 @@ protected:
 	/////////////// Turn System ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	FTimerHandle resetTimer;
+
+	float longestDuration;
+	
 
 	/////////////// Other ///////////////
 	UPROPERTY(EditDefaultsOnly, Category = "Angular Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
@@ -248,10 +251,11 @@ public:
 	
 	/////////////// Other ///////////////
 	virtual void RemoveVelocity() const override;
-
-	void AddThing(AActor* thing) const;
-
 	void Teleport(const FVector& pos, const FRotator& rot);
+
+	void EndTurn();
+	
+	void AddThing(AActor* thing) const;
 	
 	void LoseMoney(const short amount) const { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }
 };
