@@ -17,6 +17,7 @@
 #include "./projProblox/Cells/Cell.h"
 #include "Cores/Connectors/CubeConnector.h"
 
+
 // Sets default values
 APickupableMaster::APickupableMaster()
 {
@@ -187,21 +188,16 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	
 	ToggleGravity();
 	
-	wasDetached = false;
-	savedDetachTransform = GetActorTransform();
-	
 	if(selected)
 	{
-		wasDetached = isAttached;
 		Detach(false);
 		
-		return wasDetached? EOperations::Detach : EOperations::Move;
+		return EOperations::Detach;
 	}
 
-	if(!parentCore) return  wasDetached? EOperations::Detach : EOperations::Move;
-	if(attachedSocket == NAME_None) return wasDetached? EOperations::Detach : EOperations::Move;
+	if(!parentCore) return  EOperations::Detach;
+	if(attachedSocket == NAME_None) return EOperations::Detach;
 
-	if(!previousObj) previousObj = parentCore;
 	SetShowMesh(true);
 	
 	AttachToActor(parentCore, attachRules, attachedSocket);
@@ -241,7 +237,7 @@ void APickupableMaster::Detach(const bool push)
 {
 	ResetGhost();
 	
-	if(!parentCore && !previousObj)
+	if(!parentCore)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
@@ -249,6 +245,8 @@ void APickupableMaster::Detach(const bool push)
 
 	SetAbilityActive(false);
 
+	mesh->SetCollisionResponseToAllChannels(ECR_Ignore);
+	
 	SetHideOutlineMesh(true);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	if(push && parentCore)
@@ -264,14 +262,10 @@ void APickupableMaster::Detach(const bool push)
 	}
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
-	else previousObj->RemoveAttachment(attachedSocket);
-	
 	silhouette->SetupAttachment(mesh);
 	
 	if(parentCore)
 	{
-		previousObj = parentCore;
-		parentCore = nullptr;
 		
 		// Only play the detach sound if there was a parent core
 		if(soundPlayer) soundPlayer->PlayDetach();
@@ -279,6 +273,7 @@ void APickupableMaster::Detach(const bool push)
 	}
 
 	ToggleGravity(true);
+	parentCore = nullptr;
 	isAttached = false;
 }
 
@@ -290,7 +285,20 @@ void APickupableMaster::UseSilhouetteTransform(const UStaticMeshComponent* ghost
 	const FTransform silhouetteTransform = ghost->GetComponentTransform();
 	SetActorLocation(silhouetteTransform.GetLocation());
 	SetActorRotation(silhouetteTransform.GetRotation());
-	savedAttachTransform = GetActorTransform().GetRelativeTransform(parentCore->GetActorTransform());
+}
+
+void APickupableMaster::Reattach(const FName& socket)
+{
+	if(!parentCore)
+	{
+		Print("couldnt cast to core - Reattaching...", 5)
+		return;
+	}
+	isAttached = true;
+	attachedSocket = socket;
+	
+	GhostPlacement();
+	SetSelected(false);
 }
 
 
@@ -481,21 +489,6 @@ void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableM
 	}
 }
 
-void APickupableMaster::GetDescendentsActors(const AActor* parent, TArray<AActor*>& outArray)
-{
-	if (!parent) return;
-
-	TArray<AActor*> children;
-	parent->GetAttachedActors(children);
-
-	for (AActor* child : children)
-	{
-		outArray.Add(child);
-		// Recursively get descendants of this child actor
-		GetDescendentsActors(child, outArray);
-	}
-}
-
 void APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray)
 {
 	if (!child) return;
@@ -510,27 +503,6 @@ void APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMas
 			GetAscendants(parent, outArray);
 		}
 	}
-}
-
-void APickupableMaster::GetAscendantsActors(const AActor* child, TArray<AActor*>& outArray)
-{
-	if (!child) return;
-
-	if (AActor* parent = child->GetAttachParentActor())
-	{
-		outArray.Add(parent);
-		// Recursively get ascendants of this parent actor
-		GetAscendantsActors(parent, outArray);
-	}
-}
-
-TArray<APickupableMaster*> APickupableMaster::AllObjsInHierarchy()
-{
-	TArray<APickupableMaster*> all;
-
-	GetDescendents(this, all);
-	GetAscendants(this, all);
-	return all;
 }
 
 APickupableMaster* APickupableMaster::GetParent()
@@ -554,23 +526,4 @@ bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
 	}
 
 	return false;
-}
-
-void APickupableMaster::Reattach(const bool sound)
-{
-	parentCore = Cast<ACubeCore>(previousObj);
-	if(!parentCore)
-	{
-		Print("couldnt cast to core - Reattaching...", 5)
-		return;
-	}
-
-	AttachToActor(parentCore, attachRules, removedSocket);
-	if(soundPlayer && sound) soundPlayer->PlayAttach();
-	else Print("Sfx manager is invalid.....", 5)
-
-	UseSavedTransform();
-	
-	parentCore->AddAttachment(this, attachedSocket);
-	isAttached = true;
 }

@@ -36,14 +36,14 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGoToCore); \
 	DECLARE_FUNCTION(execGetGameMode); \
 	DECLARE_FUNCTION(execSetGameMode); \
+	DECLARE_FUNCTION(execEndTurnEarly); \
 	DECLARE_FUNCTION(execAboveBelowSlot); \
 	DECLARE_FUNCTION(execNextPreviousSlot); \
 	DECLARE_FUNCTION(execScrollZoom); \
 	DECLARE_FUNCTION(execZoom); \
 	DECLARE_FUNCTION(execOrbitControls); \
 	DECLARE_FUNCTION(execCreateDetachHistory); \
-	DECLARE_FUNCTION(execRedo); \
-	DECLARE_FUNCTION(execUndo);
+	DECLARE_FUNCTION(execUndoRedo);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_36_ACCESSORS

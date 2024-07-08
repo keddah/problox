@@ -76,14 +76,14 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Reset the silhouette after using its transform
 	ResetGhost();
-	return EOperations::Move;
+	return EOperations::None;
 }
 
 void ACubeCore::Detach(const bool push)
 {
 	if(!ObjectInSocket(raySocket)) return;
 
-	APickupableMaster* obj = socketInfo->GetObjectInSocket(raySocket);
+	APickupableMaster* obj = socketInfo->GetObjectFromSocket(raySocket);
 	if(!obj) return;
 
 	obj->Detach(push);
@@ -127,6 +127,12 @@ void ACubeCore::SetEnableCollisions(const bool enable) const
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
+	if(socketInfo->ObjectInSocket(socket))
+	{
+		// Print("Already an object in this socket", 4)
+		return;
+	}
+	
 	attachedSocket = socket;
 
 	socketInfo->AddAttachment(attachment, socket);
@@ -199,6 +205,16 @@ void ACubeCore::EjectObject(APickupableMaster* toEject)
 	soundPlayer->PlayDetachAll();
 }
 
+void ACubeCore::EjectObject(const FName& ejectSocket) const
+{
+	APickupableMaster* toEject = socketInfo->GetObjectFromSocket(ejectSocket);
+
+	if(!toEject) return;
+
+	toEject->Detach(true);
+	soundPlayer->PlayDetachAll();
+}
+
 float ACubeCore::GetMass() const
 {
 	if(!mesh->IsSimulatingPhysics()) return 0;
@@ -241,6 +257,31 @@ void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 
 	SetActorLocation(pos);
 	SetActorRotation(rot);
+	mesh->SetAllUseCCD(true);
+
+	RemoveVelocity();
+}
+
+void ACubeCore::EndTurn()
+{
+	FTimerManager& manager = wrld->GetTimerManager();
+	if(!manager.IsTimerActive(resetTimer)) return;
+	
+	const float percent = manager.GetTimerElapsed(resetTimer) / longestDuration;
+
+	// Over 60% done
+	if(percent < .6f) return;
+
+	// Play a sound???
+	
+	// Clear the timer 
+	manager.ClearTimer(resetTimer);
+
+	// Call the function the timer is supposed to call
+	ResetToStart();
+
+	// Deactivate all the attachments
+	for(const auto& obj : GetCloseAttachments()) obj->SetAbilityActive(false);
 }
 
 
@@ -276,17 +317,20 @@ void ACubeCore::ToggleGravity() const
 	for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(!selected);
 }
 
-void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const float longestDuration)
+void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const float _longestTime)
 {
 	 TArray<APickupableMaster*> objs = GetCloseAttachments();
 
 	if(objs.IsEmpty())
 	{
+		longestDuration = 3;
 		const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
-		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, 3, false);
+		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
 		return;
 	}
 
+	longestDuration = _longestTime;
+	
 	for(int i = 0; i < objs.Num(); i++)
 	{
 		FTimerHandle activationHandle;
@@ -312,5 +356,5 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 	}
 
 	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
-	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
+	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, _longestTime, false);
 }

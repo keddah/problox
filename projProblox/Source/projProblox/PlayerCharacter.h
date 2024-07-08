@@ -45,15 +45,10 @@ private:
 
 	float undoRedoThreshold = 30;
 	
-	// The transform of the selected object (should be set when picking up an object)
-	FTransform selectedTransform;
-
 	UFUNCTION(BlueprintCallable)
-	void Undo();
-	UFUNCTION(BlueprintCallable)
-	void Redo();
+	void UndoRedo(bool redo);
 
-	void CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform) const;
+	void CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const TArray<FName>& attachedSockets) const;
 
 	// Detaches everything from the inputted core or the pickupable's parent then creates task histories for each thing that was detached.  
 	UFUNCTION(BlueprintCallable)
@@ -81,6 +76,9 @@ private:
 
 	void GoToSlot(bool move = false, bool next = false);
 
+	UFUNCTION(BlueprintCallable)
+	void EndTurnEarly();
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -109,6 +107,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = .1f))
 	float orbitSpeed = 100;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = .1f))
+	float camZoomSpeed = orbitSpeed;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = 1))
 	float maxOrbitDistance = 2750;

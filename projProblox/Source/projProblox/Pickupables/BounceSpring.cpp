@@ -33,7 +33,8 @@ ABounceSpring::ABounceSpring()
 
 void ABounceSpring::Ability(float deltaTime)
 {
-	Super::Ability(deltaTime);
+	if(!isAttached) return;
+	if(!active) return;
 	
 	if(!wrld)
 	{

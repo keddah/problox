@@ -53,140 +53,77 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void APlayerCharacter::Undo()
+void APlayerCharacter::UndoRedo(const bool redo)
 {
 	// Stops the player from being able to spam undo/redo
-	const FTask task = history->Undo();
-		
-	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
-
-	holding = false;
-	selectedObj = nullptr;
-
-	// Clear things to ignore once not selecting anything.
-	exclusions.Empty();
-
-	
-	// Print(task.taskName.ToString(), 5)
-	for (auto& obj : changedObjs)
-	{
-		
-		// If the task.object wasn't set... the task struct is invalid.
-		if(!IsValid(obj))
-		{
-			Print("There aren't any tasks to undo...", 2);
-			history->PrintTaskIndex();
-			continue;
-		}
-
-		// Manually deselect the object...
-		obj->ManualSetSelected(false);
-
-		const bool moveAttach = FVector::Dist(obj->GetActorLocation(), task.endTransform.GetLocation()) > undoRedoThreshold;
-		const bool moveDetach = FVector::Dist(obj->GetActorLocation(), task.startTransform.GetLocation()) > undoRedoThreshold;
-		PrintFloat(FVector::Dist(obj->GetActorLocation(), task.startTransform.GetLocation()), 4)
-
-		// Depending on the operation... Move back, Reattach or Detach
-		switch (task.operation)
-		{
-			// Undo the attach operation
-			case EOperations::Attach:
-				obj->Detach(true);
-				if(moveDetach)
-				{
-					obj->SetActorLocation(task.startTransform.GetLocation());
-					obj->SetActorRotation(task.startTransform.Rotator());
-				}
-				break;
-			
-			// Undo the detach operation
-			case EOperations::Detach:
-				obj->Reattach(moveAttach);
-				break;
-			
-			// Undo the move operation
-			case EOperations::Move:
-				if(moveDetach || moveAttach)
-				{
-					obj->SetActorLocation(task.startTransform.GetLocation());
-					obj->SetActorRotation(task.startTransform.Rotator());
-				}
-				break;
-		}
-
-		if(moveDetach || moveAttach) obj->RemoveVelocity();
-	}
-}
-
-void APlayerCharacter::Redo()
-{
-	// Stops the player from being able to spam undo/redo
-	const FTask task = history->Redo();
+	FTask task;
 	history->PrintTaskIndex();
+	if(redo) task = history->Redo();
+	else task = history->Undo();
 		
 	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
-
+	TArray<TSubclassOf<APickupableMaster>> changedClasses = task.modifiedClasses;
 	holding = false;
 	selectedObj = nullptr;
 
 	// Clear things to ignore once not selecting anything.
 	exclusions.Empty();
+
+	Print(task.taskName.ToString(), 4)
 	
-	for (auto& obj : changedObjs)
+	for (int i = 0; i < changedObjs.Num(); i++)
 	{
-		// If the task.object wasn't set... the task struct is invalid.
-		if(!IsValid(obj))
+		if(APickupableMaster* obj = changedObjs[i])
 		{
-			Print("There aren't any tasks to redo...", 2);
-			history->PrintTaskIndex();
-			continue;
-		}
+			// Redoing Detach
+			if(task.operation == EOperations::Detach && redo)
+			{
+				Print("func1", 4)
+				core->EjectObject(obj);
+			}
+			
+			// Undoing Attach
+			if(task.operation == EOperations::Attach && !redo)
+			{
+				Print("func2", 4)
+				core->EjectObject(obj);
+			}
 
-		const bool moveDetach = FVector::Dist(obj->GetActorLocation(), task.startTransform.GetLocation()) > undoRedoThreshold;
-		const bool moveAttach = FVector::Dist(obj->GetActorLocation(), task.endTransform.GetLocation()) > undoRedoThreshold;
+			FTimerHandle destroyHandle;
+			FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
 		
-		// Manually deselect the object...
-		obj->ManualSetSelected(false);
-
-		// Depending on the operation... Move back, Reattach or Detach
-		switch (task.operation)
-		{
-			// Redo the attach operation
-		case EOperations::Attach:
-			obj->Reattach(moveAttach);
-			break;
-			
-			// Redo the detach operation
-		case EOperations::Detach:
-			obj->Detach(true);
-			if(moveDetach)
-			{
-				obj->SetActorLocation(task.endTransform.GetLocation());
-				obj->SetActorRotation(task.endTransform.Rotator());
-			}
-			break;
-			
-			// Redo the move operation
-		case EOperations::Move:
-			if(moveDetach)
-			{
-				obj->SetActorLocation(task.endTransform.GetLocation());
-				obj->SetActorRotation(task.endTransform.Rotator());
-			}
-			break;
+			GetWorld()->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
 		}
-
-		if(moveDetach || moveAttach) obj->RemoveVelocity();
+		
+		// Undoing Detach
+		else if(task.operation == EOperations::Detach && !redo)
+		{
+			Print("func3", 4)
+			history->RecreateObject(GetWorld(), core, task.modifiedClasses[i], task.attachedSockets[i]);
+		}
+		
+		// Redoing Attach
+		else if(task.operation == EOperations::Attach && redo)
+		{
+			Print("func4", 4)
+			history->RecreateObject(GetWorld(), core, task.modifiedClasses[i], task.attachedSockets[i]);
+		}
 	}
 }
 
-void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const FTransform& startTransform, const FTransform& endTransform) const
+void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const TArray<FName>& attachedSockets) const
 {
 	FTask newTask;
-	if(task == "ATTACH") newTask = {task, objs, startTransform, endTransform, EOperations::Attach};
-	if(task == "DETACH") newTask = {task, objs, startTransform, endTransform, EOperations::Detach};
-	if(task == "MOVE") newTask = {task, objs, startTransform, endTransform, EOperations::Move};
+	TArray<TSubclassOf<APickupableMaster>> modifiedClasses;
+	for(const auto& obj  : objs)
+	{
+		modifiedClasses.Add(obj->GetClass());
+	}
 	
+	if(task == "ATTACH") newTask = {task, objs, modifiedClasses, attachedSockets, EOperations::Attach};
+	else if(task == "DETACH") newTask = {task, objs, modifiedClasses, attachedSockets, EOperations::Detach};
+
+	Print(newTask.taskName.ToString(), 4)
 	history->NewAction(newTask);
 }
 
@@ -195,22 +132,30 @@ void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)
 	// Try to cast to a core
 	if(ACubeCore* objCore = Cast<ACubeCore>(obj))
 	{
+		const TArray<FName> usedSockets = objCore->GetOccupiedSockets();
 		TArray<APickupableMaster*> detachedObjects = objCore->DetachAll();
+		
 		if(detachedObjects.IsEmpty()) return;
-		CreateTaskHistory("DETACH", detachedObjects, FTransform::Identity, FTransform::Identity);
-		return;
+		CreateTaskHistory("DETACH", detachedObjects, usedSockets);
 	}
 
 	// If the cast fails... cast to the object's parent core
-	if(ACubeCore* parentCore = obj->GetCore())
+	else if(ACubeCore* parentCore = obj->GetCore())
 	{
+		const TArray<FName> usedSockets = parentCore->GetOccupiedSockets();
 		TArray<APickupableMaster*> detachedObjects = parentCore->DetachAll();
+		
 		if(detachedObjects.IsEmpty()) return;
-		CreateTaskHistory("DETACH", detachedObjects, FTransform::Identity, FTransform::Identity);
-		return;
+		CreateTaskHistory("DETACH", detachedObjects, usedSockets);
 	}
 
-	Print("No parent / core found when detaching all", 5)
+	UWorld* wrld = GetWorld();
+	if(!wrld) return;
+
+	FTimerHandle destroyHandle;
+	FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
+		
+	wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
 }
 
 FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
@@ -314,7 +259,7 @@ void APlayerCharacter::Zoom()
 	if (!zooming) return;
 	
 	const float armLength = camBoom->TargetArmLength;
-	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
+	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * camZoomSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
 
 void APlayerCharacter::ScrollZoom(const float input)
@@ -322,7 +267,7 @@ void APlayerCharacter::ScrollZoom(const float input)
 	if(currentMode != EGameMode::Build) return;
 	
 	const float armLength = camBoom->TargetArmLength;
-	camBoom->TargetArmLength = FMath::Clamp((-input * orbitSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
+	camBoom->TargetArmLength = FMath::Clamp((-input * camZoomSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
 
 void APlayerCharacter::NextPreviousSlot(const bool next)
@@ -330,7 +275,7 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 	if(currentMode != EGameMode::Build) return;
 	if(!core) return;
 	
-	const TArray<FName> freeSockets = core->GetFreeSlots();
+	const TArray<FName> freeSockets = core->GetFreeSockets();
 	if(freeSockets.IsEmpty()) return;
 
 	// Array to hold reordered sockets
@@ -359,7 +304,7 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 	if(currentMode != EGameMode::Build) return;
 	if(!core) return;
 	
-	const TArray<FName> freeSockets = core->GetFreeSlots();
+	const TArray<FName> freeSockets = core->GetFreeSockets();
 	if(freeSockets.IsEmpty()) return;
 
 	if(freeSockets.Contains("UP") && above)
@@ -410,6 +355,8 @@ void APlayerCharacter::GoToSlot(const bool move, const bool next)
 	// orbiting = false;
 }
 
+void APlayerCharacter::EndTurnEarly() { if(currentMode != EGameMode::Build) if(core) core->EndTurn(); }
+
 void APlayerCharacter::GoToCore()
 {
 	if(!core) return;
@@ -429,7 +376,7 @@ void APlayerCharacter::SelectObject(APickupableMaster* obj)
 	if(currentMode != EGameMode::Build) return;
 
 	selectedSocket = FindSuggestedSlot(obj);
-	if(selectedSocket == NAME_None) selectedSocket = core->GetFreeSlots()[0];
+	if(selectedSocket == NAME_None) selectedSocket = core->GetFreeSockets()[0];
 	GoToSlot();
 }
 
@@ -474,26 +421,7 @@ void APlayerCharacter::Deselect()
 	exclusions.Empty();
 	holding = false;
 
-	const EOperations operation = selectedObj->SetSelected(false);
-	FName opName;
-	
-	switch (operation)
-	{
-		case EOperations::Attach:
-			opName = "ATTACH";
-			break;
-		
-		case EOperations::Detach:
-			opName = "DETACH";
-			break;
-		
-		case EOperations::Move:
-			opName = "MOVE";
-			break;
-	}
-	
-	// Adding new action history entry.
-	CreateTaskHistory(opName, {selectedObj}, selectedTransform, selectedObj->GetActorTransform());
+	selectedObj->SetSelected(false);
 	selectedObj = nullptr;
 }
 
@@ -508,6 +436,8 @@ void APlayerCharacter::Confirm()
 
 	selectedObj->SetCore(core);
 	selectedObj->SetSelected(false);
+
+	CreateTaskHistory("ATTACH", {selectedObj}, {selectedObj->GetAttachedSocket()});
 	Deselect();
 }
 
@@ -577,7 +507,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		}
 
 		// Don't do anything if there aren't any free slots...
-		if(core->GetFreeSlots().IsEmpty()) return;
+		if(core->GetFreeSockets().IsEmpty()) return;
 		
 		UWorld* wrld = GetWorld();
 		if(!wrld)
@@ -600,8 +530,6 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		if(selectedObj) selectedObj->Deselect();
 		selectedObj = pickupable;
 		SelectObject(selectedObj);
-
-		selectedTransform = selectedObj->GetActorTransform();
 	}
 
 	else if(selectedObj) selectedObj->Deselect();
@@ -622,6 +550,7 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 	{
 		if(!obj->GetIsAttached()) return;
 
+		CreateTaskHistory("DETACH", {obj}, {obj->GetAttachedSocket()});
 		core->EjectObject(obj);
 		
 		UWorld* wrld = GetWorld();
@@ -630,8 +559,9 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 		FTimerHandle destroyHandle;
 		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
 		
-		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 3, false);
+		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
 	}
+
 }
 
 void APlayerCharacter::AdjustCore(const FHitResult& hit)
@@ -702,6 +632,6 @@ void APlayerCharacter::EjectAll()
 		FTimerHandle destroyHandle;
 		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
 		
-		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 1.5f, false);
+		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
 	}
 }

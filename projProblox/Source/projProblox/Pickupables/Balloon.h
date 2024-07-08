@@ -36,7 +36,6 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	virtual EOperations SetSelected(const bool value) override;
 	virtual APickupableMaster* GetParent() override;
 	virtual void Detach(bool push = false) override;
-	virtual void Reattach(bool sound) override;
 	virtual void GhostPlacement() override;
 	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = 0) override;
 	

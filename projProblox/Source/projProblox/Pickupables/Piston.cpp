@@ -90,7 +90,7 @@ void APiston::Detach(bool push)
 {
 	ResetGhost();
 	
-	if(!parentCore && !previousObj)
+	if(!parentCore)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
@@ -114,20 +114,16 @@ void APiston::Detach(bool push)
 	}
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
-	else previousObj->RemoveAttachment(attachedSocket);
-	
 	silhouette->SetupAttachment(mesh);
 	
 	if(parentCore)
 	{
-		previousObj = parentCore;
-		parentCore = nullptr;
-		
 		// Only play the detach sound if there was a parent core
 		if(soundPlayer) soundPlayer->PlayDetach();
 		else Print("Sfx manager is invalid.....", 5)
 	}
 
 	ToggleGravity(true);
+	parentCore = nullptr;
 	isAttached = false;
 }
