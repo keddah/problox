@@ -38,7 +38,6 @@ PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDele
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_32_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execPrintCurrentLevel); \
 	DECLARE_FUNCTION(execGetLevel3Screenshots); \
 	DECLARE_FUNCTION(execGetLevel2Screenshots); \
 	DECLARE_FUNCTION(execGetLevel1Screenshots); \

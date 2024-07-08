@@ -221,3 +221,13 @@ void ACellSpawner::SpawnWithForce()
 	onTriggered.Broadcast(this);
 	if(objective) objective->SetCompleted();
 }
+
+int ACellSpawner::GetCollectedAmount() const
+{
+	if(spawnedCells.IsEmpty()) return 0;
+
+	int count = 0;
+	for(const auto& cell : spawnedCells) if(cell->IsSafe()) count++;
+
+	return count;
+}

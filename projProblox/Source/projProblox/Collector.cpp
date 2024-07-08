@@ -63,16 +63,6 @@ void ACollector::CalculateCellCount()
 
 	// Only count the cells that aren't captured
 	cellsInLevel = 0;
-	cellCount = 0;
-	
-	UGameplayStatics::GetAllActorsOfClass(wrld, ACell::StaticClass(), countArr);
-	for (const auto& cellActor: countArr)
-	{
-		if(const ACell* cell = Cast<ACell>(cellActor))
-		{
-			if(!cell->IsSafe()) cellsInLevel++;
-		}
-	}
 	
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
 	for (const auto& spawnActor: countArr)
@@ -85,4 +75,46 @@ void ACollector::CalculateCellCount()
 	}
 
 	// Print("Calculated the cells in level: " + FString::FromInt(cellsInLevel), 5)
+}
+
+int ACollector::GetLvlCellCount(const ELevel& lvl) const
+{
+	const UWorld* wrld = GetWorld();
+	TArray<AActor*> countArr;
+
+	int count = 0;
+	
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
+	for (const auto& spawnActor: countArr)
+	{
+		// Cast to the every cell spawner
+		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
+		{
+			// If the spawner's level matches with the parameter...
+			if(lvl == spawner->GetLevelEnum()) count += spawner->GetSpawnAmount();
+		}
+	}
+
+	return count;
+}
+
+int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
+{
+	const UWorld* wrld = GetWorld();
+	TArray<AActor*> countArr;
+
+	int count = 0;
+	
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
+	for (const auto& spawnActor: countArr)
+	{
+		// Cast to the every cell spawner
+		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
+		{
+			// If the spawner's level matches with the parameter...
+			if(lvl == spawner->GetLevelEnum()) count += spawner->GetCollectedAmount();
+		}
+	}
+
+	return count;
 }

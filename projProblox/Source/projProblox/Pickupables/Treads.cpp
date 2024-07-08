@@ -44,15 +44,17 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 void ATreads::Ability(const float deltaTime)
 {
 	Super::Ability(deltaTime);
+
+	const FVector forward = GetActorForwardVector();
 	
 	// When the treads are active, make the tread material pan.
-	// mesh->SetScalarParameterValueOnMaterials("SpeedX", active? forward.Y * 1: 0);
-	// mesh->SetScalarParameterValueOnMaterials("SpeedY", active? forward.X * 1: 0);
+	mesh->SetScalarParameterValueOnMaterials("SpeedX", forward.X * 2);
+	mesh->SetScalarParameterValueOnMaterials("SpeedY",forward.Y * 2);
 	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
 
-	mesh->AddForce(GetActorForwardVector() * moveSpeed * parentCore->GetMass());
+	mesh->AddForce(forward * moveSpeed * parentCore->GetMass());
 }
 
 void ATreads::SetAbilityActive(const bool value)
