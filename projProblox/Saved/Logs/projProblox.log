@@ -1261,3 +1261,808 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.09-12.46.16:580][  7]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
 [2024.07.09-12.46.16:580][  7]MaterialEditorStats: Shader Count: 4
 [2024.07.09-12.49.12:810][392]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:01:19.428 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 42427 files in 41548 folders with total size 1917 MiB.
+[2024.07.09-12.50.43:730][624]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.50.43:812][625]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.45:281][279]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-12.51.45:282][279]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.51.46:327][376]LogSlate: Took 0.000485 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.07.09-12.51.48:727][601]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.48:733][601]LogActor: Warning: BP_MagPole_C /Engine/Transient.World_9:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.48:781][602]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.48:786][602]LogActor: Warning: BP_Collector_C /Engine/Transient.World_10:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:346][735]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:353][735]LogActor: Warning: BP_Treads_C /Engine/Transient.World_11:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:399][736]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:404][736]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_12:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:420][737]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:425][737]LogActor: Warning: BP_Pusher_C /Engine/Transient.World_13:PersistentLevel.BP_Pusher_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:441][738]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:448][738]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_14:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:463][739]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:468][739]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:484][740]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:490][740]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_16:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:507][741]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:513][741]LogActor: Warning: BP_Glider_C /Engine/Transient.World_17:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:532][742]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:537][742]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_18:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.51.50:561][743]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.51.50:567][743]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_19:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.52.12:687][642]LogShaderCompilers: Display: ================================================
+[2024.07.09-12.52.12:687][642]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.09-12.52.12:687][642]LogShaderCompilers: Display: Total job queries 63, among them cache hits 20 (31.75%)
+[2024.07.09-12.52.12:687][642]LogShaderCompilers: Display: Tracking 43 distinct input hashes that result in 32 distinct outputs (74.42%)
+[2024.07.09-12.52.12:687][642]LogShaderCompilers: Display: RAM used: 0.97 MiB of 1.60 GiB budget. Usage: 0.06%
+[2024.07.09-12.52.12:688][642]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.09-12.52.12:688][642]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.09-12.52.12:688][642]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.09-12.52.12:688][642]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.09-12.52.12:688][642]LogShaderCompilers: Display: ================================================
+[2024.07.09-12.52.22:288][451]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/Models/MechanicModels/grappleholster.grappleholster
+[2024.07.09-12.52.22:308][451]LogStaticMesh: Display: Waiting for static meshes to be ready 0/1 (/Game/Models/MechanicModels/grappleholster) ...
+[2024.07.09-12.52.22:330][451]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.52.22:331][451]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.52.22:920][451]LogViewport: Scene viewport resized to 1405x894, mode Windowed.
+[2024.07.09-12.53.08:587][538]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_MagPole.BP_MagPole
+[2024.07.09-12.53.08:587][538]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.53.08:587][538]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.53.08:683][538]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.07.09-12.53.08:757][538]LogActor: Warning: BP_MagPole_C /Engine/Transient.World_21:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.53.10:825][737]LogSlate: Window 'Document' being destroyed
+[2024.07.09-12.53.10:830][737]LogSlate: Window 'Document' being destroyed
+[2024.07.09-12.53.11:701][816]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-12.53.11:701][816]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.53.11:740][816]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_MagPole.BP_MagPole
+[2024.07.09-12.53.11:740][816]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.53.11:740][816]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.53.11:900][816]LogActor: Warning: BP_MagPole_C /Engine/Transient.World_22:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.53.12:754][889]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-12.53.12:754][889]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.53.14:667][ 54]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
+[2024.07.09-12.53.14:667][ 54]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.53.14:667][ 54]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.53.14:774][ 54]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.07.09-12.53.14:844][ 54]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_23:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.53.24:262][242]LogSlate: Window 'Document' being destroyed
+[2024.07.09-12.53.24:266][242]LogSlate: Window 'Document' being destroyed
+[2024.07.09-12.53.24:995][312]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-12.53.24:995][312]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.53.25:031][312]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
+[2024.07.09-12.53.25:032][312]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.53.25:032][312]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.53.25:186][312]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_24:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.53.26:613][438]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.07.09-12.53.29:354][684]LogSlate: Took 0.000115 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.07.09-12.53.30:488][786]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/Cube.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineMeshes/Cube.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.07.09-12.53.30:488][786]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/BasicShapes: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/BasicShapes' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.07.09-12.54.35:423][652]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.07.09-12.54.35:426][652]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.030
+[2024.07.09-12.54.35:428][652]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/Pickupables/BP_Magnet] ([2] browsable assets)...
+[2024.07.09-12.54.35:430][652]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.54.35:437][652]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_25:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.54.35:483][652]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet_C]
+[2024.07.09-12.54.35:490][652]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet]
+[2024.07.09-12.54.35:490][652]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/BP_Magnet]
+[2024.07.09-12.54.35:502][652]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.008982 seconds
+[2024.07.09-12.54.35:516][652]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/BP_Magnet_Auto1
+[2024.07.09-12.54.35:517][652]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Magnet_Auto1391ABD1E45BD1B19B662F4A3D69981DB.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/BP_Magnet_Auto1.uasset'
+[2024.07.09-12.54.35:520][652]LogFileHelpers: Auto-saving content packages took 0.094
+[2024.07.09-12.55.07:635][189]BlueprintLog: New page: Compile BP_Magnet
+[2024.07.09-12.55.07:663][189]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.55.07:665][189]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_24:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.55.07:667][189]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_25:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.55.07:683][189]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2024.07.09-12.55.07:686][189]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.55.07:784][189]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.09-12.55.07:841][189]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Magnet" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset" SILENT=true
+[2024.07.09-12.55.07:845][189]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Magnet
+[2024.07.09-12.55.07:845][189]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Magnet3AE579C14A3FAD2FDAD2FF9DCD3265A4.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset'
+[2024.07.09-12.55.07:853][189]LogFileHelpers: InternalPromptForCheckoutAndSave took 69 ms
+[2024.07.09-12.55.07:879][189]AssetCheck: New page: Asset Save: BP_Magnet
+[2024.07.09-12.55.07:879][189]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
+[2024.07.09-12.55.09:688][314]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.09-12.55.09:712][314]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.09-12.55.09:716][314]PIE: New page: PIE session: Lvl_Combined (9 Jul 2024, 14:55:09)
+[2024.07.09-12.55.09:724][314]LogOnline: OSS: Created online subsystem instance for: NULL
+[2024.07.09-12.55.09:725][314]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+[2024.07.09-12.55.09:726][314]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-12.55.09:843][314]LogPlayLevel: PIE: StaticDuplicateObject took: (0.116856s)
+[2024.07.09-12.55.09:844][314]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.117163s)
+[2024.07.09-12.55.09:854][314]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.07.09-12.55.09:856][314]LogWindows: WindowsPlatformFeatures enabled
+[2024.07.09-12.55.09:863][314]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.55.09:863][314]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.55.09:864][314]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.09-12.55.09:865][314]LogPlayLevel: PIE: World Init took: (0.003938s)
+[2024.07.09-12.55.09:866][314]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2024.07.09-12.55.09:866][314]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.09-12.55.09:866][314]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.09-12.55.09:867][314]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.09-12.55.09:867][314]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.09-12.55.09:867][314]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.09-12.55.09:867][314]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.09-12.55.09:867][314]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.09-12.55.09:867][314]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.09-12.55.09:867][314]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.09-12.55.09:867][314]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.09-12.55.09:867][314]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.09-12.55.09:869][314]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.09-12.55.09:897][314]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.07.09-12.55.09:897][314]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.09-12.55.09:897][314]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.09-12.55.09:897][314]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.09-12.55.09:899][314]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2024.07.09-12.55.09:899][314]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2024.07.09-12.55.09:901][314]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2024.07.09-12.55.09:901][314]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2024.07.09-12.55.09:901][314]LogInit: FAudioDevice initialized with ID 2.
+[2024.07.09-12.55.09:901][314]LogAudio: Display: Audio Device (ID: 2) registered with world 'Lvl_Combined'.
+[2024.07.09-12.55.09:901][314]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 2
+[2024.07.09-12.55.09:914][314]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.09-12.55.09:927][314]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.09-12.55.09:927][314]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.09-12.55.09:928][314]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.09-13.55.09
+[2024.07.09-12.55.09:930][314]LogWorld: Bringing up level for play took: 0.015516
+[2024.07.09-12.55.09:932][314]LogOnline: OSS: Created online subsystem instance for: :Context_27
+[2024.07.09-12.55.09:981][314]PIE: Server logged in
+[2024.07.09-12.55.09:983][314]PIE: Play in editor total start time 0.276 seconds.
+[2024.07.09-12.55.10:209][315]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl1' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.55.10:209][315]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.55.10:209][315]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl2' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.55.10:209][315]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.55.10:209][315]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.55.10:209][315]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.55.10:223][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_146.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:224][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_132.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:224][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_158.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:225][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_198.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:225][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_199.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:225][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_200.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:226][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_104.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:226][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_183.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:226][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_193.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:227][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_221.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:227][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_225.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:227][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_226.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:227][315]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_171.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:373][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:373][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_252.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:373][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_253.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:373][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_254.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:373][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_255.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:373][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_256.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:374][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_257.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:374][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_258.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:374][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_261.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:374][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_263.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:374][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_265.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:374][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_266.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:374][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_267.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:375][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_269.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:375][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_271.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:375][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_272.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:375][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_273.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:375][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_275.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:375][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_276.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:376][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_159.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:376][316]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_303.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.10:787][318]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.55.11:398][318]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.55.11:453][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:453][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:453][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:453][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:454][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:456][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:456][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:456][319]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:472][320]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.55.11:494][321]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:494][321]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:494][321]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:495][321]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:585][323]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.11:586][323]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.55.11:586][323]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_0.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.55.13:311][472]LogActor: Warning: BP_Magnet_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.56.36:484][753]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-12.56.36:485][753]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-12.56.36:489][753]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-12.56.36:502][753]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.56.36:508][753]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.09-12.56.36:516][753]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.56.36:526][753]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.07.09-12.56.36:534][753]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2024.07.09-12.56.36:535][753]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.07.09-12.56.36:537][753]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.07.09-12.56.36:541][753]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-12.56.36:587][753]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.07.09-12.56.36:767][754]LogPlayLevel: Display: Destroying online subsystem :Context_27
+[2024.07.09-12.56.36:779][754]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.07.09-12.56.37:670][810]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-12.56.37:688][810]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-12.56.43:769][356]LogEditorTransaction: Undo Modify Component(s)
+[2024.07.09-12.57.05:846][359]BlueprintLog: New page: Compile BP_Magnet
+[2024.07.09-12.57.05:871][359]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_24:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.05:872][359]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_25:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.05:873][359]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.05:892][359]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2024.07.09-12.57.05:895][359]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.05:999][359]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.09-12.57.06:033][359]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Magnet" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset" SILENT=true
+[2024.07.09-12.57.06:036][359]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Magnet
+[2024.07.09-12.57.06:037][359]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_MagnetE6EBD8264FA3B8D4A0A735AE2E59131C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset'
+[2024.07.09-12.57.06:042][359]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 112 ms)
+[2024.07.09-12.57.06:066][359]AssetCheck: New page: Asset Save: BP_Magnet
+[2024.07.09-12.57.06:066][359]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
+[2024.07.09-12.57.09:682][579]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.09-12.57.09:703][579]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.09-12.57.09:703][579]PIE: New page: PIE session: Lvl_Combined (9 Jul 2024, 14:57:09)
+[2024.07.09-12.57.09:703][579]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-12.57.09:819][579]LogPlayLevel: PIE: StaticDuplicateObject took: (0.116243s)
+[2024.07.09-12.57.09:819][579]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.116473s)
+[2024.07.09-12.57.09:832][579]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.07.09-12.57.09:834][579]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.57.09:835][579]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.57.09:835][579]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.09-12.57.09:836][579]LogPlayLevel: PIE: World Init took: (0.001924s)
+[2024.07.09-12.57.09:836][579]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.07.09-12.57.09:836][579]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.09-12.57.09:837][579]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.09-12.57.09:837][579]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.09-12.57.09:837][579]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.09-12.57.09:837][579]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.09-12.57.09:837][579]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.09-12.57.09:837][579]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.09-12.57.09:837][579]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.09-12.57.09:837][579]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.09-12.57.09:837][579]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.09-12.57.09:837][579]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.09-12.57.09:839][579]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.09-12.57.09:866][579]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.07.09-12.57.09:866][579]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.09-12.57.09:866][579]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.09-12.57.09:866][579]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.09-12.57.09:867][579]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.07.09-12.57.09:867][579]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2024.07.09-12.57.09:869][579]LogInit: FAudioDevice initialized with ID 3.
+[2024.07.09-12.57.09:869][579]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.07.09-12.57.09:869][579]LogAudio: Display: Audio Device (ID: 3) registered with world 'Lvl_Combined'.
+[2024.07.09-12.57.09:869][579]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.07.09-12.57.09:869][579]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2024.07.09-12.57.09:890][579]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-12.57.09:890][579]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.09-12.57.09:904][579]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.09-12.57.09:904][579]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.09-12.57.09:905][579]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.09-13.57.09
+[2024.07.09-12.57.09:906][579]LogWorld: Bringing up level for play took: 0.015078
+[2024.07.09-12.57.09:908][579]LogOnline: OSS: Created online subsystem instance for: :Context_28
+[2024.07.09-12.57.09:917][579]PIE: Server logged in
+[2024.07.09-12.57.09:918][579]PIE: Play in editor total start time 0.215 seconds.
+[2024.07.09-12.57.09:929][579]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.09-12.57.10:015][579]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.57.10:574][579]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.57.10:633][580]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.10:633][580]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.10:633][580]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.10:634][580]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.10:635][580]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.10:637][580]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.10:970][581]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.10:971][581]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.11:104][582]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.57.11:206][585]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.57.11:206][585]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_1.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.57.11:206][585]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.57.11:206][585]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_1.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_1.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_1.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_1.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.57.11:207][585]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_1.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.57.15:174][838]LogActor: Warning: BP_Magnet_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.16:411][914]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-12.57.16:411][914]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-12.57.16:411][914]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.09-12.57.16:418][914]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-12.57.16:431][914]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.57.16:435][914]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.09-12.57.16:442][914]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.57.16:452][914]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.07.09-12.57.16:464][914]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2024.07.09-12.57.16:465][914]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.07.09-12.57.16:466][914]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.07.09-12.57.16:513][914]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.07.09-12.57.16:640][915]LogPlayLevel: Display: Destroying online subsystem :Context_28
+[2024.07.09-12.57.16:654][915]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2024.07.09-12.57.17:582][989]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-12.57.17:588][989]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-12.57.42:817][173]BlueprintLog: New page: Compile BP_Magnet
+[2024.07.09-12.57.42:878][173]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_24:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.42:880][173]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_25:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.42:881][173]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.42:897][173]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.07.09-12.57.42:900][173]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.57.42:988][173]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.09-12.57.43:025][173]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Magnet" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset" SILENT=true
+[2024.07.09-12.57.43:029][173]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Magnet
+[2024.07.09-12.57.43:029][173]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_MagnetA88BDDBA4599CB88D8ABACBED74FC314.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset'
+[2024.07.09-12.57.43:035][173]LogFileHelpers: InternalPromptForCheckoutAndSave took 46 ms (total: 159 ms)
+[2024.07.09-12.57.43:086][173]AssetCheck: New page: Asset Save: BP_Magnet
+[2024.07.09-12.57.43:086][173]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
+[2024.07.09-12.59.39:535][444]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.09-12.59.39:554][444]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.09-12.59.39:555][444]PIE: New page: PIE session: Lvl_Combined (9 Jul 2024, 14:59:39)
+[2024.07.09-12.59.39:555][444]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-12.59.39:670][444]LogPlayLevel: PIE: StaticDuplicateObject took: (0.114464s)
+[2024.07.09-12.59.39:670][444]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.114767s)
+[2024.07.09-12.59.39:682][444]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2024.07.09-12.59.39:684][444]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.59.39:684][444]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.59.39:685][444]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.09-12.59.39:687][444]LogPlayLevel: PIE: World Init took: (0.002126s)
+[2024.07.09-12.59.39:687][444]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.07.09-12.59.39:687][444]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.09-12.59.39:687][444]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.09-12.59.39:687][444]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.09-12.59.39:688][444]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.09-12.59.39:688][444]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.09-12.59.39:688][444]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.09-12.59.39:688][444]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.09-12.59.39:688][444]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.09-12.59.39:689][444]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.09-12.59.39:689][444]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.09-12.59.39:689][444]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.09-12.59.39:692][444]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.09-12.59.39:733][444]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.07.09-12.59.39:733][444]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.09-12.59.39:733][444]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.09-12.59.39:733][444]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.09-12.59.39:734][444]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.07.09-12.59.39:734][444]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2024.07.09-12.59.39:735][444]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.07.09-12.59.39:735][444]LogInit: FAudioDevice initialized with ID 4.
+[2024.07.09-12.59.39:735][444]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.07.09-12.59.39:735][444]LogAudio: Display: Audio Device (ID: 4) registered with world 'Lvl_Combined'.
+[2024.07.09-12.59.39:735][444]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2024.07.09-12.59.39:760][444]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-12.59.39:760][444]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.09-12.59.39:774][444]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.09-12.59.39:774][444]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.09-12.59.39:775][444]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.09-13.59.39
+[2024.07.09-12.59.39:776][444]LogWorld: Bringing up level for play took: 0.015020
+[2024.07.09-12.59.39:778][444]LogOnline: OSS: Created online subsystem instance for: :Context_29
+[2024.07.09-12.59.39:787][444]PIE: Server logged in
+[2024.07.09-12.59.39:788][444]PIE: Play in editor total start time 0.234 seconds.
+[2024.07.09-12.59.39:798][444]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.09-12.59.39:865][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_146.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:866][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_132.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:866][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_158.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:866][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_198.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:867][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_199.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:867][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_200.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:868][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_104.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:868][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_183.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:868][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_193.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:869][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_221.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:869][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_225.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:869][444]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_226.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:944][445]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl1' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.59.39:944][445]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.59.39:944][445]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl2' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.59.39:944][445]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.59.39:944][445]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.59.39:944][445]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.59.39:953][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_171.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:953][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:953][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_252.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:953][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_253.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:953][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_254.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:954][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_255.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:954][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_256.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:954][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_257.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:954][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_258.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:954][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_261.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:954][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_263.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_265.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_266.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_267.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_269.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_271.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_272.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_273.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:955][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_275.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:956][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_276.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:956][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_159.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.39:956][445]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_303.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:038][446]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:038][446]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:038][446]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:039][446]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:040][446]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:203][447]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:203][447]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:203][447]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:207][447]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.40:254][449]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.59.40:757][449]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.40:844][451]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.40:845][451]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_2.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.42:511][556]LogActor: Warning: BP_Magnet_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-12.59.45:300][732]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-12.59.45:300][732]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-12.59.45:300][732]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.09-12.59.45:306][732]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-12.59.45:319][732]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.59.45:322][732]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.09-12.59.45:329][732]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-12.59.45:361][732]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2024.07.09-12.59.45:361][732]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.07.09-12.59.45:363][732]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.07.09-12.59.45:396][732]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.07.09-12.59.45:523][733]LogPlayLevel: Display: Destroying online subsystem :Context_29
+[2024.07.09-12.59.45:539][733]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.07.09-12.59.46:394][799]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-12.59.46:399][799]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-12.59.58:812][965]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.09-12.59.58:829][965]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.09-12.59.58:829][965]PIE: New page: PIE session: Lvl_Combined (9 Jul 2024, 14:59:58)
+[2024.07.09-12.59.58:829][965]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-12.59.58:950][965]LogPlayLevel: PIE: StaticDuplicateObject took: (0.120623s)
+[2024.07.09-12.59.58:950][965]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.120845s)
+[2024.07.09-12.59.58:963][965]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2024.07.09-12.59.58:964][965]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-12.59.58:965][965]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-12.59.58:965][965]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.09-12.59.58:966][965]LogPlayLevel: PIE: World Init took: (0.001541s)
+[2024.07.09-12.59.58:966][965]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2024.07.09-12.59.58:966][965]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.09-12.59.58:966][965]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.09-12.59.58:966][965]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.09-12.59.58:966][965]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.09-12.59.58:967][965]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.09-12.59.58:967][965]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.09-12.59.58:967][965]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.09-12.59.58:967][965]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.09-12.59.58:967][965]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.09-12.59.58:967][965]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.09-12.59.58:967][965]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.09-12.59.58:969][965]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.09-12.59.58:995][965]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.07.09-12.59.58:996][965]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.09-12.59.58:996][965]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.09-12.59.58:996][965]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.09-12.59.58:996][965]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2024.07.09-12.59.58:997][965]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2024.07.09-12.59.58:999][965]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2024.07.09-12.59.58:999][965]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2024.07.09-12.59.58:999][965]LogInit: FAudioDevice initialized with ID 5.
+[2024.07.09-12.59.58:999][965]LogAudio: Display: Audio Device (ID: 5) registered with world 'Lvl_Combined'.
+[2024.07.09-12.59.58:999][965]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2024.07.09-12.59.59:024][965]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-12.59.59:024][965]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.09-12.59.59:037][965]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.09-12.59.59:038][965]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.09-12.59.59:038][965]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.09-13.59.59
+[2024.07.09-12.59.59:039][965]LogWorld: Bringing up level for play took: 0.015128
+[2024.07.09-12.59.59:041][965]LogOnline: OSS: Created online subsystem instance for: :Context_30
+[2024.07.09-12.59.59:049][965]PIE: Server logged in
+[2024.07.09-12.59.59:051][965]PIE: Play in editor total start time 0.222 seconds.
+[2024.07.09-12.59.59:060][965]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.09-12.59.59:155][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_146.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:156][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_132.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:156][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_158.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:157][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_198.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:157][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_199.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:157][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_200.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:158][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_104.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:159][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_183.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:159][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_193.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:159][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_221.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:159][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_225.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:159][965]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_226.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:233][966]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl1' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.59.59:233][966]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.59.59:233][966]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl2' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.59.59:233][966]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.59.59:233][966]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'spawns_lvl3' of length 0 in '/Game/UI/WBP_AreaSelect.WBP_AreaSelect_C'!
+[2024.07.09-12.59.59:233][966]LogScript: Warning: Script Msg called by: WBP_AreaSelect_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_Construction_C_0.WidgetTree_0.WBP_LevelSelect.WidgetTree_0.WBP_AreaSelect
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_171.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_252.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_253.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_254.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_255.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_256.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_257.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:241][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_258.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:242][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_261.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:242][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_263.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:242][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_265.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:242][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_266.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:242][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_267.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:243][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_269.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:243][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_271.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:243][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_272.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:243][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_273.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:243][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_275.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:243][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_276.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:243][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_159.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:244][966]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_303.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:323][967]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:323][967]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:324][967]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:324][967]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:325][967]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:326][967]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:364][968]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:364][968]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:368][968]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-12.59.59:412][970]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.59.59:890][970]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-12.59.59:964][972]LogScript: Warning: Script Msg: Attempted to access index 0 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg: Attempted to access index 1 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg: Attempted to access index 2 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg: Attempted to access index 3 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg: Attempted to access index 4 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg: Attempted to access index 5 from array 'coreAttachments' of length 0 in '/Game/UI/Timeline/WBP_Timeline.WBP_Timeline_C'!
+[2024.07.09-12.59.59:965][972]LogScript: Warning: Script Msg called by: WBP_Timeline_C /Engine/Transient.UnrealEdEngine_0:CustomGameInstance_3.WBP_HUD_C_0.WidgetTree_0.WBP_Timeline
+[2024.07.09-13.00.01:349][ 59]LogActor: Warning: BP_Magnet_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.00.30:460][917]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-13.00.30:460][917]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-13.00.30:460][917]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.09-13.00.30:468][917]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-13.00.30:481][917]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-13.00.30:484][917]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.09-13.00.30:492][917]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-13.00.30:522][917]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2024.07.09-13.00.30:522][917]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.07.09-13.00.30:523][917]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.07.09-13.00.30:556][917]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.07.09-13.00.30:672][918]LogPlayLevel: Display: Destroying online subsystem :Context_30
+[2024.07.09-13.00.30:686][918]LogUObjectHash: Compacting FUObjectHashTables data took   0.51ms
+[2024.07.09-13.00.42:774][ 36]BlueprintLog: New page: Compile BP_Magnet
+[2024.07.09-13.00.42:824][ 36]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_24:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.00.42:825][ 36]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_25:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.00.42:827][ 36]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.00.42:845][ 36]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.07.09-13.00.42:847][ 36]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.00.42:940][ 36]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.09-13.00.42:985][ 36]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Magnet" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset" SILENT=true
+[2024.07.09-13.00.42:989][ 36]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Magnet
+[2024.07.09-13.00.42:990][ 36]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Magnet8EFD8DBF49093CB604A880B04BE435D4.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset'
+[2024.07.09-13.00.42:996][ 36]LogFileHelpers: InternalPromptForCheckoutAndSave took 56 ms (total: 215 ms)
+[2024.07.09-13.00.43:049][ 36]AssetCheck: New page: Asset Save: BP_Magnet
+[2024.07.09-13.00.43:049][ 36]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
+[2024.07.09-13.00.46:677][383]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-13.00.46:683][383]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-13.03.16:621][584]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.09-13.03.16:640][584]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.09-13.03.16:640][584]PIE: New page: PIE session: Lvl_Combined (9 Jul 2024, 15:03:16)
+[2024.07.09-13.03.16:641][584]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-13.03.16:757][584]LogPlayLevel: PIE: StaticDuplicateObject took: (0.116277s)
+[2024.07.09-13.03.16:757][584]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.116540s)
+[2024.07.09-13.03.16:767][584]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.07.09-13.03.16:769][584]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-13.03.16:769][584]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-13.03.16:769][584]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.09-13.03.16:770][584]LogPlayLevel: PIE: World Init took: (0.001635s)
+[2024.07.09-13.03.16:771][584]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2024.07.09-13.03.16:771][584]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.09-13.03.16:771][584]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.09-13.03.16:771][584]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.09-13.03.16:771][584]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.09-13.03.16:771][584]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.09-13.03.16:771][584]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.09-13.03.16:771][584]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.09-13.03.16:771][584]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.09-13.03.16:771][584]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.09-13.03.16:772][584]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.09-13.03.16:772][584]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.09-13.03.16:773][584]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.09-13.03.16:800][584]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.07.09-13.03.16:801][584]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.09-13.03.16:801][584]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.09-13.03.16:801][584]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.09-13.03.16:802][584]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2024.07.09-13.03.16:802][584]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2024.07.09-13.03.16:803][584]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2024.07.09-13.03.16:804][584]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2024.07.09-13.03.16:804][584]LogInit: FAudioDevice initialized with ID 6.
+[2024.07.09-13.03.16:804][584]LogAudio: Display: Audio Device (ID: 6) registered with world 'Lvl_Combined'.
+[2024.07.09-13.03.16:804][584]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2024.07.09-13.03.16:829][584]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-13.03.16:829][584]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.09-13.03.16:841][584]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.09-13.03.16:842][584]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.09-13.03.16:843][584]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.09-14.03.16
+[2024.07.09-13.03.16:844][584]LogWorld: Bringing up level for play took: 0.014238
+[2024.07.09-13.03.16:846][584]LogOnline: OSS: Created online subsystem instance for: :Context_31
+[2024.07.09-13.03.16:854][584]PIE: Server logged in
+[2024.07.09-13.03.16:854][584]PIE: Play in editor total start time 0.214 seconds.
+[2024.07.09-13.03.16:861][584]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.09-13.03.16:957][584]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-13.03.17:505][584]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-13.03.17:563][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_151.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:564][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_26.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:564][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_242.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:564][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_248.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:565][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_93.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:567][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_174.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:567][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_177.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:567][585]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_179.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.17:601][586]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Bedroom/UEDPIE_0_BedroomLevel3.BedroomLevel3:PersistentLevel.StaticMeshActor_397.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.18:700][655]LogActor: Warning: BP_Magnet_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.20:410][761]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-13.03.20:410][761]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-13.03.20:411][761]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.09-13.03.20:417][761]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-13.03.20:430][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-13.03.20:433][761]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.09-13.03.20:441][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-13.03.20:473][761]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2024.07.09-13.03.20:473][761]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.07.09-13.03.20:475][761]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.07.09-13.03.20:511][761]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2024.07.09-13.03.20:631][762]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2024.07.09-13.03.20:647][762]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.07.09-13.03.21:427][817]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-13.03.21:432][817]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-13.03.26:459][288]BlueprintLog: New page: Compile BP_Magnet
+[2024.07.09-13.03.26:478][288]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_24:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.26:480][288]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_25:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.26:481][288]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.26:498][288]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.07.09-13.03.26:502][288]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.26:587][288]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.09-13.03.26:624][288]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Magnet" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset" SILENT=true
+[2024.07.09-13.03.26:628][288]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Magnet
+[2024.07.09-13.03.26:628][288]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Magnet64A9D30E4C4BEB88E8023C981FF2D4FE.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset'
+[2024.07.09-13.03.26:634][288]LogFileHelpers: InternalPromptForCheckoutAndSave took 47 ms (total: 263 ms)
+[2024.07.09-13.03.26:655][288]AssetCheck: New page: Asset Save: BP_Magnet
+[2024.07.09-13.03.26:655][288]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
+[2024.07.09-13.03.34:555][ 18]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.07.09-13.03.34:574][ 18]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.07.09-13.03.34:574][ 18]PIE: New page: PIE session: Lvl_Combined (9 Jul 2024, 15:03:34)
+[2024.07.09-13.03.34:574][ 18]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-13.03.34:692][ 18]LogPlayLevel: PIE: StaticDuplicateObject took: (0.118051s)
+[2024.07.09-13.03.34:692][ 18]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Lvl_Combined.Lvl_Combined to /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined (0.118318s)
+[2024.07.09-13.03.34:705][ 18]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.07.09-13.03.34:706][ 18]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.09-13.03.34:706][ 18]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.09-13.03.34:707][ 18]LogAIModule: Creating AISystem for world Lvl_Combined
+[2024.07.09-13.03.34:707][ 18]LogPlayLevel: PIE: World Init took: (0.001526s)
+[2024.07.09-13.03.34:707][ 18]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2024.07.09-13.03.34:707][ 18]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.07.09-13.03.34:707][ 18]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.07.09-13.03.34:707][ 18]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.07.09-13.03.34:708][ 18]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.07.09-13.03.34:708][ 18]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.07.09-13.03.34:709][ 18]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.07.09-13.03.34:709][ 18]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.07.09-13.03.34:709][ 18]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.07.09-13.03.34:709][ 18]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.07.09-13.03.34:709][ 18]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.07.09-13.03.34:709][ 18]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.07.09-13.03.34:711][ 18]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.07.09-13.03.34:738][ 18]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Xbox Controller)
+[2024.07.09-13.03.34:738][ 18]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.07.09-13.03.34:738][ 18]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.07.09-13.03.34:738][ 18]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.07.09-13.03.34:739][ 18]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2024.07.09-13.03.34:739][ 18]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2024.07.09-13.03.34:741][ 18]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2024.07.09-13.03.34:741][ 18]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2024.07.09-13.03.34:741][ 18]LogInit: FAudioDevice initialized with ID 7.
+[2024.07.09-13.03.34:741][ 18]LogAudio: Display: Audio Device (ID: 7) registered with world 'Lvl_Combined'.
+[2024.07.09-13.03.34:741][ 18]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2024.07.09-13.03.34:767][ 18]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-13.03.34:767][ 18]LogLoad: Game class is 'BP_Mode_Story_C'
+[2024.07.09-13.03.34:782][ 18]LogPhysics: Warning: Scale for /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.09-13.03.34:782][ 18]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.09-13.03.34:783][ 18]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined up for play (max tick rate 0) at 2024.07.09-14.03.34
+[2024.07.09-13.03.34:784][ 18]LogWorld: Bringing up level for play took: 0.015973
+[2024.07.09-13.03.34:786][ 18]LogOnline: OSS: Created online subsystem instance for: :Context_32
+[2024.07.09-13.03.34:795][ 18]PIE: Server logged in
+[2024.07.09-13.03.34:796][ 18]PIE: Play in editor total start time 0.222 seconds.
+[2024.07.09-13.03.34:805][ 18]LogViewport: Scene viewport resized to 1914x992, mode Windowed.
+[2024.07.09-13.03.34:903][ 18]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-13.03.35:463][ 18]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.07.09-13.03.35:526][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_146.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:526][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_132.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:527][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_158.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:527][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_198.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:527][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_199.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:527][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_200.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:528][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_104.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:529][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_183.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:529][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_193.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:529][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_221.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:529][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_225.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:529][ 19]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_226.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:555][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_171.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_252.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_253.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_254.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_255.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_256.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_257.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:556][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_258.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_261.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_263.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_265.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_266.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_267.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_269.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_271.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_272.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_273.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_275.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_276.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:557][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_159.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.35:558][ 20]PIE: Warning: Trying to simulate physics on ''/Game/Levels/Levels/Kitchen/KitchenLevel/UEDPIE_0_KitchenLevel_Props.KitchenLevel_Props:PersistentLevel.StaticMeshActor_303.StaticMeshComponent0'' but it has ComplexAsSimple collision.
+[2024.07.09-13.03.36:872][102]LogActor: Warning: BP_Magnet_C /Game/Levels/UEDPIE_0_Lvl_Combined.Lvl_Combined:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.38:901][228]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-13.03.38:901][228]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-13.03.38:902][228]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.09-13.03.38:908][228]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-13.03.38:920][228]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-13.03.38:923][228]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.09-13.03.38:931][228]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-13.03.38:958][228]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2024.07.09-13.03.38:958][228]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.07.09-13.03.38:960][228]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.07.09-13.03.38:998][228]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.07.09-13.03.39:109][229]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2024.07.09-13.03.39:124][229]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.07.09-13.03.39:970][291]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-13.03.39:975][291]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-13.03.44:727][735]BlueprintLog: New page: Compile BP_Magnet
+[2024.07.09-13.03.44:776][735]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_24:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.44:778][735]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_25:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.44:779][735]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.44:796][735]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2024.07.09-13.03.44:797][735]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_15:PersistentLevel.BP_Magnet_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.09-13.03.44:886][735]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.09-13.03.44:921][735]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Magnet" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset" SILENT=true
+[2024.07.09-13.03.44:925][735]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Magnet
+[2024.07.09-13.03.44:925][735]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Magnet67839BB9444FF318A14B0FAE4B4A5172.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Magnet.uasset'
+[2024.07.09-13.03.44:932][735]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 308 ms)
+[2024.07.09-13.03.44:984][735]AssetCheck: New page: Asset Save: BP_Magnet
+[2024.07.09-13.03.44:984][735]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Magnet.BP_Magnet
