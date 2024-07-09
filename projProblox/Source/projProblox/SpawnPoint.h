@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Spawn Point - Header
+* 
+* The header file for the player and core spawn point. Also defines the levels enum.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -6,8 +13,6 @@
 #include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
-#include "Components/SceneCaptureComponent2D.h"
-#include "Engine/CanvasRenderTarget2D.h"
 #include "SpawnPoint.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
@@ -57,7 +62,9 @@ public:
 	bool IsUnlocked() const { return unlocked; }
 
 	FRotator GetRot() const { return direction->GetComponentRotation(); }
-	
+
+	// Creates capture component and takes a screenshot then deletes the component and everything it needed to take a picture before
+	// returning the texture of the screenshot.
 	UTexture* CaptureScreenshot();
 
 	UFUNCTION(BlueprintCallable)

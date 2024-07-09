@@ -1,8 +1,16 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Spawn Point - Header
+* 
+* The header file for the player and core spawn point. Also defines the levels enum.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "SpawnPoint.h"
 
+#include "Components/SceneCaptureComponent2D.h"
+#include "Engine/TextureRenderTarget2D.h"
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
 
 // Sets default values
@@ -36,116 +44,186 @@ void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
 UTexture* ASpawnPoint::CaptureScreenshot()
 {
     // Create a SceneCaptureComponent2D
-    USceneCaptureComponent2D* SceneCaptureComponent = NewObject<USceneCaptureComponent2D>(this);
-    SceneCaptureComponent->SetupAttachment(RootComponent);
-    SceneCaptureComponent->RegisterComponent();
+    USceneCaptureComponent2D* captureComp = NewObject<USceneCaptureComponent2D>(this);
+    captureComp->SetupAttachment(RootComponent);
+    captureComp->RegisterComponent();
 
     // Create a Render Target
-    UTextureRenderTarget2D* RenderTarget = NewObject<UTextureRenderTarget2D>();
-    RenderTarget->InitAutoFormat(600, 600);
-    RenderTarget->UpdateResourceImmediate(true);
+    UTextureRenderTarget2D* renderTarget = NewObject<UTextureRenderTarget2D>();
+    renderTarget->InitAutoFormat(600, 600);
+    renderTarget->UpdateResourceImmediate(true);
 
     // Assign the Render Target to the SceneCaptureComponent
-    SceneCaptureComponent->TextureTarget = RenderTarget;
-    SceneCaptureComponent->CaptureSource = SCS_FinalColorLDR;
-    SceneCaptureComponent->bCaptureEveryFrame = false;
-    SceneCaptureComponent->bCaptureOnMovement = false;
-    SceneCaptureComponent->ShowFlags.SetDynamicShadows(true);
-    SceneCaptureComponent->ShowFlags.SetAntiAliasing(true);
+    captureComp->TextureTarget = renderTarget;
+    captureComp->CaptureSource = SCS_FinalColorLDR;
+    captureComp->bCaptureEveryFrame = false;
+    captureComp->bCaptureOnMovement = false;
+    captureComp->ShowFlags.SetDynamicShadows(true);
+    captureComp->ShowFlags.SetAntiAliasing(true);
 
-    // Adjust Post-Processing Settings for Brightness
-    FPostProcessSettings& PostProcessSettings = SceneCaptureComponent->PostProcessSettings;
+    //////////////////////////// PP ////////////////////////////
+    FPostProcessSettings& ppSettings = captureComp->PostProcessSettings;
 
-	// Camera settings
-	PostProcessSettings.bOverride_CameraShutterSpeed = true;
-	PostProcessSettings.CameraShutterSpeed = 1/30;  
-	PostProcessSettings.bOverride_CameraISO = true;
-	PostProcessSettings.CameraISO = 400;  
-
-	// Auto exposure settings
-	PostProcessSettings.bOverride_AutoExposureMethod = true;
-	PostProcessSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
-	PostProcessSettings.bOverride_AutoExposureBias = true;
-	PostProcessSettings.AutoExposureBias = 2; 
-	PostProcessSettings.bOverride_AutoExposureMaxBrightness = true; 
-	PostProcessSettings.bOverride_AutoExposureMinBrightness = true; 
-	PostProcessSettings.AutoExposureMaxBrightness = 10; 
-	PostProcessSettings.AutoExposureMinBrightness = 5; 
-
-	// Bloom settings
-	PostProcessSettings.bOverride_BloomIntensity = true;
-	PostProcessSettings.BloomIntensity = 0.3f;
-	PostProcessSettings.bOverride_BloomThreshold = true;
-	PostProcessSettings.BloomThreshold = -1.0f; 
-	PostProcessSettings.bOverride_BloomSizeScale = true;
-	PostProcessSettings.BloomSizeScale = 1.0f; 
-
-
-	// Lens flare settings
-	PostProcessSettings.bOverride_LensFlareIntensity = true;
-	PostProcessSettings.LensFlareIntensity = 0.2f;  
-
-	// Color grading settings
-	PostProcessSettings.bOverride_FilmToe = true;
-	PostProcessSettings.FilmToe = .1f;  
-	PostProcessSettings.bOverride_FilmShoulder = true;
-	PostProcessSettings.FilmShoulder = 0.9f;  
-	PostProcessSettings.bOverride_FilmWhiteClip = true;
-	PostProcessSettings.FilmWhiteClip = 1.0f;
-	PostProcessSettings.bOverride_FilmBlackClip = true;
-	PostProcessSettings.FilmBlackClip = 0.0f; 
-
-	// Depth of field settings
-	PostProcessSettings.bOverride_DepthOfFieldFstop = true;
-	PostProcessSettings.DepthOfFieldFstop = 5.6f; 
-
-	// Ambient occlusion settings
-	PostProcessSettings.bOverride_AmbientOcclusionIntensity = true;
-	PostProcessSettings.AmbientOcclusionIntensity = 0.9f;  
-	PostProcessSettings.bOverride_AmbientOcclusionRadius = true;
-	PostProcessSettings.AmbientOcclusionRadius = 250.0f; 
-
-	// Motion blur settings
-	PostProcessSettings.bOverride_MotionBlurAmount = true;
-	PostProcessSettings.MotionBlurAmount = 0.3f;  
-	PostProcessSettings.bOverride_MotionBlurMax = true;
-	PostProcessSettings.MotionBlurMax = 0.3f; 
-
-	// Screen space reflection settings
-	PostProcessSettings.bOverride_ScreenSpaceReflectionIntensity = true;
-	PostProcessSettings.ScreenSpaceReflectionIntensity = 100.0f; 
-	PostProcessSettings.bOverride_ScreenSpaceReflectionQuality = true;
-	PostProcessSettings.ScreenSpaceReflectionQuality = 100.0f;  
-	PostProcessSettings.bOverride_ScreenSpaceReflectionMaxRoughness = true;
-	PostProcessSettings.ScreenSpaceReflectionMaxRoughness = 0.5f; 
-
+	// "Brighter"
+	// // Camera settings
+	ppSettings.bOverride_CameraShutterSpeed = true;
+	ppSettings.CameraShutterSpeed = 1/30;  
+	ppSettings.bOverride_CameraISO = true;
+	ppSettings.CameraISO = 400;  
 	
-	SceneCaptureComponent->CaptureScene();
+	// Auto exposure settings
+	ppSettings.bOverride_AutoExposureMethod = true;
+	ppSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
+	ppSettings.bOverride_AutoExposureBias = true;
+	ppSettings.AutoExposureBias = 2; 
+	ppSettings.bOverride_AutoExposureMaxBrightness = true; 
+	ppSettings.bOverride_AutoExposureMinBrightness = true; 
+	ppSettings.AutoExposureMaxBrightness = 10; 
+	ppSettings.AutoExposureMinBrightness = 5; 
+	//
+	// // Bloom settings
+	// ppSettings.bOverride_BloomIntensity = true;
+	// ppSettings.BloomIntensity = 0.3f;
+	// ppSettings.bOverride_BloomThreshold = true;
+	// ppSettings.BloomThreshold = -1.0f; 
+	// ppSettings.bOverride_BloomSizeScale = true;
+	// ppSettings.BloomSizeScale = 1.0f; 
+	//
+	// // Lens flare settings
+	// ppSettings.bOverride_LensFlareIntensity = true;
+	// ppSettings.LensFlareIntensity = 0.2f;  
+	//
+	// // Color grading settings
+	// ppSettings.bOverride_FilmToe = true;
+	// ppSettings.FilmToe = .1f;  
+	// ppSettings.bOverride_FilmShoulder = true;
+	// ppSettings.FilmShoulder = 0.9f;  
+	// ppSettings.bOverride_FilmWhiteClip = true;
+	// ppSettings.FilmWhiteClip = 1.0f;
+	// ppSettings.bOverride_FilmBlackClip = true;
+	// ppSettings.FilmBlackClip = 0.0f; 
+	//
+	// // Depth of field settings
+	// ppSettings.bOverride_DepthOfFieldFstop = true;
+	// ppSettings.DepthOfFieldFstop = 5.6f; 
+	//
+	// // Ambient occlusion settings
+	// ppSettings.bOverride_AmbientOcclusionIntensity = true;
+	// ppSettings.AmbientOcclusionIntensity = 0.9f;  
+	// ppSettings.bOverride_AmbientOcclusionRadius = true;
+	// ppSettings.AmbientOcclusionRadius = 250.0f; 
+	//
+	// // Motion blur settings
+	// ppSettings.bOverride_MotionBlurAmount = true;
+	// ppSettings.MotionBlurAmount = 0.3f;  
+	// ppSettings.bOverride_MotionBlurMax = true;
+	// ppSettings.MotionBlurMax = 0.3f; 
+	//
+	// // Screen space reflection settings
+	// ppSettings.bOverride_ScreenSpaceReflectionIntensity = true;
+	// ppSettings.ScreenSpaceReflectionIntensity = 100.0f; 
+	// ppSettings.bOverride_ScreenSpaceReflectionQuality = true;
+	// ppSettings.ScreenSpaceReflectionQuality = 100.0f;  
+	// ppSettings.bOverride_ScreenSpaceReflectionMaxRoughness = true;
+	// ppSettings.ScreenSpaceReflectionMaxRoughness = 0.5f;
+
+	// "Polaroid"
+	// Color Grading
+	ppSettings.bOverride_ColorSaturation = true;
+	ppSettings.ColorSaturation = FVector4(0.8f, 0.7f, 0.7f, 1.0f); // Slight desaturation for vintage look
+
+	ppSettings.bOverride_ColorContrast = true;
+	ppSettings.ColorContrast = FVector4(1.3f, 1.3f, 1.3f, 1.0f); // Increase contrast
+
+	ppSettings.bOverride_ColorGamma = true;
+	ppSettings.ColorGamma = FVector4(0.9f, 0.9f, 0.9f, 1.0f); // Slightly reduce gamma
+
+	ppSettings.bOverride_ColorGain = true;
+	ppSettings.ColorGain = FVector4(0.9f, 0.95f, 1.0f, 1.0f); // Slight blue-green tint for vintage effect
+
+	// Vignette
+	ppSettings.bOverride_VignetteIntensity = true;
+	ppSettings.VignetteIntensity = 0.5f; // Strong vignette for Polaroid focus effect
+
+	// Film Grain
+	ppSettings.bOverride_FilmGrainIntensity = true;
+	ppSettings.FilmGrainIntensity = 0.3f; // Add some film grain
+
+	// Color Grading: Tint
+	ppSettings.bOverride_SceneColorTint = true;
+	ppSettings.SceneColorTint = FLinearColor(1.0f, 0.9f, 0.8f, 1.0f); // Warm color tint
+
+	// Bloom
+	ppSettings.bOverride_BloomIntensity = true;
+	ppSettings.BloomIntensity = 0.4f; // Moderate bloom effect
+
+	// Tone Mapping
+	ppSettings.bOverride_ToneCurveAmount = true;
+	ppSettings.ToneCurveAmount = 0.6f;
+
+	// "Vibrant"
+	// Color Grading
+	// ppSettings.bOverride_ColorSaturation = true;
+	// ppSettings.ColorSaturation = FVector4(1.2f, 1.2f, 1.2f, 1.0f); // Increase saturation for vibrancy
+	//
+	// ppSettings.bOverride_ColorContrast = true;
+	// ppSettings.ColorContrast = FVector4(1.2f, 1.2f, 1.2f, 1.0f); // Increase contrast for depth
+	//
+	// ppSettings.bOverride_ColorGamma = true;
+	// ppSettings.ColorGamma = FVector4(1.1f, 1.1f, 1.1f, 1.0f); // Adjust gamma slightly
+	//
+	// ppSettings.bOverride_ColorGain = true;
+	// ppSettings.ColorGain = FVector4(1.0f, 1.0f, 1.0f, 1.0f);
+	//
+	// // Sharpness
+	// ppSettings.bOverride_Sharpen = true;
+	// ppSettings.Sharpen = 1.5f; // Increase the sharpness
+	//
+	// // Exposure
+	// ppSettings.bOverride_AutoExposureMethod = true;
+	// ppSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
+ //            
+	// ppSettings.bOverride_AutoExposureBias = true;
+	// ppSettings.AutoExposureBias = 0.5f; // Adjust exposure to brighten the scene
+	//
+	// // Tone Mapping
+	// ppSettings.bOverride_ToneCurveAmount = true;
+	// ppSettings.ToneCurveAmount = 0.8f; // Apply tone mapping curve
+	//
+	// // Vignette (optional, for focus effect)
+	// ppSettings.bOverride_VignetteIntensity = true;
+	// ppSettings.VignetteIntensity = 0.2f; // Slight vignette for focus
+	//
+	// // Bloom (optional, for added effect)
+	// ppSettings.bOverride_BloomIntensity = true;
+	// ppSettings.BloomIntensity = 0.7f;
+	//////////////////////////////////////////////////////////////////////
+
+
+	captureComp->CaptureScene();
 
     // Read the pixels from the Render Target
-    TArray<FColor> OutBMP;
-    FRenderTarget* RenderTargetResource = RenderTarget->GameThread_GetRenderTargetResource();
-    RenderTargetResource->ReadPixels(OutBMP);
+    TArray<FColor> outBMP;
+    FRenderTarget* targetResource = renderTarget->GameThread_GetRenderTargetResource();
+    targetResource->ReadPixels(outBMP);
 
     // Create a new Texture2D
-    UTexture2D* ScreenshotTexture = UTexture2D::CreateTransient(RenderTarget->SizeX, RenderTarget->SizeY, PF_B8G8R8A8);
-    if (!ScreenshotTexture) return nullptr;
+    UTexture2D* screenshot = UTexture2D::CreateTransient(renderTarget->SizeX, renderTarget->SizeY, PF_B8G8R8A8);
+    if (!screenshot) return nullptr;
 
     // Lock the texture for editing
-    FTexture2DMipMap& Mip = ScreenshotTexture->GetPlatformData()->Mips[0];
+    FTexture2DMipMap& Mip = screenshot->GetPlatformData()->Mips[0];
     void* Data = Mip.BulkData.Lock(LOCK_READ_WRITE);
-
-    // Copy the pixels to the texture
-    FMemory::Memcpy(Data, OutBMP.GetData(), OutBMP.Num() * sizeof(FColor));
+    FMemory::Memcpy(Data, outBMP.GetData(), outBMP.Num() * sizeof(FColor));
 
     // Unlock the texture
     Mip.BulkData.Unlock();
-    ScreenshotTexture->UpdateResource();
+    screenshot->UpdateResource();
 
     // Cleanup
-    SceneCaptureComponent->DestroyComponent();
-    RenderTarget->ConditionalBeginDestroy();
+    captureComp->DestroyComponent();
+    renderTarget->ConditionalBeginDestroy();
 
-    return ScreenshotTexture;
+    return screenshot;
 }
 
