@@ -165,7 +165,7 @@ protected:
 	
 public:	
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override { Super::SetupPlayerInputComponent(PlayerInputComponent); }
 
 	UFUNCTION(BlueprintCallable)
 	void SetGameMode(EGameMode mode)

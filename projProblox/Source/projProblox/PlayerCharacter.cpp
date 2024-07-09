@@ -47,12 +47,6 @@ void APlayerCharacter::BeginPlay()
 	history = NewObject<UActionHistory>();
 }
 
-// Called to bind functionality to input
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
-
 void APlayerCharacter::UndoRedo(const bool redo)
 {
 	// Stops the player from being able to spam undo/redo
