@@ -2122,3 +2122,56 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.09-16.42.11:629][622]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{962ec5b5-0153-4aa6-a223-ca82d11bfc26}, Name=Headphones (Xbox Controller)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=4, DurationMS=28.22
 [2024.07.09-16.42.11:629][622]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
 [2024.07.09-16.42.11:631][622]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.07.09-16.43.21:985][872]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.09-16.43.21:985][872]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Lvl_Combined
+[2024.07.09-16.43.21:986][872]LogSlate: Window 'projProblox Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.07.09-16.43.22:002][872]LogWorld: UWorld::CleanupWorld for Lvl_Combined, bSessionEnded=true, bCleanupResources=true
+[2024.07.09-16.43.22:016][872]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-16.43.22:020][872]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.07.09-16.43.22:028][872]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.09-16.43.22:056][872]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2024.07.09-16.43.22:056][872]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.07.09-16.43.22:057][872]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.07.09-16.43.22:102][872]LogUObjectHash: Compacting FUObjectHashTables data took   2.08ms
+[2024.07.09-16.43.22:248][873]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2024.07.09-16.43.22:265][873]LogUObjectHash: Compacting FUObjectHashTables data took   1.21ms
+[2024.07.09-16.43.23:427][961]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-16.43.23:437][961]LogSlate: Window 'Message Log' being destroyed
+[2024.07.09-16.43.36:387][559]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2024.07.09-16.43.36:399][559]LogContentBrowser: Creating deferred item: NewFolder
+[2024.07.09-16.43.36:410][560]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2024.07.09-16.43.38:902][729]LogContentBrowser: Attempting asset rename: NewFolder -> SkyDome
+[2024.07.09-16.43.38:903][729]LogContentBrowser: End creating deferred item NewFolder
+[2024.07.09-16.43.47:532][285]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.09-16.43.47:559][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SkyDome/studio_garden_4k_Mat" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/SkyDome/studio_garden_4k_Mat.uasset" SILENT=true
+[2024.07.09-16.43.47:560][285]LogSavePackage: Moving output files for package: /Game/SkyDome/studio_garden_4k_Mat
+[2024.07.09-16.43.47:560][285]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/studio_garden_4k_Mat5671D2AE49AF1A185C9C479DD67EF07A.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/SkyDome/studio_garden_4k_Mat.uasset'
+[2024.07.09-16.43.47:562][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/studio_garden_4k_Mat" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/studio_garden_4k_Mat.uasset" SILENT=true
+[2024.07.09-16.43.47:563][285]LogSavePackage: Moving output files for package: /Game/studio_garden_4k_Mat
+[2024.07.09-16.43.47:564][285]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/studio_garden_4k_Mat0149BB524C6E2505FE097D9E977ED6B0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/studio_garden_4k_Mat.uasset'
+[2024.07.09-16.43.47:565][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SkyDome/HDRI_Sphere" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/SkyDome/HDRI_Sphere.uasset" SILENT=true
+[2024.07.09-16.43.47:574][285]LogSavePackage: Moving output files for package: /Game/SkyDome/HDRI_Sphere
+[2024.07.09-16.43.47:574][285]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/HDRI_SphereD51B911D489E51A7F238FDBE197B92CA.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/SkyDome/HDRI_Sphere.uasset'
+[2024.07.09-16.43.47:576][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/HDRI_Sphere" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/HDRI_Sphere.uasset" SILENT=true
+[2024.07.09-16.43.47:576][285]LogSavePackage: Moving output files for package: /Game/HDRI_Sphere
+[2024.07.09-16.43.47:577][285]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/HDRI_Sphere8228CB6040C2A921CB1B65AFF2290A35.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/HDRI_Sphere.uasset'
+[2024.07.09-16.43.47:578][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SkyDome/studio_garden_4k" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/SkyDome/studio_garden_4k.uasset" SILENT=true
+[2024.07.09-16.43.47:767][285]LogSavePackage: Moving output files for package: /Game/SkyDome/studio_garden_4k
+[2024.07.09-16.43.47:767][285]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/studio_garden_4kA614186746E59996B27292B2B3365EF9.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/SkyDome/studio_garden_4k.uasset'
+[2024.07.09-16.43.47:768][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/studio_garden_4k" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/studio_garden_4k.uasset" SILENT=true
+[2024.07.09-16.43.47:769][285]LogSavePackage: Moving output files for package: /Game/studio_garden_4k
+[2024.07.09-16.43.47:770][285]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/studio_garden_4kBFCB71D74FE828ED9A47589E46C2D48B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/studio_garden_4k.uasset'
+[2024.07.09-16.43.48:778][285]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.24 sec (total: 1.40 sec)
+[2024.07.09-16.43.49:167][285]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.09-16.43.49:167][285]LogContentValidation: Display: Validating /Script/Engine.Material /Game/SkyDome/studio_garden_4k_Mat.studio_garden_4k_Mat
+[2024.07.09-16.43.49:167][285]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/studio_garden_4k_Mat.studio_garden_4k_Mat
+[2024.07.09-16.43.49:167][285]LogContentValidation: Display: Validating /Script/Engine.StaticMesh /Game/SkyDome/HDRI_Sphere.HDRI_Sphere
+[2024.07.09-16.43.49:167][285]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/HDRI_Sphere.HDRI_Sphere
+[2024.07.09-16.43.49:167][285]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/SkyDome/studio_garden_4k.studio_garden_4k
+[2024.07.09-16.43.49:167][285]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/studio_garden_4k.studio_garden_4k
+[2024.07.09-16.44.58:150][486]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.07.09-16.44.58:501][486]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto2
+[2024.07.09-16.44.58:502][486]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Lvl_Combined_Auto28707C10A4BCC5648D9B032A488F61F14.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto2.umap'
+[2024.07.09-16.44.58:504][486]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto2.umap is in the /Temp path, will not scan.
+[2024.07.09-16.44.58:506][486]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.373
+[2024.07.09-16.44.58:506][486]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.373
