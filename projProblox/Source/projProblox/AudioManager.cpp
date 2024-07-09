@@ -12,10 +12,14 @@ UAudioManager::UAudioManager()
 	LoadSoundFiles();
 }
 
+// BAD FOR MEMORY DOING THIS FOR EVERY INSTANCE OF A PICKUPABLE??
 void UAudioManager::LoadSoundFiles()
 {
+	// Attach
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_attach.MS_attach'")));
+	// Ability
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_detach.MS_detach'")));
+	// Eject
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_ejection.MS_ejection'")));
 }
 

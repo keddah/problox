@@ -36,9 +36,6 @@ APropeller::APropeller()
 void APropeller::Ability(const float deltaTime)
 {
 	if(soundPlayer) soundPlayer->SetFloatParam("roll", mesh->GetRelativeRotation().Roll);
-	Super::Ability(deltaTime);
-	soundPlayer->RunAudioFunction("print");
-	
 	if(!active) return;
 
 	mesh->AddLocalRotation({0, 0, spinSpeed});
@@ -66,8 +63,6 @@ void APropeller::Ability(const float deltaTime)
 	const FVector force = power * mesh->GetForwardVector();
 	
 	parentCore->GetMesh()->AddForceAtLocation(force, mesh->GetComponentLocation());
-
-	
 }
 
 void APropeller::SetAbilityActive(const bool value)

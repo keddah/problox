@@ -157,14 +157,7 @@ protected:
 	virtual void GhostPlacement();
 	void ResetGhost() const;
 
-	virtual void Ability(float deltaTime)
-	{
-		if(active)
-		{
-			silhouette->SetWorldRotation(mesh->GetComponentRotation());
-			silhouette->SetWorldLocation(mesh->GetComponentLocation());
-		}
-	}
+	virtual void Ability(float deltaTime) { }
 
 	
 	/////////////// Attachments ///////////////
@@ -178,10 +171,6 @@ protected:
 	static FRotator RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder = -90);
 
 	static FRotator DiagRoundRot(const FRotator& rotation, const FRotator& referencedRot, const bool isDiag);
-
-	// Set the "axis" so that the angle is the value you want to round to.  
-	static FRotator RoundAxis(const FRotator& rotation, const FRotator& axis = {90,90,90});
-	static FRotator RoundAxis(const FRotator& rotation, const FRotator& referenceRot, const FRotator& axis);
 
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
@@ -249,7 +238,11 @@ public:
 
 
 	/////////////// Hierarchy ///////////////
+	// Returns all the things that are attached to this core (only useful for cores (it's in this class so that it can be run recursively))
+	// Includes the attachments that are attached to connector cores.
 	static void GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray);
+
+	// Returns all the things that are parents this. Includes the attachments that are attached to connector cores.
 	static void GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray);
 	
 	bool IsChildOf(const APickupableMaster* parent) const;
@@ -261,21 +254,14 @@ public:
 	// Returns the APickupable at the top of this hierarchy
 	virtual APickupableMaster* GetParent();
 
-	FVector GetPlaceDir() const { return placeDir; }
-	
 	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
-	FRotator GetRotOffset() const { return rotOffset; }
-	
 	FName GetAttachedSocket() const { return attachedSocket; }
 	virtual bool GetIsAttached() const { return isAttached; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	UStaticMeshComponent* GetMesh() const { return mesh; }
-	UStaticMeshComponent* GetSilhouette() const { return silhouette; }
 
-	// Returns the relative transform to the parent core.
-	FTransform GetRelativeTransform() const { return mesh->GetRelativeTransform(); }
-
+	// Returns whether a dragger UI element is required (does it need to be activated/deactivated)
 	UFUNCTION(BlueprintCallable)
 	bool IsTimerRequired() const { return needsTimer; }
 
@@ -286,7 +272,6 @@ public:
 	virtual float GetMass() const
 	{
 		if(!mesh->IsSimulatingPhysics()) return 0;
-		
 		return mesh->GetMass();
 	}
 
@@ -309,12 +294,15 @@ public:
 		mesh->SetEnableGravity(gravityOn);
 		if(!gravityOn) RemoveVelocity();	
 	}
-	
+
+	// Removes angular and linear velocity.
 	virtual void RemoveVelocity() const;
-	
+
+	// To be called by the timeline so that the colour of the outline can be linked to which socket it's in
 	UFUNCTION(BlueprintCallable)
 	void SetOutlineMaterial(UMaterialInstance* mat) { outlineMat = mat; }
 
+	// Also called by the timeline...
 	UFUNCTION(BlueprintCallable)
 	void SetHideOutlineMesh(const bool hide)
 	{

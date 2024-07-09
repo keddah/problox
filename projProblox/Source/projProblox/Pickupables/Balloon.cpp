@@ -62,7 +62,6 @@ void ABalloon::BeginPlay()
 
 void ABalloon::Ability(float deltaTime)
 {
-	Super::Ability(deltaTime);
 	if(!parentCore || !active) return;
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 

@@ -11,6 +11,7 @@
 
 #include "CoreMinimal.h"
 #include "PlayerCharacter.h"
+#include "SpawnPoint.h"
 #include "Components/PointLightComponent.h"
 #include "GameFramework/Actor.h"
 #include "Collector.generated.h"
@@ -73,10 +74,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	int GetLevel1Collected() const { return GetCollectedCountFromLvl(ELevel::Bedroom); }
-
 	UFUNCTION(BlueprintCallable)
 	int GetLevel2Collected() const { return GetCollectedCountFromLvl(ELevel::Kitchen); }
-
 	UFUNCTION(BlueprintCallable)
 	int GetLevel3Collected() const { return GetCollectedCountFromLvl(ELevel::Bathroom); }
 	

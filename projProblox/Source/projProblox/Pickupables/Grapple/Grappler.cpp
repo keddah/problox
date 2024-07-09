@@ -4,7 +4,7 @@
 * The code file for one of the pickupable objects.
 *
 * PROBLEMS:
-*	A rare crash whenever the grapple is fired - occurs because the world is invalid when using GetWorld()
+*	//A rare crash whenever the grapple is fired - occurs because the world is invalid when using GetWorld()
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -36,13 +36,10 @@ AGrappler::AGrappler()
 
 void AGrappler::Ability(const float deltaTime)
 {
-	Super::Ability(deltaTime);
-	
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
 
 	if(!active) return;
 
-	// STILL CRASHES SOMEHOW....
 	UWorld* world = GetWorld();
 	if(!world) return;
 	

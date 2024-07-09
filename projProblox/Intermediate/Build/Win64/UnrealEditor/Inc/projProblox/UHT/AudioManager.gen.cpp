@@ -121,14 +121,14 @@ void EmptyLinkFunctionForGeneratedCodeAudioManager() {}
 		{ "ModuleRelativePath", "AudioManager.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_Inner = { "sounds", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_USoundWave_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_Inner = { "sounds", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_USoundWave_NoRegister, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_MetaData[] = {
 		{ "Category", "AudioManager" },
 		{ "ModuleRelativePath", "AudioManager.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds = { "sounds", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAudioManager, sounds), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_MetaData), Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_MetaData) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds = { "sounds", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAudioManager, sounds), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_MetaData), Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAudioManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAudioManager_Statics::NewProp_sounds,
@@ -171,9 +171,9 @@ void EmptyLinkFunctionForGeneratedCodeAudioManager() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UAudioManager, UAudioManager::StaticClass, TEXT("UAudioManager"), &Z_Registration_Info_UClass_UAudioManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAudioManager), 1635448071U) },
+		{ Z_Construct_UClass_UAudioManager, UAudioManager::StaticClass, TEXT("UAudioManager"), &Z_Registration_Info_UClass_UAudioManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAudioManager), 3430764139U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_236326444(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_658571145(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_AudioManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

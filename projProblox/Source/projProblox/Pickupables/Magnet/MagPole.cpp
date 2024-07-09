@@ -15,14 +15,6 @@ AMagPole::AMagPole()
 	SetActorHiddenInGame(true);
 }
 
-// Called when the game starts or when spawned
-void AMagPole::BeginPlay()
-{
-	Super::BeginPlay();
-
-	ConfigureCharge();
-}
-
 void AMagPole::UpdateMagnets()
 {
 	TArray<AActor*> magActors;

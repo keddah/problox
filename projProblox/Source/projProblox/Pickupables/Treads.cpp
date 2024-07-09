@@ -43,8 +43,6 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 
 void ATreads::Ability(const float deltaTime)
 {
-	Super::Ability(deltaTime);
-
 	const FVector forward = GetActorForwardVector();
 	
 	// When the treads are active, make the tread material pan.

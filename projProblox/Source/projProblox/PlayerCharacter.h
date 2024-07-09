@@ -13,7 +13,6 @@
 #include "CustomGameInstance.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
-#include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Pickupables/BuyableAttachment.h"
 #include "UndoRedo/ActionHistory.h"
@@ -39,7 +38,7 @@ public:
 	APlayerCharacter();
 
 private:
-	/////////////// Undo/Redo ///////////////
+	///////////////////////// Undo/Redo /////////////////////////
 	UPROPERTY(VisibleAnywhere)
 	UActionHistory* history;
 
@@ -54,19 +53,25 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void CreateDetachHistory(APickupableMaster* obj);
 
-	
-	/////////////// Building ///////////////
+	///////////////////////// Building /////////////////////////
+	UPROPERTY(EditDefaultsOnly, Category = "Camera")
+	USpringArmComponent* camBoom;
+
+	// Orbit
 	UFUNCTION(BlueprintCallable)
 	void OrbitControls(float deltaTime);
-	
+
+	// Zooming
 	UFUNCTION(BlueprintCallable)
 	void Zoom();
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same build mode zoom except this uses the scroll wheel instead of the mouse-Y value."))
 	void ScrollZoom(float input);
+
 	
+	///////////////////////// Sockets /////////////////////////
 	FName FindSuggestedSlot(APickupableMaster* obj) const;
 	FName selectedSocket = "FRONT";
-	short currentSlot = 0;
+	short currentSocketIndex = 0;
 	
 	UFUNCTION(BlueprintCallable)
 	void NextPreviousSlot(const bool next);
@@ -76,8 +81,11 @@ private:
 
 	void GoToSlot(bool move = false, bool next = false);
 
+
+	///////////////////////// Turns /////////////////////////
 	UFUNCTION(BlueprintCallable)
 	void EndTurnEarly();
+	
 	
 protected:
 	// Called when the game starts or when spawned
@@ -116,9 +124,6 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Orbit",  BlueprintReadOnly, meta = (Delta = 1))
 	float minOrbitDistance = 15;
-	
-	UPROPERTY(EditDefaultsOnly, Category = "Camera")
-	USpringArmComponent* camBoom;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* playerCam;
@@ -162,6 +167,7 @@ protected:
 	
 	UPROPERTY(BlueprintReadOnly)
 	EGameMode currentMode = EGameMode::Story;
+
 	
 public:	
 	// Called to bind functionality to input
@@ -217,9 +223,6 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void AdjustCore(const FHitResult& hit);
 	
-	// UFUNCTION(BlueprintCallable)
-	// void ChangeCore(float value);
-
 	
 	/////////////// Game States ///////////////
 	UFUNCTION()

@@ -34,15 +34,8 @@ AHoverer::AHoverer()
 	favouredSlot = ECoreSockets::Down;
 }
 
-void AHoverer::BeginPlay()
-{
-	Super::BeginPlay();
-}
-
 void AHoverer::Ability(float deltaTime)
 {
-	Super::Ability(deltaTime);
-
 	if(!active) return;
 
 	const FRotator rot = GetActorRotation();
@@ -101,5 +94,7 @@ void AHoverer::Ability(float deltaTime)
 void AHoverer::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
+
+	// Make it harder to rotate whenever this is active
 	if(parentCore) parentCore->GetMesh()->SetAngularDamping(active? 5 : 0);
 }

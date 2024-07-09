@@ -25,7 +25,7 @@ class PROJPROBLOX_API AThruster : public APickupableMaster
 	AThruster();
 
 	virtual void BeginPlay() override;
-	virtual void Ability(float deltaTime) override { Super::Ability(deltaTime); thrusterComp->SetActive(active); }
+	virtual void Ability(float deltaTime) override { thrusterComp->SetActive(active); }
 	virtual void SetAbilityActive(const bool value) override;
 	virtual void GhostSnapRotate(const FString& keypress) override;
 	

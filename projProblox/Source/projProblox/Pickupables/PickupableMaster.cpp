@@ -191,7 +191,6 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	if(selected)
 	{
 		Detach(false);
-		
 		return EOperations::Detach;
 	}
 
@@ -245,17 +244,19 @@ void APickupableMaster::Detach(const bool push)
 
 	SetAbilityActive(false);
 
-	mesh->SetCollisionResponseToAllChannels(ECR_Ignore);
+	// mesh->SetCollisionResponseToAllChannels(ECR_Ignore);
 	
 	SetHideOutlineMesh(true);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	if(push && parentCore)
 	{
+		// Enable physics
 		mesh->SetSimulatePhysics(true);
 		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 		const float launchForce = GetMass();
 		constexpr float maxVelocity = 1000;
 
+		// Ensure that the mesh is showing
 		SetShowMesh(true);
 
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
@@ -266,7 +267,6 @@ void APickupableMaster::Detach(const bool push)
 	
 	if(parentCore)
 	{
-		
 		// Only play the detach sound if there was a parent core
 		if(soundPlayer) soundPlayer->PlayDetach();
 		else Print("Sfx manager is invalid.....", 5)
@@ -282,9 +282,8 @@ void APickupableMaster::UseSilhouetteTransform(const UStaticMeshComponent* ghost
 	// If a silhouette wasn't given, use this one.
 	if(!ghost) ghost = silhouette;
 		
-	const FTransform silhouetteTransform = ghost->GetComponentTransform();
-	SetActorLocation(silhouetteTransform.GetLocation());
-	SetActorRotation(silhouetteTransform.GetRotation());
+	SetActorLocation(ghost->GetComponentLocation());
+	SetActorRotation(ghost->GetComponentRotation());
 }
 
 void APickupableMaster::Reattach(const FName& socket)
@@ -294,13 +293,20 @@ void APickupableMaster::Reattach(const FName& socket)
 		Print("couldnt cast to core - Reattaching...", 5)
 		return;
 	}
-	isAttached = true;
+	if(socket == NAME_None)
+	{
+		Print("Given socket was bad... Can't reattach.", 5)
+		return;
+	}
 	attachedSocket = socket;
-	
+	isAttached = true;
+
+	// Calling ghost placement whilst the core is valid and there's a valid attachSocket, the silhouette will attach to the attach socket 
 	GhostPlacement();
+
+	// Calling set selected with false attaches the actual mesh to the core and uses the transform of the silhouette (also hides the silhouette)
 	SetSelected(false);
 }
-
 
 FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool negate)
 {
@@ -340,31 +346,6 @@ FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotat
 	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
 }
 
-FRotator APickupableMaster::RoundAxis(const FRotator& rotation, const FRotator& axis)
-{
-	FRotator rot = rotation;
-	if(axis.Roll != 0) rot.Roll = FMath::RoundHalfFromZero(rot.Roll / axis.Roll) * axis.Roll;
-	if(axis.Pitch != 0) rot.Pitch = FMath::RoundHalfFromZero(rot.Pitch / axis.Pitch) * axis.Pitch;
-	if(axis.Yaw != 0) rot.Yaw = FMath::RoundHalfFromZero(rot.Yaw / axis.Yaw) * axis.Yaw;
-
-	PrintRotator(rot, 1)
-	return rot;
-}
-
-FRotator APickupableMaster::RoundAxis(const FRotator& rotation, const FRotator& referenceRot, const FRotator& axis)
-{
-	FRotator difference = rotation - referenceRot;
-
-	// Round the differences to the specified axis rounder
-	if(axis.Roll != 0) difference.Roll = FMath::RoundHalfFromZero(difference.Roll / axis.Roll) * axis.Roll;
-	if(axis.Pitch != 0) difference.Pitch = FMath::RoundHalfFromZero(difference.Pitch / axis.Pitch) * axis.Pitch;
-	if(axis.Yaw != 0) difference.Yaw = FMath::RoundHalfFromZero(difference.Yaw / axis.Yaw) * axis.Yaw;
-
-	// Add the rounded differences to the reference rotation to get the rounded rotation
-	return referenceRot + difference;
-}
-
-
 FRotator APickupableMaster::DiagRoundRot(const FRotator& rotation, const FRotator& referencedRot, const bool isDiag)
 {
 	constexpr float rounder = -90;
@@ -392,6 +373,7 @@ void APickupableMaster::AlignSocketRot(const bool useDirection)
 	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
+	// Make a rotation depending on the place direction
 	FRotator rot;
 	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
 	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
@@ -463,10 +445,12 @@ void APickupableMaster::RemoveVelocity() const
 
 void APickupableMaster::ResetGhost() const
 {
+	// Reattach the silhouette to this actor then hide it.
 	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	silhouette->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
 	silhouette->SetHiddenInGame(true);
 
+	// Reset transform
 	silhouette->SetRelativeRotation({0,0,0});
 	silhouette->SetRelativeLocation({0,0,0});
 }

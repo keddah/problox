@@ -8,7 +8,7 @@
 #include "AudioManager.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class PROJPROBLOX_API UAudioManager : public UActorComponent
 {
 	GENERATED_BODY()
@@ -20,7 +20,7 @@ public:
 private:
 	UAudioComponent* player;
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	TArray<USoundWave*> sounds;
 
 	void PlaySound(int index, float startTime = 0);
@@ -56,6 +56,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void StopAbility() { if(player->Sound == sounds.Last()) StopSound(); }
 
+	// These to be called when setting parameters in meta sounds
 	void SetFloatParam(const FName& key, const float value) const { player->SetFloatParameter(key, value); }
 	void SetIntParam(const FName& key, const int value) const { player->SetIntParameter(key, value); }
 	void SetBoolParam(const FName& key, const bool value) const { player->SetBoolParameter(key, value); }

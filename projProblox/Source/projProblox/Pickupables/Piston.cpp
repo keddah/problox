@@ -22,10 +22,9 @@ APiston::APiston()
 
 void APiston::Ability(const float deltaTime)
 {
-	Super::Ability(deltaTime);
-
 	if(!parentCore) return;
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
+	
 	flatHead->SetCollisionResponseToAllChannels(moving? ECR_Block : ECR_Overlap);
 
 	const FVector targetPos = active? FVector::UpVector * pushExtent : FVector::ZeroVector;

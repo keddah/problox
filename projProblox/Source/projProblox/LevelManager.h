@@ -2,7 +2,7 @@
 * Level Manager - Header
 * 
 * The header file for the level manager. Creates delegates for loading, changing spawns and changing levels. Defines the functions and functions that the level manger
-* needs
+* needs.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -52,9 +52,6 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	bool lvl1Loaded;
 	bool lvl2Loaded;
 	bool lvl3Loaded;
-
-	// Doing in BP because its being weird.
-	// void UnlockInitialSpawns();
 
 
 	/////////////////////////// FUNCTIONS ///////////////////////////
@@ -153,21 +150,19 @@ public:
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Returns the level index of the current level."))
 	int GetCurrentLevel() const { return currentLevel; }
 
+	// These return the spawn points from each level
 	UFUNCTION(BlueprintCallable)
 	const TArray<ASpawnPoint*>& GetLevel1Spawns() const { return lvl1Spawns; }
-
 	UFUNCTION(BlueprintCallable)
 	const TArray<ASpawnPoint*>& GetLevel2Spawns() const { return lvl2Spawns; }
-
 	UFUNCTION(BlueprintCallable)
 	const TArray<ASpawnPoint*>& GetLevel3Spawns() const { return lvl3Spawns; }
 
+	// These return the screenshots from each spawn from each level
 	UFUNCTION(BlueprintCallable)
 	const TArray<UTexture*>& GetLevel1Screenshots() const { return lvl1Screenshots; }
-
 	UFUNCTION(BlueprintCallable)
 	const TArray<UTexture*>& GetLevel2Screenshots() const { return lvl2Screenshots; }
-
 	UFUNCTION(BlueprintCallable)
 	const TArray<UTexture*>& GetLevel3Screenshots() const { return lvl3Screenshots; }
 };

@@ -16,8 +16,6 @@ void AMagnet::BeginPlay()
 {
 	Super::BeginPlay();
 
-	ConfigureMat();
-
 	TArray<AActor*> magActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), StaticClass(), magActors);
 	for (const auto& magActor : magActors) otherMagnets.Add(Cast<AMagnet>(magActor));

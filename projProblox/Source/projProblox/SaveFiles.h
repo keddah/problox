@@ -10,7 +10,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "SpawnPoint.h"
 #include "GameFramework/SaveGame.h"
 #include "Kismet/GameplayStatics.h"
 #include "SaveFiles.generated.h"
@@ -36,11 +35,7 @@ public:
 	void PrintUnlockedIndices() const 
 	{
 		FString text = "Unlocked indices: ";
-		for (const auto& index: unlocks)
-		{
-			text += FString::FromInt(index) + ", ";
-		}
-
+		for (const auto& index: unlocks) text += FString::FromInt(index) + ", ";
 		Print(text, 10)
 	}
 };
@@ -103,8 +98,5 @@ public:
 		return success;
 	}
 
-	void PrintBalance(float time = 3) const
-	{
-		Print("Current Balance: " + FString::FromInt(money), time);
-	}
+	void PrintBalance(float time = 3) const	{ Print("Current Balance: " + FString::FromInt(money), time); }
 }; 

@@ -285,11 +285,11 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 			reorderedSockets.Add(orderSocket);
 		}
 	}
-	currentSlot += next? 1 : -1;
-	if(currentSlot >= reorderedSockets.Num()) currentSlot = 0;
-	if(currentSlot < 0) currentSlot = reorderedSockets.Num() - 1;
+	currentSocketIndex += next? 1 : -1;
+	if(currentSocketIndex >= reorderedSockets.Num()) currentSocketIndex = 0;
+	if(currentSocketIndex < 0) currentSocketIndex = reorderedSockets.Num() - 1;
 		
-	if(reorderedSockets.IsValidIndex(currentSlot)) selectedSocket = reorderedSockets[currentSlot];
+	if(reorderedSockets.IsValidIndex(currentSocketIndex)) selectedSocket = reorderedSockets[currentSocketIndex];
 	GoToSlot(true, next);
 }
 
@@ -315,11 +315,11 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 		return;
 	}
 	
-	currentSlot += above? 2 : -2;
-	if(currentSlot >= freeSockets.Num()) currentSlot = 0;
-	else if(currentSlot < 0) currentSlot = freeSockets.Num() - 1;
+	currentSocketIndex += above? 2 : -2;
+	if(currentSocketIndex >= freeSockets.Num()) currentSocketIndex = 0;
+	else if(currentSocketIndex < 0) currentSocketIndex = freeSockets.Num() - 1;
 		
-	if(freeSockets.IsValidIndex(currentSlot)) selectedSocket = freeSockets[currentSlot];
+	if(freeSockets.IsValidIndex(currentSocketIndex)) selectedSocket = freeSockets[currentSocketIndex];
 	GoToSlot();
 }
 

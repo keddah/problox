@@ -12,7 +12,6 @@ class PROJPROBLOX_API AHoverer : public APickupableMaster
 	GENERATED_BODY()
 
 	AHoverer();
-	virtual void BeginPlay() override;
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;

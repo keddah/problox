@@ -45,10 +45,7 @@ public:
 		return out;
 	}
 
-	UFUNCTION(BlueprintCallable)
-	void SetPositiveCharge(const bool pos) { positive = pos; ConfigureCharge(); }
-	
 protected:
 	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	virtual void BeginPlay() override { Super::BeginPlay(); ConfigureCharge(); }
 };

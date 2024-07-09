@@ -24,14 +24,7 @@ AGlider::AGlider()
 
 void AGlider::Ability(const float deltaTime)
 {
-	Super::Ability(deltaTime);
-	
 	// if(!active) return;
-	if(selected)
-	{
-		mesh->SetAllPhysicsLinearVelocity({});
-		return;
-	}
 
 	// Only activate when falling fast enough
 	if(mesh->GetPhysicsLinearVelocity().Z > -activationSpeed) return;
