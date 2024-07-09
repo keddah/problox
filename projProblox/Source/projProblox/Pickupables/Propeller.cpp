@@ -24,7 +24,7 @@ APropeller::APropeller()
 	windBox->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_propeller.MS_propeller'"));
-	
+
 	// Don't allow cells to be collected from this collider.
 	Tags.Add("NO");
 
@@ -35,32 +35,32 @@ APropeller::APropeller()
 
 void APropeller::Ability(const float deltaTime)
 {
-	if(soundPlayer) soundPlayer->SetFloatParam("roll", mesh->GetRelativeRotation().Roll);
+	if(soundPlayer) soundPlayer->SetFloatParam("roll", mesh->GetRelativeRotation().Yaw);
 	if(!active) return;
 
-	mesh->AddLocalRotation({0, 0, spinSpeed});
+	mesh->AddLocalRotation({0, spinSpeed, 0});
 	
 	if(!parentCore) return;
 
-	const bool vertical = GetActorForwardVector().Z >= .85f;
+	const FVector up = mesh->GetUpVector();
+	const bool vertical = up.Z >= .85f;
 
 	// Push the things that are inside the wind box
     if(!pushedObjs.IsEmpty())
     {
 		for	(const auto& obj : pushedObjs)
 		{
-    		if(obj)
-    		{
-    			const float power = (pushForce * 1000) / sqrt(FVector::DistSquared(GetActorLocation(), obj->GetComponentLocation())) ;
-				obj->AddForce(mesh->GetForwardVector() * power);
-    		}
+    		if(!obj) continue;
+
+			const float power = (pushForce * 1000) / sqrt(FVector::DistSquared(GetActorLocation(), obj->GetComponentLocation())) ;
+			obj->AddForce(up * power);
 		}
     }
 
 	if(!vertical) return;
 
 	const float power = sqrt(parentCore->GetMass()) * propelForce * 1000; 
-	const FVector force = power * mesh->GetForwardVector();
+	const FVector force = power * up;
 	
 	parentCore->GetMesh()->AddForceAtLocation(force, mesh->GetComponentLocation());
 }
