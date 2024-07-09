@@ -119,6 +119,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "37363511EE29B83D991D36F69183F17DBF2AEA28",
+			"Assets": [
+				"/Game/Materials/Pickupables/Glider/M_Glider2"
+			]
+		},
+		{
 			"ShaderMapHash": "F054F611C1D0DB0CF5E64624CDB40F0305465073",
 			"Assets": [
 				"/ControlRig/Controls/ControlRigXRayMaterial"
@@ -252,7 +258,7 @@
 		{
 			"ShaderMapHash": "6E30DF24921D35D378178AB85EC23BAC0DC3A3EF",
 			"Assets": [
-				"/Game/Materials/M_Brown"
+				"/Game/Materials/RandomMaterials/M_Brown"
 			]
 		},
 		{
@@ -265,6 +271,12 @@
 			"ShaderMapHash": "8A440A28073F8FFBA4CE78BC597A0A5503C3EA0A",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_ClearCoat_Mask_DS"
+			]
+		},
+		{
+			"ShaderMapHash": "2A8A2828C95F86A9FA3C4FBC4047A5D6A1E591F9",
+			"Assets": [
+				"/Game/Materials/Pickupables/M_Treads"
 			]
 		},
 		{
@@ -313,7 +325,7 @@
 		{
 			"ShaderMapHash": "E86945335111679CD8ACC176241D474B53553073",
 			"Assets": [
-				"/Game/Materials/M_DrkBlueGlow"
+				"/Game/Materials/RandomMaterials/M_DrkBlueGlow"
 			]
 		},
 		{
@@ -331,7 +343,7 @@
 		{
 			"ShaderMapHash": "6B46C637700474C6F2DC4A9DA947E34A49D8E2EA",
 			"Assets": [
-				"/Game/Materials/M_Gray"
+				"/Game/Materials/RandomMaterials/M_Gray"
 			]
 		},
 		{
@@ -339,6 +351,12 @@
 			"Assets": [
 				"/Engine/EngineMaterials/Widget3DPassThrough",
 				"/Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided"
+			]
+		},
+		{
+			"ShaderMapHash": "614DE83ACD8240D60012B816F816F4FAB8E7637B",
+			"Assets": [
+				"/Game/Materials/Pickupables/Hover/M_HovererOuter"
 			]
 		},
 		{
@@ -404,7 +422,7 @@
 		{
 			"ShaderMapHash": "9A719F43A7C96F8E7858591067A403FCFFEA8F91",
 			"Assets": [
-				"/Game/Materials/M_White"
+				"/Game/Materials/RandomMaterials/M_White"
 			]
 		},
 		{
@@ -447,13 +465,13 @@
 		{
 			"ShaderMapHash": "63865E4A604E0277BED24B46B04343A1E0467C15",
 			"Assets": [
-				"/Game/Materials/M_Black"
+				"/Game/Materials/RandomMaterials/M_Black"
 			]
 		},
 		{
 			"ShaderMapHash": "E97B6B4A3B20DBE608FCD61F1CFD9BCB842E82A6",
 			"Assets": [
-				"/Game/Materials/M_Red"
+				"/Game/Materials/RandomMaterials/M_Red"
 			]
 		},
 		{
@@ -477,7 +495,7 @@
 		{
 			"ShaderMapHash": "0D31D94E7CDD27664AE757CF7F2958F40879800B",
 			"Assets": [
-				"/Game/Materials/Blueglow"
+				"/Game/Materials/RandomMaterials/Blueglow"
 			]
 		},
 		{
@@ -507,7 +525,7 @@
 		{
 			"ShaderMapHash": "681789588BECA8A92A653C61F6BC92AB4A9A2BD6",
 			"Assets": [
-				"/Game/Materials/M_Beige"
+				"/Game/Materials/RandomMaterials/M_Beige"
 			]
 		},
 		{
@@ -525,7 +543,7 @@
 		{
 			"ShaderMapHash": "8EE0A859C032E04A168D50D3AFA289B7E5BB51A1",
 			"Assets": [
-				"/Game/Materials/M_Metal"
+				"/Game/Materials/RandomMaterials/M_Metal"
 			]
 		},
 		{
@@ -537,7 +555,7 @@
 		{
 			"ShaderMapHash": "DA051E61C4B29F4AE80E7FACA22D004ACB98BB89",
 			"Assets": [
-				"/Game/Materials/Unlit"
+				"/Game/Materials/RandomMaterials/Unlit"
 			]
 		},
 		{
@@ -615,7 +633,13 @@
 		{
 			"ShaderMapHash": "7C89C17236DAEE8FA7F31778601A1E11B25B055B",
 			"Assets": [
-				"/Game/Materials/Brighterglow"
+				"/Game/Materials/RandomMaterials/Brighterglow"
+			]
+		},
+		{
+			"ShaderMapHash": "697B2473A3681052F261A0F6448E342620F93187",
+			"Assets": [
+				"/Game/Materials/Pickupables/Hover/M_HovererInner"
 			]
 		},
 		{
@@ -703,12 +727,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "D21FAD846EB2F9E30C3F857F461F24978815F668",
-			"Assets": [
-				"/Engine/EditorMaterials/GeometryCollection/SelectedGeometryMaterial"
-			]
-		},
-		{
 			"ShaderMapHash": "C051288970DC39F008F79847BF3577DD6CF97289",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Wood_Walnut"
@@ -717,13 +735,13 @@
 		{
 			"ShaderMapHash": "D6B1E389913374DD23C65684E4F5A293C540AA85",
 			"Assets": [
-				"/Game/Materials/M_GreenGlow"
+				"/Game/Materials/RandomMaterials/M_GreenGlow"
 			]
 		},
 		{
 			"ShaderMapHash": "C093DE8C4D2B84F104E5308499861A4D9F3D2450",
 			"Assets": [
-				"/Game/Materials/M_Wood"
+				"/Game/Materials/RandomMaterials/M_Wood"
 			]
 		},
 		{
@@ -741,7 +759,7 @@
 		{
 			"ShaderMapHash": "B277F18D9E24C8943E8AF4C4282D2C259F57F148",
 			"Assets": [
-				"/Game/Materials/M_Fog"
+				"/Game/Materials/RandomMaterials/M_Fog"
 			]
 		},
 		{
@@ -753,7 +771,7 @@
 		{
 			"ShaderMapHash": "071ACF8F07D48710282F9113E9452A8F1076A950",
 			"Assets": [
-				"/Game/Materials/M_PinkGlow"
+				"/Game/Materials/RandomMaterials/M_PinkGlow"
 			]
 		},
 		{
@@ -777,7 +795,7 @@
 		{
 			"ShaderMapHash": "D07B5B91220570257AF395EDE340DAB67CD8CE44",
 			"Assets": [
-				"/Game/Materials/M_Indicator"
+				"/Game/Materials/RandomMaterials/M_Indicator"
 			]
 		},
 		{
@@ -796,8 +814,6 @@
 			"ShaderMapHash": "E7A586918DE7FE950E0D47691FD6975A6E455B85",
 			"Assets": [
 				"/Game/Models/BlenderModelsReece/Wood",
-				"/Game/Models/EllaModels/lambert1",
-				"/Game/Models/HassanModels/lambert1",
 				"/Game/Models/MechanicModels/Materials/Grey",
 				"/Game/Models/MechanicModels/Materials/Material_003",
 				"/Game/Models/MechanicModels/Materials/Material_005",
@@ -850,7 +866,7 @@
 		{
 			"ShaderMapHash": "A19DA299D81CF889A4677D51EBCE363CC5024B55",
 			"Assets": [
-				"/Game/Materials/M_redglow"
+				"/Game/Materials/RandomMaterials/M_redglow"
 			]
 		},
 		{
@@ -946,6 +962,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "DB13DCA67C8AEFB3368F9D5AA3E7BE51A76BCDEF",
+			"Assets": [
+				"/Game/Materials/Pickupables/Hover/M_HoverCore"
+			]
+		},
+		{
 			"ShaderMapHash": "692389A75B5109021BE32D6C36AEA793B20F95AA",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Brick_Clay_Old"
@@ -986,7 +1008,7 @@
 		{
 			"ShaderMapHash": "DAD811AC558BB18E1F006590D993F500C85F228A",
 			"Assets": [
-				"/Game/Materials/M_Green"
+				"/Game/Materials/RandomMaterials/M_Green"
 			]
 		},
 		{
@@ -1058,7 +1080,7 @@
 		{
 			"ShaderMapHash": "4C0245BB353F9B97C71764601E4A1C4A18116232",
 			"Assets": [
-				"/Game/Materials/Blue"
+				"/Game/Materials/RandomMaterials/Blue"
 			]
 		},
 		{
@@ -1120,12 +1142,6 @@
 			"Assets": [
 				"/Game/Levels/LowPolyInterior/Materials/M_LowPolyInterior_BG",
 				"/Game/LowPolyInterior/Materials/M_LowPolyInterior_BG"
-			]
-		},
-		{
-			"ShaderMapHash": "382079C58A23B4B170AEE7154C4644C862CE92AE",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Treads"
 			]
 		},
 		{
@@ -1299,10 +1315,10 @@
 				"/Game/Levels/Levels/BuildLevel/Material_009",
 				"/Game/Levels/Levels/BuildLevel/Material_010",
 				"/Game/Levels/Levels/BuildLevel/Material_011",
-				"/Game/Materials/Material",
-				"/Game/Materials/Material_001",
-				"/Game/Materials/Material_002",
-				"/Game/Materials/Material_003",
+				"/Game/Materials/RandomMaterials/Material",
+				"/Game/Materials/RandomMaterials/Material_001",
+				"/Game/Materials/RandomMaterials/Material_002",
+				"/Game/Materials/RandomMaterials/Material_003",
 				"/Game/Megascans/Surfaces/Stucco_Wall_ukmobfecw/lambert1",
 				"/Game/Models/BlenderModelsReece/Blue",
 				"/Game/Models/BlenderModelsReece/Copper",
@@ -1320,12 +1336,18 @@
 				"/Game/Models/BlenderModelsReece/Stone",
 				"/Game/Models/Hassan/PM3D_Sphere3D2",
 				"/Game/Models/Hassan/PolySphere1",
-				"/Game/Models/HassanModels/cell/PM3D_Sphere3D2",
-				"/Game/Models/HassanModels/cell/PolySphere1",
+				"/Game/Models/MechanicModels/Aluminum",
+				"/Game/Models/MechanicModels/CellGlow",
+				"/Game/Models/MechanicModels/Iron",
+				"/Game/Models/MechanicModels/Material",
+				"/Game/Models/MechanicModels/Material_001",
 				"/Game/Models/MechanicModels/Material_002",
 				"/Game/Models/MechanicModels/Material_003",
 				"/Game/Models/MechanicModels/Material_004",
 				"/Game/Models/MechanicModels/Material_006",
+				"/Game/Models/MechanicModels/Material_007",
+				"/Game/Models/MechanicModels/Material_008",
+				"/Game/Models/MechanicModels/Material_009",
 				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_001",
 				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_002",
 				"/Game/Models/MechanicModels/Materials/2ndMatFolder/Material_003",
@@ -1395,7 +1417,7 @@
 		{
 			"ShaderMapHash": "8F5E4AE4FA555CE5C09D9A88AC14815E86C6569F",
 			"Assets": [
-				"/Game/Materials/M_Glass"
+				"/Game/Materials/RandomMaterials/M_Glass"
 			]
 		},
 		{
@@ -1415,6 +1437,12 @@
 			"Assets": [
 				"/Game/StarterContent/Particles/Materials/M_Radial_Gradient",
 				"/Game/StarterContent/Particles/Materials/M_radial_ramp"
+			]
+		},
+		{
+			"ShaderMapHash": "8B823CE83A28E41AA45969E46D029C05E5F03663",
+			"Assets": [
+				"/Game/Materials/Pickupables/Glider/M_Glider1"
 			]
 		},
 		{
@@ -1440,13 +1468,6 @@
 			"ShaderMapHash": "4927A6EE827CB91675EF41CFDDA067ADA2E25093",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_Default_Mask"
-			]
-		},
-		{
-			"ShaderMapHash": "3472FFEE5F00C91FE4E918A2A3E02F319DAAA76F",
-			"Assets": [
-				"/Game/Models/OutsourcedArt/EllaModels/lambert1",
-				"/Game/Models/OutsourcedArt/HassanModels/lambert1"
 			]
 		},
 		{

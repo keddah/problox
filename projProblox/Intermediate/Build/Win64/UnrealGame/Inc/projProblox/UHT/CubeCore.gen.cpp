@@ -263,10 +263,10 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	{
 		P_GET_TARRAY_REF(int32,Z_Param_Out_delays);
 		P_GET_TARRAY_REF(int32,Z_Param_Out_durations);
-		P_GET_PROPERTY(FFloatProperty,Z_Param_longestDuration);
+		P_GET_PROPERTY(FFloatProperty,Z_Param__longestTime);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->StartStoryGame(Z_Param_Out_delays,Z_Param_Out_durations,Z_Param_longestDuration);
+		P_THIS->StartStoryGame(Z_Param_Out_delays,Z_Param_Out_durations,Z_Param__longestTime);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execStartGame)
@@ -660,7 +660,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{
 			TArray<int32> delays;
 			TArray<int32> durations;
-			float longestDuration;
+			float _longestTime;
 		};
 		static const UECodeGen_Private::FIntPropertyParams NewProp_delays_Inner;
 #if WITH_METADATA
@@ -673,9 +673,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_durations;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_longestDuration_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp__longestTime_MetaData[];
 #endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_longestDuration;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp__longestTime;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -697,17 +697,17 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_durations = { "durations", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventStartStoryGame_Parms, durations), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_durations_MetaData), Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_durations_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_longestDuration_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp__longestTime_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_longestDuration = { "longestDuration", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventStartStoryGame_Parms, longestDuration), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_longestDuration_MetaData), Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_longestDuration_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp__longestTime = { "_longestTime", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventStartStoryGame_Parms, _longestTime), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp__longestTime_MetaData), Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp__longestTime_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_delays_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_delays,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_durations_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_durations,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp_longestDuration,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::NewProp__longestTime,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_StartStoryGame_Statics::Function_MetaDataParams[] = {
@@ -827,7 +827,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{ &Z_Construct_UFunction_ACubeCore_PlayCollectSound, "PlayCollectSound" }, // 2315332400
 		{ &Z_Construct_UFunction_ACubeCore_Start, "Start" }, // 761297033
 		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 3000747638
-		{ &Z_Construct_UFunction_ACubeCore_StartStoryGame, "StartStoryGame" }, // 3732795223
+		{ &Z_Construct_UFunction_ACubeCore_StartStoryGame, "StartStoryGame" }, // 995764688
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -1061,9 +1061,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3302046595U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 535966319U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_4141766205(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_4181554199(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

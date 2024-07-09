@@ -243,8 +243,11 @@ void ACubeCore::AddThing(AActor* _thing) const
 	}
 }
 
-void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
+void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector())
 {
+	// Only if the passed position isn't empty .. set the new spawnPos
+	if(pos != FVector()) lastSpawnPos = pos;
+	
 	mesh->SetSimulatePhysics(true);
 	for (auto& obj : GetCloseAttachments())
 	{
@@ -255,7 +258,7 @@ void ACubeCore::Teleport(const FVector& pos, const FRotator& rot)
 		}
 	}
 
-	SetActorLocation(pos);
+	SetActorLocation(lastSpawnPos);
 	SetActorRotation(rot);
 	mesh->SetAllUseCCD(true);
 

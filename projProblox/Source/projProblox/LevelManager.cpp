@@ -264,7 +264,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	{
 	case 0:
 		if (!lvl0Spawn) break;
-		core->Teleport(lvl0Spawn->GetActorLocation(), lvl0Spawn->GetRot());
+		core->Teleport(lvl0Spawn->GetRot(), lvl0Spawn->GetActorLocation());
 		player->EnterLevel(false);
 		break;
 
@@ -272,7 +272,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		if (lvl1Spawns.IsEmpty()) break;
 		if (lvl1Spawns.IsValidIndex(spawnPoint))
 		{
-			core->Teleport(lvl1Spawns[spawnPoint]->GetActorLocation(), lvl1Spawns[spawnPoint]->GetRot());
+			core->Teleport(lvl1Spawns[spawnPoint]->GetRot(), lvl1Spawns[spawnPoint]->GetActorLocation());
 		}
 		player->EnterLevel();
 		break;
@@ -281,7 +281,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		if (lvl2Spawns.IsEmpty()) break;
 		if (lvl2Spawns.IsValidIndex(spawnPoint))
 		{
-			core->Teleport(lvl2Spawns[spawnPoint]->GetActorLocation(), lvl2Spawns[spawnPoint]->GetRot());
+			core->Teleport(lvl2Spawns[spawnPoint]->GetRot(), lvl2Spawns[spawnPoint]->GetActorLocation());
 		}
 		player->EnterLevel();
 		break;
@@ -290,7 +290,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		if (lvl3Spawns.IsEmpty()) break;
 		if (lvl3Spawns.IsValidIndex(spawnPoint))
 		{
-			core->Teleport(lvl3Spawns[spawnPoint]->GetActorLocation(), lvl3Spawns[spawnPoint]->GetRot());
+			core->Teleport(lvl3Spawns[spawnPoint]->GetRot(), lvl3Spawns[spawnPoint]->GetActorLocation());
 		}
 		player->EnterLevel();
 		break;

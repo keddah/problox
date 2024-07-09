@@ -147,6 +147,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Angular Drag", meta = (ToolTip = "The angular drag that the mesh should have at the end of a turn."))
 	float heavyAngularDrag = 1;
 
+	FVector lastSpawnPos;
+	
 
 	/////////////// Game States ///////////////
 	UPROPERTY(BlueprintReadOnly)
@@ -251,7 +253,10 @@ public:
 	
 	/////////////// Other ///////////////
 	virtual void RemoveVelocity() const override;
-	void Teleport(const FVector& pos, const FRotator& rot);
+
+	// To be used whenever the core goes out of bounds or when the core changes levels
+	UFUNCTION(BlueprintCallable)
+	void Teleport(const FRotator& rot, const FVector& pos);
 
 	void EndTurn();
 	
