@@ -212,8 +212,7 @@ void ABalloon::ResetBalloon()
 	mesh->SetHiddenInGame(false);
 	string->bAttachStart = true;
 	string->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
-	string->SetRelativeLocation({0,0,50});
-	// SetActorTransform(resetTransform);
+	string->SetRelativeLocation({});
 	Attach();
 	
 	if(!parentCore) return;

@@ -52,7 +52,6 @@
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
-			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
@@ -71,6 +70,7 @@
 			"MagPole.cpp.obj",
 			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
+			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"PlayerCharacter.cpp.obj",
@@ -78,7 +78,7 @@
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"Propeller.cpp.obj"
+			"Balloon.cpp.obj"
 		]
 	}
 }
