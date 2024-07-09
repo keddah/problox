@@ -48,8 +48,8 @@ void ATreads::Ability(const float deltaTime)
 	const FVector forward = GetActorForwardVector();
 	
 	// When the treads are active, make the tread material pan.
-	mesh->SetScalarParameterValueOnMaterials("SpeedX", forward.X * 2);
-	mesh->SetScalarParameterValueOnMaterials("SpeedY",forward.Y * 2);
+	mesh->SetScalarParameterValueOnMaterials("SpeedX", active? forward.X * 2 : 0);
+	mesh->SetScalarParameterValueOnMaterials("SpeedY", active? forward.Y * 2 : 0);
 	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
