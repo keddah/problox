@@ -316,31 +316,31 @@ void ALevelManager::WakeSleepCells()
 
 void ALevelManager::SaveSpawns()
 {
-	TArray<short> unlockedIndices;
-	USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0));
-	if (!spawnSave)
-	{
-		spawnSave = Cast<USpawnSaves>(UGameplayStatics::CreateSaveGameObject(USpawnSaves::StaticClass()));
-		Print("New save made", 5);
-	}
-
-	for (short i = 0; i < allSpawns.Num(); i++)
-	{
-		if (allSpawns[i]->IsUnlocked()) unlockedIndices.Add(i);
-	}
-	for (const auto& index : unlockedIndices) spawnSave->AddUnlock(index);
+	// TArray<short> unlockedIndices;
+	// USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0));
+	// if (!spawnSave)
+	// {
+	// 	spawnSave = Cast<USpawnSaves>(UGameplayStatics::CreateSaveGameObject(USpawnSaves::StaticClass()));
+	// 	Print("New save made", 5);
+	// }
+	//
+	// for (short i = 0; i < allSpawns.Num(); i++)
+	// {
+	// 	if (allSpawns[i]->IsUnlocked()) unlockedIndices.Add(i);
+	// }
+	// for (const auto& index : unlockedIndices) spawnSave->AddUnlock(index);
 }
 
 bool ALevelManager::LoadUnlockedSpawns()
 {
-	if (USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0)))
-	{
-		for (const auto& index : spawnSave->GetUnlockedIndices()) allSpawns[index]->UnlockPoint();
-		// spawnSave->PrintUnlockedIndices();
-		return true;
-	}
+	// if (USpawnSaves* spawnSave = Cast<USpawnSaves>(UGameplayStatics::LoadGameFromSlot(spawnSaveSlot, 0)))
+	// {
+	// 	for (const auto& index : spawnSave->GetUnlockedIndices()) allSpawns[index]->UnlockPoint();
+	// 	// spawnSave->PrintUnlockedIndices();
+	// 	return true;
+	// }
 
-	Print("There was no spawn save found so one was created", 8);
+	// Print("There was no spawn save found so one was created", 8);
 	// UnlockInitialSpawns();
 	return false;
 }

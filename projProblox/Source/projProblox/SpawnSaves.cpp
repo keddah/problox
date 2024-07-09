@@ -13,5 +13,5 @@ void USpawnSaves::AddUnlock(short newUnlock)
 
 	unlocks.AddUnique(newUnlock);
 	// PrintUnlockedIndices();
-	UGameplayStatics::SaveGameToSlot(this, spawnSaveSlot, 0);
+	// UGameplayStatics::SaveGameToSlot(this, spawnSaveSlot, 0);
 }

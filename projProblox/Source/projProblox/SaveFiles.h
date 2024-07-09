@@ -15,7 +15,7 @@
 #include "SaveFiles.generated.h"
 
 #define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
-static const FString spawnSaveSlot = "SpawnSaves";
+// static const FString spawnSaveSlot = "SpawnSaves";
 static const FString boughtObjsSlot = "UnlockedObjs";
 static const FString moneySlot = "MoneySave";
 

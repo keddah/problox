@@ -18,9 +18,11 @@ ACell::ACell()
 	bAsyncPhysicsTickEnabled = false;
 
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
-	body->SetRelativeScale3D({.7f, .7f,.7f});
+	body->SetRelativeScale3D({.85f, .85f,.85f});
 	body->SetSimulatePhysics(true);
 	RootComponent = body;
+
+	if(GEngine) body->SetMassOverrideInKg("", .01f);
 
 	hitBox = CreateDefaultSubobject<USphereComponent>("Collision Box");
 	hitBox->SetupAttachment(body);
@@ -63,13 +65,13 @@ void ACell::GoHome() const
 	const FVector direction = corePos - thisPos;
 	const float squareDist = FVector::DistSquared(corePos, thisPos);
 	
-	if(squareDist != 0) body->AddForce(direction * (attractionForce * 10000) / squareDist);
+	if(squareDist != 0) body->AddForce(direction * attractionForce / squareDist);
 }
 
 void ACell::Teleport(const FVector& pos)
 {
 	// Shrink so that more can fit in the collector
-	body->SetRelativeScale3D({10,10,10});
+	body->SetRelativeScale3D({.25f,.25f,.25f});
 
 	// Remove its velocity
 	body->SetPhysicsLinearVelocity({});
