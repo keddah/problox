@@ -21,6 +21,8 @@
 
 ABalloon::ABalloon()
 {
+	if(GEngine) mesh->SetMassOverrideInKg("", 0);
+	
 	string = CreateDefaultSubobject<UCableComponent>("String");
 	string->SetupAttachment(mesh);
 
@@ -65,14 +67,19 @@ void ABalloon::Ability(float deltaTime)
 	if(!parentCore || !active) return;
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 
-	const bool atLimit = GetActorLocation().Z - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit() * 1.15f;
+	// (Since the pivot for the balloon mesh is the bottom)
+	constexpr float offset = 120;
+	const bool atLimit = (GetActorLocation().Z + offset) - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit() * 1.15f;
+
+	// The speed the balloon should go upwards when it is first activated (until the limit is reached)
+	constexpr float initSpeed = 3;
 	
-	FVector velocity = mesh->GetPhysicsLinearVelocity();
-	velocity.Z *= -deltaTime;
-	velocity.Z -= sqrt(parentCore->GetMass());
-	velocity.Z += atLimit? floatiness : floatiness * 4; 
+	float upAmount = mesh->GetPhysicsLinearVelocity().Z;
+	upAmount *= -deltaTime;
+	upAmount -= sqrt(parentCore->GetMass());
+	upAmount += atLimit? floatiness : floatiness * initSpeed; 
 	
-	mesh->SetPhysicsLinearVelocity(velocity);
+	AddVelocity({0,0,upAmount});
 }
 
 EOperations ABalloon::SetSelected(const bool value)

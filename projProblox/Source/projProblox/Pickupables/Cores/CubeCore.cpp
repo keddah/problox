@@ -20,6 +20,7 @@
 #include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
 #include "projProblox/Pickupables/Balloon.h"
+#include "projProblox/Pickupables/BounceSpring.h"
 #include "projProblox/Pickupables/Piston.h"
 
 
@@ -262,6 +263,7 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector())
 	SetActorRotation(rot);
 	mesh->SetAllUseCCD(true);
 
+	// Remove the velocity of all the things attach to the core and the core itself.
 	RemoveVelocity();
 }
 

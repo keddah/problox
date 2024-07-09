@@ -68,5 +68,5 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	FTransform resetTransform;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "How far the flatHead should extend from the piston shaft."))
-	float floatiness = 67;
+	float floatiness = 10;
 };

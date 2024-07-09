@@ -460,6 +460,9 @@ void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTim
 		hoveredBuyable = buyable;
 		hoveredBuyable->ShowDescription();
 	}
+
+	// Hide when not hovering over the object
+	else if(hoveredBuyable) hoveredBuyable->HideDescription();
 }
 
 void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
