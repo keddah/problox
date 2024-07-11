@@ -100,9 +100,9 @@ void EmptyLinkFunctionForGeneratedCodeHexCore() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_HexCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AHexCore, AHexCore::StaticClass, TEXT("AHexCore"), &Z_Registration_Info_UClass_AHexCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHexCore), 1345791166U) },
+		{ Z_Construct_UClass_AHexCore, AHexCore::StaticClass, TEXT("AHexCore"), &Z_Registration_Info_UClass_AHexCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHexCore), 4254707198U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_HexCore_h_3515907148(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_HexCore_h_2356350694(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_HexCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_HexCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

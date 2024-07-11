@@ -95,6 +95,11 @@ void AHoverer::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
 
+	if(!parentCore) return;
+
+	// The drag the hover should go to when it's not active
+	const float normalDrag = parentCore->InAdjustPhase()? parentCore->GetHeavyDrag() : parentCore->GetDefaultDrag(); 
+	
 	// Make it harder to rotate whenever this is active
-	if(parentCore) parentCore->GetMesh()->SetAngularDamping(active? 5 : 0);
+	parentCore->GetMesh()->SetAngularDamping(active? 5 : normalDrag);
 }

@@ -10,6 +10,8 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 // Cross Module References
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
@@ -199,6 +201,15 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	Parms.thing=thing;
 	OnAddedThing.ProcessMulticastDelegate<UObject>(&Parms);
 }
+	DEFINE_FUNCTION(ACubeCore::execTeleport)
+	{
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_rot);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_pos);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Teleport(Z_Param_Out_rot,Z_Param_Out_pos);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACubeCore::execBroadcastNewCells)
 	{
 		P_FINISH;
@@ -298,6 +309,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 			{ "Start", &ACubeCore::execStart },
 			{ "StartGame", &ACubeCore::execStartGame },
 			{ "StartStoryGame", &ACubeCore::execStartStoryGame },
+			{ "Teleport", &ACubeCore::execTeleport },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -729,6 +741,66 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACubeCore_Teleport_Statics
+	{
+		struct CubeCore_eventTeleport_Parms
+		{
+			FRotator rot;
+			FVector pos;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_rot_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_rot;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_pos_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_pos;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_rot_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_rot = { "rot", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventTeleport_Parms, rot), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_rot_MetaData), Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_rot_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos = { "pos", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventTeleport_Parms, pos), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos_MetaData), Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_Teleport_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_rot,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_Teleport_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// To be used whenever the core goes out of bounds or when the core changes levels\n" },
+#endif
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "To be used whenever the core goes out of bounds or when the core changes levels" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_Teleport_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "Teleport", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_Teleport_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_Teleport_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_Teleport_Statics::CubeCore_eventTeleport_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C20401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_Teleport_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_Teleport_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_Teleport_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_Teleport_Statics::CubeCore_eventTeleport_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ACubeCore_Teleport()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_Teleport_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ACubeCore);
 	UClass* Z_Construct_UClass_ACubeCore_NoRegister()
 	{
@@ -828,6 +900,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{ &Z_Construct_UFunction_ACubeCore_Start, "Start" }, // 761297033
 		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 3000747638
 		{ &Z_Construct_UFunction_ACubeCore_StartStoryGame, "StartStoryGame" }, // 995764688
+		{ &Z_Construct_UFunction_ACubeCore_Teleport, "Teleport" }, // 1560364239
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -1061,9 +1134,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 535966319U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 4031974960U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_4181554199(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_2151688986(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

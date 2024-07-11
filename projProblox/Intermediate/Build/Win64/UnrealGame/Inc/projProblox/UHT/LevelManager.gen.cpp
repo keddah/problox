@@ -388,7 +388,13 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// These return the screenshots from each spawn from each level\n" },
+#endif
 		{ "ModuleRelativePath", "LevelManager.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "These return the screenshots from each spawn from each level" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "GetLevel1Screenshots", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::LevelManager_eventGetLevel1Screenshots_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::Function_MetaDataParams) };
@@ -433,7 +439,13 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// These return the spawn points from each level\n" },
+#endif
 		{ "ModuleRelativePath", "LevelManager.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "These return the spawn points from each level" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "GetLevel1Spawns", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics::LevelManager_eventGetLevel1Spawns_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics::Function_MetaDataParams) };
@@ -887,8 +899,8 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	const FClassFunctionLinkInfo Z_Construct_UClass_ALevelManager_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ALevelManager_FindSpawns, "FindSpawns" }, // 587090323
 		{ &Z_Construct_UFunction_ALevelManager_GetCurrentLevel, "GetCurrentLevel" }, // 257163267
-		{ &Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots, "GetLevel1Screenshots" }, // 1598109973
-		{ &Z_Construct_UFunction_ALevelManager_GetLevel1Spawns, "GetLevel1Spawns" }, // 164326275
+		{ &Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots, "GetLevel1Screenshots" }, // 114784450
+		{ &Z_Construct_UFunction_ALevelManager_GetLevel1Spawns, "GetLevel1Spawns" }, // 3445442489
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots, "GetLevel2Screenshots" }, // 3949829570
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel2Spawns, "GetLevel2Spawns" }, // 2339672390
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots, "GetLevel3Screenshots" }, // 491255176
@@ -1003,9 +1015,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 2506547120U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 2533001971U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_3950879838(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_2950644117(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

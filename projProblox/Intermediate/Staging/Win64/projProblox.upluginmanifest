@@ -3645,6 +3645,32 @@
 			}
 		},
 		{
+			"File": "../../../Engine/Plugins/Runtime/HDRIBackdrop/HDRIBackdrop.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "HDRIBackdrop",
+				"Description": "",
+				"Category": "Rendering",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "https://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "HDRIBackdrop",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					}
+				]
+			}
+		},
+		{
 			"File": "../../../Engine/Plugins/Runtime/InputDebugging/InputDebugging.uplugin",
 			"Descriptor": 
 			{

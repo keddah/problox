@@ -225,6 +225,8 @@ public:
 	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
 
 	virtual float GetMass() const override;
+	float GetDefaultDrag() const { return defaultAngularDrag; }
+	float GetHeavyDrag() const { return heavyAngularDrag; }
 	bool CanCollect() const { return canCollect; }
 
 	UFUNCTION(BlueprintCallable)
@@ -232,9 +234,8 @@ public:
 
 	bool InAdjustPhase() const
 	{
-		// When the angular drag is increased, the player is in the adjust phase.
-		if(mesh) return mesh->GetAngularDamping() == heavyAngularDrag;
-		return false;
+		// When this timer is active, it means that the game is simulating
+		return !wrld->GetTimerManager().IsTimerActive(resetTimer);
 	}
 	
 
