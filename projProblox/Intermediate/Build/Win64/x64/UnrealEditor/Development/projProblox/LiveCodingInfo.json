@@ -4,6 +4,7 @@
 		"Module.projProblox.1.cpp.obj": [
 			"ActionHistory.gen.cpp.obj",
 			"AudioManager.gen.cpp.obj",
+			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
 			"BuyableAttachment.gen.cpp.obj",
 			"BuyableInfo.gen.cpp.obj",
@@ -19,8 +20,7 @@
 			"CustomGameInstance.gen.cpp.obj",
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
-			"Grappler.gen.cpp.obj",
-			"Balloon.gen.cpp.obj"
+			"Grappler.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"HexagonSocketInfo.gen.cpp.obj",
@@ -34,8 +34,8 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"Propeller.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj"
+			"projProblox.init.gen.cpp.obj",
+			"Propeller.gen.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
 			"SaveFiles.gen.cpp.obj",
@@ -54,7 +54,6 @@
 			"LevelManager.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
-			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
@@ -72,13 +71,14 @@
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
 			"Balloon.cpp.obj",
-			"PickupableMaster.cpp.obj"
+			"BuyableInfo.cpp.obj",
+			"PickupableMaster.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }

@@ -68,4 +68,5 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 
 public:
 	FBuyableInfoStruct GetInfo() const { return {name, description, price, attachmentMesh, attachmentMats, editScale, defaultScale, classToSpawn }; }
+	TSubclassOf<APickupableMaster> GetClassToSpawn() const { return classToSpawn; }
 };

@@ -201,17 +201,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	virtual EOperations SetSelected(const bool value);
 
-	// Teleport to 0,0,0
-	void Deselect()
-	{
-		SetActorLocation({});
-
-		FTimerHandle destroyHandle;
-		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(this, &APickupableMaster::DestroySelf);
-
-		// Destroy after 30 seconds (gives time for the player to undo/redo
-		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, 30, false);
-	}
+	void Deselect()	{ Destroy(); }
 
 	virtual void Placement(ACubeCore* core, const FName& socket);
 	virtual void Detach(bool push = false);

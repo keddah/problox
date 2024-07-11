@@ -502,10 +502,11 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 			buyable->UnlockAttachment();
 			return;
 		}
-
+		// .... If clicking on an unlocked buyable
+		
 		// Don't do anything if there aren't any free slots...
 		if(core->GetFreeSockets().IsEmpty()) return;
-		
+
 		UWorld* wrld = GetWorld();
 		if(!wrld)
 		{
