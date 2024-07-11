@@ -247,6 +247,9 @@ void ALevelManager::InitSpawners()
 
 		cellSpawners.Add(spawner);
 		spawner->Init();
+
+		// Always stop the send when the level changes
+		onLevelChanged.AddDynamic(spawner, &ACellSpawner::StopSound);
 	}
 }
 

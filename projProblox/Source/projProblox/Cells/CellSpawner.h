@@ -124,17 +124,6 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	FActorSpawnParameters params;
 
 
-public:	
-	// Sets default values for this actor's properties
-	ACellSpawner();
-
-	// Hides and deactivates the physics for all its spawned cells
-	void SetCellsDormant(bool dormant);
-
-	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
-	void WakeSleepCollectedCells(bool dormant);
-
-	
 protected:
 	/////////// COMPONENTS ///////////
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
@@ -145,6 +134,16 @@ protected:
 
 	
 public:
+	// Sets default values for this actor's properties
+	ACellSpawner();
+
+	// Hides and deactivates the physics for all its spawned cells
+	void SetCellsDormant(bool dormant);
+
+	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
+	void WakeSleepCollectedCells(bool dormant);
+	
+	
 	/////////////////////////// VARIABLES ///////////////////////////
 	/////////// DELEGATES ///////////
 	UPROPERTY(BlueprintAssignable)
@@ -166,6 +165,11 @@ public:
 	}
 
 
+	/////////// DELEGATES ///////////
+	// The parameters are there so that it can be called when the level changes
+	UFUNCTION()
+	void StopSound(int empty, ELevel unused) { if(soundPlayer) soundPlayer->Stop(); }
+	
 	/////////// GETTERS ///////////
 	UFUNCTION(BlueprintCallable)
 	bool IsActive() const { return spawned; }
