@@ -95,6 +95,9 @@ void AHoverer::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
 
+	if(active) soundPlayer->PlayAbility();
+	else soundPlayer->StopAbility();
+	
 	if(!parentCore) return;
 
 	// The drag the hover should go to when it's not active

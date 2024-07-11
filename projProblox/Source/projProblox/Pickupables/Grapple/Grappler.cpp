@@ -34,6 +34,13 @@ AGrappler::AGrappler()
 	uiName = "Grapple";
 }
 
+void AGrappler::SetAbilityActive(const bool value)
+{
+	Super::SetAbilityActive(value);
+	if(IsValid(hook) && !active) hook->Destroy();
+	if(active) soundPlayer->PlayAbility();
+}
+
 void AGrappler::Ability(const float deltaTime)
 {
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
