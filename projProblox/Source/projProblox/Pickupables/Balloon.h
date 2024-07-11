@@ -41,9 +41,6 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	
 	void Attach();
 	
-	UFUNCTION(BlueprintCallable)
-	void ResetBalloon();
-
 	UFUNCTION()
 	void SaveResetTransform() { resetTransform = GetActorTransform(); }
 	

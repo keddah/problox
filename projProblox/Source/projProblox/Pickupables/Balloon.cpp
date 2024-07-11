@@ -30,15 +30,15 @@ ABalloon::ABalloon()
 	constraint->SetupAttachment(string);
 
 	string->bAttachEnd = false;
-	string->CableLength = 200;
+	string->CableLength = 250;
 	string->NumSegments = 16;
 	string->NumSides = 4;
 	string->SolverIterations = 2;
 	string->EndLocation = {};
 
+	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
 	constraint->SetLinearXLimit(LCM_Limited, string->CableLength);
 	constraint->SetLinearYLimit(LCM_Limited, string->CableLength);
-	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
 
 	uiName = "Balloon";
 	favouredSlot = ECoreSockets::Up;
@@ -55,7 +55,6 @@ void ABalloon::BeginPlay()
 	{
 		if(coreActor->IsA<ACubeConnector>()) continue;
 
-		Cast<ACubeCore>(coreActor)->onReset.AddDynamic(this, &ABalloon::ResetBalloon);
 		Cast<ACubeCore>(coreActor)->onTurnStarted.AddDynamic(this, &ABalloon::SaveResetTransform);
 	}
 
@@ -68,16 +67,19 @@ void ABalloon::Ability(float deltaTime)
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 
 	// (Since the pivot for the balloon mesh is the bottom)
-	constexpr float offset = 120;
-	const bool atLimit = (GetActorLocation().Z + offset) - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit() * 1.15f;
-
+	constexpr float leeway = 170;
+	const bool atLimit = (GetActorLocation().Z + leeway) - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit();
+	PrintFloat((GetActorLocation().Z + leeway) - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z, .2)
+	PrintFloat(constraint->ConstraintInstance.GetLinearLimit(), .2)
+	Print("", .2)
+	
 	// The speed the balloon should go upwards when it is first activated (until the limit is reached)
-	constexpr float initSpeed = 3;
+	const float initSpeed = floatiness * 2;
 	
 	float upAmount = mesh->GetPhysicsLinearVelocity().Z;
 	upAmount *= -deltaTime;
 	upAmount -= sqrt(parentCore->GetMass());
-	upAmount += atLimit? floatiness : floatiness * initSpeed; 
+	upAmount += atLimit? floatiness : initSpeed; 
 	
 	AddVelocity({0,0,upAmount});
 }
@@ -205,17 +207,4 @@ void ABalloon::UseSilhouetteTransform(const UStaticMeshComponent* ghost)
 		
 	const FTransform silhouetteTransform = ghost->GetComponentTransform();
 	SetActorRotation(silhouetteTransform.GetRotation());
-}
-
-void ABalloon::ResetBalloon()
-{
-	mesh->SetHiddenInGame(false);
-	string->bAttachStart = true;
-	string->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
-	string->SetRelativeLocation({});
-	Attach();
-	
-	if(!parentCore) return;
-
-	SetSelected(false);
 }

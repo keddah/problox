@@ -40,6 +40,7 @@ APickupableMaster::APickupableMaster()
 	outlineMesh->SetSimulatePhysics(false);
 	outlineMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	outlineMesh->SetStaticMesh(mesh->GetStaticMesh());
+	outlineMesh->CastShadow = false;
 	
 	silhouette = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ghost Mesh"));
 	silhouette->SetCollisionResponseToAllChannels(ECR_Overlap);
@@ -47,6 +48,7 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetStaticMesh(mesh->GetStaticMesh());
 	silhouette->SetupAttachment(mesh);
 	silhouette->SetHiddenInGame(true);
+	silhouette->CastShadow = false;
 	
 	if(GEngine) silhouette->SetMassOverrideInKg("", 0);
 	silhouette->SetSimulatePhysics(false);
