@@ -56,8 +56,8 @@ void ALevelManager::BeginPlay()
 		return;
 	}
 
-	// Find the spawns once the last level has been loaded so that screenshots can be taken with everything loaded in.
 	// In the Levels tab of the persistent level, ensure that all the levels have initially visible and loaded unchecked.
+	// Find the spawns once the last level has been loaded so that screenshots can be taken with everything loaded in.
 	levels[levels.Num() - 1]->OnLevelShown.AddDynamic(this, &ALevelManager::FindSpawns);
 
 	// Unhide all the levels (apart from build level)
@@ -171,24 +171,27 @@ void ALevelManager::FindSpawns()
 {
 	// Only do this once. (will be called everytime a level loads)
 	if(!(lvl1Screenshots.IsEmpty() && lvl2Screenshots.IsEmpty() && lvl3Screenshots.IsEmpty())) return;
-	
-	// Get all the spawn points from the PERSISTENT level
-	TArray<AActor*> spawns;
-	UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
-	for (auto& spawn : spawns) 
+
+	FTimerHandle delay;
+	auto ConfigSpawners = [this]
 	{
-		ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
-		if(!point) continue;
-
-		allSpawns.Add(point);
-
-		// Foreach spawn point add a delegate to save whenever it has been unlocked
-		point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
-
-		// Sorts the spawns into their levels
-		// Add the points to their respective arrays
-		switch (point->GetLevelEnum())
+		// Get all the spawn points from the PERSISTENT level
+		TArray<AActor*> spawns;
+		UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
+		for (auto& spawn : spawns) 
 		{
+			ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
+			if(!point) continue;
+
+			allSpawns.Add(point);
+
+			// Foreach spawn point add a delegate to save whenever it has been unlocked
+			point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
+
+			// Sorts the spawns into their levels
+			// Add the points to their respective arrays
+			switch (point->GetLevelEnum())
+			{
 			case ELevel::BuildArea:
 				point->SetLevelIndex(0);
 				lvl0Spawn = point;
@@ -211,22 +214,26 @@ void ALevelManager::FindSpawns()
 				lvl3Spawns.Add(point);
 				lvl3Screenshots.Add(point->CaptureScreenshot());
 				break;
+			}
 		}
-	}
 	
-	// If there wasn't a save file...
-	LoadUnlockedSpawns();
+		// If there wasn't a save file...
+		LoadUnlockedSpawns();
 
-	// Initialise the cell spawns (spawns all the cells from every level then makes them dormant)
-	InitSpawners();
+		// Initialise the cell spawns (spawns all the cells from every level then makes them dormant)
+		InitSpawners();
 	
-	// In blueprint... load the build area when this is broadcast so that it can load the build level (hiding the rest of the levels)
-	onScreenshotsTaken.Broadcast();
+		// In blueprint... load the build area when this is broadcast so that it can load the build level (hiding the rest of the levels)
+		onScreenshotsTaken.Broadcast();
 
 
-	// Remove the delegate so that it doesn't happen again
-	if(levels.IsEmpty()) return;
-	levels[levels.Num() - 1]->OnLevelShown.RemoveDynamic(this, &ALevelManager::FindSpawns);
+		// Remove the delegate so that it doesn't happen again
+		if(levels.IsEmpty()) return;
+		levels[levels.Num() - 1]->OnLevelShown.RemoveDynamic(this, &ALevelManager::FindSpawns);
+	};
+
+	// Run the above after 1 second to ensure the levels are completely loaded for the screenshot.
+	wrld->GetTimerManager().SetTimer(delay, ConfigSpawners, 1, false);
 }
 
 void ALevelManager::InitSpawners()
