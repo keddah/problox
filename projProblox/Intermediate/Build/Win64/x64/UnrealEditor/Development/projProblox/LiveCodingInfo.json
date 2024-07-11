@@ -75,10 +75,10 @@
 			"Treads.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"ActionHistory.cpp.obj",
-			"LevelManager.cpp.obj"
+			"LevelManager.cpp.obj",
+			"SpawnPoint.cpp.obj"
 		]
 	}
 }

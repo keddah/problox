@@ -67,7 +67,7 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	// "Brighter"
 	// // Camera settings
 	ppSettings.bOverride_CameraShutterSpeed = true;
-	ppSettings.CameraShutterSpeed = 1/30;  
+	ppSettings.CameraShutterSpeed = 1/2;  
 	ppSettings.bOverride_CameraISO = true;
 	ppSettings.CameraISO = 400;  
 	
@@ -75,12 +75,15 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	ppSettings.bOverride_AutoExposureMethod = true;
 	ppSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
 	ppSettings.bOverride_AutoExposureBias = true;
-	ppSettings.AutoExposureBias = 2; 
+	ppSettings.AutoExposureBias = 3; 
 	ppSettings.bOverride_AutoExposureMaxBrightness = true; 
-	ppSettings.bOverride_AutoExposureMinBrightness = true; 
-	ppSettings.AutoExposureMaxBrightness = 10; 
-	ppSettings.AutoExposureMinBrightness = 5; 
-	//
+	ppSettings.bOverride_AutoExposureMinBrightness = true;
+	ppSettings.AutoExposureMaxBrightness = 100; 
+	ppSettings.AutoExposureMinBrightness = 20; 
+
+	ppSettings.bOverride_IndirectLightingIntensity = true;
+	ppSettings.IndirectLightingIntensity = 14;
+	
 	// // Bloom settings
 	// ppSettings.bOverride_BloomIntensity = true;
 	// ppSettings.BloomIntensity = 0.3f;
@@ -150,9 +153,11 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	ppSettings.FilmGrainIntensity = 0.3f; // Add some film grain
 
 	// Color Grading: Tint
-	ppSettings.bOverride_SceneColorTint = true;
-	ppSettings.SceneColorTint = FLinearColor(1.0f, 0.9f, 0.8f, 1.0f); // Warm color tint
-
+	ppSettings.bOverride_WhiteTemp = true;
+	ppSettings.WhiteTemp = 5500;
+	ppSettings.bOverride_FilmToe = true;
+	ppSettings.FilmToe = .1f;
+	
 	// Bloom
 	ppSettings.bOverride_BloomIntensity = true;
 	ppSettings.BloomIntensity = 0.4f; // Moderate bloom effect
@@ -160,43 +165,6 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	// Tone Mapping
 	ppSettings.bOverride_ToneCurveAmount = true;
 	ppSettings.ToneCurveAmount = 0.6f;
-
-	// "Vibrant"
-	// Color Grading
-	// ppSettings.bOverride_ColorSaturation = true;
-	// ppSettings.ColorSaturation = FVector4(1.2f, 1.2f, 1.2f, 1.0f); // Increase saturation for vibrancy
-	//
-	// ppSettings.bOverride_ColorContrast = true;
-	// ppSettings.ColorContrast = FVector4(1.2f, 1.2f, 1.2f, 1.0f); // Increase contrast for depth
-	//
-	// ppSettings.bOverride_ColorGamma = true;
-	// ppSettings.ColorGamma = FVector4(1.1f, 1.1f, 1.1f, 1.0f); // Adjust gamma slightly
-	//
-	// ppSettings.bOverride_ColorGain = true;
-	// ppSettings.ColorGain = FVector4(1.0f, 1.0f, 1.0f, 1.0f);
-	//
-	// // Sharpness
-	// ppSettings.bOverride_Sharpen = true;
-	// ppSettings.Sharpen = 1.5f; // Increase the sharpness
-	//
-	// // Exposure
-	// ppSettings.bOverride_AutoExposureMethod = true;
-	// ppSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
- //            
-	// ppSettings.bOverride_AutoExposureBias = true;
-	// ppSettings.AutoExposureBias = 0.5f; // Adjust exposure to brighten the scene
-	//
-	// // Tone Mapping
-	// ppSettings.bOverride_ToneCurveAmount = true;
-	// ppSettings.ToneCurveAmount = 0.8f; // Apply tone mapping curve
-	//
-	// // Vignette (optional, for focus effect)
-	// ppSettings.bOverride_VignetteIntensity = true;
-	// ppSettings.VignetteIntensity = 0.2f; // Slight vignette for focus
-	//
-	// // Bloom (optional, for added effect)
-	// ppSettings.bOverride_BloomIntensity = true;
-	// ppSettings.BloomIntensity = 0.7f;
 	//////////////////////////////////////////////////////////////////////
 
 

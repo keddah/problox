@@ -36,6 +36,5 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Treads.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/PlayerCharacter.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/projProblox.cpp"
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/SpawnPoint.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/SpawnSaves.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/UndoRedo/ActionHistory.cpp"

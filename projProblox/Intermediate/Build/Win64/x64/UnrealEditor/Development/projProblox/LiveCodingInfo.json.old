@@ -26,7 +26,6 @@
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
-			"LevelManager.gen.cpp.obj",
 			"LevelObjective.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
@@ -34,8 +33,9 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
-			"Propeller.gen.cpp.obj"
+			"Propeller.gen.cpp.obj",
+			"LevelManager.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
 			"SaveFiles.gen.cpp.obj",
@@ -51,7 +51,6 @@
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
-			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
@@ -76,9 +75,10 @@
 			"Treads.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"ActionHistory.cpp.obj"
+			"ActionHistory.cpp.obj",
+			"LevelManager.cpp.obj",
+			"SpawnPoint.cpp.obj"
 		]
 	}
 }
