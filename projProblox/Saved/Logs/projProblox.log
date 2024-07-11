@@ -1643,3 +1643,14 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.11-17.08.51:339][830]LogFileHelpers: InternalPromptForCheckoutAndSave took 482 ms (total: 1.56 sec)
 [2024.07.11-17.08.51:346][830]AssetCheck: New page: Asset Save: Lvl_Combined
 [2024.07.11-17.08.51:346][830]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.11-17.09.29:772][683]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2024.07.11-17.09.29:852][683]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.11-17.09.29:891][683]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2024.07.11-17.09.29:924][683]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom
+[2024.07.11-17.09.29:924][683]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BathroomC7C3FEEB45AC2911102AFC81B17FB40C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom.umap'
+[2024.07.11-17.09.29:930][683]LogFileHelpers: All files are already saved.
+[2024.07.11-17.09.29:931][683]LogFileHelpers: Saving map 'Bathroom' took 0.052
+[2024.07.11-17.09.29:937][683]LogFileHelpers: InternalPromptForCheckoutAndSave took 85 ms (total: 1.65 sec)
+[2024.07.11-17.09.29:940][683]AssetCheck: New page: Asset Save: Bathroom
+[2024.07.11-17.09.29:940][683]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bathroomj/Bathroom.Bathroom
+[2024.07.11-17.09.30:625][739]LogUObjectHash: Compacting FUObjectHashTables data took   0.51ms
