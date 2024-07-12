@@ -90,6 +90,7 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 	{
 		// If already in the level, just go to the given spawn point.
 		SelectSpawn(spawnPoint);
+		Print("changing spawns...", 4)
 		return false;
 	}
 

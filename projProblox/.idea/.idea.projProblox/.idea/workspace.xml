@@ -11,12 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UI/Timeline/WBP_TimelineBar.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_AreaSelect.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_AreaSelect.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_Construction.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_Construction.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_HUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_HUD.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_LevelSelect.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_LevelSelect.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Timeline/WBP_DragWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Timeline/WBP_DragWidget.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/Timeline/WBP_Timeline.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Timeline/WBP_Timeline.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Timeline/WBP_TimelineBarAgain.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Timeline/WBP_TimelineBarAgain.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,7 +392,7 @@
       <workItem from="1720515795411" duration="777000" />
       <workItem from="1720686996626" duration="1249000" />
       <workItem from="1720714860528" duration="2889000" />
-      <workItem from="1720783385767" duration="2063000" />
+      <workItem from="1720783385767" duration="3292000" />
     </task>
     <servers />
   </component>
