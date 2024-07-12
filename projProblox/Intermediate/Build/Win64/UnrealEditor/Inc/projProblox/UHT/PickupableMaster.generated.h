@@ -11,20 +11,22 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UMaterialInstance;
 class UStaticMeshComponent;
+enum class EAttachmentIcon : uint8;
 enum class EOperations : uint8;
 #ifdef PROJPROBLOX_PickupableMaster_generated_h
 #error "PickupableMaster.generated.h already included, missing '#pragma once' in PickupableMaster.h"
 #endif
 #define PROJPROBLOX_PickupableMaster_generated_h
 
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_SPARSE_DATA
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_SPARSE_DATA
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSetHideOutlineMesh); \
 	DECLARE_FUNCTION(execSetOutlineMaterial); \
 	DECLARE_FUNCTION(execGetMass); \
+	DECLARE_FUNCTION(execGetUIIcon); \
 	DECLARE_FUNCTION(execGetUIDisplayName); \
 	DECLARE_FUNCTION(execIsTimerRequired); \
 	DECLARE_FUNCTION(execGetMesh); \
@@ -38,8 +40,8 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execResetOutline);
 
 
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_ACCESSORS
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_INCLASS_NO_PURE_DECLS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_ACCESSORS
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPickupableMaster(); \
 	friend struct Z_Construct_UClass_APickupableMaster_Statics; \
@@ -48,7 +50,7 @@ public: \
 	DECLARE_SERIALIZER(APickupableMaster)
 
 
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_ENHANCED_CONSTRUCTORS \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APickupableMaster(APickupableMaster&&); \
@@ -60,17 +62,17 @@ public: \
 	NO_API virtual ~APickupableMaster();
 
 
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_45_PROLOG
-#define FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_GENERATED_BODY \
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_59_PROLOG
+#define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_SPARSE_DATA \
-	FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_ACCESSORS \
-	FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_INCLASS_NO_PURE_DECLS \
-	FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_48_ENHANCED_CONSTRUCTORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_SPARSE_DATA \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_ACCESSORS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_INCLASS_NO_PURE_DECLS \
+	FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_62_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -78,8 +80,24 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJPROBLOX_API UClass* StaticClass<class APickupableMaster>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Uni_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h
+#define CURRENT_FILE_ID FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h
 
+
+#define FOREACH_ENUM_EATTACHMENTICON(op) \
+	op(EAttachmentIcon::None) \
+	op(EAttachmentIcon::Balloon) \
+	op(EAttachmentIcon::Glider) \
+	op(EAttachmentIcon::Grapple) \
+	op(EAttachmentIcon::Hoverer) \
+	op(EAttachmentIcon::Magnet) \
+	op(EAttachmentIcon::Propeller) \
+	op(EAttachmentIcon::Spring) \
+	op(EAttachmentIcon::Thruster) \
+	op(EAttachmentIcon::Treads) 
+
+enum class EAttachmentIcon : uint8;
+template<> struct TIsUEnumClass<EAttachmentIcon> { enum { Value = true }; };
+template<> PROJPROBLOX_API UEnum* StaticEnum<EAttachmentIcon>();
 
 #define FOREACH_ENUM_ECORESOCKETS(op) \
 	op(ECoreSockets::Front) \
