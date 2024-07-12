@@ -19,8 +19,6 @@ ACuboidConnector::ACuboidConnector()
 
 	downArrow2 = CreateDefaultSubobject<UArrowComponent>("Downwards");
 	downArrow2->SetupAttachment(mesh);
-
-	uiName = "Cuboid";
 }
 
 void ACuboidConnector::BeginPlay()

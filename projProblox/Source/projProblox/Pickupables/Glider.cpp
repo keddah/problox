@@ -19,7 +19,6 @@ AGlider::AGlider()
 
 	favouredSlot = ECoreSockets::Up;
 	rotOffset = {-90,0,0};
-	uiName = "Glider";
 }
 
 void AGlider::Ability(const float deltaTime)

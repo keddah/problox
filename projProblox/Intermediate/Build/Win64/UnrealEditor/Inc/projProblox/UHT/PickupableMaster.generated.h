@@ -27,7 +27,6 @@ enum class EOperations : uint8;
 	DECLARE_FUNCTION(execSetOutlineMaterial); \
 	DECLARE_FUNCTION(execGetMass); \
 	DECLARE_FUNCTION(execGetUIIcon); \
-	DECLARE_FUNCTION(execGetUIDisplayName); \
 	DECLARE_FUNCTION(execIsTimerRequired); \
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execSetAbilityActive); \

@@ -38,8 +38,6 @@ ACubeConnector::ACubeConnector()
 	thingHomer->SetGenerateOverlapEvents(false);
 	thingHomer->SetBoxExtent({});
 	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-
-	uiName = "Cube";
 }
 
 void ACubeConnector::Placement(ACubeCore* core, const FName& socket)

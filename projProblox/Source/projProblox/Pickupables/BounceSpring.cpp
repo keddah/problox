@@ -28,7 +28,6 @@ ABounceSpring::ABounceSpring()
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_spring.MS_spring'"));
 	
 	needsTimer = false;
-	uiName = "Spring";
 }
 
 void ABounceSpring::Ability(float deltaTime)

@@ -40,7 +40,6 @@ ABalloon::ABalloon()
 	constraint->SetLinearXLimit(LCM_Limited, string->CableLength);
 	constraint->SetLinearYLimit(LCM_Limited, string->CableLength);
 
-	uiName = "Balloon";
 	favouredSlot = ECoreSockets::Up;
 }
 

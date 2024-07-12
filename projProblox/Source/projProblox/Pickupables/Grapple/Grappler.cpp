@@ -30,8 +30,6 @@ AGrappler::AGrappler()
 
 	params.Owner = this;
 	params.bNoFail = true;
-
-	uiName = "Grapple";
 }
 
 void AGrappler::SetAbilityActive(const bool value)

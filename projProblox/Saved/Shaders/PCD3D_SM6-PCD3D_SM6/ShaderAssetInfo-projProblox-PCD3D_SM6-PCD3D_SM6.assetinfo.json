@@ -163,12 +163,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "D039B1161D42537F27017934D3D867E8CDCFE339",
-			"Assets": [
-				"/Game/Materials/Pickupables/Core/M_CoreCore"
-			]
-		},
-		{
 			"ShaderMapHash": "4DF74117DE68B2E6CDD88E0BBC78CEC4AD26C858",
 			"Assets": [
 				"/Game/Levels/StoryMode/DesertPrototype"
@@ -254,12 +248,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "D01A3C1F7BD8AECCC4F3EB912A1DA8F730DAC896",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_Glass"
-			]
-		},
-		{
 			"ShaderMapHash": "DEF56220C7BD375B4FDAB75A7F6EDB6140CF8EB9",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_Sheen_Mask_DS"
@@ -327,6 +315,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "88BF052D4BE7B61CDE1D347ECD96DD302403B18D",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_Glass"
+			]
+		},
+		{
 			"ShaderMapHash": "5966682D34B010172E0D5EB473F0F88CA27FA829",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Bush"
@@ -373,17 +367,6 @@
 			"ShaderMapHash": "FCE85F33CB5D23A0044C7F44EDA03BBC8E1CA022",
 			"Assets": [
 				"/Engine/VREditor/TransformGizmo/Xray",
-				"/Game/Levels/Levels/BuildLevel/Material_001",
-				"/Game/Levels/Levels/BuildLevel/Material_002",
-				"/Game/Levels/Levels/BuildLevel/Material_003",
-				"/Game/Levels/Levels/BuildLevel/Material_004",
-				"/Game/Levels/Levels/BuildLevel/Material_005",
-				"/Game/Levels/Levels/BuildLevel/Material_006",
-				"/Game/Levels/Levels/BuildLevel/Material_007",
-				"/Game/Levels/Levels/BuildLevel/Material_008",
-				"/Game/Levels/Levels/BuildLevel/Material_009",
-				"/Game/Levels/Levels/BuildLevel/Material_010",
-				"/Game/Levels/Levels/BuildLevel/Material_011",
 				"/Game/Materials/RandomMaterials/Material",
 				"/Game/Materials/RandomMaterials/Material_001",
 				"/Game/Materials/RandomMaterials/Material_002",
@@ -802,13 +785,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "25BBF27A8574EC7B489A716C89900E62861B440B",
-			"Assets": [
-				"/Game/Models/Hassan/PM3D_Sphere3D2",
-				"/Game/Models/Hassan/PolySphere1"
-			]
-		},
-		{
 			"ShaderMapHash": "D3EACB7C22641A8AAF0514B1A07908A83919625E",
 			"Assets": [
 				"/Game/Levels/StoryMode/Materials/M_Master"
@@ -1071,7 +1047,45 @@
 		{
 			"ShaderMapHash": "510D13A8A30E91EC3D8162D786A2947CA4C9FB72",
 			"Assets": [
+				"/Game/Levels/Levels/BuildLevel/Blue",
+				"/Game/Levels/Levels/BuildLevel/Brown",
+				"/Game/Levels/Levels/BuildLevel/Darkgold",
+				"/Game/Levels/Levels/BuildLevel/Darkred",
+				"/Game/Levels/Levels/BuildLevel/Gold",
+				"/Game/Levels/Levels/BuildLevel/Grey",
 				"/Game/Levels/Levels/BuildLevel/M_Basic_Wall",
+				"/Game/Levels/Levels/BuildLevel/M_CoreCore",
+				"/Game/Levels/Levels/BuildLevel/M_Cyan",
+				"/Game/Levels/Levels/BuildLevel/M_HoverCore",
+				"/Game/Levels/Levels/BuildLevel/M_HovererInner",
+				"/Game/Levels/Levels/BuildLevel/M_HovererOuter",
+				"/Game/Levels/Levels/BuildLevel/M_InnerCore_1",
+				"/Game/Levels/Levels/BuildLevel/M_InnerCore_2",
+				"/Game/Levels/Levels/BuildLevel/M_OuterCore",
+				"/Game/Levels/Levels/BuildLevel/M_Propeller",
+				"/Game/Levels/Levels/BuildLevel/M_PropellerRim",
+				"/Game/Levels/Levels/BuildLevel/Material_001",
+				"/Game/Levels/Levels/BuildLevel/Material_001_ncl1_1",
+				"/Game/Levels/Levels/BuildLevel/Material_002",
+				"/Game/Levels/Levels/BuildLevel/Material_002_ncl1_1",
+				"/Game/Levels/Levels/BuildLevel/Material_002_ncl1_2",
+				"/Game/Levels/Levels/BuildLevel/Material_003",
+				"/Game/Levels/Levels/BuildLevel/Material_003_ncl1_1",
+				"/Game/Levels/Levels/BuildLevel/Material_003_ncl1_2",
+				"/Game/Levels/Levels/BuildLevel/Material_004",
+				"/Game/Levels/Levels/BuildLevel/Material_004_ncl1_1",
+				"/Game/Levels/Levels/BuildLevel/Material_005",
+				"/Game/Levels/Levels/BuildLevel/Material_006",
+				"/Game/Levels/Levels/BuildLevel/Material_006_ncl1_1",
+				"/Game/Levels/Levels/BuildLevel/Material_007",
+				"/Game/Levels/Levels/BuildLevel/Material_008",
+				"/Game/Levels/Levels/BuildLevel/Material_009",
+				"/Game/Levels/Levels/BuildLevel/Material_010",
+				"/Game/Levels/Levels/BuildLevel/Material_011",
+				"/Game/Levels/Levels/BuildLevel/Material_012",
+				"/Game/Levels/Levels/BuildLevel/MI_Aluminum_se1xefec_2K",
+				"/Game/Levels/Levels/BuildLevel/silver",
+				"/Game/Levels/Levels/BuildLevel/WorldGridMaterial",
 				"/Game/Models/BlenderModelsReece/Blue",
 				"/Game/Models/BlenderModelsReece/Material_001",
 				"/Game/Models/BlenderModelsReece/Wood",
@@ -1231,6 +1245,12 @@
 			"ShaderMapHash": "9F5A7CC0D1A822D203A96DCB19557198505302DC",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Door"
+			]
+		},
+		{
+			"ShaderMapHash": "5893A9C1AFFC9CC031D3CF4A2A217AB9B59EA8EA",
+			"Assets": [
+				"/Game/Materials/Pickupables/Core/M_CoreCore"
 			]
 		},
 		{

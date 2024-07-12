@@ -30,7 +30,6 @@ AHoverer::AHoverer()
 	sideRight = CreateDefaultSubobject<USceneComponent>("Side Right");
 	sideRight->SetupAttachment(mesh);
 
-	uiName = "Hoverer";
 	favouredSlot = ECoreSockets::Down;
 }
 

@@ -16,8 +16,6 @@ APiston::APiston()
 	flatHead = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Push Pad"));
 	flatHead->SetupAttachment(mesh);
 	flatHead->SetUseCCD(true);
-
-	uiName = "Piston";
 }
 
 void APiston::Ability(const float deltaTime)

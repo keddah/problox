@@ -31,6 +31,7 @@ PROJPROBLOX_API void FOnSpawnTriggered_DelegateWrapper(const FMulticastScriptDel
 	DECLARE_FUNCTION(execHasObjective); \
 	DECLARE_FUNCTION(execGetLevelEnum); \
 	DECLARE_FUNCTION(execIsActive); \
+	DECLARE_FUNCTION(execStopSound); \
 	DECLARE_FUNCTION(execOverlap);
 
 

@@ -155,9 +155,6 @@ protected:
 	
 	/////////////// UI ///////////////
 	UPROPERTY(EditDefaultsOnly)
-	FString uiName = "No name given...";
-
-	UPROPERTY(EditDefaultsOnly)
 	EAttachmentIcon uiIcon = EAttachmentIcon::None;
 
 
@@ -273,8 +270,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsTimerRequired() const { return needsTimer; }
 
-	UFUNCTION(BlueprintCallable, Category = "Getters")
-	const FString& GetUIDisplayName() const { return uiName; }
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	const EAttachmentIcon& GetUIIcon() const { return uiIcon; }
 	
