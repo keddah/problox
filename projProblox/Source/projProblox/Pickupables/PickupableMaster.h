@@ -28,6 +28,20 @@
 #define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll, 4) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch, 4) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw, 4)); }
 
 class ACubeCore;
+UENUM(BlueprintType)
+enum class EAttachmentIcon : uint8
+{
+	None,
+	Balloon,
+	Glider,
+	Grapple,
+	Hoverer,
+	Magnet,
+	Propeller,
+	Spring,
+	Thruster,
+	Treads
+};
 
 UENUM(BlueprintType)
 enum class ECoreSockets : uint8
@@ -136,11 +150,15 @@ protected:
 	
 	/////////////// Other ///////////////
 	UMaterialInstance* outlineMat;
+	UWorld* wrld;
 
+	
+	/////////////// UI ///////////////
 	UPROPERTY(EditDefaultsOnly)
 	FString uiName = "No name given...";
 
-	UWorld* wrld;
+	UPROPERTY(EditDefaultsOnly)
+	EAttachmentIcon uiIcon = EAttachmentIcon::None;
 
 
 	/////////////// Undo/Redo ///////////////
@@ -257,6 +275,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	const FString& GetUIDisplayName() const { return uiName; }
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	const EAttachmentIcon& GetUIIcon() const { return uiIcon; }
 	
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const
