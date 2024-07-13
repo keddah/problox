@@ -97,7 +97,7 @@ void ACubeConnector::GhostPlacement()
 }
 
 // The final position when attached is dependent on the silhouette/ghost's position and rotation
-EOperations ACubeConnector::SetSelected(const bool value)
+void ACubeConnector::SetSelected(const bool value)
 {
 	selected = value;
 	ToggleGravity();
@@ -114,12 +114,12 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	{
 		Detach(false);
 
-		return EOperations::Detach ;
+		return;
 	}
 	
 	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return EOperations::Detach;
-	if(attachedSocket == NAME_None) return EOperations::Detach;
+	if(!IsValid(parentCore)) return;
+	if(attachedSocket == NAME_None) return;
 	
 	// Use the silhouettes position/rotation...
 	UseSilhouetteTransform();
@@ -136,7 +136,6 @@ EOperations ACubeConnector::SetSelected(const bool value)
 	FindOppositeSocket();
 	
 	soundPlayer->PlayAttach();
-	return EOperations::Attach;
 }
 
 float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)

@@ -33,7 +33,7 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); mesh->SetUseCCD(value); }
-	virtual EOperations SetSelected(const bool value) override;
+	virtual void SetSelected(const bool value) override;
 	virtual APickupableMaster* GetParent() override;
 	virtual void Detach(bool push = false) override;
 	virtual void GhostPlacement() override;

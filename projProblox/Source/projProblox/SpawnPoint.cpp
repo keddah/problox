@@ -30,6 +30,8 @@ ASpawnPoint::ASpawnPoint()
 
 void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
 {
+	if(OtherActor) return;
+	
 	Super::NotifyActorBeginOverlap(OtherActor);
 
 	// Don't do anything if the point has already been unlocked

@@ -11,7 +11,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "./projProblox/UndoRedo/ActionHistory.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/Actor.h"
 #include "Math/Rotator.h"
@@ -214,7 +213,7 @@ public:
 	
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
-	virtual EOperations SetSelected(const bool value);
+	virtual void SetSelected(const bool value);
 
 	void Deselect()	{ Destroy(); }
 

@@ -114,9 +114,6 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Collection")
 	ACollector* collector;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Colletion", meta = (ToolTip = "Whether or not 'Things' are allowed to be collected (pairs with canPickup)..."))
-	bool canCollect = true;
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
 	float thingAttraction = 4200000;
 	
@@ -194,7 +191,7 @@ public:
 
 	
 	/////////////// Selection/Placement ///////////////
-	virtual EOperations SetSelected(const bool value) override;
+	virtual void SetSelected(const bool value) override;
 	virtual void Detach(bool push) override;
 	
 	/////////////// Turn System ///////////////
@@ -227,7 +224,6 @@ public:
 	virtual float GetMass() const override;
 	float GetDefaultDrag() const { return defaultAngularDrag; }
 	float GetHeavyDrag() const { return heavyAngularDrag; }
-	bool CanCollect() const { return canCollect; }
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }

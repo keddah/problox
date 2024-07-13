@@ -41,115 +41,35 @@ void APlayerCharacter::BeginPlay()
 		core = Cast<ACubeCore>(coreObj);
 	}
 	if(!IsValid(core)) Print("Core Invalid... ~ player", 5);
-	
-	// core->onReset.AddDynamic(this, &APlayerCharacter::GoToCore);
-
-	history = NewObject<UActionHistory>();
 }
 
-void APlayerCharacter::UndoRedo(const bool redo)
+
+void APlayerCharacter::DetachAll(APickupableMaster* obj)
 {
-	// Stops the player from being able to spam undo/redo
-	FTask task;
-	history->PrintTaskIndex();
-	if(redo) task = history->Redo();
-	else task = history->Undo();
-		
-	TArray<APickupableMaster*> changedObjs = task.modifiedObjs;
-	TArray<TSubclassOf<APickupableMaster>> changedClasses = task.modifiedClasses;
-	holding = false;
-	selectedObj = nullptr;
-
-	// Clear things to ignore once not selecting anything.
-	exclusions.Empty();
-
-	Print(task.taskName.ToString(), 4)
-	
-	for (int i = 0; i < changedObjs.Num(); i++)
+	if(!obj)
 	{
-		if(APickupableMaster* obj = changedObjs[i])
-		{
-			// Redoing Detach
-			if(task.operation == EOperations::Detach && redo)
-			{
-				Print("func1", 4)
-				core->EjectObject(obj);
-			}
-			
-			// Undoing Attach
-			if(task.operation == EOperations::Attach && !redo)
-			{
-				Print("func2", 4)
-				core->EjectObject(obj);
-			}
-
-			FTimerHandle destroyHandle;
-			FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
-		
-			GetWorld()->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
-		}
-		
-		// Undoing Detach
-		else if(task.operation == EOperations::Detach && !redo)
-		{
-			Print("func3", 4)
-			history->RecreateObject(GetWorld(), core, task.modifiedClasses[i], task.attachedSockets[i]);
-		}
-		
-		// Redoing Attach
-		else if(task.operation == EOperations::Attach && redo)
-		{
-			Print("func4", 4)
-			history->RecreateObject(GetWorld(), core, task.modifiedClasses[i], task.attachedSockets[i]);
-		}
-	}
-}
-
-void APlayerCharacter::CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const TArray<FName>& attachedSockets) const
-{
-	FTask newTask;
-	TArray<TSubclassOf<APickupableMaster>> modifiedClasses;
-	for(const auto& obj  : objs)
-	{
-		modifiedClasses.Add(obj->GetClass());
+		Print("Invalid object, couldnt detach..", 4)
+		return;
 	}
 	
-	if(task == "ATTACH") newTask = {task, objs, modifiedClasses, attachedSockets, EOperations::Attach};
-	else if(task == "DETACH") newTask = {task, objs, modifiedClasses, attachedSockets, EOperations::Detach};
-
-	Print(newTask.taskName.ToString(), 4)
-	history->NewAction(newTask);
-}
-
-void APlayerCharacter::CreateDetachHistory(APickupableMaster* obj)
-{
+	TArray<APickupableMaster*> detachedObjects;
+	
 	// Try to cast to a core
-	if(ACubeCore* objCore = Cast<ACubeCore>(obj))
-	{
-		const TArray<FName> usedSockets = objCore->GetOccupiedSockets();
-		TArray<APickupableMaster*> detachedObjects = objCore->DetachAll();
-		
-		if(detachedObjects.IsEmpty()) return;
-		CreateTaskHistory("DETACH", detachedObjects, usedSockets);
-	}
+	if(ACubeCore* objCore = Cast<ACubeCore>(obj)) detachedObjects = objCore->DetachAll();
 
 	// If the cast fails... cast to the object's parent core
-	else if(ACubeCore* parentCore = obj->GetCore())
-	{
-		const TArray<FName> usedSockets = parentCore->GetOccupiedSockets();
-		TArray<APickupableMaster*> detachedObjects = parentCore->DetachAll();
-		
-		if(detachedObjects.IsEmpty()) return;
-		CreateTaskHistory("DETACH", detachedObjects, usedSockets);
-	}
+	else if(ACubeCore* parentCore = obj->GetCore()) detachedObjects = parentCore->DetachAll();
 
 	UWorld* wrld = GetWorld();
 	if(!wrld) return;
 
+	// Destroy each detached object after a delay
 	FTimerHandle destroyHandle;
-	FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
-		
-	wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
+	for(const auto& detachedObj : detachedObjects)
+	{
+		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(detachedObj, &APickupableMaster::Deselect);
+		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
+	}
 }
 
 FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
@@ -244,7 +164,6 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 	{
 		controller->SetControlRotation(UKismetMathLibrary::FindLookAtRotation(newPos, corePos));
 	}
-
 }
 
 void APlayerCharacter::Zoom()
@@ -290,7 +209,7 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 	if(currentSocketIndex < 0) currentSocketIndex = reorderedSockets.Num() - 1;
 		
 	if(reorderedSockets.IsValidIndex(currentSocketIndex)) selectedSocket = reorderedSockets[currentSocketIndex];
-	GoToSlot(true, next);
+	GoToSlot();
 }
 
 void APlayerCharacter::AboveBelowSlot(const bool above)
@@ -314,8 +233,9 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 		GoToSlot();
 		return;
 	}
-	
-	currentSocketIndex += above? 2 : -2;
+
+	// Fallback to cycling through the sockets if the up and down sockets are full
+	currentSocketIndex += above? 1 : -1;
 	if(currentSocketIndex >= freeSockets.Num()) currentSocketIndex = 0;
 	else if(currentSocketIndex < 0) currentSocketIndex = freeSockets.Num() - 1;
 		
@@ -323,7 +243,7 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 	GoToSlot();
 }
 
-void APlayerCharacter::GoToSlot(const bool move, const bool next)
+void APlayerCharacter::GoToSlot() const
 {
 	if(!selectedObj)
 	{
@@ -331,6 +251,12 @@ void APlayerCharacter::GoToSlot(const bool move, const bool next)
 		return;
 	}
 
+	if(selectedSocket == NAME_None)
+	{
+		Print("The selected socket was bad... couldn't go to socket ~ player", 4)
+		return;
+	}
+	
 	if(!core)
 	{
 		Print("Couldn't go to slot because the core is invalid", 4)
@@ -338,37 +264,18 @@ void APlayerCharacter::GoToSlot(const bool move, const bool next)
 	}
 
 	selectedObj->Placement(core, selectedSocket);
-
-	// Move in relation to the new socket placement...
-	if(!move) return;
-
-	// constexpr float moveAmount = 9;
-	// mouseValues.X += next? moveAmount : -moveAmount;
-	// orbiting = true;
-	// OrbitControls(.1f);
-	// orbiting = false;
 }
 
 void APlayerCharacter::EndTurnEarly() { if(currentMode != EGameMode::Build) if(core) core->EndTurn(); }
 
-void APlayerCharacter::GoToCore()
-{
-	if(!core) return;
-	const FVector corePos = core->GetActorLocation();
-	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), corePos));
-
-	// Look at the core first so that you can move in the opposite direction...
-	const FVector direction = -GetActorForwardVector();
-	const FVector newPos = corePos + (direction * 300);
-	
-	SetActorLocation(newPos);
-}
-
 void APlayerCharacter::SelectObject(APickupableMaster* obj)
 {
-	// Can't select anything whilst not in the build phase...
+	// Can't select anything whilst not in the build area...
 	if(currentMode != EGameMode::Build) return;
-
+	
+	if(!obj) return;
+	if(!core) return;
+	
 	selectedSocket = FindSuggestedSlot(obj);
 	if(selectedSocket == NAME_None) selectedSocket = core->GetFreeSockets()[0];
 	GoToSlot();
@@ -376,6 +283,8 @@ void APlayerCharacter::SelectObject(APickupableMaster* obj)
 
 void APlayerCharacter::Detach(const FHitResult& hit)
 {
+	if(!hit.bBlockingHit) return;
+	
 	// if the cast is successful...
 	if(ACubeCore* hitCore = Cast<ACubeCore>(hit.GetActor()))
 	{
@@ -383,37 +292,22 @@ void APlayerCharacter::Detach(const FHitResult& hit)
 		// If it has a parent core...
 		if(ACubeCore* parentCore = hitCore->GetCore())
 		{
-			CreateDetachHistory(parentCore);
+			DetachAll(parentCore);
 			return;
 		}
 
 		// Otherwise just detach everything on the hit core.
-		CreateDetachHistory(hitCore);
+		DetachAll(hitCore);
 		return;
 	}
 
 	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all..
-	if(APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor())) CreateDetachHistory(obj);
+	if(APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor())) DetachAll(obj);
 }
 
 void APlayerCharacter::Deselect()
 {
-	if(!IsValid(selectedObj)) return;
-
-	// Is the selected object a core?
-	if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
-	{
-		// Is the obj not a connector... if it is... check if it can collect... if it can't return
-		if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
-		{
-			holding = true;
-			return;
-		}
-	}
-	
-	// Clear things to ignore.
-	exclusions.Empty();
-	holding = false;
+	if(!selectedObj) return;
 
 	selectedObj->SetSelected(false);
 	selectedObj = nullptr;
@@ -427,11 +321,15 @@ void APlayerCharacter::Confirm()
 		Print("Couldnt confirm because there was no selected object...", 6)
 		return;
 	}
+	if(!core)
+	{
+		Print("Couldnt confirm because the core was invalid...", 6)
+		return;
+	}
 
 	selectedObj->SetCore(core);
 	selectedObj->SetSelected(false);
 
-	CreateTaskHistory("ATTACH", {selectedObj}, {selectedObj->GetAttachedSocket()});
 	Deselect();
 }
 
@@ -439,10 +337,10 @@ void APlayerCharacter::Confirm()
 void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTime)
 {
 	if(currentMode != EGameMode::Build) return;
-
+	
 	OrbitControls(deltaTime);
 	
-	// Only continue if the hit object is a mesh or a box collider...
+	// Only continue if the hit object is a mesh or a box collider (ignores its widget)...
 	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
 	AActor* hitActor = hit.GetActor();
 	
@@ -490,20 +388,22 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 			}
 
 			const int money = instance->GetMoney();
-			if(!(money >= buyInfo.price))
+			if(money < buyInfo.price)
 			{
 				Print("Couldn't afford it...: " + FString::FromInt(money), 4)
 				return;
 			}
 
+			// Deselect the selected object
 			if(selectedObj) selectedObj->Deselect();
 			instance->LoseMoney(buyInfo.price);
 			Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
+
 			buyable->UnlockAttachment();
 			return;
 		}
-		// .... If clicking on an unlocked buyable
 		
+		/////////////// When clicking on an unlocked buyable ///////////////
 		// Don't do anything if there aren't any free slots...
 		if(core->GetFreeSockets().IsEmpty()) return;
 
@@ -524,46 +424,57 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 			return;
 		}
 
-		holding = true;
 		if(selectedObj) selectedObj->Deselect();
 		selectedObj = pickupable;
 		SelectObject(selectedObj);
 	}
 
+	// If the hit actor wasn't a buyable (clicking anything that isn't a buyable deselects the selected object if there is one).
 	else if(selectedObj) selectedObj->Deselect();
 }
 
 void APlayerCharacter::EjectObject(const FHitResult& hit)
 {
 	if(currentMode != EGameMode::Build) return;
-
+	if(!core)
+	{
+		Print("Core was invalid. couldnt eject...", 4)
+		return;
+	}
+	
 	AActor* hitActor = hit.GetActor();
 	if(!hitActor) return;
 	if(hitActor == core) return;
 	
-	// Never eject the actual core
+	// Never eject the actual core (for when detaching connectors to the core)
 	if(hitActor->IsA<ACubeCore>() && !hitActor->IsA<ACubeConnector>()) return;
 	
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
+		// Don't do anything if it's not attached...
 		if(!obj->GetIsAttached()) return;
 
-		CreateTaskHistory("DETACH", {obj}, {obj->GetAttachedSocket()});
 		core->EjectObject(obj);
 		
 		UWorld* wrld = GetWorld();
 		if(!wrld) return;
 
+		// Destroy the object after a delay
 		FTimerHandle destroyHandle;
 		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
 		
 		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
 	}
-
 }
 
 void APlayerCharacter::AdjustCore(const FHitResult& hit)
 {
+	if(!core)
+	{
+		Print("Couldnt adjust core. it's invalid...", 4)
+		return;
+	}
+	
 	// Can't do it if the core is moving
 	if(core->GetVelocity().Length() > adjustSpeedThreshold) return;
 		
@@ -573,7 +484,6 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 	
 	if(!hit.bBlockingHit) return;
 	AActor* AHit = hit.GetActor();
-	if(!core) return;
 
 	APickupableMaster* hitObj = Cast<APickupableMaster>(AHit);
 	if(!hitObj) return;
@@ -581,25 +491,8 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 	// If the cast is successful... Try to get its parent
 	selectedObj = hitObj->GetParent();
 
-	// If the object's parent is valid...
-	if(IsValid(selectedObj))
-	{
-		// Its parent is always a core.
-		// Prevent the core from being picked up if it's out of range
-		if(const ACubeCore* objCore = Cast<ACubeCore>(selectedObj))
-		{
-			if(!objCore->IsA<ACubeConnector>()) if(!objCore->CanCollect())
-			{
-				// Return if can't pickup
-				holding = false;
-				selectedObj = 0;
-				return;
-			}
-		}
-	}
-
 	// If the object doesn't have a parent....
-	else selectedObj = hitObj;
+	if(!selectedObj) selectedObj = hitObj;
 
 	if(!IsValid(selectedObj)) return;
 
@@ -609,7 +502,7 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 
 	core->SetSelected(true);
 	core->SetActorLocation({corePos.X, corePos.Y, corePos.Z + heightOffset});
-	const FRotator forwardRot = GetActorForwardVector().Rotation();
+	const FRotator forwardRot = GetController()->GetViewTarget()->GetActorRotation();
 	
 	core->SetActorRotation({0, forwardRot.Yaw, 0});
 }
@@ -617,7 +510,6 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 void APlayerCharacter::EjectAll()
 {
 	if(currentMode != EGameMode::Build) return;
-
 	if(!core) return;
 
 	for (auto& obj : core->GetCloseAttachments())

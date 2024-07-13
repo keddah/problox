@@ -37,7 +37,7 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 public:
 	ACubeConnector();
 	
-	virtual EOperations SetSelected(const bool value) override;
+	virtual void SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 
 	UFUNCTION(BlueprintCallable)

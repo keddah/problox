@@ -15,7 +15,6 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Pickupables/BuyableAttachment.h"
-#include "UndoRedo/ActionHistory.h"
 #include "Pickupables/PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
 
@@ -23,9 +22,6 @@ UENUM(BlueprintType)
 enum class EGameMode : uint8
 {
 	Story,
-	Wave,
-	Assault,
-	Creative,
 	Build
 };
 
@@ -38,21 +34,6 @@ public:
 	APlayerCharacter();
 
 private:
-	///////////////////////// Undo/Redo /////////////////////////
-	UPROPERTY(VisibleAnywhere)
-	UActionHistory* history;
-
-	float undoRedoThreshold = 30;
-	
-	UFUNCTION(BlueprintCallable)
-	void UndoRedo(bool redo);
-
-	void CreateTaskHistory(const FName& task, TArray<APickupableMaster*> objs, const TArray<FName>& attachedSockets) const;
-
-	// Detaches everything from the inputted core or the pickupable's parent then creates task histories for each thing that was detached.  
-	UFUNCTION(BlueprintCallable)
-	void CreateDetachHistory(APickupableMaster* obj);
-
 	///////////////////////// Building /////////////////////////
 	UPROPERTY(EditDefaultsOnly, Category = "Camera")
 	USpringArmComponent* camBoom;
@@ -79,7 +60,7 @@ private:
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same as NextPreviousSlot() except it goes 2 spaces ahead instead of one."))
 	void AboveBelowSlot(const bool above);
 
-	void GoToSlot(bool move = false, bool next = false);
+	void GoToSlot() const;
 
 
 	///////////////////////// Turns /////////////////////////
@@ -102,11 +83,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	bool toggleSelection = false;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Picking up")
-	TArray<AActor*> exclusions;
-
+	UPROPERTY(BlueprintReadWrite, Category = "Controls")
+	bool holding;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Controls",  BlueprintReadOnly, meta = (ToolTip = "The max speed the core is allowed to be going when trying to adjust the core's rotation.", Delta = .05f))
-	float adjustSpeedThreshold = .6;
+	float adjustSpeedThreshold = 10;
 	
 	
 	/////////////// Camera ///////////////
@@ -144,9 +125,6 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	UCustomGameInstance* instance;
-	
-	UPROPERTY(BlueprintReadWrite, Category = "Controls")
-	bool holding;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	float mouseDistance = 20000;
@@ -190,9 +168,6 @@ public:
 		adjustPhase = canAdjust;
 	}
 
-	UFUNCTION()
-	void GoToCore();
-	
 	UFUNCTION(BlueprintCallable)
 	void EjectAll();
 	
@@ -207,9 +182,13 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void Confirm();
 
+	// The hit object will try to get its parent then detach everything from that parent (if no parent it assumes it's the core to detach all from).
 	UFUNCTION(BlueprintCallable)
 	void Detach(const FHitResult& hit);
 
+	// To be used in tandem with Detach()
+	void DetachAll(APickupableMaster* obj);
+	
 	UFUNCTION(BlueprintCallable)
 	void BuildControls(const FHitResult& hit, const float deltaTime);
 

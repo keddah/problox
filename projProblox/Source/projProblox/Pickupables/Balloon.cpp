@@ -83,7 +83,7 @@ void ABalloon::Ability(float deltaTime)
 	AddVelocity({0,0,upAmount});
 }
 
-EOperations ABalloon::SetSelected(const bool value)
+void ABalloon::SetSelected(const bool value)
 {
 	selected = value;
 
@@ -97,11 +97,11 @@ EOperations ABalloon::SetSelected(const bool value)
 		Detach(false);
 		mesh->SetEnableGravity(false);
 		
-		return {EOperations::Detach};
+		return;
 	}
 
-	if(!parentCore) return EOperations::Detach;
-	if(attachedSocket == NAME_None) return  EOperations::Detach ;
+	if(!parentCore) return;
+	if(attachedSocket == NAME_None) return;
 
 	SetShowMesh(true);
 	UseSilhouetteTransform();
@@ -110,8 +110,6 @@ EOperations ABalloon::SetSelected(const bool value)
 
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
-	
-	return {EOperations::Attach};
 }
 
 APickupableMaster* ABalloon::GetParent()

@@ -53,9 +53,7 @@ void ACubeCore::BeginPlay()
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 
 	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Story;
-	else if(Cast<AMode_Wave>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Wave;
-	else if(Cast<AMode_Assault>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Assault;
-	else if(Cast<AMode_Creative>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Creative;
+	else if(Cast<AMode_Build>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Build;
 
 	if (UCustomGameInstance* customInst = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld)))
 	{
@@ -65,7 +63,7 @@ void ACubeCore::BeginPlay()
 }
 
 
-EOperations ACubeCore::SetSelected(const bool value)
+void ACubeCore::SetSelected(const bool value)
 {
 	// Not allowed to drop the cube if unable to collect 
 	selected = value;
@@ -77,7 +75,6 @@ EOperations ACubeCore::SetSelected(const bool value)
 
 	// Reset the silhouette after using its transform
 	ResetGhost();
-	return EOperations::None;
 }
 
 void ACubeCore::Detach(const bool push)

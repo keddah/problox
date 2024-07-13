@@ -181,7 +181,7 @@ void APickupableMaster::GhostPlacement()
 	silhouette->AddRelativeRotation(rotOffset);
 }
 
-EOperations APickupableMaster::SetSelected(const bool value)
+void APickupableMaster::SetSelected(const bool value)
 {
 	selected = value;
 
@@ -193,11 +193,11 @@ EOperations APickupableMaster::SetSelected(const bool value)
 	if(selected)
 	{
 		Detach(false);
-		return EOperations::Detach;
+		return;
 	}
 
-	if(!parentCore) return  EOperations::Detach;
-	if(attachedSocket == NAME_None) return EOperations::Detach;
+	if(!parentCore) return;
+	if(attachedSocket == NAME_None) return;
 
 	SetShowMesh(true);
 	
@@ -211,7 +211,6 @@ EOperations APickupableMaster::SetSelected(const bool value)
 
 	if(soundPlayer) soundPlayer->PlayAttach();
 	else Print("Sfx manager is invalid....", 5)
-	return EOperations::Attach;
 }
 
 void APickupableMaster::Placement(ACubeCore* core, const FName& socket)
