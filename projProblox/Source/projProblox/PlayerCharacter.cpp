@@ -474,6 +474,9 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 		Print("Couldnt adjust core. it's invalid...", 4)
 		return;
 	}
+
+	// Can't select when already selected...
+	if(selectedObj == core) return;
 	
 	// Can't do it if the core is moving
 	if(core->GetVelocity().Length() > adjustSpeedThreshold) return;

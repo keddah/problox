@@ -91,7 +91,7 @@ void ACell::SetDormant(const bool dormant)
 	if(dormant) isHoming = false;
 	
 	// Enable/disable physics and hide/show actor
-	body->SetSimulatePhysics(!dormant);
+	if(body) body->SetSimulatePhysics(!dormant);
 	SetActorHiddenInGame(dormant);
 }
 
