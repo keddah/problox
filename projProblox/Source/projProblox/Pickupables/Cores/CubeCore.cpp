@@ -239,10 +239,12 @@ void ACubeCore::AddThing(AActor* _thing) const
 	}
 }
 
-void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector())
+void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bool respawning)
 {
 	// Only if the passed position isn't empty .. set the new spawnPos
-	if(pos != FVector()) lastSpawnPos = pos;
+	if(!respawning) lastSpawnPos = pos;
+	// End the turn early when respawning (falling out the map)
+	else EndTurn();
 	
 	mesh->SetSimulatePhysics(true);
 	for (auto& obj : GetCloseAttachments())

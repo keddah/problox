@@ -19,6 +19,12 @@ struct FBuyableInfoStruct
 	FString description;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	EAttachmentIcon comboIcon;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	EAttachmentIcon objIcon;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	int price = 0;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
@@ -55,6 +61,12 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 	FString description = "No description given...";
 
 	UPROPERTY(EditAnywhere)
+	EAttachmentIcon comboIcon = EAttachmentIcon::None;
+
+	UPROPERTY(EditAnywhere)
+	EAttachmentIcon objIcon = EAttachmentIcon::None;
+
+	UPROPERTY(EditAnywhere)
 	int price = 100;
 
 	UPROPERTY(EditAnywhere)
@@ -67,6 +79,6 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 	TSubclassOf<APickupableMaster> classToSpawn;
 
 public:
-	FBuyableInfoStruct GetInfo() const { return {name, description, price, attachmentMesh, attachmentMats, editScale, defaultScale, classToSpawn }; }
+	FBuyableInfoStruct GetInfo() const { return {name, description, comboIcon, objIcon, price, attachmentMesh, attachmentMats, editScale, defaultScale, classToSpawn }; }
 	TSubclassOf<APickupableMaster> GetClassToSpawn() const { return classToSpawn; }
 };

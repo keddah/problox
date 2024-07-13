@@ -253,7 +253,7 @@ public:
 
 	// To be used whenever the core goes out of bounds or when the core changes levels
 	UFUNCTION(BlueprintCallable)
-	void Teleport(const FRotator& rot, const FVector& pos);
+	void Teleport(const FRotator& rot, const FVector& pos, bool respawning = false);
 
 	void EndTurn();
 	

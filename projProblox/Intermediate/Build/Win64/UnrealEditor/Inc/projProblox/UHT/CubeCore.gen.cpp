@@ -205,9 +205,10 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	{
 		P_GET_STRUCT_REF(FRotator,Z_Param_Out_rot);
 		P_GET_STRUCT_REF(FVector,Z_Param_Out_pos);
+		P_GET_UBOOL(Z_Param_respawning);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->Teleport(Z_Param_Out_rot,Z_Param_Out_pos);
+		P_THIS->Teleport(Z_Param_Out_rot,Z_Param_Out_pos,Z_Param_respawning);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execBroadcastNewCells)
@@ -747,6 +748,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{
 			FRotator rot;
 			FVector pos;
+			bool respawning;
 		};
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_rot_MetaData[];
@@ -756,6 +758,8 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_pos_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_pos;
+		static void NewProp_respawning_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_respawning;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -774,15 +778,22 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos = { "pos", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventTeleport_Parms, pos), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos_MetaData), Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos_MetaData) };
+	void Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_respawning_SetBit(void* Obj)
+	{
+		((CubeCore_eventTeleport_Parms*)Obj)->respawning = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_respawning = { "respawning", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CubeCore_eventTeleport_Parms), &Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_respawning_SetBit, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_Teleport_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_rot,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_pos,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_Teleport_Statics::NewProp_respawning,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_Teleport_Statics::Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// To be used whenever the core goes out of bounds or when the core changes levels\n" },
 #endif
+		{ "CPP_Default_respawning", "false" },
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "To be used whenever the core goes out of bounds or when the core changes levels" },
@@ -895,7 +906,7 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		{ &Z_Construct_UFunction_ACubeCore_Start, "Start" }, // 761297033
 		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 3000747638
 		{ &Z_Construct_UFunction_ACubeCore_StartStoryGame, "StartStoryGame" }, // 995764688
-		{ &Z_Construct_UFunction_ACubeCore_Teleport, "Teleport" }, // 1560364239
+		{ &Z_Construct_UFunction_ACubeCore_Teleport, "Teleport" }, // 472314634
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -1114,9 +1125,9 @@ void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 4269812668U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 916272725U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_3157703064(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_1649294271(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

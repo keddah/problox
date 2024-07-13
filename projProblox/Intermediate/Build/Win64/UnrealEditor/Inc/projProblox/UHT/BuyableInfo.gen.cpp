@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeBuyableInfo() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APickupableMaster_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_UBuyableInfo();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_UBuyableInfo_NoRegister();
+	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_EAttachmentIcon();
 	PROJPROBLOX_API UScriptStruct* Z_Construct_UScriptStruct_FBuyableInfoStruct();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
@@ -47,6 +48,16 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_description_MetaData[];
 #endif
 		static const UECodeGen_Private::FStrPropertyParams NewProp_description;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_comboIcon_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_comboIcon_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_comboIcon;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_objIcon_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_objIcon_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_objIcon;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_price_MetaData[];
 #endif
@@ -100,6 +111,22 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 	};
 #endif
 	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description = { "description", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, description), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description_MetaData) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_comboIcon_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_comboIcon_MetaData[] = {
+		{ "Category", "BuyableInfoStruct" },
+		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_comboIcon = { "comboIcon", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, comboIcon), Z_Construct_UEnum_projProblox_EAttachmentIcon, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_comboIcon_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_comboIcon_MetaData) }; // 1774899540
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_objIcon_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_objIcon_MetaData[] = {
+		{ "Category", "BuyableInfoStruct" },
+		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_objIcon = { "objIcon", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, objIcon), Z_Construct_UEnum_projProblox_EAttachmentIcon, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_objIcon_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_objIcon_MetaData) }; // 1774899540
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData[] = {
 		{ "Category", "BuyableInfoStruct" },
@@ -150,6 +177,10 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_name,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_description,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_comboIcon_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_comboIcon,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_objIcon_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_objIcon,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMats_Inner,
@@ -211,6 +242,16 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_description_MetaData[];
 #endif
 		static const UECodeGen_Private::FStrPropertyParams NewProp_description;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_comboIcon_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_comboIcon_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_comboIcon;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_objIcon_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_objIcon_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_objIcon;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_price_MetaData[];
 #endif
@@ -273,6 +314,22 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 	};
 #endif
 	const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_UBuyableInfo_Statics::NewProp_description = { "description", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBuyableInfo, description), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UBuyableInfo_Statics::NewProp_description_MetaData), Z_Construct_UClass_UBuyableInfo_Statics::NewProp_description_MetaData) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UBuyableInfo_Statics::NewProp_comboIcon_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBuyableInfo_Statics::NewProp_comboIcon_MetaData[] = {
+		{ "Category", "BuyableInfo" },
+		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UBuyableInfo_Statics::NewProp_comboIcon = { "comboIcon", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBuyableInfo, comboIcon), Z_Construct_UEnum_projProblox_EAttachmentIcon, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UBuyableInfo_Statics::NewProp_comboIcon_MetaData), Z_Construct_UClass_UBuyableInfo_Statics::NewProp_comboIcon_MetaData) }; // 1774899540
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UBuyableInfo_Statics::NewProp_objIcon_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBuyableInfo_Statics::NewProp_objIcon_MetaData[] = {
+		{ "Category", "BuyableInfo" },
+		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UBuyableInfo_Statics::NewProp_objIcon = { "objIcon", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBuyableInfo, objIcon), Z_Construct_UEnum_projProblox_EAttachmentIcon, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UBuyableInfo_Statics::NewProp_objIcon_MetaData), Z_Construct_UClass_UBuyableInfo_Statics::NewProp_objIcon_MetaData) }; // 1774899540
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price_MetaData[] = {
 		{ "Category", "BuyableInfo" },
@@ -311,6 +368,10 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_attachmentMats_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_attachmentMats,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_description,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_comboIcon_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_comboIcon,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_objIcon_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_objIcon,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_editScale,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBuyableInfo_Statics::NewProp_defaultScale,
@@ -355,12 +416,12 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo[] = {
-		{ FBuyableInfoStruct::StaticStruct, Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewStructOps, TEXT("BuyableInfoStruct"), &Z_Registration_Info_UScriptStruct_BuyableInfoStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBuyableInfoStruct), 3375814630U) },
+		{ FBuyableInfoStruct::StaticStruct, Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewStructOps, TEXT("BuyableInfoStruct"), &Z_Registration_Info_UScriptStruct_BuyableInfoStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBuyableInfoStruct), 2110809626U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UBuyableInfo, UBuyableInfo::StaticClass, TEXT("UBuyableInfo"), &Z_Registration_Info_UClass_UBuyableInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuyableInfo), 3962904726U) },
+		{ Z_Construct_UClass_UBuyableInfo, UBuyableInfo::StaticClass, TEXT("UBuyableInfo"), &Z_Registration_Info_UClass_UBuyableInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuyableInfo), 1031825858U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_1823945952(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_3348547575(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo),
 		nullptr, 0);

@@ -344,9 +344,6 @@ void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTim
 	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
 	AActor* hitActor = hit.GetActor();
 	
-	// Don't allow this to run if it's already being hovered over
-	if(hitActor == hoveredBuyable) return;
-
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
 	{
 		const FBuyableInfoStruct info = buyable->GetInfo();
@@ -359,7 +356,8 @@ void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTim
 		hoveredBuyable->ShowDescription();
 	}
 
-	// Hide when not hovering over the object
+	
+	// If the cast fails / when not hovering over the object.... 
 	else if(hoveredBuyable) hoveredBuyable->HideDescription();
 }
 
