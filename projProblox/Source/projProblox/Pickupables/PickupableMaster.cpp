@@ -257,6 +257,7 @@ void APickupableMaster::Detach(const bool push)
 		SetShowMesh(true);
 
 		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
+		mesh->AddTorqueInRadians(FMath::VRand() * launchForce, "", true);
 	}
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
