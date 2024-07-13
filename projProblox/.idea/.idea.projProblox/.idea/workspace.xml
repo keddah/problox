@@ -11,8 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/UI/Videos/Bedrooom/bedroomPan.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Videos/Kitchen/kitchenPan.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_LevelSelect.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_LevelSelect.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
     </list>
@@ -61,7 +60,7 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="cidr-memory-view://16" root0="SKIP_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://18" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Hoverer.gen.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plugins/Developer/RiderLink/Source/RD/thirdparty/optional/tl/optional.hpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plugins/Developer/RiderLink/Source/RD/thirdparty/spdlog/include/spdlog/stopwatch.h" root0="SKIP_HIGHLIGHTING" />
