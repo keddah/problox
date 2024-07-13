@@ -35,6 +35,12 @@ AHoverer::AHoverer()
 
 void AHoverer::Ability(float deltaTime)
 {
+	if(!mesh)
+	{
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		return;
+	}
+	
 	if(!active) return;
 
 	const FRotator rot = GetActorRotation();
@@ -42,7 +48,7 @@ void AHoverer::Ability(float deltaTime)
 	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is 45 degrees, only need one distance (the minFloorDistance))
 	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));
 
-	TArray points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };
+	const TArray points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };
 
 	for(const auto& point : points)
 	{

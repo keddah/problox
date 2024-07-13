@@ -16,19 +16,16 @@
 #include "Pickupables/Cores/Connectors/CubeConnector.h"
 
 
-ALevelManager::ALevelManager()
-{
-	PrimaryActorTick.bCanEverTick = false;
-}
-
 void ALevelManager::BeginPlay()
 {
 	Super::BeginPlay();
 
 	wrld = GetWorld();
 	instance = Cast<UCustomGameInstance>(wrld->GetGameInstance());
+
 	player = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(wrld, APlayerCharacter::StaticClass()));
 	if(!player) Print("Level Manager couldn't get the player....", 8)
+
 	FindCore();
 
 	// Get the level instances that are a part of the main world
@@ -72,7 +69,7 @@ void ALevelManager::BeginPlay()
 	else Print("Not enough levels..?", 4)
 }
 
-bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bool initialLoad)
+bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 {
 	if(!levels.IsValidIndex(lvlIndex))
 	{
@@ -96,9 +93,16 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint, const bo
 
 	if(!wrld)
 	{
-		Print("World was invalid when trying to load a levels...", 8)
+		Print("World was invalid when trying to load a level...", 8)
 		return false;
 	}
+
+	if(!instance)
+	{
+		Print("The game instace was invalid when trying to load a level...", 8)
+		return false;
+	}
+	
 
 	currentLevel = lvlIndex;
 	if(!levels.IsValidIndex(currentLevel)) return false;
@@ -170,6 +174,8 @@ void ALevelManager::FindCore()
 
 void ALevelManager::FindSpawns()
 {
+	if(!wrld) return;
+	
 	// Only do this once. (will be called everytime a level loads)
 	if(!(lvl1Screenshots.IsEmpty() && lvl2Screenshots.IsEmpty() && lvl3Screenshots.IsEmpty())) return;
 
@@ -193,28 +199,28 @@ void ALevelManager::FindSpawns()
 			// Add the points to their respective arrays
 			switch (point->GetLevelEnum())
 			{
-			case ELevel::BuildArea:
-				point->SetLevelIndex(0);
-				lvl0Spawn = point;
-				break;
-					
-			case ELevel::Bedroom:
-				point->SetLevelIndex(1);
-				lvl1Spawns.Add(point);
-				lvl1Screenshots.Add(point->CaptureScreenshot());
-				break;
-					
-			case ELevel::Kitchen:
-				point->SetLevelIndex(2);
-				lvl2Spawns.Add(point);
-				lvl2Screenshots.Add(point->CaptureScreenshot());
-				break;
-					
-			case ELevel::Bathroom:
-				point->SetLevelIndex(3);
-				lvl3Spawns.Add(point);
-				lvl3Screenshots.Add(point->CaptureScreenshot());
-				break;
+				case ELevel::BuildArea:
+					point->SetLevelIndex(0);
+					lvl0Spawn = point;
+					break;
+						
+				case ELevel::Bedroom:
+					point->SetLevelIndex(1);
+					lvl1Spawns.Add(point);
+					lvl1Screenshots.Add(point->CaptureScreenshot());
+					break;
+						
+				case ELevel::Kitchen:
+					point->SetLevelIndex(2);
+					lvl2Spawns.Add(point);
+					lvl2Screenshots.Add(point->CaptureScreenshot());
+					break;
+						
+				case ELevel::Bathroom:
+					point->SetLevelIndex(3);
+					lvl3Spawns.Add(point);
+					lvl3Screenshots.Add(point->CaptureScreenshot());
+					break;
 			}
 		}
 	
@@ -224,7 +230,7 @@ void ALevelManager::FindSpawns()
 		// Initialise the cell spawns (spawns all the cells from every level then makes them dormant)
 		InitSpawners();
 	
-		// In blueprint... load the build area when this is broadcast so that it can load the build level (hiding the rest of the levels)
+		// In blueprint... load the build area when this is broadcast so that the rest of the levels are hidden (needs to be done after the screenshots are taken).
 		onScreenshotsTaken.Broadcast();
 
 		// Remove the delegate so that it doesn't happen again
@@ -238,6 +244,12 @@ void ALevelManager::FindSpawns()
 
 void ALevelManager::InitSpawners()
 {
+	if(!wrld)
+	{
+		Print("World was invalid when initialising cell spawners...", 8)
+		return;
+	}
+	
 	TArray<AActor*> actors;
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), actors);
 
@@ -259,13 +271,13 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	if (!player)
 	{
 		Print("Couldn't set spawn because the player was invalid...", 5)
-			return;
+		return;
 	}
 
 	if (!core)
 	{
 		Print("Couldn't set spawn because the core was invalid...", 5)
-			return;
+		return;
 	}
 
 	core->RemoveVelocity();
@@ -279,7 +291,6 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		break;
 
 	case 1:
-		if (lvl1Spawns.IsEmpty()) break;
 		if (lvl1Spawns.IsValidIndex(spawnPoint))
 		{
 			core->Teleport(lvl1Spawns[spawnPoint]->GetRot(), lvl1Spawns[spawnPoint]->GetActorLocation());
@@ -288,7 +299,6 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		break;
 
 	case 2:
-		if (lvl2Spawns.IsEmpty()) break;
 		if (lvl2Spawns.IsValidIndex(spawnPoint))
 		{
 			core->Teleport(lvl2Spawns[spawnPoint]->GetRot(), lvl2Spawns[spawnPoint]->GetActorLocation());
@@ -297,7 +307,6 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 		break;
 
 	case 3:
-		if (lvl3Spawns.IsEmpty()) break;
 		if (lvl3Spawns.IsValidIndex(spawnPoint))
 		{
 			core->Teleport(lvl3Spawns[spawnPoint]->GetRot(), lvl3Spawns[spawnPoint]->GetActorLocation());

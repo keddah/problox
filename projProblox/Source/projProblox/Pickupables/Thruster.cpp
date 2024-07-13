@@ -27,6 +27,8 @@ AThruster::AThruster()
 void AThruster::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Otherwise the number is too big..
 	thrusterComp->ThrustStrength = power * 1000;
 }
 

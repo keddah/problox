@@ -35,7 +35,12 @@ void AMagnet::BeginPlay()
 
 void AMagnet::Ability(const float deltaTime)
 {
-	Super::Ability(deltaTime);
+	if(!mesh)
+	{
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		return;
+	}
+
 	if(!active) return;
 
 	const FVector thisPos = GetActorLocation();

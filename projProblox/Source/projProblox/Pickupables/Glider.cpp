@@ -23,7 +23,11 @@ AGlider::AGlider()
 
 void AGlider::Ability(const float deltaTime)
 {
-	// if(!active) return;
+	if(!mesh)
+	{
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		return;
+	}
 
 	// Only activate when falling fast enough
 	if(mesh->GetPhysicsLinearVelocity().Z > -activationSpeed) return;

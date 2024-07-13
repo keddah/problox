@@ -30,8 +30,6 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 	
-	UWorld* wrld;
-
 	UPROPERTY(EditDefaultsOnly)
     UStaticMeshComponent* body;
 
@@ -90,8 +88,10 @@ UCLASS()
 class PROJPROBLOX_API AHoverCell : public ACell
 {
 	GENERATED_BODY()
-
+	virtual void BeginPlay() override { wrld = GetWorld(); Super::BeginPlay(); }
 	virtual void Tick(float DeltaSeconds) override;
+
+	UWorld* wrld;
 };
 
 
@@ -101,9 +101,13 @@ class PROJPROBLOX_API AStickyCell : public ACell
 {
 	GENERATED_BODY()
 
+	virtual void BeginPlay() override { wrld = GetWorld(); Super::BeginPlay(); }
+	
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The amount of force required to make the Thing unstick."))
 	float stickThreshold = 1;
 
+	UWorld* wrld;
+	
 	bool stuck;
 	FVector previousVelocity;
 	

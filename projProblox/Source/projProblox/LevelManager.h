@@ -103,7 +103,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	ALevelManager();
+	ALevelManager() { PrimaryActorTick.bCanEverTick = false; }
 
 protected:
 	virtual void BeginPlay() override;
@@ -140,7 +140,7 @@ public:
 	/////////////////////////// FUNCTIONS ///////////////////////////
 	// Returns whether the loaded level. Initial load is only for the build level (when it's first loaded up in the level manager blueprint) 
 	UFUNCTION(BlueprintCallable)
-	bool LoadLevel(int lvlIndex, int spawnPoint = 0, const bool initialLoad = false);
+	bool LoadLevel(int lvlIndex, int spawnPoint = 0);
 	
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Hides all the levels apart from the current level."))
 	void UnloadUnusedLevels();

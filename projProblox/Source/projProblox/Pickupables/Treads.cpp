@@ -41,6 +41,11 @@ float ATreads::GetAttachOffset(const APickupableMaster& attachee)
 
 void ATreads::Ability(const float deltaTime)
 {
+	if(!mesh)
+	{
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		return;
+	}
 	const FVector forward = GetActorForwardVector();
 	
 	// When the treads are active, make the tread material pan.

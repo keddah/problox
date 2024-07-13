@@ -33,22 +33,14 @@ ACellSpawner::ACellSpawner()
 	params.bNoFail = true;
 }
 
-void ACellSpawner::SetCellsDormant(const bool dormant)
-{
-	if(spawnedCells.IsEmpty()) return;
-
-	for(auto& cell : spawnedCells) cell->SetDormant(dormant);
-}
-
 void ACellSpawner::WakeSleepCollectedCells(bool dormant)
 {
-	if(spawnedCells.IsEmpty()) return;
-	
 	for(const auto& cell : spawnedCells)
 	{
+		if(!cell) continue;
+		
 		// Only if the cell is safe (SetCellsDormant handles unsafe cells) 
 		if(!cell->IsSafe()) continue;
-
 		cell->SetDormant(dormant);
 	}
 }
@@ -64,7 +56,6 @@ void ACellSpawner::BeginPlay()
 void ACellSpawner::Init()
 {
 	wrld = GetWorld();
-
 	if (!wrld)
 	{
 		Print("World was invalid at begin play ~ spawner", 5);
@@ -78,6 +69,7 @@ void ACellSpawner::Overlap(AActor* otherActor)
 {
 	// If the trigger's relative location is unchanged, don't do anything..
 	if(!triggerable) return;
+	if(!otherActor) return;
 	
 	// Only do something if the core collides (not connectors)....
 	if(otherActor->IsA<ACubeConnector>()) return;
@@ -127,10 +119,10 @@ void ACellSpawner::PlaySound() const
 ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 {
 	TSubclassOf<ACell> subClass;
-	switch (thingType)
+	switch (cellType)
 	{
 		case ECellType::Normal:
-			subClass = normalThing;
+			subClass = normalCell;
 			break;
 		
 		case ECellType::Bouncy:
@@ -138,19 +130,19 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 			break;
 		
 		case ECellType::Slippery:
-			subClass = slipperyThing;
+			subClass = slipperyCell;
 			break;
 		
 		case ECellType::Hover:
-			subClass = hoverThing;
+			subClass = hoverCell;
 			break;
 		
 		case ECellType::Sticky:
-			subClass = stickyThing;
+			subClass = stickyCell;
 			break;
 
 		default:
-			subClass = normalThing;
+			subClass = normalCell;
 	}
 	
 	return wrld->SpawnActor<ACell>(subClass, spawn, rot, params);

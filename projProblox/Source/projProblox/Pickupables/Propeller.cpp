@@ -34,6 +34,12 @@ APropeller::APropeller()
 
 void APropeller::Ability(const float deltaTime)
 {
+	if(!mesh)
+	{
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		return;
+	}
+	
 	if(soundPlayer) soundPlayer->SetFloatParam("roll", mesh->GetRelativeRotation().Yaw);
 	if(!active) return;
 

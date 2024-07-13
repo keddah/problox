@@ -54,7 +54,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void PlayAbility() { PlaySound(sounds.Num() - 1); }
 	UFUNCTION(BlueprintCallable)
-	void StopAbility() { if(player->Sound == sounds.Last()) StopSound(); }
+	void StopAbility()
+	{
+		// If the ability sound is currently the sound of the player, stop.
+		if(player->Sound == sounds.Last()) StopSound();
+	}
 
 	// These to be called when setting parameters in meta sounds
 	void SetFloatParam(const FName& key, const float value) const { player->SetFloatParameter(key, value); }

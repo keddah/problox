@@ -60,22 +60,22 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 
 	/////////// CELL CLASSES ///////////
 	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<ACell> normalThing;
+	TSubclassOf<ACell> normalCell;
 	
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ACell> bouncyThing;
 
 	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<ACell> slipperyThing;
+	TSubclassOf<ACell> slipperyCell;
 	
 	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<ACell> hoverThing;
+	TSubclassOf<ACell> hoverCell;
 	
 	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<ACell> stickyThing;
+	TSubclassOf<ACell> stickyCell;
 	
 	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
-	ECellType thingType = ECellType::Normal;
+	ECellType cellType = ECellType::Normal;
 
 	
 	/////////// EDITABLE PROPERTIES ///////////
@@ -138,7 +138,7 @@ public:
 	ACellSpawner();
 
 	// Hides and deactivates the physics for all its spawned cells
-	void SetCellsDormant(bool dormant);
+	void SetCellsDormant(bool dormant) { for(auto& cell : spawnedCells) if(cell) cell->SetDormant(dormant); }
 
 	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
 	void WakeSleepCollectedCells(bool dormant);

@@ -33,7 +33,6 @@ enum class EAttachmentIcon : uint8;
 	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execGhostSnapRotate); \
 	DECLARE_FUNCTION(execRotateHori); \
-	DECLARE_FUNCTION(execDestroySelf); \
 	DECLARE_FUNCTION(execShowOutline); \
 	DECLARE_FUNCTION(execResetOutline);
 

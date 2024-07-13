@@ -36,11 +36,8 @@ void ACell::BeginPlay()
 {
 	Super::BeginPlay();
 
-	wrld = GetWorld();
-
-	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
+	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
 	if(!core) Print("Couldnt get core ~ cell", 5)
-	// if(core) core->onRangeExceeded.AddDynamic(this, &ACell::DeactivateHoming);
 }
 
 void ACell::Tick(float DeltaSeconds)
@@ -54,8 +51,7 @@ void ACell::Tick(float DeltaSeconds)
 
 void ACell::GoHome() const
 {
-	if(!core) return;
-	if(!body) return;
+	if(!core || !body) return;
 	if(!body->IsSimulatingPhysics()) return;
 	if(!isHoming) return;
 

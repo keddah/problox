@@ -37,21 +37,12 @@ void AGrappler::SetAbilityActive(const bool value)
 	Super::SetAbilityActive(value);
 	if(IsValid(hook) && !active) hook->Destroy();
 	if(active) soundPlayer->PlayAbility();
-}
-
-void AGrappler::Ability(const float deltaTime)
-{
+	
 	grappleLine->SetHiddenInGame(!IsValid(grappleLine->GetAttachedActor()));
-
 	if(!active) return;
-
-	UWorld* world = GetWorld();
-	if(!world) return;
+	if(!wrld) return;
 	
 	// Spawn and set the hook
-	if(grappleSpawn && grappleHeadClass) hook = world->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	if(grappleSpawn && grappleHeadClass) hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
-
-	// Deactivate so that this doesn't happen repeatedly
-	active = false;
 }

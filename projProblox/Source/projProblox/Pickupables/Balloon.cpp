@@ -62,15 +62,18 @@ void ABalloon::BeginPlay()
 
 void ABalloon::Ability(float deltaTime)
 {
+	if(!mesh)
+	{
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		return;
+	}
+	
 	if(!parentCore || !active) return;
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 
 	// (Since the pivot for the balloon mesh is the bottom)
 	constexpr float leeway = 170;
 	const bool atLimit = (GetActorLocation().Z + leeway) - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit();
-	// PrintFloat((GetActorLocation().Z + leeway) - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z, .2)
-	// PrintFloat(constraint->ConstraintInstance.GetLinearLimit(), .2)
-	// Print("", .2)
 	
 	// The speed the balloon should go upwards when it is first activated (until the limit is reached)
 	const float initSpeed = floatiness * 2;

@@ -32,6 +32,18 @@ ABounceSpring::ABounceSpring()
 
 void ABounceSpring::Ability(float deltaTime)
 {
+	if(!mesh)
+	{
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		return;
+	}
+
+	if(!parentCore)
+	{
+		Print("The parent core was invalid..: " + GetName().ToUpper(), 4)
+		return;
+	}
+	
 	if(!isAttached) return;
 	if(!active) return;
 	

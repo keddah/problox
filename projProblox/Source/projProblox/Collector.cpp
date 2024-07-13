@@ -58,7 +58,8 @@ void ACollector::BeginPlay()
 void ACollector::CalculateCellCount()
 {
 	const UWorld* wrld = GetWorld();
-
+	if(!wrld) return;
+	
 	TArray<AActor*> countArr;
 
 	// Only count the cells that aren't captured

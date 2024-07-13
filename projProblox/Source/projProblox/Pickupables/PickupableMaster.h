@@ -65,9 +65,6 @@ class PROJPROBLOX_API APickupableMaster : public AActor
 	UFUNCTION()
 	void ShowOutline() { SetHideOutlineMesh(false); }
 
-	UFUNCTION()
-	void DestroySelf() { if(!isAttached) Destroy(); }
-	
 public:	
 	// Sets default values for this actor's properties
 	APickupableMaster();
@@ -107,9 +104,6 @@ protected:
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "The direction to place the object from the relative rotation of the 'objMesh'."))
 	FVector placeDir {0, 0,-1};
 
-	UPROPERTY(EditDefaultsOnly, meta = (Delta = 1))
-	float placeRange = 180;
-
 	
 	/////////////// Rotations ///////////////
 	FRotator defaultRot{};
@@ -134,10 +128,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, meta = (Delta = .25f, ToolTip = "The rotational offset for when the core attaches itself to the object."))
 	FRotator rotOffset;
 
-	
 	UPROPERTY(BlueprintReadOnly)
 	FName attachedSocket;
-	
+
 	bool isAttached;
 
 	
@@ -146,6 +139,7 @@ protected:
 	bool active;
 
 	bool needsTimer = true;
+
 	
 	/////////////// Other ///////////////
 	UMaterialInstance* outlineMat;
@@ -157,13 +151,7 @@ protected:
 	EAttachmentIcon uiIcon = EAttachmentIcon::None;
 
 
-	/////////////// Undo/Redo ///////////////
-	// The socket that this has been removed from
-	FName removedSocket;
-
-	
 ///////////////////////////// Functions /////////////////////////////
-
 	/////////////// Selection / Placement ///////////////
 	FName NearestSocket(const ACubeCore* core, const FVector& hitPos) const;
 	
@@ -269,6 +257,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsTimerRequired() const { return needsTimer; }
 
+	ECoreSockets GetFavouredSocket() const { return favouredSlot; }
+
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	const EAttachmentIcon& GetUIIcon() const { return uiIcon; }
 	
@@ -278,8 +268,6 @@ public:
 		if(!mesh->IsSimulatingPhysics()) return 0;
 		return mesh->GetMass();
 	}
-
-	ECoreSockets GetFavouredSocket() const { return favouredSlot; }
 
 
 	/////////////// Other ///////////////

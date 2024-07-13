@@ -77,10 +77,6 @@ void APickupableMaster::BeginPlay()
 	
 	if(soundPlayer && mesh) soundPlayer->Attach(mesh);
 
-	if(placeDir.X != 0) placeRange *= mesh->GetRelativeScale3D().X;
-	else if(placeDir.Y != 0) placeRange *= mesh->GetRelativeScale3D().Y;
-	else if(placeDir.Z != 0) placeRange *= mesh->GetRelativeScale3D().Z;
-	
 	wrld = GetWorld();
 	
 	TArray<AActor*> coreActors;
@@ -424,9 +420,6 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hit
 		
 		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hitPos);
 
-		// Don't allow the attachment if the socket is out of range.
-		if(distance > placeRange) continue;
-		
 		if(distance < shortestDistance)
 		{
 			shortestDistance = distance;

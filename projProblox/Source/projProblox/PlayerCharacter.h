@@ -83,9 +83,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	bool toggleSelection = false;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Controls")
-	bool holding;
-	
 	UPROPERTY(EditDefaultsOnly, Category = "Controls",  BlueprintReadOnly, meta = (ToolTip = "The max speed the core is allowed to be going when trying to adjust the core's rotation.", Delta = .05f))
 	float adjustSpeedThreshold = 10;
 	

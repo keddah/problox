@@ -33,9 +33,10 @@ void AHoverCell::Tick(float DeltaSeconds)
 {
 	if(!body) return;
 	if(!body->IsSimulatingPhysics()) return;
+	if(DeltaSeconds == NAN) return;
 
 	const FVector velocity = body->GetPhysicsLinearVelocity();
-	body->SetPhysicsLinearVelocity({ velocity.X, velocity.Y, DeltaSeconds * -wrld->GetGravityZ() });//8.2f});
+	body->SetPhysicsLinearVelocity({ velocity.X, velocity.Y, DeltaSeconds * -wrld->GetGravityZ() });
 	
 	Super::Tick(DeltaSeconds);
 }
@@ -73,6 +74,6 @@ void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimiti
 	
 	stuck = true;
 
-	// GEngine check needed (sometimes crashes withou)
+	// GEngine check needed (sometimes crashes without)
 	if(GEngine) body->SetMassOverrideInKg("", 100000);
 }
