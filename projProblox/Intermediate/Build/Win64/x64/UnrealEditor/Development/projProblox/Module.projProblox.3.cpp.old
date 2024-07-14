@@ -3,6 +3,7 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/WedgeSocketInfo.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/AudioManager.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Cells/Cell.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Cells/CellSpawner.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Cells/CellVariations.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Collector.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/CustomGameInstance.cpp"
@@ -32,5 +33,4 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/Pickupables/Treads.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/PlayerCharacter.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/projProblox.cpp"
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/SpawnPoint.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Source/projProblox/SpawnSaves.cpp"

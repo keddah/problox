@@ -89,7 +89,7 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	ppSettings.bOverride_ColorGammaShadows = true;
 	ppSettings.ColorGammaShadows = FVector4{2,2,2,1};
 	ppSettings.bOverride_IndirectLightingIntensity = true;
-	ppSettings.IndirectLightingIntensity = level == ELevel::Bathroom? 400 : 160;
+	ppSettings.IndirectLightingIntensity = level == ELevel::Bathroom? 1000 : 160;
 	
 	// // Bloom settings
 	// ppSettings.bOverride_BloomIntensity = true;

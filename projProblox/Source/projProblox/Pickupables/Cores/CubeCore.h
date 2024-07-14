@@ -53,7 +53,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	// The object that is attached to this cube and selected...
 	APickupableMaster* selectedObj;
 
-	void TimedObjectActivation(TArray<int> delays, TArray<int> durations, float _longestTime);
+	void TimedObjectActivation(const TArray<int>& delays, const TArray<int>& durations, float _longestTime);
 
 
 	/////////////// Undo/Redo ///////////////

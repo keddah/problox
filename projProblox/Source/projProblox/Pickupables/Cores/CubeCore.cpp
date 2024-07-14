@@ -319,7 +319,7 @@ void ACubeCore::ToggleGravity() const
 	for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(!selected);
 }
 
-void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations, const float _longestTime)
+void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
 {
 	 TArray<APickupableMaster*> objs = GetCloseAttachments();
 
@@ -331,7 +331,9 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 		return;
 	}
 
-	longestDuration = _longestTime;
+	// If the longest time is 0 (the player set the delay and duration to 0)...
+	// Set the longest time to .1 (that's the longest duration when setting both values to 0).
+	longestDuration = _longestTime == 0? .1f : _longestTime;
 	
 	for(int i = 0; i < objs.Num(); i++)
 	{
@@ -357,6 +359,7 @@ void ACubeCore::TimedObjectActivation(TArray<int> delays, TArray<int> durations,
 		wrld->GetTimerManager().SetTimer(deactivationHandle, deactivateDelegate, delayTime + durationTime, false);
 	}
 
+	// Longest duration can't be 0 otherwise the timer won't start.
 	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
-	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, _longestTime, false);
+	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
 }

@@ -45,6 +45,7 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
+			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
@@ -74,9 +75,8 @@
 			"Treads.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"CellSpawner.cpp.obj"
+			"SpawnPoint.cpp.obj"
 		]
 	}
 }
