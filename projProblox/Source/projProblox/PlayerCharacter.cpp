@@ -395,7 +395,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 			// Deselect the selected object
 			if(selectedObj) selectedObj->Deselect();
 			instance->LoseMoney(buyInfo.price);
-			Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
+			// Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
 
 			buyable->UnlockAttachment();
 			return;

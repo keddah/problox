@@ -75,8 +75,8 @@
 			"Treads.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"SpawnSaves.cpp.obj",
-			"SpawnPoint.cpp.obj"
+			"SpawnPoint.cpp.obj",
+			"SpawnSaves.cpp.obj"
 		]
 	}
 }

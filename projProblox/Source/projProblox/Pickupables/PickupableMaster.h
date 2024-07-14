@@ -271,7 +271,7 @@ public:
 
 
 	/////////////// Other ///////////////
-	void SetCore(ACubeCore* _core) { parentCore = _core; Print("setting core", 4)}
+	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	
 	virtual void SetShowMesh(const bool show) const { mesh->SetHiddenInGame(!show); }
 	

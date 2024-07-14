@@ -64,12 +64,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "47DF45062EDD7CF9EC6894BA5256095F473B88E4",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Ghost"
-			]
-		},
-		{
 			"ShaderMapHash": "9E5FD4068601D6BF67C8D455C6D11366F114CD2E",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Brick_Cut_Stone"
@@ -157,6 +151,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "9B183B1488EB851CE48CE8E0C22A36827D79FD20",
+			"Assets": [
+				"/Game/Materials/Pickupables/M_Treads"
+			]
+		},
+		{
 			"ShaderMapHash": "F41020167194BC7D7FF4809CE6A45F62FFA78E08",
 			"Assets": [
 				"/Engine/VREditor/TransformGizmo/Main"
@@ -166,6 +166,12 @@
 			"ShaderMapHash": "4DF74117DE68B2E6CDD88E0BBC78CEC4AD26C858",
 			"Assets": [
 				"/Game/Levels/StoryMode/DesertPrototype"
+			]
+		},
+		{
+			"ShaderMapHash": "B46B49189027345FCB75E7B74C5F7F0332DF4401",
+			"Assets": [
+				"/Game/Materials/Pickupables/Balloon/M_String"
 			]
 		},
 		{
@@ -330,12 +336,6 @@
 			"ShaderMapHash": "C77FDC2D579FFBF0C859ACE17EF1EC3FF5113B84",
 			"Assets": [
 				"/Game/Materials/Pickupables/Hover/M_HovererOuter"
-			]
-		},
-		{
-			"ShaderMapHash": "9D907B2FD64C539A20918C9C4663490BB53A796A",
-			"Assets": [
-				"/Game/Materials/Pickupables/Balloon/M_String"
 			]
 		},
 		{
@@ -905,15 +905,17 @@
 			]
 		},
 		{
-			"ShaderMapHash": "3409CF8DCF80C7434067D4D8D7A97BC241D8F505",
-			"Assets": [
-				"/Game/Materials/Pickupables/Glider/M_Glider1"
-			]
-		},
-		{
 			"ShaderMapHash": "647167904D2A6DEB1973FC11DCAC035A462AB3C1",
 			"Assets": [
 				"/Game/MSPresets/M_MS_Surface_Material/M_MS_Surface_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "4A7E6D9083BC6A083AC6FD1A145A45C221204F6D",
+			"Assets": [
+				"/Game/UI/Videos/Bathroom/M_BathroomVid",
+				"/Game/UI/Videos/Bedrooom/M_BedroomVid",
+				"/Game/UI/Videos/Kitchen/M_KitchenVid"
 			]
 		},
 		{
@@ -986,6 +988,12 @@
 			"ShaderMapHash": "8A441B9D69E63AE58EA848974C6E44F2829EA067",
 			"Assets": [
 				"/Game/Workshop_LowPoly/Materials/M_MasterMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "67C49F9DE08458AB3D21C18A5F9DAA664F85F3A8",
+			"Assets": [
+				"/Game/Materials/Pickupables/Glider/M_Glider2"
 			]
 		},
 		{
@@ -1171,6 +1179,12 @@
 			"ShaderMapHash": "4273FEB3146A5A98E70108492813B113D4768481",
 			"Assets": [
 				"/Game/Materials/Pickupables/Propeller/M_Propeller"
+			]
+		},
+		{
+			"ShaderMapHash": "66720EB49BA39CCC37EE0654F5D01D893586C909",
+			"Assets": [
+				"/Game/Materials/Pickupables/Glider/M_Glider1"
 			]
 		},
 		{
@@ -1413,6 +1427,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "5C6E4FDC632FFB6D908826EA6C860A3996B07607",
+			"Assets": [
+				"/Game/Materials/Pickupables/M_Ghost"
+			]
+		},
+		{
 			"ShaderMapHash": "EAE573DE2F14FE4B6DED78A5A4B870E86DB9B180",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Wood_Floor_Walnut_Polished"
@@ -1458,12 +1478,6 @@
 			"ShaderMapHash": "6774EBE2C930726FABD59A828379C88D1292AC30",
 			"Assets": [
 				"/Interchange/gltf/M_Transmission"
-			]
-		},
-		{
-			"ShaderMapHash": "56E8D3E3BFB298B1A91CB7513618473D3B1E2166",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Treads"
 			]
 		},
 		{
@@ -1621,12 +1635,6 @@
 			"ShaderMapHash": "9FFB5BFDC45E8D9C44AF60B076220966D7A2A5C8",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Metal_Steel"
-			]
-		},
-		{
-			"ShaderMapHash": "0380D1FD720BA85CAD8F0E83C6275454D4CFA8DE",
-			"Assets": [
-				"/Game/Materials/Pickupables/Glider/M_Glider2"
 			]
 		},
 		{

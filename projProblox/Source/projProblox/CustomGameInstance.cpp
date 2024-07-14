@@ -29,7 +29,7 @@ void UCustomGameInstance::LoadSave()
 	}
 
 	money = moneySave->GetBalance();
-	Print("loaded balance = " + FString::FromInt(money), 5)
+	// Print("loaded balance = " + FString::FromInt(money), 5)
 }
 
 void UCustomGameInstance::SaveMoney() const
