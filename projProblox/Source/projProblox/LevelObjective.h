@@ -14,6 +14,8 @@
 #include "Engine/DataAsset.h"
 #include "LevelObjective.generated.h"
 
+class ACellSpawner;
+
 // When naming the file use the level name then a clue to what the objective is... like 'Bedroom_Bed'. Doing this ensures the level name is correct (The level name needs to match in order
 // for the UI to understand...)
 UCLASS(Blueprintable)
@@ -42,6 +44,8 @@ class PROJPROBLOX_API ULevelObjective : public UDataAsset
 	UPROPERTY(EditAnywhere)
 	bool completed = false;
 
+	const ACellSpawner* owner;
+	
 public:
 	UFUNCTION(BlueprintCallable)
 	const FString& GetLevelName() const { return levelName; }
@@ -54,4 +58,9 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	const FText& GetDescription() const { return description; }
+
+	void SetOwner(const ACellSpawner* _owner) { owner = _owner; }
+	
+	UFUNCTION(BlueprintCallable)
+	const ACellSpawner* GetOwner() const { return owner; }
 };

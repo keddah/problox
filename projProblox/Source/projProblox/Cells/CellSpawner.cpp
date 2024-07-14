@@ -51,6 +51,7 @@ void ACellSpawner::BeginPlay()
 
 	// Can't preview if triggerable 
 	previewed = !triggerable;
+	if(objective) objective->SetOwner(this);
 }
 
 void ACellSpawner::Init()
