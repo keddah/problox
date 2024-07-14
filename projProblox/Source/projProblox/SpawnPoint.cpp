@@ -64,27 +64,32 @@ UTexture* ASpawnPoint::CaptureScreenshot()
     captureComp->ShowFlags.SetAntiAliasing(true);
 
     //////////////////////////// PP ////////////////////////////
-    FPostProcessSettings& ppSettings = captureComp->PostProcessSettings;
+	FPostProcessSettings& ppSettings = captureComp->PostProcessSettings;
 
 	// "Brighter"
 	// // Camera settings
 	ppSettings.bOverride_CameraShutterSpeed = true;
-	ppSettings.CameraShutterSpeed = 1/2;  
+	ppSettings.CameraShutterSpeed = 2;  
 	ppSettings.bOverride_CameraISO = true;
-	ppSettings.CameraISO = 400;  
+	ppSettings.CameraISO = 1400;  
 	
 	// Auto exposure settings
 	ppSettings.bOverride_AutoExposureMethod = true;
-	ppSettings.AutoExposureMethod = EAutoExposureMethod::AEM_Histogram;
+	ppSettings.AutoExposureMethod = AEM_Histogram;
 	ppSettings.bOverride_AutoExposureBias = true;
-	ppSettings.AutoExposureBias = 3; 
+	ppSettings.AutoExposureBias = 10; 
 	ppSettings.bOverride_AutoExposureMaxBrightness = true; 
 	ppSettings.bOverride_AutoExposureMinBrightness = true;
-	ppSettings.AutoExposureMaxBrightness = 100; 
-	ppSettings.AutoExposureMinBrightness = 20; 
+	ppSettings.AutoExposureMaxBrightness = 20; 
+	ppSettings.AutoExposureMinBrightness = 2;
 
+	ppSettings.bOverride_LocalExposureDetailStrength = true;
+	ppSettings.LocalExposureDetailStrength = 2;
+	
+	ppSettings.bOverride_ColorGammaShadows = true;
+	ppSettings.ColorGammaShadows = FVector4{2,2,2,1};
 	ppSettings.bOverride_IndirectLightingIntensity = true;
-	ppSettings.IndirectLightingIntensity = 14;
+	ppSettings.IndirectLightingIntensity = level == ELevel::Bathroom? 400 : 160;
 	
 	// // Bloom settings
 	// ppSettings.bOverride_BloomIntensity = true;
@@ -158,7 +163,7 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	ppSettings.bOverride_WhiteTemp = true;
 	ppSettings.WhiteTemp = 5500;
 	ppSettings.bOverride_FilmToe = true;
-	ppSettings.FilmToe = .1f;
+	ppSettings.FilmToe = .2f;
 	
 	// Bloom
 	ppSettings.bOverride_BloomIntensity = true;
