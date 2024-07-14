@@ -172,7 +172,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 	if(!socketInfo) return {};
 
 	// Return false if there weren't any things to detach
-	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	const TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
 	if(objs.IsEmpty()) return {};
 	
 	for(const auto& obj : objs)
@@ -293,7 +293,7 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 
 	if(!resetVelocity) return;
 
-	TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
+	const TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
 	if(objs.IsEmpty()) return;
 	
 	for(const auto& obj : objs) obj->RemoveVelocity();
@@ -321,7 +321,7 @@ void ACubeCore::ToggleGravity() const
 
 void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
 {
-	 TArray<APickupableMaster*> objs = GetCloseAttachments();
+	 const TArray<APickupableMaster*> objs = GetCloseAttachments();
 
 	if(objs.IsEmpty())
 	{
