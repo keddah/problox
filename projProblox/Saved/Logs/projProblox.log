@@ -17539,3 +17539,39 @@ SObjectWidget for 'WBP_MockDragWidget_C /Engine/Transient.World_28:WBP_Timeline_
 [2024.07.15-09.16.43:429][218]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Timeline/WBP_TimelineBar_Auto4
 [2024.07.15-09.16.43:430][218]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineBar_Auto4134786CF4C9504F3E6CD9D9A8D4FDFD0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/Timeline/WBP_TimelineBar_Auto4.uasset'
 [2024.07.15-09.16.43:430][218]LogFileHelpers: Auto-saving content packages took 0.023
+[2024.07.15-09.20.00:303][788]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.07.15-09.20.00:389][788]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.15-09.20.00:406][788]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset" SILENT=true
+[2024.07.15-09.20.00:452][788]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_DragWidget
+[2024.07.15-09.20.00:453][788]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidgetCFFFBAA140C75EA27910F6BDE76071C4.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset'
+[2024.07.15-09.20.00:455][788]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_TimelineBar" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineBar.uasset" SILENT=true
+[2024.07.15-09.20.00:476][788]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_TimelineBar
+[2024.07.15-09.20.00:477][788]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_TimelineBarE2AF7D274C7A2C36588BB5A7E4CDC217.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_TimelineBar.uasset'
+[2024.07.15-09.20.00:483][788]LogFileHelpers: InternalPromptForCheckoutAndSave took 93 ms (total: 4.70 sec)
+[2024.07.15-09.20.00:485][788]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.15-09.20.00:485][788]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_DragWidget.WBP_DragWidget
+[2024.07.15-09.20.00:486][788]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_TimelineBar.WBP_TimelineBar
+[2024.07.15-09.21.05:901][384]LogEditorTransaction: Undo Break Pin Links
+[2024.07.15-09.22.21:461][835]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.07.15-09.22.21:696][835]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.07.15-09.22.21:846][835]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.15-09.22.21:872][835]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset" SILENT=true
+[2024.07.15-09.22.21:919][835]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_DragWidget
+[2024.07.15-09.22.21:920][835]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget29ED5EBC472F1BCCD6191B815AB99F6E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset'
+[2024.07.15-09.22.21:927][835]LogFileHelpers: InternalPromptForCheckoutAndSave took 80 ms (total: 4.78 sec)
+[2024.07.15-09.22.21:988][835]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.07.15-09.22.21:988][835]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_DragWidget.WBP_DragWidget
+[2024.07.15-09.22.22:530][865]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2024.07.15-09.22.22:530][865]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.15-09.22.23:563][953]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2024.07.15-09.22.23:563][953]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.15-09.22.37:566][271]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.07.15-09.22.37:652][271]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2024.07.15-09.22.37:777][271]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.15-09.22.37:802][271]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset" SILENT=true
+[2024.07.15-09.22.37:847][271]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_DragWidget
+[2024.07.15-09.22.37:848][271]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget25C58BF5499E330ABE162CA1CF14BDD1.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset'
+[2024.07.15-09.22.37:854][271]LogFileHelpers: InternalPromptForCheckoutAndSave took 76 ms (total: 4.86 sec)
+[2024.07.15-09.22.37:856][271]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.07.15-09.22.37:856][271]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_DragWidget.WBP_DragWidget
+[2024.07.15-09.22.43:829][330]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
