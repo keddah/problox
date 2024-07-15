@@ -6665,3 +6665,53 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.15-22.23.13:023][211]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Notebook/Objectives/Kitchen/Kitchen_Toast_Auto8
 [2024.07.15-22.23.13:023][211]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_Toast_Auto82CE190F14653D9F4D3E3B0B314BFEA74.tmp' to '../../../../../../Uni/problox/projProblox/Saved/Autosaves/Game/UI/Notebook/Objectives/Kitchen/Kitchen_Toast_Auto8.uasset'
 [2024.07.15-22.23.13:024][211]LogFileHelpers: Auto-saving content packages took 0.016
+[2024.07.15-22.24.33:769][557]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2024.07.15-22.24.34:697][557]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.15-22.24.34:765][557]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined" FILE="../../../../../../Uni/problox/projProblox/Content/Levels/Lvl_Combined.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.15-22.24.34:966][557]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.07.15-22.24.35:906][557]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.15-22.24.35:907][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Lvl_Combined6264A9914624351566493FAE3D1D5062.tmp' to '../../../../../../Uni/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.15-22.24.35:979][557]LogFileHelpers: All files are already saved.
+[2024.07.15-22.24.35:979][557]LogFileHelpers: Saving map 'Lvl_Combined' took 1.220
+[2024.07.15-22.24.36:000][557]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.07.15-22.24.36:116][557]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props
+[2024.07.15-22.24.36:116][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/KitchenLevel_PropsA390346F4EE1FFA860F3998A092A0B04.tmp' to '../../../../../../Uni/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.umap'
+[2024.07.15-22.24.36:127][557]LogFileHelpers: All files are already saved.
+[2024.07.15-22.24.36:127][557]LogFileHelpers: Saving map 'KitchenLevel_Props' took 0.147
+[2024.07.15-22.24.36:128][557]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/Objectives/Kitchen/Kicthen_Kettle" FILE="../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kicthen_Kettle.uasset" SILENT=true
+[2024.07.15-22.24.36:130][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kicthen_Kettle
+[2024.07.15-22.24.36:131][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kicthen_KettleCE87BE274EA053D9BA8676A59A4690ED.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kicthen_Kettle.uasset'
+[2024.07.15-22.24.36:133][557]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/Objectives/Kitchen/Kitchen_Apple" FILE="../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Apple.uasset" SILENT=true
+[2024.07.15-22.24.36:134][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Apple
+[2024.07.15-22.24.36:135][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_Apple3D2B15DA4936BA900735D4B285D1F8A4.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Apple.uasset'
+[2024.07.15-22.24.36:137][557]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl" FILE="../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl.uasset" SILENT=true
+[2024.07.15-22.24.36:138][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl
+[2024.07.15-22.24.36:139][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_BowlE9DFC0CB4C2E9CED5DB73B918DE89FF4.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl.uasset'
+[2024.07.15-22.24.36:142][557]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl1" FILE="../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl1.uasset" SILENT=true
+[2024.07.15-22.24.36:143][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl1
+[2024.07.15-22.24.36:144][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_Bowl13E1303C64D9F212F6C0B0A8A37ECF127.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl1.uasset'
+[2024.07.15-22.24.36:146][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Coffe_Cup
+[2024.07.15-22.24.36:148][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_Coffe_CupC13D67264C42C1793E42B49FB3E3A390.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Coffe_Cup.uasset'
+[2024.07.15-22.24.36:151][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Extractor_Fan
+[2024.07.15-22.24.36:151][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_Extractor_FanDB103D2D44AAEB531AF43A9D5D1E9ADC.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Extractor_Fan.uasset'
+[2024.07.15-22.24.36:154][557]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/Objectives/Kitchen/Kitchen_Lights" FILE="../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Lights.uasset" SILENT=true
+[2024.07.15-22.24.36:155][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Lights
+[2024.07.15-22.24.36:156][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_Lights3D1F373747315E1B0D5534A7119B858D.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Lights.uasset'
+[2024.07.15-22.24.36:158][557]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Notebook/Objectives/Kitchen/Kitchen_Toast" FILE="../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Toast.uasset" SILENT=true
+[2024.07.15-22.24.36:159][557]LogSavePackage: Moving output files for package: /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Toast
+[2024.07.15-22.24.36:159][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Kitchen_Toast4D3139CC42B07FCF13606E99B6EAD06A.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/Notebook/Objectives/Kitchen/Kitchen_Toast.uasset'
+[2024.07.15-22.24.36:163][557]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BuyableAttachments/BuyInfos/Hoverer
+[2024.07.15-22.24.36:164][557]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Hoverer49D146D94B90D83E92E775A819F2C04C.tmp' to '../../../../../../Uni/problox/projProblox/Content/Blueprints/Pickupables/BuyableAttachments/BuyInfos/Hoverer.uasset'
+[2024.07.15-22.24.36:181][557]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.48 sec (total: 6.29 sec)
+[2024.07.15-22.24.36:212][557]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.KitchenLevel_Props
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kicthen_Kettle.Kicthen_Kettle
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Apple.Kitchen_Apple
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl.Kitchen_Bowl
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Bowl1.Kitchen_Bowl1
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Coffe_Cup.Kitchen_Coffe_Cup
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Extractor_Fan.Kitchen_Extractor_Fan
+[2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Lights.Kitchen_Lights
+[2024.07.15-22.24.36:213][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Toast.Kitchen_Toast
+[2024.07.15-22.24.36:213][557]LogContentValidation: Display: Validating /Script/projProblox.BuyableInfo /Game/Blueprints/Pickupables/BuyableAttachments/BuyInfos/Hoverer.Hoverer
