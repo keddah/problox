@@ -64,6 +64,9 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 
 	FTransform resetTransform;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "How far the flatHead should extend from the piston shaft."))
-	float floatiness = 10;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "..."))
+	float floatiness = 40;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "Higher number = balloon is less affected by mass."))
+	float massMultiplier = .7f;
 };

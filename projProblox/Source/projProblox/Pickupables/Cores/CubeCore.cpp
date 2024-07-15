@@ -249,7 +249,10 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 		if(obj->IsA<ABalloon>())
 		{
 			obj->GetMesh()->SetSimulatePhysics(true);
-			obj->SetActorLocation(pos + obj->GetActorForwardVector() * 150);
+
+			// Since balloons aren't actually attached to the core....
+			obj->SetActorLocation(lastSpawnPos + FVector(0,0,100));
+			obj->RemoveVelocity();
 		}
 	}
 
