@@ -9,10 +9,7 @@
 
 #include "CellSpawner.h"
 
-#include "Kismet/GameplayStatics.h"
-#include "projProblox/CustomGameInstance.h"
 #include "projProblox/LevelManager.h"
-#include "projProblox/GameModes/Modes.h"
 #include "projProblox/Pickupables/Cores/Connectors/CubeConnector.h"
 
 
@@ -222,5 +219,12 @@ int ACellSpawner::GetCollectedAmount() const
 	int count = 0;
 	for(const auto& cell : spawnedCells) if(cell->IsSafe()) count++;
 
+	return count;
+}
+
+int ACellSpawner::GetValidSpawnAmount() const
+{
+	int count = 0;
+	for(const auto& cell: spawnedCells) if(cell) count++;
 	return count;
 }

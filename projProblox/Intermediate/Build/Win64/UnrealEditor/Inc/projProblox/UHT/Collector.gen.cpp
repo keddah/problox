@@ -75,6 +75,13 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		*(int32*)Z_Param__Result=P_THIS->GetLevel1Count();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ACollector::execReCalculateCellCount)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ReCalculateCellCount();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACollector::execCalculateCellCount)
 	{
 		P_FINISH;
@@ -95,6 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 			{ "GetLevel2Count", &ACollector::execGetLevel2Count },
 			{ "GetLevel3Collected", &ACollector::execGetLevel3Collected },
 			{ "GetLevel3Count", &ACollector::execGetLevel3Count },
+			{ "ReCalculateCellCount", &ACollector::execReCalculateCellCount },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -380,6 +388,28 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACollector_ReCalculateCellCount_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACollector_ReCalculateCellCount_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Collector.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACollector_ReCalculateCellCount_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACollector, nullptr, "ReCalculateCellCount", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_ReCalculateCellCount_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACollector_ReCalculateCellCount_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACollector_ReCalculateCellCount()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACollector_ReCalculateCellCount_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ACollector);
 	UClass* Z_Construct_UClass_ACollector_NoRegister()
 	{
@@ -443,6 +473,7 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		{ &Z_Construct_UFunction_ACollector_GetLevel2Count, "GetLevel2Count" }, // 848728290
 		{ &Z_Construct_UFunction_ACollector_GetLevel3Collected, "GetLevel3Collected" }, // 758928701
 		{ &Z_Construct_UFunction_ACollector_GetLevel3Count, "GetLevel3Count" }, // 252035555
+		{ &Z_Construct_UFunction_ACollector_ReCalculateCellCount, "ReCalculateCellCount" }, // 2404180359
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -578,9 +609,9 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 1552770570U) },
+		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 2709735013U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_2738210656(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_1112175096(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

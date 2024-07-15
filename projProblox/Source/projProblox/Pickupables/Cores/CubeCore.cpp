@@ -241,7 +241,11 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	// Only if the passed position isn't empty .. set the new spawnPos
 	if(!respawning) lastSpawnPos = pos;
 	// End the turn early when respawning (falling out the map)
-	else EndTurn();
+	else
+	{
+		Print("Respawning", 4)
+		EndTurn(true);
+	}
 	
 	mesh->SetSimulatePhysics(true);
 	for (auto& obj : GetCloseAttachments())
@@ -264,21 +268,35 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	RemoveVelocity();
 }
 
-void ACubeCore::EndTurn()
+void ACubeCore::EndTurn(const bool force)
 {
 	FTimerManager& manager = wrld->GetTimerManager();
+	
+	if(force)
+	{
+		// Clear the timer
+		for(auto& obj : GetCloseAttachments()) manager.ClearAllTimersForObject(obj);
+
+		// Deactivate all the attachments
+		for(const auto& obj : GetCloseAttachments()) obj->SetAbilityActive(false);
+
+		// Call the function the timer is supposed to call
+		ResetToStart();
+		return;
+	}
+	
 	if(!manager.IsTimerActive(resetTimer)) return;
 	
-	const float percent = manager.GetTimerElapsed(resetTimer) / longestDuration;
-
-	// Over 60% done
+	// End depending on the percentage of the percentage of the percentage
+	float percent = manager.GetTimerElapsed(resetTimer) / longestDuration;
+	percent = percent / endTurnPercent;
+	
+	// Over x% done
 	if(percent < endTurnPercent) return;
 
-	// Play a sound???
+	// Clear the timer
+	for(auto& obj : GetCloseAttachments()) manager.ClearAllTimersForObject(obj);
 	
-	// Clear the timer 
-	manager.ClearTimer(resetTimer);
-
 	// Call the function the timer is supposed to call
 	ResetToStart();
 

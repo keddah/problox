@@ -17,6 +17,7 @@
 #include "CellSpawner.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSpawnTriggered, ACellSpawner*, triggeredSpawner);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCellsDied);
 
 UENUM(BlueprintType)
 enum class ECellType : uint8
@@ -110,7 +111,6 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	/////////// OTHER ///////////
 	UWorld* wrld;
 	TArray<ACell*> spawnedCells;
-
 	
 	bool spawned = false;
 
@@ -149,6 +149,9 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnSpawnTriggered onTriggered;
 
+	UPROPERTY(BlueprintAssignable)
+	FOnCellsDied onCellDeath;
+
 
 	/////////////////////////// FUNCTIONS ///////////////////////////
 	void Init();
@@ -184,6 +187,9 @@ public:
 	const ULevelObjective* GetObjective() const { return objective; }
 
 	int GetCollectedAmount() const;
+
+	// Gets the number of cells that have been spawn and still valid
+	int GetValidSpawnAmount() const;
 	
 	int GetSpawnAmount() const
 	{

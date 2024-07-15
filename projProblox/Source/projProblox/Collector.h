@@ -23,6 +23,9 @@ class PROJPROBLOX_API ACollector : public AActor
 
 	UFUNCTION(BlueprintCallable)
 	void CalculateCellCount();
+	
+	UFUNCTION()
+	void ReCalculateCellCount();
 
 	int GetLvlCellCount(const ELevel& lvl) const;
 	int GetCollectedCountFromLvl(const ELevel& lvl) const;

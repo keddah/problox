@@ -45,7 +45,6 @@ void ABounceSpring::Ability(float deltaTime)
 	}
 	
 	if(!isAttached) return;
-	if(!active) return;
 	
 	if(!wrld)
 	{

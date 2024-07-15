@@ -68,14 +68,35 @@ void ACollector::CalculateCellCount()
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
 	for (const auto& spawnActor: countArr)
 	{
+		if(ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
+		{
+			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
+			cellsInLevel += spawner->GetSpawnAmount();
+			spawner->onCellDeath.AddDynamic(this, &ACollector::ReCalculateCellCount);
+		}
+	}
+}
+
+void ACollector::ReCalculateCellCount()
+{
+	Print("Cells died...", 4)
+	const UWorld* wrld = GetWorld();
+	if(!wrld) return;
+	
+	TArray<AActor*> countArr;
+
+	// Only count the cells that aren't captured
+	cellsInLevel = 0;
+	
+	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
+	for (const auto& spawnActor: countArr)
+	{
 		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
 		{
 			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
-			cellsInLevel+= spawner->GetSpawnAmount();
+			cellsInLevel += spawner->GetValidSpawnAmount();
 		}
 	}
-
-	// Print("Calculated the cells in level: " + FString::FromInt(cellsInLevel), 5)
 }
 
 int ACollector::GetLvlCellCount(const ELevel& lvl) const

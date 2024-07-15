@@ -27,6 +27,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execGetLevel3Count); \
 	DECLARE_FUNCTION(execGetLevel2Count); \
 	DECLARE_FUNCTION(execGetLevel1Count); \
+	DECLARE_FUNCTION(execReCalculateCellCount); \
 	DECLARE_FUNCTION(execCalculateCellCount);
 
 
