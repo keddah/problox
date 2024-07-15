@@ -4213,3 +4213,20 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.15-14.11.29:286][225]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
 [2024.07.15-14.11.29:384][226]LogPlayLevel: Display: Destroying online subsystem :Context_17
 [2024.07.15-14.11.29:402][226]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.07.15-14.12.19:856][913]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2024.07.15-14.12.19:979][913]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.15-14.12.20:087][913]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.07.15-14.12.20:468][913]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.15-14.12.20:469][913]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Lvl_CombinedAE3168C848E10F849209A298581C531E.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.15-14.12.20:491][913]LogFileHelpers: All files are already saved.
+[2024.07.15-14.12.20:491][913]LogFileHelpers: Saving map 'Lvl_Combined' took 0.483
+[2024.07.15-14.12.20:492][913]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.15-14.12.20:499][913]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_11:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.15-14.12.20:540][913]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.15-14.12.20:548][913]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_12:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.15-14.12.20:577][913]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCore
+[2024.07.15-14.12.20:578][913]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoreE0D5731A41F6D51279A35FA98D91EF25.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset'
+[2024.07.15-14.12.20:584][913]LogFileHelpers: InternalPromptForCheckoutAndSave took 605 ms (total: 1.13 sec)
+[2024.07.15-14.12.20:592][913]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.15-14.12.20:592][913]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.15-14.12.20:592][913]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore
