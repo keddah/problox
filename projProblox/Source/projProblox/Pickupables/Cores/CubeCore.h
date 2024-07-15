@@ -254,7 +254,7 @@ public:
 	// To be used whenever the core goes out of bounds or when the core changes levels
 	UFUNCTION(BlueprintCallable)
 	void Teleport(const FRotator& rot, const FVector& pos, bool respawning = false);
-	void EndTurn(bool force = false);
+	void EndTurn(bool force = false) const;
 	
 	void AddCell(AActor* cell) const;
 	void LoseMoney(const short amount) const { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }

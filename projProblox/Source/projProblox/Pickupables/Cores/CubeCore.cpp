@@ -268,7 +268,7 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	RemoveVelocity();
 }
 
-void ACubeCore::EndTurn(const bool force)
+void ACubeCore::EndTurn(const bool force) const
 {
 	FTimerManager& manager = wrld->GetTimerManager();
 	
@@ -286,12 +286,15 @@ void ACubeCore::EndTurn(const bool force)
 	}
 	
 	if(!manager.IsTimerActive(resetTimer)) return;
+
+	// Over x% done - Guarantee that you can end the turn if at least some of the end turn percent has been crossed and the longest duration is longer than 27 seconds. 
+	constexpr float helper = 27;
+	const float elapsedTime = manager.GetTimerElapsed(resetTimer);
+
+	// A quarter way done??
+	const bool canSkip = (elapsedTime / longestDuration) > endTurnPercent * .4f && longestDuration >= helper;
 	
-	// End depending on the percentage of the percentage of the percentage
-	float percent = manager.GetTimerElapsed(resetTimer) / longestDuration;
-	percent = percent / endTurnPercent;
-	
-	// Over x% done
+	const float percent = canSkip? elapsedTime / longestDuration : 1;
 	if(percent < endTurnPercent) return;
 
 	// Clear the timer
