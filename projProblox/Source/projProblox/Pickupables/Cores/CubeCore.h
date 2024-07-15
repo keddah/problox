@@ -145,7 +145,7 @@ private:
 	
 	float longestDuration;
 	
-	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The percentage of the turn that needs to have happened before the player can end the turn early."))
+	UPROPERTY(EditDefaultsOnly, meta = (ClampMin = 0, ClampMax = 1, Delta = .05f, meta = "The percentage of the turn that needs to have happened before the player can end the turn early."))
 	float endTurnPercent = .4f;
 
 
