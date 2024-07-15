@@ -72,6 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeWedgeConnector() {}
 	{
 		return AWedgeConnector::StaticClass();
 	}
+	AWedgeConnector::AWedgeConnector() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AWedgeConnector);
 	AWedgeConnector::~AWedgeConnector() {}
 	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_WedgeConnector_h_Statics
@@ -79,9 +80,9 @@ void EmptyLinkFunctionForGeneratedCodeWedgeConnector() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_WedgeConnector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AWedgeConnector, AWedgeConnector::StaticClass, TEXT("AWedgeConnector"), &Z_Registration_Info_UClass_AWedgeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWedgeConnector), 894853792U) },
+		{ Z_Construct_UClass_AWedgeConnector, AWedgeConnector::StaticClass, TEXT("AWedgeConnector"), &Z_Registration_Info_UClass_AWedgeConnector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWedgeConnector), 238378231U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_WedgeConnector_h_800497673(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_WedgeConnector_h_2301976681(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_WedgeConnector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_Connectors_WedgeConnector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

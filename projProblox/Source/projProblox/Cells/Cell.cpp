@@ -58,10 +58,8 @@ void ACell::GoHome() const
 	const FVector corePos = core->GetActorLocation();
 	const FVector thisPos = GetActorLocation();
 	
-	const FVector direction = corePos - thisPos;
-	const float squareDist = FVector::DistSquared(corePos, thisPos);
-	
-	if(squareDist != 0) body->AddForce(direction * attractionForce / squareDist);
+	const FVector direction = (corePos - thisPos).GetSafeNormal();
+	body->AddForce(direction * attractionForce);
 }
 
 void ACell::Teleport(const FVector& pos)
@@ -87,7 +85,7 @@ void ACell::SetDormant(const bool dormant)
 	if(dormant) isHoming = false;
 	
 	// Enable/disable physics and hide/show actor
-	if(body) body->SetSimulatePhysics(!dormant);
+	if(GEngine) if(body) body->SetSimulatePhysics(!dormant);
 	SetActorHiddenInGame(dormant);
 }
 

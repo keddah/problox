@@ -29,10 +29,10 @@ ACubeCore::ACubeCore()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	thingHomer = CreateDefaultSubobject<UBoxComponent>("Bigger Collider");
-	thingHomer->SetupAttachment(mesh);
-	thingCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
-	thingCollector->SetupAttachment(mesh);
+	cellHomer = CreateDefaultSubobject<UBoxComponent>("Bigger Collider");
+	cellHomer->SetupAttachment(mesh);
+	cellCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
+	cellCollector->SetupAttachment(mesh);
 
 	mouseDetector->SetBoxExtent({});
 	
@@ -136,7 +136,6 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	isAttached = true;
 
 	onChangeAttachments.Broadcast();
-	previousAttachments = GetAttachedObjs();
 }
 
 void ACubeCore::RemoveAttachment(const FName& socket)
@@ -153,7 +152,6 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	mesh->SetEnableGravity(true);
 
 	onChangeAttachments.Broadcast();
-	previousAttachments = GetAttachedObjs();
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
@@ -164,7 +162,6 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	mesh->SetEnableGravity(true);
 
 	onChangeAttachments.Broadcast();
-	previousAttachments = GetAttachedObjs();
 }
 
 TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
@@ -226,16 +223,16 @@ float ACubeCore::GetMass() const
 }
 
 // Passing an actor to work around the #include dependency loop.....
-void ACubeCore::AddThing(AActor* _thing) const
+void ACubeCore::AddCell(AActor* cell) const
 {
 	if(!IsValid(collector)) return;
-	if(!IsValid(_thing)) return;
+	if(!IsValid(cell)) return;
 
-	if(ACell* thing = Cast<ACell>(_thing))
+	if(ACell* thing = Cast<ACell>(cell))
 	{
 		// Using a delegate so that it can send a message to the blueprint (because ui...)
 		thing->Teleport(collector->GetCollectPoint());
-		onAddedThing.Broadcast(thing);
+		onAddedCell.Broadcast(thing);
 	}
 }
 
@@ -272,7 +269,7 @@ void ACubeCore::EndTurn()
 	const float percent = manager.GetTimerElapsed(resetTimer) / longestDuration;
 
 	// Over 60% done
-	if(percent < .6f) return;
+	if(percent < endTurnPercent) return;
 
 	// Play a sound???
 	
@@ -337,6 +334,8 @@ void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<in
 	
 	for(int i = 0; i < objs.Num(); i++)
 	{
+		if(!objs[i]->IsTimerRequired()) continue;
+		
 		FTimerHandle activationHandle;
 		FTimerHandle deactivationHandle;
         

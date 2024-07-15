@@ -116,7 +116,7 @@ void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
 	if(!Tags.IsEmpty()) return;
 
 	// Successful cast???
-	if(Cast<ACell>(OtherActor)) parentCore->AddThing(OtherActor);
+	if(Cast<ACell>(OtherActor)) parentCore->AddCell(OtherActor);
 }
 
 // Should only be called in the Placement Function at the very end....
