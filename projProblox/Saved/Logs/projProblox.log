@@ -6715,3 +6715,100 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.15-22.24.36:212][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Lights.Kitchen_Lights
 [2024.07.15-22.24.36:213][557]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Toast.Kitchen_Toast
 [2024.07.15-22.24.36:213][557]LogContentValidation: Display: Validating /Script/projProblox.BuyableInfo /Game/Blueprints/Pickupables/BuyableAttachments/BuyInfos/Hoverer.Hoverer
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: ================================================
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Total job queries 1,007, among them cache hits 513 (50.94%)
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Tracking 494 distinct input hashes that result in 288 distinct outputs (58.30%)
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: RAM used: 12.07 MiB of 819.20 MiB budget. Usage: 1.47%
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Shaders Compiled: 63
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Jobs assigned 63, completed 63 (100%)
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Average time worker was idle: 322.14 s
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Time job spent in pending queue: average 0.88 s, longest 5.25 s
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Job execution time: average 2.29 s, max 5.51 s
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Job life time (pending + execution): average 3.17 s, max 6.68
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Shader code size: average 68.994 KiB, min 28.324 KiB, max 75.312 KiB
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 25.34 s
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Jobs were issued in 63 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Average processing rate: 2.49 jobs/sec
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Total thread time: 108.07 s
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Total thread preprocess time: 12.28 s
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Percentage time preprocessing: 11.36%
+[2024.07.15-22.25.11:858][ 47]LogShaderCompilers: Display: Effective parallelization: 4.27 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:      TBasePassVSFPrecomputedVolumetricLightmapLightingPolicy (compiled    5 times, average 2.08 sec, max 2.64 sec, min 0.90 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display: TBasePassPSFPrecomputedVolumetricLightmapLightingPolicySkylight (compiled    5 times, average 1.98 sec, max 2.43 sec, min 0.75 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled   19 times, average 1.97 sec, max 3.71 sec, min 0.85 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    6 times, average 1.95 sec, max 3.22 sec, min 0.79 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   14 times, average 1.62 sec, max 3.09 sec, min 0.60 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 34.71% of total time (compiled   19 times, average 1.97 sec, max 3.71 sec, min 0.85 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 21.00% of total time (compiled   14 times, average 1.62 sec, max 3.09 sec, min 0.60 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 10.83% of total time (compiled    6 times, average 1.95 sec, max 3.22 sec, min 0.79 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display:      TBasePassVSFPrecomputedVolumetricLightmapLightingPolicy - 9.60% of total time (compiled    5 times, average 2.08 sec, max 2.64 sec, min 0.90 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display: TBasePassPSFPrecomputedVolumetricLightmapLightingPolicySkylight - 9.17% of total time (compiled    5 times, average 1.98 sec, max 2.43 sec, min 0.75 sec)
+[2024.07.15-22.25.11:859][ 47]LogShaderCompilers: Display: ================================================
+[2024.07.15-22.25.52:084][200]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Glass_Breaking__mirror__.__Glass_Breaking__mirror__
+[2024.07.15-22.26.08:535][785]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Glass_Falling_.__Glass_Falling_
+[2024.07.15-22.26.22:492][382]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Grapple_Gun.__Grapple_Gun
+[2024.07.15-22.26.30:280][691]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Kettle_Boiling.__Kettle_Boiling
+[2024.07.15-22.26.36:101][922]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2024.07.15-22.27.31:469][196]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/Background_Music_6.Background_Music_6
+[2024.07.15-22.27.43:981][757]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/Background_Music_9.Background_Music_9
+[2024.07.15-22.27.47:711][886]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/Background_Music_14.Background_Music_14
+[2024.07.15-22.27.51:477][ 30]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/Background_Music_17.Background_Music_17
+[2024.07.15-22.27.56:850][288]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds' is outside repository at 'C:/Uni/problox'
+[2024.07.15-22.27.59:621][450]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds/SFX.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds/SFX.uasset' is outside repository at 'C:/Uni/problox'
+[2024.07.15-22.28.00:648][508]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds/Normal_Attack.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds/Normal_Attack.uasset' is outside repository at 'C:/Uni/problox'
+[2024.07.15-22.28.00:713][511]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds/Music.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineSounds/Music.uasset' is outside repository at 'C:/Uni/problox'
+[2024.07.15-22.28.08:683][707]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Water_running_.__Water_running_
+[2024.07.15-22.28.14:193][892]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Thud_Wooden_.__Thud_Wooden_
+[2024.07.15-22.28.25:861][299]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Spring.__Spring
+[2024.07.15-22.28.39:759][826]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Tank_Tracks_.__Tank_Tracks_
+[2024.07.15-22.28.42:645][935]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Thruster_.__Thruster_
+[2024.07.15-22.28.50:782][194]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Propellor_.__Propellor_
+[2024.07.15-22.28.55:588][361]LogAssetEditorSubsystem: Opening Asset editor for SoundWave /Game/SFX/__Pottery_falling_.__Pottery_falling_
+[2024.07.15-22.29.14:315][965]LogUObjectHash: Compacting FUObjectHashTables data took   3.55ms
+[2024.07.15-22.29.14:609][965]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.15-22.29.14:716][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Spring" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/__Spring.uasset" SILENT=true
+[2024.07.15-22.29.14:755][965]LogSavePackage: Moving output files for package: /Game/SFX/__Spring
+[2024.07.15-22.29.14:755][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/__Spring95B20C9447F70634368ED09086294049.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/__Spring.uasset'
+[2024.07.15-22.29.14:764][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Glass_Breaking__mirror__" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/__Glass_Breaking__mirror__.uasset" SILENT=true
+[2024.07.15-22.29.14:772][965]LogSavePackage: Moving output files for package: /Game/SFX/__Glass_Breaking__mirror__
+[2024.07.15-22.29.14:773][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/__Glass_Breaking__mirror__EA245D364156FC068379329832FA809D.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/__Glass_Breaking__mirror__.uasset'
+[2024.07.15-22.29.14:779][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Glass_Falling_" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/__Glass_Falling_.uasset" SILENT=true
+[2024.07.15-22.29.14:786][965]LogSavePackage: Moving output files for package: /Game/SFX/__Glass_Falling_
+[2024.07.15-22.29.14:787][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/__Glass_Falling_9079D6E1466B6C00519ABAA741966C3A.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/__Glass_Falling_.uasset'
+[2024.07.15-22.29.14:793][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Pottery_falling_" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/__Pottery_falling_.uasset" SILENT=true
+[2024.07.15-22.29.14:798][965]LogSavePackage: Moving output files for package: /Game/SFX/__Pottery_falling_
+[2024.07.15-22.29.14:799][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/__Pottery_falling_63F22A0A4FEC7CB56570889A31B2CAC4.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/__Pottery_falling_.uasset'
+[2024.07.15-22.29.14:806][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Thud_Wooden_" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/__Thud_Wooden_.uasset" SILENT=true
+[2024.07.15-22.29.14:821][965]LogSavePackage: Moving output files for package: /Game/SFX/__Thud_Wooden_
+[2024.07.15-22.29.14:822][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/__Thud_Wooden_BE33C816487312C24A6C6EB2533DD0EB.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/__Thud_Wooden_.uasset'
+[2024.07.15-22.29.14:838][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/Background_Music_17" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_17.uasset" SILENT=true
+[2024.07.15-22.29.14:879][965]LogSavePackage: Moving output files for package: /Game/SFX/Background_Music_17
+[2024.07.15-22.29.14:879][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Background_Music_1755E37DF84D3C13B1CA945D8381C2E7FB.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_17.uasset'
+[2024.07.15-22.29.14:893][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/Background_Music_6" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_6.uasset" SILENT=true
+[2024.07.15-22.29.14:923][965]LogSavePackage: Moving output files for package: /Game/SFX/Background_Music_6
+[2024.07.15-22.29.14:924][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Background_Music_6965CCF104B1A02E5C786569E8260C321.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_6.uasset'
+[2024.07.15-22.29.14:943][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/Background_Music_9" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_9.uasset" SILENT=true
+[2024.07.15-22.29.14:989][965]LogSavePackage: Moving output files for package: /Game/SFX/Background_Music_9
+[2024.07.15-22.29.14:990][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Background_Music_945F6583A40315FFFC0A3CBAB982BB3D6.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_9.uasset'
+[2024.07.15-22.29.15:004][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/Background_Music_14" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_14.uasset" SILENT=true
+[2024.07.15-22.29.15:034][965]LogSavePackage: Moving output files for package: /Game/SFX/Background_Music_14
+[2024.07.15-22.29.15:034][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Background_Music_142129B95F404CB24294D3EAA310CC4ED8.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/Background_Music_14.uasset'
+[2024.07.15-22.29.15:041][965]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SFX/__Grapple_Gun" FILE="../../../../../../Uni/problox/projProblox/Content/SFX/__Grapple_Gun.uasset" SILENT=true
+[2024.07.15-22.29.15:045][965]LogSavePackage: Moving output files for package: /Game/SFX/__Grapple_Gun
+[2024.07.15-22.29.15:046][965]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/__Grapple_Gun327BBEA6490270F2E36AD2B08B5F1041.tmp' to '../../../../../../Uni/problox/projProblox/Content/SFX/__Grapple_Gun.uasset'
+[2024.07.15-22.29.15:066][965]LogFileHelpers: InternalPromptForCheckoutAndSave took 455 ms (total: 6.75 sec)
+[2024.07.15-22.29.15:082][965]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.15-22.29.15:082][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/__Spring.__Spring
+[2024.07.15-22.29.15:082][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/__Glass_Breaking__mirror__.__Glass_Breaking__mirror__
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/__Glass_Falling_.__Glass_Falling_
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/__Pottery_falling_.__Pottery_falling_
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/__Thud_Wooden_.__Thud_Wooden_
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/Background_Music_17.Background_Music_17
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/Background_Music_6.Background_Music_6
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/Background_Music_9.Background_Music_9
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/Background_Music_14.Background_Music_14
+[2024.07.15-22.29.15:083][965]LogContentValidation: Display: Validating /Script/Engine.SoundWave /Game/SFX/__Grapple_Gun.__Grapple_Gun
