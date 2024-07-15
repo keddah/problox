@@ -34,7 +34,7 @@ PROJPROBLOX_API void FOnReset_DelegateWrapper(const FMulticastScriptDelegate& On
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_46_DELEGATE \
-PROJPROBLOX_API void FOnAddedThing_DelegateWrapper(const FMulticastScriptDelegate& OnAddedThing, AActor* thing);
+PROJPROBLOX_API void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, AActor* thing);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_51_SPARSE_DATA

@@ -16,20 +16,6 @@
 #include "./projProblox/Pickupables/Cores/SocketInfo/WedgeSocketInfo.h"
 
 
-AWedgeConnector::AWedgeConnector()
-{
-	PrimaryActorTick.bCanEverTick = true;
-
-	// Disable anything to do with Thing collection
-	thingCollector->SetGenerateOverlapEvents(false);
-	thingCollector->SetBoxExtent({});
-	thingCollector->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	
-	thingHomer->SetGenerateOverlapEvents(false);
-	thingHomer->SetBoxExtent({});
-	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-}
-
 void AWedgeConnector::BeginPlay()
 {
 	leftArrow->DestroyComponent();

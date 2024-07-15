@@ -30,14 +30,6 @@ ACubeConnector::ACubeConnector()
 
 	downArrow = CreateDefaultSubobject<UArrowComponent>("Downwards Arrow");
 	downArrow->SetupAttachment(mesh);
-
-	// Disable anything to do with Thing collection
-	thingCollector->SetGenerateOverlapEvents(false);
-	thingCollector->SetBoxExtent({});
-	thingCollector->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	thingHomer->SetGenerateOverlapEvents(false);
-	thingHomer->SetBoxExtent({});
-	thingHomer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
 void ACubeConnector::Placement(ACubeCore* core, const FName& socket)

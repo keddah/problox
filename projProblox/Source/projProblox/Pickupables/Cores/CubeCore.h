@@ -43,7 +43,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnReset);
 
 // Should be broadcast when a "Thing" collides with any of the things that are attached to the cube.
 // This has been declared so that a Blueprint function can be called.
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAddedThing, AActor*, thing);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAddedCell, AActor*, thing);
 
 UCLASS()
 class PROJPROBLOX_API ACubeCore : public APickupableMaster
@@ -86,77 +86,47 @@ protected:
 	virtual void BeginPlay() override;
 	
 	
-///////////////////////////// PROPERTIES /////////////////////////////
 	/////////////// Components ///////////////
 	// A data asset that contains an array of things that are attached to each face of the cube.
 	UPROPERTY(VisibleAnywhere)
 	UCubeSocketInfo* socketInfo;
+
+private:
+	UPROPERTY(EditDefaultsOnly, Category = "Collection")
+	UBoxComponent* cellCollector;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
-	UBoxComponent* thingCollector;
-	
-	UPROPERTY(EditDefaultsOnly, Category = "Collection")
-	UBoxComponent* thingHomer;
+	UBoxComponent* cellHomer;
 
-	UPROPERTY(EditAnywhere, Category = "Collection", BlueprintReadOnly)
-	float fairBounds = 6500;
 	
 
-	/////////////// Selection/Placement ///////////////
-	// The socket that the placement ray from this object is firing from
-	FName raySocket = "DOWN";
-
-	// The socket opposite to the attached socket (should always be blocked)
-	FName oppositeSocket;
-	
-	
+protected:
 	/////////////// Collection ///////////////
 	UPROPERTY(BlueprintReadOnly, Category = "Collection")
 	ACollector* collector;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
-	float thingAttraction = 4200000;
-	
-	
-	/////////////// Delegates ///////////////
-	UPROPERTY(BlueprintAssignable)
-	FOnAddedThing onAddedThing;
-	
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
-	FOnAttachmentChange onChangeAttachments;
+	float cellAttraction = 4200000;
 
-
-	/////////////// Undo/Redo ///////////////
-	TArray<APickupableMaster*> previousAttachments;
+	
+	/////////////// Game States ///////////////
+	UPROPERTY(BlueprintReadOnly)
+	EGameMode currentMode;
 
 	
 	/////////////// Turn System ///////////////
 	UPROPERTY(BlueprintReadOnly)
 	FTimerHandle resetTimer;
 
-	float longestDuration;
 	
+	/////////////// Selection/Placement ///////////////
+	// The socket that the placement ray from this object is firing from
+	FName raySocket = "DOWN";
 
-	/////////////// Other ///////////////
-	UPROPERTY(EditDefaultsOnly, Category = "Angular Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
-	float defaultAngularDrag = .05f;
+	// The socket opposite to the attached socket (should always be blocked)
+	FName oppositeSocket;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Angular Drag", meta = (ToolTip = "The angular drag that the mesh should have at the end of a turn."))
-	float heavyAngularDrag = 1;
 
-	FVector lastSpawnPos;
-	
-
-	/////////////// Game States ///////////////
-	UPROPERTY(BlueprintReadOnly)
-	EGameMode currentMode;
-
-	
-///////////////////////////// Functions /////////////////////////////
-	/////////////// Rotations ///////////////
-	virtual void ResetRotation(bool resetVelocity) override;
-
-	
 	/////////////// Other ///////////////
 	virtual void ToggleGravity() const override;
 	virtual void ToggleGravity(bool gravityOn) override
@@ -165,11 +135,41 @@ protected:
 		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(gravityOn);
 	}
 	
+private:
+	/////////////// Delegates ///////////////
+	UPROPERTY(BlueprintAssignable)
+	FOnAddedCell onAddedCell;
+
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
+	FOnAttachmentChange onChangeAttachments;
+	
+	float longestDuration;
+	
+	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The percentage of the turn that needs to have happened before the player can end the turn early."))
+	float endTurnPercent = .4f;
+
+
+	/////////////// Other ///////////////
+	UPROPERTY(EditDefaultsOnly, Category = "Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
+	float defaultAngularDrag = .05f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Drag", meta = (ToolTip = "The angular drag that the mesh should have at the end of a turn."))
+	float heavyAngularDrag = 1;
+
+	FVector lastSpawnPos;
+	
+
+	/////////////// Rotations ///////////////
+	virtual void ResetRotation(bool resetVelocity) override;
+
+	
+	/////////////// Other ///////////////
 	UFUNCTION(BlueprintCallable)
 	void PlayCollectSound() { soundPlayer->PlayAbility(); }
 	
 	void SetEnableCollisions(bool enable) const;
 	
+
 public:
 	/////////////// Attachments ///////////////
 	virtual void AddAttachment(APickupableMaster* attachment, const FName& socket) override;
@@ -257,7 +257,7 @@ public:
 
 	void EndTurn();
 	
-	void AddThing(AActor* thing) const;
+	void AddCell(AActor* cell) const;
 	
 	void LoseMoney(const short amount) const { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }
 };

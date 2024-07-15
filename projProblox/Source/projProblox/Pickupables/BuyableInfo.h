@@ -29,8 +29,6 @@ struct FBuyableInfoStruct
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UStaticMesh* attachmentMesh;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	TArray<UMaterial*> attachmentMats;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	bool editScale = false;
@@ -54,8 +52,6 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 	
 	UPROPERTY(EditAnywhere)
 	UStaticMesh* attachmentMesh;
-	UPROPERTY(EditAnywhere)
-	TArray<UMaterial*> attachmentMats;
 
 	UPROPERTY(EditAnywhere)
 	FString description = "No description given...";
@@ -79,6 +75,6 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 	TSubclassOf<APickupableMaster> classToSpawn;
 
 public:
-	FBuyableInfoStruct GetInfo() const { return {name, description, comboIcon, objIcon, price, attachmentMesh, attachmentMats, editScale, defaultScale, classToSpawn }; }
+	FBuyableInfoStruct GetInfo() const { return {name, description, comboIcon, objIcon, price, attachmentMesh, editScale, defaultScale, classToSpawn }; }
 	TSubclassOf<APickupableMaster> GetClassToSpawn() const { return classToSpawn; }
 };

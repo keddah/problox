@@ -35,7 +35,7 @@ AGrappler::AGrappler()
 void AGrappler::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-	if(IsValid(hook) && !active) hook->Destroy();
+	if(!active) hook->Destroy();
 	if(active) soundPlayer->PlayAbility();
 	
 	grappleLine->SetHiddenInGame(!active);

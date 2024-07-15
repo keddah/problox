@@ -25,7 +25,6 @@ class PROJPROBLOX_API AWedgeConnector : public ACubeConnector
 {
 	GENERATED_BODY()
 	
-	AWedgeConnector();
 	virtual void ApplyOffset(const ACubeCore* core) override;
 	virtual void GhostPlacement() override;
 	virtual void GhostSnapRotate(const FString& keypress) override;

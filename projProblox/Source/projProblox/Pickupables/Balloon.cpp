@@ -41,6 +41,7 @@ ABalloon::ABalloon()
 	constraint->SetLinearYLimit(LCM_Limited, string->CableLength);
 
 	favouredSlot = ECoreSockets::Up;
+	needsTimer = false;
 }
 
 void ABalloon::BeginPlay()
@@ -68,7 +69,7 @@ void ABalloon::Ability(float deltaTime)
 		return;
 	}
 	
-	if(!parentCore || !active) return;
+	if(!parentCore) return;
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 
 	// (Since the pivot for the balloon mesh is the bottom)
@@ -77,13 +78,17 @@ void ABalloon::Ability(float deltaTime)
 	
 	// The speed the balloon should go upwards when it is first activated (until the limit is reached)
 	const float initSpeed = floatiness * 2;
-	
-	float upAmount = mesh->GetPhysicsLinearVelocity().Z;
+
+	const FVector thisVelocity = mesh->GetPhysicsLinearVelocity();
+	const FVector coreVelocity = parentCore->GetMesh()->GetPhysicsLinearVelocity();
+
+	float upAmount = thisVelocity.Z;
 	upAmount *= -deltaTime;
-	upAmount -= sqrt(parentCore->GetMass());
+	upAmount -= sqrt(parentCore->GetMass() / massMultiplier);
 	upAmount += atLimit? floatiness : initSpeed; 
-	
-	AddVelocity({0,0,upAmount});
+
+	constexpr float velocityDampner = .975f;
+	mesh->SetPhysicsLinearVelocity({coreVelocity.X * velocityDampner, coreVelocity.Y * velocityDampner, thisVelocity.Z + upAmount});
 }
 
 void ABalloon::SetSelected(const bool value)
