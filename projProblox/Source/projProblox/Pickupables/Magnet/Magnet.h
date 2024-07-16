@@ -23,6 +23,12 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	GENERATED_BODY()
 
 	AMagnet() { favouredSlot = ECoreSockets::Up; }
+	virtual void SetAbilityActive(const bool value) override
+	{
+		Super::SetAbilityActive(value);
+		if(active) soundPlayer->PlayAbility();
+		else soundPlayer->StopAbility();
+	}
 	
 	UPROPERTY(EditDefaultsOnly)
 	UMaterialInstance* positiveMat;

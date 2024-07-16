@@ -198,7 +198,7 @@ void FOnCellsDied_DelegateWrapper(const FMulticastScriptDelegate& OnCellsDied)
 		P_GET_OBJECT(AActor,Z_Param_otherActor);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->Overlap(Z_Param_otherActor);
+		*(bool*)Z_Param__Result=P_THIS->Overlap(Z_Param_otherActor);
 		P_NATIVE_END;
 	}
 	void ACellSpawner::StaticRegisterNativesACellSpawner()
@@ -390,8 +390,11 @@ void FOnCellsDied_DelegateWrapper(const FMulticastScriptDelegate& OnCellsDied)
 		struct CellSpawner_eventOverlap_Parms
 		{
 			AActor* otherActor;
+			bool ReturnValue;
 		};
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_otherActor;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -399,8 +402,14 @@ void FOnCellsDied_DelegateWrapper(const FMulticastScriptDelegate& OnCellsDied)
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACellSpawner_Overlap_Statics::NewProp_otherActor = { "otherActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CellSpawner_eventOverlap_Parms, otherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+	void Z_Construct_UFunction_ACellSpawner_Overlap_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((CellSpawner_eventOverlap_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACellSpawner_Overlap_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CellSpawner_eventOverlap_Parms), &Z_Construct_UFunction_ACellSpawner_Overlap_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACellSpawner_Overlap_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACellSpawner_Overlap_Statics::NewProp_otherActor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACellSpawner_Overlap_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_Overlap_Statics::Function_MetaDataParams[] = {
@@ -593,7 +602,7 @@ void FOnCellsDied_DelegateWrapper(const FMulticastScriptDelegate& OnCellsDied)
 		{ &Z_Construct_UFunction_ACellSpawner_GetObjective, "GetObjective" }, // 41837920
 		{ &Z_Construct_UFunction_ACellSpawner_HasObjective, "HasObjective" }, // 602619484
 		{ &Z_Construct_UFunction_ACellSpawner_IsActive, "IsActive" }, // 3890291144
-		{ &Z_Construct_UFunction_ACellSpawner_Overlap, "Overlap" }, // 2137492442
+		{ &Z_Construct_UFunction_ACellSpawner_Overlap, "Overlap" }, // 1539117899
 		{ &Z_Construct_UFunction_ACellSpawner_StopSound, "StopSound" }, // 2314357331
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACellSpawner_Statics::FuncInfo) < 2048);
@@ -934,9 +943,9 @@ void FOnCellsDied_DelegateWrapper(const FMulticastScriptDelegate& OnCellsDied)
 		{ ECellType_StaticEnum, TEXT("ECellType"), &Z_Registration_Info_UEnum_ECellType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 653651803U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 3342764545U) },
+		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 2779251274U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_4280107278(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_1624469481(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo));

@@ -114,8 +114,9 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	
 	bool spawned = false;
 
+	// Returns whether the overlap caused a spawn
 	UFUNCTION(BlueprintCallable)
-	virtual void Overlap(AActor* otherActor);
+	bool Overlap(AActor* otherActor);
 
 	void PlaySound() const;
 	ACell* Spawn(const FVector& spawn, const FRotator& rot) const;

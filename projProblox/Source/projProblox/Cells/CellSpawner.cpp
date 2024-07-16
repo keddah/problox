@@ -63,19 +63,19 @@ void ACellSpawner::Init()
 	EarlySpawn();
 }
 
-void ACellSpawner::Overlap(AActor* otherActor)
+bool ACellSpawner::Overlap(AActor* otherActor)
 {
 	// If the trigger's relative location is unchanged, don't do anything..
-	if(!triggerable) return;
-	if(!otherActor) return;
+	if(!triggerable) return false;
+	if(!otherActor) return false;
 	
 	// Only do something if the core collides (not connectors)....
-	if(otherActor->IsA<ACubeConnector>()) return;
+	if(otherActor->IsA<ACubeConnector>()) return false;
 
 	APickupableMaster* other = Cast<APickupableMaster>(otherActor);
 
 	// The thing that collided wasn't a pickupable
-	if(!other) return;
+	if(!other) return false;
 
 	// Try to get the pickupables core
 	if(ACubeCore* otherCore = other->GetCore())
@@ -93,6 +93,8 @@ void ACellSpawner::Overlap(AActor* otherActor)
 
 	PlaySound();
 	triggerable = false;
+
+	return true;
 }
 
 void ACellSpawner::PlaySound() const
