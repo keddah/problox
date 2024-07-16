@@ -28,7 +28,6 @@ ACell::ACell()
 	hitBox->SetupAttachment(body);
 	hitBox->SetRelativeScale3D({.05f,.05f,.05f});
 	hitBox->SetSphereRadius(100);
-	
 }
 
 // Called when the game starts or when spawned
@@ -81,9 +80,13 @@ void ACell::Teleport(const FVector& pos)
 void ACell::SetDormant(const bool dormant)
 {
 	if(dormant) isHoming = false;
-	
+
+	PrimaryActorTick.bCanEverTick = !dormant;
+	SetActorEnableCollision(!dormant);
+	SetActorHiddenInGame(dormant);
+
+	// ACCESSING "body" RANDOMLY CAUSES EXCEPTION ERRORS
 	// Enable/disable physics and hide/show actor
 	if(body) body->SetSimulatePhysics(!dormant);
-	SetActorHiddenInGame(dormant);
 }
 

@@ -124,14 +124,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->BuildControls(Z_Param_Out_hit,Z_Param_deltaTime);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(APlayerCharacter::execDetach)
-	{
-		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_hit);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->Detach(Z_Param_Out_hit);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(APlayerCharacter::execConfirm)
 	{
 		P_FINISH;
@@ -223,7 +215,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "BuildControls", &APlayerCharacter::execBuildControls },
 			{ "Confirm", &APlayerCharacter::execConfirm },
 			{ "Deselect", &APlayerCharacter::execDeselect },
-			{ "Detach", &APlayerCharacter::execDetach },
 			{ "EjectAll", &APlayerCharacter::execEjectAll },
 			{ "EjectObject", &APlayerCharacter::execEjectObject },
 			{ "EndGame", &APlayerCharacter::execEndGame },
@@ -426,54 +417,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Deselect_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_APlayerCharacter_Detach_Statics
-	{
-		struct PlayerCharacter_eventDetach_Parms
-		{
-			FHitResult hit;
-		};
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_hit_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_hit;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit = { "hit", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventDetach_Parms, hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit_MetaData), Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit_MetaData) }; // 1891709922
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_Detach_Statics::NewProp_hit,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_Detach_Statics::Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// The hit object will try to get its parent then detach everything from that parent (if no parent it assumes it's the core to detach all from).\n" },
-#endif
-		{ "ModuleRelativePath", "PlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The hit object will try to get its parent then detach everything from that parent (if no parent it assumes it's the core to detach all from)." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_Detach_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "Detach", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PlayerCharacter_eventDetach_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_Detach_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_Detach_Statics::PlayerCharacter_eventDetach_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_APlayerCharacter_Detach()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_Detach_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1028,7 +971,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_BuildControls, "BuildControls" }, // 1582125953
 		{ &Z_Construct_UFunction_APlayerCharacter_Confirm, "Confirm" }, // 2101215247
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 2189380603
-		{ &Z_Construct_UFunction_APlayerCharacter_Detach, "Detach" }, // 3227070589
 		{ &Z_Construct_UFunction_APlayerCharacter_EjectAll, "EjectAll" }, // 853812392
 		{ &Z_Construct_UFunction_APlayerCharacter_EjectObject, "EjectObject" }, // 312383470
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
@@ -1343,9 +1285,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2527694996U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 3286629683U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2293726500U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_1763844983(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_4220107993(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

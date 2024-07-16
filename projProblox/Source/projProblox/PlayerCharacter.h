@@ -179,11 +179,6 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void Confirm();
 
-	// The hit object will try to get its parent then detach everything from that parent (if no parent it assumes it's the core to detach all from).
-	UFUNCTION(BlueprintCallable)
-	void Detach(const FHitResult& hit);
-
-	// To be used in tandem with Detach()
 	void DetachAll(APickupableMaster* obj);
 	
 	UFUNCTION(BlueprintCallable)

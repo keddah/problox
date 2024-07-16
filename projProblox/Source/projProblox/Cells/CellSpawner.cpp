@@ -30,6 +30,15 @@ ACellSpawner::ACellSpawner()
 	params.bNoFail = true;
 }
 
+void ACellSpawner::SetCellsDormant(bool dormant)
+{
+	for(auto& cell : spawnedCells)
+	{
+		// Only if the cells haven't been collected..
+		if(cell) if(!cell->IsSafe()) cell->SetDormant(dormant);
+	}
+}
+
 void ACellSpawner::SetCollectedCellsDormant(bool dormant)
 {
 	for(const auto& cell : spawnedCells)

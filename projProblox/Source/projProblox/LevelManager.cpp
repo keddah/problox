@@ -264,6 +264,7 @@ void ALevelManager::InitSpawners()
 		// Always stop the send when the level changes
 		onLevelChanged.AddDynamic(spawner, &ACellSpawner::StopSound);
 	}
+	onLevelChanged.AddDynamic(this, &ALevelManager::WakeSleepCells);
 }
 
 void ALevelManager::SelectSpawn(const int spawnPoint)
@@ -318,7 +319,8 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	onSpawnChanged.Broadcast(spawnPoint);
 }
 
-void ALevelManager::WakeSleepCells()
+// Needs to happen after everything has finished loading
+void ALevelManager::WakeSleepCells(int i, ELevel lvl)
 {
 	for(auto& spawner : cellSpawners)
 	{
@@ -373,8 +375,6 @@ void ALevelManager::OnHidden()
 
 void ALevelManager::OnShown()
 {
-	WakeSleepCells();
-
 	ELevel lvl;
 	
 	// Broadcast the level change

@@ -281,30 +281,6 @@ void APlayerCharacter::SelectObject(APickupableMaster* obj)
 	GoToSlot();
 }
 
-void APlayerCharacter::Detach(const FHitResult& hit)
-{
-	if(!hit.bBlockingHit) return;
-	
-	// if the cast is successful...
-	if(ACubeCore* hitCore = Cast<ACubeCore>(hit.GetActor()))
-	{
-		// When middle clicking a core... check if it has a parent core...
-		// If it has a parent core...
-		if(ACubeCore* parentCore = hitCore->GetCore())
-		{
-			DetachAll(parentCore);
-			return;
-		}
-
-		// Otherwise just detach everything on the hit core.
-		DetachAll(hitCore);
-		return;
-	}
-
-	// Otherwise try to cast to the pickupmaster and get its parent... so that it can detach all..
-	if(APickupableMaster* obj = Cast<APickupableMaster>(hit.GetActor())) DetachAll(obj);
-}
-
 void APlayerCharacter::Deselect()
 {
 	if(!selectedObj) return;

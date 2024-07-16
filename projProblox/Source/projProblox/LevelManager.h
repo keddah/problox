@@ -99,7 +99,8 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	
 	
 	////////////// CELLS ///////////
-	void WakeSleepCells();
+	UFUNCTION()
+	void WakeSleepCells(int i, ELevel lvl);
 	
 public:	
 	// Sets default values for this actor's properties

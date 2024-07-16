@@ -30,6 +30,8 @@ AGrappler::AGrappler()
 
 	params.Owner = this;
 	params.bNoFail = true;
+
+	grappleLine->SetHiddenInGame(true);
 }
 
 void AGrappler::SetAbilityActive(const bool value)

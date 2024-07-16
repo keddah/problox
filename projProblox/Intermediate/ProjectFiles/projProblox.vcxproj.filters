@@ -1777,14 +1777,5 @@
     <ClInclude Include="..\..\Source\projProblox\Pickupables\Magnet\MagPole.h">
       <Filter>Source\projProblox\Pickupables\Magnet</Filter>
     </ClInclude>
-    <Filter Include="Source\projProblox\UndoRedo">
-      <UniqueIdentifier>{F8B987BD-3186-3753-A227-1399F32FA508}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\projProblox\UndoRedo\ActionHistory.cpp">
-      <Filter>Source\projProblox\UndoRedo</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\projProblox\UndoRedo\ActionHistory.h">
-      <Filter>Source\projProblox\UndoRedo</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

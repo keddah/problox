@@ -139,13 +139,7 @@ public:
 	ACellSpawner();
 
 	// Hides and deactivates the physics for all the unsafe spawned cells
-	void SetCellsDormant(bool dormant)
-	{
-		for(auto& cell : spawnedCells)
-		{
-			if(cell) if(!cell->IsSafe()) cell->SetDormant(dormant);
-		}
-	}
+	void SetCellsDormant(bool dormant);
 	
 	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
 	void SetCollectedCellsDormant(bool dormant);
