@@ -252,7 +252,7 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	{
 		if(obj->IsA<ABalloon>())
 		{
-			obj->GetMesh()->SetSimulatePhysics(true);
+			obj->GetMesh()->SetSimulatePhysics(currentMode == EGameMode::Story);
 
 			// Since balloons aren't actually attached to the core....
 			obj->SetActorLocation(lastSpawnPos + FVector(0,0,100));
@@ -291,10 +291,9 @@ void ACubeCore::EndTurn(const bool force) const
 	constexpr float helper = 27;
 	const float elapsedTime = manager.GetTimerElapsed(resetTimer);
 
-	// A quarter way done??
 	const bool canSkip = (elapsedTime / longestDuration) > endTurnPercent * .4f && longestDuration >= helper;
 	
-	const float percent = canSkip? elapsedTime / longestDuration : 1;
+	const float percent = canSkip? 1 : elapsedTime / longestDuration;
 	if(percent < endTurnPercent) return;
 
 	// Clear the timer
