@@ -30,7 +30,7 @@ ACellSpawner::ACellSpawner()
 	params.bNoFail = true;
 }
 
-void ACellSpawner::WakeSleepCollectedCells(bool dormant)
+void ACellSpawner::SetCollectedCellsDormant(bool dormant)
 {
 	for(const auto& cell : spawnedCells)
 	{

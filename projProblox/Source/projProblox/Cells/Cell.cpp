@@ -80,8 +80,6 @@ void ACell::Teleport(const FVector& pos)
 
 void ACell::SetDormant(const bool dormant)
 {
-	if(safe) return;
-
 	if(dormant) isHoming = false;
 	
 	// Enable/disable physics and hide/show actor

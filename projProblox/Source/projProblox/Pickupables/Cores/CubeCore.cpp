@@ -134,8 +134,6 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	socketInfo->AddAttachment(attachment, socket);
 	ToggleGravity();
 	isAttached = true;
-
-	onChangeAttachments.Broadcast();
 }
 
 void ACubeCore::RemoveAttachment(const FName& socket)
@@ -150,8 +148,6 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 	
 	socketInfo->RemoveAttachment(socket);
 	mesh->SetEnableGravity(true);
-
-	onChangeAttachments.Broadcast();
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
@@ -160,8 +156,6 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	
 	socketInfo->RemoveAttachment(obj);
 	mesh->SetEnableGravity(true);
-
-	onChangeAttachments.Broadcast();
 }
 
 TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)

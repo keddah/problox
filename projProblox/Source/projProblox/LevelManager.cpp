@@ -322,13 +322,16 @@ void ALevelManager::WakeSleepCells()
 {
 	for(auto& spawner : cellSpawners)
 	{
-		ELevel levelEnum = ELevel::BuildArea;
-		
+		ELevel levelEnum;
 		if(currentLevel == 1) levelEnum = ELevel::Bedroom;
 		else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
 		else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
+		else levelEnum = ELevel::BuildArea;
 
-		spawner->WakeSleepCollectedCells(levelEnum != ELevel::BuildArea);
+		// Sleep the collected cells if the level enum isn't the build area ... otherwise wake them
+		spawner->SetCollectedCellsDormant(levelEnum != ELevel::BuildArea);
+		
+		// Sleep the rest of the cells if the level enum aren't matching ... otherwise wake them
 		spawner->SetCellsDormant(spawner->GetLevelEnum() != levelEnum);
 	}
 }

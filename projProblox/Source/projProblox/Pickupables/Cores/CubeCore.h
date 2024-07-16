@@ -35,9 +35,6 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnTurnStarted);
 // Should be broadcast whenever more cells are spawned in after the game has already started.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSpawnedCells);
 
-// Should be broadcast whenever an object is added/removed from this cube.
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAttachmentChange);
-
 // Should be broadcast when the reset timer has elapsed.. 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnReset);
 
@@ -140,9 +137,6 @@ private:
 	UPROPERTY(BlueprintAssignable)
 	FOnAddedCell onAddedCell;
 
-	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when an attachment has been added or removed from this core."))
-	FOnAttachmentChange onChangeAttachments;
-	
 	float longestDuration;
 	
 	UPROPERTY(EditDefaultsOnly, meta = (ClampMin = 0, ClampMax = 1, Delta = .05f, meta = "The percentage of the turn that needs to have happened before the player can end the turn early."))

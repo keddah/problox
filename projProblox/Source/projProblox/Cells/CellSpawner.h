@@ -138,11 +138,17 @@ public:
 	// Sets default values for this actor's properties
 	ACellSpawner();
 
-	// Hides and deactivates the physics for all its spawned cells
-	void SetCellsDormant(bool dormant) { for(auto& cell : spawnedCells) if(cell) cell->SetDormant(dormant); }
-
+	// Hides and deactivates the physics for all the unsafe spawned cells
+	void SetCellsDormant(bool dormant)
+	{
+		for(auto& cell : spawnedCells)
+		{
+			if(cell) if(!cell->IsSafe()) cell->SetDormant(dormant);
+		}
+	}
+	
 	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
-	void WakeSleepCollectedCells(bool dormant);
+	void SetCollectedCellsDormant(bool dormant);
 	
 	
 	/////////////////////////// VARIABLES ///////////////////////////
