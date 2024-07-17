@@ -18,6 +18,37 @@
 #include "Cores/Connectors/CubeConnector.h"
 
 
+void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if(OtherActor->IsA<APickupableMaster>()) return;
+	
+	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
+	constexpr float minForce = 800;
+	const float force = velocity.Length();
+	
+	if(force < minForce) return;
+
+	soundPlayer->SetFloatParam("ImpactForce", ::cbrt(force) * .35f);
+	soundPlayer->PlayImpact();
+	PrintFloat(sqrt(force), 3)
+}
+
+void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if(OtherActor->IsA<APickupableMaster>()) return;
+	
+	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
+	constexpr float minForce = 800;
+	const float force = velocity.Length();
+	
+	if(force < minForce) return;
+
+	soundPlayer->SetFloatParam("ImpactForce", std::cbrt(force) * .35f);
+	soundPlayer->PlayImpact();
+	PrintFloat(sqrt(force), 3)
+}
+
 // Sets default values
 APickupableMaster::APickupableMaster()
 {
@@ -74,6 +105,15 @@ APickupableMaster::APickupableMaster()
 void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if(mesh) mesh->OnComponentHit.AddDynamic(this, &APickupableMaster::CollisionHitSFX);
+
+	if(mouseDetector)
+	{
+		mouseDetector->OnComponentHit.AddDynamic(this, &APickupableMaster::CollisionHitSFX);
+		mouseDetector->OnComponentBeginOverlap.AddDynamic(this, &APickupableMaster::CollisionOverlapSFX);
+		mouseDetector->OnComponentBeginOverlap.AddDynamic(this, &APickupableMaster::PickupCell);
+	}
 	
 	if(soundPlayer && mesh) soundPlayer->Attach(mesh);
 
@@ -107,16 +147,11 @@ void APickupableMaster::Tick(float DeltaTime)
 	Ability(DeltaTime);
 }
 
-void APickupableMaster::NotifyActorBeginOverlap(AActor* OtherActor)
+void APickupableMaster::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	Super::NotifyActorBeginOverlap(OtherActor);
 	if(!parentCore) return;
 
-	// Don't allow cells to be collected from this collider.
-	if(!Tags.IsEmpty()) return;
-
-	// Successful cast???
-	if(Cast<ACell>(OtherActor)) parentCore->AddCell(OtherActor);
+	if(Cast<ACell>(OtherActor)) parentCore->PickupCell(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
 }
 
 // Should only be called in the Placement Function at the very end....

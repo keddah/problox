@@ -51,6 +51,7 @@ public:
 	void PlayAttach(float startTime = 0) { PlaySound(0, startTime); }
 	void PlayDetach(float startTime = 0) { PlaySound(1, startTime); }
 	void PlayDetachAll(const float startTime = 0) { PlaySound(2, startTime); }
+	void PlayImpact(const float startTime = 0) { PlaySound(3, startTime); }
 
 	UFUNCTION(BlueprintCallable)
 	void PlayAbility() { PlaySound(sounds.Num() - 1); }

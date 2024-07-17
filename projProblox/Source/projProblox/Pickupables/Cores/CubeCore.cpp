@@ -191,16 +191,16 @@ float ACubeCore::GetMass() const
 }
 
 // Passing an actor to work around the #include dependency loop.....
-void ACubeCore::AddCell(AActor* cell) const
+void ACubeCore::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if(!IsValid(collector)) return;
-	if(!IsValid(cell)) return;
+	if(!IsValid(OtherActor)) return;
 
-	if(ACell* thing = Cast<ACell>(cell))
+	if(ACell* cell = Cast<ACell>(OtherActor))
 	{
 		// Using a delegate so that it can send a message to the blueprint (because ui...)
-		thing->Teleport(collector->GetCollectPoint());
-		onAddedCell.Broadcast(thing);
+		cell->Teleport(collector->GetCollectPoint());
+		onAddedCell.Broadcast(cell);
 	}
 }
 

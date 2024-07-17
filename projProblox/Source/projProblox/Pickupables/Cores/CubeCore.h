@@ -251,6 +251,6 @@ public:
 	void Teleport(const FRotator& rot, const FVector& pos, bool respawning = false);
 	void EndTurn(bool force = false) const;
 	
-	void AddCell(AActor* cell) const;
+	virtual void PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) override;
 	void LoseMoney(const short amount) const { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }
 };

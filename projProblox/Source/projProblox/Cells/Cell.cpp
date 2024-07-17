@@ -88,6 +88,9 @@ void ACell::Teleport(const FVector& pos)
 
 void ACell::SetDormant(const bool dormant)
 {
+	// ???
+	if(!this) return;
+	
 	if(dormant) isHoming = false;
 
 	PrimaryActorTick.bCanEverTick = !dormant;

@@ -18,6 +18,7 @@ class PROJPROBLOX_API ABounceSpring : public APickupableMaster
 	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); springLength = 0; }
 	virtual void RemoveVelocity() const override;
 	virtual void SetShowMesh(const bool enable) const override;
+	virtual void CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) override {}
 	
 	bool contracting;
 

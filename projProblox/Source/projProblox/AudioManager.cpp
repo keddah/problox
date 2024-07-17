@@ -21,7 +21,10 @@ void UAudioManager::LoadSoundFiles()
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_detach.MS_detach'")));
 	// Eject
 	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_ejection.MS_ejection'")));
+
 	// Collision
+	sounds.Add(LoadObject<USoundWave>(0, TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_Impact.MS_Impact'")));
+	if(sounds.IsValidIndex(3)) sounds[3]->bLooping = false;
 }
 
 void UAudioManager::PlaySound(const int index, const float startTime)
