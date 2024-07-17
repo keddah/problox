@@ -58,13 +58,13 @@ void ACellSpawner::BeginPlay()
 
 	// Can't preview if triggerable 
 	previewed = !triggerable;
-	if(objective) objective->SetOwner(this);
+	if(IsValid(objective)) objective->SetOwner(this);
 }
 
 void ACellSpawner::Init()
 {
 	wrld = GetWorld();
-	if (!wrld)
+	if (!IsValid(wrld))
 	{
 		Print("World was invalid at begin play ~ spawner", 5);
 		return;
@@ -77,7 +77,7 @@ bool ACellSpawner::Overlap(AActor* otherActor)
 {
 	// If the trigger's relative location is unchanged, don't do anything..
 	if(!triggerable) return false;
-	if(!otherActor) return false;
+	if(!IsValid(otherActor)) return false;
 	
 	// Only do something if the core collides (not connectors)....
 	if(otherActor->IsA<ACubeConnector>()) return false;
@@ -85,7 +85,7 @@ bool ACellSpawner::Overlap(AActor* otherActor)
 	APickupableMaster* other = Cast<APickupableMaster>(otherActor);
 
 	// The thing that collided wasn't a pickupable
-	if(!other) return false;
+	if(!IsValid(other)) return false;
 
 	// Try to get the pickupables core
 	if(ACubeCore* otherCore = other->GetCore())
@@ -109,13 +109,13 @@ bool ACellSpawner::Overlap(AActor* otherActor)
 
 void ACellSpawner::PlaySound() const
 {
-	if (!soundPlayer)
+	if (!IsValid(soundPlayer))
 	{
 		Print("The sound player was invalid...", 4)
 		return;
 	}
 	
-	if (!soundToPlay)
+	if (!IsValid(soundToPlay))
 	{
 		// Print("There was no sound given...", 4)
 		return;
@@ -166,7 +166,7 @@ void ACellSpawner::EarlySpawn()
 	if(triggerable) return;
 
 	if(!previewed) return;
-	if(!wrld)
+	if(!IsValid(wrld))
 	{
 		Print("World was invalid... couldn't spawn cells.", 5)
 		return;
@@ -197,7 +197,7 @@ void ACellSpawner::SpawnWithForce()
 	// Don't allow things to spawn if the objective has already been done.
 	// if(HasObjective()) if(objective->IsCompleted()) return;
 	
-	if(!wrld)
+	if(!IsValid(wrld))
 	{
 		Print("World was invalid... couldn't spawn cells.", 5)
 		return;
@@ -221,7 +221,7 @@ void ACellSpawner::SpawnWithForce()
 	spawned = true;
 
 	onTriggered.Broadcast(this);
-	if(objective) objective->SetCompleted();
+	if(IsValid(objective)) objective->SetCompleted();
 }
 
 int ACellSpawner::GetCollectedAmount() const
@@ -229,7 +229,7 @@ int ACellSpawner::GetCollectedAmount() const
 	if(spawnedCells.IsEmpty()) return 0;
 
 	int count = 0;
-	for(const auto& cell : spawnedCells) if(cell->IsSafe()) count++;
+	for(const auto& cell : spawnedCells) if(IsValid(cell)) if(cell->IsSafe()) count++;
 
 	return count;
 }
@@ -237,6 +237,6 @@ int ACellSpawner::GetCollectedAmount() const
 int ACellSpawner::GetValidSpawnAmount() const
 {
 	int count = 0;
-	for(const auto& cell: spawnedCells) if(cell) count++;
+	for(const auto& cell: spawnedCells) if(IsValid(cell)) count++;
 	return count;
 }

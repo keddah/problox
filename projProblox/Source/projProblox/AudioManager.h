@@ -62,6 +62,12 @@ public:
 		if(player->Sound == sounds.Last()) StopSound();
 	}
 
+	void StopImpact()
+	{
+		// If the impact sound is currently the sound of the player, stop.
+		if(player->Sound == 3) StopSound();
+	}
+
 	// These to be called when setting parameters in meta sounds
 	void SetFloatParam(const FName& key, const float value) const { player->SetFloatParameter(key, value); }
 	void SetIntParam(const FName& key, const int value) const { player->SetIntParameter(key, value); }

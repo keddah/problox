@@ -11,7 +11,7 @@
 /////////////// BOUNCY ///////////////
 void ABouncyCell::Tick(float DeltaSeconds)
 {
-	if(!body) return;
+	if(!IsValid(body)) return;
 	if(!body->IsSimulatingPhysics()) return;
 
 	const FVector velocity = body->GetPhysicsLinearVelocity();
@@ -31,7 +31,7 @@ void ABouncyCell::Tick(float DeltaSeconds)
 /////////////// HOVER ///////////////
 void AHoverCell::Tick(float DeltaSeconds)
 {
-	if(!body) return;
+	if(!IsValid(body)) return;
 	if(!body->IsSimulatingPhysics()) return;
 	if(DeltaSeconds == NAN) return;
 
@@ -52,7 +52,7 @@ void AStickyCell::Tick(float DeltaSeconds)
 
 void AStickyCell::Unstick(const float deltaTime) const
 {
-	if(!body) return;
+	if(!IsValid(body)) return;
 	if(!stuck) return;
 	if(!body->IsSimulatingPhysics()) return;
 	if(deltaTime == NAN) return;
@@ -66,7 +66,7 @@ void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimiti
                             bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
-	if(!body) return;
+	if(!IsValid(body)) return;
 
 	// Stop the Thing from moving...
 	body->SetPhysicsLinearVelocity({0,0,0});
@@ -75,5 +75,5 @@ void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimiti
 	stuck = true;
 
 	// GEngine check needed (sometimes crashes without)
-	if(GEngine) body->SetMassOverrideInKg("", 100000);
+	if(IsValid(GEngine)) body->SetMassOverrideInKg("", 100000);
 }

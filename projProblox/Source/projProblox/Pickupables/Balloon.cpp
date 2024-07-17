@@ -123,7 +123,7 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 {
 	ResetGhost();
 
-	if(!parentCore)
+	if(!IsValid(parentCore))
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
@@ -131,7 +131,7 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 
 	SetHideOutlineMesh(true);
 	
-	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	parentCore->RemoveAttachment(attachedSocket);
 
 	constraint->Deactivate();
 	constraint->BreakConstraint();
@@ -146,7 +146,7 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 	
 	silhouette->SetupAttachment(mesh);
 
-	if(parentCore && soundPlayer && playSound) soundPlayer->PlayDetach();
+	if(IsValid(soundPlayer) && playSound) soundPlayer->PlayDetach();
 
 	parentCore = nullptr;
 	isAttached = false;
@@ -154,7 +154,7 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 
 void ABalloon::BalloonAttach()
 {
-	if(!parentCore) return;
+	if(!IsValid(parentCore)) return;
 	
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
@@ -166,9 +166,15 @@ void ABalloon::BalloonAttach()
 
 void ABalloon::GhostPlacement()
 {
-	if(!parentCore)
+	if(!IsValid(parentCore))
 	{
 		Print("Couldn't do ghost placement because there's no core", 4)
+		return;
+	}
+
+	if(!IsValid(silhouette))
+	{
+		Print("Couldn't do ghost placement because the silhouette was invalid", 4)
 		return;
 	}
 	silhouette->SetHiddenInGame(false);

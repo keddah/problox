@@ -122,8 +122,6 @@ void ACubeConnector::Detach(bool playSound, const float _detachForce, const floa
 		return;
 	}
 
-	SetAbilityActive(false);
-
 	SetHideOutlineMesh(true);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	

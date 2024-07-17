@@ -38,7 +38,7 @@ class PROJPROBLOX_API AGrappler : public APickupableMaster
 	// If this is called whilst the hook is valid, destroy the hook (this means pressing the ability button after the grapple has been launched will destroy the grapple).  
 	virtual void SetAbilityActive(const bool value) override;
 
-	void SetupLine() const { grappleLine->CableLength = 2500; if(hook) grappleLine->SetAttachEndTo(hook, ""); }
+	void SetupLine() const { grappleLine->CableLength = 2500; if(IsValid(hook)) grappleLine->SetAttachEndTo(hook, ""); }
 
 	UFUNCTION(BlueprintCallable, Category = "Ability")
 	void Pull(const FVector& direction, const float speed) { mesh->AddForce(direction * speed * 1000); }

@@ -46,12 +46,12 @@ private:
 	ACubeCore* core;
 	
 	float attractionForce;
-	
 	bool isHoming;
 	
 	void GoHome() const;
 	bool safe;
 
+	
 public:
 	// When the core collects it...
 	UFUNCTION(BlueprintCallable, Category = "Collection")
@@ -61,7 +61,7 @@ public:
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
 
 	// Used for spawning and level transitions
-	void SetDormant(bool dormant);
+	void SetDormant(bool _dormant);
 	
 	UFUNCTION()
 	void DeactivateHoming() { isHoming = false;}

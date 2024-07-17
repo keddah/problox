@@ -37,20 +37,20 @@ AGrappler::AGrappler()
 void AGrappler::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-	if(hook)
+	if(IsValid(hook))
 	{
 		if(!active)
 		{
 			hook->Destroy();
 		}
 	}
-	if(active && soundPlayer) soundPlayer->PlayAbility();
+	if(active && IsValid(soundPlayer)) soundPlayer->PlayAbility();
 	
 	grappleLine->SetHiddenInGame(!active);
 	if(!active) return;
 	if(!wrld) return;
 	
 	// Spawn and set the hook
-	if(grappleSpawn && grappleHeadClass) hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
+	if(IsValid(grappleSpawn) && grappleHeadClass) hook = wrld->SpawnActor<AActor>(grappleHeadClass, grappleSpawn->GetComponentLocation(), grappleSpawn->GetComponentRotation(), params);
 	SetupLine();
 }

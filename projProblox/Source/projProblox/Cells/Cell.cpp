@@ -20,7 +20,6 @@ ACell::ACell()
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
 	body->SetRelativeScale3D({.85f, .85f,.85f});
 	body->SetSimulatePhysics(true);
-	RootComponent = body;
 
 	if(IsValid(GEngine)) body->SetMassOverrideInKg("", .01f);
 
@@ -55,7 +54,7 @@ void ACell::Tick(float DeltaSeconds)
 
 void ACell::GoHome() const
 {
-	if(!core || !body) return;
+	if(!IsValid(core) || !IsValid(body)) return;
 	if(!body->IsSimulatingPhysics()) return;
 	if(!isHoming) return;
 
@@ -71,7 +70,7 @@ void ACell::Teleport(const FVector& pos)
 	fx->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	if(fx->GetFXSystemAsset()) fx->ActivateSystem();
 	else Print("No vfx given..", 4)
-	
+
 	// Shrink so that more can fit in the collector
 	body->SetRelativeScale3D({.25f,.25f,.25f});
 
@@ -91,17 +90,14 @@ void ACell::SetDormant(const bool dormant)
 	// Is pending kill?
 	if(!IsValid(this)) return;
 
-	if(dormant) isHoming = false;
-
 	PrimaryActorTick.bCanEverTick = !dormant;
 	SetActorEnableCollision(!dormant);
-
-	if(!IsValid(body)) return;
-	// okman
-	// body->SetHiddenInGame(dormant);
-
-	// ACCESSING "body" WHEN LOADING LEVELS SOMETIMES CAUSES EXCEPTION ERRORS
-	// Enable/disable physics and hide/show actor
-	body->SetSimulatePhysics(!dormant);
+	if(IsValid(body))
+	{
+		body->SetHiddenInGame(dormant);
+		body->SetSimulatePhysics(!dormant);
+	}
+	
+	isHoming = false;
 }
 

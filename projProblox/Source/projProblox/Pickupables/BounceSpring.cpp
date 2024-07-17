@@ -32,13 +32,13 @@ ABounceSpring::ABounceSpring()
 
 void ABounceSpring::Ability(float deltaTime)
 {
-	if(!mesh)
+	if(!IsValid(mesh))
 	{
 		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
 	}
 
-	if(!parentCore)
+	if(!IsValid(parentCore))
 	{
 		Print("The parent core was invalid..: " + GetName().ToUpper(), 4)
 		return;
@@ -46,7 +46,7 @@ void ABounceSpring::Ability(float deltaTime)
 	
 	if(!isAttached) return;
 	
-	if(!wrld)
+	if(!IsValid(wrld))
 	{
 		Print("Bad world ~ Spring", 5)
 		return;

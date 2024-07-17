@@ -36,7 +36,7 @@ AHoverer::AHoverer()
 
 void AHoverer::Ability(float deltaTime)
 {
-	if(!mesh)
+	if(!IsValid(mesh))
 	{
 		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
@@ -53,6 +53,8 @@ void AHoverer::Ability(float deltaTime)
 
 	for(const auto& point : points)
 	{
+		if(!IsValid(point)) continue;
+		
 		for(int i = 0; i < 5; i++)
 		{
 			FHitResult hit;

@@ -35,18 +35,18 @@ APropeller::APropeller()
 
 void APropeller::Ability(const float deltaTime)
 {
-	if(!mesh)
+	if(!IsValid(mesh))
 	{
 		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
 	}
 	
-	if(soundPlayer) soundPlayer->SetFloatParam("roll", mesh->GetRelativeRotation().Yaw);
+	if(IsValid(soundPlayer)) soundPlayer->SetFloatParam("roll", mesh->GetRelativeRotation().Yaw);
 	if(!active) return;
 
 	mesh->AddLocalRotation({0, spinSpeed, 0});
 	
-	if(!parentCore) return;
+	if(!IsValid(parentCore)) return;
 
 	const FVector up = mesh->GetUpVector();
 	const bool vertical = up.Z >= .85f;
@@ -56,7 +56,7 @@ void APropeller::Ability(const float deltaTime)
     {
 		for	(const auto& obj : pushedObjs)
 		{
-    		if(!obj) continue;
+    		if(!IsValid(obj)) continue;
 
 			const float power = (pushForce * 1000) / sqrt(FVector::DistSquared(GetActorLocation(), obj->GetComponentLocation())) ;
 			obj->AddForce(up * power);
@@ -74,6 +74,8 @@ void APropeller::Ability(const float deltaTime)
 void APropeller::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
+	if(!IsValid(soundPlayer)) return;
+	
 	if(value) soundPlayer->PlayAbility();
 	else soundPlayer->StopAbility();
 }

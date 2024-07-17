@@ -20,6 +20,12 @@
 
 void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
+	{
+		soundPlayer->StopImpact();
+		return;
+	}
+
 	if(!IsValid(OtherActor)) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
 	
@@ -37,6 +43,12 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
+	{
+		soundPlayer->StopImpact();
+		return;
+	}
+	
 	if(!IsValid(OtherActor)) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
 	
@@ -262,8 +274,6 @@ void APickupableMaster::Detach(const bool playSound, float detachForce, float de
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
 	}
-
-	SetAbilityActive(false);
 
 	SetHideOutlineMesh(true);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
