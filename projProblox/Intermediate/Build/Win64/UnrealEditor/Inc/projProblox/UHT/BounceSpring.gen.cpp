@@ -212,9 +212,9 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABounceSpring, ABounceSpring::StaticClass, TEXT("ABounceSpring"), &Z_Registration_Info_UClass_ABounceSpring, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABounceSpring), 3455975246U) },
+		{ Z_Construct_UClass_ABounceSpring, ABounceSpring::StaticClass, TEXT("ABounceSpring"), &Z_Registration_Info_UClass_ABounceSpring, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABounceSpring), 3934886449U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_3095260321(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_3998734744(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -25,18 +25,8 @@ ATreads::ATreads()
 	
 	rotOffset = {90,0,0};
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
-}
 
-float ATreads::GetAttachOffset(const APickupableMaster& attachee)
-{
-	if(selected)
-	{
-		attachOffset = attachee.IsA<ACubeConnector>() && !attachee.IsA<AWedgeConnector>()? 50 : 0;
-		return Super::GetAttachOffset(attachee);
-	}
-	
-	attachOffset = attachee.IsA<ACubeConnector>()? 25 : 50;
-	return attachOffset;
+	soundPlayer->SetAbilityLooping(true);
 }
 
 void ATreads::Ability(const float deltaTime)

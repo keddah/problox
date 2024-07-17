@@ -285,7 +285,8 @@ void APlayerCharacter::Deselect()
 {
 	if(!selectedObj) return;
 
-	selectedObj->SetSelected(false);
+	selectedObj->Attach();
+	if(selectedObj == core) core->ToggleGravity(true);
 	selectedObj = nullptr;
 }
 
@@ -304,7 +305,7 @@ void APlayerCharacter::Confirm()
 	}
 
 	selectedObj->SetCore(core);
-	selectedObj->SetSelected(false);
+	selectedObj->Attach();
 
 	Deselect();
 }
@@ -477,28 +478,32 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 	constexpr float heightOffset = 100;
 	const FVector corePos = core->GetActorLocation();
 
-	core->SetSelected(true);
 	core->SetActorLocation({corePos.X, corePos.Y, corePos.Z + heightOffset});
 	const FRotator forwardRot = GetController()->GetViewTarget()->GetActorRotation();
 	
 	core->SetActorRotation({0, forwardRot.Yaw, 0});
+	core->ToggleGravity(false);
 }
 
-void APlayerCharacter::EjectAll()
+bool APlayerCharacter::EjectAll()
 {
-	if(currentMode != EGameMode::Build) return;
-	if(!core) return;
-
-	for (auto& obj : core->GetCloseAttachments())
+	if(currentMode != EGameMode::Build) return false;
+	if(!core) return false;
+	
+	const TArray<APickupableMaster*> attachments = core->GetCloseAttachments(); 
+	if(attachments.IsEmpty()) return false;
+	
+	for (const auto& obj : attachments)
 	{
-		core->EjectObject(obj);
+		core->EjectObject(obj, false);
 		
-		UWorld* wrld = GetWorld();
-		if(!wrld) return;
+		const UWorld* wrld = GetWorld();
+		if(!wrld) return false;
 
 		FTimerHandle destroyHandle;
 		FTimerDelegate timerDelegate = FTimerDelegate::CreateUObject(obj, &APickupableMaster::Deselect);
 		
 		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
 	}
+	return true;
 }

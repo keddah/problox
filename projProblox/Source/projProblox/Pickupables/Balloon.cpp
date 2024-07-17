@@ -91,30 +91,15 @@ void ABalloon::Ability(float deltaTime)
 	mesh->SetPhysicsLinearVelocity({coreVelocity.X * velocityDampner, coreVelocity.Y * velocityDampner, thisVelocity.Z + upAmount});
 }
 
-void ABalloon::SetSelected(const bool value)
+void ABalloon::Attach()
 {
-	selected = value;
-
-	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	mesh->SetUseCCD(selected);
-
-	ToggleGravity();
-
-	if(selected)
-	{
-		Detach(false);
-		mesh->SetEnableGravity(false);
-		
-		return;
-	}
-
 	if(!parentCore) return;
 	if(attachedSocket == NAME_None) return;
 
 	SetShowMesh(true);
 	UseSilhouetteTransform();
 	ResetGhost();
-	Attach();
+	BalloonAttach();
 
 	parentCore->AddAttachment(this, attachedSocket);
 	isAttached = true;
@@ -134,7 +119,7 @@ APickupableMaster* ABalloon::GetParent()
 	return this;
 }
 
-void ABalloon::Detach(const bool push)
+void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForce)
 {
 	ResetGhost();
 
@@ -145,33 +130,29 @@ void ABalloon::Detach(const bool push)
 	}
 
 	SetHideOutlineMesh(true);
-	RemoveVelocity();
 	
 	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
 
+	constraint->Deactivate();
 	constraint->BreakConstraint();
 	string->SetAttachEndToComponent(nullptr);
-	if(push)
-	{
-		const FVector launchDir = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(attachedSocket));
-		const float launchForce = GetMass();
+	
+	const FVector launchDir = UKismetMathLibrary::GetForwardVector(mesh->GetSocketRotation(attachedSocket));
 
-		constexpr float maxVelocity = 1000;
-		SetShowMesh(true);
-		mesh->SetSimulatePhysics(true);
-		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
-	}
+	SetShowMesh(true);
+	mesh->SetSimulatePhysics(true);
+	
+	AddVelocity(launchDir * detachForce);
 	
 	silhouette->SetupAttachment(mesh);
 
-	if(parentCore) soundPlayer->PlayDetach();
+	if(parentCore && soundPlayer && playSound) soundPlayer->PlayDetach();
 
-	ToggleGravity(true);
 	parentCore = nullptr;
 	isAttached = false;
 }
 
-void ABalloon::Attach()
+void ABalloon::BalloonAttach()
 {
 	if(!parentCore) return;
 	

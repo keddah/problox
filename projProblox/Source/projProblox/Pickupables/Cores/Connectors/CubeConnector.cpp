@@ -88,48 +88,6 @@ void ACubeConnector::GhostPlacement()
 	if(!rounded) silhouette->SetRelativeRotation(RoundRotation(silhouette->GetRelativeRotation(), -float(rounder)));
 }
 
-// The final position when attached is dependent on the silhouette/ghost's position and rotation
-void ACubeConnector::SetSelected(const bool value)
-{
-	selected = value;
-	ToggleGravity();
-	
-	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	mesh->SetUseCCD(selected);
-	
-	const AActor* self = this;
-	TArray<APickupableMaster*> children;
-	GetDescendents(self, children);
-
-	// Detach from its components if selected
-	if(selected)
-	{
-		Detach(false);
-
-		return;
-	}
-	
-	// Rotate/Manipulate self when it hits the core
-	if(!IsValid(parentCore)) return;
-	if(attachedSocket == NAME_None) return;
-	
-	// Use the silhouettes position/rotation...
-	UseSilhouetteTransform();
-
-	// Reset the ghost's rotation
-	ResetGhost();
-	SetShowMesh(true);
-
-	// Attach the actor to the parent with the target socket
-	AttachToActor(parentCore, attachRules, attachedSocket);
-
-	isAttached = true;
-	parentCore->AddAttachment(this, attachedSocket);
-	FindOppositeSocket();
-	
-	soundPlayer->PlayAttach();
-}
-
 float ACubeConnector::GetAttachOffset(const APickupableMaster& attachee)
 {
 	float distance;
@@ -154,11 +112,10 @@ void ACubeConnector::FindOppositeSocket()
 	else if(attachedSocket == "DOWN") oppositeSocket = "UP";
 }
 
-void ACubeConnector::Detach(const bool push)
+void ACubeConnector::Detach(bool playSound, const float _detachForce, const float _detachAngularForce)
 {
 	ResetGhost();
-	SetHideOutlineMesh(true);
-
+	
 	if(!parentCore)
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
@@ -168,31 +125,25 @@ void ACubeConnector::Detach(const bool push)
 	SetAbilityActive(false);
 
 	SetHideOutlineMesh(true);
-	RemoveVelocity();
-	
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	if(push && parentCore)
-	{
-		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
-		const float launchForce = GetMass();
+	
+	// Enable physics
+	mesh->SetSimulatePhysics(true);
+	const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
 
-		constexpr float maxVelocity = 1000;
-		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
-	}
+	// Ensure that the mesh is showing
+	SetShowMesh(true);
+
+	AddVelocity(launchDir * _detachForce);
+	mesh->AddTorqueInRadians(FMath::VRand() * _detachAngularForce, "", true);
 	
-	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
-	
+	parentCore->RemoveAttachment(attachedSocket);
 	silhouette->SetupAttachment(mesh);
 	
-	if(parentCore)
-	{
-		
-		// Only play the detach sound if there was a parent core
-		if(soundPlayer) soundPlayer->PlayDetach();
-		else Print("Sfx manager is invalid.....", 5)
-	}
+	// Only play the detach sound if there was a parent core
+	if(soundPlayer && playSound) soundPlayer->PlayDetach();
+	else if(!soundPlayer) Print("Sfx manager is invalid.....", 5)
 
-	ToggleGravity(true);
 	parentCore = nullptr;
 	isAttached = false;
 }

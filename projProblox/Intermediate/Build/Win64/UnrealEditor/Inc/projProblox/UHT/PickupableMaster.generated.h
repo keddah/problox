@@ -29,7 +29,7 @@ enum class EAttachmentIcon : uint8;
 	DECLARE_FUNCTION(execIsTimerRequired); \
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execSetAbilityActive); \
-	DECLARE_FUNCTION(execSetSelected); \
+	DECLARE_FUNCTION(execAttach); \
 	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execGhostSnapRotate); \
 	DECLARE_FUNCTION(execRotateHori); \

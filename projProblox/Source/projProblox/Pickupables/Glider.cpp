@@ -19,6 +19,8 @@ AGlider::AGlider()
 
 	favouredSlot = ECoreSockets::Up;
 	rotOffset = {-90,0,0};
+
+	soundPlayer->SetAbilityLooping(true);
 }
 
 void AGlider::Ability(const float deltaTime)

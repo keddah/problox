@@ -202,9 +202,10 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 	DEFINE_FUNCTION(ACubeCore::execEjectObject)
 	{
 		P_GET_OBJECT(APickupableMaster,Z_Param_toEject);
+		P_GET_UBOOL(Z_Param_playSound);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->EjectObject(Z_Param_toEject);
+		P_THIS->EjectObject(Z_Param_toEject,Z_Param_playSound);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execObjectInSocket)
@@ -217,10 +218,9 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 	}
 	DEFINE_FUNCTION(ACubeCore::execDetachAll)
 	{
-		P_GET_UBOOL(Z_Param_push);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->DetachAll(Z_Param_push);
+		*(TArray<APickupableMaster*>*)Z_Param__Result=P_THIS->DetachAll();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACubeCore::execPlayCollectSound)
@@ -356,11 +356,8 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 	{
 		struct CubeCore_eventDetachAll_Parms
 		{
-			bool push;
 			TArray<APickupableMaster*> ReturnValue;
 		};
-		static void NewProp_push_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_push;
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -369,22 +366,15 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	void Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_push_SetBit(void* Obj)
-	{
-		((CubeCore_eventDetachAll_Parms*)Obj)->push = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_push = { "push", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CubeCore_eventDetachAll_Parms), &Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_push_SetBit, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventDetachAll_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_DetachAll_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_push,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_ReturnValue_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_DetachAll_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_DetachAll_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Socket" },
-		{ "CPP_Default_push", "true" },
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns an array of all the attachments that were detached." },
@@ -408,8 +398,11 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		struct CubeCore_eventEjectObject_Parms
 		{
 			APickupableMaster* toEject;
+			bool playSound;
 		};
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_toEject;
+		static void NewProp_playSound_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_playSound;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -417,11 +410,18 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACubeCore_EjectObject_Statics::NewProp_toEject = { "toEject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventEjectObject_Parms, toEject), Z_Construct_UClass_APickupableMaster_NoRegister, METADATA_PARAMS(0, nullptr) };
+	void Z_Construct_UFunction_ACubeCore_EjectObject_Statics::NewProp_playSound_SetBit(void* Obj)
+	{
+		((CubeCore_eventEjectObject_Parms*)Obj)->playSound = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACubeCore_EjectObject_Statics::NewProp_playSound = { "playSound", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CubeCore_eventEjectObject_Parms), &Z_Construct_UFunction_ACubeCore_EjectObject_Statics::NewProp_playSound_SetBit, METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_EjectObject_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_EjectObject_Statics::NewProp_toEject,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_EjectObject_Statics::NewProp_playSound,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_EjectObject_Statics::Function_MetaDataParams[] = {
+		{ "CPP_Default_playSound", "true" },
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
 	};
 #endif
@@ -568,13 +568,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/////////////// Other ///////////////\n" },
-#endif
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Other" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "PlayCollectSound", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_PlayCollectSound_Statics::Function_MetaDataParams) };
@@ -835,6 +829,14 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_endTurnPercent;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_detachForce_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_detachForce;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_detachAngularForce_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_detachAngularForce;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_defaultAngularDrag_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_defaultAngularDrag;
@@ -866,12 +868,12 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACubeCore_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACubeCore_AddMoney, "AddMoney" }, // 2622269313
 		{ &Z_Construct_UFunction_ACubeCore_BroadcastNewCells, "BroadcastNewCells" }, // 666054514
-		{ &Z_Construct_UFunction_ACubeCore_DetachAll, "DetachAll" }, // 1080256491
-		{ &Z_Construct_UFunction_ACubeCore_EjectObject, "EjectObject" }, // 4071214313
+		{ &Z_Construct_UFunction_ACubeCore_DetachAll, "DetachAll" }, // 3006845982
+		{ &Z_Construct_UFunction_ACubeCore_EjectObject, "EjectObject" }, // 3941029764
 		{ &Z_Construct_UFunction_ACubeCore_GetCloseAttachments, "GetCloseAttachments" }, // 3455939932
 		{ &Z_Construct_UFunction_ACubeCore_GetGameMode, "GetGameMode" }, // 3576473203
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3391374434
-		{ &Z_Construct_UFunction_ACubeCore_PlayCollectSound, "PlayCollectSound" }, // 513470602
+		{ &Z_Construct_UFunction_ACubeCore_PlayCollectSound, "PlayCollectSound" }, // 2689541969
 		{ &Z_Construct_UFunction_ACubeCore_Start, "Start" }, // 761297033
 		{ &Z_Construct_UFunction_ACubeCore_StartGame, "StartGame" }, // 3000747638
 		{ &Z_Construct_UFunction_ACubeCore_StartStoryGame, "StartStoryGame" }, // 995764688
@@ -987,8 +989,28 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_endTurnPercent = { "endTurnPercent", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, endTurnPercent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_endTurnPercent_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_endTurnPercent_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce_MetaData[] = {
+		{ "Category", "Forces|Detachment" },
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The force to be applied when detaching." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce = { "detachForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, detachForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData[] = {
+		{ "Category", "Forces|Detachment" },
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The angular force to be applied when detaching." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce = { "detachAngularForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, detachAngularForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag_MetaData[] = {
-		{ "Category", "Drag" },
+		{ "Category", "Forces|Drag" },
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The angular drag that the mesh should have when a turn is active." },
@@ -998,7 +1020,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag = { "defaultAngularDrag", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, defaultAngularDrag), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_heavyAngularDrag_MetaData[] = {
-		{ "Category", "Drag" },
+		{ "Category", "Forces|Drag" },
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The angular drag that the mesh should have at the end of a turn." },
@@ -1044,6 +1066,8 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_resetTimer,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onAddedCell,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_endTurnPercent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_heavyAngularDrag,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted,
@@ -1088,9 +1112,9 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 2195965352U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1869307281U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_3897191322(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_1519056710(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

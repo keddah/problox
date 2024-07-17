@@ -60,31 +60,6 @@ void ACubeCore::BeginPlay()
 	else Print("Couldn't cast to game instance...", 4)
 }
 
-
-void ACubeCore::SetSelected(const bool value)
-{
-	// Not allowed to drop the cube if unable to collect 
-	selected = value;
-
-	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	mesh->SetUseCCD(selected);
-	SetEnableCollisions(!selected);
-	ToggleGravity();
-
-	// Reset the silhouette after using its transform
-	ResetGhost();
-}
-
-void ACubeCore::Detach(const bool push)
-{
-	if(!ObjectInSocket(raySocket)) return;
-
-	APickupableMaster* obj = socketInfo->GetObjectFromSocket(raySocket);
-	if(!obj) return;
-
-	obj->Detach(push);
-}
-
 void ACubeCore::ResetToStart() const
 {
 	if(mesh)
@@ -132,7 +107,6 @@ void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket
 	attachedSocket = socket;
 
 	socketInfo->AddAttachment(attachment, socket);
-	ToggleGravity();
 	isAttached = true;
 }
 
@@ -158,7 +132,7 @@ void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 	mesh->SetEnableGravity(true);
 }
 
-TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
+TArray<APickupableMaster*> ACubeCore::DetachAll()
 {
 	if(!socketInfo) return {};
 
@@ -170,7 +144,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll(const bool push)
 	{
 		if(!IsValid(obj)) continue;
 		
-		obj->Detach(push);
+		obj->Detach(false, detachForce * obj->GetMass(), detachAngularForce * obj->GetMass());
 	}
 
 	soundPlayer->PlayDetachAll();
@@ -184,22 +158,22 @@ void ACubeCore::SetAbilityActive(bool value)
 	if(IsValid(selectedObj)) selectedObj->SetAbilityActive(value);
 }
 
-void ACubeCore::EjectObject(APickupableMaster* toEject)
+void ACubeCore::EjectObject(APickupableMaster* toEject, const bool playSound)
 {
 	if(!toEject) return;
 
-	toEject->Detach(true);
-	soundPlayer->PlayDetachAll();
+	toEject->Detach(playSound, detachForce, detachAngularForce);
+	// soundPlayer->PlayDetachAll();
 }
 
-void ACubeCore::EjectObject(const FName& ejectSocket) const
+void ACubeCore::EjectObject(const FName& ejectSocket, const bool playSound) const
 {
 	APickupableMaster* toEject = socketInfo->GetObjectFromSocket(ejectSocket);
 
 	if(!toEject) return;
 
-	toEject->Detach(true);
-	soundPlayer->PlayDetachAll();
+	toEject->Detach(playSound, detachForce, detachAngularForce);
+	// soundPlayer->PlayDetachAll();
 }
 
 float ACubeCore::GetMass() const
@@ -322,15 +296,6 @@ void ACubeCore::RemoveVelocity() const
 	GetDescendents(self, children);
 	
 	for(const auto& obj : children) obj->RemoveVelocity();
-}
-
-void ACubeCore::ToggleGravity() const
-{
-	// Disable gravity on this.
-	Super::ToggleGravity();
-
-	// Disable gravity on all of the things attached to the core.
-	for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(!selected);
 }
 
 void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)

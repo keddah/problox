@@ -37,7 +37,6 @@ class PROJPROBLOX_API ACubeConnector : public ACubeCore
 public:
 	ACubeConnector();
 	
-	virtual void SetSelected(const bool value) override;
 	virtual void SetAbilityActive(bool value) override;
 
 	UFUNCTION(BlueprintCallable)
@@ -68,5 +67,5 @@ protected:
 	virtual void FindOppositeSocket();
 	
 	// Overriding so that it reverts back to the PickupableMaster version of "Detach"
-	virtual void Detach(bool push = false) override;
+	virtual void Detach(bool playSound, float detachForce, float detachAngularForce) override;
 };

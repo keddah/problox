@@ -3,9 +3,7 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	GetAttachedOffset
-*	Ability
-*	GhostPlacement
+*	SetAbilityActive
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -26,17 +24,15 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
-	virtual float GetAttachOffset(const APickupableMaster& attachee) override;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
-	UBoxComponent* driveTrigger;
-	
 	/////////////// Ability ///////////////
-
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
 	float moveSpeed = 5000;
 
 protected:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UBoxComponent* driveTrigger;
+	
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "When grounded, the ability is able to be activated... otherwise nothing will happen"))
 	bool grounded;
 };

@@ -22,7 +22,8 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	AMagnet() { favouredSlot = ECoreSockets::Up; }
+	AMagnet() { favouredSlot = ECoreSockets::Up; soundPlayer->SetAbilityLooping(true); }
+	
 	virtual void SetAbilityActive(const bool value) override
 	{
 		Super::SetAbilityActive(value);

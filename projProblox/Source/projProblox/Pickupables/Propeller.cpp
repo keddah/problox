@@ -29,6 +29,7 @@ APropeller::APropeller()
 	Tags.Add("NO");
 
 	favouredSlot = ECoreSockets::Up;
+	soundPlayer->SetAbilityLooping(true);
 }
 
 

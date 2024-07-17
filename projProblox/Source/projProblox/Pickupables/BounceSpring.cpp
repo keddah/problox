@@ -83,21 +83,6 @@ void ABounceSpring::Ability(float deltaTime)
 	if(!soundPlayer->IsPlaying()) soundPlayer->PlayAbility();
 }
 
-void ABounceSpring::ToggleGravity() const
-{
-	// Does the same for objMesh... Also calls RemoveVelocity
-	Super::ToggleGravity();
-
-	end->SetEnableGravity(!selected);
-}
-
-void ABounceSpring::ToggleGravity(bool gravityOn)
-{
-	Super::ToggleGravity(gravityOn);
-
-	end->SetEnableGravity(gravityOn);
-}
-
 void ABounceSpring::RemoveVelocity() const
 {
 	Super::RemoveVelocity();

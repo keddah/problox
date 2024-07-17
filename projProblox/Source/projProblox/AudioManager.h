@@ -29,13 +29,14 @@ private:
 	
 public:
 	void Attach(UPrimitiveComponent* parent) const { player->SetupAttachment(parent); }
-
+	
 	// Would mean that the sound effect is the last element (since the universal sounds are all created in the constructor).
 	// Call in the pickupable's constructor...
 	void AddAbilitySFX(const TCHAR* reference)
 	{
 		sounds.Add(LoadObject<USoundWave>(0,reference));
 	}
+	void SetAbilityLooping(const bool loop) { sounds[sounds.Num() - 1]->bLooping = loop; }
 
 	// This override is to be used by the core so that the collection sound can be added...
 	void AddAbilitySFX(const TCHAR* sfxRef, const TCHAR* collectionRef)

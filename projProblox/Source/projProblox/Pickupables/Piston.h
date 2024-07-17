@@ -28,7 +28,6 @@ class PROJPROBLOX_API APiston : public APickupableMaster
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
 	virtual void SetShowMesh(const bool enable) const override;
-	virtual void Detach(bool push = false) override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	UStaticMeshComponent* flatHead;

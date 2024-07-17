@@ -21,6 +21,12 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 	GENERATED_BODY()
 
 	AGlider();
+	virtual void SetAbilityActive(const bool value) override
+	{
+		Super::SetAbilityActive(value);
+		if(value) soundPlayer->PlayAbility();
+		else soundPlayer->StopAbility();
+	}
 	
 	virtual void Ability(float deltaTime) override;
 	

@@ -166,7 +166,7 @@ public:
 	}
 
 	UFUNCTION(BlueprintCallable)
-	void EjectAll();
+	bool EjectAll();
 	
 	
 private:

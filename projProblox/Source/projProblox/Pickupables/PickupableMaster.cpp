@@ -177,21 +177,8 @@ void APickupableMaster::GhostPlacement()
 	silhouette->AddRelativeRotation(rotOffset);
 }
 
-void APickupableMaster::SetSelected(const bool value)
+void APickupableMaster::Attach()
 {
-	selected = value;
-
-	// Only use continuous collisions while selected (to prevent objects from going through objects).
-	mesh->SetUseCCD(selected);
-	
-	ToggleGravity();
-	
-	if(selected)
-	{
-		Detach(false);
-		return;
-	}
-
 	if(!parentCore) return;
 	if(attachedSocket == NAME_None) return;
 
@@ -229,7 +216,7 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 	isAttached = true;
 }
 
-void APickupableMaster::Detach(const bool push)
+void APickupableMaster::Detach(const bool playSound, float detachForce, float detachAngularForce)
 {
 	ResetGhost();
 	
@@ -241,36 +228,26 @@ void APickupableMaster::Detach(const bool push)
 
 	SetAbilityActive(false);
 
-	// mesh->SetCollisionResponseToAllChannels(ECR_Ignore);
-	
 	SetHideOutlineMesh(true);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	if(push && parentCore)
-	{
-		// Enable physics
-		mesh->SetSimulatePhysics(true);
-		const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
-		const float launchForce = GetMass();
-		constexpr float maxVelocity = 1000;
-
-		// Ensure that the mesh is showing
-		SetShowMesh(true);
-
-		AddVelocity(launchDir * std::min(launchForce, maxVelocity));
-		mesh->AddTorqueInRadians(FMath::VRand() * launchForce, "", true);
-	}
 	
-	if(parentCore) parentCore->RemoveAttachment(attachedSocket);
+	// Enable physics
+	mesh->SetSimulatePhysics(true);
+	const FVector launchDir = UKismetMathLibrary::GetForwardVector(parentCore->GetMesh()->GetSocketRotation(attachedSocket));
+
+	// Ensure that the mesh is showing
+	SetShowMesh(true);
+
+	AddVelocity(launchDir * detachForce);
+	mesh->AddTorqueInRadians(FMath::VRand() * detachAngularForce, "", true);
+	
+	parentCore->RemoveAttachment(attachedSocket);
 	silhouette->SetupAttachment(mesh);
 	
-	if(parentCore)
-	{
-		// Only play the detach sound if there was a parent core
-		if(soundPlayer) soundPlayer->PlayDetach();
-		else Print("Sfx manager is invalid.....", 5)
-	}
+	// Only play the detach sound if there was a parent core
+	if(soundPlayer && playSound) soundPlayer->PlayDetach();
+	else if(!soundPlayer) Print("Sfx manager is invalid.....", 5)
 
-	ToggleGravity(true);
 	parentCore = nullptr;
 	isAttached = false;
 }
@@ -303,7 +280,7 @@ void APickupableMaster::Reattach(const FName& socket)
 	GhostPlacement();
 
 	// Calling set selected with false attaches the actual mesh to the core and uses the transform of the silhouette (also hides the silhouette)
-	SetSelected(false);
+	Attach();
 }
 
 FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool negate)

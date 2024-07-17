@@ -31,6 +31,7 @@ AHoverer::AHoverer()
 	sideRight->SetupAttachment(mesh);
 
 	favouredSlot = ECoreSockets::Down;
+	soundPlayer->SetAbilityLooping(true);
 }
 
 void AHoverer::Ability(float deltaTime)

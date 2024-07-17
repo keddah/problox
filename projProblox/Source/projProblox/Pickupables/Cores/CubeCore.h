@@ -53,9 +53,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void TimedObjectActivation(const TArray<int>& delays, const TArray<int>& durations, float _longestTime);
 
 
-	/////////////// Undo/Redo ///////////////
-
-	
 	/////////////// Game States ///////////////
 	UFUNCTION()
 	void Start();
@@ -124,14 +121,6 @@ protected:
 	FName oppositeSocket;
 
 
-	/////////////// Other ///////////////
-	virtual void ToggleGravity() const override;
-	virtual void ToggleGravity(bool gravityOn) override
-	{
-		Super::ToggleGravity(gravityOn);
-		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(gravityOn);
-	}
-	
 private:
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable)
@@ -142,27 +131,34 @@ private:
 	UPROPERTY(EditDefaultsOnly, meta = (ClampMin = 0, ClampMax = 1, Delta = .05f, meta = "The percentage of the turn that needs to have happened before the player can end the turn early."))
 	float endTurnPercent = .4f;
 
+	/////////////// Selection / Placement ///////////////
+	virtual void Attach() override {}
 
+	
 	/////////////// Other ///////////////
-	UPROPERTY(EditDefaultsOnly, Category = "Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
+	UPROPERTY(EditDefaultsOnly, Category = "Forces|Detachment", meta = (ToolTip = "The force to be applied when detaching."))
+	float detachForce = 3000;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Forces|Detachment", meta = (ToolTip = "The angular force to be applied when detaching."))
+	float detachAngularForce = 100;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Forces|Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
 	float defaultAngularDrag = .05f;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Drag", meta = (ToolTip = "The angular drag that the mesh should have at the end of a turn."))
+	UPROPERTY(EditDefaultsOnly, Category = "Forces|Drag", meta = (ToolTip = "The angular drag that the mesh should have at the end of a turn."))
 	float heavyAngularDrag = 1;
 
 	FVector lastSpawnPos;
 	
-
-	/////////////// Rotations ///////////////
-	virtual void ResetRotation(bool resetVelocity) override;
-
-	
-	/////////////// Other ///////////////
 	UFUNCTION(BlueprintCallable)
 	void PlayCollectSound() { soundPlayer->PlayAbility(); }
 	
 	void SetEnableCollisions(bool enable) const;
+
 	
+	/////////////// Rotations ///////////////
+	virtual void ResetRotation(bool resetVelocity) override;
+
 
 public:
 	/////////////// Attachments ///////////////
@@ -171,22 +167,22 @@ public:
 	virtual void RemoveAttachment(APickupableMaster* obj);
 
 	UFUNCTION(BlueprintCallable, Category = "Socket", meta = (ToolTip = "Returns an array of all the attachments that were detached."))
-	TArray<APickupableMaster*> DetachAll(bool push = true);
+	TArray<APickupableMaster*> DetachAll();
 	
 	UFUNCTION(BlueprintCallable, Category = "Socket")
 	bool ObjectInSocket(FName socketToCheck) const { return socketInfo->ObjectInSocket(socketToCheck); };
 
 	UFUNCTION(BlueprintCallable)
-	void EjectObject(APickupableMaster* toEject);
-	void EjectObject(const FName& ejectSocket) const;
+	void EjectObject(APickupableMaster* toEject, bool playSound = true);
+	void EjectObject(const FName& ejectSocket, bool playSound = true) const;
 	
 	/////////////// Abilities ///////////////
 	virtual void SetAbilityActive(bool value) override;
 
 	
 	/////////////// Selection/Placement ///////////////
-	virtual void SetSelected(const bool value) override;
-	virtual void Detach(bool push) override;
+	virtual void Detach(bool playSound, float _detachForce, float _detachAngularForce) override {}
+	
 	
 	/////////////// Turn System ///////////////
 	void ResetToStart() const;
@@ -243,6 +239,11 @@ public:
 	FOnSpawnedCells onCellsSpawned;
 	
 	/////////////// Other ///////////////
+	virtual void ToggleGravity(const bool on) const override
+	{
+		Super::ToggleGravity(on);
+		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(on);
+	}
 	virtual void RemoveVelocity() const override;
 
 	// To be used whenever the core goes out of bounds or when the core changes levels

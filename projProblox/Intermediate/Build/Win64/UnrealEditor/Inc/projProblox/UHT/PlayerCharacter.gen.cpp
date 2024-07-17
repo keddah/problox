@@ -142,7 +142,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->EjectAll();
+		*(bool*)Z_Param__Result=P_THIS->EjectAll();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(APlayerCharacter::execGetGameMode)
@@ -422,17 +422,34 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	}
 	struct Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics
 	{
+		struct PlayerCharacter_eventEjectAll_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((PlayerCharacter_eventEjectAll_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayerCharacter_eventEjectAll_Parms), &Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "EjectAll", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "EjectAll", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PlayerCharacter_eventEjectAll_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PlayerCharacter_eventEjectAll_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_APlayerCharacter_EjectAll()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -971,7 +988,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_BuildControls, "BuildControls" }, // 1582125953
 		{ &Z_Construct_UFunction_APlayerCharacter_Confirm, "Confirm" }, // 2101215247
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 2189380603
-		{ &Z_Construct_UFunction_APlayerCharacter_EjectAll, "EjectAll" }, // 853812392
+		{ &Z_Construct_UFunction_APlayerCharacter_EjectAll, "EjectAll" }, // 3093888074
 		{ &Z_Construct_UFunction_APlayerCharacter_EjectObject, "EjectObject" }, // 312383470
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
 		{ &Z_Construct_UFunction_APlayerCharacter_EndTurnEarly, "EndTurnEarly" }, // 2865316487
@@ -1285,9 +1302,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2527694996U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2293726500U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 436427515U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_4220107993(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_3136180491(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));

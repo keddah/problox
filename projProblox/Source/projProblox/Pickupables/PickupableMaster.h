@@ -95,9 +95,6 @@ protected:
 
 
 	/////////////// Selection / Placement ///////////////
-	UPROPERTY(BlueprintReadOnly)
-	bool selected;
-
 	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The slot that will automatically be selected (if availble) when an object is first selected."))
 	ECoreSockets favouredSlot = ECoreSockets::Front;
 	
@@ -201,12 +198,12 @@ public:
 	
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
-	virtual void SetSelected(const bool value);
+	virtual void Attach();
 
 	void Deselect()	{ Destroy(); }
 
 	virtual void Placement(ACubeCore* core, const FName& socket);
-	virtual void Detach(bool push = false);
+	virtual void Detach(bool playSound, float detachForce, float detachAngularForce);
 
 	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
 	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
@@ -274,19 +271,13 @@ public:
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	
 	virtual void SetShowMesh(const bool show) const { mesh->SetHiddenInGame(!show); }
-	
-	// Enable/Disable gravity when selected/deselected
-	virtual void ToggleGravity() const
-	{
-		mesh->SetEnableGravity(!selected);
-		if(selected) RemoveVelocity();
-	}
-	virtual void ToggleGravity(bool gravityOn)
-	{
-		mesh->SetEnableGravity(gravityOn);
-		if(!gravityOn) RemoveVelocity();	
-	}
 
+	virtual void ToggleGravity(const bool on) const
+	{
+		mesh->SetEnableGravity(on);
+		if(!on) RemoveVelocity();
+	}
+	
 	// Removes angular and linear velocity.
 	virtual void RemoveVelocity() const;
 

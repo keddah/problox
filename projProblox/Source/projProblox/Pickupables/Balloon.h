@@ -33,13 +33,13 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override { Super::SetAbilityActive(value); mesh->SetUseCCD(value); }
-	virtual void SetSelected(const bool value) override;
+	virtual void Attach() override;
 	virtual APickupableMaster* GetParent() override;
-	virtual void Detach(bool push = false) override;
+	virtual void Detach(bool playSound, float detachForce, float detachAngularForce) override;
 	virtual void GhostPlacement() override;
 	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = 0) override;
 	
-	void Attach();
+	void BalloonAttach();
 	
 	UFUNCTION()
 	void SaveResetTransform() { resetTransform = GetActorTransform(); }
