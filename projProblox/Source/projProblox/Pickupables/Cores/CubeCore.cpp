@@ -264,14 +264,19 @@ void ACubeCore::EndTurn(const bool force) const
 	const float percent = canSkip? 1 : elapsedTime / longestDuration;
 	if(percent < endTurnPercent) return;
 
-	// Clear the timer
-	for(auto& obj : GetCloseAttachments()) manager.ClearAllTimersForObject(obj);
-	
 	// Call the function the timer is supposed to call
 	ResetToStart();
 
 	// Deactivate all the attachments
-	for(const auto& obj : GetCloseAttachments()) obj->SetAbilityActive(false);
+	for(const auto& obj : GetCloseAttachments())
+	{
+		if(!IsValid(obj)) continue;
+		
+		obj->SetAbilityActive(false);
+		
+		// Clear the timer
+		manager.ClearAllTimersForObject(obj);
+	}
 }
 
 
