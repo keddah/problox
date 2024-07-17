@@ -20,6 +20,7 @@
 
 void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	if(!OtherActor) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
 	
 	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
@@ -36,6 +37,7 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	if(!OtherActor) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
 	
 	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();

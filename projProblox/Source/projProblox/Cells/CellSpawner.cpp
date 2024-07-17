@@ -32,6 +32,8 @@ ACellSpawner::ACellSpawner()
 
 void ACellSpawner::SetCellsDormant(bool dormant)
 {
+	if(spawnedCells.IsEmpty()) return;
+	
 	for(auto& cell : spawnedCells)
 	{
 		// Only if the cells haven't been collected..
