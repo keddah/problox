@@ -30,7 +30,7 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 
 	soundPlayer->SetFloatParam("ImpactForce", ::cbrt(force) * .35f);
 	soundPlayer->PlayImpact();
-	PrintFloat(sqrt(force), 3)
+	PrintFloat(std::cbrt(force) * .35f, 3)
 }
 
 void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
@@ -46,7 +46,7 @@ void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedCompo
 
 	soundPlayer->SetFloatParam("ImpactForce", std::cbrt(force) * .35f);
 	soundPlayer->PlayImpact();
-	PrintFloat(sqrt(force), 3)
+	PrintFloat(std::cbrt(force) * .35f, 3)
 }
 
 // Sets default values
