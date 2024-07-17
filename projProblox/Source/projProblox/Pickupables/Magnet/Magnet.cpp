@@ -29,8 +29,6 @@ void AMagnet::BeginPlay()
 
 	// Telling the other magnets in the level that this one was made...
 	for (const auto& mag : otherMagnets) mag->AddMagnet(this);
-
-	ConfigureMat();
 }
 
 void AMagnet::Ability(const float deltaTime)

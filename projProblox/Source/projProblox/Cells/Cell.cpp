@@ -85,7 +85,7 @@ void ACell::SetDormant(const bool dormant)
 	SetActorEnableCollision(!dormant);
 	SetActorHiddenInGame(dormant);
 
-	// ACCESSING "body" RANDOMLY CAUSES EXCEPTION ERRORS
+	// ACCESSING "body" WHEN LOADING LEVELS SOMETIMES CAUSES EXCEPTION ERRORS
 	// Enable/disable physics and hide/show actor
 	if(body) body->SetSimulatePhysics(!dormant);
 }

@@ -46,8 +46,7 @@ void ACellSpawner::SetCollectedCellsDormant(bool dormant)
 		if(!cell) continue;
 		
 		// Only if the cell is safe (SetCellsDormant handles unsafe cells) 
-		if(!cell->IsSafe()) continue;
-		cell->SetDormant(dormant);
+		if(cell->IsSafe()) cell->SetDormant(dormant);
 	}
 }
 
