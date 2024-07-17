@@ -163,7 +163,12 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\thruster.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\treads.gen.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\treads.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\treads.generated.h"
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\treads.generated.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\wedgeconnector.gen.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\connectors\\wedgeconnector.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\connectors\\cubeconnector.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\cubeconnector.generated.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\wedgeconnector.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

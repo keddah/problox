@@ -2622,3 +2622,507 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.17-09.23.11:151][983]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{962ec5b5-0153-4aa6-a223-ca82d11bfc26}, Name=Headphones (Xbox Controller)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=157.89
 [2024.07.17-09.23.11:151][983]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
 [2024.07.17-09.23.11:152][983]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2024.07.17-09.26.50:631][893]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.26.50:637][893]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.26.50:654][893]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.26.50:655][893]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.26.50:694][893]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.07.17-09.26.50:695][893]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.26.50:695][893]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.26.50:853][893]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_9:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.26.53:291][101]LogViewport: Scene viewport resized to 1095x685, mode Windowed.
+[2024.07.17-09.27.22:008][959]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\Grapple\BP_Grapple.uasset: [Compiler] Pasted node  CustomEvent   conflicted with  Event Tick  and was replaced as a Custom Event!
+[2024.07.17-09.27.57:611][442]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: ================================================
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: Total job queries 575, among them cache hits 324 (56.35%)
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: Tracking 251 distinct input hashes that result in 133 distinct outputs (52.99%)
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: RAM used: 5.27 MiB of 1.60 GiB budget. Usage: 0.32%
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: Shaders Compiled: 198
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: Jobs assigned 198, completed 198 (100%)
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: Average time worker was idle: 8.59 s
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: Time job spent in pending queue: average 0.05 s, longest 0.35 s
+[2024.07.17-09.27.57:621][442]LogShaderCompilers: Display: Job execution time: average 0.22 s, max 0.54 s
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Job life time (pending + execution): average 0.28 s, max 0.56
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Shader code size: average 35.297 KiB, min 29.613 KiB, max 61.574 KiB
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 16.74 s
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Jobs were issued in 198 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Average processing rate: 11.83 jobs/sec
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Total thread time: 32.393 s
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Total thread preprocess time: 3.594 s
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Percentage time preprocessing: 11.09%
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Effective parallelization: 1.93 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display:       TBasePassPSFCachedVolumeIndirectLightingPolicySkylight (compiled    1 times, average 0.30 sec, max 0.30 sec, min 0.30 sec)
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display:               TBasePassPSFCachedVolumeIndirectLightingPolicy (compiled    1 times, average 0.29 sec, max 0.29 sec, min 0.29 sec)
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display:        TBasePassPSFCachedPointIndirectLightingPolicySkylight (compiled    1 times, average 0.29 sec, max 0.29 sec, min 0.29 sec)
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display:                TBasePassPSFCachedPointIndirectLightingPolicy (compiled    1 times, average 0.28 sec, max 0.28 sec, min 0.28 sec)
+[2024.07.17-09.27.57:622][442]LogShaderCompilers: Display:      TBasePassPSFPrecomputedVolumetricLightmapLightingPolicy (compiled    1 times, average 0.26 sec, max 0.26 sec, min 0.26 sec)
+[2024.07.17-09.27.57:623][442]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.07.17-09.27.57:623][442]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 28.89% of total time (compiled   47 times, average 0.20 sec, max 0.23 sec, min 0.14 sec)
+[2024.07.17-09.27.57:623][442]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 26.06% of total time (compiled   47 times, average 0.18 sec, max 0.20 sec, min 0.16 sec)
+[2024.07.17-09.27.57:623][442]LogShaderCompilers: Display:                                                 FLumenCardVS - 24.56% of total time (compiled   45 times, average 0.18 sec, max 0.20 sec, min 0.16 sec)
+[2024.07.17-09.27.57:623][442]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 11.07% of total time (compiled   45 times, average 0.08 sec, max 0.09 sec, min 0.07 sec)
+[2024.07.17-09.27.57:623][442]LogShaderCompilers: Display:       TBasePassPSFCachedVolumeIndirectLightingPolicySkylight - 0.94% of total time (compiled    1 times, average 0.30 sec, max 0.30 sec, min 0.30 sec)
+[2024.07.17-09.27.57:623][442]LogShaderCompilers: Display: ================================================
+[2024.07.17-09.27.57:666][443]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.27.57:672][443]LogActor: Warning: BP_MagPole_C /Engine/Transient.World_11:PersistentLevel.BP_MagPole_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.27.57:690][444]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.27.57:695][444]LogActor: Warning: BP_Collector_C /Engine/Transient.World_12:PersistentLevel.BP_Collector_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:141][820]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:147][820]LogActor: Warning: BP_Treads_C /Engine/Transient.World_13:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:190][821]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:198][821]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_14:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:215][822]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:220][822]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_15:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:236][823]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:242][823]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_16:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:257][824]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:262][824]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_17:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:278][825]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:282][825]LogActor: Warning: BP_Glider_C /Engine/Transient.World_18:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:300][826]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:307][826]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_19:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:324][827]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:330][827]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_20:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.02:749][867]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.02:754][867]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_21:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.03:445][915]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore
+[2024.07.17-09.28.03:445][915]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.03:446][915]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.28.03:627][915]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.20:239][520]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.20:239][520]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.28.20:242][520]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.20:242][520]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.28.26:696][119]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.26:696][119]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.28.26:699][119]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.26:699][119]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.28.39:720][261]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.39:726][261]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_23:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.52:701][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:701][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:701][420]LogLinker: Warning: Unable to load Default__BP_Mode_Wave_C with outer Package /Game/Gamemodes/BP_Mode_Wave because its class (BP_Mode_Wave_C) does not exist
+[2024.07.17-09.28.52:701][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:701][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:701][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:702][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:702][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:702][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:702][420]LogBlueprint: Warning: FMemberReference::ResolveMember (IncreaseSpawns) bSelfContext == true, but no scope supplied!
+[2024.07.17-09.28.52:702][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:702][420]LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Gamemodes\BP_Mode_Wave.uasset: CreateExport: Failed to load Parent for BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:706][420]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.52:706][420]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.28.52:708][420]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.52:708][420]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.28.52:727][420]LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'ExecuteUbergraph_BP_Mode_Wave': BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:728][420]LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'NextWave': BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:728][420]LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'ReceiveBeginPlay': BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:728][420]LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'DefaultSceneRoot_GEN_VARIABLE': BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:728][420]LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'SimpleConstructionScript_0': BlueprintGeneratedClass /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C
+[2024.07.17-09.28.52:728][420]LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'SCS_Node_0': SimpleConstructionScript /Game/Gamemodes/BP_Mode_Wave.BP_Mode_Wave_C:SimpleConstructionScript_0
+[2024.07.17-09.28.54:067][534]BlueprintLog: New page: Compile BP_CubeCore
+[2024.07.17-09.28.54:086][534]LogActor: Warning: BP_CubeCore_C /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.54:089][534]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.54:089][534]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.28.54:089][534]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_21:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.54:090][534]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.54:091][534]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.54:091][534]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.28.54:114][534]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.07.17-09.28.54:120][534]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.54:120][534]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.28.54:121][534]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.54:121][534]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.28.54:121][534]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_21:PersistentLevel.BP_CubeCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.54:137][534]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.54:137][534]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.28.54:138][534]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.28.54:138][534]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.28.54:220][534]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.28.54:238][534]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.28.54:243][534]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_24:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.28.54:311][534]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCore
+[2024.07.17-09.28.54:312][534]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoreEE92E8E5426713265D4FE9B0E243EF0D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset'
+[2024.07.17-09.28.54:319][534]LogFileHelpers: InternalPromptForCheckoutAndSave took 99 ms (total: 881 ms)
+[2024.07.17-09.28.54:321][534]AssetCheck: New page: Asset Save: BP_CubeCore
+[2024.07.17-09.28.54:321][534]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore
+[2024.07.17-09.29.13:191][164]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.07.17-09.29.13:194][164]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.016
+[2024.07.17-09.29.13:194][164]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/Pickupables/Grapple/BP_Grapple] ([2] browsable assets)...
+[2024.07.17-09.29.13:195][164]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.29.13:201][164]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_25:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.13:243][164]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple_C]
+[2024.07.17-09.29.13:249][164]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple]
+[2024.07.17-09.29.13:249][164]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Pickupables/Grapple/BP_Grapple]
+[2024.07.17-09.29.13:256][164]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/Pickupables/Grapple/BP_Grapple_Auto1
+[2024.07.17-09.29.13:256][164]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grapple_Auto15E23B1FC4659B90F3C47C18B78216120.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Blueprints/Pickupables/Grapple/BP_Grapple_Auto1.uasset'
+[2024.07.17-09.29.13:257][164]LogFileHelpers: Auto-saving content packages took 0.063
+[2024.07.17-09.29.52:169][552]BlueprintLog: New page: Compile BP_CubeCore
+[2024.07.17-09.29.52:187][552]LogActor: Warning: BP_CubeCore_C /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.52:189][552]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.29.52:189][552]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.29.52:189][552]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.52:190][552]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.29.52:190][552]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.29.52:191][552]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_21:PersistentLevel.BP_CubeCore_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.52:192][552]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_24:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.52:211][552]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.07.17-09.29.52:215][552]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.29.52:215][552]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.29.52:215][552]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.29.52:215][552]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.29.52:216][552]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_21:PersistentLevel.BP_CubeCore_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.52:231][552]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.29.52:231][552]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.29.52:231][552]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.29.52:231][552]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.29.52:312][552]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.29.52:394][552]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Cores/BP_CubeCore
+[2024.07.17-09.29.52:394][552]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_CubeCoreC7C42339460E3A238C0FD2B2F27479ED.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Cores/BP_CubeCore.uasset'
+[2024.07.17-09.29.52:401][552]LogFileHelpers: InternalPromptForCheckoutAndSave took 88 ms (total: 970 ms)
+[2024.07.17-09.29.52:403][552]AssetCheck: New page: Asset Save: BP_CubeCore
+[2024.07.17-09.29.52:404][552]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Cores/BP_CubeCore.BP_CubeCore
+[2024.07.17-09.29.55:865][862]BlueprintLog: New page: Compile BP_Grapple
+[2024.07.17-09.29.55:871][862]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_23:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.55:872][862]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_9:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.55:874][862]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_25:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.55:894][862]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.07.17-09.29.55:898][862]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_23:PersistentLevel.BP_Grapple_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.29.55:984][862]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.29.56:052][862]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_Grapple
+[2024.07.17-09.29.56:052][862]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Grapple8464147A48D663319F76B3B97A75C7CB.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_Grapple.uasset'
+[2024.07.17-09.29.56:059][862]LogFileHelpers: InternalPromptForCheckoutAndSave took 75 ms (total: 1.04 sec)
+[2024.07.17-09.29.56:061][862]AssetCheck: New page: Asset Save: BP_Grapple
+[2024.07.17-09.29.56:061][862]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.07.17-09.30.10:660][306]BlueprintLog: New page: Compile BP_Grapple
+[2024.07.17-09.30.10:666][306]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_9:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.30.10:667][306]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_25:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.30.10:669][306]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_23:PersistentLevel.BP_Grapple_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.30.10:688][306]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.07.17-09.30.10:692][306]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_23:PersistentLevel.BP_Grapple_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.30.10:763][306]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.30.10:831][306]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/Grapple/BP_Grapple
+[2024.07.17-09.30.10:832][306]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_GrappleD693F24D4069DF791D2183812224ED75.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/Grapple/BP_Grapple.uasset'
+[2024.07.17-09.30.10:838][306]LogFileHelpers: InternalPromptForCheckoutAndSave took 74 ms (total: 1.11 sec)
+[2024.07.17-09.30.10:839][306]AssetCheck: New page: Asset Save: BP_Grapple
+[2024.07.17-09.30.10:839][306]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/Grapple/BP_Grapple.BP_Grapple
+[2024.07.17-09.30.20:579][197]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Pickupables/BP_Treads.BP_Treads
+[2024.07.17-09.30.20:580][197]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.30.20:580][197]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.30.20:727][197]LogActor: Warning: BP_Treads_C /Engine/Transient.World_26:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.30.24:501][541]LogBlueprint: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pickupables\BP_Treads.uasset: [Compiler] Pasted node  CustomEvent   conflicted with  Event Tick  and was replaced as a Custom Event!
+[2024.07.17-09.30.38:588][903]LogEditorTransaction: Undo Convert to Pure Get
+[2024.07.17-09.31.00:410][ 17]BlueprintLog: New page: Compile BP_Treads
+[2024.07.17-09.31.00:417][ 17]LogActor: Warning: BP_Treads_C /Engine/Transient.World_13:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.00:418][ 17]LogActor: Warning: BP_Treads_C /Engine/Transient.World_26:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.00:439][ 17]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.07.17-09.31.00:443][ 17]LogActor: Warning: BP_Treads_C /Engine/Transient.World_13:PersistentLevel.BP_Treads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.00:535][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.31.00:558][ 17]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.31.00:563][ 17]LogActor: Warning: BP_Treads_C /Engine/Transient.World_27:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.00:614][ 17]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Treads" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Treads.uasset" SILENT=true
+[2024.07.17-09.31.00:623][ 17]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Treads
+[2024.07.17-09.31.00:624][ 17]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Treads17FDB4754E560B655F28E18F2A16147A.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Treads.uasset'
+[2024.07.17-09.31.00:630][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave took 95 ms (total: 1.21 sec)
+[2024.07.17-09.31.00:632][ 17]AssetCheck: New page: Asset Save: BP_Treads
+[2024.07.17-09.31.00:632][ 17]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Treads.BP_Treads
+[2024.07.17-09.31.17:368][711]BlueprintLog: New page: Compile BP_Treads
+[2024.07.17-09.31.17:374][711]LogActor: Warning: BP_Treads_C /Engine/Transient.World_26:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.17:375][711]LogActor: Warning: BP_Treads_C /Engine/Transient.World_13:PersistentLevel.BP_Treads_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.17:376][711]LogActor: Warning: BP_Treads_C /Engine/Transient.World_27:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.17:395][711]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.07.17-09.31.17:399][711]LogActor: Warning: BP_Treads_C /Engine/Transient.World_13:PersistentLevel.BP_Treads_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.31.17:485][711]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.31.17:547][711]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Pickupables/BP_Treads" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Treads.uasset" SILENT=true
+[2024.07.17-09.31.17:556][711]LogSavePackage: Moving output files for package: /Game/Blueprints/Pickupables/BP_Treads
+[2024.07.17-09.31.17:556][711]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_TreadsFFCFF0484A9BCF381E508A9CDB2E7F2C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Pickupables/BP_Treads.uasset'
+[2024.07.17-09.31.17:562][711]LogFileHelpers: InternalPromptForCheckoutAndSave took 76 ms (total: 1.29 sec)
+[2024.07.17-09.31.17:563][711]AssetCheck: New page: Asset Save: BP_Treads
+[2024.07.17-09.31.17:563][711]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Pickupables/BP_Treads.BP_Treads
+[2024.07.17-09.31.50:033][603]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.31.51:627][719]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/BP_Cell.BP_Cell
+[2024.07.17-09.31.51:627][719]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.31.51:627][719]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.31.51:724][719]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: ================================================
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: Total job queries 579, among them cache hits 326 (56.30%)
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: Tracking 253 distinct input hashes that result in 134 distinct outputs (52.96%)
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: RAM used: 5.31 MiB of 1.60 GiB budget. Usage: 0.32%
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: Shaders Compiled: 198
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: Jobs assigned 198, completed 198 (100%)
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: Average time worker was idle: 8.59 s
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: Time job spent in pending queue: average 0.05 s, longest 0.35 s
+[2024.07.17-09.31.51:872][721]LogShaderCompilers: Display: Job execution time: average 0.22 s, max 0.54 s
+[2024.07.17-09.31.51:873][721]LogShaderCompilers: Display: Job life time (pending + execution): average 0.28 s, max 0.56
+[2024.07.17-09.31.51:873][721]LogShaderCompilers: Display: Shader code size: average 35.297 KiB, min 29.613 KiB, max 61.574 KiB
+[2024.07.17-09.31.51:873][721]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 16.74 s
+[2024.07.17-09.31.51:873][721]LogShaderCompilers: Display: Jobs were issued in 198 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.07.17-09.31.51:873][721]LogShaderCompilers: Display: Average processing rate: 11.83 jobs/sec
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display: Total thread time: 32.393 s
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display: Total thread preprocess time: 3.594 s
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display: Percentage time preprocessing: 11.09%
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display: Effective parallelization: 1.93 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display:       TBasePassPSFCachedVolumeIndirectLightingPolicySkylight (compiled    1 times, average 0.30 sec, max 0.30 sec, min 0.30 sec)
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display:               TBasePassPSFCachedVolumeIndirectLightingPolicy (compiled    1 times, average 0.29 sec, max 0.29 sec, min 0.29 sec)
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display:        TBasePassPSFCachedPointIndirectLightingPolicySkylight (compiled    1 times, average 0.29 sec, max 0.29 sec, min 0.29 sec)
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display:                TBasePassPSFCachedPointIndirectLightingPolicy (compiled    1 times, average 0.28 sec, max 0.28 sec, min 0.28 sec)
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display:      TBasePassPSFPrecomputedVolumetricLightmapLightingPolicy (compiled    1 times, average 0.26 sec, max 0.26 sec, min 0.26 sec)
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 28.89% of total time (compiled   47 times, average 0.20 sec, max 0.23 sec, min 0.14 sec)
+[2024.07.17-09.31.51:874][721]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 26.06% of total time (compiled   47 times, average 0.18 sec, max 0.20 sec, min 0.16 sec)
+[2024.07.17-09.31.51:875][721]LogShaderCompilers: Display:                                                 FLumenCardVS - 24.56% of total time (compiled   45 times, average 0.18 sec, max 0.20 sec, min 0.16 sec)
+[2024.07.17-09.31.51:875][721]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 11.07% of total time (compiled   45 times, average 0.08 sec, max 0.09 sec, min 0.07 sec)
+[2024.07.17-09.31.51:875][721]LogShaderCompilers: Display:       TBasePassPSFCachedVolumeIndirectLightingPolicySkylight - 0.94% of total time (compiled    1 times, average 0.30 sec, max 0.30 sec, min 0.30 sec)
+[2024.07.17-09.31.51:875][721]LogShaderCompilers: Display: ================================================
+[2024.07.17-09.31.52:836][806]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.31.52:840][806]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.31.53:675][884]LogWorld: UWorld::CleanupWorld for World_29, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.31.53:675][884]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.31.53:714][884]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/BP_Cell.BP_Cell
+[2024.07.17-09.31.53:714][884]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.31.53:714][884]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.32.36:897][536]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.07.17-09.32.37:958][540]Display: Reload/Re-instancing Complete: No object changes detected
+[2024.07.17-09.32.37:958][540]LogLiveCoding: Display: Live coding succeeded, no code changes detected
+[2024.07.17-09.32.42:353][553]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.07.17-09.32.50:246][795]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_0.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_0.exp
+[2024.07.17-09.32.50:477][799]LogClass: UPackage /Script/projProblox Reload.
+[2024.07.17-09.32.50:481][799]LogClass: UClass Cell Reload.
+[2024.07.17-09.32.50:481][799]LogClass: UClass BouncyCell Reload.
+[2024.07.17-09.32.50:481][799]LogClass: UClass HoverCell Reload.
+[2024.07.17-09.32.50:481][799]LogClass: UClass StickyCell Reload.
+[2024.07.17-09.32.50:494][799]LogClass: Could not find existing class Cell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.32.50:494][799]LogClass: Function DeactivateHoming is new or belongs to a modified class.
+[2024.07.17-09.32.50:494][799]LogClass: Function IsSafe is new or belongs to a modified class.
+[2024.07.17-09.32.50:494][799]LogClass: Function SetHoming is new or belongs to a modified class.
+[2024.07.17-09.32.50:494][799]LogClass: Function Teleport is new or belongs to a modified class.
+[2024.07.17-09.32.50:494][799]LogClass: Could not find existing class BouncyCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.32.50:494][799]LogClass: Could not find existing class HoverCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.32.50:494][799]LogClass: Could not find existing class StickyCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.32.50:608][799]Re-instancing Cell after reload.
+[2024.07.17-09.32.50:645][799]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.32.50:645][799]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.32.50:645][799]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.32.50:645][799]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.32.50:670][799]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.32.50:670][799]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.32.50:671][799]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.32.50:671][799]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.32.50:701][799]Re-instancing BouncyCell after reload.
+[2024.07.17-09.32.50:730][799]Re-instancing HoverCell after reload.
+[2024.07.17-09.32.50:759][799]Re-instancing StickyCell after reload.
+[2024.07.17-09.32.50:795][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:797][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:798][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:799][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:800][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:801][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:802][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:803][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.50:804][799]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.32.51:010][799]LogBlueprint: Warning: Blueprint /Game/Gamemodes/BP_Mode_Wave is missing GeneratedClass asset tag
+[2024.07.17-09.32.51:052][799]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.07.17-09.32.51:581][800]Display: Reload/Re-instancing Complete: 1 package changed, 4 classes changed, 38 classes unchanged, 5 enums unchanged, 1 scriptstruct unchanged, 88 functions remapped, 1 scriptstruct remapped
+[2024.07.17-09.32.51:581][800]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2024.07.17-09.33.11:931][151]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.07.17-09.33.19:812][644]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_1.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_1.exp
+[2024.07.17-09.33.20:044][651]LogClass: UPackage /Script/projProblox Reload.
+[2024.07.17-09.33.20:049][651]LogClass: UClass Cell Reload.
+[2024.07.17-09.33.20:049][651]LogClass: UClass BouncyCell Reload.
+[2024.07.17-09.33.20:049][651]LogClass: UClass HoverCell Reload.
+[2024.07.17-09.33.20:049][651]LogClass: UClass StickyCell Reload.
+[2024.07.17-09.33.20:054][651]LogClass: Could not find existing class Cell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.33.20:055][651]LogClass: Function DeactivateHoming is new or belongs to a modified class.
+[2024.07.17-09.33.20:055][651]LogClass: Function IsSafe is new or belongs to a modified class.
+[2024.07.17-09.33.20:055][651]LogClass: Function SetHoming is new or belongs to a modified class.
+[2024.07.17-09.33.20:055][651]LogClass: Function Teleport is new or belongs to a modified class.
+[2024.07.17-09.33.20:055][651]LogClass: Could not find existing class BouncyCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.33.20:055][651]LogClass: Could not find existing class HoverCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.33.20:055][651]LogClass: Could not find existing class StickyCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.33.20:187][651]Re-instancing Cell after reload.
+[2024.07.17-09.33.20:204][651]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.33.20:204][651]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.33.20:205][651]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.33.20:205][651]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.33.20:209][651]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.33.20:209][651]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.33.20:209][651]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.33.20:209][651]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.33.20:239][651]Re-instancing BouncyCell after reload.
+[2024.07.17-09.33.20:272][651]Re-instancing HoverCell after reload.
+[2024.07.17-09.33.20:303][651]Re-instancing StickyCell after reload.
+[2024.07.17-09.33.20:339][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:340][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:341][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:342][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:343][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:344][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:344][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:345][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:347][651]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.33.20:591][651]LogBlueprint: Warning: Blueprint /Game/Gamemodes/BP_Mode_Wave is missing GeneratedClass asset tag
+[2024.07.17-09.33.20:673][651]LogUObjectHash: Compacting FUObjectHashTables data took   1.55ms
+[2024.07.17-09.33.21:155][652]Display: Reload/Re-instancing Complete: 1 package changed, 4 classes changed, 38 classes unchanged, 5 enums unchanged, 1 scriptstruct unchanged, 88 functions remapped, 1 scriptstruct remapped
+[2024.07.17-09.33.21:155][652]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2024.07.17-09.33.36:047][ 50]LogBlueprint: Warning: FMemberReference::ResolveMember (IncreaseSpawns) bSelfContext == true, but no scope supplied!
+[2024.07.17-09.34.24:612][751]LogEditorTransaction: Undo Create Pin Link
+[2024.07.17-09.34.24:952][764]LogEditorTransaction: Undo Move Node
+[2024.07.17-09.34.25:296][785]LogEditorTransaction: Undo Delete current selection
+[2024.07.17-09.34.25:605][809]LogEditorTransaction: Undo Delete current selection
+[2024.07.17-09.34.26:060][847]LogEditorTransaction: Undo Add Node
+[2024.07.17-09.35.37:592][902]LogSelectionDetails: Warning: NavigateToFunctionSource:  Unable to find source file and line number for 'UKismetMathLibrary::BooleanAND' [Element not found.]
+[2024.07.17-09.35.52:590][322]BlueprintLog: New page: Compile BP_Cell
+[2024.07.17-09.35.52:594][322]LogBlueprint: Error: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Cells\BP_Cell.uasset: [Compiler] Cell.body is not blueprint visible (BlueprintReadOnly or BlueprintReadWrite). Please fix mark up or cease accessing as this will be made an error in a future release.  Get body
+[2024.07.17-09.35.52:690][322]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2024.07.17-09.35.52:700][322]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.35.52:700][322]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.35.52:700][322]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.35.52:700][322]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.35.52:704][322]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.35.52:705][322]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.35.52:705][322]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.35.52:705][322]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.36.18:529][297]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.07.17-09.36.27:225][808]LogLiveCoding: Display:    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_2.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\UnrealEditor-projProblox.patch_2.exp
+[2024.07.17-09.36.27:450][812]LogClass: UPackage /Script/projProblox Reload.
+[2024.07.17-09.36.27:457][812]LogClass: UClass Cell Reload.
+[2024.07.17-09.36.27:457][812]LogClass: UClass BouncyCell Reload.
+[2024.07.17-09.36.27:457][812]LogClass: UClass HoverCell Reload.
+[2024.07.17-09.36.27:457][812]LogClass: UClass StickyCell Reload.
+[2024.07.17-09.36.27:473][812]LogClass: Could not find existing class Cell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.36.27:473][812]LogClass: Function DeactivateHoming is new or belongs to a modified class.
+[2024.07.17-09.36.27:473][812]LogClass: Function IsSafe is new or belongs to a modified class.
+[2024.07.17-09.36.27:473][812]LogClass: Function SetHoming is new or belongs to a modified class.
+[2024.07.17-09.36.27:473][812]LogClass: Function Teleport is new or belongs to a modified class.
+[2024.07.17-09.36.27:473][812]LogClass: Could not find existing class BouncyCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.36.27:473][812]LogClass: Could not find existing class HoverCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.36.27:473][812]LogClass: Could not find existing class StickyCell in package /Script/projProblox for reload, assuming new or modified class
+[2024.07.17-09.36.27:608][812]Re-instancing Cell after reload.
+[2024.07.17-09.36.27:631][812]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.36.27:632][812]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.36.27:632][812]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.36.27:632][812]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.36.27:637][812]LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.36.27:637][812]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector' 
+[2024.07.17-09.36.27:637][812]LogPhysics: Warning: Scale for /Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.17-09.36.27:637][812]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: '' Component: '/Engine/Transient.World_22:PersistentLevel.BP_CubeCore_C_0.Mouse Detector' 
+[2024.07.17-09.36.27:714][812]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.36.27:776][812]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.27:793][812]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Cells/BP_Cell" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Cells/BP_Cell.uasset" SILENT=true
+[2024.07.17-09.36.27:800][812]LogSavePackage: Moving output files for package: /Game/Blueprints/Cells/BP_Cell
+[2024.07.17-09.36.27:800][812]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_Cell8F36ACB54C61E733829B30B7E386830B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Cells/BP_Cell.uasset'
+[2024.07.17-09.36.27:806][812]LogFileHelpers: InternalPromptForCheckoutAndSave took 92 ms (total: 1.38 sec)
+[2024.07.17-09.36.27:835][812]Re-instancing BouncyCell after reload.
+[2024.07.17-09.36.27:867][812]Re-instancing HoverCell after reload.
+[2024.07.17-09.36.27:898][812]Re-instancing StickyCell after reload.
+[2024.07.17-09.36.27:933][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:934][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:935][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:937][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:938][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:938][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:939][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:940][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.27:941][812]LogActor: Warning: BP_BuyableObject_C /Game/Levels/Lvl_BuildArea.Lvl_BuildArea:PersistentLevel.BP_BuyableAttachment_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.17-09.36.28:178][812]LogBlueprint: Warning: Blueprint /Game/Gamemodes/BP_Mode_Wave is missing GeneratedClass asset tag
+[2024.07.17-09.36.28:235][812]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2024.07.17-09.36.28:404][812]AssetCheck: New page: Asset Save: BP_Cell
+[2024.07.17-09.36.28:404][812]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Cells/BP_Cell.BP_Cell
+[2024.07.17-09.36.28:763][813]Display: Reload/Re-instancing Complete: 1 package changed, 4 classes changed, 38 classes unchanged, 5 enums unchanged, 1 scriptstruct unchanged, 88 functions remapped, 1 scriptstruct remapped
+[2024.07.17-09.36.28:763][813]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2024.07.17-09.36.35:056][346]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.35:110][347]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.35:133][348]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.35:154][349]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.35:713][395]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_BouncyCell.BP_BouncyCell
+[2024.07.17-09.36.35:714][395]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.35:714][395]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.36.35:813][395]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.07.17-09.36.36:957][487]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.36.36:959][487]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.36.36:975][487]LogWorld: UWorld::CleanupWorld for World_36, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.36.36:975][487]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.36.37:016][487]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_BouncyCell.BP_BouncyCell
+[2024.07.17-09.36.37:017][487]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.37:017][487]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.36.47:329][481]BlueprintLog: New page: Compile BP_BouncyCell
+[2024.07.17-09.36.47:401][481]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2024.07.17-09.36.47:486][481]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.36.47:540][481]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.47:563][481]LogSavePackage: Moving output files for package: /Game/Blueprints/Cells/Variants/BP_BouncyCell
+[2024.07.17-09.36.47:564][481]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_BouncyCellD6DA33734AB8B85031583F9D924290C6.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Cells/Variants/BP_BouncyCell.uasset'
+[2024.07.17-09.36.47:569][481]LogFileHelpers: InternalPromptForCheckoutAndSave took 83 ms (total: 1.46 sec)
+[2024.07.17-09.36.47:571][481]AssetCheck: New page: Asset Save: BP_BouncyCell
+[2024.07.17-09.36.47:571][481]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Cells/Variants/BP_BouncyCell.BP_BouncyCell
+[2024.07.17-09.36.48:335][548]LogWorld: UWorld::CleanupWorld for World_30, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.36.48:335][548]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.36.48:901][595]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.07.17-09.36.48:901][595]LogWorld: UWorld::CleanupWorld for World_37, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.36.48:902][595]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.36.50:387][707]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_HoverCell.BP_HoverCell
+[2024.07.17-09.36.50:387][707]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.50:387][707]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.36.50:489][707]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.07.17-09.36.51:802][817]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.36.51:805][817]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.36.51:821][817]LogWorld: UWorld::CleanupWorld for World_39, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.36.51:821][817]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.36.51:860][817]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_HoverCell.BP_HoverCell
+[2024.07.17-09.36.51:860][817]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.36.51:860][817]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.37.11:224][575]BlueprintLog: New page: Compile BP_HoverCell
+[2024.07.17-09.37.11:272][575]LogUObjectHash: Compacting FUObjectHashTables data took   1.66ms
+[2024.07.17-09.37.11:360][575]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.37.11:417][575]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.37.11:437][575]LogSavePackage: Moving output files for package: /Game/Blueprints/Cells/Variants/BP_HoverCell
+[2024.07.17-09.37.11:439][575]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_HoverCell9BA6601945E02C7A460E83BB355291DC.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Cells/Variants/BP_HoverCell.uasset'
+[2024.07.17-09.37.11:445][575]LogFileHelpers: InternalPromptForCheckoutAndSave took 84 ms (total: 1.55 sec)
+[2024.07.17-09.37.11:446][575]AssetCheck: New page: Asset Save: BP_HoverCell
+[2024.07.17-09.37.11:446][575]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Cells/Variants/BP_HoverCell.BP_HoverCell
+[2024.07.17-09.37.13:387][747]LogWorld: UWorld::CleanupWorld for World_40, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.37.13:387][747]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.37.14:838][865]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_SlideyCell.BP_SlideyCell
+[2024.07.17-09.37.14:838][865]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.37.14:839][865]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.37.14:947][865]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.07.17-09.37.16:077][953]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.37.16:080][953]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.37.16:096][953]LogWorld: UWorld::CleanupWorld for World_42, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.37.16:097][953]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.37.16:136][953]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_SlideyCell.BP_SlideyCell
+[2024.07.17-09.37.16:136][953]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.37.16:136][953]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.37.18:606][152]LogWorld: UWorld::CleanupWorld for World_43, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.37.18:606][152]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.37.19:787][245]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_StickyCell.BP_StickyCell
+[2024.07.17-09.37.19:788][245]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.37.19:788][245]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.37.19:884][245]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v7' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2024.07.17-09.37.21:493][376]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.37.21:496][376]LogSlate: Window 'Document' being destroyed
+[2024.07.17-09.37.21:512][376]LogWorld: UWorld::CleanupWorld for World_44, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.37.21:512][376]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.37.21:550][376]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Cells/Variants/BP_StickyCell.BP_StickyCell
+[2024.07.17-09.37.21:550][376]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.37.21:550][376]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.17-09.37.39:171][ 69]BlueprintLog: New page: Compile BP_StickyCell
+[2024.07.17-09.37.39:201][ 69]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.07.17-09.37.39:290][ 69]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.17-09.37.39:354][ 69]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.17-09.37.39:376][ 69]LogSavePackage: Moving output files for package: /Game/Blueprints/Cells/Variants/BP_StickyCell
+[2024.07.17-09.37.39:377][ 69]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_StickyCell173782A44DD9AE19E2C479ACB14F4133.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/Cells/Variants/BP_StickyCell.uasset'
+[2024.07.17-09.37.39:382][ 69]LogFileHelpers: InternalPromptForCheckoutAndSave took 92 ms (total: 1.64 sec)
+[2024.07.17-09.37.39:383][ 69]AssetCheck: New page: Asset Save: BP_StickyCell
+[2024.07.17-09.37.39:384][ 69]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/Cells/Variants/BP_StickyCell.BP_StickyCell
+[2024.07.17-09.37.40:218][143]LogWorld: UWorld::CleanupWorld for World_45, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.37.40:218][143]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.38.20:397][542]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.07.17-09.38.20:397][542]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.17-09.38.29:043][299]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms

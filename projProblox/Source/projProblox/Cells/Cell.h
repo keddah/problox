@@ -30,7 +30,7 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
     UStaticMeshComponent* body;
 
 	UPROPERTY(EditDefaultsOnly)
@@ -42,9 +42,9 @@ private:
 	float attractionForce;
 	
 	bool isHoming;
-	bool safe;
 	
 	void GoHome() const;
+	bool safe;
 
 public:
 	// When the core collects it...
