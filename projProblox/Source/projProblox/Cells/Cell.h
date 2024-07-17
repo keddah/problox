@@ -12,6 +12,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "NiagaraComponent.h"
+#include "NiagaraComponent.h"
 #include "Components/SphereComponent.h"
 #include "./projProblox/Pickupables/Cores/CubeCore.h"
 #include "GameFramework/Actor.h"
@@ -33,10 +35,14 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
     UStaticMeshComponent* body;
 
+
+private:
 	UPROPERTY(EditDefaultsOnly)
     USphereComponent* hitBox;
 
-private:
+	UPROPERTY(EditDefaultsOnly)
+	UNiagaraComponent* fx;
+	
 	ACubeCore* core;
 	
 	float attractionForce;

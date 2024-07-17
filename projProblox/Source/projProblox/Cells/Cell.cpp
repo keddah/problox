@@ -28,6 +28,11 @@ ACell::ACell()
 	hitBox->SetupAttachment(body);
 	hitBox->SetRelativeScale3D({.05f,.05f,.05f});
 	hitBox->SetSphereRadius(100);
+
+	fx = CreateDefaultSubobject<UNiagaraComponent>("Effects Player");
+	fx->SetupAttachment(body);
+
+	fx->SetAutoActivate(false);
 }
 
 // Called when the game starts or when spawned
@@ -63,6 +68,10 @@ void ACell::GoHome() const
 
 void ACell::Teleport(const FVector& pos)
 {
+	fx->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	if(fx->GetFXSystemAsset()) fx->ActivateSystem();
+	else Print("No vfx given..", 4)
+	
 	// Shrink so that more can fit in the collector
 	body->SetRelativeScale3D({.25f,.25f,.25f});
 
