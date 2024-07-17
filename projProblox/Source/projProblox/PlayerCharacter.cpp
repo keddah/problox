@@ -29,7 +29,7 @@ void APlayerCharacter::BeginPlay()
 	TArray<AActor*> coreActors;
 	UWorld* wrld = GetWorld();
 	instance = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld));
-	if(!instance) Print("Player failed to cast to game instance...", 7)
+	if(!IsValid(instance)) Print("Player failed to cast to game instance...", 7)
 	
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACubeCore::StaticClass(), coreActors);
 	
@@ -46,7 +46,7 @@ void APlayerCharacter::BeginPlay()
 
 void APlayerCharacter::DetachAll(APickupableMaster* obj)
 {
-	if(!obj)
+	if(!IsValid(obj))
 	{
 		Print("Invalid object, couldnt detach..", 4)
 		return;
@@ -61,7 +61,7 @@ void APlayerCharacter::DetachAll(APickupableMaster* obj)
 	else if(ACubeCore* parentCore = obj->GetCore()) detachedObjects = parentCore->DetachAll();
 
 	UWorld* wrld = GetWorld();
-	if(!wrld) return;
+	if(!IsValid(wrld)) return;
 
 	// Destroy each detached object after a delay
 	FTimerHandle destroyHandle;
@@ -74,13 +74,13 @@ void APlayerCharacter::DetachAll(APickupableMaster* obj)
 
 FName APlayerCharacter::FindSuggestedSlot(APickupableMaster* obj) const
 {
-	if(!obj)
+	if(!IsValid(obj))
 	{
 		Print("no selected object... couldnt find favoured socket", 4)
 		return NAME_None;
 	}
 	
-	if(!core)
+	if(!IsValid(core))
 	{
 		Print("Core invalid.... couldn't find slot.", 5)
 		return NAME_None;
@@ -186,7 +186,7 @@ void APlayerCharacter::ScrollZoom(const float input)
 void APlayerCharacter::NextPreviousSlot(const bool next)
 {
 	if(currentMode != EGameMode::Build) return;
-	if(!core) return;
+	if(!IsValid(core)) return;
 	
 	const TArray<FName> freeSockets = core->GetFreeSockets();
 	if(freeSockets.IsEmpty()) return;

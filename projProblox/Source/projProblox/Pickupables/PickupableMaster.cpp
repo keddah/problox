@@ -20,7 +20,7 @@
 
 void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if(!OtherActor) return;
+	if(!IsValid(OtherActor)) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
 	
 	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
@@ -37,7 +37,7 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if(!OtherActor) return;
+	if(!IsValid(OtherActor)) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
 	
 	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
@@ -67,7 +67,7 @@ APickupableMaster::APickupableMaster()
 	outlineMesh->SetRelativeLocation({});
 	outlineMesh->SetRelativeRotation({0,0,0});
 	outlineMesh->SetRelativeScale3D({1,1,1});
-	if(GEngine) outlineMesh->SetMassOverrideInKg("", 0);
+	if(IsValid(GEngine)) outlineMesh->SetMassOverrideInKg("", 0);
 	outlineMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
 	outlineMesh->SetHiddenInGame(true);
 	outlineMesh->SetSimulatePhysics(false);
@@ -83,7 +83,7 @@ APickupableMaster::APickupableMaster()
 	silhouette->SetHiddenInGame(true);
 	silhouette->CastShadow = false;
 	
-	if(GEngine) silhouette->SetMassOverrideInKg("", 0);
+	if(IsValid(GEngine)) silhouette->SetMassOverrideInKg("", 0);
 	silhouette->SetSimulatePhysics(false);
 	silhouette->UnWeldFromParent();
 	silhouette->SetEnableGravity(false);
@@ -108,16 +108,16 @@ void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if(mesh) mesh->OnComponentHit.AddDynamic(this, &APickupableMaster::CollisionHitSFX);
+	if(IsValid(mesh)) mesh->OnComponentHit.AddDynamic(this, &APickupableMaster::CollisionHitSFX);
 
-	if(mouseDetector)
+	if(IsValid(mouseDetector))
 	{
 		mouseDetector->OnComponentHit.AddDynamic(this, &APickupableMaster::CollisionHitSFX);
 		mouseDetector->OnComponentBeginOverlap.AddDynamic(this, &APickupableMaster::CollisionOverlapSFX);
 		mouseDetector->OnComponentBeginOverlap.AddDynamic(this, &APickupableMaster::PickupCell);
 	}
 	
-	if(soundPlayer && mesh) soundPlayer->Attach(mesh);
+	if(IsValid(soundPlayer) && IsValid(mesh)) soundPlayer->Attach(mesh);
 
 	wrld = GetWorld();
 	
@@ -151,7 +151,7 @@ void APickupableMaster::Tick(float DeltaTime)
 
 void APickupableMaster::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if(!parentCore) return;
+	if(!IsValid(parentCore)) return;
 
 	if(Cast<ACell>(OtherActor)) parentCore->PickupCell(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
 }

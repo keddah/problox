@@ -37,7 +37,7 @@ void ACellSpawner::SetCellsDormant(bool dormant)
 	for(auto& cell : spawnedCells)
 	{
 		// Only if the cells haven't been collected..
-		if(cell) if(!cell->IsSafe()) cell->SetDormant(dormant);
+		if(IsValid(cell)) if(!cell->IsSafe()) cell->SetDormant(dormant);
 	}
 }
 
@@ -45,7 +45,7 @@ void ACellSpawner::SetCollectedCellsDormant(bool dormant)
 {
 	for(const auto& cell : spawnedCells)
 	{
-		if(!cell) continue;
+		if(!IsValid(cell)) continue;
 		
 		// Only if the cell is safe (SetCellsDormant handles unsafe cells) 
 		if(cell->IsSafe()) cell->SetDormant(dormant);

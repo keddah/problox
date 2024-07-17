@@ -22,7 +22,7 @@ ACell::ACell()
 	body->SetSimulatePhysics(true);
 	RootComponent = body;
 
-	if(GEngine) body->SetMassOverrideInKg("", .01f);
+	if(IsValid(GEngine)) body->SetMassOverrideInKg("", .01f);
 
 	hitBox = CreateDefaultSubobject<USphereComponent>("Collision Box");
 	hitBox->SetupAttachment(body);
@@ -41,7 +41,7 @@ void ACell::BeginPlay()
 	Super::BeginPlay();
 
 	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass()));
-	if(!core) Print("Couldnt get core ~ cell", 5)
+	if(!IsValid(core)) Print("Couldnt get core ~ cell", 5)
 }
 
 void ACell::Tick(float DeltaSeconds)
@@ -88,17 +88,20 @@ void ACell::Teleport(const FVector& pos)
 
 void ACell::SetDormant(const bool dormant)
 {
-	// ???
-	if(!this) return;
-	
+	// Is pending kill?
+	if(!IsValid(this)) return;
+
 	if(dormant) isHoming = false;
 
 	PrimaryActorTick.bCanEverTick = !dormant;
 	SetActorEnableCollision(!dormant);
-	SetActorHiddenInGame(dormant);
+
+	if(!IsValid(body)) return;
+	// okman
+	// body->SetHiddenInGame(dormant);
 
 	// ACCESSING "body" WHEN LOADING LEVELS SOMETIMES CAUSES EXCEPTION ERRORS
 	// Enable/disable physics and hide/show actor
-	if(body) body->SetSimulatePhysics(!dormant);
+	body->SetSimulatePhysics(!dormant);
 }
 

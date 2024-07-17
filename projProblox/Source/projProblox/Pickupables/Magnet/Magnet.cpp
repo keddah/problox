@@ -33,7 +33,7 @@ void AMagnet::BeginPlay()
 
 void AMagnet::Ability(const float deltaTime)
 {
-	if(!mesh)
+	if(!IsValid(mesh))
 	{
 		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
@@ -68,7 +68,7 @@ void AMagnet::Ability(const float deltaTime)
 	if(otherMagnets.IsEmpty()) return;
 	for (const auto& mag : otherMagnets)
 	{
-		if(!mag) continue;
+		if(!IsValid(mag)) continue;
 		const FVector otherPos = mag->GetActorLocation();
 
 		// Go to the next iteration if it's out of range

@@ -91,13 +91,13 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 		return false;
 	}
 
-	if(!wrld)
+	if(!IsValid(wrld))
 	{
 		Print("World was invalid when trying to load a level...", 8)
 		return false;
 	}
 
-	if(!instance)
+	if(!IsValid(instance))
 	{
 		Print("The game instace was invalid when trying to load a level...", 8)
 		return false;
@@ -106,7 +106,7 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 
 	currentLevel = lvlIndex;
 	if(!levels.IsValidIndex(currentLevel)) return false;
-	if(!levels[currentLevel]) return false;
+	if(!IsValid(levels[currentLevel])) return false;
 
 	onLoadingLevel.Broadcast();
 
@@ -130,7 +130,7 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 
 void ALevelManager::UnloadLevel(short lvlIndex)
 {
-	if(!wrld)
+	if(!IsValid(wrld))
 	{
 		Print("World was invalid when trying to unload A levels...", 8)
 		return;
@@ -157,7 +157,7 @@ void ALevelManager::UnloadUnusedLevels()
 
 void ALevelManager::FindCore()
 {
-	if(!wrld) return;
+	if(!IsValid(wrld)) return;
 
 	// Isn't really necessary anymore since connectors aren't being used.
 	TArray<AActor*> coreActors;
@@ -174,7 +174,7 @@ void ALevelManager::FindCore()
 
 void ALevelManager::FindSpawns()
 {
-	if(!wrld) return;
+	if(!IsValid(wrld)) return;
 	
 	// Only do this once. (will be called everytime a level loads)
 	if(!(lvl1Screenshots.IsEmpty() && lvl2Screenshots.IsEmpty() && lvl3Screenshots.IsEmpty())) return;
@@ -188,7 +188,7 @@ void ALevelManager::FindSpawns()
 		for (auto& spawn : spawns) 
 		{
 			ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
-			if(!point) continue;
+			if(!IsValid(point)) continue;
 
 			allSpawns.Add(point);
 
@@ -244,7 +244,7 @@ void ALevelManager::FindSpawns()
 
 void ALevelManager::InitSpawners()
 {
-	if(!wrld)
+	if(!IsValid(wrld))
 	{
 		Print("World was invalid when initialising cell spawners...", 8)
 		return;
@@ -256,7 +256,7 @@ void ALevelManager::InitSpawners()
 	for(auto& cellSpawner: actors)
 	{
 		ACellSpawner* spawner = Cast<ACellSpawner>(cellSpawner);
-		if(!spawner) continue;
+		if(!IsValid(spawner)) continue;
 
 		cellSpawners.Add(spawner);
 		spawner->Init();
@@ -269,13 +269,13 @@ void ALevelManager::InitSpawners()
 
 void ALevelManager::SelectSpawn(const int spawnPoint)
 {
-	if (!player)
+	if (!IsValid(player))
 	{
 		Print("Couldn't set spawn because the player was invalid...", 5)
 		return;
 	}
 
-	if (!core)
+	if (!IsValid(core))
 	{
 		Print("Couldn't set spawn because the core was invalid...", 5)
 		return;
@@ -286,7 +286,7 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	switch (currentLevel)
 	{
 	case 0:
-		if (!lvl0Spawn) break;
+		if (!IsValid(lvl0Spawn)) break;
 		core->Teleport(lvl0Spawn->GetRot(), lvl0Spawn->GetActorLocation());
 		player->EnterLevel(false);
 		break;
@@ -322,8 +322,12 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 // Needs to happen after everything has finished loading
 void ALevelManager::WakeSleepCells(int i, ELevel lvl)
 {
+	if(cellSpawners.IsEmpty()) return;
+	
 	for(auto& spawner : cellSpawners)
 	{
+		if(!IsValid(spawner)) continue;
+
 		ELevel levelEnum;
 		if(currentLevel == 1) levelEnum = ELevel::Bedroom;
 		else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
