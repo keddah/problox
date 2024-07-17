@@ -28,6 +28,7 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 
 	if(!IsValid(OtherActor)) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
+	if(OtherActor->IsA<ACell>()) return;
 	
 	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
 	constexpr float minForce = 800;
@@ -51,7 +52,8 @@ void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedCompo
 	
 	if(!IsValid(OtherActor)) return;
 	if(OtherActor->IsA<APickupableMaster>()) return;
-	
+	if(OtherActor->IsA<ACell>()) return;
+
 	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
 	constexpr float minForce = 800;
 	const float force = velocity.Length();
