@@ -44,6 +44,7 @@
 		"Module.projProblox.3.cpp.obj": [
 			"WedgeSocketInfo.gen.cpp.obj",
 			"AudioManager.cpp.obj",
+			"CellSpawner.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
@@ -75,7 +76,6 @@
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
 			"Cell.cpp.obj",
-			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj"
 		]
 	}
