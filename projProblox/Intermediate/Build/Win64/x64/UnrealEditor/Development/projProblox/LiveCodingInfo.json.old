@@ -25,7 +25,6 @@
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
-			"LevelManager.gen.cpp.obj",
 			"LevelObjective.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
@@ -37,6 +36,7 @@
 			"SpawnPoint.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
+			"LevelManager.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
 			"projProblox.init.gen.cpp.obj"
 		],
