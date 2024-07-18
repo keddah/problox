@@ -49,7 +49,6 @@ private:
 	bool isHoming;
 	
 	void GoHome() const;
-	bool safe;
 
 	
 public:
@@ -60,14 +59,12 @@ public:
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
 
 	// Used for spawning and level transitions
-	void SetDormant(bool _dormant);
+	void Wake();
+	void Sleep();
 	
 	UFUNCTION()
 	void DeactivateHoming() { isHoming = false;}
 	
-	UFUNCTION(BlueprintCallable)
-	bool IsSafe() const { return safe; }
-
 	UStaticMeshComponent* GetMesh() const { return body; }
 };
 

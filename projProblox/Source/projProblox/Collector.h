@@ -72,13 +72,13 @@ public:
 	UFUNCTION(BlueprintCallable)
 	int GetLevel3Count() const { return GetLvlCellCount(ELevel::Bathroom); }
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintPure)
 	int GetLevel1Collected() const { return GetCollectedCountFromLvl(ELevel::Bedroom); }
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintPure)
 	int GetLevel2Collected() const { return GetCollectedCountFromLvl(ELevel::Kitchen); }
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintPure)
 	int GetLevel3Collected() const { return GetCollectedCountFromLvl(ELevel::Bathroom); }
 	
 	UFUNCTION(BlueprintCallable)
-	void AddThing() { cellCount++; }
+	void AddCell() { cellCount++; }
 };

@@ -23,13 +23,6 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AStickyCell_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
-	DEFINE_FUNCTION(ACell::execIsSafe)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(bool*)Z_Param__Result=P_THIS->IsSafe();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ACell::execDeactivateHoming)
 	{
 		P_FINISH;
@@ -58,7 +51,6 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		UClass* Class = ACell::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "DeactivateHoming", &ACell::execDeactivateHoming },
-			{ "IsSafe", &ACell::execIsSafe },
 			{ "Kill", &ACell::execKill },
 			{ "SetHoming", &ACell::execSetHoming },
 		};
@@ -83,45 +75,6 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACell_DeactivateHoming_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACell_IsSafe_Statics
-	{
-		struct Cell_eventIsSafe_Parms
-		{
-			bool ReturnValue;
-		};
-		static void NewProp_ReturnValue_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	void Z_Construct_UFunction_ACell_IsSafe_Statics::NewProp_ReturnValue_SetBit(void* Obj)
-	{
-		((Cell_eventIsSafe_Parms*)Obj)->ReturnValue = 1;
-	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACell_IsSafe_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Cell_eventIsSafe_Parms), &Z_Construct_UFunction_ACell_IsSafe_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACell_IsSafe_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACell_IsSafe_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACell_IsSafe_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Cells/Cell.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACell_IsSafe_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACell, nullptr, "IsSafe", nullptr, nullptr, Z_Construct_UFunction_ACell_IsSafe_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_IsSafe_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACell_IsSafe_Statics::Cell_eventIsSafe_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_IsSafe_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACell_IsSafe_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_IsSafe_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ACell_IsSafe_Statics::Cell_eventIsSafe_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ACell_IsSafe()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACell_IsSafe_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -243,7 +196,6 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACell_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACell_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACell_DeactivateHoming, "DeactivateHoming" }, // 403852407
-		{ &Z_Construct_UFunction_ACell_IsSafe, "IsSafe" }, // 1178903231
 		{ &Z_Construct_UFunction_ACell_Kill, "Kill" }, // 2912610544
 		{ &Z_Construct_UFunction_ACell_SetHoming, "SetHoming" }, // 3000311673
 	};
@@ -557,12 +509,12 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 1523652674U) },
-		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 3584514252U) },
-		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 95104160U) },
-		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 1683683811U) },
+		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 4073415001U) },
+		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 25042203U) },
+		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 1855923617U) },
+		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 1493689376U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_1335888879(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_285692678(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

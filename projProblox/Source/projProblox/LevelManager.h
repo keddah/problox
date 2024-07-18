@@ -100,7 +100,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	
 	////////////// CELLS ///////////
 	UFUNCTION()
-	void WakeSleepCells(int i, ELevel lvl);
+	void WakeSleepCells();
 	
 public:	
 	// Sets default values for this actor's properties
@@ -113,6 +113,7 @@ protected:
 	/////////////////////////// VARIABLES ///////////////////////////
 	// The index of the current level.
 	short currentLevel = 1;
+	ELevel levelEnum = ELevel::BuildArea;
 
 	UPROPERTY(BlueprintReadOnly)
 	bool bLevelLoading = false;

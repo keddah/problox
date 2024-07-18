@@ -108,6 +108,12 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 	if(!levels.IsValidIndex(currentLevel)) return false;
 	if(!IsValid(levels[currentLevel])) return false;
 
+	if(currentLevel == 1) levelEnum = ELevel::Bedroom;
+	else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
+	else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
+	else levelEnum = ELevel::BuildArea;
+	
+	WakeSleepCells();
 	onLoadingLevel.Broadcast();
 
 	// Load the level if it's not loaded yet...
@@ -264,7 +270,6 @@ void ALevelManager::InitSpawners()
 		// Always stop the send when the level changes
 		onLevelChanged.AddDynamic(spawner, &ACellSpawner::StopSound);
 	}
-	onLevelChanged.AddDynamic(this, &ALevelManager::WakeSleepCells);
 }
 
 void ALevelManager::SelectSpawn(const int spawnPoint)
@@ -320,28 +325,19 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 }
 
 // Needs to happen after everything has finished loading
-void ALevelManager::WakeSleepCells(int i, ELevel lvl)
+void ALevelManager::WakeSleepCells()
 {
 	if(cellSpawners.IsEmpty()) return;
 
-	FTimerHandle delay;
-	wrld->GetTimerManager().SetTimer(delay, [this]
+	for(auto& spawner : cellSpawners)
 	{
-		for(auto& spawner : cellSpawners)
-		{
-			if(!IsValid(spawner)) continue;
+		if(!IsValid(spawner)) continue;
 
-			ELevel levelEnum;
-			if(currentLevel == 1) levelEnum = ELevel::Bedroom;
-			else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
-			else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
-			else levelEnum = ELevel::BuildArea;
-
-			// CRASHING HERE....................................
-			// Sleep the rest of the cells if the level enum aren't matching ... otherwise wake them
-			spawner->SetCellsDormant(spawner->GetLevelEnum() != levelEnum);
-		}
-	}, .3f, false);
+		// CRASHING HERE....................................
+		// Sleep the rest of the cells if the level enum aren't matching ... otherwise wake them
+		if(spawner->GetLevelEnum() == levelEnum) spawner->WakeCells();
+		else spawner->SleepCells();
+	}
 }
 
 void ALevelManager::SaveSpawns()

@@ -30,14 +30,23 @@ ACellSpawner::ACellSpawner()
 	params.bNoFail = true;
 }
 
-void ACellSpawner::SetCellsDormant(bool dormant)
+void ACellSpawner::SleepCells() const
 {
-	if(spawnedCells.IsEmpty()) return;
+	if (spawnedCells.IsEmpty()) return;
 	
-	for(const auto& cell : spawnedCells)
+	for (const auto& cell : spawnedCells)
 	{
-		// Only if the cells haven't been collected..
-		if(IsValid(cell)) cell->SetDormant(dormant);
+		if(IsValid(cell)) cell->Sleep();
+	}
+}
+
+void ACellSpawner::WakeCells() const
+{
+	if (spawnedCells.IsEmpty()) return;
+	
+	for (const auto& cell : spawnedCells)
+	{
+		if(IsValid(cell)) cell->Wake();
 	}
 }
 
@@ -59,7 +68,7 @@ void ACellSpawner::Init()
 		return;
 	}
 
-	EarlySpawn();
+	InitialSpawn();
 }
 
 bool ACellSpawner::Overlap(AActor* otherActor)
@@ -144,10 +153,13 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 			subClass = normalCell;
 	}
 
-	return wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
+	ACell* cell = wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
+	cell->OnDestroyed.AddDynamic(this, &ACellSpawner::IncreaseCollectedAmount);
+	
+	return cell;
 }
 
-void ACellSpawner::EarlySpawn()
+void ACellSpawner::InitialSpawn()
 {
 	if(spawned) return;
 
@@ -174,7 +186,7 @@ void ACellSpawner::EarlySpawn()
 		ACell* cell = Spawn(spawn, rot);
 
 		// Spawns a cell then deactivates it...
-		cell->SetDormant(true);
+		cell->Sleep();
 
 		spawnedCells.Add(cell);
 	}
@@ -213,16 +225,16 @@ void ACellSpawner::SpawnWithForce()
 	if(IsValid(objective)) objective->SetCompleted();
 }
 
-int ACellSpawner::GetCollectedAmount() const
-{
-	if(spawnedCells.IsEmpty()) return 0;
-
-	int count = 0;
-	for(const auto& cell : spawnedCells)
-	{
-		// If it's not valid.. it means it's been destroyed/collected.
-		if(!IsValid(cell)) count++;
-	}
-
-	return count;
-}
+// int ACellSpawner::GetCollectedAmount()
+// {
+// 	if(spawnedCells.IsEmpty()) return 0;
+//
+// 	int count = 0;
+// 	for(const auto& cell : spawnedCells)
+// 	{
+// 		// If it's not valid.. it means it's been destroyed/collected.
+// 		if(!cell) count++;
+// 	}
+//
+// 	return count;
+// }

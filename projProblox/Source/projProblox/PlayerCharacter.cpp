@@ -295,12 +295,12 @@ void APlayerCharacter::Confirm()
 	if(currentMode != EGameMode::Build) return;
 	if(!selectedObj)
 	{
-		Print("Couldnt confirm because there was no selected object...", 6)
+		// Print("Couldnt confirm because there was no selected object...", 6)
 		return;
 	}
 	if(!core)
 	{
-		Print("Couldnt confirm because the core was invalid...", 6)
+		// Print("Couldnt confirm because the core was invalid...", 6)
 		return;
 	}
 

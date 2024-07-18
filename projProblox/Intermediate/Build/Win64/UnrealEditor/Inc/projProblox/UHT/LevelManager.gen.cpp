@@ -238,11 +238,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	}
 	DEFINE_FUNCTION(ALevelManager::execWakeSleepCells)
 	{
-		P_GET_PROPERTY(FIntProperty,Z_Param_i);
-		P_GET_ENUM(ELevel,Z_Param_lvl);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->WakeSleepCells(Z_Param_i,ELevel(Z_Param_lvl));
+		P_THIS->WakeSleepCells();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ALevelManager::execFindSpawns)
@@ -842,27 +840,10 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	}
 	struct Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics
 	{
-		struct LevelManager_eventWakeSleepCells_Parms
-		{
-			int32 i;
-			ELevel lvl;
-		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_i;
-		static const UECodeGen_Private::FBytePropertyParams NewProp_lvl_Underlying;
-		static const UECodeGen_Private::FEnumPropertyParams NewProp_lvl;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::NewProp_i = { "i", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(LevelManager_eventWakeSleepCells_Parms, i), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::NewProp_lvl_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::NewProp_lvl = { "lvl", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(LevelManager_eventWakeSleepCells_Parms, lvl), Z_Construct_UEnum_projProblox_ELevel, METADATA_PARAMS(0, nullptr) }; // 1235914906
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::NewProp_i,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::NewProp_lvl_Underlying,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::NewProp_lvl,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::Function_MetaDataParams[] = {
@@ -875,9 +856,7 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "WakeSleepCells", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::LevelManager_eventWakeSleepCells_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::LevelManager_eventWakeSleepCells_Parms) < MAX_uint16);
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "WakeSleepCells", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_WakeSleepCells_Statics::Function_MetaDataParams) };
 	UFunction* Z_Construct_UFunction_ALevelManager_WakeSleepCells()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -949,7 +928,7 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		{ &Z_Construct_UFunction_ALevelManager_SaveSpawns, "SaveSpawns" }, // 1746644647
 		{ &Z_Construct_UFunction_ALevelManager_SetIsLoading, "SetIsLoading" }, // 3544637251
 		{ &Z_Construct_UFunction_ALevelManager_UnloadUnusedLevels, "UnloadUnusedLevels" }, // 3862849941
-		{ &Z_Construct_UFunction_ALevelManager_WakeSleepCells, "WakeSleepCells" }, // 1463807964
+		{ &Z_Construct_UFunction_ALevelManager_WakeSleepCells, "WakeSleepCells" }, // 2572999387
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -1054,9 +1033,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 970131630U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 1935664869U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_3720707744(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_3347516521(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

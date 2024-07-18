@@ -112,7 +112,8 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	TArray<ACell*> spawnedCells;
 	
 	bool spawned = false;
-
+	int collectedCount = 0;
+	
 	// Returns whether the overlap caused a spawn
 	UFUNCTION(BlueprintCallable)
 	bool Overlap(AActor* otherActor);
@@ -122,6 +123,7 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 
 	// Spawn parameters
 	FActorSpawnParameters params;
+
 
 
 protected:
@@ -138,28 +140,26 @@ public:
 	ACellSpawner();
 
 	// Hides and deactivates the physics for all the unsafe spawned cells
-	void SetCellsDormant(bool dormant);
+	void WakeCells() const;
+	void SleepCells() const;
 
 	
 	/////////////////////////// VARIABLES ///////////////////////////
 	/////////// DELEGATES ///////////
 	UPROPERTY(BlueprintAssignable)
 	FOnSpawnTriggered onTriggered;
-	
 
+	
 	/////////////////////////// FUNCTIONS ///////////////////////////
 	void Init();
 
-	void EarlySpawn();
+	void InitialSpawn();
 	void SpawnWithForce();
 
 	void ActivateSpawner() { spawned = true; }
-	
-	void IncreaseSpawnCount(unsigned short additions)
-	{
-		spawnAmount += additions;
-		spawnAmount = FMath::Clamp(spawnAmount, 1, maxSpawnAmount);
-	}
+
+	UFUNCTION()
+	void IncreaseCollectedAmount(AActor* DestroyedActor ) { collectedCount++; Print("Collected", 4) }
 
 
 	/////////// DELEGATES ///////////
@@ -180,7 +180,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	const ULevelObjective* GetObjective() const { return objective; }
 
-	int GetCollectedAmount() const;
+	int GetCollectedAmount() const { return collectedCount; }
 
 	int GetSpawnAmount() const
 	{

@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_22_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execAddThing); \
+	DECLARE_FUNCTION(execAddCell); \
 	DECLARE_FUNCTION(execGetLevel3Collected); \
 	DECLARE_FUNCTION(execGetLevel2Collected); \
 	DECLARE_FUNCTION(execGetLevel1Collected); \

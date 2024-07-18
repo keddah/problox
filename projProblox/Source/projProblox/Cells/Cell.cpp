@@ -49,7 +49,6 @@ void ACell::BeginPlay()
 void ACell::Tick(float DeltaSeconds)
 {
 	// Don't do anything if already collected
-	if(safe) return;
 	GoHome();
 
 	Super::Tick(DeltaSeconds);
@@ -71,30 +70,59 @@ void ACell::GoHome() const
 // The cells will be destroyed the next time the player leaves the level so there aren't any hiccups (+ so the vfx work)
 void ACell::Kill()
 {
-	safe = true;
+	if(!IsValid(body))
+	{
+		Print("Couldnt be collected because the cell's body was invalid... somehow", 4)
+		return;
+	}
+	body->SetPhysicsLinearVelocity({});
 
 	fx->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	if(fx->GetFXSystemAsset()) fx->ActivateSystem();
 	else Print("No vfx given..", 4)
-
-	if(IsValid(body)) body->DestroyComponent();
+	
+	SetActorEnableCollision(false);
+	body->DestroyComponent();
 
 	FTimerHandle handle;
 	GetWorld()->GetTimerManager().SetTimer(handle, [this]{ Destroy();} , 1, false);
 }
 
-void ACell::SetDormant(const bool dormant)
+void ACell::Wake()
 {
-	if(safe) return;
 	if(!IsValid(this)) return;
 	if(!this->IsValidLowLevel()) return;
 	
+	PrimaryActorTick.bCanEverTick = true;
+	// SetActorEnableCollision(!dormant);
+	// SetActorHiddenInGame(false);
+
+	if(IsValid(body))
+	{
+		body->SetSimulatePhysics(true);
+		body->SetHiddenInGame(false);
+	}
+}
+
+void ACell::Sleep()
+{
+	if(!IsValid(this)) return;
+	if(!this->IsValidLowLevel()) return;
 	
-	PrimaryActorTick.bCanEverTick = !dormant;
-	SetActorEnableCollision(!dormant);
-	SetActorHiddenInGame(dormant);
+	PrimaryActorTick.bCanEverTick = false;
+	// SetActorEnableCollision(!dormant);
+	// SetActorHiddenInGame(true);
 	isHoming = false;
 
-	body->SetSimulatePhysics(!dormant);
+	body = 0;
+	body = FindComponentByClass<UStaticMeshComponent>();
+	
+	if(!IsValid(body))
+	{
+		Print("body was invalid.......", 4)
+		return;
+	}
+	body->SetSimulatePhysics(false);
+	body->SetHiddenInGame(true);
 }
 
