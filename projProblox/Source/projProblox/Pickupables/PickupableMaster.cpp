@@ -22,7 +22,7 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 {
 	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
 	{
-		soundPlayer->StopImpact();
+		//soundPlayer->StopImpact();
 		return;
 	}
 
@@ -36,9 +36,9 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 	
 	if(force < minForce) return;
 
-	soundPlayer->SetFloatParam("ImpactForce", ::cbrt(force) * .35f);
-	soundPlayer->PlayImpact();
-	PrintFloat(std::cbrt(force) * .35f, 3)
+	//soundPlayer->SetFloatParam("ImpactForce", ::cbrt(force) * .35f);
+	//soundPlayer->PlayImpact();
+	//PrintFloat(std::cbrt(force) * .35f, 3)
 }
 
 void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
@@ -46,7 +46,7 @@ void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedCompo
 {
 	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
 	{
-		soundPlayer->StopImpact();
+		//soundPlayer->StopImpact();
 		return;
 	}
 	
@@ -60,9 +60,9 @@ void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedCompo
 	
 	if(force < minForce) return;
 
-	soundPlayer->SetFloatParam("ImpactForce", std::cbrt(force) * .35f);
-	soundPlayer->PlayImpact();
-	PrintFloat(std::cbrt(force) * .35f, 3)
+	//soundPlayer->SetFloatParam("ImpactForce", std::cbrt(force) * .35f);
+	//soundPlayer->PlayImpact();
+	//PrintFloat(std::cbrt(force) * .35f, 3)
 }
 
 // Sets default values

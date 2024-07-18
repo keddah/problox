@@ -34,21 +34,10 @@ void ACellSpawner::SetCellsDormant(bool dormant)
 {
 	if(spawnedCells.IsEmpty()) return;
 	
-	for(auto& cell : spawnedCells)
-	{
-		// Only if the cells haven't been collected..
-		if(IsValid(cell)) if(!cell->IsSafe()) cell->SetDormant(dormant);
-	}
-}
-
-void ACellSpawner::SetCollectedCellsDormant(bool dormant)
-{
 	for(const auto& cell : spawnedCells)
 	{
-		if(!IsValid(cell)) continue;
-		
-		// Only if the cell is safe (SetCellsDormant handles unsafe cells) 
-		if(cell->IsSafe()) cell->SetDormant(dormant);
+		// Only if the cells haven't been collected..
+		if(IsValid(cell)) cell->SetDormant(dormant);
 	}
 }
 
@@ -154,7 +143,7 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 		default:
 			subClass = normalCell;
 	}
-	
+
 	return wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
 }
 
@@ -229,14 +218,11 @@ int ACellSpawner::GetCollectedAmount() const
 	if(spawnedCells.IsEmpty()) return 0;
 
 	int count = 0;
-	for(const auto& cell : spawnedCells) if(IsValid(cell)) if(cell->IsSafe()) count++;
+	for(const auto& cell : spawnedCells)
+	{
+		// If it's not valid.. it means it's been destroyed/collected.
+		if(!IsValid(cell)) count++;
+	}
 
-	return count;
-}
-
-int ACellSpawner::GetValidSpawnAmount() const
-{
-	int count = 0;
-	for(const auto& cell: spawnedCells) if(IsValid(cell)) count++;
 	return count;
 }

@@ -163,6 +163,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "190F531677AAE24F0FED544B3C84217673501DE2",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Flies"
+			]
+		},
+		{
+			"ShaderMapHash": "1323A416A7FD67AC95CDDC6E36D4BD08F8CD9238",
+			"Assets": [
+				"/Game/Models/Security_Camera_Texture1"
+			]
+		},
+		{
 			"ShaderMapHash": "4DF74117DE68B2E6CDD88E0BBC78CEC4AD26C858",
 			"Assets": [
 				"/Game/Levels/StoryMode/DesertPrototype"
@@ -178,6 +190,12 @@
 			"ShaderMapHash": "B99324194051F2FBF358EAFD4063CFF8E6478CFC",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Wood_Oak"
+			]
+		},
+		{
+			"ShaderMapHash": "CD5DB1199351DDF8E77C7FBFB803529344E8FEF3",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Derbis"
 			]
 		},
 		{
@@ -254,6 +272,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "94266D1ED0A9B078FCA3C5C88488859FDA78C1EC",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Snow"
+			]
+		},
+		{
 			"ShaderMapHash": "DEF56220C7BD375B4FDAB75A7F6EDB6140CF8EB9",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_Sheen_Mask_DS"
@@ -290,6 +314,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "8E98A4279E42DC6B4834390292CD26B25F00B383",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Spark_A"
+			]
+		},
+		{
 			"ShaderMapHash": "8F0DCB2A7CE346FC0CF04FA7AA3AAB468AEA5FA1",
 			"Assets": [
 				"/Engine/EngineMaterials/Widget3DPassThrough_Opaque_OneSided"
@@ -318,12 +348,6 @@
 			"Assets": [
 				"/Game/Models/Sketchfab/AlarmClock/plastic_button_1",
 				"/Game/Models/Sketchfab/AlarmClock/plastic_button_1_001"
-			]
-		},
-		{
-			"ShaderMapHash": "88BF052D4BE7B61CDE1D347ECD96DD302403B18D",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_Glass"
 			]
 		},
 		{
@@ -387,6 +411,15 @@
 				"/Game/Models/BlenderModelsReece/MoreOpaqueGlow",
 				"/Game/Models/BlenderModelsReece/Red",
 				"/Game/Models/BlenderModelsReece/Stone",
+				"/Game/Models/MechanicModels/Grapple/Material",
+				"/Game/Models/MechanicModels/Grapple/Material_001",
+				"/Game/Models/MechanicModels/Grapple/Material_002",
+				"/Game/Models/MechanicModels/Grapple/Material_003",
+				"/Game/Models/MechanicModels/Grapple/Material_004",
+				"/Game/Models/MechanicModels/Grapple/Material_005",
+				"/Game/Models/MechanicModels/Grapple/Material_006",
+				"/Game/Models/MechanicModels/GuideArrow/Material_002",
+				"/Game/Models/MechanicModels/GuideArrow/Material_003",
 				"/Game/Models/MechanicModels/Material",
 				"/Game/Models/MechanicModels/Material_007",
 				"/Game/Models/MechanicModels/Material_008",
@@ -423,7 +456,10 @@
 			"ShaderMapHash": "2A7BCB343A69DDB21023141AC8FA10C7D47B7ACC",
 			"Assets": [
 				"/Game/Levels/LowPolyInterior/Materials/M_LowPolyInterior_Dust",
-				"/Game/LowPolyInterior/Materials/M_LowPolyInterior_Dust"
+				"/Game/LowPolyInterior/Materials/M_LowPolyInterior_Dust",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Bubble_pop",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Splat_A",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Water_Splat"
 			]
 		},
 		{
@@ -472,6 +508,18 @@
 			"ShaderMapHash": "8FE7AE3C9FC3CAF6AE02C9FF30A85B3EEE16D0EC",
 			"Assets": [
 				"/Game/Materials/RandomMaterials/Brighterglow"
+			]
+		},
+		{
+			"ShaderMapHash": "4400CC3C715861613F20270EB0F8965F41F32B73",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_WaterDrop_B"
+			]
+		},
+		{
+			"ShaderMapHash": "211E2F3EE1CD35C4922E7F7CD5A41744D7D19787",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/DemoRoom/Materials/M_DemoWall"
 			]
 		},
 		{
@@ -526,6 +574,7 @@
 		{
 			"ShaderMapHash": "4CBC8B4912FBC44C1C19DE6F4978A38EB68F4525",
 			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Heat_Distortion",
 				"/Game/StarterContent/Particles/Materials/M_Heat_Distortion"
 			]
 		},
@@ -543,6 +592,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "5F29724C418D3C3D45FD7713512AF2459A8F4244",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Explosion_D"
+			]
+		},
+		{
+			"ShaderMapHash": "046B454D52BADFAC1C84840A2EE8E4D9141C8D7C",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Butterfly"
+			]
+		},
+		{
 			"ShaderMapHash": "A44DED4F793934F7A963BF3D39D8049A4AF4B845",
 			"Assets": [
 				"/Game/Materials/RandomMaterials/M_Wood"
@@ -552,6 +613,12 @@
 			"ShaderMapHash": "B2352451A8B93866FB529322E0377F81FFD9A501",
 			"Assets": [
 				"/Engine/EngineMaterials/Widget3DPassThrough_Opaque"
+			]
+		},
+		{
+			"ShaderMapHash": "7D0EA85171D3C43F153389D303F6FE2180229863",
+			"Assets": [
+				"/Game/Materials/Pickupables/Magnet/M_MagneticObj"
 			]
 		},
 		{
@@ -586,6 +653,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "610C815704DB289787E78A2069D91ED7A63E6DD0",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Slash"
+			]
+		},
+		{
 			"ShaderMapHash": "4EEEFE57B37BA4F0A593FF8F7898ACB5AE883720",
 			"Assets": [
 				"/SpeedTreeImporter/SpeedTree9/SpeedTreeBillboardMaster"
@@ -616,6 +689,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "D4ED885EC51149275BBC9E1F7BB8168CCD061613",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_WaterDrop"
+			]
+		},
+		{
+			"ShaderMapHash": "4392535FDA92FF46F6A1ED1051F867FF876443D9",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_A"
+			]
+		},
+		{
 			"ShaderMapHash": "5B3E895F182400C76628BFB02C933FD7D47A309D",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_Sheen_Blend_DS"
@@ -637,6 +722,16 @@
 			"ShaderMapHash": "B44057621154A2369DAE0CACC6FE785878C7BA2E",
 			"Assets": [
 				"/Game/StarterContent/Blueprints/Assets/M_LightStage_Arrows"
+			]
+		},
+		{
+			"ShaderMapHash": "06DE9163D59F5000821C76824D099A1F16C9EAA1",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Bubble",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Bubble_B",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Dandelion",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Impact_A",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Impact_C"
 			]
 		},
 		{
@@ -682,9 +777,27 @@
 			]
 		},
 		{
+			"ShaderMapHash": "41F6CE684F2B9DEBEB393A922FB65B3A7F2F777E",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Fire_Splat"
+			]
+		},
+		{
 			"ShaderMapHash": "B5399B6B5357B3DF972B3B24687E038FE5743F05",
 			"Assets": [
 				"/Game/MSPresets/M_MS_Foliage_Material/M_MS_Foliage_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "B8391D6DC482160407D765A28997171CFE05EED0",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_Wisp"
+			]
+		},
+		{
+			"ShaderMapHash": "5CA67A6DC896BDA73611866CB58FF172B878AE5F",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Explosion_E"
 			]
 		},
 		{
@@ -743,6 +856,13 @@
 			]
 		},
 		{
+			"ShaderMapHash": "9462AC7413FD6F8786878AA6215DC6A7F7D8F052",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Rock_B",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Wood"
+			]
+		},
+		{
 			"ShaderMapHash": "A4657E759045A7781BDFD5DB5C00547BEEC7A756",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_SpecularGlossiness_Mask_DS"
@@ -758,6 +878,12 @@
 			"ShaderMapHash": "0135A276F4CEC340414B3DC357879688752C9692",
 			"Assets": [
 				"/Game/Materials/Pickupables/Hover/M_HoverCore"
+			]
+		},
+		{
+			"ShaderMapHash": "18427B776ACA912A7FC269748894FFFC0F313066",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Basic_Shape"
 			]
 		},
 		{
@@ -785,6 +911,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "0C9A417C8C76A3ACF4D744E8DB8387B9C2E9D773",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleStrip"
+			]
+		},
+		{
 			"ShaderMapHash": "D3EACB7C22641A8AAF0514B1A07908A83919625E",
 			"Assets": [
 				"/Game/Levels/StoryMode/Materials/M_Master"
@@ -806,6 +938,12 @@
 			"ShaderMapHash": "E76FCA7F9364CB8566EFA2DEA1F53D12706522A0",
 			"Assets": [
 				"/Engine/Engine_MI_Shaders/M_ES_Phong_Opaque_Master_01"
+			]
+		},
+		{
+			"ShaderMapHash": "99F38F81B173E70807DF6B0C11E302BBC05D4AF1",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleFace"
 			]
 		},
 		{
@@ -851,6 +989,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "3FF43F883AB0CFCCB500833C973E06D2D3139B28",
+			"Assets": [
+				"/Game/Materials/Pickupables/Thrusters/M_ThrusterStrap"
+			]
+		},
+		{
 			"ShaderMapHash": "D55A75888F2CB7108BAC3520C22E9648DE8FDC21",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Rock_Marble_Polished"
@@ -875,6 +1019,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "E0C5ED8945E48549CE6DC96285DBE9776C235D1B",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_B"
+			]
+		},
+		{
+			"ShaderMapHash": "CB60358A894791F2A6F518C0B9926241F2EFC5A7",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_Glass"
+			]
+		},
+		{
 			"ShaderMapHash": "EC2C668A2049976BDAF1B8918D8C3A88A90F1114",
 			"Assets": [
 				"/Engine/EditorMaterials/PhAT_NoCollisionMaterial"
@@ -890,6 +1046,12 @@
 			"ShaderMapHash": "86C5798C5025669B8CD38CFD575BF74C5B2C962B",
 			"Assets": [
 				"/Engine/EngineSky/M_SimpleSkyDome"
+			]
+		},
+		{
+			"ShaderMapHash": "F68F828C1FEE2F996B65C1A693E442CF445B3B6E",
+			"Assets": [
+				"/Game/Materials/Pickupables/Magnet/MM_Magnet"
 			]
 		},
 		{
@@ -919,9 +1081,21 @@
 			]
 		},
 		{
-			"ShaderMapHash": "F5EB06927A7950B460621B6AA3A7A6E15CFA0B51",
+			"ShaderMapHash": "32994F91225F1C340D657B335D06A460CDFC2489",
 			"Assets": [
-				"/Game/Materials/Magnet/MM_Magnet"
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Leaves_A"
+			]
+		},
+		{
+			"ShaderMapHash": "9897569191802483EE7904D3F019CC032BDC6968",
+			"Assets": [
+				"/Game/Materials/Pickupables/Thrusters/M_ThrusterFrames"
+			]
+		},
+		{
+			"ShaderMapHash": "2585AC9165693D439AFA637DA96127D353E7ACC3",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_Puff_A"
 			]
 		},
 		{
@@ -967,6 +1141,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "37C2059AF9E6D6388E5140CC2300C45D8BFC7CB9",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_Ground"
+			]
+		},
+		{
 			"ShaderMapHash": "5210289A9B6EA13A6E342D352AEA9FAE4BF8E203",
 			"Assets": [
 				"/Game/Materials/Pickupables/Propeller/M_PropellerRim"
@@ -976,6 +1156,12 @@
 			"ShaderMapHash": "918B7D9A8A4BAB2FCDFCFDDCCCB5FCAD445F5F30",
 			"Assets": [
 				"/Game/Models/MechanicModels/Materials/Material_016"
+			]
+		},
+		{
+			"ShaderMapHash": "454F2F9BB6BAA4C4205BAF1B2F72A08D3B50B819",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Explosion_G"
 			]
 		},
 		{
@@ -991,6 +1177,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "605F5E9DA4794BB88583432034D136040443817B",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Hook/M_GrappleTrim"
+			]
+		},
+		{
 			"ShaderMapHash": "67C49F9DE08458AB3D21C18A5F9DAA664F85F3A8",
 			"Assets": [
 				"/Game/Materials/Pickupables/Glider/M_Glider2"
@@ -1003,12 +1195,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "AD111E9F68BAAC6775CF7FD6E6E1232DB9E7E418",
-			"Assets": [
-				"/Game/LowPolyInterior/Materials/M_LowPolyInterior_01"
-			]
-		},
-		{
 			"ShaderMapHash": "4C5E399F02739FB058819A0EBA55DB224C5B07FC",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_Default_Opaque_DS"
@@ -1018,6 +1204,12 @@
 			"ShaderMapHash": "480E58A0192F338736838F1A4019B09C4B8AD3A9",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_Unlit_Mask"
+			]
+		},
+		{
+			"ShaderMapHash": "94A42DA21C15617F33D9D19ACD97598777441314",
+			"Assets": [
+				"/Game/Materials/Pickupables/Thrusters/M_ThrusterThins"
 			]
 		},
 		{
@@ -1050,6 +1242,12 @@
 			"ShaderMapHash": "A752A1A5950A862F0B72492B8C4A8A51E84ECC2D",
 			"Assets": [
 				"/Game/Materials/Pickupables/OutlineMaterials/MM_Outline"
+			]
+		},
+		{
+			"ShaderMapHash": "F6ED6EA7DFA12FFDEA5D5BB5ABC590B8BA4D8052",
+			"Assets": [
+				"/Game/Materials/Pickupables/Thrusters/M_Thruster"
 			]
 		},
 		{
@@ -1134,6 +1332,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "E9B536A8935954EF4F056AFCD48EDEB2F8FA46B9",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Dirt_A"
+			]
+		},
+		{
 			"ShaderMapHash": "C6FDAEA8BFEF0C6E058FE911C2F31B09A547C092",
 			"Assets": [
 				"/Game/Materials/RandomMaterials/M_Brown"
@@ -1164,6 +1368,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "B77381AC5D2F3632102B3A6276544559F8951FED",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_C"
+			]
+		},
+		{
+			"ShaderMapHash": "8F7A8EADA3A8495135F5BB236719A0A053A2372E",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Hook/M_GrappleCore"
+			]
+		},
+		{
 			"ShaderMapHash": "F599D2AEE86E5ECDE247FBA09C12EE61C91F4EFD",
 			"Assets": [
 				"/Interchange/gltf/MaterialInstances/MI_SpecularGlossiness_Blend_DS"
@@ -1188,9 +1404,21 @@
 			]
 		},
 		{
+			"ShaderMapHash": "BC2D1FB4E93599A9FF73D85430EFA0FCFF7D7E6E",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_spark_C"
+			]
+		},
+		{
 			"ShaderMapHash": "1BA765B4EEFD8D96C7B9133D0D3E8CD7F6273B27",
 			"Assets": [
 				"/Game/MSPresets/M_MS_SurfaceBlend_Material/M_MS_SurfaceBlend_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "955AC0B42466000EB694236B20113E576C65EAD7",
+			"Assets": [
+				"/Game/Materials/Pickupables/Thrusters/M_ThrusterBase"
 			]
 		},
 		{
@@ -1232,6 +1460,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "548E40BAB90157A9A8813534C4C7168C7B96A2D5",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Lightning_small"
+			]
+		},
+		{
+			"ShaderMapHash": "8EED63BA9DF29C05DB804AB6F2CD762CE01B1C37",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleBase"
+			]
+		},
+		{
 			"ShaderMapHash": "162641BBA13DE022BC2FDCFA1C67CE9A30E8408A",
 			"Assets": [
 				"/Game/Levels/StoryMode/Materials/M_Landscape"
@@ -1256,6 +1496,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "52DD4DBE935227A2748CABB5325362DB9690A6DC",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_C"
+			]
+		},
+		{
+			"ShaderMapHash": "9BCD27C06FD0BEBF5B3BE6E8244DA1D7062CA73F",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Hook/M_GrappleHook1"
+			]
+		},
+		{
 			"ShaderMapHash": "9F5A7CC0D1A822D203A96DCB19557198505302DC",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Door"
@@ -1265,6 +1517,18 @@
 			"ShaderMapHash": "5893A9C1AFFC9CC031D3CF4A2A217AB9B59EA8EA",
 			"Assets": [
 				"/Game/Materials/Pickupables/Core/M_CoreCore"
+			]
+		},
+		{
+			"ShaderMapHash": "2CD6C8C18AC7669AC80E8E3D297F5FC7C0A9B77E",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Fish_A"
+			]
+		},
+		{
+			"ShaderMapHash": "6970EAC1F40C5691AEA6BE5B75F6291EFA967017",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Explosion_i"
 			]
 		},
 		{
@@ -1283,6 +1547,7 @@
 		{
 			"ShaderMapHash": "3C3EA1C6B93DA1B10AAB5B96CA0307521B2643CD",
 			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Fire_C",
 				"/Game/StarterContent/Particles/Materials/M_Fire_SubUV"
 			]
 		},
@@ -1290,6 +1555,12 @@
 			"ShaderMapHash": "B7BA5AC7A5585D5ECABB3B6FA3130811101C6991",
 			"Assets": [
 				"/Game/Models/MechanicModels/Materials/Darkred"
+			]
+		},
+		{
+			"ShaderMapHash": "F8E769C76BE968D2AEAB208185E25E7958280C09",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Hook/M_GrappleHook"
 			]
 		},
 		{
@@ -1323,6 +1594,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "BDE3D8C9C740180591ABD99EBAF183A141E8016B",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Fire_B"
+			]
+		},
+		{
 			"ShaderMapHash": "50C76DCBA6D7FED0DF2D3B030E81E0189C9E6243",
 			"Assets": [
 				"/Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud"
@@ -1338,6 +1615,13 @@
 			"ShaderMapHash": "82A008CC3635D68485AFD35AF6C78017314F8515",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Ground_Moss"
+			]
+		},
+		{
+			"ShaderMapHash": "929718CC6BDA3A360838A199EFCD4A995DF2DFFB",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_Ground_B",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_Ground_C"
 			]
 		},
 		{
@@ -1365,6 +1649,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "13EA45D12E86E648860CB9D0C5C35633DDFA76E8",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Impact_B"
+			]
+		},
+		{
+			"ShaderMapHash": "A96399D1F2FC551CEDEC071B70D0846DB5D32D88",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Mud"
+			]
+		},
+		{
 			"ShaderMapHash": "8D969DD1075A72E36C19CF35FC4E48FC19CCC084",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Rock"
@@ -1374,6 +1670,12 @@
 			"ShaderMapHash": "C006EFD1EE86B61D0A6E02EC4AE3B632825409DD",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Metal_Chrome"
+			]
+		},
+		{
+			"ShaderMapHash": "BEC2DFD2EA074A796B4CB3A3AFEBB916BE120D90",
+			"Assets": [
+				"/Game/LowPolyInterior/Materials/M_LowPolyInterior_01"
 			]
 		},
 		{
@@ -1433,6 +1735,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "D44492DC90D498451CD100B6603E559E468A9C63",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Blood_C"
+			]
+		},
+		{
+			"ShaderMapHash": "13F9CADD47FAFFB4737F0C4E34F599A8AB75EE99",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_D"
+			]
+		},
+		{
 			"ShaderMapHash": "EAE573DE2F14FE4B6DED78A5A4B870E86DB9B180",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Wood_Floor_Walnut_Polished"
@@ -1448,6 +1762,12 @@
 			"ShaderMapHash": "12A855DF43912C7B794185301196C464C7A17559",
 			"Assets": [
 				"/Engine/EngineDebugMaterials/BoneWeightMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "9BBAA8DF9A147F9655869AC4120820E0E649584D",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_WaterDrop_A"
 			]
 		},
 		{
@@ -1469,9 +1789,21 @@
 			]
 		},
 		{
+			"ShaderMapHash": "F8CBE1E2158D680ADF958152BB259EF4A46D9B75",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/DemoRoom/Materials/DefaultTextMaterialTranslucentUnlit"
+			]
+		},
+		{
 			"ShaderMapHash": "910EE2E26A8AF314BE3481D9574F5A433A8AC515",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Metal_Rust"
+			]
+		},
+		{
+			"ShaderMapHash": "311DEAE2D973780DC18DFF5B2E0E243E42315200",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Distortion"
 			]
 		},
 		{
@@ -1553,6 +1885,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "A06015F480B9172E0404EB705C29BB151FB3FEF4",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_A"
+			]
+		},
+		{
 			"ShaderMapHash": "90284FF40390A5B3DCBCF55811C2205C6C01EF0C",
 			"Assets": [
 				"/Game/MSPresets/M_MS_Billboard_Material/M_MS_Billboard_Material"
@@ -1620,9 +1958,23 @@
 			]
 		},
 		{
+			"ShaderMapHash": "5B0BFDFB03BF286C1B4DDA115F115164F9A17E4E",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Dirt_B",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glass",
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Paper"
+			]
+		},
+		{
 			"ShaderMapHash": "4B648BFC853119FA5D90F64245E5788DCC122DE5",
 			"Assets": [
 				"/Engine/EngineDebugMaterials/DebugMeshMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "C8949FFCFE18AAE69B1491451CFDAF89BD24E610",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Explosion_B"
 			]
 		},
 		{

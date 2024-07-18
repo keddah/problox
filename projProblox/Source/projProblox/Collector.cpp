@@ -72,29 +72,6 @@ void ACollector::CalculateCellCount()
 		{
 			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
 			cellsInLevel += spawner->GetSpawnAmount();
-			spawner->onCellDeath.AddDynamic(this, &ACollector::ReCalculateCellCount);
-		}
-	}
-}
-
-void ACollector::ReCalculateCellCount()
-{
-	Print("Cells died...", 4)
-	const UWorld* wrld = GetWorld();
-	if(!wrld) return;
-	
-	TArray<AActor*> countArr;
-
-	// Only count the cells that aren't captured
-	cellsInLevel = 0;
-	
-	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
-	for (const auto& spawnActor: countArr)
-	{
-		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
-		{
-			// Adds the spawn amounts for every spawner in the level to get the maximum amount of cells that can be in this level
-			cellsInLevel += spawner->GetValidSpawnAmount();
 		}
 	}
 }
@@ -113,7 +90,10 @@ int ACollector::GetLvlCellCount(const ELevel& lvl) const
 		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
 		{
 			// If the spawner's level matches with the parameter...
-			if(lvl == spawner->GetLevelEnum()) count += spawner->GetSpawnAmount();
+			if(lvl == spawner->GetLevelEnum())
+			{
+				count += spawner->GetSpawnAmount();
+			}
 		}
 	}
 
@@ -126,7 +106,7 @@ int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
 	TArray<AActor*> countArr;
 
 	int count = 0;
-	
+
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
 	for (const auto& spawnActor: countArr)
 	{
@@ -137,6 +117,6 @@ int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
 			if(lvl == spawner->GetLevelEnum()) count += spawner->GetCollectedAmount();
 		}
 	}
-
+	
 	return count;
 }

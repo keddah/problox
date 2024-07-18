@@ -16,11 +16,14 @@ ACell::ACell()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	bAsyncPhysicsTickEnabled = false;
-
+	bAlwaysRelevant = true;
+	bRelevantForLevelBounds = false;
+	
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
 	body->SetRelativeScale3D({.85f, .85f,.85f});
 	body->SetSimulatePhysics(true);
-
+	body->SetUseCCD(true)
+	;
 	if(IsValid(GEngine)) body->SetMassOverrideInKg("", .01f);
 
 	hitBox = CreateDefaultSubobject<USphereComponent>("Collision Box");
@@ -65,39 +68,33 @@ void ACell::GoHome() const
 	body->AddForce(direction * attractionForce);
 }
 
-void ACell::Teleport(const FVector& pos)
+// The cells will be destroyed the next time the player leaves the level so there aren't any hiccups (+ so the vfx work)
+void ACell::Kill()
 {
+	safe = true;
+
 	fx->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	if(fx->GetFXSystemAsset()) fx->ActivateSystem();
 	else Print("No vfx given..", 4)
 
-	// Shrink so that more can fit in the collector
-	body->SetRelativeScale3D({.25f,.25f,.25f});
+	if(IsValid(body)) body->DestroyComponent();
 
-	// Remove its velocity
-	body->SetPhysicsLinearVelocity({});
-
-	SetActorLocation(pos);
-	safe = true;
-
-	// Stop doing ticks.
-	PrimaryActorTick.bCanEverTick = false;
-	bAsyncPhysicsTickEnabled = false;
+	FTimerHandle handle;
+	GetWorld()->GetTimerManager().SetTimer(handle, [this]{ Destroy();} , 1, false);
 }
 
 void ACell::SetDormant(const bool dormant)
 {
-	// Is pending kill?
+	if(safe) return;
 	if(!IsValid(this)) return;
-
+	if(!this->IsValidLowLevel()) return;
+	
+	
 	PrimaryActorTick.bCanEverTick = !dormant;
 	SetActorEnableCollision(!dormant);
-	if(IsValid(body))
-	{
-		body->SetHiddenInGame(dormant);
-		body->SetSimulatePhysics(!dormant);
-	}
-	
+	SetActorHiddenInGame(dormant);
 	isHoming = false;
+
+	body->SetSimulatePhysics(!dormant);
 }
 

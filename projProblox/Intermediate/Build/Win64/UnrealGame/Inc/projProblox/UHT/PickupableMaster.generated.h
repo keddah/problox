@@ -9,9 +9,12 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 class UMaterialInstance;
+class UPrimitiveComponent;
 class UStaticMeshComponent;
 enum class EAttachmentIcon : uint8;
+struct FHitResult;
 #ifdef PROJPROBLOX_PickupableMaster_generated_h
 #error "PickupableMaster.generated.h already included, missing '#pragma once' in PickupableMaster.h"
 #endif
@@ -29,10 +32,13 @@ enum class EAttachmentIcon : uint8;
 	DECLARE_FUNCTION(execIsTimerRequired); \
 	DECLARE_FUNCTION(execGetMesh); \
 	DECLARE_FUNCTION(execSetAbilityActive); \
-	DECLARE_FUNCTION(execSetSelected); \
+	DECLARE_FUNCTION(execAttach); \
 	DECLARE_FUNCTION(execResetRotation); \
 	DECLARE_FUNCTION(execGhostSnapRotate); \
 	DECLARE_FUNCTION(execRotateHori); \
+	DECLARE_FUNCTION(execPickupCell); \
+	DECLARE_FUNCTION(execCollisionOverlapSFX); \
+	DECLARE_FUNCTION(execCollisionHitSFX); \
 	DECLARE_FUNCTION(execShowOutline); \
 	DECLARE_FUNCTION(execResetOutline);
 

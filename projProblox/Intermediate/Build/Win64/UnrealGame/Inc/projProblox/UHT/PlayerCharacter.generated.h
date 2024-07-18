@@ -28,7 +28,6 @@ struct FHitResult;
 	DECLARE_FUNCTION(execEjectObject); \
 	DECLARE_FUNCTION(execSpawnFromBuyable); \
 	DECLARE_FUNCTION(execBuildControls); \
-	DECLARE_FUNCTION(execDetach); \
 	DECLARE_FUNCTION(execConfirm); \
 	DECLARE_FUNCTION(execDeselect); \
 	DECLARE_FUNCTION(execEjectAll); \

@@ -24,9 +24,6 @@ class PROJPROBLOX_API ACollector : public AActor
 	UFUNCTION(BlueprintCallable)
 	void CalculateCellCount();
 	
-	UFUNCTION()
-	void ReCalculateCellCount();
-
 	int GetLvlCellCount(const ELevel& lvl) const;
 	int GetCollectedCountFromLvl(const ELevel& lvl) const;
 	
@@ -82,9 +79,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	int GetLevel3Collected() const { return GetCollectedCountFromLvl(ELevel::Bathroom); }
 	
-	UFUNCTION(BlueprintCallable)
-	FVector GetCollectPoint() const { return depoPoint->GetComponentLocation(); }
-
 	UFUNCTION(BlueprintCallable)
 	void AddThing() { cellCount++; }
 };

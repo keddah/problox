@@ -17,7 +17,6 @@
 #include "CellSpawner.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSpawnTriggered, ACellSpawner*, triggeredSpawner);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCellsDied);
 
 UENUM(BlueprintType)
 enum class ECellType : uint8
@@ -140,19 +139,13 @@ public:
 
 	// Hides and deactivates the physics for all the unsafe spawned cells
 	void SetCellsDormant(bool dormant);
-	
-	// If the spawned cells have been collected, hide them when the player leaves the build area and show them when they enter it.
-	void SetCollectedCellsDormant(bool dormant);
-	
+
 	
 	/////////////////////////// VARIABLES ///////////////////////////
 	/////////// DELEGATES ///////////
 	UPROPERTY(BlueprintAssignable)
 	FOnSpawnTriggered onTriggered;
-
-	UPROPERTY(BlueprintAssignable)
-	FOnCellsDied onCellDeath;
-
+	
 
 	/////////////////////////// FUNCTIONS ///////////////////////////
 	void Init();
@@ -189,9 +182,6 @@ public:
 
 	int GetCollectedAmount() const;
 
-	// Gets the number of cells that have been spawn and still valid
-	int GetValidSpawnAmount() const;
-	
 	int GetSpawnAmount() const
 	{
 		// If this spawner has an objective, if it's already been completed... return 0 

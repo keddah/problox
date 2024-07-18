@@ -323,24 +323,25 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 void ALevelManager::WakeSleepCells(int i, ELevel lvl)
 {
 	if(cellSpawners.IsEmpty()) return;
-	
-	for(auto& spawner : cellSpawners)
+
+	FTimerHandle delay;
+	wrld->GetTimerManager().SetTimer(delay, [this]
 	{
-		if(!IsValid(spawner)) continue;
+		for(auto& spawner : cellSpawners)
+		{
+			if(!IsValid(spawner)) continue;
 
-		ELevel levelEnum;
-		if(currentLevel == 1) levelEnum = ELevel::Bedroom;
-		else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
-		else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
-		else levelEnum = ELevel::BuildArea;
+			ELevel levelEnum;
+			if(currentLevel == 1) levelEnum = ELevel::Bedroom;
+			else if(currentLevel == 2) levelEnum = ELevel::Kitchen;
+			else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
+			else levelEnum = ELevel::BuildArea;
 
-		// CRASHING HERE....................................
-		// Sleep the rest of the cells if the level enum aren't matching ... otherwise wake them
-		spawner->SetCellsDormant(spawner->GetLevelEnum() != levelEnum);
-
-		// Sleep the collected cells if the level enum isn't the build area ... otherwise wake them
-		spawner->SetCollectedCellsDormant(levelEnum != ELevel::BuildArea);
-	}
+			// CRASHING HERE....................................
+			// Sleep the rest of the cells if the level enum aren't matching ... otherwise wake them
+			spawner->SetCellsDormant(spawner->GetLevelEnum() != levelEnum);
+		}
+	}, .3f, false);
 }
 
 void ALevelManager::SaveSpawns()

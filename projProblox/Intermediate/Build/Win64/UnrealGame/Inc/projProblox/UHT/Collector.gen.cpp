@@ -9,7 +9,6 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCollector() {}
 // Cross Module References
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UPointLightComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
@@ -24,13 +23,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->AddThing();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACollector::execGetCollectPoint)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(FVector*)Z_Param__Result=P_THIS->GetCollectPoint();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACollector::execGetLevel3Collected)
@@ -88,7 +80,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddThing", &ACollector::execAddThing },
 			{ "CalculateCellCount", &ACollector::execCalculateCellCount },
-			{ "GetCollectPoint", &ACollector::execGetCollectPoint },
 			{ "GetLevel1Collected", &ACollector::execGetLevel1Collected },
 			{ "GetLevel1Count", &ACollector::execGetLevel1Count },
 			{ "GetLevel2Collected", &ACollector::execGetLevel2Collected },
@@ -139,40 +130,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACollector_CalculateCellCount_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACollector_GetCollectPoint_Statics
-	{
-		struct Collector_eventGetCollectPoint_Parms
-		{
-			FVector ReturnValue;
-		};
-		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Collector_eventGetCollectPoint_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Collector.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACollector, nullptr, "GetCollectPoint", nullptr, nullptr, Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::Collector_eventGetCollectPoint_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::Collector_eventGetCollectPoint_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ACollector_GetCollectPoint()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACollector_GetCollectPoint_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -436,7 +393,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACollector_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACollector_AddThing, "AddThing" }, // 2344276729
 		{ &Z_Construct_UFunction_ACollector_CalculateCellCount, "CalculateCellCount" }, // 992166689
-		{ &Z_Construct_UFunction_ACollector_GetCollectPoint, "GetCollectPoint" }, // 2601004452
 		{ &Z_Construct_UFunction_ACollector_GetLevel1Collected, "GetLevel1Collected" }, // 557216532
 		{ &Z_Construct_UFunction_ACollector_GetLevel1Count, "GetLevel1Count" }, // 1569599822
 		{ &Z_Construct_UFunction_ACollector_GetLevel2Collected, "GetLevel2Collected" }, // 3810931290
@@ -578,9 +534,9 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 1552770570U) },
+		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 276822077U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_2738210656(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_3284981258(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

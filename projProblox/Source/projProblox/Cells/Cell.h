@@ -53,9 +53,8 @@ private:
 
 	
 public:
-	// When the core collects it...
 	UFUNCTION(BlueprintCallable, Category = "Collection")
-	void Teleport(const FVector& pos);
+	void Kill();
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
