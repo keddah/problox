@@ -110,6 +110,7 @@ APickupableMaster::APickupableMaster()
 	mouseDetector->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 	mouseDetector->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
 	mouseDetector->AddRelativeLocation({0,0,50});
+	mouseDetector->SetUseCCD(true);
 	
 	defaultRot = mesh->GetRelativeRotation();
 	

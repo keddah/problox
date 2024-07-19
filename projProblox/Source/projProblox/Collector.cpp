@@ -117,6 +117,5 @@ int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
 			if(lvl == spawner->GetLevelEnum()) count += spawner->GetCollectedAmount();
 		}
 	}
-	PrintInt(count, 3)
 	return count;
 }
