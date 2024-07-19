@@ -444,7 +444,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Public so that the construction widget can eject too\n" },
+#endif
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Public so that the construction widget can eject too" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "EjectAll", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::PlayerCharacter_eventEjectAll_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_EjectAll_Statics::Function_MetaDataParams) };
@@ -988,7 +994,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_BuildControls, "BuildControls" }, // 1582125953
 		{ &Z_Construct_UFunction_APlayerCharacter_Confirm, "Confirm" }, // 2101215247
 		{ &Z_Construct_UFunction_APlayerCharacter_Deselect, "Deselect" }, // 2189380603
-		{ &Z_Construct_UFunction_APlayerCharacter_EjectAll, "EjectAll" }, // 3093888074
+		{ &Z_Construct_UFunction_APlayerCharacter_EjectAll, "EjectAll" }, // 2815520896
 		{ &Z_Construct_UFunction_APlayerCharacter_EjectObject, "EjectObject" }, // 312383470
 		{ &Z_Construct_UFunction_APlayerCharacter_EndGame, "EndGame" }, // 601148697
 		{ &Z_Construct_UFunction_APlayerCharacter_EndTurnEarly, "EndTurnEarly" }, // 2865316487
@@ -1192,7 +1198,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable_MetaData[] = {
 		{ "Category", "PlayerCharacter" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// The buyable object that the player's mouse is currently hovering over\n" },
+#endif
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The buyable object that the player's mouse is currently hovering over" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable = { "hoveredBuyable", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, hoveredBuyable), Z_Construct_UClass_ABuyableAttachment_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable_MetaData), Z_Construct_UClass_APlayerCharacter_Statics::NewProp_hoveredBuyable_MetaData) };
@@ -1293,19 +1305,19 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APlayerCharacter);
 	APlayerCharacter::~APlayerCharacter() {}
-	struct Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2527694996U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 436427515U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2526833500U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_3136180491(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_742706348(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
