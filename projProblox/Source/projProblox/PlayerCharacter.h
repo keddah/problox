@@ -125,9 +125,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	float mouseDistance = 20000;
 
-	UPROPERTY(BlueprintReadOnly)
-	bool canMove = true;
-
 	// The buyable object that the player's mouse is currently hovering over
 	UPROPERTY(BlueprintReadOnly)
 	ABuyableAttachment* hoveredBuyable;
@@ -149,11 +146,7 @@ public:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override { Super::SetupPlayerInputComponent(PlayerInputComponent); }
 
 	UFUNCTION(BlueprintCallable)
-	void SetGameMode(EGameMode mode)
-	{
-		currentMode = mode;
-		canMove = currentMode != EGameMode::Build;
-	}
+	void SetGameMode(EGameMode mode) { currentMode = mode; }
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
