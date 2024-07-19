@@ -26,16 +26,16 @@ ABalloon::ABalloon()
 	constraint = CreateDefaultSubobject<UPhysicsConstraintComponent>("Constraint");
 	constraint->SetupAttachment(string);
 
-	string->bAttachEnd = false;
-	string->CableLength = 250;
+	string->bAttachEnd = true;
+	string->CableLength = 80;
 	string->NumSegments = 16;
 	string->NumSides = 4;
 	string->SolverIterations = 2;
 	string->EndLocation = {};
 
-	constraint->SetLinearZLimit(LCM_Limited, string->CableLength);
-	constraint->SetLinearXLimit(LCM_Limited, string->CableLength);
-	constraint->SetLinearYLimit(LCM_Limited, string->CableLength);
+	constraint->SetLinearZLimit(LCM_Limited, stringLength);
+	constraint->SetLinearXLimit(LCM_Limited, stringLength);
+	constraint->SetLinearYLimit(LCM_Limited, stringLength);
 
 	favouredSlot = ECoreSockets::Up;
 	needsTimer = false;
@@ -64,20 +64,13 @@ void ABalloon::Ability(float deltaTime)
 	if(!parentCore) return;
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 
-	// (Since the pivot for the balloon mesh is the bottom)
-	constexpr float leeway = 170;
-	const bool atLimit = (GetActorLocation().Z + leeway) - parentCore->GetMesh()->GetSocketLocation(attachedSocket).Z >= constraint->ConstraintInstance.GetLinearLimit();
-	
-	// The speed the balloon should go upwards when it is first activated (until the limit is reached)
-	const float initSpeed = floatiness * 2;
-
 	const FVector thisVelocity = mesh->GetPhysicsLinearVelocity();
 	const FVector coreVelocity = parentCore->GetMesh()->GetPhysicsLinearVelocity();
 
 	float upAmount = thisVelocity.Z;
 	upAmount *= -deltaTime;
 	upAmount -= sqrt(parentCore->GetMass() / massMultiplier);
-	upAmount += atLimit? floatiness : initSpeed; 
+	upAmount += floatiness; 
 
 	constexpr float velocityDampener = .988f;
 	mesh->SetPhysicsLinearVelocity({coreVelocity.X * velocityDampener, coreVelocity.Y * velocityDampener, thisVelocity.Z + upAmount});
@@ -150,10 +143,17 @@ void ABalloon::BalloonAttach()
 	
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");
+
 	string->SetAttachEndToComponent(parentMesh, attachedSocket);
+	string->AttachEndToSocketName = attachedSocket;
+	string->bAttachEnd = true;
+	string->bAttachStart = true;
+	
 	if(!isAttached) soundPlayer->PlayAttach();
 	active = false;
 	isAttached = true;
+
+	string->SetPhysicsLinearVelocity({});
 }
 
 void ABalloon::GhostPlacement()

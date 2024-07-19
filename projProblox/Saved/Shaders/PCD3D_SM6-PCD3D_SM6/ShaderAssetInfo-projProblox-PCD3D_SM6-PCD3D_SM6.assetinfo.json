@@ -14,6 +14,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "1CAF15021BE5B6C571C74EA6D89BD897956F3BC0",
+			"Assets": [
+				"/Engine/TemplateResources/M_Template_Master"
+			]
+		},
+		{
 			"ShaderMapHash": "CFDCF902CB1EAFB4C8F49CB52E1C1F161E001776",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Tech_Hex_Tile"
@@ -411,6 +417,9 @@
 				"/Game/Models/BlenderModelsReece/MoreOpaqueGlow",
 				"/Game/Models/BlenderModelsReece/Red",
 				"/Game/Models/BlenderModelsReece/Stone",
+				"/Game/Models/MechanicModels/CellCollector/Collector_Glass",
+				"/Game/Models/MechanicModels/CellCollector/Collector_metal",
+				"/Game/Models/MechanicModels/CellCollector/Collector_woodedge",
 				"/Game/Models/MechanicModels/Grapple/Material",
 				"/Game/Models/MechanicModels/Grapple/Material_001",
 				"/Game/Models/MechanicModels/Grapple/Material_002",
@@ -1022,12 +1031,6 @@
 			"ShaderMapHash": "E0C5ED8945E48549CE6DC96285DBE9776C235D1B",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_B"
-			]
-		},
-		{
-			"ShaderMapHash": "CB60358A894791F2A6F518C0B9926241F2EFC5A7",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_Glass"
 			]
 		},
 		{
@@ -1726,6 +1729,12 @@
 			"Assets": [
 				"/Engine/EngineMaterials/Widget3DPassThrough",
 				"/Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided"
+			]
+		},
+		{
+			"ShaderMapHash": "2B75CEDB9CAD5DE7EE655E6C45B8F8D8B1389B0B",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_Glass"
 			]
 		},
 		{

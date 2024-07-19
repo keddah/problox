@@ -12,7 +12,6 @@
 #include "CoreMinimal.h"
 #include "PlayerCharacter.h"
 #include "SpawnPoint.h"
-#include "Components/PointLightComponent.h"
 #include "GameFramework/Actor.h"
 #include "Collector.generated.h"
 
@@ -30,29 +29,13 @@ class PROJPROBLOX_API ACollector : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	ACollector();
+	ACollector() { PrimaryActorTick.bCanEverTick = false; }
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	/////////////// Components ///////////////
-	UPROPERTY(EditDefaultsOnly)
-	USceneComponent* scene;
-
-	UPROPERTY(EditDefaultsOnly)
-	USceneComponent* depoPoint;
 	
-	UPROPERTY(EditDefaultsOnly)
-	UStaticMeshComponent* tube;
-	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UStaticMeshComponent* lid;
-
-	UPROPERTY(EditDefaultsOnly)
-	UPointLightComponent* light;
-
-
 	/////////////// Cells ///////////////
 	UPROPERTY(BlueprintReadWrite)
 	int32 cellsInLevel;
@@ -66,9 +49,6 @@ protected:
 
 	
 public:
-	UFUNCTION(BlueprintCallable)
-	FVector GetDepoPoint() const { return depoPoint->GetComponentLocation(); }
-	
 	// Called when changing levels
 	UFUNCTION(BlueprintCallable)
 	int GetLevel1Count() const { return GetLvlCellCount(ELevel::Bedroom); }

@@ -161,9 +161,10 @@ void FOnSpawnTriggered_DelegateWrapper(const FMulticastScriptDelegate& OnSpawnTr
 	}
 	DEFINE_FUNCTION(ACellSpawner::execIncreaseCollectedAmount)
 	{
+		P_GET_OBJECT(AActor,Z_Param_DestroyedActor);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->IncreaseCollectedAmount();
+		P_THIS->IncreaseCollectedAmount(Z_Param_DestroyedActor);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACellSpawner::execOverlap)
@@ -321,17 +322,29 @@ void FOnSpawnTriggered_DelegateWrapper(const FMulticastScriptDelegate& OnSpawnTr
 	}
 	struct Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics
 	{
+		struct CellSpawner_eventIncreaseCollectedAmount_Parms
+		{
+			AActor* DestroyedActor;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_DestroyedActor;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::NewProp_DestroyedActor = { "DestroyedActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CellSpawner_eventIncreaseCollectedAmount_Parms, DestroyedActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::NewProp_DestroyedActor,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Cells/CellSpawner.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACellSpawner, nullptr, "IncreaseCollectedAmount", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACellSpawner, nullptr, "IncreaseCollectedAmount", nullptr, nullptr, Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::CellSpawner_eventIncreaseCollectedAmount_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount_Statics::CellSpawner_eventIncreaseCollectedAmount_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -559,7 +572,7 @@ void FOnSpawnTriggered_DelegateWrapper(const FMulticastScriptDelegate& OnSpawnTr
 		{ &Z_Construct_UFunction_ACellSpawner_GetLevelEnum, "GetLevelEnum" }, // 3505796159
 		{ &Z_Construct_UFunction_ACellSpawner_GetObjective, "GetObjective" }, // 41837920
 		{ &Z_Construct_UFunction_ACellSpawner_HasObjective, "HasObjective" }, // 602619484
-		{ &Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount, "IncreaseCollectedAmount" }, // 3776773000
+		{ &Z_Construct_UFunction_ACellSpawner_IncreaseCollectedAmount, "IncreaseCollectedAmount" }, // 3086535848
 		{ &Z_Construct_UFunction_ACellSpawner_Overlap, "Overlap" }, // 1969133639
 		{ &Z_Construct_UFunction_ACellSpawner_StopSound, "StopSound" }, // 2314357331
 	};
@@ -894,9 +907,9 @@ void FOnSpawnTriggered_DelegateWrapper(const FMulticastScriptDelegate& OnSpawnTr
 		{ ECellType_StaticEnum, TEXT("ECellType"), &Z_Registration_Info_UEnum_ECellType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 653651803U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 470253215U) },
+		{ Z_Construct_UClass_ACellSpawner, ACellSpawner::StaticClass, TEXT("ACellSpawner"), &Z_Registration_Info_UClass_ACellSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACellSpawner), 4163641823U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_1572411656(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_920860863(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_Statics::EnumInfo));

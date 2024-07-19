@@ -9,7 +9,6 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCell() {}
 // Cross Module References
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -22,35 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AHoverCell_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AStickyCell();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AStickyCell_NoRegister();
-	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
-	struct Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Cells/Cell.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnCollected__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-void FOnCollected_DelegateWrapper(const FMulticastScriptDelegate& OnCollected)
-{
-	OnCollected.ProcessMulticastDelegate<UObject>(NULL);
-}
 	DEFINE_FUNCTION(ACell::execDeactivateHoming)
 	{
 		P_FINISH;
@@ -76,10 +48,9 @@ void FOnCollected_DelegateWrapper(const FMulticastScriptDelegate& OnCollected)
 	}
 	DEFINE_FUNCTION(ACell::execToCollector)
 	{
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_depoPoint);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->ToCollector(Z_Param_Out_depoPoint);
+		P_THIS->ToCollector();
 		P_NATIVE_END;
 	}
 	void ACell::StaticRegisterNativesACell()
@@ -177,28 +148,10 @@ void FOnCollected_DelegateWrapper(const FMulticastScriptDelegate& OnCollected)
 	}
 	struct Z_Construct_UFunction_ACell_ToCollector_Statics
 	{
-		struct Cell_eventToCollector_Parms
-		{
-			FVector depoPoint;
-		};
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_depoPoint_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_depoPoint;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACell_ToCollector_Statics::NewProp_depoPoint_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACell_ToCollector_Statics::NewProp_depoPoint = { "depoPoint", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Cell_eventToCollector_Parms, depoPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_ToCollector_Statics::NewProp_depoPoint_MetaData), Z_Construct_UFunction_ACell_ToCollector_Statics::NewProp_depoPoint_MetaData) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACell_ToCollector_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACell_ToCollector_Statics::NewProp_depoPoint,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACell_ToCollector_Statics::Function_MetaDataParams[] = {
@@ -206,9 +159,7 @@ void FOnCollected_DelegateWrapper(const FMulticastScriptDelegate& OnCollected)
 		{ "ModuleRelativePath", "Cells/Cell.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACell_ToCollector_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACell, nullptr, "ToCollector", nullptr, nullptr, Z_Construct_UFunction_ACell_ToCollector_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_ToCollector_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACell_ToCollector_Statics::Cell_eventToCollector_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C20401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_ToCollector_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACell_ToCollector_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_ToCollector_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ACell_ToCollector_Statics::Cell_eventToCollector_Parms) < MAX_uint16);
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACell_ToCollector_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACell, nullptr, "ToCollector", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACell_ToCollector_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACell_ToCollector_Statics::Function_MetaDataParams) };
 	UFunction* Z_Construct_UFunction_ACell_ToCollector()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -294,7 +245,7 @@ void FOnCollected_DelegateWrapper(const FMulticastScriptDelegate& OnCollected)
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACell_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACell_DeactivateHoming, "DeactivateHoming" }, // 403852407
 		{ &Z_Construct_UFunction_ACell_SetHoming, "SetHoming" }, // 3000311673
-		{ &Z_Construct_UFunction_ACell_ToCollector, "ToCollector" }, // 3357477116
+		{ &Z_Construct_UFunction_ACell_ToCollector, "ToCollector" }, // 2793362993
 		{ &Z_Construct_UFunction_ACell_UnCollected, "UnCollected" }, // 4142306342
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACell_Statics::FuncInfo) < 2048);
@@ -602,18 +553,18 @@ void FOnCollected_DelegateWrapper(const FMulticastScriptDelegate& OnCollected)
 	AStickyCell::AStickyCell() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AStickyCell);
 	AStickyCell::~AStickyCell() {}
-	struct Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 1180080439U) },
-		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 870566971U) },
-		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 306028912U) },
-		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 2867671676U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 2944778653U) },
+		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 3532951253U) },
+		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 3113108320U) },
+		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 3384276385U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_Cells_Cell_h_1414460456(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_1831195808(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

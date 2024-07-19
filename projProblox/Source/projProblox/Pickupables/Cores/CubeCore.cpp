@@ -199,7 +199,7 @@ void ACubeCore::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 	if(ACell* cell = Cast<ACell>(OtherActor))
 	{
 		// Using a delegate so that it can send a message to the blueprint (because ui...)
-		cell->ToCollector(collector->GetDepoPoint());
+		cell->ToCollector();
 		onAddedCell.Broadcast(cell);
 	}
 }
@@ -208,12 +208,9 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 {
 	// Only if the passed position isn't empty .. set the new spawnPos
 	if(!respawning) lastSpawnPos = pos;
+	
 	// End the turn early when respawning (falling out the map)
-	else
-	{
-		Print("Respawning", 4)
-		EndTurn(true);
-	}
+	else EndTurn(true);
 	
 	mesh->SetSimulatePhysics(true);
 	for (auto& obj : GetCloseAttachments())

@@ -69,7 +69,7 @@ void ACell::GoHome() const
 }
 
 // The cells will be destroyed the next time the player leaves the level so there aren't any hiccups (+ so the vfx work)
-void ACell::ToCollector(const FVector& depoPoint)
+void ACell::ToCollector()
 {
 	if(collected) return;
 	
@@ -89,36 +89,12 @@ void ACell::ToCollector(const FVector& depoPoint)
 	body->SetRelativeScale3D({.25f,.25f,.25f});
 	body->SetHiddenInGame(true);
 	body->SetCollisionResponseToAllChannels(ECR_Ignore);
-
-	onCollected.Broadcast();
 	
-	fx->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	fx->DetachFromComponent( FDetachmentTransformRules::KeepWorldTransform);
 	if(fx->GetFXSystemAsset()) fx->ActivateSystem();
 	else Print("No vfx given..", 4)
 
-	// Move to the build level after a delay so that the vfx play
+	// Destroy after a delay so that the vfx can play
 	FTimerHandle delay;
-	GetWorld()->GetTimerManager().SetTimer(delay, [this, depoPoint]
-	{
-		// Move to the build level
-		GetLevel()->Actors.Remove(this);
-		
-		ULevel* newLevel = owner->GetBuildLevel()->GetLoadedLevel();
-		if(!newLevel)
-		{
-			Print("Couldnt change levels ~ cell", 5)
-			return;
-		}
-		
-		// Change the outer of the actor to the new level
-		Rename(nullptr, newLevel);
-
-		// Add the actor to the new level's actors list
-		newLevel->Actors.Add(this);
-		
-		SetActorLocation(depoPoint);
-
-		body->SetHiddenInGame(false);
-		body->SetCollisionResponseToAllChannels(ECR_Block);
-	}, 1, false);
+	GetWorld()->GetTimerManager().SetTimer(delay, [this] {Destroy();}, 1, false);
 }
