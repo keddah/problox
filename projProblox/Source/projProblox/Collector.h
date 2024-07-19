@@ -66,6 +66,9 @@ protected:
 
 	
 public:
+	UFUNCTION(BlueprintCallable)
+	FVector GetDepoPoint() const { return depoPoint->GetComponentLocation(); }
+	
 	// Called when changing levels
 	UFUNCTION(BlueprintCallable)
 	int GetLevel1Count() const { return GetLvlCellCount(ELevel::Bedroom); }

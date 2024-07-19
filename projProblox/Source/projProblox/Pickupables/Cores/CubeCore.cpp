@@ -199,7 +199,7 @@ void ACubeCore::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 	if(ACell* cell = Cast<ACell>(OtherActor))
 	{
 		// Using a delegate so that it can send a message to the blueprint (because ui...)
-		cell->Kill();
+		cell->ToCollector(collector->GetDepoPoint());
 		onAddedCell.Broadcast(cell);
 	}
 }

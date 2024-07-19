@@ -278,8 +278,9 @@ void ALevelManager::InitSpawners()
 
 			default: break;
 		}
-		
-		if(!spawner->Init(lvl)) continue;
+
+		if(!levels[0]) Print("build area invalid", 4)
+		if(!spawner->Init(lvl, levels[0])) continue;
 		cellSpawners.Add(spawner);
 
 		// Always stop the send when the level changes

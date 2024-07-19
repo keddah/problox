@@ -18,6 +18,7 @@
 #include "GameFramework/Actor.h"
 #include "Cell.generated.h"
 
+class ACellSpawner;
 
 UCLASS()
 class PROJPROBLOX_API ACell : public AActor
@@ -43,26 +44,30 @@ private:
 	UNiagaraComponent* fx;
 	
 	ACubeCore* core;
+	const ACellSpawner* owner;
+
 	
 	float attractionForce;
 	bool isHoming;
+	bool collected;
 	
 	void GoHome() const;
 
 	
 public:
 	UFUNCTION(BlueprintCallable, Category = "Collection")
-	void Kill();
+	void ToCollector(const FVector& depoPoint);
+	
+	UFUNCTION(BlueprintCallable, Category = "Collection")
+	bool UnCollected() const { return !collected; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
 
-	// Used for spawning and level transitions
-	void Wake();
-	void Sleep();
-	
 	UFUNCTION()
 	void DeactivateHoming() { isHoming = false;}
+
+	void SetOwningSpawner(const ACellSpawner* spawner) { owner = spawner; }
 	
 	UStaticMeshComponent* GetMesh() const { return body; }
 };

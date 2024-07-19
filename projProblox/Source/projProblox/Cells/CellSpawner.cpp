@@ -43,7 +43,7 @@ void ACellSpawner::BeginPlay()
 	if(IsValid(objective)) objective->SetOwner(this);
 }
 
-bool ACellSpawner::Init(const ULevelStreamingDynamic* streamedLevel)
+bool ACellSpawner::Init(const ULevelStreamingDynamic* streamedLevel, const ULevelStreamingDynamic* _buildArea)
 {
 	if(!streamedLevel)
 	{
@@ -51,6 +51,8 @@ bool ACellSpawner::Init(const ULevelStreamingDynamic* streamedLevel)
 		return false;
 	}
 	params.OverrideLevel = streamedLevel->GetLoadedLevel();
+
+	if(_buildArea) buildLevel = _buildArea;
 	
 	wrld = GetWorld();
 	if (!IsValid(wrld))
@@ -148,6 +150,7 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 	if(!params.OverrideLevel) Print("No level/.", 4)
 	
 	ACell* cell = wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
+	cell->SetOwningSpawner(this);
 	cell->OnDestroyed.AddDynamic(this, &ACellSpawner::IncreaseCollectedAmount);
 	
 	return cell;

@@ -8,6 +8,7 @@
 
 #include "Cell.h"
 
+#include "CellSpawner.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -68,61 +69,54 @@ void ACell::GoHome() const
 }
 
 // The cells will be destroyed the next time the player leaves the level so there aren't any hiccups (+ so the vfx work)
-void ACell::Kill()
+void ACell::ToCollector(const FVector& depoPoint)
 {
+	if(collected) return;
+	
 	if(!IsValid(body))
 	{
 		Print("Couldnt be collected because the cell's body was invalid... somehow", 4)
 		return;
 	}
-	body->SetPhysicsLinearVelocity({});
+	if(!owner)
+	{
+		Print("no owner", 4)
+		return;
+	}
 
+	collected = true;
+	body->SetPhysicsLinearVelocity({});
+	body->SetRelativeScale3D({.25f,.25f,.25f});
+	body->SetHiddenInGame(true);
+	body->SetCollisionResponseToAllChannels(ECR_Ignore);
+	
 	fx->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	if(fx->GetFXSystemAsset()) fx->ActivateSystem();
 	else Print("No vfx given..", 4)
-	
-	SetActorEnableCollision(false);
-	body->DestroyComponent();
 
-	FTimerHandle handle;
-	GetWorld()->GetTimerManager().SetTimer(handle, [this]{ Destroy();} , 1, false);
-}
-
-void ACell::Wake()
-{
-	if(!IsValid(this)) return;
-	if(!this->IsValidLowLevel()) return;
-	
-	PrimaryActorTick.bCanEverTick = true;
-	// SetActorEnableCollision(!dormant);
-	// SetActorHiddenInGame(false);
-
-	if(IsValid(body))
+	// Move to the build level after a delay so that the vfx play
+	FTimerHandle delay;
+	GetWorld()->GetTimerManager().SetTimer(delay, [this, depoPoint]
 	{
-		body->SetSimulatePhysics(true);
+		// Move to the build level
+		GetLevel()->Actors.Remove(this);
+		
+		ULevel* newLevel = owner->GetBuildLevel()->GetLoadedLevel();
+		if(!newLevel)
+		{
+			Print("Couldnt change levels ~ cell", 5)
+			return;
+		}
+		
+		// Change the outer of the actor to the new level
+		Rename(nullptr, newLevel);
+
+		// Add the actor to the new level's actors list
+		newLevel->Actors.Add(this);
+		
+		SetActorLocation(depoPoint);
+
 		body->SetHiddenInGame(false);
-	}
+		body->SetCollisionResponseToAllChannels(ECR_Block);
+	}, 1, false);
 }
-
-void ACell::Sleep()
-{
-	if(!IsValid(this)) return;
-	if(!this->IsValidLowLevel()) return;
-	
-	PrimaryActorTick.bCanEverTick = false;
-	// SetActorEnableCollision(!dormant);
-	// SetActorHiddenInGame(true);
-	isHoming = false;
-
-	body = 0;
-	body = FindComponentByClass<UStaticMeshComponent>();
-	
-	if(!IsValid(body))
-	{
-		Print("body was invalid.......", 4)
-		return;
-	}
-	body->SetSimulatePhysics(false);
-	body->SetHiddenInGame(true);
-}
-
