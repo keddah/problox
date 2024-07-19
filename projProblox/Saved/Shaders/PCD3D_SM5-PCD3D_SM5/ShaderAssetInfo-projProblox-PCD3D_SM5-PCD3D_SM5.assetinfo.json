@@ -1233,6 +1233,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "8EC02CA0C41E83468B0EF860F981B8589D66FBC7",
+			"Assets": [
+				"/Engine/TemplateResources/M_Template_Master"
+			]
+		},
+		{
 			"ShaderMapHash": "F8E3A2A04FD246D307CE674F1A9959C5EA392A3B",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_C"
@@ -1771,6 +1777,9 @@
 				"/Game/Models/BlenderModelsReece/MoreOpaqueGlow",
 				"/Game/Models/BlenderModelsReece/Red",
 				"/Game/Models/BlenderModelsReece/Stone",
+				"/Game/Models/MechanicModels/CellCollector/Collector_Glass",
+				"/Game/Models/MechanicModels/CellCollector/Collector_metal",
+				"/Game/Models/MechanicModels/CellCollector/Collector_woodedge",
 				"/Game/Models/MechanicModels/Grapple/Material",
 				"/Game/Models/MechanicModels/Grapple/Material_001",
 				"/Game/Models/MechanicModels/Grapple/Material_002",
@@ -1819,12 +1828,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "71366CE0FA0784ECAAD452A9616D9E223A554F35",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_Glass"
-			]
-		},
-		{
 			"ShaderMapHash": "ADC535E11C3834862D281DED8020D714FC6A518C",
 			"Assets": [
 				"/Game/Materials/Pickupables/M_Ghost"
@@ -1864,6 +1867,12 @@
 			"ShaderMapHash": "FED638E505D66D5E0E355593329DB905BCCEB3B2",
 			"Assets": [
 				"/Game/MSPresets/M_MS_SurfaceBlend_Material/M_MS_SurfaceBlend_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "824E64E6C338696C46C4B5857244C28B47CC6C55",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_Glass"
 			]
 		},
 		{

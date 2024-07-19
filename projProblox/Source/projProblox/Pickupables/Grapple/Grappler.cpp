@@ -20,7 +20,7 @@ AGrappler::AGrappler()
 	grappleLine = CreateDefaultSubobject<UCableComponent>(TEXT("Line"));
 	grappleLine->SetupAttachment(mesh);
 	grappleLine->CableWidth = 20;
-	grappleLine->CableLength = 20000;
+	grappleLine->CableLength = 100;
 	grappleLine->SolverIterations = 100;
 
 	grappleLine->EndLocation = {};

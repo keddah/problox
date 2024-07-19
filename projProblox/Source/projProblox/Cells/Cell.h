@@ -18,8 +18,6 @@
 #include "GameFramework/Actor.h"
 #include "Cell.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCollected);
-
 class ACellSpawner;
 
 UCLASS()
@@ -57,10 +55,8 @@ private:
 
 	
 public:
-	FOnCollected onCollected;
-	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
-	void ToCollector(const FVector& depoPoint);
+	void ToCollector();
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	bool UnCollected() const { return !collected; }

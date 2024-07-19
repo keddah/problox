@@ -10,19 +10,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCollector() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ENGINE_API UClass* Z_Construct_UClass_UPointLightComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACollector();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ACollector_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_APlayerCharacter_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
-	DEFINE_FUNCTION(ACollector::execAddThing)
+	DEFINE_FUNCTION(ACollector::execAddCell)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AddThing();
+		P_THIS->AddCell();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACollector::execGetLevel3Collected)
@@ -78,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 	{
 		UClass* Class = ACollector::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "AddThing", &ACollector::execAddThing },
+			{ "AddCell", &ACollector::execAddCell },
 			{ "CalculateCellCount", &ACollector::execCalculateCellCount },
 			{ "GetLevel1Collected", &ACollector::execGetLevel1Collected },
 			{ "GetLevel1Count", &ACollector::execGetLevel1Count },
@@ -89,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_ACollector_AddThing_Statics
+	struct Z_Construct_UFunction_ACollector_AddCell_Statics
 	{
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -97,17 +94,17 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACollector_AddThing_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACollector_AddCell_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Collector.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACollector_AddThing_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACollector, nullptr, "AddThing", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_AddThing_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACollector_AddThing_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_ACollector_AddThing()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACollector_AddCell_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACollector, nullptr, "AddCell", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_AddCell_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACollector_AddCell_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACollector_AddCell()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACollector_AddThing_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACollector_AddCell_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -120,7 +117,13 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACollector_CalculateCellCount_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Only run at beginPlay (the count will never change throughout the game)\n" },
+#endif
 		{ "ModuleRelativePath", "Collector.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Only run at beginPlay (the count will never change throughout the game)" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACollector_CalculateCellCount_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACollector, nullptr, "CalculateCellCount", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_CalculateCellCount_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACollector_CalculateCellCount_Statics::Function_MetaDataParams) };
@@ -152,7 +155,13 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACollector_GetLevel1Collected_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Called when changing levels\n" },
+#endif
 		{ "ModuleRelativePath", "Collector.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Called when changing levels" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACollector_GetLevel1Collected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACollector, nullptr, "GetLevel1Collected", nullptr, nullptr, Z_Construct_UFunction_ACollector_GetLevel1Collected_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_GetLevel1Collected_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACollector_GetLevel1Collected_Statics::Collector_eventGetLevel1Collected_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_GetLevel1Collected_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACollector_GetLevel1Collected_Statics::Function_MetaDataParams) };
@@ -186,7 +195,13 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACollector_GetLevel1Count_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Called when changing levels\n" },
+#endif
 		{ "ModuleRelativePath", "Collector.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Called when changing levels" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACollector_GetLevel1Count_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACollector, nullptr, "GetLevel1Count", nullptr, nullptr, Z_Construct_UFunction_ACollector_GetLevel1Count_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_GetLevel1Count_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACollector_GetLevel1Count_Statics::Collector_eventGetLevel1Count_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACollector_GetLevel1Count_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACollector_GetLevel1Count_Statics::Function_MetaDataParams) };
@@ -350,26 +365,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_scene_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_scene;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_depoPoint_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_depoPoint;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_tube_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_tube;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_lid_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_lid;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_light_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_light;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_cellsInLevel_MetaData[];
 #endif
 		static const UECodeGen_Private::FIntPropertyParams NewProp_cellsInLevel;
@@ -391,10 +386,10 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACollector_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACollector_AddThing, "AddThing" }, // 2344276729
-		{ &Z_Construct_UFunction_ACollector_CalculateCellCount, "CalculateCellCount" }, // 992166689
-		{ &Z_Construct_UFunction_ACollector_GetLevel1Collected, "GetLevel1Collected" }, // 557216532
-		{ &Z_Construct_UFunction_ACollector_GetLevel1Count, "GetLevel1Count" }, // 1569599822
+		{ &Z_Construct_UFunction_ACollector_AddCell, "AddCell" }, // 3921049227
+		{ &Z_Construct_UFunction_ACollector_CalculateCellCount, "CalculateCellCount" }, // 755516108
+		{ &Z_Construct_UFunction_ACollector_GetLevel1Collected, "GetLevel1Collected" }, // 1935501041
+		{ &Z_Construct_UFunction_ACollector_GetLevel1Count, "GetLevel1Count" }, // 1263513979
 		{ &Z_Construct_UFunction_ACollector_GetLevel2Collected, "GetLevel2Collected" }, // 3810931290
 		{ &Z_Construct_UFunction_ACollector_GetLevel2Count, "GetLevel2Count" }, // 848728290
 		{ &Z_Construct_UFunction_ACollector_GetLevel3Collected, "GetLevel3Collected" }, // 758928701
@@ -407,52 +402,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		{ "ModuleRelativePath", "Collector.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_scene_MetaData[] = {
-		{ "Category", "Collector" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/////////////// Components ///////////////\n" },
-#endif
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Collector.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Components" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_scene = { "scene", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, scene), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_scene_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_scene_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_depoPoint_MetaData[] = {
-		{ "Category", "Collector" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Collector.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_depoPoint = { "depoPoint", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, depoPoint), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_depoPoint_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_depoPoint_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_tube_MetaData[] = {
-		{ "Category", "Collector" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Collector.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_tube = { "tube", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, tube), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_tube_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_tube_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_lid_MetaData[] = {
-		{ "Category", "Collector" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Collector.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_lid = { "lid", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, lid), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_lid_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_lid_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_light_MetaData[] = {
-		{ "Category", "Collector" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Collector.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_light = { "light", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, light), Z_Construct_UClass_UPointLightComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_light_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_light_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACollector_Statics::NewProp_cellsInLevel_MetaData[] = {
 		{ "Category", "Collector" },
@@ -487,11 +436,6 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACollector_Statics::NewProp_player = { "player", nullptr, (EPropertyFlags)0x0020080000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACollector, player), Z_Construct_UClass_APlayerCharacter_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACollector_Statics::NewProp_player_MetaData), Z_Construct_UClass_ACollector_Statics::NewProp_player_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACollector_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_scene,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_depoPoint,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_tube,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_lid,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_light,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_cellsInLevel,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_cellCount,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACollector_Statics::NewProp_player,
@@ -534,9 +478,9 @@ void EmptyLinkFunctionForGeneratedCodeCollector() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 276822077U) },
+		{ Z_Construct_UClass_ACollector, ACollector::StaticClass, TEXT("ACollector"), &Z_Registration_Info_UClass_ACollector, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACollector), 429116068U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_3284981258(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_1826137797(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Collector_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

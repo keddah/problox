@@ -65,6 +65,9 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "..."))
 	float floatiness = 40;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1.f, ToolTip = "..."))
+	float stringLength = 300;
+
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "Higher number = balloon is less affected by mass."))
 	float massMultiplier = .7f;
 };
