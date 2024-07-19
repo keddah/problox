@@ -113,7 +113,6 @@ bool ALevelManager::LoadLevel(const int lvlIndex, const int spawnPoint)
 	else if(currentLevel == 3) levelEnum = ELevel::Bathroom;
 	else levelEnum = ELevel::BuildArea;
 	
-	WakeSleepCells();
 	onLoadingLevel.Broadcast();
 
 	// Load the level if it's not loaded yet...
@@ -265,7 +264,7 @@ void ALevelManager::InitSpawners()
 		if(!IsValid(spawner)) continue;
 
 		cellSpawners.Add(spawner);
-		spawner->Init();
+		spawner->Init(levels);
 
 		// Always stop the send when the level changes
 		onLevelChanged.AddDynamic(spawner, &ACellSpawner::StopSound);
@@ -322,22 +321,6 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	}
 
 	onSpawnChanged.Broadcast(spawnPoint);
-}
-
-// Needs to happen after everything has finished loading
-void ALevelManager::WakeSleepCells()
-{
-	if(cellSpawners.IsEmpty()) return;
-
-	for(auto& spawner : cellSpawners)
-	{
-		if(!IsValid(spawner)) continue;
-
-		// CRASHING HERE....................................
-		// Sleep the rest of the cells if the level enum aren't matching ... otherwise wake them
-		if(spawner->GetLevelEnum() == levelEnum) spawner->WakeCells();
-		else spawner->SleepCells();
-	}
 }
 
 void ALevelManager::SaveSpawns()

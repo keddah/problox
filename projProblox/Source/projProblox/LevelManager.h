@@ -98,10 +98,6 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	bool LoadUnlockedSpawns();
 	
 	
-	////////////// CELLS ///////////
-	UFUNCTION()
-	void WakeSleepCells();
-	
 public:	
 	// Sets default values for this actor's properties
 	ALevelManager() { PrimaryActorTick.bCanEverTick = false; }

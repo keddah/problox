@@ -28,26 +28,7 @@ ACellSpawner::ACellSpawner()
 	forceDirection->ArrowSize = 7.5f;
 
 	params.bNoFail = true;
-}
-
-void ACellSpawner::SleepCells() const
-{
-	if (spawnedCells.IsEmpty()) return;
-	
-	for (const auto& cell : spawnedCells)
-	{
-		if(IsValid(cell)) cell->Sleep();
-	}
-}
-
-void ACellSpawner::WakeCells() const
-{
-	if (spawnedCells.IsEmpty()) return;
-	
-	for (const auto& cell : spawnedCells)
-	{
-		if(IsValid(cell)) cell->Wake();
-	}
+	params.Owner = this;
 }
 
 void ACellSpawner::BeginPlay()
@@ -59,8 +40,17 @@ void ACellSpawner::BeginPlay()
 	if(IsValid(objective)) objective->SetOwner(this);
 }
 
-void ACellSpawner::Init()
+void ACellSpawner::Init(const TArray<ULevelStreamingDynamic*>& levels)
 {
+	streamedLevels = levels;
+	
+	ULevelStreamingDynamic* lvl = nullptr;
+	if(streamedLevels.IsValidIndex(1) && level == ELevel::Bedroom) lvl = streamedLevels[1];
+	else if(streamedLevels.IsValidIndex(2) && level == ELevel::Kitchen) lvl = streamedLevels[2];
+	else if(streamedLevels.IsValidIndex(3)) lvl = streamedLevels[3];
+    
+	params.OverrideLevel = lvl->GetLoadedLevel();
+	
 	wrld = GetWorld();
 	if (!IsValid(wrld))
 	{
@@ -153,6 +143,8 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 			subClass = normalCell;
 	}
 
+	if(!params.OverrideLevel) Print("No level/.", 4)
+	
 	ACell* cell = wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
 	cell->OnDestroyed.AddDynamic(this, &ACellSpawner::IncreaseCollectedAmount);
 	
@@ -186,7 +178,7 @@ void ACellSpawner::InitialSpawn()
 		ACell* cell = Spawn(spawn, rot);
 
 		// Spawns a cell then deactivates it...
-		cell->Sleep();
+		// cell->Sleep();
 
 		spawnedCells.Add(cell);
 	}

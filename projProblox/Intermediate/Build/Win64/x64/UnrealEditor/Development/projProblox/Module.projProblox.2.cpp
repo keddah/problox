@@ -11,3 +11,4 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/SaveFiles.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/SpawnPoint.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Thruster.gen.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Treads.gen.cpp"

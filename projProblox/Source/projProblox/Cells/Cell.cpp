@@ -22,8 +22,8 @@ ACell::ACell()
 	body = CreateDefaultSubobject<UStaticMeshComponent>("Bottom");
 	body->SetRelativeScale3D({.85f, .85f,.85f});
 	body->SetSimulatePhysics(true);
-	body->SetUseCCD(true)
-	;
+	body->SetUseCCD(true);
+	
 	if(IsValid(GEngine)) body->SetMassOverrideInKg("", .01f);
 
 	hitBox = CreateDefaultSubobject<USphereComponent>("Collision Box");

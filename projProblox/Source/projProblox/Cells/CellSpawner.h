@@ -109,6 +109,8 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 
 	/////////// OTHER ///////////
 	UWorld* wrld;
+	TArray<ULevelStreamingDynamic*> streamedLevels;
+	
 	TArray<ACell*> spawnedCells;
 	
 	bool spawned = false;
@@ -119,6 +121,8 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	bool Overlap(AActor* otherActor);
 
 	void PlaySound() const;
+
+	// Returns the spawned cell.
 	ACell* Spawn(const FVector& spawn, const FRotator& rot) const;
 
 	// Spawn parameters
@@ -139,10 +143,6 @@ public:
 	// Sets default values for this actor's properties
 	ACellSpawner();
 
-	// Hides and deactivates the physics for all the unsafe spawned cells
-	void WakeCells() const;
-	void SleepCells() const;
-
 	
 	/////////////////////////// VARIABLES ///////////////////////////
 	/////////// DELEGATES ///////////
@@ -151,12 +151,10 @@ public:
 
 	
 	/////////////////////////// FUNCTIONS ///////////////////////////
-	void Init();
+	void Init(const TArray<ULevelStreamingDynamic*>& levels);
 
 	void InitialSpawn();
 	void SpawnWithForce();
-
-	void ActivateSpawner() { spawned = true; }
 
 	UFUNCTION()
 	void IncreaseCollectedAmount(AActor* DestroyedActor ) { collectedCount++; Print("Collected", 4) }
@@ -168,9 +166,6 @@ public:
 	void StopSound(int empty, ELevel unused) { if(soundPlayer) soundPlayer->Stop(); }
 	
 	/////////// GETTERS ///////////
-	UFUNCTION(BlueprintCallable)
-	bool IsActive() const { return spawned; }
-
 	UFUNCTION(BlueprintCallable)
 	const ELevel& GetLevelEnum() const { return level; }
 	
