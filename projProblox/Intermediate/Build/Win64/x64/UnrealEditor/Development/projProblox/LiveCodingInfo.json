@@ -47,7 +47,6 @@
 			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
-			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
@@ -68,15 +67,16 @@
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
-			"SpawnSaves.cpp.obj"
+			"SpawnSaves.cpp.obj",
+			"Collector.cpp.obj",
+			"PickupableMaster.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }

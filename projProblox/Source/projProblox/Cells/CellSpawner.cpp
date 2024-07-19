@@ -151,7 +151,7 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 	
 	ACell* cell = wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
 	cell->SetOwningSpawner(this);
-	cell->OnDestroyed.AddDynamic(this, &ACellSpawner::IncreaseCollectedAmount);
+	cell->onCollected.AddDynamic(this, &ACellSpawner::IncreaseCollectedAmount);
 	
 	return cell;
 }

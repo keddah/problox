@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnBoughtAttachment__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnChangedLevels__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnHideDisplay__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature();
@@ -30,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnBoughtAttachment__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnChangedLevels__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnHideDisplay__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_projProblox_OnNewSpawn__DelegateSignature,
@@ -45,13 +47,13 @@ void EmptyLinkFunctionForGeneratedCodeprojProblox_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x2EF30954,
-				0xE596F4CE,
+				0xE4302C93,
+				0x39027C41,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_projProblox.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x2EF30954, 0xE596F4CE));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_projProblox(Z_Construct_UPackage__Script_projProblox, TEXT("/Script/projProblox"), Z_Registration_Info_UPackage__Script_projProblox, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xE4302C93, 0x39027C41));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

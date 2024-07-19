@@ -24,14 +24,14 @@ APlayerCharacter::APlayerCharacter()
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
-	Super::BeginPlay();
-
 	UWorld* wrld = GetWorld();
 	instance = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld));
 	if(!IsValid(instance)) Print("Player failed to cast to game instance...", 7)
 	
 	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
 	if(!IsValid(core)) Print("Core Invalid... ~ player", 5);
+	
+	Super::BeginPlay();
 }
 
 

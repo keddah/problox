@@ -107,6 +107,7 @@ int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
 	int count = 0;
 
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
+	
 	for (const auto& spawnActor: countArr)
 	{
 		// Cast to the every cell spawner
@@ -116,6 +117,5 @@ int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
 			if(lvl == spawner->GetLevelEnum()) count += spawner->GetCollectedAmount();
 		}
 	}
-	
 	return count;
 }

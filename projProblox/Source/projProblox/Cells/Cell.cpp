@@ -89,6 +89,8 @@ void ACell::ToCollector(const FVector& depoPoint)
 	body->SetRelativeScale3D({.25f,.25f,.25f});
 	body->SetHiddenInGame(true);
 	body->SetCollisionResponseToAllChannels(ECR_Ignore);
+
+	onCollected.Broadcast();
 	
 	fx->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 	if(fx->GetFXSystemAsset()) fx->ActivateSystem();
