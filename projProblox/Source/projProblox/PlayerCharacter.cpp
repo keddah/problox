@@ -26,20 +26,11 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	TArray<AActor*> coreActors;
 	UWorld* wrld = GetWorld();
 	instance = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld));
 	if(!IsValid(instance)) Print("Player failed to cast to game instance...", 7)
 	
-	UGameplayStatics::GetAllActorsOfClass(wrld, ACubeCore::StaticClass(), coreActors);
-	
-	// Since the connectors inherit from the core and are technically cube cores...
-	for (const auto& coreObj: coreActors)
-	{
-		if(coreObj->IsA<ACubeConnector>()) continue;
-
-		core = Cast<ACubeCore>(coreObj);
-	}
+	core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass()));
 	if(!IsValid(core)) Print("Core Invalid... ~ player", 5);
 }
 
@@ -266,6 +257,7 @@ void APlayerCharacter::GoToSlot() const
 	selectedObj->Placement(core, selectedSocket);
 }
 
+// Would be in the header file but would cause a dependency loop
 void APlayerCharacter::EndTurnEarly() { if(currentMode != EGameMode::Build) if(core) core->EndTurn(); }
 
 void APlayerCharacter::SelectObject(APickupableMaster* obj)

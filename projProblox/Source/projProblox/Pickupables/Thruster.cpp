@@ -7,9 +7,8 @@
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
 
-#include "Thruster.h"
 
-#include "Cores/CubeCore.h"
+#include "Thruster.h"
 
 AThruster::AThruster()
 {

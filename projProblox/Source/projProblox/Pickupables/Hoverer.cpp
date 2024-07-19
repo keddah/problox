@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Hoverer - Code
+* 
+* The code file for one of the pickupable objects.
+* Problems:
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "Hoverer.h"
@@ -46,7 +53,7 @@ void AHoverer::Ability(float deltaTime)
 
 	const FRotator rot = GetActorRotation();
 
-	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is 45 degrees, only need one distance (the minFloorDistance))
+	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is always 45 degrees, only need one distance (the minFloorDistance))
 	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));
 
 	const TArray points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };

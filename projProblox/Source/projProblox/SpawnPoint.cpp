@@ -11,7 +11,7 @@
 
 #include "Components/SceneCaptureComponent2D.h"
 #include "Engine/TextureRenderTarget2D.h"
-#include "Pickupables/Cores/Connectors/CubeConnector.h"
+#include "Pickupables/Cores/CubeCore.h"
 
 // Sets default values
 ASpawnPoint::ASpawnPoint()
@@ -37,7 +37,6 @@ void ASpawnPoint::NotifyActorBeginOverlap(AActor* OtherActor)
 	// Don't do anything if the point has already been unlocked
 	if(unlocked) return;
 	
-	if(OtherActor->IsA<ACubeConnector>()) return;
 	if(!Cast<ACubeCore>(OtherActor)) return;
 
 	UnlockPoint();
@@ -67,7 +66,7 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	FPostProcessSettings& ppSettings = captureComp->PostProcessSettings;
 
 	// "Brighter"
-	// // Camera settings
+	// Camera settings
 	ppSettings.bOverride_CameraShutterSpeed = true;
 	ppSettings.CameraShutterSpeed = 2;  
 	ppSettings.bOverride_CameraISO = true;
@@ -91,51 +90,11 @@ UTexture* ASpawnPoint::CaptureScreenshot()
 	ppSettings.bOverride_IndirectLightingIntensity = true;
 	ppSettings.IndirectLightingIntensity = level == ELevel::Bathroom? 1000 : 160;
 	
-	// // Bloom settings
-	// ppSettings.bOverride_BloomIntensity = true;
-	// ppSettings.BloomIntensity = 0.3f;
-	// ppSettings.bOverride_BloomThreshold = true;
-	// ppSettings.BloomThreshold = -1.0f; 
-	// ppSettings.bOverride_BloomSizeScale = true;
-	// ppSettings.BloomSizeScale = 1.0f; 
-	//
-	// // Lens flare settings
-	// ppSettings.bOverride_LensFlareIntensity = true;
-	// ppSettings.LensFlareIntensity = 0.2f;  
-	//
-	// // Color grading settings
-	// ppSettings.bOverride_FilmToe = true;
-	// ppSettings.FilmToe = .1f;  
-	// ppSettings.bOverride_FilmShoulder = true;
-	// ppSettings.FilmShoulder = 0.9f;  
-	// ppSettings.bOverride_FilmWhiteClip = true;
-	// ppSettings.FilmWhiteClip = 1.0f;
-	// ppSettings.bOverride_FilmBlackClip = true;
-	// ppSettings.FilmBlackClip = 0.0f; 
-	//
-	// // Depth of field settings
-	// ppSettings.bOverride_DepthOfFieldFstop = true;
-	// ppSettings.DepthOfFieldFstop = 5.6f; 
-	//
-	// // Ambient occlusion settings
-	// ppSettings.bOverride_AmbientOcclusionIntensity = true;
-	// ppSettings.AmbientOcclusionIntensity = 0.9f;  
-	// ppSettings.bOverride_AmbientOcclusionRadius = true;
-	// ppSettings.AmbientOcclusionRadius = 250.0f; 
-	//
-	// // Motion blur settings
-	// ppSettings.bOverride_MotionBlurAmount = true;
-	// ppSettings.MotionBlurAmount = 0.3f;  
-	// ppSettings.bOverride_MotionBlurMax = true;
-	// ppSettings.MotionBlurMax = 0.3f; 
-	//
-	// // Screen space reflection settings
-	// ppSettings.bOverride_ScreenSpaceReflectionIntensity = true;
-	// ppSettings.ScreenSpaceReflectionIntensity = 100.0f; 
-	// ppSettings.bOverride_ScreenSpaceReflectionQuality = true;
-	// ppSettings.ScreenSpaceReflectionQuality = 100.0f;  
-	// ppSettings.bOverride_ScreenSpaceReflectionMaxRoughness = true;
-	// ppSettings.ScreenSpaceReflectionMaxRoughness = 0.5f;
+	// Motion blur settings
+	ppSettings.bOverride_MotionBlurAmount = true;
+	ppSettings.MotionBlurAmount = 0.3f;  
+	ppSettings.bOverride_MotionBlurMax = true;
+	ppSettings.MotionBlurMax = 0.3f; 
 
 	// "Polaroid"
 	// Color Grading

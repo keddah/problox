@@ -13,16 +13,8 @@ class PROJPROBLOX_API AMagPole : public AActor
 	GENERATED_BODY()
 
 	UPROPERTY(EditDefaultsOnly)
-	UMaterialInstance* positiveMat;
-	
-	UPROPERTY(EditDefaultsOnly)
-	UMaterialInstance* negativeMat;
-	
-	UPROPERTY(EditDefaultsOnly)
 	UStaticMeshComponent* mesh;
 	
-	void ConfigureCharge() { mesh->SetMaterial(0, positive? positiveMat : negativeMat); UpdateMagnets(); }
-
 	UPROPERTY(EditInstanceOnly)
 	bool positive = true;
 	
@@ -47,5 +39,5 @@ public:
 
 protected:
 	// Called when the game starts or when spawned
-	virtual void BeginPlay() override { Super::BeginPlay(); ConfigureCharge(); }
+	virtual void BeginPlay() override { Super::BeginPlay(); UpdateMagnets(); }
 };

@@ -3,7 +3,7 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	Ability
+*	SetAbilityActive
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -45,6 +45,7 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	TArray<AMagnet*> otherMagnets;
 	TArray<AMagPole*> poles;
 
+	// Needs to be add unique since this would be done at begin play for all the magnets
 	void AddMagnet(AMagnet* mag) { otherMagnets.AddUnique(mag); }
 	
 public:

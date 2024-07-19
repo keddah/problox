@@ -2,7 +2,6 @@
 * Treads - Code
 * 
 * The code file for one of the pickupable objects. Creates the driveTrigger to check for grounded collisions.
-*
 * PROBLEMS:
 *
 * Created by Dean Atkinson-Walker 2024
@@ -13,7 +12,6 @@
 
 #include "Components/StaticMeshComponent.h"
 #include "Cores/CubeCore.h"
-#include "Cores/Connectors/WedgeConnector.h"
 
 
 ATreads::ATreads()

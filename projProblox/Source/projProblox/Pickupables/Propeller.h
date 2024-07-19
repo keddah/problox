@@ -3,8 +3,7 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	SetSelected
-*	Ability
+*	SetAbilityActive
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

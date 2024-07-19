@@ -6,16 +6,18 @@
 *
 * OVERRIDES:
 *	SetCanPickup
-*	Reattach
+*	Attach
 *	Placement
 *	ResetRotation
 *	SetAttachedSocket
 *	RemoveVelocity
 *	ToggleGravity
+*	PickupCell
+*	GetMass
 *	AddAttachment
+*	Detach
 *	RemoveAttachment
 *	SetAbilityActive
-*	SetSelected
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -206,8 +208,6 @@ public:
 		return slots;
 	}
 
-	virtual bool GetIsAttached() const override { return parentCore || isAttached; }
-	
 	UFUNCTION(BlueprintCallable, Category = "Socket", meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
 	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
 

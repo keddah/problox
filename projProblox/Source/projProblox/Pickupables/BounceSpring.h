@@ -1,4 +1,16 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Spring - Header
+* 
+* The header file for one of the pickupable objects.
+* OVERRIDES:
+*	SetAbilityActive
+*	RemoveVelocity
+*	SetShowMesh
+*	CollisionHitSFX
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 

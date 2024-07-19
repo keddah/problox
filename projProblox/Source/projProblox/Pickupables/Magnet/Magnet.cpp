@@ -16,16 +16,19 @@ void AMagnet::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// Getting the other magnets
 	TArray<AActor*> magActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), StaticClass(), magActors);
 	for (const auto& magActor : magActors) otherMagnets.Add(Cast<AMagnet>(magActor));
 
+	// Ignore self...
+	otherMagnets.Remove(this);
+
+	// Getting the Magpoles
 	magActors.Empty();
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagPole::StaticClass(), magActors);
 	for (const auto& magActor : magActors) poles.Add(Cast<AMagPole>(magActor));
 
-	// Ignore self...
-	otherMagnets.Remove(this);
 
 	// Telling the other magnets in the level that this one was made...
 	for (const auto& mag : otherMagnets) mag->AddMagnet(this);

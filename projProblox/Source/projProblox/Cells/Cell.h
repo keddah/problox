@@ -13,7 +13,6 @@
 
 #include "CoreMinimal.h"
 #include "NiagaraComponent.h"
-#include "NiagaraComponent.h"
 #include "Components/SphereComponent.h"
 #include "./projProblox/Pickupables/Cores/CubeCore.h"
 #include "GameFramework/Actor.h"

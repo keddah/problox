@@ -10,13 +10,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CustomGameInstance.h"
 #include "PlayerCharacter.h"
 #include "SpawnPoint.h"
 #include "Cells/CellSpawner.h"
 #include "Engine/LevelStreamingDynamic.h"
 #include "GameFramework/Actor.h"
-#include "Kismet/GameplayStatics.h"
 
 #include "LevelManager.generated.h"
 

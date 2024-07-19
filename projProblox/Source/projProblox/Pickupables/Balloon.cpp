@@ -5,18 +5,15 @@
 * Instead, it uses a physics constraint. This file Creates the required components for this attachment and sets up their parameters. 
 * 
 * Problems:
-*	GetAttachedOffset
-*	Ability
-*	GhostPlacement
+*	Can turn erratic if the balloon moves on the horizontal axis too quickly?
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
 
-// Created by Dean Atkinson-Walker 2024
+
 #include "Balloon.h"
 
 #include "Cores/CubeCore.h"
-#include "Cores/Connectors/CubeConnector.h"
 #include "Kismet/GameplayStatics.h"
 
 ABalloon::ABalloon()
@@ -48,14 +45,9 @@ void ABalloon::BeginPlay()
 {
 	Super::BeginPlay();
 
-	TArray<AActor*> cores;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), cores);
-
-	for (const auto& coreActor : cores)
+	if(ACubeCore* core = Cast<ACubeCore>(UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass())))
 	{
-		if(coreActor->IsA<ACubeConnector>()) continue;
-
-		Cast<ACubeCore>(coreActor)->onTurnStarted.AddDynamic(this, &ABalloon::SaveResetTransform);
+		core->onTurnStarted.AddDynamic(this, &ABalloon::SaveResetTransform);
 	}
 
 	mesh->SetSimulatePhysics(false);
@@ -87,8 +79,8 @@ void ABalloon::Ability(float deltaTime)
 	upAmount -= sqrt(parentCore->GetMass() / massMultiplier);
 	upAmount += atLimit? floatiness : initSpeed; 
 
-	constexpr float velocityDampner = .975f;
-	mesh->SetPhysicsLinearVelocity({coreVelocity.X * velocityDampner, coreVelocity.Y * velocityDampner, thisVelocity.Z + upAmount});
+	constexpr float velocityDampener = .988f;
+	mesh->SetPhysicsLinearVelocity({coreVelocity.X * velocityDampener, coreVelocity.Y * velocityDampener, thisVelocity.Z + upAmount});
 }
 
 void ABalloon::Attach()

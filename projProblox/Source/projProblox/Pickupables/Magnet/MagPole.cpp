@@ -13,6 +13,8 @@ AMagPole::AMagPole()
 
 	mesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
 	SetActorHiddenInGame(true);
+	SetActorEnableCollision(false);
+	mesh->SetSimulatePhysics(false);
 }
 
 void AMagPole::UpdateMagnets()

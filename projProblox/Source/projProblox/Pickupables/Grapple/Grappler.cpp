@@ -4,7 +4,7 @@
 * The code file for one of the pickupable objects.
 *
 * PROBLEMS:
-*	//A rare crash whenever the grapple is fired - occurs because the world is invalid when using GetWorld()
+*	Can sometimes cause an exception error when destroying its hook (rare)
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

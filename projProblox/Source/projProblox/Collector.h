@@ -21,6 +21,7 @@ class PROJPROBLOX_API ACollector : public AActor
 {
 	GENERATED_BODY()
 
+	// Only run at beginPlay (the count will never change throughout the game)
 	UFUNCTION(BlueprintCallable)
 	void CalculateCellCount();
 	
@@ -65,6 +66,7 @@ protected:
 
 	
 public:
+	// Called when changing levels
 	UFUNCTION(BlueprintCallable)
 	int GetLevel1Count() const { return GetLvlCellCount(ELevel::Bedroom); }
 	UFUNCTION(BlueprintCallable)
@@ -72,6 +74,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	int GetLevel3Count() const { return GetLvlCellCount(ELevel::Bathroom); }
 
+	// Called when changing levels
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	int GetLevel1Collected() const { return GetCollectedCountFromLvl(ELevel::Bedroom); }
 	UFUNCTION(BlueprintCallable, BlueprintPure)

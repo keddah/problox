@@ -11,62 +11,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.cpp.obj.lctmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.gen.cpp.obj.lctmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.obj.lctmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.gen.cpp.obj.lctmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.obj.lctmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.obj.lctmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.obj.lctmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/projProblox.init.gen.cpp.obj.lctmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Engine/SharedPCH.Engine.Cpp20.h.pch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_0.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_0.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_0.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.patch_3.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRules/projProbloxModuleRules.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRules/projProbloxModuleRules.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRules/projProbloxModuleRules.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRules/projProbloxModuleRules.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/CellSpawner.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/CellSpawner.gen.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/CellSpawner.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/CellSpawner.generated.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/LevelManager.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/LevelManager.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Balloon.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Balloon.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/BounceSpring.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/BounceSpring.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Cell.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Cell.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Collector.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Collector.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/CubeCore.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/CubeCore.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Grappler.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Grappler.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Hoverer.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Hoverer.generated.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/LevelManager.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/LevelManager.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/PlayerCharacter.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/PlayerCharacter.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/PlayerCharacter.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/PlayerCharacter.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Propeller.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Propeller.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Thruster.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Thruster.generated.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Timestamp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Timestamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/projProblox.init.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/projProblox.init.gen.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/projProbloxEditor/Development/projProbloxEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/projProbloxEditor/Development/projProbloxEditor.uhtmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.cpp.lc.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Balloon.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Balloon.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Balloon.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Balloon.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/BounceSpring.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/BounceSpring.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Cell.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Cell.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.gen.cpp.lc.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.gen.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellSpawner.gen.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.lc.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellVariations.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CellVariations.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Collector.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Collector.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Collector.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Collector.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CubeCore.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/CubeCore.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Grappler.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Grappler.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Hoverer.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Hoverer.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.dep.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.gen.cpp.lc.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.gen.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.gen.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Magnet.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Magnet.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.dep.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.dep.lc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.lc.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.dep.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.dep.lc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.lc.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.dep.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.dep.lc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.lc.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/PlayerCharacter.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/PlayerCharacter.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Propeller.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Propeller.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/SpawnPoint.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/SpawnPoint.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/SpawnPoint.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/SpawnPoint.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Thruster.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Thruster.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Thruster.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Thruster.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Treads.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Treads.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Treads.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Treads.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.exp" afterDir="false" />
@@ -75,20 +76,33 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib.rsp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib.rsp.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.sup.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.sup.exp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.sup.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.sup.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/projProblox.init.gen.cpp.lc.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/projProblox.init.gen.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/projProblox.init.gen.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/DependencyCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/DependencyCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Engine/SharedPCH.Engine.Cpp20.h.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Engine/SharedPCH.Engine.Cpp20.h.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Makefile.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/projProblox/Cells/Cell.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Cells/Cell.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Cells/Cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Cells/Cell.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Cells/CellSpawner.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Collector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Collector.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Collector.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Collector.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/LevelManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/LevelManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Balloon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Balloon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Balloon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Balloon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/BounceSpring.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/BounceSpring.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/BounceSpring.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/BounceSpring.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Cores/CubeCore.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Cores/CubeCore.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Grapple/Grappler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Grapple/Grappler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Grapple/Grappler.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Grapple/Grappler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Hoverer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Hoverer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Hoverer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Hoverer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/Magnet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/Magnet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Propeller.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Propeller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Thruster.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Thruster.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Thruster.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Thruster.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Treads.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Treads.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/SpawnPoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/SpawnPoint.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,31 +202,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.UnrealBuildTool.executor&quot;: &quot;Debug&quot;,
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;C++ Project.projProblox.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ToolWindowMonitoring.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;random&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;UnrealLinkOptionsId&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.UnrealBuildTool.executor": "Debug",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "C++ Project.projProblox.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowMonitoring.ShowToolbar": "false",
+    "git-widget-placeholder": "housekeeping",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "UnrealLinkOptionsId",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Deany\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Deany\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Deany\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Deany\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Deany\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Deany\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CidrLocalAttachDebugger.recentlyUsed">
       <recent name="com.jetbrains.rider.cpp.debugger.RiderCppLLDBDriverConfiguration" />

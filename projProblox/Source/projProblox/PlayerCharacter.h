@@ -15,7 +15,6 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Pickupables/BuyableAttachment.h"
-#include "Pickupables/PickupableMaster.h"
 #include "PlayerCharacter.generated.h"
 
 UENUM(BlueprintType)
@@ -128,7 +127,8 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	bool canMove = true;
-	
+
+	// The buyable object that the player's mouse is currently hovering over
 	UPROPERTY(BlueprintReadOnly)
 	ABuyableAttachment* hoveredBuyable;
 
@@ -165,6 +165,7 @@ public:
 		adjustPhase = canAdjust;
 	}
 
+	// Public so that the construction widget can eject too
 	UFUNCTION(BlueprintCallable)
 	bool EjectAll();
 	

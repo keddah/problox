@@ -2,7 +2,7 @@
 * Collector - Code
 * 
 * The code file for the cell collector. Creates the defined components and finds the player so that it can be used in blueprint.
-* Also calculates all the cells in the level.
+* This class is responsible for managing the counts of the cells - the collected ones and all the ones in the level. Needed to calculate the percentages
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -10,7 +10,6 @@
 
 #include "Collector.h"
 
-#include "Cells/Cell.h"
 #include "Cells/CellSpawner.h"
 #include "Components/LightComponent.h"
 #include "Kismet/GameplayStatics.h"

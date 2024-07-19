@@ -1,7 +1,10 @@
 /**************************************************************************************************************
 * Cell Spawner - Code
 * 
-* The code file for a spawner that creates cells. Creates the functions that were declared in the cell spawner header file. 
+* The code file for a spawner that creates cells. Creates the functions that were declared in the cell spawner header file.
+* In engine, the spawners are placed in the persistent level with a level enum that needs to be assigned...
+* The cells used to be put to sleep but that caused issues.. so now when the cells are spawned, they're spawned in the streamed level that
+* corresponds with the level enum.
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

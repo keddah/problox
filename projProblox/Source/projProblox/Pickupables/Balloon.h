@@ -3,11 +3,10 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	Ability
-*	SetSelected
+*	SetAbilityActive
+*	Attach
 *	GetParent
 *	Detach
-*	Reattach
 *	GhostPlacement
 *	UseSilhouetteTransform
 *
@@ -20,7 +19,6 @@
 #include "CoreMinimal.h"
 #include "CableComponent.h"
 #include "PickupableMaster.h"
-#include "Cores/CubeCore.h"
 #include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "Balloon.generated.h"
 
