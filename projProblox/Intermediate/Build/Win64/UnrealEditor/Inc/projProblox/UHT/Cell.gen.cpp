@@ -22,8 +22,35 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AHoverCell_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AStickyCell();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_AStickyCell_NoRegister();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Cells/Cell.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnCollected__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnCollected__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+void FOnCollected_DelegateWrapper(const FMulticastScriptDelegate& OnCollected)
+{
+	OnCollected.ProcessMulticastDelegate<UObject>(NULL);
+}
 	DEFINE_FUNCTION(ACell::execDeactivateHoming)
 	{
 		P_FINISH;
