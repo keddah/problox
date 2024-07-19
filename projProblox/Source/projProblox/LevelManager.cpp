@@ -263,8 +263,24 @@ void ALevelManager::InitSpawners()
 		ACellSpawner* spawner = Cast<ACellSpawner>(cellSpawner);
 		if(!IsValid(spawner)) continue;
 
+		ULevelStreamingDynamic* lvl = 0;
+		switch(spawner->GetLevelEnum())
+		{
+			case ELevel::Bedroom:
+				lvl = levels[1];
+				break;
+			case ELevel::Kitchen:
+				lvl = levels[2];
+				break;
+			case ELevel::Bathroom:
+				lvl = levels[3];
+				break;
+
+			default: break;
+		}
+		
+		if(!spawner->Init(lvl)) continue;
 		cellSpawners.Add(spawner);
-		spawner->Init(levels);
 
 		// Always stop the send when the level changes
 		onLevelChanged.AddDynamic(spawner, &ACellSpawner::StopSound);

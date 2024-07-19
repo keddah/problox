@@ -43,25 +43,24 @@ void ACellSpawner::BeginPlay()
 	if(IsValid(objective)) objective->SetOwner(this);
 }
 
-void ACellSpawner::Init(const TArray<ULevelStreamingDynamic*>& levels)
+bool ACellSpawner::Init(const ULevelStreamingDynamic* streamedLevel)
 {
-	streamedLevels = levels;
-	
-	ULevelStreamingDynamic* lvl = nullptr;
-	if(streamedLevels.IsValidIndex(1) && level == ELevel::Bedroom) lvl = streamedLevels[1];
-	else if(streamedLevels.IsValidIndex(2) && level == ELevel::Kitchen) lvl = streamedLevels[2];
-	else if(streamedLevels.IsValidIndex(3)) lvl = streamedLevels[3];
-    
-	params.OverrideLevel = lvl->GetLoadedLevel();
+	if(!streamedLevel)
+	{
+		// Print("The level given by the level manager is invalid ~ cell spawner", 3)
+		return false;
+	}
+	params.OverrideLevel = streamedLevel->GetLoadedLevel();
 	
 	wrld = GetWorld();
 	if (!IsValid(wrld))
 	{
 		Print("World was invalid at begin play ~ spawner", 5);
-		return;
+		return false;
 	}
 
 	InitialSpawn();
+	return true;
 }
 
 bool ACellSpawner::Overlap(AActor* otherActor)

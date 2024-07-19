@@ -109,7 +109,6 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 
 	/////////// OTHER ///////////
 	UWorld* wrld;
-	TArray<ULevelStreamingDynamic*> streamedLevels;
 	
 	TArray<ACell*> spawnedCells;
 	
@@ -151,7 +150,8 @@ public:
 
 	
 	/////////////////////////// FUNCTIONS ///////////////////////////
-	void Init(const TArray<ULevelStreamingDynamic*>& levels);
+	// Returns whether initialisation was successful
+	bool Init(const ULevelStreamingDynamic* streamedLevel);
 
 	void InitialSpawn();
 	void SpawnWithForce();
