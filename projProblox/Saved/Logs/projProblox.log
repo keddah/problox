@@ -4318,3 +4318,26 @@ Continue: Skip saving this asset only.
 [2024.07.19-18.54.15:773][492]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto4.umap is in the /Temp path, will not scan.
 [2024.07.19-18.54.15:774][492]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.175
 [2024.07.19-18.54.15:774][492]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.175
+[2024.07.19-18.55.21:942][624]LogDebuggerCommands: Repeating last play command: Standalone Game
+[2024.07.19-18.55.21:981][624]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2024.07.19-18.55.24:356][624]LogSlate: Window 'Save Content' being destroyed
+[2024.07.19-18.55.24:375][624]LogPlayLevel: Warning: PIE failed because map save was canceled
+[2024.07.19-18.55.24:375][624]PIE: Warning: PIE failed because map save was canceled
+[2024.07.19-18.55.25:774][730]LogSlate: Window 'Message Log' being destroyed
+[2024.07.19-18.55.25:779][730]LogSlate: Window 'Message Log' being destroyed
+[2024.07.19-18.55.26:298][768]LogUObjectHash: Compacting FUObjectHashTables data took   0.56ms
+[2024.07.19-18.55.26:421][768]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.19-18.55.26:462][768]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2024.07.19-18.55.26:542][768]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3
+[2024.07.19-18.55.26:543][768]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BedroomLevel3C468DCD24EECBFACC756C6A93D59932B.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3.umap'
+[2024.07.19-18.55.26:550][768]LogFileHelpers: All files are already saved.
+[2024.07.19-18.55.26:550][768]LogFileHelpers: Saving map 'BedroomLevel3' took 0.100
+[2024.07.19-18.55.26:563][768]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2024.07.19-18.55.26:612][768]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props
+[2024.07.19-18.55.26:612][768]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/KitchenLevel_Props97E258AC4264943AC8E09CA3255BE677.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.umap'
+[2024.07.19-18.55.26:618][768]LogFileHelpers: All files are already saved.
+[2024.07.19-18.55.26:619][768]LogFileHelpers: Saving map 'KitchenLevel_Props' took 0.068
+[2024.07.19-18.55.26:625][768]LogFileHelpers: InternalPromptForCheckoutAndSave took 204 ms (total: 18.1 sec)
+[2024.07.19-18.55.26:628][768]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.19-18.55.26:628][768]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bedroom/BedroomLevel3.BedroomLevel3
+[2024.07.19-18.55.26:628][768]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.KitchenLevel_Props
