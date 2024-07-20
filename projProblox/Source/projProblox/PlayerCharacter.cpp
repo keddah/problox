@@ -434,7 +434,7 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 	}
 }
 
-void APlayerCharacter::AdjustCore()
+void APlayerCharacter::AdjustCore(const FVector& mousePos)
 {
 	if(!core)
 	{
@@ -459,7 +459,7 @@ void APlayerCharacter::AdjustCore()
 	const FVector corePos = core->GetActorLocation();
 
 	core->SetActorLocation({corePos.X, corePos.Y, corePos.Z + heightOffset});
-	const FRotator forwardRot = GetController()->GetViewTarget()->GetActorRotation();
+	const FRotator forwardRot = (mousePos - corePos).GetSafeNormal().Rotation();
 	
 	core->SetActorRotation({0, forwardRot.Yaw, 0});
 	core->ToggleGravity(false);

@@ -186,7 +186,7 @@ private:
 	void EjectObject(const FHitResult& hit);
 
 	UFUNCTION(BlueprintCallable)
-	void AdjustCore();
+	void AdjustCore(const FVector& mousePos);
 	
 	
 	/////////////// Game States ///////////////
