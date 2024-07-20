@@ -11,17 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/UI/Menus/WBP_WarningPrompt.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Saved/Config/LevelState/3402713966.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_Construction.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_Construction.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_HUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_HUD.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Loading/WBP_LoadingScreen.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Loading/WBP_LoadingScreen.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Menus/Levels/Level_MainMenu.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/Levels/Level_MainMenu.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Menus/WBP_Credits.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/WBP_Credits.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/Menus/WBP_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/WBP_MainMenu.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Timeline/WBP_Timeline.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Timeline/WBP_Timeline.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Timeline/WBP_TimelineBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Timeline/WBP_TimelineBar.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Menus/WBP_PauseMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/WBP_PauseMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Menus/WBP_SettingsMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/WBP_SettingsMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Menus/WBP_WarningPrompt.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/WBP_WarningPrompt.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox_2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox_2.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,7 +405,7 @@
       <workItem from="1721327604517" duration="8763000" />
       <workItem from="1721372867074" duration="2312000" />
       <workItem from="1721411584262" duration="1788000" />
-      <workItem from="1721462918061" duration="2112000" />
+      <workItem from="1721462918061" duration="2713000" />
     </task>
     <servers />
   </component>
