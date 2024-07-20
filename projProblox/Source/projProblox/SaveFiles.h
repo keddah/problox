@@ -18,6 +18,7 @@
 // static const FString spawnSaveSlot = "SpawnSaves";
 static const FString boughtObjsSlot = "UnlockedObjs";
 static const FString moneySlot = "MoneySave";
+static const FString settingsSave = "SettingsSave";
 
 UCLASS()
 class PROJPROBLOX_API USpawnSaves : public USaveGame
@@ -38,6 +39,63 @@ public:
 		for (const auto& index: unlocks) text += FString::FromInt(index) + ", ";
 		Print(text, 10)
 	}
+};
+
+
+USTRUCT(Blueprintable)
+struct FPlayerSettings
+{
+	GENERATED_BODY()
+
+	bool toggleSelection;
+	bool attachOnRelease;
+
+	float sensitivityX = 1.8f;
+	float sensitivityY = 1.2f;
+
+	float musicVolume = 1;
+	bool muteMusic;
+
+	float sfxVolume = 1;
+	bool muteSfx;
+};
+
+UCLASS()
+class PROJPROBLOX_API USettingsSave : public USaveGame
+{
+	GENERATED_BODY()
+
+	FPlayerSettings settings;
+	void CopySettings(const FPlayerSettings& other) { settings = other; }
+	
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "Controls")
+	void SetToggleSelection(const bool toggle) { settings.toggleSelection = toggle; }
+
+	UFUNCTION(BlueprintCallable, Category = "Controls|Building")
+	void SetAttachOnRelease(const bool on) { settings.attachOnRelease = on; }
+	
+	UFUNCTION(BlueprintCallable, Category = "Controls|Building|Sensitivity")
+	void SetSensitivityX(const float x) { settings.sensitivityX = x; }
+
+	UFUNCTION(BlueprintCallable, Category = "Controls|Building|Sensitivity")
+	void SetSensitivityY(const float y) { settings.sensitivityY = y; }
+
+	UFUNCTION(BlueprintCallable, Category = "Audio|Music")
+	void SetMusicVolume(const float volume) { settings.musicVolume = volume; }
+	
+	UFUNCTION(BlueprintCallable, Category = "Audio|Music")
+	void SetMusicMuted(const bool mute) { settings.muteMusic = mute; }
+
+	UFUNCTION(BlueprintCallable, Category = "Audio|SFX")
+	void SetSfxVolume(const float volume) { settings.sfxVolume = volume; }
+	
+	UFUNCTION(BlueprintCallable, Category = "Audio|SFX")
+	void SetSfxMuted(const bool mute) { settings.muteSfx = mute; }
+
+	UFUNCTION(BlueprintCallable)
+	const FPlayerSettings& GetSettings() const { return settings; }
 };
 
 

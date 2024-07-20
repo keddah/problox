@@ -25,6 +25,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
@@ -1582,6 +1585,15 @@
     <ClInclude Include="..\..\Source\projProblox\SaveFiles.h">
       <Filter>Source\projProblox</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\Settings.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\projProblox\Settings.h">
+      <Filter>Source\projProblox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\projProblox\SettingsSave.cpp">
+      <Filter>Source\projProblox</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\projProblox\SpawnPoint.cpp">
       <Filter>Source\projProblox</Filter>
     </ClCompile>
