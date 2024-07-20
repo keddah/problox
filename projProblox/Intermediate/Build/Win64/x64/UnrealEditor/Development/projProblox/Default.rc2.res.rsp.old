@@ -73,6 +73,7 @@
 /DBUILD_VERSION=++UE5+Release-5.3-CL-29314046
 /DBUILD_ICON_FILE_NAME="\"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Build\\Windows\\Application.ico\""
 /DPROJECT_COPYRIGHT_STRING="Created by Dean Atkinson-Walker 2024"
+/DPROJECT_PRODUCT_NAME="Microbe Machines"
 /DPROJECT_PRODUCT_IDENTIFIER=projProblox
 /fo "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\x64\UnrealEditor\Development\projProblox\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"
