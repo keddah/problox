@@ -41,7 +41,7 @@ ACubeCore::ACubeCore()
 
 void ACubeCore::BeginPlay()
 {
-	Super::BeginPlay();
+	wrld = GetWorld();
 	
 	// Create a socket info for each cube (also inherited to connectors)
 	// Need to create one for each cube otherwise the information would be shared/overrided.
@@ -58,6 +58,10 @@ void ACubeCore::BeginPlay()
 		instance = customInst;
 	}
 	else Print("Couldn't cast to game instance...", 4)
+
+	cellCollector->OnComponentBeginOverlap.AddDynamic(this, &ACubeCore::PickupCell);
+	
+	Super::BeginPlay();
 }
 
 void ACubeCore::ResetToStart() const
@@ -198,8 +202,12 @@ void ACubeCore::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 
 	if(ACell* cell = Cast<ACell>(OtherActor))
 	{
+		if(cell->IsCollected()) return;
+		
 		// Using a delegate so that it can send a message to the blueprint (because ui...)
 		cell->ToCollector();
+		collector->AddCell();
+		PlayCollectSound();
 		onAddedCell.Broadcast(cell);
 	}
 }

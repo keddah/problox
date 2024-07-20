@@ -59,7 +59,7 @@ public:
 	void ToCollector();
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
-	bool UnCollected() const { return !collected; }
+	bool IsCollected() const { return collected; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Collection")
 	void SetHoming(const bool home, const float attraction) { isHoming = home; attractionForce = attraction; }
