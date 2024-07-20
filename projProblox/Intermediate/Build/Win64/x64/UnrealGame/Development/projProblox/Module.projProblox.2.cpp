@@ -7,6 +7,8 @@
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/Modes.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/PickupableMaster.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/Piston.gen.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/PlayerCharacter.gen.cpp"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/projProblox.init.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/Propeller.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/SaveFiles.gen.cpp"
 #include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/UnrealGame/Inc/projProblox/UHT/SpawnPoint.gen.cpp"

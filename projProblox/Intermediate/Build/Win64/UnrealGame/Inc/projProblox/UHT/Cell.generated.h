@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
  \
 	DECLARE_FUNCTION(execDeactivateHoming); \
 	DECLARE_FUNCTION(execSetHoming); \
-	DECLARE_FUNCTION(execUnCollected); \
+	DECLARE_FUNCTION(execIsCollected); \
 	DECLARE_FUNCTION(execToCollector);
 
 
