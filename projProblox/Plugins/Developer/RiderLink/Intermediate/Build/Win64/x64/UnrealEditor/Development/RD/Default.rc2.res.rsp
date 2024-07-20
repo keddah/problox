@@ -71,7 +71,7 @@
 /DORIGINAL_FILE_NAME="UnrealEditor-RD.dll"
 /DBUILT_FROM_CHANGELIST=29314046
 /DBUILD_VERSION=++UE5+Release-5.3-CL-29314046
-/DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
+/DBUILD_ICON_FILE_NAME="\"C:\\Users\\Deany\\Documents\\GitHub\\problox\\projProblox\\Build\\Windows\\Application.ico\""
 /DPROJECT_COPYRIGHT_STRING="Created by Dean Atkinson-Walker 2024"
 /DPROJECT_PRODUCT_IDENTIFIER=projProblox
 /fo "C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Default.rc2.res"
