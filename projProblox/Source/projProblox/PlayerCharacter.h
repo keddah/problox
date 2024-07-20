@@ -186,7 +186,7 @@ private:
 	void EjectObject(const FHitResult& hit);
 
 	UFUNCTION(BlueprintCallable)
-	void AdjustCore(const FHitResult& hit);
+	void AdjustCore();
 	
 	
 	/////////////// Game States ///////////////

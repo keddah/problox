@@ -434,7 +434,7 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 	}
 }
 
-void APlayerCharacter::AdjustCore(const FHitResult& hit)
+void APlayerCharacter::AdjustCore()
 {
 	if(!core)
 	{
@@ -452,21 +452,9 @@ void APlayerCharacter::AdjustCore(const FHitResult& hit)
 	if(currentMode != EGameMode::Story) return;
 	if(!adjustPhase) return;
 	
-	if(!hit.bBlockingHit) return;
-	AActor* AHit = hit.GetActor();
-
-	APickupableMaster* hitObj = Cast<APickupableMaster>(AHit);
-	if(!hitObj) return;
-
 	// If the cast is successful... Try to get its parent
-	selectedObj = hitObj->GetParent();
-
-	// If the object doesn't have a parent....
-	if(!selectedObj) selectedObj = hitObj;
-
-	if(!IsValid(selectedObj)) return;
-
 	selectedObj = core;
+
 	constexpr float heightOffset = 100;
 	const FVector corePos = core->GetActorLocation();
 
