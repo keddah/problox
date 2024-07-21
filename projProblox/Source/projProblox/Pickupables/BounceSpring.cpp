@@ -47,9 +47,9 @@ void ABounceSpring::Ability(float deltaTime)
 
 	if(!IsValid(parentCore))
 	{
-		Print("The parent core was invalid..: " + GetName().ToUpper(), 4)
 		return;
 	}
+	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
 	
 	if(!isAttached) return;
 	

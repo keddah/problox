@@ -72,6 +72,8 @@ void AMagnet::Ability(const float deltaTime)
 	for (const auto& mag : otherMagnets)
 	{
 		if(!IsValid(mag)) continue;
+		if(mag->GetCore() == parentCore) continue;		
+
 		const FVector otherPos = mag->GetActorLocation();
 
 		// Go to the next iteration if it's out of range

@@ -272,7 +272,6 @@ public:
 		return mesh->GetMass();
 	}
 
-
 	/////////////// Other ///////////////
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	

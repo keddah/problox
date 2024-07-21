@@ -480,6 +480,12 @@ void APlayerCharacter::MouseRotateCore(const FVector& mousePos)
 	selectedObj->SetActorRotation({0, direction.Yaw, 0});
 }
 
+void APlayerCharacter::SetGameMode(EGameMode mode)
+{
+	currentMode = mode;
+	if(core) core->SetGameMode(currentMode); 
+}
+
 bool APlayerCharacter::EjectAll()
 {
 	if(currentMode != EGameMode::Build) return false;

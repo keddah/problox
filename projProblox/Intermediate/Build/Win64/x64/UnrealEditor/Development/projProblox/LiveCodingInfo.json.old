@@ -52,7 +52,6 @@
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
-			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
@@ -65,19 +64,20 @@
 			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
 			"Hoverer.cpp.obj",
-			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
-			"PickupableMaster.cpp.obj",
 			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SettingsSave.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
+			"BounceSpring.cpp.obj",
 			"CubeCore.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"Magnet.cpp.obj",
+			"PickupableMaster.cpp.obj"
 		]
 	}
 }

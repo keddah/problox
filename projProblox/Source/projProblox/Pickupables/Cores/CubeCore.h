@@ -227,13 +227,15 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
+	
+	void SetGameMode(const EGameMode& mode) { currentMode = mode; }
 
 	bool InAdjustPhase() const
 	{
 		// When this timer is active, it means that the game is simulating
 		return !wrld->GetTimerManager().IsTimerActive(resetTimer);
 	}
-	
+
 
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))

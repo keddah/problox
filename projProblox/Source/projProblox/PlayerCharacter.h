@@ -143,7 +143,7 @@ public:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override { Super::SetupPlayerInputComponent(PlayerInputComponent); }
 
 	UFUNCTION(BlueprintCallable)
-	void SetGameMode(EGameMode mode) { currentMode = mode; }
+	void SetGameMode(EGameMode mode);
 
 	UFUNCTION(BlueprintCallable)
 	EGameMode GetGameMode() const { return currentMode; }
