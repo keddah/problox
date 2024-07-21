@@ -92,6 +92,14 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		P_THIS->EndGame();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(APlayerCharacter::execMouseRotateCore)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_mousePos);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->MouseRotateCore(Z_Param_Out_mousePos);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(APlayerCharacter::execAdjustCore)
 	{
 		P_GET_STRUCT_REF(FVector,Z_Param_Out_mousePos);
@@ -222,6 +230,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			{ "EndTurnEarly", &APlayerCharacter::execEndTurnEarly },
 			{ "GetCore", &APlayerCharacter::execGetCore },
 			{ "GetGameMode", &APlayerCharacter::execGetGameMode },
+			{ "MouseRotateCore", &APlayerCharacter::execMouseRotateCore },
 			{ "NextPreviousSlot", &APlayerCharacter::execNextPreviousSlot },
 			{ "OrbitControls", &APlayerCharacter::execOrbitControls },
 			{ "ScrollZoom", &APlayerCharacter::execScrollZoom },
@@ -641,6 +650,48 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics
+	{
+		struct PlayerCharacter_eventMouseRotateCore_Parms
+		{
+			FVector mousePos;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_mousePos_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_mousePos;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::NewProp_mousePos_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::NewProp_mousePos = { "mousePos", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventMouseRotateCore_Parms, mousePos), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::NewProp_mousePos_MetaData), Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::NewProp_mousePos_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::NewProp_mousePos,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "MouseRotateCore", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::PlayerCharacter_eventMouseRotateCore_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C40401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::PlayerCharacter_eventMouseRotateCore_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_APlayerCharacter_MouseRotateCore()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_MouseRotateCore_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot_Statics
 	{
 		struct PlayerCharacter_eventNextPreviousSlot_Parms
@@ -996,6 +1047,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ &Z_Construct_UFunction_APlayerCharacter_EndTurnEarly, "EndTurnEarly" }, // 2865316487
 		{ &Z_Construct_UFunction_APlayerCharacter_GetCore, "GetCore" }, // 344276006
 		{ &Z_Construct_UFunction_APlayerCharacter_GetGameMode, "GetGameMode" }, // 3056313343
+		{ &Z_Construct_UFunction_APlayerCharacter_MouseRotateCore, "MouseRotateCore" }, // 2313376046
 		{ &Z_Construct_UFunction_APlayerCharacter_NextPreviousSlot, "NextPreviousSlot" }, // 2140460848
 		{ &Z_Construct_UFunction_APlayerCharacter_OrbitControls, "OrbitControls" }, // 1112996026
 		{ &Z_Construct_UFunction_APlayerCharacter_ScrollZoom, "ScrollZoom" }, // 2530486982
@@ -1289,19 +1341,19 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APlayerCharacter);
 	APlayerCharacter::~APlayerCharacter() {}
-	struct Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo[] = {
 		{ EGameMode_StaticEnum, TEXT("EGameMode"), &Z_Registration_Info_UEnum_EGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2527694996U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2250350412U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 24616972U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_2521481978(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_4292481833(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

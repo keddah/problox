@@ -1,8 +1,8 @@
-"C:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl\RName.cpp"
-/FI"C:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
-/Fo"C:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RName.cpp.obj"
-/sourceDependencies "C:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RName.cpp.dep.json"
-@"C:\Uni\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl\RName.cpp"
+/FI"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
+/Fo"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RName.cpp.obj"
+/sourceDependencies "C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RName.cpp.dep.json"
+@"C:\Users\Deany\Documents\GitHub\problox\projProblox\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

@@ -458,11 +458,21 @@ void APlayerCharacter::AdjustCore(const FVector& mousePos)
 	constexpr float heightOffset = 100;
 	const FVector corePos = core->GetActorLocation();
 
-	core->SetActorLocation({corePos.X, corePos.Y, corePos.Z + heightOffset});
-	const FRotator forwardRot = (mousePos - corePos).GetSafeNormal().Rotation();
-	
-	core->SetActorRotation({0, forwardRot.Yaw, 0});
 	core->ToggleGravity(false);
+	core->SetActorLocation({corePos.X, corePos.Y, corePos.Z + heightOffset});
+
+	const FRotator direction = (mousePos - selectedObj->GetActorLocation()).GetSafeNormal().Rotation();
+	selectedObj->SetActorRotation({0, direction.Yaw, 0});
+}
+
+void APlayerCharacter::MouseRotateCore(const FVector& mousePos)
+{
+	if(currentMode == EGameMode::Build) return;
+	if(!core) return;
+	if(selectedObj != core) return;
+
+	const FRotator direction = (mousePos - selectedObj->GetActorLocation()).GetSafeNormal().Rotation();
+	selectedObj->SetActorRotation({0, direction.Yaw, 0});
 }
 
 bool APlayerCharacter::EjectAll()

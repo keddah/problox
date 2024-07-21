@@ -188,6 +188,9 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void AdjustCore(const FVector& mousePos);
 	
+	UFUNCTION(BlueprintCallable)
+	void MouseRotateCore(const FVector& mousePos);
+	
 	
 	/////////////// Game States ///////////////
 	UFUNCTION()
