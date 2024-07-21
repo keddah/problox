@@ -24,6 +24,7 @@ struct FHitResult;
  \
 	DECLARE_FUNCTION(execGetCore); \
 	DECLARE_FUNCTION(execEndGame); \
+	DECLARE_FUNCTION(execMouseRotateCore); \
 	DECLARE_FUNCTION(execAdjustCore); \
 	DECLARE_FUNCTION(execEjectObject); \
 	DECLARE_FUNCTION(execSpawnFromBuyable); \

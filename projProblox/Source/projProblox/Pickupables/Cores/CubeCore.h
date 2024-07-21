@@ -65,6 +65,9 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
 	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
 	{
+		if(!wrld) return;
+		if(wrld->GetTimerManager().IsTimerActive(resetTimer)) return;
+
 		TimedObjectActivation(delays, durations, _longestTime);
 		StartGame();
 	}
@@ -157,6 +160,13 @@ private:
 	
 	void SetEnableCollisions(bool enable) const;
 
+	void ClearAndInvalidateTimer()
+	{
+		if(!wrld) return;
+
+		wrld->GetTimerManager().ClearTimer(resetTimer);
+		resetTimer.Invalidate();
+	}
 	
 	/////////////// Rotations ///////////////
 	virtual void ResetRotation(bool resetVelocity) override;
@@ -187,7 +197,7 @@ public:
 	
 	
 	/////////////// Turn System ///////////////
-	void ResetToStart() const;
+	void ResetToStart();
 
 
 	/////////////// Getters ///////////////
@@ -249,7 +259,7 @@ public:
 	// To be used whenever the core goes out of bounds or when the core changes levels
 	UFUNCTION(BlueprintCallable)
 	void Teleport(const FRotator& rot, const FVector& pos, bool respawning = false);
-	void EndTurn(bool force = false) const;
+	void EndTurn(bool force = false);
 
 	virtual void PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) override;
 	void LoseMoney(const short amount) const { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }

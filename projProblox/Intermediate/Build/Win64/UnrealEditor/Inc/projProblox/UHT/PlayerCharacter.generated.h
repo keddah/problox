@@ -23,7 +23,6 @@ struct FHitResult;
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_PlayerCharacter_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetCore); \
-	DECLARE_FUNCTION(execEndGame); \
 	DECLARE_FUNCTION(execMouseRotateCore); \
 	DECLARE_FUNCTION(execAdjustCore); \
 	DECLARE_FUNCTION(execEjectObject); \

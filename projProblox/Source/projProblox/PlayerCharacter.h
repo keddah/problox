@@ -131,9 +131,6 @@ protected:
 
 	
 	/////////////// Game States ///////////////
-	UPROPERTY(BlueprintReadOnly)
-	bool gameEnded = false;
-
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
 	bool adjustPhase;
 	
@@ -161,7 +158,7 @@ public:
 	// Public so that the construction widget can eject too
 	UFUNCTION(BlueprintCallable)
 	bool EjectAll();
-	
+
 	
 private:
 	/////////////// Selection / Placement ///////////////
@@ -192,10 +189,7 @@ private:
 	void MouseRotateCore(const FVector& mousePos);
 	
 	
-	/////////////// Game States ///////////////
-	UFUNCTION()
-	void EndGame() { gameEnded = true; }
-
+	/////////////// Getters ///////////////
 	UFUNCTION(BlueprintCallable)
 	ACubeCore* GetCore() const { return core; }
 };

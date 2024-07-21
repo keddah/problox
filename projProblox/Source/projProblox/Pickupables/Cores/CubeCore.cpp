@@ -64,12 +64,14 @@ void ACubeCore::BeginPlay()
 	Super::BeginPlay();
 }
 
-void ACubeCore::ResetToStart() const
+void ACubeCore::ResetToStart()
 {
 	if(mesh)
 	{
 		if(mesh->IsSimulatingPhysics()) mesh->SetAngularDamping(heavyAngularDrag);
 	}
+	
+	ClearAndInvalidateTimer();
 	onReset.Broadcast();
 }
 
@@ -241,17 +243,27 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	RemoveVelocity();
 }
 
-void ACubeCore::EndTurn(const bool force) const
+void ACubeCore::EndTurn(const bool force)
 {
+	if(!wrld)
+	{
+		Print("world is invalid.. can't end turn", 4)
+		return;
+	}
 	FTimerManager& manager = wrld->GetTimerManager();
-	
+
 	if(force)
 	{
-		// Clear the timer
-		for(auto& obj : GetCloseAttachments()) manager.ClearAllTimersForObject(obj);
+		for(auto& obj : GetCloseAttachments())
+		{
+			if(!IsValid(obj)) continue;
+			
+			// Clear the timer
+			manager.ClearAllTimersForObject(obj);
 
-		// Deactivate all the attachments
-		for(const auto& obj : GetCloseAttachments()) obj->SetAbilityActive(false);
+			// Deactivate all the attachments
+			obj->SetAbilityActive(false);
+		}
 
 		// Call the function the timer is supposed to call
 		ResetToStart();
@@ -260,8 +272,8 @@ void ACubeCore::EndTurn(const bool force) const
 	
 	if(!manager.IsTimerActive(resetTimer)) return;
 
-	// Over x% done - Guarantee that you can end the turn if at least some of the end turn percent has been crossed and the longest duration is longer than 27 seconds. 
-	constexpr float helper = 27;
+	// Over x% done - Guarantee that you can end the turn if at least some of the end turn percent has been crossed and the longest duration is longer than 24 seconds. 
+	constexpr float helper = 24;
 	const float elapsedTime = manager.GetTimerElapsed(resetTimer);
 
 	const bool canSkip = (elapsedTime / longestDuration) > endTurnPercent * .4f && longestDuration >= helper;
@@ -272,15 +284,15 @@ void ACubeCore::EndTurn(const bool force) const
 	// Call the function the timer is supposed to call
 	ResetToStart();
 
-	// Deactivate all the attachments
 	for(const auto& obj : GetCloseAttachments())
 	{
 		if(!IsValid(obj)) continue;
 		
-		obj->SetAbilityActive(false);
-		
 		// Clear the timer
 		manager.ClearAllTimersForObject(obj);
+		
+		// Deactivate all the attachments
+		obj->SetAbilityActive(false);
 	}
 }
 
@@ -310,7 +322,10 @@ void ACubeCore::RemoveVelocity() const
 
 void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
 {
-	 const TArray<APickupableMaster*> objs = GetCloseAttachments();
+	if(!wrld) return;
+	if(wrld->GetTimerManager().IsTimerActive(resetTimer)) return;
+	
+	const TArray<APickupableMaster*> objs = GetCloseAttachments();
 
 	if(objs.IsEmpty())
 	{

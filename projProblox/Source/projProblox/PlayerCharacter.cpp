@@ -257,8 +257,13 @@ void APlayerCharacter::GoToSlot() const
 	selectedObj->Placement(core, selectedSocket);
 }
 
-// Would be in the header file but would cause a dependency loop
-void APlayerCharacter::EndTurnEarly() { if(currentMode != EGameMode::Build) if(core) core->EndTurn(); }
+void APlayerCharacter::EndTurnEarly()
+{
+	if(currentMode == EGameMode::Build) return;
+	if(adjustPhase) return;
+
+	if(core) core->EndTurn();
+}
 
 void APlayerCharacter::SelectObject(APickupableMaster* obj)
 {
