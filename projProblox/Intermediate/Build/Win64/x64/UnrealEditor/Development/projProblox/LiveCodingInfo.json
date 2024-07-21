@@ -33,8 +33,8 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"Propeller.gen.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
+			"Propeller.gen.cpp.obj",
 			"SaveFiles.gen.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
@@ -73,11 +73,11 @@
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
-			"SpawnPoint.cpp.obj",
 			"SettingsSave.cpp.obj",
-			"SpawnSaves.cpp.obj"
+			"SpawnPoint.cpp.obj",
+			"SpawnSaves.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }

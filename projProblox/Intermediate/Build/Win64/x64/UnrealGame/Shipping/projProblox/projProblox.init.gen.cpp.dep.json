@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealgame\\inc\\projproblox\\uht\\projproblox.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\projproblox\\shipping\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\projproblox\\definitions.projproblox.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
