@@ -312,7 +312,7 @@ void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTim
 	// Only continue if the hit object is a mesh or a box collider (ignores its widget)...
 	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
 	AActor* hitActor = hit.GetActor();
-	
+
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
 	{
 		const FBuyableInfoStruct info = buyable->GetInfo();
