@@ -5784,3 +5784,16 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.21-17.43.31:157][ 73]LogFileHelpers: InternalPromptForCheckoutAndSave took 68 ms (total: 462 ms)
 [2024.07.21-17.43.31:175][ 73]AssetCheck: New page: Asset Save: WBP_Credits
 [2024.07.21-17.43.31:175][ 73]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_Credits.WBP_Credits
+[2024.07.21-17.44.38:736][ 15]LogMetaData: Removing '/Game/UI/E_IconImage.E_IconImage' ref from Metadata '/Game/UI/Timeline/E_IconImage.PackageMetaData'
+[2024.07.21-17.44.38:739][ 15]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.21-17.44.38:763][ 15]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/E_IconImage" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/E_IconImage.uasset" SILENT=true
+[2024.07.21-17.44.38:763][ 15]LogSavePackage: Moving output files for package: /Game/UI/E_IconImage
+[2024.07.21-17.44.38:764][ 15]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/E_IconImageCC92981A4DE98C81178D32B788DAF1C1.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/E_IconImage.uasset'
+[2024.07.21-17.44.38:765][ 15]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/E_IconImage" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/E_IconImage.uasset" SILENT=true
+[2024.07.21-17.44.38:766][ 15]LogSavePackage: Moving output files for package: /Game/UI/Timeline/E_IconImage
+[2024.07.21-17.44.38:767][ 15]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/E_IconImageF28738B047EBA53A574E46A01D600730.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/E_IconImage.uasset'
+[2024.07.21-17.44.38:773][ 15]LogFileHelpers: InternalPromptForCheckoutAndSave took 34 ms (total: 496 ms)
+[2024.07.21-17.44.38:950][ 15]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.21-17.44.38:950][ 15]LogContentValidation: Display: Validating /Script/Engine.UserDefinedEnum /Game/UI/E_IconImage.E_IconImage
+[2024.07.21-17.44.38:950][ 15]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/UI/Timeline/E_IconImage.E_IconImage
+[2024.07.21-17.44.38:989][ 18]SourceControl: fatal: /Temp: '/Temp' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
