@@ -230,6 +230,7 @@ public:
 	
 	void SetGameMode(const EGameMode& mode) { currentMode = mode; }
 
+	UFUNCTION(BlueprintCallable)
 	bool InAdjustPhase() const
 	{
 		// When this timer is active, it means that the game is simulating

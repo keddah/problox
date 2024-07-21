@@ -40,6 +40,7 @@ PROJPROBLOX_API void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate
  \
 	DECLARE_FUNCTION(execTeleport); \
 	DECLARE_FUNCTION(execBroadcastNewCells); \
+	DECLARE_FUNCTION(execInAdjustPhase); \
 	DECLARE_FUNCTION(execGetGameMode); \
 	DECLARE_FUNCTION(execGetCloseAttachments); \
 	DECLARE_FUNCTION(execEjectObject); \
