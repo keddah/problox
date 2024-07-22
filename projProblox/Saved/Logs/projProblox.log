@@ -1355,3 +1355,1209 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2024.07.22-14.20.32:048][ 58]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Coffe_Cup.Kitchen_Coffe_Cup
 [2024.07.22-14.20.32:048][ 58]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Lights.Kitchen_Lights
 [2024.07.22-14.20.32:048][ 58]LogContentValidation: Display: Validating /Script/projProblox.LevelObjective /Game/UI/Notebook/Objectives/Kitchen/Kitchen_Water.Kitchen_Water
+[2024.07.22-14.21.04:705][313]LogViewport: Scene viewport resized to 686x431, mode Windowed.
+[2024.07.22-14.21.04:733][313]LogSlate: Took 0.000249 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.07.22-14.21.04:734][313]LogViewport: Scene viewport resized to 686x431, mode Windowed.
+[2024.07.22-14.21.04:788][313]LogViewport: Scene viewport resized to 686x431, mode Windowed.
+[2024.07.22-14.21.04:845][313]LogViewport: Scene viewport resized to 1525x912, mode Windowed.
+[2024.07.22-14.21.04:972][314]LogViewport: Scene viewport resized to 1920x1032, mode Windowed.
+[2024.07.22-14.21.06:251][393]LogViewport: Scene viewport resized to 1733x975, mode Windowed.
+[2024.07.22-14.21.06:285][394]LogViewport: Scene viewport resized to 1561x923, mode Windowed.
+[2024.07.22-14.21.06:377][395]LogViewport: Scene viewport resized to 1384x869, mode Windowed.
+[2024.07.22-14.21.06:450][396]LogViewport: Scene viewport resized to 940x431, mode Windowed.
+[2024.07.22-14.21.06:469][396]LogViewport: Scene viewport resized to 940x431, mode Windowed.
+[2024.07.22-14.21.06:500][396]LogViewport: Scene viewport resized to 940x431, mode Windowed.
+[2024.07.22-14.21.06:530][396]LogViewport: Scene viewport resized to 1377x867, mode Windowed.
+[2024.07.22-14.21.06:592][397]LogViewport: Scene viewport resized to 1885x867, mode Windowed.
+[2024.07.22-14.21.33:965][706]LogSlate: Window 'Save Asset As' being destroyed
+[2024.07.22-14.21.34:065][706]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/Bathroom.Bathroom
+[2024.07.22-14.21.34:065][706]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/Bathroom.Bathroom
+[2024.07.22-14.21.34:069][706]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/Bathroom.Bathroom as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_1
+[2024.07.22-14.21.34:070][706]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/Bathroom.Bathroom as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_1
+[2024.07.22-14.21.34:098][706]LogAssetEditorSubsystem: Opening Asset editor for LevelSequence /Game/Movies/Bathroom.Bathroom
+[2024.07.22-14.21.34:145][706]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-14.21.36:917][856]LogSlate: Took 0.005447 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2024.07.22-14.21.37:517][878]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2024.07.22-14.21.38:115][878]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto1
+[2024.07.22-14.21.38:116][878]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto160920AE24C6C6F26958E2BADE10DCD77.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto1.umap'
+[2024.07.22-14.21.38:119][878]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto1.umap is in the /Temp path, will not scan.
+[2024.07.22-14.21.38:121][878]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.609
+[2024.07.22-14.21.38:121][878]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.609
+[2024.07.22-14.21.38:121][878]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Bathroom] ([1] browsable assets)...
+[2024.07.22-14.21.38:121][878]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Bathroom]
+[2024.07.22-14.21.38:121][878]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bathroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bathroom_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-14.21.38:126][878]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Bathroom_Auto1
+[2024.07.22-14.21.38:126][878]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto1BC88C500471122A819B8FDB8C1659355.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bathroom_Auto1.uasset'
+[2024.07.22-14.21.38:127][878]LogFileHelpers: Auto-saving content packages took 0.006
+[2024.07.22-14.22.16:062][446]LogViewport: Scene viewport resized to 1899x930, mode Windowed.
+[2024.07.22-14.22.16:100][447]LogViewport: Scene viewport resized to 1912x995, mode Windowed.
+[2024.07.22-14.22.16:161][448]LogViewport: Scene viewport resized to 1920x1031, mode Windowed.
+[2024.07.22-14.22.16:221][449]LogViewport: Scene viewport resized to 1920x1032, mode Windowed.
+[2024.07.22-14.22.17:081][496]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-14.28.42:435][ 70]Cmd: TRANSACTION UNDO
+[2024.07.22-14.28.42:435][ 70]LogEditorTransaction: Undo Move Keys or Sections
+[2024.07.22-14.29.07:261][744]Cmd: TRANSACTION UNDO
+[2024.07.22-14.29.07:261][744]LogEditorTransaction: Undo Move Keys
+[2024.07.22-14.29.14:588][240]Cmd: TRANSACTION UNDO
+[2024.07.22-14.29.14:588][240]LogEditorTransaction: Undo Set Playback Range
+[2024.07.22-14.30.38:427][406]LogViewport: Scene viewport resized to 937x452, mode WindowedFullscreen.
+[2024.07.22-14.30.38:455][406]LogViewport: Scene viewport resized to 937x452, mode WindowedFullscreen.
+[2024.07.22-14.30.38:488][406]LogViewport: Scene viewport resized to 937x452, mode WindowedFullscreen.
+[2024.07.22-14.30.38:524][406]LogViewport: Scene viewport resized to 1911x1029, mode WindowedFullscreen.
+[2024.07.22-14.30.38:615][407]LogViewport: Scene viewport resized to 1885x867, mode WindowedFullscreen.
+[2024.07.22-14.30.38:666][408]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-14.30.46:448][868]LogViewport: Scene viewport resized to 1891x961, mode WindowedFullscreen.
+[2024.07.22-14.30.46:482][869]LogViewport: Scene viewport resized to 1908x1031, mode WindowedFullscreen.
+[2024.07.22-14.30.46:541][870]LogViewport: Scene viewport resized to 1919x1077, mode WindowedFullscreen.
+[2024.07.22-14.30.46:599][871]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-14.30.46:832][881]LogViewport: Scene viewport resized to 1910x1041, mode WindowedFullscreen.
+[2024.07.22-14.30.46:868][882]LogViewport: Scene viewport resized to 1895x976, mode WindowedFullscreen.
+[2024.07.22-14.30.46:926][883]LogViewport: Scene viewport resized to 1883x924, mode WindowedFullscreen.
+[2024.07.22-14.30.46:985][884]LogViewport: Scene viewport resized to 1879x910, mode WindowedFullscreen.
+[2024.07.22-14.30.47:042][885]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-14.30.56:328][488]LogViewport: Scene viewport resized to 1901x998, mode WindowedFullscreen.
+[2024.07.22-14.30.56:363][489]LogViewport: Scene viewport resized to 1913x1052, mode WindowedFullscreen.
+[2024.07.22-14.30.56:423][490]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-14.30.57:407][541]LogViewport: Scene viewport resized to 1903x1007, mode WindowedFullscreen.
+[2024.07.22-14.30.57:442][542]LogViewport: Scene viewport resized to 1890x957, mode WindowedFullscreen.
+[2024.07.22-14.30.57:500][543]LogViewport: Scene viewport resized to 1881x917, mode WindowedFullscreen.
+[2024.07.22-14.30.57:556][544]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-14.31.19:394][662]Cmd: STAT FPS
+[2024.07.22-14.31.26:812][400]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.22-14.31.26:863][400]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2024.07.22-14.31.26:873][400]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-14.31.39:099][658]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.22-14.31.39:111][658]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.22-14.31.39:133][658]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2024.07.22-14.31.39:143][658]LogViewport: Scene viewport resized to 937x909, mode WindowedFullscreen.
+[2024.07.22-14.31.39:163][658]LogViewport: Scene viewport resized to 937x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:596][  3]LogViewport: Scene viewport resized to 936x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:618][  3]LogViewport: Scene viewport resized to 938x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:663][  4]LogViewport: Scene viewport resized to 883x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:707][  4]LogViewport: Scene viewport resized to 991x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:739][  5]LogViewport: Scene viewport resized to 691x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:783][  5]LogViewport: Scene viewport resized to 1183x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:813][  6]LogViewport: Scene viewport resized to 586x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:867][  6]LogViewport: Scene viewport resized to 1288x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:897][  7]LogViewport: Scene viewport resized to 422x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:942][  7]LogViewport: Scene viewport resized to 1452x909, mode WindowedFullscreen.
+[2024.07.22-14.31.44:974][  8]LogViewport: Scene viewport resized to 208x909, mode WindowedFullscreen.
+[2024.07.22-14.31.45:021][  8]LogViewport: Scene viewport resized to 1666x909, mode WindowedFullscreen.
+[2024.07.22-14.31.45:053][  9]LogViewport: Scene viewport resized to 28x909, mode WindowedFullscreen.
+[2024.07.22-14.31.45:094][  9]LogViewport: Scene viewport resized to 1846x909, mode WindowedFullscreen.
+[2024.07.22-14.31.45:126][ 10]LogViewport: Scene viewport resized to 1874x909, mode WindowedFullscreen.
+[2024.07.22-14.31.51:664][671]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.07.22-14.31.51:689][671]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.07.22-14.31.51:697][671]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-14.31.54:600][933]Cmd: STAT FPS
+[2024.07.22-14.32.47:773][541]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.22-14.32.47:851][542]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.22-14.33.13:322][223]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.037 s
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: === Handled ensure: ===
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: 
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: Ensure condition failed: !HasBeenProduced(SceneTextures.ScreenSpaceAO)  [File:D:\build\++UE5\Sync\Engine\Source\Runtime\Renderer\Private\IndirectLightRendering.cpp] [Line: 1161] 
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: 
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: Stack: 
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: [Callstack] 0x00007ffd5ed118e0 UnrealEditor-Renderer.dll!UnknownFunction []
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: [Callstack] 0x00007ffd5e94f823 UnrealEditor-Renderer.dll!UnknownFunction []
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: [Callstack] 0x00007ffd5f6be34d UnrealEditor-Renderer.dll!UnknownFunction []
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: [Callstack] 0x00007ffd5f671f7a UnrealEditor-Renderer.dll!UnknownFunction []
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: [Callstack] 0x00007ffd5f6940f9 UnrealEditor-Renderer.dll!UnknownFunction []
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: [Callstack] 0x00007ffd5f69f9d8 UnrealEditor-Renderer.dll!UnknownFunction []
+[2024.07.22-14.33.13:322][223]LogOutputDevice: Error: [Callstack] 0x00007ffd83f21c9f UnrealEditor-Core.dll!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: [Callstack] 0x00007ffd83f222ae UnrealEditor-Core.dll!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: [Callstack] 0x00007ffd8327697b UnrealEditor-RenderCore.dll!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: [Callstack] 0x00007ffd8327e594 UnrealEditor-RenderCore.dll!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: [Callstack] 0x00007ffd84514e32 UnrealEditor-Core.dll!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: [Callstack] 0x00007ffd84508667 UnrealEditor-Core.dll!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: [Callstack] 0x00007ffe3f71257d KERNEL32.DLL!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: [Callstack] 0x00007ffe407caf28 ntdll.dll!UnknownFunction []
+[2024.07.22-14.33.13:323][223]LogOutputDevice: Error: 
+[2024.07.22-14.33.13:336][223]LogStats:                SubmitErrorReport -  0.000 s
+[2024.07.22-14.33.15:072][223]LogStats:                    SendNewReport -  1.736 s
+[2024.07.22-14.33.15:072][223]LogStats:             FDebug::EnsureFailed -  1.786 s
+[2024.07.22-14.36.38:005][719]Cmd: TRANSACTION UNDO
+[2024.07.22-14.36.38:005][719]LogEditorTransaction: Undo Edit Use Inverse Squared Falloff
+[2024.07.22-14.36.38:449][734]Cmd: TRANSACTION UNDO
+[2024.07.22-14.36.38:449][734]LogEditorTransaction: Undo Edit Use Inverse Squared Falloff
+[2024.07.22-14.37.26:129][579]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.07.22-14.37.26:736][579]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto2
+[2024.07.22-14.37.26:738][579]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto22BA00AA44792B36460D0B698D9E7AD0A.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto2.umap'
+[2024.07.22-14.37.26:741][579]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto2.umap is in the /Temp path, will not scan.
+[2024.07.22-14.37.26:783][579]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto2
+[2024.07.22-14.37.26:784][579]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto2E1EE311948CA951A0BD8D7AAF09B9FDD.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto2.umap'
+[2024.07.22-14.37.26:786][579]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto2.umap is in the /Temp path, will not scan.
+[2024.07.22-14.37.26:787][579]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.666
+[2024.07.22-14.37.26:787][579]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.666
+[2024.07.22-14.37.26:787][579]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Bathroom] ([1] browsable assets)...
+[2024.07.22-14.37.26:787][579]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Bathroom]
+[2024.07.22-14.37.26:787][579]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bathroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bathroom_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-14.37.26:794][579]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Bathroom_Auto2
+[2024.07.22-14.37.26:794][579]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto2B50858064E384B641B80449A0DB602CC.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bathroom_Auto2.uasset'
+[2024.07.22-14.37.26:794][579]LogFileHelpers: Auto-saving content packages took 0.008
+[2024.07.22-14.37.37:206][782]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-14.37.37:354][782]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-14.37.42:759][311]LogSlate: External Image Picker: DecompressImage failed
+[2024.07.22-14.38.26:250][476]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.38.26:285][476]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-14.38.26:318][476]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.07.22-14.38.26:912][476]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.22-14.38.26:913][476]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined3E86BE524EB54EFD35DE38BDFFAF7509.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.22-14.38.26:950][476]LogFileHelpers: All files are already saved.
+[2024.07.22-14.38.26:950][476]LogFileHelpers: Saving map 'Lvl_Combined' took 0.666
+[2024.07.22-14.38.26:956][476]LogFileHelpers: InternalPromptForCheckoutAndSave took 706 ms (total: 775 ms)
+[2024.07.22-14.38.26:963][476]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2024.07.22-14.38.27:096][476]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.38.27:127][476]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2024.07.22-14.38.27:166][476]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom
+[2024.07.22-14.38.27:167][476]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BathroomD44609014E6CCB35EAC72683E08E2CED.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom.umap'
+[2024.07.22-14.38.27:173][476]LogFileHelpers: All files are already saved.
+[2024.07.22-14.38.27:173][476]LogFileHelpers: Saving map 'Bathroom' took 0.050
+[2024.07.22-14.38.27:173][476]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bathroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Movies/Bathroom.uasset" SILENT=true
+[2024.07.22-14.38.27:179][476]LogSavePackage: Moving output files for package: /Game/Movies/Bathroom
+[2024.07.22-14.38.27:179][476]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom286B5C904BC9903BECC90EAB93CEF3B7.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Movies/Bathroom.uasset'
+[2024.07.22-14.38.27:338][476]LogFileHelpers: InternalPromptForCheckoutAndSave took 241 ms (total: 1.01 sec)
+[2024.07.22-14.38.27:351][476]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-14.38.27:351][476]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.22-14.38.27:351][476]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bathroomj/Bathroom.Bathroom
+[2024.07.22-14.38.27:351][476]LogContentValidation: Display: Validating /Script/LevelSequence.LevelSequence /Game/Movies/Bathroom.Bathroom
+[2024.07.22-14.38.27:383][477]LogUObjectHash: Compacting FUObjectHashTables data took   0.51ms
+[2024.07.22-14.38.34:995][949]MapCheck: New page: Map Check
+[2024.07.22-14.38.35:011][949]LogSlate: Took 0.000206 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2024.07.22-14.38.35:013][949]LightingResults: New page: Lighting Build - 22 Jul 2024, 16:38:35
+[2024.07.22-14.38.35:054][949]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2024.07.22-14.38.35:116][949]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2024.07.22-14.38.35:128][949]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2024.07.22-14.38.35:634][949]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2024.07.22-14.38.35:634][949]LogSwarmInterface: [TryOpenConnection] Local Process ID is 10796
+[2024.07.22-14.38.38:611][949]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2024.07.22-14.38.38:611][949]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2024.07.22-14.38.38:611][949]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2024.07.22-14.38.38:611][949]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2024.07.22-14.38.38:611][949]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2024.07.22-14.38.38:777][949]LogEditorBuildUtils: Build time 0:03
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: ================================================
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: Total job queries 29, among them cache hits 2 (6.90%)
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: Tracking 27 distinct input hashes that result in 22 distinct outputs (81.48%)
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: RAM used: 656.89 KiB of 2.40 GiB budget. Usage: 0.03%
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.22-14.38.38:830][949]LogShaderCompilers: Display: ================================================
+[2024.07.22-14.38.39:262][952]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.07.22-14.41.01:112][814]LightingResults: Warning: cloth1 Object has overlapping UVs.
+[2024.07.22-14.41.01:112][814]LightingResults: cloth1 Lightmap UV are overlapping by 3.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-14.41.02:625][873]LightingResults: Warning: cloth1 Object has overlapping UVs.
+[2024.07.22-14.41.02:625][873]LightingResults: cloth1 Lightmap UV are overlapping by 3.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-14.41.25:237][792]LightingResults: Warning: Sketchfab_2020_09_30_00_37_22 Object has overlapping UVs.
+[2024.07.22-14.41.25:237][792]LightingResults: Sketchfab_2020_09_30_00_37_22 Lightmap UV are overlapping by 1.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-14.41.26:260][830]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2024.07.22-14.41.27:174][830]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto3
+[2024.07.22-14.41.27:175][830]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto31B2199994C293C6324503CA93C1AB23D.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto3.umap'
+[2024.07.22-14.41.27:178][830]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto3.umap is in the /Temp path, will not scan.
+[2024.07.22-14.41.27:251][830]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_BuildArea_Auto3
+[2024.07.22-14.41.27:252][830]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_Auto3BD566BF546C8F4BEE41CDEA98309725F.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto3.umap'
+[2024.07.22-14.41.27:254][830]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto3.umap is in the /Temp path, will not scan.
+[2024.07.22-14.41.27:420][830]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto3
+[2024.07.22-14.41.27:421][830]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_Auto30889E4104913D764920D9887B7216F38.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto3.umap'
+[2024.07.22-14.41.27:423][830]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto3.umap is in the /Temp path, will not scan.
+[2024.07.22-14.41.27:514][830]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto3
+[2024.07.22-14.41.27:515][830]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_Auto38C3EC9744E19888D5A02F7A68F9934CC.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto3.umap'
+[2024.07.22-14.41.27:516][830]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto3.umap is in the /Temp path, will not scan.
+[2024.07.22-14.41.27:576][830]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto3
+[2024.07.22-14.41.27:577][830]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto346BC6F0A45D32CEF34AC669DADB83940.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto3.umap'
+[2024.07.22-14.41.27:579][830]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto3.umap is in the /Temp path, will not scan.
+[2024.07.22-14.41.27:579][830]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 1.325
+[2024.07.22-14.41.27:579][830]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 1.325
+[2024.07.22-14.41.46:414][625]Job is a success!
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.310s
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:      Indirection Texture 64x64x112 = 1.8Mb
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:      BrickData (all levels) 7.6Mb (trimmed 30.6Mb due to 0.010000 MinBrickError)
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:      Bricks at depth
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:          0: 5.7% covering 100.0% of volume
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:          1: 43.4% covering 11.9% of volume
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:          2: 50.9% covering 0.2% of volume
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:      Bricks in each level
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:          Lvl_Combined 			 965 bricks 	 49.1% (Persistent Level)
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:          BedroomLevel3 			 847 bricks 	 43.1%
+[2024.07.22-14.41.46:967][626]LogVolumetricLightmapImport:          KitchenLevel_Props 			 154 bricks 	 7.8%
+[2024.07.22-14.41.48:267][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_1 (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1173.395816 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:417][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_1 (TFO_DXT1, 4096x4096 x1x1x1) (Required Memory Estimate: 1141.395815 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:524][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_2 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:551][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_2 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:573][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_3 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:580][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_1_3 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:587][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_4 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:602][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_5 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:611][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_6 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:616][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_6 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:622][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_8 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:633][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_8 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:643][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_9 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:658][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_10 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:667][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_11 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:677][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_12 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:696][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_16 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.48:703][626]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_18 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-14.41.49:440][626]Lightmass on ROSE: 3:09 min total, 485 ms importing, 232 ms setup, 1:17 min photons, 1:51 min processing, 0 us extra exporting [661/661 mappings]. Threads: 20:27 min total, 5:25 min processing.
+[2024.07.22-14.41.49:487][626]LogStaticLightingSystem: Lvl_Combined_BuiltData storing lightmap data for 102 meshes in 10 LightmapResourceClusters (10.2 Meshes per cluster).
+[2024.07.22-14.41.49:487][626]LogStaticLightingSystem: Bathroom_BuiltData storing lightmap data for 108 meshes in 14 LightmapResourceClusters (7.7 Meshes per cluster).
+[2024.07.22-14.41.49:487][626]LogStaticLightingSystem: Lvl_BuildArea_BuiltData storing lightmap data for 99 meshes in 22 LightmapResourceClusters (4.5 Meshes per cluster).
+[2024.07.22-14.41.49:487][626]LogStaticLightingSystem: KitchenLevel_Props_BuiltData storing lightmap data for 57 meshes in 22 LightmapResourceClusters (2.6 Meshes per cluster).
+[2024.07.22-14.41.49:487][626]LogStaticLightingSystem: BedroomLevel3_BuiltData storing lightmap data for 295 meshes in 38 LightmapResourceClusters (7.8 Meshes per cluster).
+[2024.07.22-14.41.49:612][626]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.07.22-14.41.49:642][626]LogStaticLightingSystem: Illumination: 3:14 min (1.16 sec encoding lightmaps, 711 ms encoding shadowmaps)
+[2024.07.22-14.41.49:643][626]LogStaticLightingSystem: Lightmap texture memory:  57.6 MB (57.6 MB streaming, 0.0 MB non-streaming), 142 textures
+[2024.07.22-14.41.49:643][626]LogStaticLightingSystem: Shadowmap texture memory: 16.3 MB (16.3 MB streaming, 0.0 MB non-streaming), 34 textures
+[2024.07.22-14.41.50:747][626]DumpUnbuiltLightIteractions
+[2024.07.22-14.41.50:747][626]Lights with unbuilt interactions: 0
+[2024.07.22-14.41.50:747][626]
+[2024.07.22-14.41.50:747][626]Primitives with unbuilt interactions: 0
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: ================================================
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: Total job queries 29, among them cache hits 2 (6.90%)
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: Tracking 27 distinct input hashes that result in 22 distinct outputs (81.48%)
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: RAM used: 656.89 KiB of 2.40 GiB budget. Usage: 0.03%
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.22-14.41.50:749][626]LogShaderCompilers: Display: ================================================
+[2024.07.22-14.41.50:943][627]Cmd: MAP CHECK NOTIFYRESULTS
+[2024.07.22-14.41.50:943][627]MapCheck: New page: Lvl_Combined - 22 Jul 2024, 16:41:50
+[2024.07.22-14.41.50:944][627]MapCheck: Warning: StaticMeshActor_11 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-14.41.50:947][627]MapCheck: Warning: BP_CubeCore_C_1 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-14.41.50:947][627]MapCheck: Warning: BP_CubeCore_C_1 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-14.41.50:947][627]MapCheck: Warning: StaticMeshActor_44 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: BP_BuyableAttachment_C_3 More overridden materials (7) on static mesh component than are referenced (6) in source mesh 'grapplehead' 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_48 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_50 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_42 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_43 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_45 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_47 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_51 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_53 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_130 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:949][627]MapCheck: Warning: StaticMeshActor_131 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:950][627]MapCheck: Warning: StaticMeshActor_160 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:950][627]MapCheck: Warning: StaticMeshActor_164 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:950][627]MapCheck: Warning: StaticMeshActor_180 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:950][627]MapCheck: Warning: StaticMeshActor_183 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:950][627]MapCheck: Warning: StaticMeshActor_193 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:951][627]MapCheck: Warning: StaticMeshActor_6 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:951][627]MapCheck: Warning: StaticMeshActor_229 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:951][627]MapCheck: Warning: StaticMeshActor_56 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:951][627]MapCheck: Warning: StaticMeshActor_324 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:951][627]MapCheck: Warning: StaticMeshActor_328 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:952][627]MapCheck: Warning: StaticMeshActor_329 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:955][627]MapCheck: Warning: StaticMeshActor_48 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-14.41.50:955][627]MapCheck: Map check complete: 0 Error(s), 27 Warning(s), took 11.834ms to complete.
+[2024.07.22-14.42.03:591][319]Cmd: DELETE
+[2024.07.22-14.42.03:591][319]Cmd: ACTOR DELETE
+[2024.07.22-14.42.03:652][319]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.07.22-14.42.03:660][319]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2024.07.22-14.42.03:662][319]LogEditorActor: Deleted 1 Actors (0.071 secs)
+[2024.07.22-14.42.05:354][411]Cmd: TRANSACTION UNDO
+[2024.07.22-14.42.05:354][411]LogEditorTransaction: Undo Delete Elements
+[2024.07.22-14.47.30:197][569]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.47.30:233][569]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-14.47.30:263][569]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.07.22-14.47.30:855][569]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.22-14.47.30:856][569]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined997F31F046FCDC93A79C6BA45EB4ABEA.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.22-14.47.30:984][569]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.47.30:987][569]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined_BuiltData.uasset" SILENT=true
+[2024.07.22-14.47.31:027][569]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined_BuiltData
+[2024.07.22-14.47.31:027][569]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_BuiltData92D9566845A04D235C6F93BAB2779EBF.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined_BuiltData.uasset'
+[2024.07.22-14.47.31:029][569]LogFileHelpers: InternalPromptForCheckoutAndSave took 44 ms (total: 1.06 sec)
+[2024.07.22-14.47.31:163][569]LogFileHelpers: Saving map 'Lvl_Combined' took 0.932
+[2024.07.22-14.47.31:168][569]LogFileHelpers: InternalPromptForCheckoutAndSave took 970 ms (total: 2.03 sec)
+[2024.07.22-14.47.31:180][569]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-14.47.31:180][569]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.22-14.47.31:180][569]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData
+[2024.07.22-14.47.31:303][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.07.22-14.47.31:607][572]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.47.31:646][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.07.22-14.47.31:684][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom
+[2024.07.22-14.47.31:685][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom9D30998F4E1EA9869ACDE1AD1324DB4B.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom.umap'
+[2024.07.22-14.47.31:784][572]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.47.31:805][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData
+[2024.07.22-14.47.31:805][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_BuiltData6C227646436B5A04DBBE23A8730EADD1.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom_BuiltData.uasset'
+[2024.07.22-14.47.31:806][572]LogFileHelpers: InternalPromptForCheckoutAndSave took 22 ms (total: 2.05 sec)
+[2024.07.22-14.47.31:902][572]LogFileHelpers: Saving map 'Bathroom' took 0.261
+[2024.07.22-14.47.31:902][572]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-14.47.31:907][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.07.22-14.47.31:967][572]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea
+[2024.07.22-14.47.31:967][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea8AD7838647ACB0F5E0957ABF6CBBBDA9.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea.umap'
+[2024.07.22-14.47.32:060][572]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.47.32:061][572]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset" SILENT=true
+[2024.07.22-14.47.32:110][572]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea_BuiltData
+[2024.07.22-14.47.32:111][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_BuiltDataE0F4B55B499ED4ED90C8BAB0AE313D46.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset'
+[2024.07.22-14.47.32:112][572]LogFileHelpers: InternalPromptForCheckoutAndSave took 51 ms (total: 2.10 sec)
+[2024.07.22-14.47.32:210][572]LogFileHelpers: Saving map 'Lvl_BuildArea' took 0.307
+[2024.07.22-14.47.32:215][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.07.22-14.47.32:275][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props
+[2024.07.22-14.47.32:276][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props4D2FAB4E41EDB4F667EE439D59CFE408.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.umap'
+[2024.07.22-14.47.32:380][572]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.47.32:452][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData
+[2024.07.22-14.47.32:452][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_BuiltData2097C87041B4C76CAEB243A0E52E560E.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.uasset'
+[2024.07.22-14.47.32:455][572]LogFileHelpers: InternalPromptForCheckoutAndSave took 73 ms (total: 2.17 sec)
+[2024.07.22-14.47.32:539][572]LogFileHelpers: Saving map 'KitchenLevel_Props' took 0.329
+[2024.07.22-14.47.32:545][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.07.22-14.47.32:652][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3
+[2024.07.22-14.47.32:653][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3A9B02E9B4C765036C7E054B5A97098AB.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3.umap'
+[2024.07.22-14.47.32:748][572]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-14.47.33:053][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData
+[2024.07.22-14.47.33:054][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_BuiltDataF2305BA1436CB149D00FC9B2BB708E31.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.uasset'
+[2024.07.22-14.47.33:057][572]LogFileHelpers: InternalPromptForCheckoutAndSave took 308 ms (total: 2.48 sec)
+[2024.07.22-14.47.33:144][572]LogFileHelpers: Saving map 'BedroomLevel3' took 0.605
+[2024.07.22-14.47.33:163][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData
+[2024.07.22-14.47.33:164][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_BuiltData77E6FDBB49FEAED1A88CD19BC397AD60.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom_BuiltData.uasset'
+[2024.07.22-14.47.33:165][572]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset" SILENT=true
+[2024.07.22-14.47.33:211][572]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea_BuiltData
+[2024.07.22-14.47.33:212][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_BuiltDataD20D7A264785C2AE31B5B4A74604B019.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset'
+[2024.07.22-14.47.33:286][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData
+[2024.07.22-14.47.33:287][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_BuiltData839FBFA24F8524FAAF0A32AC6EFA8D9B.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.uasset'
+[2024.07.22-14.47.33:586][572]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData
+[2024.07.22-14.47.33:586][572]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_BuiltDataFC098F5C4BC07698928A57A7C9012EA9.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.uasset'
+[2024.07.22-14.47.33:593][572]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.98 sec (total: 4.47 sec)
+[2024.07.22-14.47.33:599][572]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bathroomj/Bathroom.Bathroom
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_BuildArea.Lvl_BuildArea
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.KitchenLevel_Props
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bedroom/BedroomLevel3.BedroomLevel3
+[2024.07.22-14.47.33:599][572]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData
+[2024.07.22-14.58.25:841][903]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Levels/LowPolyInterior/Meshes/Room/Mesh_Room_Picture_01.Mesh_Room_Picture_01
+[2024.07.22-14.58.25:841][903]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Levels/LowPolyInterior/Meshes/Room/Mesh_Room_Picture_01.Mesh_Room_Picture_01
+[2024.07.22-14.58.25:842][903]LogActorFactory: Actor Factory spawned StaticMesh /Game/Levels/LowPolyInterior/Meshes/Room/Mesh_Room_Picture_01.Mesh_Room_Picture_01 as actor: StaticMeshActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.StaticMeshActor_18
+[2024.07.22-14.58.26:643][946]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Levels/LowPolyInterior/Meshes/Room/Mesh_Room_Picture_01.Mesh_Room_Picture_01
+[2024.07.22-14.58.26:643][946]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Levels/LowPolyInterior/Meshes/Room/Mesh_Room_Picture_01.Mesh_Room_Picture_01
+[2024.07.22-14.58.26:646][946]LogActorFactory: Actor Factory spawned StaticMesh /Game/Levels/LowPolyInterior/Meshes/Room/Mesh_Room_Picture_01.Mesh_Room_Picture_01 as actor: StaticMeshActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.StaticMeshActor_19
+[2024.07.22-14.58.48:972][463]Cmd: DELETE
+[2024.07.22-14.58.48:972][463]Cmd: ACTOR DELETE
+[2024.07.22-14.58.49:018][463]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.07.22-14.58.49:023][463]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2024.07.22-14.58.49:025][463]LogEditorActor: Deleted 1 Actors (0.053 secs)
+[2024.07.22-14.59.03:625][306]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.03:625][306]LogEditorTransaction: Undo Move Elements
+[2024.07.22-14.59.03:950][312]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.03:950][312]LogEditorTransaction: Undo Scale Elements
+[2024.07.22-14.59.04:384][322]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.04:384][322]LogEditorTransaction: Undo Clicking on Elements
+[2024.07.22-14.59.04:694][336]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.04:694][336]LogEditorTransaction: Undo Delete Elements
+[2024.07.22-14.59.05:035][350]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.05:035][350]LogEditorTransaction: Undo Clicking on Elements
+[2024.07.22-14.59.05:429][371]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.05:429][371]LogEditorTransaction: Undo Rotate Elements
+[2024.07.22-14.59.05:675][386]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.05:675][386]LogEditorTransaction: Undo Set Scale
+[2024.07.22-14.59.05:950][402]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.05:950][402]LogEditorTransaction: Undo Rotate Elements
+[2024.07.22-14.59.06:410][430]Cmd: TRANSACTION UNDO
+[2024.07.22-14.59.06:411][430]LogEditorTransaction: Undo Create Actors
+[2024.07.22-14.59.30:925][859]Cmd: SELECT NONE
+[2024.07.22-14.59.39:954][358]Cmd: SELECT NONE
+[2024.07.22-14.59.47:676][861]LogAssetEditorSubsystem: Opening Asset editor for LevelSequence /Game/Movies/Bathroom.Bathroom
+[2024.07.22-14.59.47:706][861]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-15.01.04:914][486]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.01.04:914][486]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.01.04:916][486]LogActorFactory: Actor Factory spawned StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe as actor: StaticMeshActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.StaticMeshActor_22
+[2024.07.22-15.01.05:567][521]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.01.05:567][521]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.01.05:570][521]LogActorFactory: Actor Factory spawned StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe as actor: StaticMeshActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.StaticMeshActor_43
+[2024.07.22-15.01.45:895][845]Cmd: EDIT COPY
+[2024.07.22-15.01.46:132][852]Cmd: EDIT PASTE
+[2024.07.22-15.02.06:133][944]Cmd: SELECT NONE
+[2024.07.22-15.02.14:003][429]Cmd: SELECT NONE
+[2024.07.22-15.02.45:969][479]Cmd: SELECT NONE
+[2024.07.22-15.02.51:365][766]Cmd: SELECT NONE
+[2024.07.22-15.03.01:208][368]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2024.07.22-15.03.03:947][599]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PointLight
+[2024.07.22-15.03.03:947][599]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PointLight
+[2024.07.22-15.03.07:147][793]Cmd: TRANSACTION UNDO
+[2024.07.22-15.03.07:147][793]LogEditorTransaction: Undo Create Actor
+[2024.07.22-15.03.10:185][958]Cmd: ACTOR HIDE SELECTED
+[2024.07.22-15.03.13:725][181]Cmd: TRANSACTION UNDO
+[2024.07.22-15.03.13:726][181]LogEditorTransaction: Undo Hide Selected
+[2024.07.22-15.03.33:950][501]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PointLight
+[2024.07.22-15.03.33:950][501]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PointLight
+[2024.07.22-15.03.36:108][630]Cmd: SELECT NONE
+[2024.07.22-15.03.37:139][687]Cmd: TRANSACTION UNDO
+[2024.07.22-15.03.37:139][687]LogEditorTransaction: Undo Select None
+[2024.07.22-15.04.21:256][297]Cmd: EDIT COPY
+[2024.07.22-15.04.21:447][303]Cmd: EDIT PASTE
+[2024.07.22-15.04.23:159][390]Cmd: MODE GRID=1
+[2024.07.22-15.04.25:771][549]Cmd: TRANSACTION UNDO
+[2024.07.22-15.04.25:771][549]LogEditorTransaction: Undo Move Elements
+[2024.07.22-15.04.30:742][859]Cmd: EDIT COPY
+[2024.07.22-15.04.30:955][870]Cmd: EDIT PASTE
+[2024.07.22-15.04.32:424][943]Cmd: EDIT COPY
+[2024.07.22-15.04.32:609][948]Cmd: EDIT PASTE
+[2024.07.22-15.04.33:932][  5]Cmd: EDIT PASTE
+[2024.07.22-15.04.36:067][104]Cmd: EDIT COPY
+[2024.07.22-15.04.36:289][115]LogWindows: Warning: OpenClipboard failed with error code 5
+[2024.07.22-15.04.36:290][115]Cmd: EDIT PASTE
+[2024.07.22-15.04.36:949][145]Cmd: EDIT PASTE
+[2024.07.22-15.04.37:171][154]Cmd: EDIT PASTE
+[2024.07.22-15.04.42:020][390]Cmd: EDIT COPY
+[2024.07.22-15.04.42:216][395]Cmd: EDIT PASTE
+[2024.07.22-15.04.43:002][426]Cmd: EDIT COPY
+[2024.07.22-15.04.43:161][430]Cmd: EDIT PASTE
+[2024.07.22-15.04.48:241][671]Cmd: EDIT COPY
+[2024.07.22-15.04.48:449][676]Cmd: EDIT PASTE
+[2024.07.22-15.04.55:737][ 15]Cmd: MODE GRID=0
+[2024.07.22-15.04.57:399][ 96]Cmd: DELETE
+[2024.07.22-15.04.57:400][ 96]Cmd: ACTOR DELETE
+[2024.07.22-15.04.57:447][ 96]LogEditorActor: Deleted Actor: PointLight
+[2024.07.22-15.04.57:461][ 96]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.07.22-15.04.57:463][ 96]LogEditorActor: Deleted 1 Actors (0.063 secs)
+[2024.07.22-15.04.58:829][162]Cmd: EDIT COPY
+[2024.07.22-15.04.59:023][172]Cmd: EDIT PASTE
+[2024.07.22-15.05.11:957][681]Cmd: EDIT COPY
+[2024.07.22-15.05.13:619][750]Cmd: EDIT COPY
+[2024.07.22-15.05.13:810][759]Cmd: EDIT PASTE
+[2024.07.22-15.05.14:775][802]Cmd: TRANSACTION UNDO
+[2024.07.22-15.05.14:775][802]LogEditorTransaction: Undo Move Elements
+[2024.07.22-15.05.15:905][853]Cmd: MODE GRID=1
+[2024.07.22-15.05.17:363][921]Cmd: EDIT COPY
+[2024.07.22-15.05.17:535][930]Cmd: EDIT PASTE
+[2024.07.22-15.05.18:450][969]Cmd: EDIT COPY
+[2024.07.22-15.05.18:891][990]Cmd: EDIT PASTE
+[2024.07.22-15.05.21:003][ 74]Cmd: EDIT COPY
+[2024.07.22-15.05.21:170][ 78]Cmd: EDIT PASTE
+[2024.07.22-15.05.24:117][196]Cmd: SELECT NONE
+[2024.07.22-15.05.32:969][730]MapCheck: New page: Map Check
+[2024.07.22-15.05.32:989][730]LightingResults: New page: Lighting Build - 22 Jul 2024, 17:05:32
+[2024.07.22-15.05.33:002][730]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2024.07.22-15.05.33:007][730]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2024.07.22-15.05.33:007][730]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2024.07.22-15.05.33:009][730]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2024.07.22-15.05.33:009][730]LogSwarmInterface: [TryOpenConnection] Local Process ID is 10796
+[2024.07.22-15.05.38:347][730]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2024.07.22-15.05.38:347][730]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2024.07.22-15.05.38:347][730]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2024.07.22-15.05.38:347][730]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2024.07.22-15.05.38:347][730]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2024.07.22-15.05.38:477][730]LogEditorBuildUtils: Build time 0:05
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: ================================================
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: Total job queries 29, among them cache hits 2 (6.90%)
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: Tracking 27 distinct input hashes that result in 22 distinct outputs (81.48%)
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: RAM used: 656.89 KiB of 2.40 GiB budget. Usage: 0.03%
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.22-15.05.38:490][730]LogShaderCompilers: Display: ================================================
+[2024.07.22-15.05.38:522][731]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.07.22-15.05.41:612][860]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2024.07.22-15.05.42:561][860]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto4
+[2024.07.22-15.05.42:562][860]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto411DA3A9349FD9DF8B0749EAEF3ED5A02.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto4.umap'
+[2024.07.22-15.05.42:567][860]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto4.umap is in the /Temp path, will not scan.
+[2024.07.22-15.05.42:647][860]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_BuildArea_Auto4
+[2024.07.22-15.05.42:647][860]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_Auto42947D83F4C1ECBBB9240D582E2F7EDD5.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto4.umap'
+[2024.07.22-15.05.42:651][860]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto4.umap is in the /Temp path, will not scan.
+[2024.07.22-15.05.42:813][860]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto4
+[2024.07.22-15.05.42:814][860]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_Auto468E404054DE13CABC6C3BCB534657A76.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto4.umap'
+[2024.07.22-15.05.42:818][860]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto4.umap is in the /Temp path, will not scan.
+[2024.07.22-15.05.42:913][860]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto4
+[2024.07.22-15.05.42:913][860]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_Auto4DBD4EABA4F2339E1FFDF6CB207D27F9F.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto4.umap'
+[2024.07.22-15.05.42:917][860]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto4.umap is in the /Temp path, will not scan.
+[2024.07.22-15.05.42:978][860]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto4
+[2024.07.22-15.05.42:979][860]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto4177576A342E3829B5E615C8255E055D0.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto4.umap'
+[2024.07.22-15.05.42:983][860]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto4.umap is in the /Temp path, will not scan.
+[2024.07.22-15.05.42:983][860]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 1.378
+[2024.07.22-15.05.42:983][860]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 1.378
+[2024.07.22-15.07.49:986][ 83]LightingResults: Warning: cloth1 Object has overlapping UVs.
+[2024.07.22-15.07.49:986][ 83]LightingResults: cloth1 Lightmap UV are overlapping by 3.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-15.07.52:254][174]LightingResults: Warning: cloth1 Object has overlapping UVs.
+[2024.07.22-15.07.52:254][174]LightingResults: cloth1 Lightmap UV are overlapping by 3.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-15.08.14:869][ 69]LightingResults: Warning: Sketchfab_2020_09_30_00_37_22 Object has overlapping UVs.
+[2024.07.22-15.08.14:869][ 69]LightingResults: Sketchfab_2020_09_30_00_37_22 Lightmap UV are overlapping by 1.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-15.08.38:356][997]Job is a success!
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.291s
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:      Indirection Texture 64x64x112 = 1.8Mb
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:      BrickData (all levels) 7.6Mb (trimmed 30.5Mb due to 0.010000 MinBrickError)
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:      Bricks at depth
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:          0: 5.7% covering 100.0% of volume
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:          1: 43.2% covering 11.9% of volume
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:          2: 51.2% covering 0.2% of volume
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:      Bricks in each level
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:          Lvl_Combined 			 966 bricks 	 48.8% (Persistent Level)
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:          BedroomLevel3 			 860 bricks 	 43.5%
+[2024.07.22-15.08.38:922][999]LogVolumetricLightmapImport:          KitchenLevel_Props 			 152 bricks 	 7.7%
+[2024.07.22-15.08.40:169][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_1 (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1173.395816 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:318][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_1 (TFO_DXT1, 4096x4096 x1x1x1) (Required Memory Estimate: 1141.395815 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:418][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_2 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:424][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_2 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:431][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_3 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:445][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_3 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:456][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_4 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:473][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_4 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:485][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_5 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:514][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_5 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:534][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_6 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:546][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_6 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:553][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_7 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:562][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_7 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:568][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_8 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:573][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_8 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:579][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_9 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:585][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_9 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:590][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_10 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:599][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_10 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:605][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_11 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:613][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_11 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:619][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_12 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:623][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_13 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:631][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_13 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:637][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_14 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:644][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_15 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:650][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_15 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:656][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_16 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:661][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap1_17 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:665][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_18 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:672][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_18 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:677][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_19 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:684][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_19 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:692][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_20 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:721][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:LQ_Lightmap_0_20 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:743][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_21 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:750][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:LQ_Lightmap_0_21 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:755][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_22 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:758][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_23 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:762][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_24 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:766][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_25 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:769][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap1_27 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:772][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_29 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:775][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_30 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:776][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_30 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:778][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_31 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:780][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_31 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:782][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_33 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:786][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_33 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:790][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_34 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:796][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_34 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:805][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_35 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:827][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_35 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:844][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_37 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:846][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_38 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:848][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_38 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:849][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_39 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:854][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_39 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:857][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_40 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:862][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_40 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:869][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_41 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:902][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_41 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:930][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_42 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:934][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_42 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:939][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_43 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:943][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_43 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:946][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_44 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:949][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_44 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:951][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_45 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:955][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_45 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:958][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_46 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:961][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_46 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:963][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_47 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:964][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_47 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:966][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_48 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:971][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_48 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:974][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_49 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:976][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_49 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:977][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_50 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:982][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_50 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:985][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_51 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:987][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_51 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:987][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_52 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:990][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_52 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:992][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_53 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:994][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_53 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:995][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_54 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:996][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_54 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:997][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_55 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.40:999][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_55 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:000][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_56 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:001][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_56 (TFO_DXT1, 128x128 x1x1x1) (Required Memory Estimate: 1.947886 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:002][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_57 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:004][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_57 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:006][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_58 (TFO_AutoDXT, 64x64 x1x1x1) (Required Memory Estimate: 0.713502 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:007][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_60 (TFO_AutoDXT, 64x64 x1x1x1) (Required Memory Estimate: 0.713502 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:008][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_60 (TFO_DXT1, 64x64 x1x1x1) (Required Memory Estimate: 0.533824 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:008][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_61 (TFO_AutoDXT, 64x64 x1x1x1) (Required Memory Estimate: 0.713502 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:009][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_61 (TFO_DXT1, 64x64 x1x1x1) (Required Memory Estimate: 0.533824 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:010][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_62 (TFO_AutoDXT, 64x64 x1x1x1) (Required Memory Estimate: 0.713502 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:010][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_62 (TFO_DXT1, 64x64 x1x1x1) (Required Memory Estimate: 0.533824 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:010][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_63 (TFO_AutoDXT, 8x8 x1x1x1) (Required Memory Estimate: 0.072633 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:011][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_64 (TFO_AutoDXT, 8x8 x1x1x1) (Required Memory Estimate: 0.072633 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:011][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_65 (TFO_AutoDXT, 8x8 x1x1x1) (Required Memory Estimate: 0.072633 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:011][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:LQ_Lightmap_0_65 (TFO_DXT1, 8x8 x1x1x1) (Required Memory Estimate: 0.069835 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:011][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_66 (TFO_AutoDXT, 8x8 x1x1x1) (Required Memory Estimate: 0.072633 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:755][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:ShadowMapTexture2D_10 (BGRA8, 1024x256 x1x1x1) (Required Memory Estimate: 8.0625 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:758][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_14 (BGRA8, 1024x256 x1x1x1) (Required Memory Estimate: 8.0625 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:762][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_15 (BGRA8, 512x256 x1x1x1) (Required Memory Estimate: 4.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:765][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:ShadowMapTexture2D_11 (BGRA8, 512x256 x1x1x1) (Required Memory Estimate: 4.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:767][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_16 (BGRA8, 1024x128 x1x1x1) (Required Memory Estimate: 4.062504 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:770][999]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:ShadowMapTexture2D_4 (BGRA8, 1024x512 x1x1x1) (Required Memory Estimate: 16.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:777][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_19 (G8, 512x64 x1x1x1) (Required Memory Estimate: 0.812493 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:778][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_20 (BGRA8, 256x64 x1x1x1) (Required Memory Estimate: 0.5625 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:780][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_21 (G8, 256x64 x1x1x1) (Required Memory Estimate: 0.437496 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:781][999]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_23 (BGRA8, 512x64 x1x1x1) (Required Memory Estimate: 1.062504 MB), EncodeSpeed: Fast
+[2024.07.22-15.08.41:806][999]LogStaticLightingSystem: Lvl_Combined_BuiltData storing lightmap data for 104 meshes in 11 LightmapResourceClusters (9.5 Meshes per cluster).
+[2024.07.22-15.08.41:806][999]LogStaticLightingSystem: Bathroom_BuiltData storing lightmap data for 108 meshes in 12 LightmapResourceClusters (9.0 Meshes per cluster).
+[2024.07.22-15.08.41:807][999]LogStaticLightingSystem: Lvl_BuildArea_BuiltData storing lightmap data for 99 meshes in 22 LightmapResourceClusters (4.5 Meshes per cluster).
+[2024.07.22-15.08.41:807][999]LogStaticLightingSystem: KitchenLevel_Props_BuiltData storing lightmap data for 57 meshes in 21 LightmapResourceClusters (2.7 Meshes per cluster).
+[2024.07.22-15.08.41:807][999]LogStaticLightingSystem: BedroomLevel3_BuiltData storing lightmap data for 295 meshes in 36 LightmapResourceClusters (8.2 Meshes per cluster).
+[2024.07.22-15.08.41:815][999]Lightmass on ROSE: 3:02 min total, 403 ms importing, 228 ms setup, 1:10 min photons, 1:51 min processing, 0 us extra exporting [663/663 mappings]. Threads: 20:25 min total, 5:32 min processing.
+[2024.07.22-15.08.41:912][999]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.07.22-15.08.41:938][999]LogStaticLightingSystem: Illumination: 3:08 min (1.52 sec encoding lightmaps, 770 ms encoding shadowmaps)
+[2024.07.22-15.08.41:939][999]LogStaticLightingSystem: Lightmap texture memory:  56.0 MB (56.0 MB streaming, 0.0 MB non-streaming), 134 textures
+[2024.07.22-15.08.41:939][999]LogStaticLightingSystem: Shadowmap texture memory: 16.2 MB (16.2 MB streaming, 0.0 MB non-streaming), 33 textures
+[2024.07.22-15.08.42:472][999]DumpUnbuiltLightIteractions
+[2024.07.22-15.08.42:472][999]Lights with unbuilt interactions: 0
+[2024.07.22-15.08.42:472][999]
+[2024.07.22-15.08.42:472][999]Primitives with unbuilt interactions: 0
+[2024.07.22-15.08.42:473][999]LogShaderCompilers: Display: ================================================
+[2024.07.22-15.08.42:473][999]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: Total job queries 29, among them cache hits 2 (6.90%)
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: Tracking 27 distinct input hashes that result in 22 distinct outputs (81.48%)
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: RAM used: 656.89 KiB of 2.40 GiB budget. Usage: 0.03%
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.22-15.08.42:474][999]LogShaderCompilers: Display: ================================================
+[2024.07.22-15.08.42:626][  0]Cmd: MAP CHECK NOTIFYRESULTS
+[2024.07.22-15.08.42:626][  0]MapCheck: New page: Lvl_Combined - 22 Jul 2024, 17:08:42
+[2024.07.22-15.08.42:627][  0]MapCheck: Warning: StaticMeshActor_11 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-15.08.42:629][  0]MapCheck: Warning: BP_CubeCore_C_1 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-15.08.42:629][  0]MapCheck: Warning: BP_CubeCore_C_1 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-15.08.42:630][  0]MapCheck: Warning: StaticMeshActor_44 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:631][  0]MapCheck: Warning: BP_BuyableAttachment_C_3 More overridden materials (7) on static mesh component than are referenced (6) in source mesh 'grapplehead' 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_48 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_50 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_42 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_43 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_45 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_47 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_51 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_53 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_130 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_131 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_160 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_164 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:632][  0]MapCheck: Warning: StaticMeshActor_180 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:633][  0]MapCheck: Warning: StaticMeshActor_183 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:633][  0]MapCheck: Warning: StaticMeshActor_193 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:633][  0]MapCheck: Warning: StaticMeshActor_6 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:634][  0]MapCheck: Warning: StaticMeshActor_229 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:634][  0]MapCheck: Warning: StaticMeshActor_56 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:634][  0]MapCheck: Warning: StaticMeshActor_324 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:634][  0]MapCheck: Warning: StaticMeshActor_328 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:634][  0]MapCheck: Warning: StaticMeshActor_329 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:640][  0]MapCheck: Warning: StaticMeshActor_48 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.08.42:640][  0]MapCheck: Map check complete: 0 Error(s), 27 Warning(s), took 12.291ms to complete.
+[2024.07.22-15.08.47:437][200]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2024.07.22-15.08.48:021][200]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto5
+[2024.07.22-15.08.48:022][200]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto5E82FA67346CA45CA6C14F8AC5ED82753.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto5.umap'
+[2024.07.22-15.08.48:026][200]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto5.umap is in the /Temp path, will not scan.
+[2024.07.22-15.08.48:028][200]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.596
+[2024.07.22-15.08.48:028][200]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.596
+[2024.07.22-15.11.48:199][486]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2024.07.22-15.11.48:201][486]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.008
+[2024.07.22-15.14.48:354][820]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.07.22-15.14.48:356][820]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.007
+[2024.07.22-15.17.48:487][334]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.07.22-15.17.48:489][334]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.007
+[2024.07.22-15.18.08:359][119]Cmd: MODE GRID=0
+[2024.07.22-15.18.24:835][789]Cmd: SELECT NONE
+[2024.07.22-15.18.28:357][940]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.18.28:390][940]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-15.18.28:421][940]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2024.07.22-15.18.29:022][940]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.22-15.18.29:023][940]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_CombinedF6A6041741F61D5E9DC8E9AA59A2DA05.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.22-15.18.29:203][940]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.18.29:205][940]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined_BuiltData.uasset" SILENT=true
+[2024.07.22-15.18.29:244][940]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined_BuiltData
+[2024.07.22-15.18.29:244][940]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_BuiltData610B13384658B43C9157019B260E1331.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined_BuiltData.uasset'
+[2024.07.22-15.18.29:246][940]LogFileHelpers: InternalPromptForCheckoutAndSave took 42 ms (total: 4.51 sec)
+[2024.07.22-15.18.29:336][940]LogFileHelpers: Saving map 'Lvl_Combined' took 0.948
+[2024.07.22-15.18.29:342][940]LogFileHelpers: InternalPromptForCheckoutAndSave took 984 ms (total: 5.50 sec)
+[2024.07.22-15.18.29:353][940]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-15.18.29:353][940]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.22-15.18.29:353][940]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData
+[2024.07.22-15.18.49:263][907]Cmd: TRANSACTION UNDO
+[2024.07.22-15.18.49:263][907]LogEditorTransaction: Undo Clicking on Elements
+[2024.07.22-15.19.00:239][330]Cmd: TRANSACTION UNDO
+[2024.07.22-15.19.00:239][330]LogEditorTransaction: Undo Clicking on Elements
+[2024.07.22-15.20.18:285][223]LogViewport: Scene viewport resized to 510x287, mode WindowedFullscreen.
+[2024.07.22-15.20.22:404][401]LogDerivedDataCache: C:/Users/rosop/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:01:53.151 and deleted 225 files with total size 29 MiB and 191 empty folders. Scanned 64131 files in 52514 folders with total size 2139 MiB.
+[2024.07.22-15.20.37:589][283]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.20.37:589][283]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.20.37:590][283]LogActorFactory: Actor Factory spawned StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe as actor: StaticMeshActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.StaticMeshActor_47
+[2024.07.22-15.20.38:727][349]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.20.38:727][349]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe
+[2024.07.22-15.20.38:730][349]LogActorFactory: Actor Factory spawned StaticMesh /Game/StarterContent/Shapes/Shape_Pipe.Shape_Pipe as actor: StaticMeshActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.StaticMeshActor_48
+[2024.07.22-15.20.57:400][463]Cmd: SELECT NONE
+[2024.07.22-15.21.06:266][  1]Cmd: EDIT COPY
+[2024.07.22-15.21.06:266][  1]LogConsoleManager: Warning: Performance warning: Many (31) failed FindConsoleObject() for 'EDIT'. 
+[2024.07.22-15.21.06:444][  7]Cmd: EDIT PASTE
+[2024.07.22-15.21.13:873][464]Cmd: EDIT COPY
+[2024.07.22-15.21.14:057][470]Cmd: EDIT PASTE
+[2024.07.22-15.21.20:004][859]Cmd: EDIT COPY
+[2024.07.22-15.21.20:184][865]Cmd: EDIT PASTE
+[2024.07.22-15.21.26:901][296]Cmd: SELECT NONE
+[2024.07.22-15.21.31:830][628]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PointLight
+[2024.07.22-15.21.31:830][628]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PointLight
+[2024.07.22-15.21.38:738][ 23]Cmd: ACTOR HIDE SELECTED
+[2024.07.22-15.21.39:501][ 71]Cmd: TRANSACTION UNDO
+[2024.07.22-15.21.39:501][ 71]LogEditorTransaction: Undo Hide Selected
+[2024.07.22-15.22.36:325][375]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2024.07.22-15.22.36:933][375]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto6
+[2024.07.22-15.22.36:933][375]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto68E44D3E141A3EE57DACAF2BFCCF26730.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto6.umap'
+[2024.07.22-15.22.36:940][375]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto6.umap is in the /Temp path, will not scan.
+[2024.07.22-15.22.37:002][375]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_BuildArea_Auto6
+[2024.07.22-15.22.37:003][375]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_Auto6ECCC8C5241C14FF79616988F4CC0687E.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto6.umap'
+[2024.07.22-15.22.37:007][375]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto6.umap is in the /Temp path, will not scan.
+[2024.07.22-15.22.37:131][375]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto6
+[2024.07.22-15.22.37:132][375]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_Auto6AAE6FACE454D6BA3A3CBD28450121653.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto6.umap'
+[2024.07.22-15.22.37:135][375]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto6.umap is in the /Temp path, will not scan.
+[2024.07.22-15.22.37:206][375]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto6
+[2024.07.22-15.22.37:207][375]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_Auto66FD5799444059AE7816C07B2D943EC06.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto6.umap'
+[2024.07.22-15.22.37:211][375]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto6.umap is in the /Temp path, will not scan.
+[2024.07.22-15.22.37:253][375]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto6
+[2024.07.22-15.22.37:254][375]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto61D6A167740C40D5D0A95EAB4DFE11C17.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto6.umap'
+[2024.07.22-15.22.37:257][375]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto6.umap is in the /Temp path, will not scan.
+[2024.07.22-15.22.37:257][375]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.940
+[2024.07.22-15.22.37:257][375]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.940
+[2024.07.22-15.25.37:361][916]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2024.07.22-15.25.37:363][916]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.008
+[2024.07.22-15.26.32:355][483]Cmd: TRANSACTION UNDO
+[2024.07.22-15.26.32:355][483]LogEditorTransaction: Undo Edit Attenuation Radius
+[2024.07.22-15.26.34:967][605]Cmd: TRANSACTION UNDO
+[2024.07.22-15.26.34:967][605]LogEditorTransaction: Undo Move Elements
+[2024.07.22-15.27.28:851][819]Cmd: TRANSACTION UNDO
+[2024.07.22-15.27.28:851][819]LogEditorTransaction: Undo Move Elements
+[2024.07.22-15.27.50:646][112]Cmd: SELECT NONE
+[2024.07.22-15.27.57:965][495]Cmd: EDIT COPY
+[2024.07.22-15.27.58:363][506]Cmd: EDIT PASTE
+[2024.07.22-15.27.59:336][551]Cmd: MODE GRID=1
+[2024.07.22-15.28.01:202][654]Cmd: EDIT COPY
+[2024.07.22-15.28.01:411][664]Cmd: EDIT PASTE
+[2024.07.22-15.28.02:257][703]Cmd: EDIT COPY
+[2024.07.22-15.28.02:434][712]Cmd: EDIT PASTE
+[2024.07.22-15.28.03:406][754]Cmd: EDIT COPY
+[2024.07.22-15.28.03:588][763]Cmd: EDIT PASTE
+[2024.07.22-15.28.06:154][868]Cmd: DELETE
+[2024.07.22-15.28.06:155][868]Cmd: ACTOR DELETE
+[2024.07.22-15.28.06:210][868]LogEditorActor: Deleted Actor: PointLight
+[2024.07.22-15.28.06:216][868]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2024.07.22-15.28.06:219][868]LogEditorActor: Deleted 1 Actors (0.065 secs)
+[2024.07.22-15.28.14:394][228]Cmd: MODE GRID=0
+[2024.07.22-15.28.33:837][114]Cmd: SELECT NONE
+[2024.07.22-15.28.47:190][703]Cmd: TRANSACTION UNDO
+[2024.07.22-15.28.47:190][703]LogEditorTransaction: Undo Edit Source Radius
+[2024.07.22-15.28.48:619][756]Cmd: TRANSACTION REDO
+[2024.07.22-15.28.48:619][756]LogEditorTransaction: Redo Edit Source Radius
+[2024.07.22-15.29.49:490][356]Cmd: EDIT COPY
+[2024.07.22-15.29.49:659][362]Cmd: EDIT PASTE
+[2024.07.22-15.30.00:496][890]Cmd: EDIT COPY
+[2024.07.22-15.30.00:687][895]Cmd: EDIT PASTE
+[2024.07.22-15.30.04:397][ 86]Cmd: EDIT COPY
+[2024.07.22-15.30.04:585][ 96]Cmd: EDIT PASTE
+[2024.07.22-15.30.09:157][312]Cmd: SELECT NONE
+[2024.07.22-15.30.12:147][466]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.30.12:179][466]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-15.30.12:212][466]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.07.22-15.30.12:811][466]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.22-15.30.12:812][466]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_CombinedEA19DE364D7D30E0E01ED4916306C4C9.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.22-15.30.12:846][466]LogFileHelpers: All files are already saved.
+[2024.07.22-15.30.12:847][466]LogFileHelpers: Saving map 'Lvl_Combined' took 0.669
+[2024.07.22-15.30.12:861][466]LogFileHelpers: InternalPromptForCheckoutAndSave took 713 ms (total: 6.21 sec)
+[2024.07.22-15.30.12:872][466]AssetCheck: New page: Asset Save: Lvl_Combined
+[2024.07.22-15.30.12:872][466]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.22-15.30.12:967][471]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.07.22-15.30.13:096][471]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2024.07.22-15.30.13:260][471]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.30.13:296][471]LogUObjectHash: Compacting FUObjectHashTables data took   0.32ms
+[2024.07.22-15.30.13:334][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom
+[2024.07.22-15.30.13:335][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BathroomA506EE314772E5328EB6368C0F063A77.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom.umap'
+[2024.07.22-15.30.13:434][471]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.30.13:454][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData
+[2024.07.22-15.30.13:454][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_BuiltData80A4FE46402DA7B9D743D5A83765E28D.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom_BuiltData.uasset'
+[2024.07.22-15.30.13:456][471]LogFileHelpers: InternalPromptForCheckoutAndSave took 22 ms (total: 6.23 sec)
+[2024.07.22-15.30.13:550][471]LogFileHelpers: Saving map 'Bathroom' took 0.260
+[2024.07.22-15.30.13:550][471]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-15.30.13:556][471]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.07.22-15.30.13:606][471]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea
+[2024.07.22-15.30.13:607][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea0FF8B5BF4CEA37409D64E89BA563977B.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea.umap'
+[2024.07.22-15.30.13:711][471]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.30.13:712][471]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset" SILENT=true
+[2024.07.22-15.30.13:759][471]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea_BuiltData
+[2024.07.22-15.30.13:760][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_BuiltData3437384C4D077077629E5EA9FC14BAD3.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset'
+[2024.07.22-15.30.13:762][471]LogFileHelpers: InternalPromptForCheckoutAndSave took 50 ms (total: 6.28 sec)
+[2024.07.22-15.30.13:854][471]LogFileHelpers: Saving map 'Lvl_BuildArea' took 0.304
+[2024.07.22-15.30.13:861][471]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2024.07.22-15.30.13:920][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props
+[2024.07.22-15.30.13:921][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props92CA43794F83787FD2ED1889369F8748.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.umap'
+[2024.07.22-15.30.14:007][471]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.30.14:082][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData
+[2024.07.22-15.30.14:082][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_BuiltData882D4ECE453295AC901B3E8822D87BF1.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.uasset'
+[2024.07.22-15.30.14:084][471]LogFileHelpers: InternalPromptForCheckoutAndSave took 76 ms (total: 6.36 sec)
+[2024.07.22-15.30.14:162][471]LogFileHelpers: Saving map 'KitchenLevel_Props' took 0.308
+[2024.07.22-15.30.14:169][471]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2024.07.22-15.30.14:275][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3
+[2024.07.22-15.30.14:276][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel344F8F07B44923B8B2795D3B3C29C2875.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3.umap'
+[2024.07.22-15.30.14:376][471]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.30.14:660][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData
+[2024.07.22-15.30.14:661][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_BuiltData7361C32B49B45FE29C42AD8C074985CF.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.uasset'
+[2024.07.22-15.30.14:691][471]LogFileHelpers: InternalPromptForCheckoutAndSave took 315 ms (total: 6.68 sec)
+[2024.07.22-15.30.14:777][471]LogFileHelpers: Saving map 'BedroomLevel3' took 0.615
+[2024.07.22-15.30.14:795][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData
+[2024.07.22-15.30.14:796][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_BuiltData8FC79D4144218617F0AC29BFEE258BBD.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom_BuiltData.uasset'
+[2024.07.22-15.30.14:797][471]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset" SILENT=true
+[2024.07.22-15.30.14:842][471]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea_BuiltData
+[2024.07.22-15.30.14:843][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_BuiltData9131516747C4BA452946069F02360EB7.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset'
+[2024.07.22-15.30.14:909][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData
+[2024.07.22-15.30.14:910][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_BuiltData4AD8DE1942E5CD595BCAFBA08205535F.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.uasset'
+[2024.07.22-15.30.15:176][471]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData
+[2024.07.22-15.30.15:177][471]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_BuiltDataECB8E76E44143F09CB12DF8A58794A03.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.uasset'
+[2024.07.22-15.30.15:184][471]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.92 sec (total: 8.60 sec)
+[2024.07.22-15.30.15:191][471]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bathroomj/Bathroom.Bathroom
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_BuildArea.Lvl_BuildArea
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.KitchenLevel_Props
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bedroom/BedroomLevel3.BedroomLevel3
+[2024.07.22-15.30.15:191][471]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData
+[2024.07.22-15.30.38:391][519]Cmd: TRANSACTION UNDO
+[2024.07.22-15.30.38:391][519]LogEditorTransaction: Undo Clicking on Elements
+[2024.07.22-15.30.54:427][338]Cmd: EDIT COPY
+[2024.07.22-15.30.54:618][343]Cmd: EDIT PASTE
+[2024.07.22-15.31.01:596][683]Cmd: SELECT NONE
+[2024.07.22-15.31.32:704][173]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2024.07.22-15.31.37:963][421]LogSlate: Window 'Project Settings' being destroyed
+[2024.07.22-15.31.37:971][421]LogSlate: Window 'Project Settings' being destroyed
+[2024.07.22-15.31.41:415][584]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.31.41:448][584]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-15.31.41:479][584]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.07.22-15.31.42:079][584]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.22-15.31.42:079][584]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_CombinedF8ED628F452336A80554329239F9C946.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.22-15.31.42:113][584]LogFileHelpers: All files are already saved.
+[2024.07.22-15.31.42:113][584]LogFileHelpers: Saving map 'Lvl_Combined' took 0.667
+[2024.07.22-15.31.42:128][584]LogFileHelpers: InternalPromptForCheckoutAndSave took 712 ms (total: 9.31 sec)
+[2024.07.22-15.31.42:134][584]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2024.07.22-15.31.42:235][584]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.31.42:272][584]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2024.07.22-15.31.42:312][584]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom
+[2024.07.22-15.31.42:313][584]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BathroomA9816AE8471D95B4BDB7B591A02D4EC3.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom.umap'
+[2024.07.22-15.31.42:319][584]LogFileHelpers: All files are already saved.
+[2024.07.22-15.31.42:319][584]LogFileHelpers: Saving map 'Bathroom' took 0.053
+[2024.07.22-15.31.42:335][584]LogFileHelpers: InternalPromptForCheckoutAndSave took 99 ms (total: 9.41 sec)
+[2024.07.22-15.31.42:346][584]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-15.31.42:346][584]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.22-15.31.42:346][584]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bathroomj/Bathroom.Bathroom
+[2024.07.22-15.31.42:456][589]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2024.07.22-15.31.45:131][727]Cmd: SELECT NONE
+[2024.07.22-15.31.57:686][336]LogViewport: Scene viewport resized to 1902x1006, mode WindowedFullscreen.
+[2024.07.22-15.31.57:723][337]LogViewport: Scene viewport resized to 1915x1058, mode WindowedFullscreen.
+[2024.07.22-15.31.57:787][338]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-15.31.58:304][360]LogViewport: Scene viewport resized to 1920x1032, mode Windowed.
+[2024.07.22-15.31.58:777][379]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-15.32.36:298][313]LogSlate: Window 'Message Log' being destroyed
+[2024.07.22-15.32.36:323][313]LogSlate: Window 'Message Log' being destroyed
+[2024.07.22-15.32.41:007][540]LogViewport: Scene viewport resized to 1897x985, mode WindowedFullscreen.
+[2024.07.22-15.32.41:110][541]LogViewport: Scene viewport resized to 1879x912, mode WindowedFullscreen.
+[2024.07.22-15.32.41:203][542]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-15.32.43:312][680]MapCheck: New page: Map Check
+[2024.07.22-15.32.43:332][680]LightingResults: New page: Lighting Build - 22 Jul 2024, 17:32:43
+[2024.07.22-15.32.43:346][680]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2024.07.22-15.32.43:356][680]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2024.07.22-15.32.43:356][680]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2024.07.22-15.32.43:357][680]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2024.07.22-15.32.43:357][680]LogSwarmInterface: [TryOpenConnection] Local Process ID is 10796
+[2024.07.22-15.32.48:695][680]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2024.07.22-15.32.48:695][680]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2024.07.22-15.32.48:695][680]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2024.07.22-15.32.48:695][680]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2024.07.22-15.32.48:695][680]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2024.07.22-15.32.48:833][680]LogEditorBuildUtils: Build time 0:05
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: ================================================
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: Total job queries 29, among them cache hits 2 (6.90%)
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: Tracking 27 distinct input hashes that result in 22 distinct outputs (81.48%)
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: RAM used: 656.89 KiB of 2.40 GiB budget. Usage: 0.03%
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.22-15.32.48:848][680]LogShaderCompilers: Display: ================================================
+[2024.07.22-15.32.48:874][681]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.07.22-15.34.00:699][302]LightingResults: Warning: cloth1 Object has overlapping UVs.
+[2024.07.22-15.34.00:699][302]LightingResults: cloth1 Lightmap UV are overlapping by 3.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-15.34.30:376][391]LightingResults: Warning: cloth1 Object has overlapping UVs.
+[2024.07.22-15.34.30:376][391]LightingResults: cloth1 Lightmap UV are overlapping by 3.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-15.34.41:423][424]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.07.22-15.34.42:436][424]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto7
+[2024.07.22-15.34.42:437][424]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto7E58F588347C8020D965AC58BE8B9A06A.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto7.umap'
+[2024.07.22-15.34.42:445][424]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto7.umap is in the /Temp path, will not scan.
+[2024.07.22-15.34.42:553][424]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_BuildArea_Auto7
+[2024.07.22-15.34.42:554][424]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_Auto770E01AC44219D25732BDF796926BB6A7.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto7.umap'
+[2024.07.22-15.34.42:561][424]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_BuildArea_Auto7.umap is in the /Temp path, will not scan.
+[2024.07.22-15.34.42:747][424]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto7
+[2024.07.22-15.34.42:749][424]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_Auto7A34C2BAD4BC68259CC2A54AA70E1B94A.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto7.umap'
+[2024.07.22-15.34.42:756][424]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bedroom/BedroomLevel3_Auto7.umap is in the /Temp path, will not scan.
+[2024.07.22-15.34.42:857][424]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto7
+[2024.07.22-15.34.42:858][424]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_Auto70790C9934EC6E1C171A574ADB3549400.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto7.umap'
+[2024.07.22-15.34.42:863][424]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_Auto7.umap is in the /Temp path, will not scan.
+[2024.07.22-15.34.42:930][424]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto7
+[2024.07.22-15.34.42:931][424]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto7E8F3A98647E2864067D80D8EC258F6AE.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto7.umap'
+[2024.07.22-15.34.42:935][424]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto7.umap is in the /Temp path, will not scan.
+[2024.07.22-15.34.42:935][424]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 1.520
+[2024.07.22-15.34.42:936][424]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 1.520
+[2024.07.22-15.34.50:643][448]LightingResults: Warning: Sketchfab_2020_09_30_00_37_22 Object has overlapping UVs.
+[2024.07.22-15.34.50:643][448]LightingResults: Sketchfab_2020_09_30_00_37_22 Lightmap UV are overlapping by 1.7%. Please adjust content - Enable Error Coloring to visualize.
+[2024.07.22-15.35.00:569][478]Job is a success!
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.294s
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:      Indirection Texture 64x64x112 = 1.8Mb
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:      BrickData (all levels) 7.6Mb (trimmed 30.5Mb due to 0.010000 MinBrickError)
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:      Bricks at depth
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:          0: 5.7% covering 100.0% of volume
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:          1: 43.2% covering 11.9% of volume
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:          2: 51.1% covering 0.2% of volume
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:      Bricks in each level
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:          Lvl_Combined 			 968 bricks 	 48.9% (Persistent Level)
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:          BedroomLevel3 			 860 bricks 	 43.4%
+[2024.07.22-15.35.01:459][479]LogVolumetricLightmapImport:          KitchenLevel_Props 			 152 bricks 	 7.7%
+[2024.07.22-15.35.02:735][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_1 (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1173.395816 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.02:883][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_1 (TFO_DXT1, 4096x4096 x1x1x1) (Required Memory Estimate: 1141.395815 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.02:988][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_2 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:002][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_1_2 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:017][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_3 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:025][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_4 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:032][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_5 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:062][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_5 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:083][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_6 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:090][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_7 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:101][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_7 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:109][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_8 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:118][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_8 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:126][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_9 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:136][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_9 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:146][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap1_10 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:160][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_1_10 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:172][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_11 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:180][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_11 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:186][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_12 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:193][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_12 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:199][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_13 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:204][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_14 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:210][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_14 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:216][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_15 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:221][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap1_16 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:227][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_17 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:247][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_17 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:265][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_18 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:276][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_19 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:284][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_19 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:291][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_20 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:315][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_20 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:333][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap1_21 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:359][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:LQ_Lightmap_1_21 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:379][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_22 (TFO_AutoDXT, 512x512 x1x1x1) (Required Memory Estimate: 45.479156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:387][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:LQ_Lightmap_0_22 (TFO_DXT1, 512x512 x1x1x1) (Required Memory Estimate: 30.229082 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:392][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap1_23 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:395][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap1_24 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:399][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap1_26 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:400][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_27 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:404][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_31 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:405][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_32 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:408][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData:HQ_Lightmap0_33 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:411][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_34 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:423][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_34 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:430][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:HQ_Lightmap0_40 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:449][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData:LQ_Lightmap_0_40 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:469][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap1_45 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:476][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_1_45 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:482][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:HQ_Lightmap0_46 (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 102.979156 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:504][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:LQ_Lightmap_0_46 (TFO_DXT1, 1024x1024 x1x1x1) (Required Memory Estimate: 115.979155 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:523][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_47 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:527][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_47 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:532][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_48 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:536][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_48 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:541][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:HQ_Lightmap0_50 (TFO_AutoDXT, 256x256 x1x1x1) (Required Memory Estimate: 10.479041 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:550][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:LQ_Lightmap_0_50 (TFO_DXT1, 256x256 x1x1x1) (Required Memory Estimate: 7.604136 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:553][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_51 (TFO_AutoDXT, 128x128 x1x1x1) (Required Memory Estimate: 2.666627 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.03:555][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:HQ_Lightmap0_52 (TFO_AutoDXT, 64x64 x1x1x1) (Required Memory Estimate: 0.713502 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:260][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:ShadowMapTexture2D_17 (BGRA8, 1024x256 x1x1x1) (Required Memory Estimate: 8.0625 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:262][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_27 (BGRA8, 1024x256 x1x1x1) (Required Memory Estimate: 8.0625 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:269][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_28 (BGRA8, 512x256 x1x1x1) (Required Memory Estimate: 4.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:273][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:ShadowMapTexture2D_19 (BGRA8, 512x256 x1x1x1) (Required Memory Estimate: 4.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:281][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_29 (G8, 512x128 x1x1x1) (Required Memory Estimate: 1.562496 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:284][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_30 (G8, 512x128 x1x1x1) (Required Memory Estimate: 1.562496 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:286][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_31 (BGRA8, 256x128 x1x1x1) (Required Memory Estimate: 1.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:294][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:ShadowMapTexture2D_20 (BGRA8, 256x128 x1x1x1) (Required Memory Estimate: 1.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:297][479]LogTexture: Display: Building textures: /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData:ShadowMapTexture2D_8 (BGRA8, 1024x512 x1x1x1) (Required Memory Estimate: 16.062489 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:311][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_32 (BGRA8, 512x64 x1x1x1) (Required Memory Estimate: 1.062504 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:313][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_33 (G8, 512x64 x1x1x1) (Required Memory Estimate: 0.812493 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:315][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:ShadowMapTexture2D_22 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 0.187492 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:315][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData:ShadowMapTexture2D_23 (BGRA8, 128x64 x1x1x1) (Required Memory Estimate: 0.312489 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:321][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_34 (BGRA8, 512x64 x1x1x1) (Required Memory Estimate: 1.062504 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:323][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_36 (BGRA8, 512x64 x1x1x1) (Required Memory Estimate: 1.062504 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:324][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_37 (BGRA8, 128x64 x1x1x1) (Required Memory Estimate: 0.312489 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:325][479]LogTexture: Display: Building textures: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData:ShadowMapTexture2D_38 (G8, 64x64 x1x1x1) (Required Memory Estimate: 0.156244 MB), EncodeSpeed: Fast
+[2024.07.22-15.35.04:351][479]Lightmass on ROSE: 2:14 min total, 432 ms importing, 235 ms setup, 1:06 min photons, 1:08 min processing, 0 us extra exporting [668/668 mappings]. Threads: 12:30 min total, 3:07 min processing.
+[2024.07.22-15.35.04:386][479]LogStaticLightingSystem: Lvl_Combined_BuiltData storing lightmap data for 109 meshes in 12 LightmapResourceClusters (9.1 Meshes per cluster).
+[2024.07.22-15.35.04:386][479]LogStaticLightingSystem: Bathroom_BuiltData storing lightmap data for 108 meshes in 15 LightmapResourceClusters (7.2 Meshes per cluster).
+[2024.07.22-15.35.04:386][479]LogStaticLightingSystem: Lvl_BuildArea_BuiltData storing lightmap data for 99 meshes in 22 LightmapResourceClusters (4.5 Meshes per cluster).
+[2024.07.22-15.35.04:386][479]LogStaticLightingSystem: KitchenLevel_Props_BuiltData storing lightmap data for 57 meshes in 23 LightmapResourceClusters (2.5 Meshes per cluster).
+[2024.07.22-15.35.04:386][479]LogStaticLightingSystem: BedroomLevel3_BuiltData storing lightmap data for 295 meshes in 26 LightmapResourceClusters (11.3 Meshes per cluster).
+[2024.07.22-15.35.04:494][479]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.07.22-15.35.04:521][479]LogStaticLightingSystem: Illumination: 2:20 min (1.52 sec encoding lightmaps, 766 ms encoding shadowmaps)
+[2024.07.22-15.35.04:521][479]LogStaticLightingSystem: Lightmap texture memory:  60.3 MB (60.3 MB streaming, 0.0 MB non-streaming), 122 textures
+[2024.07.22-15.35.04:521][479]LogStaticLightingSystem: Shadowmap texture memory: 16.0 MB (16.0 MB streaming, 0.0 MB non-streaming), 35 textures
+[2024.07.22-15.35.04:777][479]DumpUnbuiltLightIteractions
+[2024.07.22-15.35.04:777][479]Lights with unbuilt interactions: 0
+[2024.07.22-15.35.04:777][479]
+[2024.07.22-15.35.04:777][479]Primitives with unbuilt interactions: 0
+[2024.07.22-15.35.05:059][480]Cmd: MAP CHECK NOTIFYRESULTS
+[2024.07.22-15.35.05:059][480]MapCheck: New page: Lvl_Combined - 22 Jul 2024, 17:35:05
+[2024.07.22-15.35.05:061][480]MapCheck: Warning: StaticMeshActor_11 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-15.35.05:063][480]MapCheck: Warning: BP_CubeCore_C_1 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-15.35.05:063][480]MapCheck: Warning: BP_CubeCore_C_1 Static mesh actor has NULL StaticMesh property 
+[2024.07.22-15.35.05:064][480]MapCheck: Warning: StaticMeshActor_44 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:066][480]MapCheck: Warning: BP_BuyableAttachment_C_3 More overridden materials (7) on static mesh component than are referenced (6) in source mesh 'grapplehead' 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_48 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_50 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_42 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_43 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_45 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_47 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_51 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_53 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_130 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_131 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_160 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_164 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:067][480]MapCheck: Warning: StaticMeshActor_180 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:068][480]MapCheck: Warning: StaticMeshActor_183 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:068][480]MapCheck: Warning: StaticMeshActor_193 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:068][480]MapCheck: Warning: StaticMeshActor_6 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:069][480]MapCheck: Warning: StaticMeshActor_229 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:069][480]MapCheck: Warning: StaticMeshActor_56 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:069][480]MapCheck: Warning: StaticMeshActor_324 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:069][480]MapCheck: Warning: StaticMeshActor_328 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:069][480]MapCheck: Warning: StaticMeshActor_329 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:072][480]MapCheck: Warning: StaticMeshActor_48 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2024.07.22-15.35.05:072][480]MapCheck: Map check complete: 0 Error(s), 27 Warning(s), took 13.332ms to complete.
+[2024.07.22-15.35.28:552][717]LogSlate: Window 'Message Log' being destroyed
+[2024.07.22-15.35.28:561][717]LogSlate: Window 'Message Log' being destroyed
+[2024.07.22-15.37.47:345][641]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2024.07.22-15.37.47:995][641]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto8
+[2024.07.22-15.37.47:996][641]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto8021758D64DE6268D7A42679513D08E63.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto8.umap'
+[2024.07.22-15.37.48:001][641]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto8.umap is in the /Temp path, will not scan.
+[2024.07.22-15.37.48:004][641]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.666
+[2024.07.22-15.37.48:004][641]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.666
+[2024.07.22-15.41.11:356][974]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2024.07.22-15.41.11:402][974]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto9
+[2024.07.22-15.41.11:403][974]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto92D7355B4482F15C3D174B5B6CF744923.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto9.umap'
+[2024.07.22-15.41.11:406][974]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Levels/Bathroomj/Bathroom_Auto9.umap is in the /Temp path, will not scan.
+[2024.07.22-15.41.11:406][974]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.056
+[2024.07.22-15.41.11:406][974]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.056
+[2024.07.22-15.41.11:407][974]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Bathroom] ([1] browsable assets)...
+[2024.07.22-15.41.11:407][974]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Bathroom]
+[2024.07.22-15.41.11:407][974]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bathroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bathroom_Auto9.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-15.41.11:414][974]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Bathroom_Auto9
+[2024.07.22-15.41.11:414][974]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_Auto95C716BDD48754DB83AA1BDA148BDCB2B.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bathroom_Auto9.uasset'
+[2024.07.22-15.41.11:415][974]LogFileHelpers: Auto-saving content packages took 0.008
+[2024.07.22-15.44.29:553][106]Cmd: SELECT NONE
+[2024.07.22-15.45.06:543][117]Cmd: SELECT NONE
+[2024.07.22-15.45.07:897][180]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.45.07:931][180]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-15.45.07:964][180]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2024.07.22-15.45.08:575][180]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.22-15.45.08:575][180]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined380465944BDA2DE9EB6558B9560DB9F6.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.22-15.45.08:697][180]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.45.08:699][180]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_Combined_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined_BuiltData.uasset" SILENT=true
+[2024.07.22-15.45.08:738][180]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined_BuiltData
+[2024.07.22-15.45.08:739][180]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_BuiltData95C9729745F2C36D8CCA1C9A75924C7E.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_Combined_BuiltData.uasset'
+[2024.07.22-15.45.08:741][180]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 9.46 sec)
+[2024.07.22-15.45.08:828][180]LogFileHelpers: Saving map 'Lvl_Combined' took 0.899
+[2024.07.22-15.45.08:833][180]LogFileHelpers: InternalPromptForCheckoutAndSave took 935 ms (total: 10.3 sec)
+[2024.07.22-15.45.08:843][180]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-15.45.08:844][180]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.22-15.45.08:844][180]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Lvl_Combined_BuiltData.Lvl_Combined_BuiltData
+[2024.07.22-15.45.08:931][182]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.07.22-15.45.09:008][182]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2024.07.22-15.45.09:126][182]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.07.22-15.45.09:267][182]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.45.09:302][182]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2024.07.22-15.45.09:339][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom
+[2024.07.22-15.45.09:340][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom9C1506024D7CB956A4022AA3F1654B1B.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom.umap'
+[2024.07.22-15.45.09:441][182]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.45.09:466][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData
+[2024.07.22-15.45.09:466][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_BuiltData77D22A1240FC13ED7980AD883E5ABD4A.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom_BuiltData.uasset'
+[2024.07.22-15.45.09:468][182]LogFileHelpers: InternalPromptForCheckoutAndSave took 26 ms (total: 10.4 sec)
+[2024.07.22-15.45.09:558][182]LogFileHelpers: Saving map 'Bathroom' took 0.262
+[2024.07.22-15.45.09:559][182]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.07.22-15.45.09:563][182]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2024.07.22-15.45.09:614][182]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea
+[2024.07.22-15.45.09:614][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildAreaD7B6BD3C4C6C527277876EAA02183FDA.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea.umap'
+[2024.07.22-15.45.09:709][182]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.45.09:710][182]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset" SILENT=true
+[2024.07.22-15.45.09:761][182]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea_BuiltData
+[2024.07.22-15.45.09:762][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_BuiltData329327CD46C84380B8649DA52B2BAE90.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset'
+[2024.07.22-15.45.09:763][182]LogFileHelpers: InternalPromptForCheckoutAndSave took 54 ms (total: 10.4 sec)
+[2024.07.22-15.45.09:850][182]LogFileHelpers: Saving map 'Lvl_BuildArea' took 0.292
+[2024.07.22-15.45.09:856][182]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.07.22-15.45.09:917][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props
+[2024.07.22-15.45.09:918][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props8868EC6146D7C10A45EBE89E9F420CA1.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.umap'
+[2024.07.22-15.45.10:037][182]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.45.10:113][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData
+[2024.07.22-15.45.10:114][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_BuiltData01846402496FF60B2A218B81C8BC5EE3.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.uasset'
+[2024.07.22-15.45.10:116][182]LogFileHelpers: InternalPromptForCheckoutAndSave took 79 ms (total: 10.5 sec)
+[2024.07.22-15.45.10:209][182]LogFileHelpers: Saving map 'KitchenLevel_Props' took 0.359
+[2024.07.22-15.45.10:215][182]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2024.07.22-15.45.10:321][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3
+[2024.07.22-15.45.10:322][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel36BA026A34E121BF0DC1B0E92649DA937.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3.umap'
+[2024.07.22-15.45.10:417][182]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-15.45.10:691][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData
+[2024.07.22-15.45.10:692][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_BuiltDataC30844844AF755ECC42061ADC6BB175F.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.uasset'
+[2024.07.22-15.45.10:695][182]LogFileHelpers: InternalPromptForCheckoutAndSave took 277 ms (total: 10.8 sec)
+[2024.07.22-15.45.10:780][182]LogFileHelpers: Saving map 'BedroomLevel3' took 0.571
+[2024.07.22-15.45.10:803][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData
+[2024.07.22-15.45.10:804][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bathroom_BuiltDataAFB164B64E648F9C0A7B51972E9AFD41.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bathroomj/Bathroom_BuiltData.uasset'
+[2024.07.22-15.45.10:805][182]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lvl_BuildArea_BuiltData" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset" SILENT=true
+[2024.07.22-15.45.10:849][182]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_BuildArea_BuiltData
+[2024.07.22-15.45.10:850][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_BuildArea_BuiltData5977B6F24994CAEF02DF74876325C4C1.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Lvl_BuildArea_BuiltData.uasset'
+[2024.07.22-15.45.10:916][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData
+[2024.07.22-15.45.10:917][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/KitchenLevel_Props_BuiltDataD38DE8904FB8749AE8AB99A1998AA514.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.uasset'
+[2024.07.22-15.45.11:177][182]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData
+[2024.07.22-15.45.11:177][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BedroomLevel3_BuiltData4830590348FDEB9AA1531F9A533DFC7F.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.uasset'
+[2024.07.22-15.45.11:180][182]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bathroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/Movies/Bathroom.uasset" SILENT=true
+[2024.07.22-15.45.11:186][182]LogSavePackage: Moving output files for package: /Game/Movies/Bathroom
+[2024.07.22-15.45.11:187][182]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/BathroomA692BD564DAD92613833A5A52019E73E.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/Movies/Bathroom.uasset'
+[2024.07.22-15.45.11:195][182]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.92 sec (total: 12.7 sec)
+[2024.07.22-15.45.11:201][182]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bathroomj/Bathroom.Bathroom
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Bathroomj/Bathroom_BuiltData.Bathroom_BuiltData
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_BuildArea.Lvl_BuildArea
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Lvl_BuildArea_BuiltData.Lvl_BuildArea_BuiltData
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.KitchenLevel_Props
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props_BuiltData.KitchenLevel_Props_BuiltData
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Bedroom/BedroomLevel3.BedroomLevel3
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/Engine.MapBuildDataRegistry /Game/Levels/Levels/Bedroom/BedroomLevel3_BuiltData.BedroomLevel3_BuiltData
+[2024.07.22-15.45.11:201][182]LogContentValidation: Display: Validating /Script/LevelSequence.LevelSequence /Game/Movies/Bathroom.Bathroom
+[2024.07.22-15.45.19:885][803]LogViewport: Scene viewport resized to 1885x867, mode Windowed.
+[2024.07.22-15.45.20:367][828]LogViewport: Scene viewport resized to 1902x948, mode Windowed.
+[2024.07.22-15.45.20:405][829]LogViewport: Scene viewport resized to 1914x1005, mode Windowed.
+[2024.07.22-15.45.20:465][830]LogViewport: Scene viewport resized to 1920x1032, mode Windowed.
+[2024.07.22-15.45.21:077][859]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
