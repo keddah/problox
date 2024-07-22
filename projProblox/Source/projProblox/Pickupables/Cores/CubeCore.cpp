@@ -227,7 +227,7 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	{
 		if(obj->IsA<ABalloon>())
 		{
-			// Since this gets called whilst still in the level you're changing from
+			// Using != since this gets called whilst still in the level you're changing from
 			obj->GetMesh()->SetSimulatePhysics(currentMode != EGameMode::Story);
 			
 			// Since balloons aren't actually attached to the core....
