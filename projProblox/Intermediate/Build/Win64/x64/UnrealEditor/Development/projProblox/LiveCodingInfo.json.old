@@ -45,13 +45,11 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
-			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
-			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
@@ -77,6 +75,8 @@
 			"SettingsSave.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
+			"CellSpawner.cpp.obj",
+			"Balloon.cpp.obj",
 			"CubeCore.cpp.obj"
 		]
 	}

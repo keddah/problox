@@ -57,7 +57,6 @@ void ABalloon::Ability(float deltaTime)
 {
 	if(!mesh)
 	{
-		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
 	}
 	

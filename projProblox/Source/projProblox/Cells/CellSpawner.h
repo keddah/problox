@@ -158,7 +158,7 @@ public:
 	void SpawnWithForce();
 
 	UFUNCTION()
-	void IncreaseCollectedAmount(AActor* DestroyedActor) { collectedCount++; Print("Collected", 4) }
+	void IncreaseCollectedAmount(AActor* DestroyedActor) { collectedCount++; }
 
 
 	/////////// DELEGATES ///////////

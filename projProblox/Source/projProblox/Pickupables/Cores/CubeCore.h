@@ -233,8 +233,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool InAdjustPhase() const
 	{
+		if(!wrld) return false;
+		if(!instance) return false;
+		
 		// When this timer is active, it means that the game is simulating
-		return !wrld->GetTimerManager().IsTimerActive(resetTimer);
+		return instance->GetCurrentLevel() != 1 && !wrld->GetTimerManager().IsTimerActive(resetTimer);
 	}
 
 
