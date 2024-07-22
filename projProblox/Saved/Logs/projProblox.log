@@ -8216,3 +8216,14 @@ Script Stack (0 frames) :
 [2024.07.22-10.22.02:701][679]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.54 sec (total: 2.09 sec)
 [2024.07.22-10.22.02:725][679]AssetCheck: New page: Asset Save: Lvl_Combined
 [2024.07.22-10.22.02:725][679]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.22-10.23.02:259][762]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2024.07.22-10.23.27:436][789]LogUObjectHash: Compacting FUObjectHashTables data took   2.41ms
+[2024.07.22-10.23.27:730][789]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.22-10.23.27:803][789]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2024.07.22-10.23.27:922][789]LogSavePackage: Moving output files for package: /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props
+[2024.07.22-10.23.27:923][789]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/KitchenLevel_Props68A7EA4E434440E639877C884927B11B.tmp' to '../../../../../../Uni/problox/projProblox/Content/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.umap'
+[2024.07.22-10.23.27:930][789]LogFileHelpers: All files are already saved.
+[2024.07.22-10.23.27:930][789]LogFileHelpers: Saving map 'KitchenLevel_Props' took 0.145
+[2024.07.22-10.23.27:971][789]LogFileHelpers: InternalPromptForCheckoutAndSave took 241 ms (total: 2.33 sec)
+[2024.07.22-10.23.27:980][789]AssetCheck: New page: Asset Save: KitchenLevel_Props
+[2024.07.22-10.23.27:980][789]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.KitchenLevel_Props
