@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projProbloxModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6a830e76dc23e694f2a8d14ba3a76bc93ab444e")]
 [assembly: System.Reflection.AssemblyProductAttribute("projProbloxModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projProbloxModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

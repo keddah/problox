@@ -45,7 +45,6 @@
 			"WedgeSocketInfo.gen.cpp.obj",
 			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
-			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
@@ -73,11 +72,12 @@
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SettingsSave.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"CellSpawner.cpp.obj"
 		]
 	}
 }
