@@ -2561,3 +2561,168 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2024.07.22-15.45.20:405][829]LogViewport: Scene viewport resized to 1914x1005, mode Windowed.
 [2024.07.22-15.45.20:465][830]LogViewport: Scene viewport resized to 1920x1032, mode Windowed.
 [2024.07.22-15.45.21:077][859]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-15.52.33:427][745]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-15.52.35:602][862]LogViewport: Scene viewport resized to 1902x970, mode WindowedFullscreen.
+[2024.07.22-15.52.35:638][863]LogViewport: Scene viewport resized to 1893x912, mode WindowedFullscreen.
+[2024.07.22-15.52.35:753][864]LogViewport: Scene viewport resized to 1885x867, mode WindowedFullscreen.
+[2024.07.22-15.52.35:852][866]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-15.52.44:629][ 68]LogSlate: Window 'Save Asset As' being destroyed
+[2024.07.22-15.52.44:738][ 68]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/Kitchen.Kitchen
+[2024.07.22-15.52.44:738][ 68]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/Kitchen.Kitchen
+[2024.07.22-15.52.44:741][ 68]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/Kitchen.Kitchen as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_2
+[2024.07.22-15.52.44:742][ 68]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/Kitchen.Kitchen as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_2
+[2024.07.22-15.52.44:763][ 68]LogAssetEditorSubsystem: Opening Asset editor for LevelSequence /Game/Movies/Kitchen.Kitchen
+[2024.07.22-15.52.44:792][ 68]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-15.52.48:120][209]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.07.22-15.52.48:716][209]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto0
+[2024.07.22-15.52.48:716][209]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto053C194174128DA0C90875DA3BD0032B3.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto0.umap'
+[2024.07.22-15.52.48:719][209]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto0.umap is in the /Temp path, will not scan.
+[2024.07.22-15.52.48:721][209]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.609
+[2024.07.22-15.52.48:721][209]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.609
+[2024.07.22-15.52.48:721][209]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Kitchen] ([1] browsable assets)...
+[2024.07.22-15.52.48:721][209]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Kitchen]
+[2024.07.22-15.52.48:721][209]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Kitchen" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto0.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-15.52.48:722][209]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Kitchen_Auto0
+[2024.07.22-15.52.48:722][209]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Kitchen_Auto000C5A0DA43DBDC8BDE3DC094E9ADFF55.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto0.uasset'
+[2024.07.22-15.52.48:723][209]LogFileHelpers: Auto-saving content packages took 0.002
+[2024.07.22-15.53.15:219][913]LogAssetEditorSubsystem: Opening Asset editor for LevelSequence /Game/Movies/Bathroom.Bathroom
+[2024.07.22-15.53.15:402][913]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-15.53.19:289][178]LogAssetEditorSubsystem: Opening Asset editor for LevelSequence /Game/Movies/Kitchen.Kitchen
+[2024.07.22-15.53.19:388][178]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-15.58.46:626][118]LogViewport: Scene viewport resized to 1909x1037, mode WindowedFullscreen.
+[2024.07.22-15.58.46:721][119]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-16.00.24:224][644]LogViewport: Scene viewport resized to 1901x998, mode WindowedFullscreen.
+[2024.07.22-16.00.24:269][645]LogViewport: Scene viewport resized to 1886x941, mode WindowedFullscreen.
+[2024.07.22-16.00.24:399][646]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-16.00.28:918][797]LogSlate: Window 'Save Asset As' being destroyed
+[2024.07.22-16.00.29:024][797]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/Bedroom.Bedroom
+[2024.07.22-16.00.29:024][797]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/Bedroom.Bedroom
+[2024.07.22-16.00.29:027][797]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/Bedroom.Bedroom as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_3
+[2024.07.22-16.00.29:028][797]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/Bedroom.Bedroom as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_3
+[2024.07.22-16.00.29:051][797]LogAssetEditorSubsystem: Opening Asset editor for LevelSequence /Game/Movies/Bedroom.Bedroom
+[2024.07.22-16.00.29:194][797]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-16.00.32:550][916]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.07.22-16.00.33:150][916]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto1
+[2024.07.22-16.00.33:150][916]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto1A3D54E514105360A649B1FA9AE37F159.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto1.umap'
+[2024.07.22-16.00.33:153][916]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto1.umap is in the /Temp path, will not scan.
+[2024.07.22-16.00.33:155][916]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.620
+[2024.07.22-16.00.33:155][916]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.620
+[2024.07.22-16.00.33:155][916]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Kitchen] ([1] browsable assets)...
+[2024.07.22-16.00.33:155][916]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Kitchen]
+[2024.07.22-16.00.33:155][916]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Kitchen" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.00.33:160][916]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Kitchen_Auto1
+[2024.07.22-16.00.33:160][916]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Kitchen_Auto1E9194516471E60AABE6C4AB2FDA43D9C.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto1.uasset'
+[2024.07.22-16.00.33:161][916]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Bedroom] ([1] browsable assets)...
+[2024.07.22-16.00.33:161][916]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Bedroom]
+[2024.07.22-16.00.33:161][916]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bedroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.00.33:162][916]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Bedroom_Auto1
+[2024.07.22-16.00.33:162][916]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bedroom_Auto11320596F43B9C95AFD574BB7BE6B9C91.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto1.uasset'
+[2024.07.22-16.00.33:163][916]LogFileHelpers: Auto-saving content packages took 0.008
+[2024.07.22-16.00.42:725][142]Cmd: TRANSACTION UNDO
+[2024.07.22-16.00.42:725][142]LogEditorTransaction: Undo Animatable Property Changed
+[2024.07.22-16.01.13:880][960]LogViewport: Scene viewport resized to 1901x1002, mode WindowedFullscreen.
+[2024.07.22-16.01.13:925][961]LogViewport: Scene viewport resized to 1915x1062, mode WindowedFullscreen.
+[2024.07.22-16.01.14:008][962]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-16.01.14:620][985]LogViewport: Scene viewport resized to 1920x1032, mode Windowed.
+[2024.07.22-16.01.14:915][995]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-16.04.35:776][636]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.07.22-16.04.36:393][636]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto2
+[2024.07.22-16.04.36:394][636]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto2BC1A4C3D4CBA0DABD9AE9290AEC81A45.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto2.umap'
+[2024.07.22-16.04.36:398][636]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto2.umap is in the /Temp path, will not scan.
+[2024.07.22-16.04.36:400][636]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.632
+[2024.07.22-16.04.36:401][636]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.632
+[2024.07.22-16.04.36:401][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Kitchen] ([1] browsable assets)...
+[2024.07.22-16.04.36:401][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Kitchen]
+[2024.07.22-16.04.36:401][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Kitchen" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.04.36:406][636]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Kitchen_Auto2
+[2024.07.22-16.04.36:406][636]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Kitchen_Auto218FC84F94CBE5C6B98ABC696FF18B3FF.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto2.uasset'
+[2024.07.22-16.04.36:407][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Bedroom] ([1] browsable assets)...
+[2024.07.22-16.04.36:407][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Bedroom]
+[2024.07.22-16.04.36:407][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bedroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.04.36:412][636]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Bedroom_Auto2
+[2024.07.22-16.04.36:412][636]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bedroom_Auto26F99406E456F0C43113E2E82315C17CA.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto2.uasset'
+[2024.07.22-16.04.36:413][636]LogFileHelpers: Auto-saving content packages took 0.013
+[2024.07.22-16.06.21:776][856]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.21:776][856]LogEditorTransaction: Undo Move Keys or Sections
+[2024.07.22-16.06.31:962][481]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.31:962][481]LogEditorTransaction: Undo Select Actors/Components
+[2024.07.22-16.06.32:376][482]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.32:376][482]LogEditorTransaction: Undo Move Keys or Sections
+[2024.07.22-16.06.32:623][482]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.32:623][482]LogEditorTransaction: Undo Set Playback Range
+[2024.07.22-16.06.34:249][548]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.34:249][548]LogEditorTransaction: Undo Select Actors/Components
+[2024.07.22-16.06.35:325][613]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.35:325][613]LogEditorTransaction: Undo Resize section
+[2024.07.22-16.06.36:325][673]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.36:325][673]LogEditorTransaction: Undo Select None
+[2024.07.22-16.06.36:931][694]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.36:931][694]LogEditorTransaction: Undo Select Actors/Components
+[2024.07.22-16.06.37:426][725]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.37:426][725]LogEditorTransaction: Undo Add Keys at Current Time
+[2024.07.22-16.06.38:012][761]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.38:012][761]LogEditorTransaction: Undo Select None
+[2024.07.22-16.06.38:525][762]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.38:525][762]LogEditorTransaction: Undo Move Keys or Sections
+[2024.07.22-16.06.38:935][768]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.38:935][768]LogEditorTransaction: Undo Stretch
+[2024.07.22-16.06.39:557][790]Cmd: TRANSACTION UNDO
+[2024.07.22-16.06.39:557][790]LogEditorTransaction: Undo Select Actors/Components
+[2024.07.22-16.08.23:921][143]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2024.07.22-16.08.24:529][143]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto3
+[2024.07.22-16.08.24:530][143]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto380000A7542713EC3529870945AFBC1B6.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto3.umap'
+[2024.07.22-16.08.24:533][143]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto3.umap is in the /Temp path, will not scan.
+[2024.07.22-16.08.24:535][143]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.634
+[2024.07.22-16.08.24:535][143]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.634
+[2024.07.22-16.08.24:535][143]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Kitchen] ([1] browsable assets)...
+[2024.07.22-16.08.24:535][143]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Kitchen]
+[2024.07.22-16.08.24:535][143]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Kitchen" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto3.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.08.24:541][143]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Kitchen_Auto3
+[2024.07.22-16.08.24:541][143]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Kitchen_Auto3ADBD8C6B4AA4B464AF82F1B9A83BEC30.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto3.uasset'
+[2024.07.22-16.08.24:542][143]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Bedroom] ([1] browsable assets)...
+[2024.07.22-16.08.24:542][143]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Bedroom]
+[2024.07.22-16.08.24:542][143]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bedroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto3.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.08.24:546][143]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Bedroom_Auto3
+[2024.07.22-16.08.24:547][143]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bedroom_Auto3A6E4A3E64724212599B8F2B82C73E2F9.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto3.uasset'
+[2024.07.22-16.08.24:547][143]LogFileHelpers: Auto-saving content packages took 0.012
+[2024.07.22-16.08.35:394][704]LogViewport: Scene viewport resized to 1901x998, mode WindowedFullscreen.
+[2024.07.22-16.08.35:430][705]LogViewport: Scene viewport resized to 1889x952, mode WindowedFullscreen.
+[2024.07.22-16.08.35:507][706]LogViewport: Scene viewport resized to 1879x912, mode WindowedFullscreen.
+[2024.07.22-16.08.35:629][707]LogViewport: Scene viewport resized to 1879x909, mode WindowedFullscreen.
+[2024.07.22-16.08.41:001][950]LogSlate: Window 'Save Asset As' being destroyed
+[2024.07.22-16.08.41:131][950]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/bedroomv2.bedroomv2
+[2024.07.22-16.08.41:131][950]LogActorFactory: Actor Factory attempting to spawn LevelSequence /Game/Movies/bedroomv2.bedroomv2
+[2024.07.22-16.08.41:133][950]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/bedroomv2.bedroomv2 as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_4
+[2024.07.22-16.08.41:134][950]LogActorFactory: Actor Factory spawned LevelSequence /Game/Movies/bedroomv2.bedroomv2 as actor: LevelSequenceActor /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.LevelSequenceActor_4
+[2024.07.22-16.08.41:157][950]LogAssetEditorSubsystem: Opening Asset editor for LevelSequence /Game/Movies/bedroomv2.bedroomv2
+[2024.07.22-16.08.41:267][950]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-16.09.27:749][590]Cmd: TRANSACTION UNDO
+[2024.07.22-16.09.27:749][590]LogEditorTransaction: Undo Add Keys at Current Time
+[2024.07.22-16.18.14:946][667]LogViewport: Scene viewport resized to 1895x975, mode WindowedFullscreen.
+[2024.07.22-16.18.14:980][668]LogViewport: Scene viewport resized to 1910x1039, mode WindowedFullscreen.
+[2024.07.22-16.18.15:038][669]LogViewport: Scene viewport resized to 1920x1078, mode WindowedFullscreen.
+[2024.07.22-16.18.15:098][670]LogViewport: Scene viewport resized to 1920x1080, mode WindowedFullscreen.
+[2024.07.22-16.18.49:569][449]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-16.18.49:671][449]LogSlate: Window 'Sequencer' being destroyed
+[2024.07.22-16.19.07:470][728]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.07.22-16.19.08:067][728]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Lvl_Combined_Auto4
+[2024.07.22-16.19.08:067][728]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Lvl_Combined_Auto42B46DA3843BA641015BC6FBC2F44CA27.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto4.umap'
+[2024.07.22-16.19.08:070][728]LogAssetRegistry: Warning: ScanPathsSynchronous: ../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Levels/Lvl_Combined_Auto4.umap is in the /Temp path, will not scan.
+[2024.07.22-16.19.08:071][728]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.622
+[2024.07.22-16.19.08:071][728]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.622
+[2024.07.22-16.19.08:072][728]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Kitchen] ([1] browsable assets)...
+[2024.07.22-16.19.08:072][728]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Kitchen]
+[2024.07.22-16.19.08:072][728]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Kitchen" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto4.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.19.08:077][728]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Kitchen_Auto4
+[2024.07.22-16.19.08:077][728]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Kitchen_Auto42E2F4DB843973DE65C124794EF9B01CC.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Kitchen_Auto4.uasset'
+[2024.07.22-16.19.08:077][728]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/Bedroom] ([1] browsable assets)...
+[2024.07.22-16.19.08:077][728]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/Bedroom]
+[2024.07.22-16.19.08:077][728]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/Bedroom" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto4.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.19.08:082][728]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/Bedroom_Auto4
+[2024.07.22-16.19.08:082][728]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Bedroom_Auto4887ADCF44B663C74A676A1B99AA5D696.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/Bedroom_Auto4.uasset'
+[2024.07.22-16.19.08:083][728]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Movies/bedroomv2] ([1] browsable assets)...
+[2024.07.22-16.19.08:083][728]OBJ SavePackage: Finished generating thumbnails for package [/Game/Movies/bedroomv2]
+[2024.07.22-16.19.08:083][728]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Movies/bedroomv2" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/bedroomv2_Auto4.uasset" SILENT=false AUTOSAVING=true
+[2024.07.22-16.19.08:088][728]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Movies/bedroomv2_Auto4
+[2024.07.22-16.19.08:088][728]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/bedroomv2_Auto4FE70427B4FD710D7313721AB6737EDF7.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/Movies/bedroomv2_Auto4.uasset'
+[2024.07.22-16.19.08:088][728]LogFileHelpers: Auto-saving content packages took 0.017
