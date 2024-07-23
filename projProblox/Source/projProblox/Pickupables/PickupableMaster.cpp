@@ -109,7 +109,7 @@ APickupableMaster::APickupableMaster()
 	mouseDetector = CreateDefaultSubobject<UBoxComponent>(TEXT("Mouse Detector"));
 	mouseDetector->AttachToComponent(mesh, FAttachmentTransformRules::KeepRelativeTransform);
 	mouseDetector->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	mouseDetector->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
+	mouseDetector->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
 	mouseDetector->AddRelativeLocation({0,0,50});
 	mouseDetector->SetUseCCD(true);
 	
