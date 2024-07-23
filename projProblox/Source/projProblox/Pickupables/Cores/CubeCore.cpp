@@ -13,15 +13,10 @@
 
 #include "CubeCore.h"
 
-#include "Connectors/CuboidConnector.h"
 #include "./projProblox/Cells/Cell.h"
-#include "Connectors/WedgeConnector.h"
 #include "Kismet/GameplayStatics.h"
-#include "projProblox/SaveFiles.h"
 #include "projProblox/GameModes/Modes.h"
 #include "projProblox/Pickupables/Balloon.h"
-#include "projProblox/Pickupables/BounceSpring.h"
-#include "projProblox/Pickupables/Piston.h"
 
 
 ACubeCore::ACubeCore()
@@ -34,6 +29,12 @@ ACubeCore::ACubeCore()
 	cellCollector = CreateDefaultSubobject<UBoxComponent>("Smaller Collider");
 	cellCollector->SetupAttachment(mesh);
 
+	camArm = CreateDefaultSubobject<USpringArmComponent>("Cam Boom");
+	camArm->SetupAttachment(mesh);
+	
+	coreCam = CreateDefaultSubobject<UCameraComponent>("Core Camera");
+	coreCam->SetupAttachment(camArm);
+	
 	mouseDetector->SetBoxExtent({});
 	
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_collect.MS_collect'"));
@@ -298,6 +299,32 @@ void ACubeCore::EndTurn(const bool force)
 	}
 }
 
+
+void ACubeCore::CoreCamera(const float deltaTime)
+{
+	if(!IsValid(camArm)) return;
+
+	// If the camera is facing directly up... swap to an actual camera
+	if(coreCam->GetForwardVector().Equals({0,0,1}, .3f))
+	{
+		onBadCamera.Broadcast();
+		return;
+	}
+	
+	const FVector currentPos = camArm->GetRelativeLocation();
+	const FVector target = {-200, 0, 130};
+	
+	// Interpolate X and Z positions
+	const float x = FMath::FInterpTo(currentPos.X, target.X, deltaTime, cameraDamping);
+	const float z = FMath::FInterpTo(currentPos.Z, target.Z, deltaTime, cameraDamping);
+
+	// Maintain the current Y position
+	const FVector newPos = {x, currentPos.Y, z};
+
+	// Update the Spring Arm location
+	camArm->SetRelativeLocation(newPos);
+	camArm->SetRelativeRotation(GetActorForwardVector().Rotation());
+}
 
 void ACubeCore::ResetRotation(bool resetVelocity)
 {

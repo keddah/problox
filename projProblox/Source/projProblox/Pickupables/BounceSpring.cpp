@@ -50,9 +50,7 @@ void ABounceSpring::Ability(float deltaTime)
 		return;
 	}
 	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
-	
-	if(!isAttached) return;
-	
+
 	if(!IsValid(wrld))
 	{
 		Print("Bad world ~ Spring", 5)
@@ -84,7 +82,7 @@ void ABounceSpring::Ability(float deltaTime)
 
 	// Lower the spring energy when the core is in the adjust phase.
 	const float springEnergy = GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass();
-	if(mesh->IsSimulatingPhysics()) mesh->AddForceAtLocation(springHit.ImpactNormal * (parentCore->InAdjustPhase()? springEnergy * .05f : springEnergy), springHit.Location);
+	if(mesh->IsSimulatingPhysics()) mesh->AddForceAtLocation(springHit.ImpactNormal * (parentCore->InAdjustPhase()? springEnergy * .04f : springEnergy), springHit.Location);
 
 	if(GetVelocity().Length() < 20) return;
 	if(!soundPlayer->IsPlaying()) soundPlayer->PlayAbility();

@@ -11,6 +11,8 @@
 
 #include "Glider.h"
 
+#include "Cores/CubeCore.h"
+
 
 AGlider::AGlider()
 {
@@ -37,4 +39,6 @@ void AGlider::Ability(const float deltaTime)
 	// 1000 is the mass of the core (The mass of the other attached objects will be considered... just not the core.)
 	mesh->AddForce(GetActorForwardVector() * glideSpeed * 1000);
 	mesh->AddForce(GetActorUpVector() * floatAmount * 1000);
+
+	if(IsValid(parentCore)) parentCore->GetMesh()->AddTorqueInRadians(parentCore->GetVelocity().GetSafeNormal() * 100000);
 }

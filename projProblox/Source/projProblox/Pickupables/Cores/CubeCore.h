@@ -27,12 +27,13 @@
 
 #include "CoreMinimal.h"
 #include "./projProblox/Collector.h"
+#include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "projProblox/CustomGameInstance.h"
-#include "projProblox/SaveFiles.h"
 #include "SocketInfo/CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnTurnStarted);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnBadCamera);
 
 // Should be broadcast whenever more cells are spawned in after the game has already started.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSpawnedCells);
@@ -84,7 +85,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
-	
 	/////////////// Components ///////////////
 	// A data asset that contains an array of things that are attached to each face of the cube.
 	UPROPERTY(VisibleAnywhere)
@@ -97,6 +97,11 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* cellHomer;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Camera")
+	UCameraComponent* coreCam;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Camera")
+	USpringArmComponent* camArm;
 	
 
 protected:
@@ -125,7 +130,7 @@ protected:
 	// The socket opposite to the attached socket (should always be blocked)
 	FName oppositeSocket;
 
-
+	
 private:
 	/////////////// Delegates ///////////////
 	UPROPERTY(BlueprintAssignable)
@@ -153,6 +158,9 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Forces|Drag", meta = (ToolTip = "The angular drag that the mesh should have at the end of a turn."))
 	float heavyAngularDrag = 1;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Camera", meta = (ToolTip = "Higher number = snappier."))
+	float cameraDamping = 3;
+
 	FVector lastSpawnPos;
 	
 	UFUNCTION(BlueprintCallable)
@@ -167,6 +175,11 @@ private:
 		wrld->GetTimerManager().ClearTimer(resetTimer);
 		resetTimer.Invalidate();
 	}
+
+	// In BP only run this if the view target is this core.
+	UFUNCTION(BlueprintCallable)
+	void CoreCamera(float deltaTime);
+
 	
 	/////////////// Rotations ///////////////
 	virtual void ResetRotation(bool resetVelocity) override;
@@ -245,8 +258,12 @@ public:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
 	FOnTurnStarted onTurnStarted;
 
+
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnReset onReset;
+	
+	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired if the core cam is facind directly upwards... meaning the camera is in the floor."))
+	FOnBadCamera onBadCamera;
 
 	UFUNCTION(BlueprintCallable)
 	void BroadcastNewCells() const { onCellsSpawned.Broadcast(); }

@@ -75,7 +75,8 @@ APickupableMaster::APickupableMaster()
 	mesh->SetSimulatePhysics(true);
 	mesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	mesh->SetGenerateOverlapEvents(true);
-
+	mesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
+	
 	outlineMesh = CreateDefaultSubobject<UStaticMeshComponent>("Outliner");
 	outlineMesh->SetupAttachment(mesh);
 	outlineMesh->SetRelativeLocation({});
