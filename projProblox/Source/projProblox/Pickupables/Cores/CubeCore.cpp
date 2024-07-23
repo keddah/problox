@@ -305,7 +305,7 @@ void ACubeCore::CoreCamera(const float deltaTime)
 	if(!IsValid(camArm)) return;
 
 	// If the camera is facing directly up... swap to an actual camera
-	if(coreCam->GetForwardVector().Equals({0,0,1}, .3f))
+	if(coreCam->GetForwardVector().Equals({0,0,1}, .125f))
 	{
 		onBadCamera.Broadcast();
 		return;
