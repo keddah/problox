@@ -249,8 +249,9 @@ public:
 		if(!wrld) return false;
 		if(!instance) return false;
 		
+		// If not in the build area and the timer isn't active
 		// When this timer is active, it means that the game is simulating
-		return instance->GetCurrentLevel() != 1 && !wrld->GetTimerManager().IsTimerActive(resetTimer);
+		return instance->GetCurrentLevel() != 0 && !wrld->GetTimerManager().IsTimerActive(resetTimer);
 	}
 
 
