@@ -303,11 +303,13 @@ void ACubeCore::EndTurn(const bool force)
 void ACubeCore::CoreCamera(const float deltaTime)
 {
 	if(!IsValid(camArm)) return;
+	if(!IsValid(coreCam)) return;
 
 	// If the camera is facing directly up... swap to an actual camera
 	if(coreCam->GetForwardVector().Equals({0,0,1}, .125f))
 	{
 		onBadCamera.Broadcast();
+		camArm->SetRelativeRotation({0,0,0,});
 		return;
 	}
 	
