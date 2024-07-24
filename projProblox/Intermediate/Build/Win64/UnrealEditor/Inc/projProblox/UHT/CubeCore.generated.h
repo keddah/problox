@@ -52,6 +52,7 @@ PROJPROBLOX_API void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate
 	DECLARE_FUNCTION(execDetachAll); \
 	DECLARE_FUNCTION(execCoreCamera); \
 	DECLARE_FUNCTION(execPlayCollectSound); \
+	DECLARE_FUNCTION(execBroadcastBadCam); \
 	DECLARE_FUNCTION(execAddMoney); \
 	DECLARE_FUNCTION(execStartStoryGame); \
 	DECLARE_FUNCTION(execStartGame); \

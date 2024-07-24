@@ -78,6 +78,10 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	UFUNCTION(BlueprintCallable)
 	void AddMoney(const int amount = 10) { if (instance) instance->AddMoney(amount); else Print("Instance was invalid", 4) }
 	UCustomGameInstance* instance;
+
+	UFUNCTION(BlueprintCallable)
+	void BroadcastBadCam() { onBadCamera.Broadcast(); }
+	
 	
 protected:
 	ACubeCore();
