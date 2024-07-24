@@ -274,6 +274,13 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		P_THIS->PlayCollectSound();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ACubeCore::execBroadcastBadCam)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->BroadcastBadCam();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACubeCore::execAddMoney)
 	{
 		P_GET_PROPERTY(FIntProperty,Z_Param_amount);
@@ -311,6 +318,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		UClass* Class = ACubeCore::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddMoney", &ACubeCore::execAddMoney },
+			{ "BroadcastBadCam", &ACubeCore::execBroadcastBadCam },
 			{ "BroadcastNewCells", &ACubeCore::execBroadcastNewCells },
 			{ "CoreCamera", &ACubeCore::execCoreCamera },
 			{ "DetachAll", &ACubeCore::execDetachAll },
@@ -373,6 +381,28 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_AddMoney_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACubeCore_BroadcastBadCam_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_BroadcastBadCam_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_BroadcastBadCam_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "BroadcastBadCam", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_BroadcastBadCam_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_BroadcastBadCam_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACubeCore_BroadcastBadCam()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_BroadcastBadCam_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1008,6 +1038,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACubeCore_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACubeCore_AddMoney, "AddMoney" }, // 2622269313
+		{ &Z_Construct_UFunction_ACubeCore_BroadcastBadCam, "BroadcastBadCam" }, // 260403690
 		{ &Z_Construct_UFunction_ACubeCore_BroadcastNewCells, "BroadcastNewCells" }, // 666054514
 		{ &Z_Construct_UFunction_ACubeCore_CoreCamera, "CoreCamera" }, // 3350095586
 		{ &Z_Construct_UFunction_ACubeCore_DetachAll, "DetachAll" }, // 3006845982
@@ -1294,9 +1325,9 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 1387620981U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3835248341U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_1050963311(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_3478700867(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
