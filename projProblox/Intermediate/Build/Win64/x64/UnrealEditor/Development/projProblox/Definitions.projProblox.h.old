@@ -1,4 +1,4 @@
-#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/x64/UnrealEditor/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
+#include "C:/Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
 #undef UE_IS_ENGINE_MODULE
 #undef DEPRECATED_FORGAME
 #define DEPRECATED_FORGAME DEPRECATED
@@ -14,7 +14,7 @@
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_2 0
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_3 0
 #define UE_PROJECT_NAME projProblox
-#define UE_TARGET_NAME UnrealEditor
+#define UE_TARGET_NAME projProbloxEditor
 #define UE_MODULE_NAME "projProblox"
 #define UE_PLUGIN_NAME ""
 #define IMPLEMENT_ENCRYPTION_KEY_REGISTRATION() 
