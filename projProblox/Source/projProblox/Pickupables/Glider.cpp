@@ -32,18 +32,12 @@ void AGlider::Ability(const float deltaTime)
 		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
 	}
-
+	if(!IsValid(parentCore)) return;
+	
 	// Only activate when falling fast enough
 	if(mesh->GetPhysicsLinearVelocity().Z > -activationSpeed) return;
 
 	// 1000 is the mass of the core (The mass of the other attached objects will be considered... just not the core.)
 	mesh->AddForce(GetActorForwardVector() * glideSpeed * 1000);
 	mesh->AddForce(GetActorUpVector() * floatAmount * 1000);
-
-	if(!IsValid(parentCore)) return;
-
-	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
-	if(!parentMesh->IsSimulatingPhysics()) return;
-	
-	parentMesh->AddTorqueInRadians(parentCore->GetVelocity().GetSafeNormal() * 100000);
 }

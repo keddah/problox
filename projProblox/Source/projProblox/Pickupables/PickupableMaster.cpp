@@ -6,6 +6,7 @@
 * Also creates the actor components that all variations of this class will have... Mesh and collider.
 *
 * PROBLEMS:
+*	center of mass --> centre of mass
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -151,9 +152,11 @@ void APickupableMaster::BeginPlay()
 		}
 	}
 	
-	// Only set a custom center of mass if it has been moved... 
 	const FVector massOffset = centerMass->GetRelativeLocation();
-	if(!(massOffset.X == 0 && massOffset.Y == 0 && massOffset.Z == 0)) return;
+
+	// If tthe center of mass component's position is 0 ... return
+	if(massOffset.Equals({}, .0075f)) return;
+	
 	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());
 }
 
