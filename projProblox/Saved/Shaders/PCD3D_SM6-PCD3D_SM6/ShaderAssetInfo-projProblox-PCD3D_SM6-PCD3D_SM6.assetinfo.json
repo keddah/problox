@@ -764,7 +764,8 @@
 		{
 			"ShaderMapHash": "7059B06661074F7443B44BAAE15206E622206D9B",
 			"Assets": [
-				"/Game/Models/Sketchfab/Backpack/Material"
+				"/Game/Models/Sketchfab/Backpack/Material",
+				"/Game/UI/Notes_from_boss_Mat"
 			]
 		},
 		{
@@ -902,6 +903,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "F9C89178F90E1017085B69DA89B965B624E8C95D",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleBase"
+			]
+		},
+		{
 			"ShaderMapHash": "F2171879C7CB478DB02F0EE6AD327D029A6947F0",
 			"Assets": [
 				"/Engine/EngineSky/M_Sky_Panning_Clouds2"
@@ -920,9 +927,9 @@
 			]
 		},
 		{
-			"ShaderMapHash": "0C9A417C8C76A3ACF4D744E8DB8387B9C2E9D773",
+			"ShaderMapHash": "C3AC167B1B621B42DB5494DD470BFA3442D8D38A",
 			"Assets": [
-				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleStrip"
+				"/Game/Materials/Pickupables/Glider/M_Glider1"
 			]
 		},
 		{
@@ -944,15 +951,15 @@
 			]
 		},
 		{
-			"ShaderMapHash": "E76FCA7F9364CB8566EFA2DEA1F53D12706522A0",
+			"ShaderMapHash": "1332FA7E3497D22097FFD4FF47359D637400BB60",
 			"Assets": [
-				"/Engine/Engine_MI_Shaders/M_ES_Phong_Opaque_Master_01"
+				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleStrip"
 			]
 		},
 		{
-			"ShaderMapHash": "99F38F81B173E70807DF6B0C11E302BBC05D4AF1",
+			"ShaderMapHash": "E76FCA7F9364CB8566EFA2DEA1F53D12706522A0",
 			"Assets": [
-				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleFace"
+				"/Engine/Engine_MI_Shaders/M_ES_Phong_Opaque_Master_01"
 			]
 		},
 		{
@@ -977,6 +984,12 @@
 			"ShaderMapHash": "3B4752835D57D94907883619BFBC63ADF22851EC",
 			"Assets": [
 				"/Engine/EngineMaterials/DefaultDeferredDecalMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "8C0E9C839AC1AA7651826AB222FFA5E31CD2AF28",
+			"Assets": [
+				"/Game/Materials/Pickupables/Thrusters/M_ThrusterBase"
 			]
 		},
 		{
@@ -1186,12 +1199,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "67C49F9DE08458AB3D21C18A5F9DAA664F85F3A8",
-			"Assets": [
-				"/Game/Materials/Pickupables/Glider/M_Glider2"
-			]
-		},
-		{
 			"ShaderMapHash": "DCD48E9E342196DA0DEC7DF6F91B46CCF2DE9BD4",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Chair"
@@ -1359,6 +1366,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "0B3E0FABDBC77F7A05FA79FD2BE81018E4C03ED9",
+			"Assets": [
+				"/Game/Materials/Pickupables/Glider/M_Glider2"
+			]
+		},
+		{
 			"ShaderMapHash": "6930FEAB371DABD5BA1804B647754ED603B45AE1",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_Frame"
@@ -1401,12 +1414,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "66720EB49BA39CCC37EE0654F5D01D893586C909",
-			"Assets": [
-				"/Game/Materials/Pickupables/Glider/M_Glider1"
-			]
-		},
-		{
 			"ShaderMapHash": "BC2D1FB4E93599A9FF73D85430EFA0FCFF7D7E6E",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_spark_C"
@@ -1416,12 +1423,6 @@
 			"ShaderMapHash": "1BA765B4EEFD8D96C7B9133D0D3E8CD7F6273B27",
 			"Assets": [
 				"/Game/MSPresets/M_MS_SurfaceBlend_Material/M_MS_SurfaceBlend_Material"
-			]
-		},
-		{
-			"ShaderMapHash": "955AC0B42466000EB694236B20113E576C65EAD7",
-			"Assets": [
-				"/Game/Materials/Pickupables/Thrusters/M_ThrusterBase"
 			]
 		},
 		{
@@ -1466,12 +1467,6 @@
 			"ShaderMapHash": "548E40BAB90157A9A8813534C4C7168C7B96A2D5",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Lightning_small"
-			]
-		},
-		{
-			"ShaderMapHash": "8EED63BA9DF29C05DB804AB6F2CD762CE01B1C37",
-			"Assets": [
-				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleBase"
 			]
 		},
 		{
@@ -1637,6 +1632,12 @@
 			"ShaderMapHash": "3F62F9CC14D8E4DE9F656E1CECDF02897A5AE329",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Brick_Clay_Beveled"
+			]
+		},
+		{
+			"ShaderMapHash": "4B44ACCDD66710E3A9FCBF602A522B1BBB3975CA",
+			"Assets": [
+				"/Game/Materials/Pickupables/Grapple/Base/M_GrappleFace"
 			]
 		},
 		{
