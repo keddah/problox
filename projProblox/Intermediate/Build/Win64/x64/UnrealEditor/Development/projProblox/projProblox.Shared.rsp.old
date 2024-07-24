@@ -287,6 +287,7 @@
 /I "..\Plugins\FX\Niagara\Source\NiagaraShader\Public"
 /I "..\Plugins\FX\Niagara\Source\NiagaraVertexFactories\Public"
 /I "C:\Users\Deany\Documents\GitHub\problox\projProblox\Intermediate\Build\Win64\UnrealEditor\Inc\projProblox\UHT"
+/I "C:\Users\Deany\Documents\GitHub\problox\projProblox\Source"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "ThirdParty\LibTiff\Source\Win64"
