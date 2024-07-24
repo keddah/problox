@@ -1272,3 +1272,111 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.24-15.52.27:375][634]AssetCheck: New page: Asset Save: multiple assets
 [2024.07.24-15.52.27:375][634]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
 [2024.07.24-15.52.27:375][634]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel_Props.KitchenLevel_Props
+[2024.07.24-15.55.09:997][ 24]Cmd: SELECT NONE
+[2024.07.24-16.00.52:295][654]Cmd: ACTOR UNHIDE ALL
+[2024.07.24-16.01.04:707][215]Cmd: ACTOR HIDE SELECTED
+[2024.07.24-16.04.38:074][476]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2024.07.24-16.04.38:074][476]Can't find target element.
+[2024.07.24-16.07.10:742][943]LogShaderCompilers: Display: ================================================
+[2024.07.24-16.07.10:742][943]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.07.24-16.07.10:743][943]LogShaderCompilers: Display: Total job queries 560, among them cache hits 191 (34.11%)
+[2024.07.24-16.07.10:743][943]LogShaderCompilers: Display: Tracking 369 distinct input hashes that result in 208 distinct outputs (56.37%)
+[2024.07.24-16.07.10:743][943]LogShaderCompilers: Display: RAM used: 8.16 MiB of 819.20 MiB budget. Usage: 1.00%
+[2024.07.24-16.07.10:743][943]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.07.24-16.07.10:743][943]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.07.24-16.07.10:743][943]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.07.24-16.07.10:744][943]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.07.24-16.07.10:744][943]LogShaderCompilers: Display: ================================================
+[2024.07.24-16.07.13:548][ 48]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/HUD/WBP_AreaSelect.WBP_AreaSelect
+[2024.07.24-16.07.13:550][ 48]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.24-16.07.13:550][ 48]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.24-16.07.13:581][ 48]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.24-16.07.13:581][ 48]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.24-16.07.42:356][281]LogSlate: Warning: Unable to rasterize '../../../Engine/Content/Editor/Slate/Starship/AssetIcons/SpecularProfile_64.svg'. File could not be found
+[2024.07.24-16.07.43:321][325]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2024.07.24-16.07.43:341][325]LogContentBrowser: Creating deferred item: NewFolder
+[2024.07.24-16.07.43:363][326]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2024.07.24-16.07.54:668][871]LogContentBrowser: Attempting asset rename: NewFolder -> SpawnPionts
+[2024.07.24-16.07.54:670][871]LogContentBrowser: End creating deferred item NewFolder
+[2024.07.24-16.08.30:964][313]LogInterchangeEngine: [Pending] Importing
+[2024.07.24-16.08.30:964][313]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170139.png]
+[2024.07.24-16.08.30:966][313]LogInterchangeEngine: [Pending] Importing -  (2)
+[2024.07.24-16.08.30:967][313]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170254.png]
+[2024.07.24-16.08.30:968][313]LogInterchangeEngine: [Pending] Importing -  (3)
+[2024.07.24-16.08.30:968][313]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170315.png]
+[2024.07.24-16.08.30:969][313]LogInterchangeEngine: [Pending] Importing -  (4)
+[2024.07.24-16.08.30:969][313]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170337.png]
+[2024.07.24-16.08.30:970][313]LogInterchangeEngine: [Pending] Importing -  (5)
+[2024.07.24-16.08.30:971][313]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170356.png]
+[2024.07.24-16.08.30:972][313]LogInterchangeEngine: [Pending] Importing -  (6)
+[2024.07.24-16.08.30:972][313]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170434.png]
+[2024.07.24-16.08.30:973][313]LogInterchangeEngine: [Pending] Importing -  (7)
+[2024.07.24-16.08.30:973][313]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170502.png]
+[2024.07.24-16.08.30:974][313]LogInterchangeEngine: [Pending] Importing -  (8)
+[2024.07.24-16.08.30:974][313]LogInterchangeEngine: [Pending] Importing -  (9)
+[2024.07.24-16.08.31:029][314]LogInterchangeEngine: [Pending] Importing -  (9)
+[2024.07.24-16.08.31:276][314]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170356.Screenshot_2024-07-24_170356 (BGRA8, 1434x887 x1x1x1) (Required Memory Estimate: 37.262199 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:279][314]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170139.Screenshot_2024-07-24_170139 (BGRA8, 1432x885 x1x1x1) (Required Memory Estimate: 37.126556 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:294][314]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170254.Screenshot_2024-07-24_170254 (BGRA8, 1434x884 x1x1x1) (Required Memory Estimate: 37.136383 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:305][314]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170502.Screenshot_2024-07-24_170502 (BGRA8, 1432x889 x1x1x1) (Required Memory Estimate: 37.294071 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:308][314]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170337.Screenshot_2024-07-24_170337 (TFO_AutoDXT, 1432x888 x1x1x1) (Required Memory Estimate: 133.788574 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:310][314]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170434.Screenshot_2024-07-24_170434 (BGRA8, 1431x885 x1x1x1) (Required Memory Estimate: 37.100674 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:317][314]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170315.Screenshot_2024-07-24_170315 (BGRA8, 1435x885 x1x1x1) (Required Memory Estimate: 37.204205 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:337][314]LogInterchangeEngine: [Pending] Importing -  (6)
+[2024.07.24-16.08.31:337][314]LogInterchangeEngine: [Pending] Importing -  (8)
+[2024.07.24-16.08.31:337][314]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170536.png]
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: [Pending] Importing -  (6)
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: [Pending] Importing -  (7)
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: Display: Interchange start importing source [C:/Uni/SS/Screenshot 2024-07-24 170556.png]
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: [Pending] Importing -  (6)
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: [Pending] Importing -  (5)
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: [Pending] Importing -  (4)
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: [Pending] Importing -  (3)
+[2024.07.24-16.08.31:338][314]LogInterchangeEngine: [Pending] Importing -  (2)
+[2024.07.24-16.08.31:590][315]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170556.Screenshot_2024-07-24_170556 (BGRA8, 1430x884 x1x1x1) (Required Memory Estimate: 37.032963 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:599][315]LogTexture: Display: Building textures: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170536.Screenshot_2024-07-24_170536 (BGRA8, 1435x887 x1x1x1) (Required Memory Estimate: 37.288128 MB), EncodeSpeed: Fast
+[2024.07.24-16.08.31:680][315]LogInterchangeEngine: [Pending] Importing -  (1)
+[2024.07.24-16.08.31:933][315]LogInterchangeEngine: [Success] Import Done
+[2024.07.24-16.08.31:961][316]LogInterchangeEngine: [Success] Import Done
+[2024.07.24-16.08.37:791][397]LogAssetEditorSubsystem: Opening Asset editor for Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170254.Screenshot_2024-07-24_170254
+[2024.07.24-16.08.38:341][397]LogViewport: Scene viewport resized to 1424x890, mode Windowed.
+[2024.07.24-16.08.43:567][630]LogUObjectHash: Compacting FUObjectHashTables data took   4.68ms
+[2024.07.24-16.08.43:843][630]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.24-16.08.43:904][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170139" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170139.uasset" SILENT=true
+[2024.07.24-16.08.43:962][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170139
+[2024.07.24-16.08.43:962][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_17013906B5357D4295CBA55EB7E789326E061D.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170139.uasset'
+[2024.07.24-16.08.43:974][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170254" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170254.uasset" SILENT=true
+[2024.07.24-16.08.44:013][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170254
+[2024.07.24-16.08.44:014][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_17025497F289794CD76D090B34CA874068CE74.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170254.uasset'
+[2024.07.24-16.08.44:019][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170315" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170315.uasset" SILENT=true
+[2024.07.24-16.08.44:062][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170315
+[2024.07.24-16.08.44:062][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_170315C96FFD65477743601CADFB8C222FB95B.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170315.uasset'
+[2024.07.24-16.08.44:072][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170337" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170337.uasset" SILENT=true
+[2024.07.24-16.08.44:115][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170337
+[2024.07.24-16.08.44:115][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_17033712270D294E2461EB032A4689EE657004.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170337.uasset'
+[2024.07.24-16.08.44:120][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170356" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170356.uasset" SILENT=true
+[2024.07.24-16.08.44:161][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170356
+[2024.07.24-16.08.44:161][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_17035654A2DBE443E0EB80B8FC7A9E98B3607D.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170356.uasset'
+[2024.07.24-16.08.44:167][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170434" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170434.uasset" SILENT=true
+[2024.07.24-16.08.44:208][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170434
+[2024.07.24-16.08.44:208][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_170434D0001386445ED1C2FFF3618CBD3BD092.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170434.uasset'
+[2024.07.24-16.08.44:214][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170502" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170502.uasset" SILENT=true
+[2024.07.24-16.08.44:251][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170502
+[2024.07.24-16.08.44:251][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_1705026F362B014EE23A0A2B327CA96C56E1FE.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170502.uasset'
+[2024.07.24-16.08.44:256][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170536" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170536.uasset" SILENT=true
+[2024.07.24-16.08.44:299][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170536
+[2024.07.24-16.08.44:299][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_17053670C505E2439C8144892D84B88C08F490.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170536.uasset'
+[2024.07.24-16.08.44:305][630]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/SpawnPionts/Screenshot_2024-07-24_170556" FILE="../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170556.uasset" SILENT=true
+[2024.07.24-16.08.44:347][630]LogSavePackage: Moving output files for package: /Game/UI/SpawnPionts/Screenshot_2024-07-24_170556
+[2024.07.24-16.08.44:347][630]LogSavePackage: Moving '../../../../../../Uni/problox/projProblox/Saved/Screenshot_2024-07-24_170556DE4FF0C94EA06C48AAE7B682284C15D6.tmp' to '../../../../../../Uni/problox/projProblox/Content/UI/SpawnPionts/Screenshot_2024-07-24_170556.uasset'
+[2024.07.24-16.08.45:919][630]LogFileHelpers: InternalPromptForCheckoutAndSave took 2.07 sec (total: 3.87 sec)
+[2024.07.24-16.08.45:927][630]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170139.Screenshot_2024-07-24_170139
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170254.Screenshot_2024-07-24_170254
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170315.Screenshot_2024-07-24_170315
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170337.Screenshot_2024-07-24_170337
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170356.Screenshot_2024-07-24_170356
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170434.Screenshot_2024-07-24_170434
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170502.Screenshot_2024-07-24_170502
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170536.Screenshot_2024-07-24_170536
+[2024.07.24-16.08.45:927][630]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/SpawnPionts/Screenshot_2024-07-24_170556.Screenshot_2024-07-24_170556
