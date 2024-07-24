@@ -10,7 +10,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="" />
+    <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Bedroom/bedroom1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Bedroom/bedroom2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Bedroom/bedroom3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Bedroom/bedroom4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Bedroom/bedroom5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Bedroom/bedroom6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170139.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170254.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170315.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170337.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170356.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170434.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170502.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170536.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Images/SpawnPoints/Screenshot_2024-07-24_170556.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/WBP_AreaSelect.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/HUD/WBP_AreaSelect.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170139.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170139.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170254.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170254.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170315.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170315.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170337.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170337.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170356.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170356.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170434.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170434.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170502.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170502.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170536.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170536.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170556.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/SpawnPionts/Screenshot_2024-07-24_170556.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
