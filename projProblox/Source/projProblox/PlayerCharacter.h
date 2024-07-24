@@ -47,6 +47,12 @@ private:
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "The same build mode zoom except this uses the scroll wheel instead of the mouse-Y value."))
 	void ScrollZoom(float input);
 
+	// The buyable object that the player's mouse is currently hovering over
+	ABuyableAttachment* hoveredBuyable;
+
+	// The buyable object that is being placed on the cube core
+	ABuyableAttachment* selectedBuyable;
+
 	
 	///////////////////////// Sockets /////////////////////////
 	FName FindSuggestedSlot(APickupableMaster* obj) const;
@@ -125,11 +131,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	float mouseDistance = 20000;
 
-	// The buyable object that the player's mouse is currently hovering over
-	UPROPERTY(BlueprintReadOnly)
-	ABuyableAttachment* hoveredBuyable;
 
-	
 	/////////////// Game States ///////////////
 	UPROPERTY(BlueprintReadWrite, meta = (ToolTip = "Whether or not the game is currently in the build phase (will be set to false once the game starts)."))
 	bool adjustPhase;

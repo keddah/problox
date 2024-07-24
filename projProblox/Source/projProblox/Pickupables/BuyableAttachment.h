@@ -29,6 +29,7 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	void SetHide(const bool hide) const;
 
 	// bool unlocked;
+	bool selected;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* mouseDetector;
@@ -39,14 +40,27 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	UPROPERTY(EditAnywhere)
 	UBuyableInfo* info;
 	
+	UPROPERTY(EditDefaultsOnly)
+	UMaterialInterface* hoverMaterial;
+
+	UPROPERTY(EditDefaultsOnly)
+	UMaterialInterface* selectedMaterial;
+	
+	UPROPERTY(EditDefaultsOnly)
+	UStaticMeshComponent* outlineMesh;
+
+
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UStaticMeshComponent* meshComp;
+
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UWidgetComponent* infoWidget;
 	
 public:
+	void SetSelected(const bool value);
+	
 	// void UnlockAttachment();
 	FOnBoughtAttachment onBoughtAttachment;
 
@@ -58,8 +72,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FBuyableInfoStruct GetInfo() const { return info->GetInfo(); }
 
-	void ShowDescription() const { onShow.Broadcast(this); }
-	void HideDescription() const { onHide.Broadcast(this);}
+	void ShowDescription() const { onShow.Broadcast(this); outlineMesh->SetHiddenInGame(false); }
+	void HideDescription() const { onHide.Broadcast(this); if(!selected) outlineMesh->SetHiddenInGame(true);}
 
 	// UFUNCTION(BlueprintCallable)
 	// bool IsUnlocked() const { return unlocked; }

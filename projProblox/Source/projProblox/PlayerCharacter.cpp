@@ -304,6 +304,13 @@ void APlayerCharacter::Confirm()
 	selectedObj->SetCore(core);
 	selectedObj->Attach();
 
+	// Deselect the buyable...
+	if(selectedBuyable)
+	{
+		selectedBuyable->SetSelected(false);
+		selectedBuyable = 0;
+	}
+	
 	Deselect();
 }
 
@@ -396,13 +403,24 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 			return;
 		}
 
+		buyable->SetSelected(true);
+		
 		if(selectedObj) selectedObj->Deselect();
+		if(selectedBuyable) selectedBuyable->SetSelected(false);
+
+		selectedBuyable = buyable;
 		selectedObj = pickupable;
 		SelectObject(selectedObj);
+		return;
 	}
 
 	// If the hit actor wasn't a buyable (clicking anything that isn't a buyable deselects the selected object if there is one).
-	else if(selectedObj) selectedObj->Deselect();
+	if(selectedObj) selectedObj->Deselect();
+	if(selectedBuyable)
+	{
+		selectedBuyable->SetSelected(false);
+		selectedBuyable = 0;
+	}
 }
 
 void APlayerCharacter::EjectObject(const FHitResult& hit)

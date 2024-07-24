@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeBuyableAttachment() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ABuyableAttachment();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ABuyableAttachment_NoRegister();
@@ -256,6 +257,18 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_info;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_hoverMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_hoverMaterial;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_selectedMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_selectedMaterial;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_outlineMesh_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_outlineMesh;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_meshComp_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_meshComp;
@@ -294,14 +307,8 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_mouseDetector_MetaData[] = {
 		{ "Category", "BuyableAttachment" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// bool unlocked;\n" },
-#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pickupables/BuyableAttachment.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "bool unlocked;" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_mouseDetector = { "mouseDetector", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABuyableAttachment, mouseDetector), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_mouseDetector_MetaData), Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_mouseDetector_MetaData) };
@@ -318,6 +325,28 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_info = { "info", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABuyableAttachment, info), Z_Construct_UClass_UBuyableInfo_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_info_MetaData), Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_info_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_hoverMaterial_MetaData[] = {
+		{ "Category", "BuyableAttachment" },
+		{ "ModuleRelativePath", "Pickupables/BuyableAttachment.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_hoverMaterial = { "hoverMaterial", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABuyableAttachment, hoverMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_hoverMaterial_MetaData), Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_hoverMaterial_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_selectedMaterial_MetaData[] = {
+		{ "Category", "BuyableAttachment" },
+		{ "ModuleRelativePath", "Pickupables/BuyableAttachment.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_selectedMaterial = { "selectedMaterial", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABuyableAttachment, selectedMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_selectedMaterial_MetaData), Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_selectedMaterial_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_outlineMesh_MetaData[] = {
+		{ "Category", "BuyableAttachment" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Pickupables/BuyableAttachment.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_outlineMesh = { "outlineMesh", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABuyableAttachment, outlineMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_outlineMesh_MetaData), Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_outlineMesh_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_meshComp_MetaData[] = {
 		{ "Category", "BuyableAttachment" },
@@ -349,6 +378,9 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABuyableAttachment_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_mouseDetector,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_info,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_hoverMaterial,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_selectedMaterial,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_outlineMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_meshComp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_infoWidget,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuyableAttachment_Statics::NewProp_onShow,
@@ -392,9 +424,9 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABuyableAttachment, ABuyableAttachment::StaticClass, TEXT("ABuyableAttachment"), &Z_Registration_Info_UClass_ABuyableAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuyableAttachment), 3676886383U) },
+		{ Z_Construct_UClass_ABuyableAttachment, ABuyableAttachment::StaticClass, TEXT("ABuyableAttachment"), &Z_Registration_Info_UClass_ABuyableAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuyableAttachment), 404461748U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_1599889740(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_65321907(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
