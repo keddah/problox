@@ -346,34 +346,34 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
 	{
 		const FBuyableInfoStruct buyInfo = buyable->GetInfo();
-		if(!buyable->IsUnlocked())
-		{
-			if(!core)
-			{
-				Print("Couldn't buy object because the core was invalid...", 4)
-				return;
-			}
-			if (!instance) 
-			{
-				Print("Couldn't buy because instance was invald...", 4)
-				return;
-			}
-
-			const int money = instance->GetMoney();
-			if(money < buyInfo.price)
-			{
-				Print("Couldn't afford it...: " + FString::FromInt(money), 4)
-				return;
-			}
-
-			// Deselect the selected object
-			if(selectedObj) selectedObj->Deselect();
-			instance->LoseMoney(buyInfo.price);
-			// Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
-
-			buyable->UnlockAttachment();
-			return;
-		}
+		// if(!buyable->IsUnlocked())
+		// {
+		// 	if(!core)
+		// 	{
+		// 		Print("Couldn't buy object because the core was invalid...", 4)
+		// 		return;
+		// 	}
+		// 	if (!instance) 
+		// 	{
+		// 		Print("Couldn't buy because instance was invald...", 4)
+		// 		return;
+		// 	}
+		//
+		// 	const int money = instance->GetMoney();
+		// 	if(money < buyInfo.price)
+		// 	{
+		// 		Print("Couldn't afford it...: " + FString::FromInt(money), 4)
+		// 		return;
+		// 	}
+		//
+		// 	// Deselect the selected object
+		// 	if(selectedObj) selectedObj->Deselect();
+		// 	instance->LoseMoney(buyInfo.price);
+		// 	// Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
+		//
+		// 	buyable->UnlockAttachment();
+		// 	return;
+		// }
 		
 		/////////////// When clicking on an unlocked buyable ///////////////
 		// Don't do anything if there aren't any free slots...

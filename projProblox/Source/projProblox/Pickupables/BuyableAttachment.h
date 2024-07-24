@@ -28,13 +28,13 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 
 	void SetHide(const bool hide) const;
 
-	bool unlocked;
+	// bool unlocked;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* mouseDetector;
 	
-	UPROPERTY(EditDefaultsOnly)
-	UMaterial* lockedMaterial;
+	// UPROPERTY(EditDefaultsOnly)
+	// UMaterial* lockedMaterial;
 
 	UPROPERTY(EditAnywhere)
 	UBuyableInfo* info;
@@ -47,7 +47,7 @@ protected:
 	UWidgetComponent* infoWidget;
 	
 public:
-	void UnlockAttachment();
+	// void UnlockAttachment();
 	FOnBoughtAttachment onBoughtAttachment;
 
 	UPROPERTY(BlueprintAssignable)
@@ -61,6 +61,6 @@ public:
 	void ShowDescription() const { onShow.Broadcast(this); }
 	void HideDescription() const { onHide.Broadcast(this);}
 
-	UFUNCTION(BlueprintCallable)
-	bool IsUnlocked() const { return unlocked; }
+	// UFUNCTION(BlueprintCallable)
+	// bool IsUnlocked() const { return unlocked; }
 };

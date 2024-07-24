@@ -17,17 +17,17 @@ ABuyableAttachment::ABuyableAttachment()
 	mouseDetector->SetupAttachment(meshComp);
 }
 
-void ABuyableAttachment::UnlockAttachment()
-{
-	if(unlocked)
-	{
-		return;
-	}
-	
-	unlocked = true;
-	SetHide(false);
-	onBoughtAttachment.Broadcast();
-}
+// void ABuyableAttachment::UnlockAttachment()
+// {
+// 	if(unlocked)
+// 	{
+// 		return;
+// 	}
+// 	
+// 	unlocked = true;
+// 	SetHide(false);
+// 	onBoughtAttachment.Broadcast();
+// }
 
 void ABuyableAttachment::UseInfoMesh()
 {
@@ -42,10 +42,11 @@ void ABuyableAttachment::UseInfoMesh()
 	if(!buyInfo.editScale) meshComp->SetRelativeScale3D(buyInfo.defaultScale);
 
 	// Setting materials
-	if(unlocked) SetHide(false);
-
+	// if(unlocked) SetHide(false);
+	SetHide(false);
+	
 	// If not unlocked...
-	else SetHide(true);
+	// else SetHide(true);
 }
 
 void ABuyableAttachment::SetHide(const bool hide) const
@@ -56,5 +57,5 @@ void ABuyableAttachment::SetHide(const bool hide) const
 		for(int i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, buyInfo.attachmentMesh->GetMaterial(i));
 		return;
 	}
-	if(lockedMaterial) for(int i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, lockedMaterial);
+	// if(lockedMaterial) for(int i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, lockedMaterial);
 }
