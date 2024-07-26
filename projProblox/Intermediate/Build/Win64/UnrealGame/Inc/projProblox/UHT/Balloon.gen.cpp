@@ -81,10 +81,6 @@ void EmptyLinkFunctionForGeneratedCodeBalloon() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_stringLength_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_stringLength;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_massMultiplier_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_massMultiplier;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -142,23 +138,11 @@ void EmptyLinkFunctionForGeneratedCodeBalloon() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABalloon_Statics::NewProp_stringLength = { "stringLength", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABalloon, stringLength), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABalloon_Statics::NewProp_stringLength_MetaData), Z_Construct_UClass_ABalloon_Statics::NewProp_stringLength_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABalloon_Statics::NewProp_massMultiplier_MetaData[] = {
-		{ "Category", "Ability" },
-		{ "Delta", "0.100000" },
-		{ "ModuleRelativePath", "Pickupables/Balloon.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Higher number = balloon is less affected by mass." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABalloon_Statics::NewProp_massMultiplier = { "massMultiplier", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABalloon, massMultiplier), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABalloon_Statics::NewProp_massMultiplier_MetaData), Z_Construct_UClass_ABalloon_Statics::NewProp_massMultiplier_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABalloon_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABalloon_Statics::NewProp_constraint,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABalloon_Statics::NewProp_string,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABalloon_Statics::NewProp_floatiness,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABalloon_Statics::NewProp_stringLength,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABalloon_Statics::NewProp_massMultiplier,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABalloon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABalloon>::IsAbstract,
@@ -198,9 +182,9 @@ void EmptyLinkFunctionForGeneratedCodeBalloon() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Balloon_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABalloon, ABalloon::StaticClass, TEXT("ABalloon"), &Z_Registration_Info_UClass_ABalloon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABalloon), 604496753U) },
+		{ Z_Construct_UClass_ABalloon, ABalloon::StaticClass, TEXT("ABalloon"), &Z_Registration_Info_UClass_ABalloon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABalloon), 1068409831U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Balloon_h_636925685(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Balloon_h_761408811(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Balloon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Balloon_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -352,6 +352,8 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 	
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
 	{
+		if(buyable == selectedBuyable) return;
+		
 		const FBuyableInfoStruct buyInfo = buyable->GetInfo();
 		// if(!buyable->IsUnlocked())
 		// {

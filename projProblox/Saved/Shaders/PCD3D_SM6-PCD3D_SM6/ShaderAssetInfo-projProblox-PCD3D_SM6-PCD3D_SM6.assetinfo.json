@@ -138,6 +138,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "E8661F1148CC45C7A2357083D5378310D614A61C",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_Treads"
+			]
+		},
+		{
 			"ShaderMapHash": "AAF0491186417573CE30D109ED82985EC939BA76",
 			"Assets": [
 				"/Game/Levels/LowPolyInterior/Materials/M_LowPolyInterior_Fire",
@@ -154,12 +160,6 @@
 			"ShaderMapHash": "C4C2CB131838C3A4F55999C1B6F31A80B30CEC02",
 			"Assets": [
 				"/Game/Materials/RandomMaterials/M_Green"
-			]
-		},
-		{
-			"ShaderMapHash": "9B183B1488EB851CE48CE8E0C22A36827D79FD20",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Treads"
 			]
 		},
 		{
@@ -453,6 +453,12 @@
 				"/Game/Models/OutsourcedModels/Helice",
 				"/Game/Models/OutsourcedModels/Pottery_Bowl_Mat",
 				"/Game/Models/Sketchfab/AlarmClock/clear"
+			]
+		},
+		{
+			"ShaderMapHash": "CA788633D46A0B38776C17FE6F2A43044A0823FD",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_TreadTrim1"
 			]
 		},
 		{
@@ -1097,6 +1103,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "009B2E91C9E41201CA8B35F4C6C53F3C3B98BD7D",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_TreadTrim2"
+			]
+		},
+		{
 			"ShaderMapHash": "32994F91225F1C340D657B335D06A460CDFC2489",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Leaves_A"
@@ -1698,6 +1710,12 @@
 			"ShaderMapHash": "F0899FD6D51FC54AA18BAB283FF632F456BBA90A",
 			"Assets": [
 				"/Game/Models/BlenderModelsReece/Material"
+			]
+		},
+		{
+			"ShaderMapHash": "4BF211D70E7F928E7F5DD83BDCF8683DCB61CDE8",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_TreadCylinders"
 			]
 		},
 		{

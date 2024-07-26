@@ -63,6 +63,18 @@
 			]
 		},
 		{
+			"ShaderMapHash": "5D3EAE09D4C404EA578D49D4ED4068EF21AE3FCC",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_TreadTrim1"
+			]
+		},
+		{
+			"ShaderMapHash": "B810F40AEC49C7FCB53E42A12E2CB31D26108285",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_Treads"
+			]
+		},
+		{
 			"ShaderMapHash": "29B9210B1CA6B1ECA7428A9CB4978304A570FB8A",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Metal_Rust"
@@ -770,12 +782,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "2A3C4A71E4C37A0F2A4DC4CC476A720740576CA3",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Treads"
-			]
-		},
-		{
 			"ShaderMapHash": "84CB767212689CE1C7D1B93402BD4209FC98734E",
 			"Assets": [
 				"/Game/Workshop_LowPoly/Materials/M_MasterMaterial"
@@ -1425,6 +1431,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "F7B47EB868D4192999C48436D00190F1AF3462AE",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_TreadCylinders"
+			]
+		},
+		{
 			"ShaderMapHash": "87FAE0B805035A70425A4B812EAEE19BF8B5AF02",
 			"Assets": [
 				"/Engine/EditorMeshes/ColorCalibrator/M_ClearCoatBlack"
@@ -1680,6 +1692,12 @@
 			"ShaderMapHash": "80145DD3CE4EA6C8CB52E990BD3184CCAA0262F9",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Wood_Floor_Walnut_Worn"
+			]
+		},
+		{
+			"ShaderMapHash": "600EDAD34FD40C77F06B608A9FEC3FEB9CD382AC",
+			"Assets": [
+				"/Game/Materials/Pickupables/Treads/M_TreadTrim2"
 			]
 		},
 		{
