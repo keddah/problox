@@ -50,10 +50,12 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	}
 	void SetParentDominates(const bool dominate) const
 	{
+		if(!constraint) return;
+		
 		if(dominate) constraint->ConstraintInstance.EnableParentDominates();
 		else constraint->ConstraintInstance.DisableParentDominates();
 	}
-	
+
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* constraint;
 
@@ -67,7 +69,4 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1.f, ToolTip = "..."))
 	float stringLength = 300;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "Higher number = balloon is less affected by mass."))
-	float massMultiplier = .7f;
 };

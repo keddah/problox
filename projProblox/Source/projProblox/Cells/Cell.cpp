@@ -78,11 +78,6 @@ void ACell::ToCollector()
 		Print("Couldnt be collected because the cell's body was invalid... somehow", 4)
 		return;
 	}
-	if(!owner)
-	{
-		Print("no owner", 4)
-		return;
-	}
 
 	collected = true;
 	body->SetPhysicsLinearVelocity({});
