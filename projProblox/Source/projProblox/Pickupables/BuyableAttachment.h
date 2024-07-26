@@ -9,7 +9,7 @@
 #include "Components/WidgetComponent.h"
 #include "BuyableAttachment.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnBoughtAttachment);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeselected);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnShowDisplay, const ABuyableAttachment*, checker);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnHideDisplay, const ABuyableAttachment*, checker);
 
@@ -29,7 +29,6 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	void SetHide(const bool hide) const;
 
 	// bool unlocked;
-	bool selected;
 	
 	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* mouseDetector;
@@ -41,28 +40,23 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	UBuyableInfo* info;
 	
 	UPROPERTY(EditDefaultsOnly)
-	UMaterialInterface* hoverMaterial;
+	UStaticMeshComponent* meshComp;
 
-	UPROPERTY(EditDefaultsOnly)
-	UMaterialInterface* selectedMaterial;
+	UPROPERTY(BlueprintAssignable)
+	FOnDeselected OnDeselected;
 	
-	UPROPERTY(EditDefaultsOnly)
-	UStaticMeshComponent* outlineMesh;
-
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UStaticMeshComponent* meshComp;
-
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UWidgetComponent* infoWidget;
+	
+	UPROPERTY(BlueprintReadOnly)
+	bool selected;
 	
 public:
 	void SetSelected(const bool value);
 	
 	// void UnlockAttachment();
-	FOnBoughtAttachment onBoughtAttachment;
 
 	UPROPERTY(BlueprintAssignable)
 	FOnShowDisplay onShow;
@@ -72,8 +66,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FBuyableInfoStruct GetInfo() const { return info->GetInfo(); }
 
-	void ShowDescription() const { onShow.Broadcast(this); outlineMesh->SetHiddenInGame(false); }
-	void HideDescription() const { onHide.Broadcast(this); if(!selected) outlineMesh->SetHiddenInGame(true);}
+	void ShowDescription() const { if(!selected) onShow.Broadcast(this); }
+	void HideDescription() const { onHide.Broadcast(this); }
 
 	// UFUNCTION(BlueprintCallable)
 	// bool IsUnlocked() const { return unlocked; }

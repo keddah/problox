@@ -3,8 +3,8 @@
 	{
 		"Module.projProblox.1.cpp.obj": [
 			"AudioManager.gen.cpp.obj",
+			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
-			"BuyableAttachment.gen.cpp.obj",
 			"BuyableInfo.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
 			"CellSpawner.gen.cpp.obj",
@@ -19,7 +19,7 @@
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
 			"Grappler.gen.cpp.obj",
-			"Balloon.gen.cpp.obj"
+			"BuyableAttachment.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"HexagonSocketInfo.gen.cpp.obj",
@@ -51,12 +51,13 @@
 			"CustomGameInstance.cpp.obj",
 			"Modes.cpp.obj",
 			"LevelManager.cpp.obj",
+			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
-			"BuyableAttachment.cpp.obj",
 			"BuyableInfo.cpp.obj",
 			"CubeConnector.cpp.obj",
 			"CuboidConnector.cpp.obj",
 			"WedgeConnector.cpp.obj",
+			"CubeCore.cpp.obj",
 			"CuboidCore.cpp.obj",
 			"HexCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj",
@@ -71,13 +72,12 @@
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SettingsSave.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
-			"Balloon.cpp.obj",
-			"CubeCore.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"BuyableAttachment.cpp.obj"
 		]
 	}
 }

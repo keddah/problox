@@ -12,12 +12,6 @@ ABuyableAttachment::ABuyableAttachment()
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>("Mesh Component");
 	mouseDetector = CreateDefaultSubobject<UBoxComponent>("Box Collision");
 
-	outlineMesh = CreateDefaultSubobject<UStaticMeshComponent>("Outline");
-	outlineMesh->SetupAttachment(meshComp);
-	outlineMesh->SetSimulatePhysics(false);
-	outlineMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
-	outlineMesh->SetHiddenInGame(true);
-	
 	meshComp->SetSimulatePhysics(false);
 	meshComp->SetupAttachment(infoWidget);
 	mouseDetector->SetupAttachment(meshComp);
@@ -45,7 +39,6 @@ void ABuyableAttachment::UseInfoMesh()
 
 	const FBuyableInfoStruct buyInfo = info->GetInfo();
 	meshComp->SetStaticMesh(buyInfo.attachmentMesh);
-	outlineMesh->SetStaticMesh(buyInfo.attachmentMesh);
 	
 	if(!buyInfo.editScale) meshComp->SetRelativeScale3D(buyInfo.defaultScale);
 
@@ -63,12 +56,6 @@ void ABuyableAttachment::SetHide(const bool hide) const
 	{
 		const FBuyableInfoStruct buyInfo = info->GetInfo();
 		for(int i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, buyInfo.attachmentMesh->GetMaterial(i));
-
-		if(hoverMaterial)
-		{
-			for(int i = 0; i < outlineMesh->GetNumMaterials(); i++) outlineMesh->SetMaterial(i, hoverMaterial);
-		}
-		// return;
 	}
 	// if(lockedMaterial) for(int i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, lockedMaterial);
 }
@@ -76,21 +63,7 @@ void ABuyableAttachment::SetHide(const bool hide) const
 void ABuyableAttachment::SetSelected(const bool value)
 {
 	selected = value;
+	if(selected) return;
 
-	if(value)
-	{
-		if(selectedMaterial)
-		{
-			for(int i = 0; i < outlineMesh->GetNumMaterials(); i++) outlineMesh->SetMaterial(i, selectedMaterial);
-		}
-	}
-
-	else
-	{
-		outlineMesh->SetHiddenInGame(true);
-		if(hoverMaterial)
-		{
-			for(int i = 0; i < outlineMesh->GetNumMaterials(); i++) outlineMesh->SetMaterial(i, hoverMaterial);
-		}
-	}
+	OnDeselected.Broadcast();
 }

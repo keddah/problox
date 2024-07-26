@@ -17,7 +17,7 @@ struct FBuyableInfoStruct;
 #define PROJPROBLOX_BuyableAttachment_generated_h
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_12_DELEGATE \
-PROJPROBLOX_API void FOnBoughtAttachment_DelegateWrapper(const FMulticastScriptDelegate& OnBoughtAttachment);
+PROJPROBLOX_API void FOnDeselected_DelegateWrapper(const FMulticastScriptDelegate& OnDeselected);
 
 
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_13_DELEGATE \
