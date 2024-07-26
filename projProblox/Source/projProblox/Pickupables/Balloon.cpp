@@ -60,18 +60,17 @@ void ABalloon::Ability(float deltaTime)
 		return;
 	}
 	
-	if(!parentCore) return;
-	if(!parentCore->GetMesh()->IsSimulatingPhysics()) return;
+	if(!IsValid(parentCore)) return;
+	if(!parentCore->GetMesh()->IsGravityEnabled()) return;
 
 	const FVector thisVelocity = mesh->GetPhysicsLinearVelocity();
 	const FVector coreVelocity = parentCore->GetMesh()->GetPhysicsLinearVelocity();
 
 	float upAmount = thisVelocity.Z;
 	upAmount *= -deltaTime;
-	upAmount -= sqrt(parentCore->GetMass() / massMultiplier);
 	upAmount += floatiness; 
 
-	constexpr float velocityDampener = .988f;
+	constexpr float velocityDampener = .99f;
 	mesh->SetPhysicsLinearVelocity({coreVelocity.X * velocityDampener, coreVelocity.Y * velocityDampener, thisVelocity.Z + upAmount});
 }
 

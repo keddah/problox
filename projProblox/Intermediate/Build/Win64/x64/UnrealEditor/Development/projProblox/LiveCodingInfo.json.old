@@ -44,7 +44,6 @@
 			"WedgeConnector.gen.cpp.obj",
 			"WedgeSocketInfo.gen.cpp.obj",
 			"AudioManager.cpp.obj",
-			"Cell.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
@@ -77,6 +76,7 @@
 			"SettingsSave.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"SpawnSaves.cpp.obj",
+			"Cell.cpp.obj",
 			"Balloon.cpp.obj"
 		]
 	}

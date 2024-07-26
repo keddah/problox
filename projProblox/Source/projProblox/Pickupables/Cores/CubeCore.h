@@ -204,6 +204,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(APickupableMaster* toEject, bool playSound = true);
 	void EjectObject(const FName& ejectSocket, bool playSound = true) const;
+	void PlayDetachAll() const { soundPlayer->PlayDetachAll(); }
+	
 	
 	/////////////// Abilities ///////////////
 	virtual void SetAbilityActive(bool value) override;

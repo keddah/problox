@@ -524,5 +524,7 @@ bool APlayerCharacter::EjectAll()
 		
 		wrld->GetTimerManager().SetTimer(destroyHandle, timerDelegate, despawnDelay, false);
 	}
+	
+	core->PlayDetachAll();
 	return true;
 }
