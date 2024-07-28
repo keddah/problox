@@ -26,8 +26,8 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	virtual void SetAbilityActive(const bool value) override;
 
 	/////////////// Ability ///////////////
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f))
-	float moveSpeed = 5000;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 2))
+	unsigned int moveSpeed = 5000;
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

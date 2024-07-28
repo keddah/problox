@@ -1,5 +1,5 @@
 /**************************************************************************************************************
-* Glider - Code
+* Piston - Code (UNUSED) 
 * 
 * The code file for one of the pickupable objects.
 * PROBLEMS:

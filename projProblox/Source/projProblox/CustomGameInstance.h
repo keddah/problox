@@ -19,9 +19,10 @@ class PROJPROBLOX_API UCustomGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 	
-	short currentLevel;
+	unsigned short currentLevel;
+	
 	UMoneySave* moneySave;
-	int money;
+	unsigned int money;
 
 	UFUNCTION()
 	void LoadSave();
@@ -31,10 +32,10 @@ protected:
 	
 public:
 	void SetCurrentLevel(const short index) { currentLevel = index; }
-	short GetCurrentLevel() const { return currentLevel; }
+	unsigned short GetCurrentLevel() const { return currentLevel; }
 
 	void SaveMoney() const;
 	void LoseMoney(const int value);
 	void AddMoney(const int value);
-	int GetMoney() const { return money; }
+	unsigned short GetMoney() const { return money; }
 };

@@ -1,5 +1,5 @@
 /**************************************************************************************************************
-* Glider - Code
+* Thruster - Code
 * 
 * The code file for one of the pickupable objects.
 * PROBLEMS:

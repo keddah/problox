@@ -51,7 +51,7 @@ int ACollector::GetLvlCellCount(const ELevel& lvl) const
 	const UWorld* wrld = GetWorld();
 	TArray<AActor*> countArr;
 
-	int count = 0;
+	unsigned int count = 0;
 	
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
 	for (const auto& spawnActor: countArr)
@@ -75,7 +75,7 @@ int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
 	const UWorld* wrld = GetWorld();
 	TArray<AActor*> countArr;
 
-	int count = 0;
+	unsigned int count = 0;
 
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), countArr);
 	

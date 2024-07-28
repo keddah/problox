@@ -19,7 +19,8 @@
 #include "LevelManager.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLoadingLevel);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnScreenshotsTaken);
+// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnScreenshotsTaken);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFirstLoad);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedSpawn, int, spawn);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, ELevel, newLevel);
 
@@ -36,20 +37,13 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	ACubeCore* core;
 	
 	ASpawnPoint* lvl0Spawn;
-	TArray<ASpawnPoint*> allSpawns;
 	TArray<ASpawnPoint*> lvl1Spawns;
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
 
-	TArray<UTexture*> lvl1Screenshots;
-	TArray<UTexture*> lvl2Screenshots;
-	TArray<UTexture*> lvl3Screenshots;
-
-	TArray<ACellSpawner*> cellSpawners;
-	
-	bool lvl1Loaded;
-	bool lvl2Loaded;
-	bool lvl3Loaded;
+	// TArray<UTexture*> lvl1Screenshots;
+	// TArray<UTexture*> lvl2Screenshots;
+	// TArray<UTexture*> lvl3Screenshots;
 
 
 	/////////////////////////// FUNCTIONS ///////////////////////////
@@ -95,7 +89,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	// Returns whether a load file was found
 	bool LoadUnlockedSpawns();
 	
-	
+
 public:	
 	// Sets default values for this actor's properties
 	ALevelManager() { PrimaryActorTick.bCanEverTick = false; }
@@ -106,7 +100,7 @@ protected:
 	
 	/////////////////////////// VARIABLES ///////////////////////////
 	// The index of the current level.
-	short currentLevel = 1;
+	unsigned short currentLevel = 1;
 	ELevel levelEnum = ELevel::BuildArea;
 
 	UPROPERTY(BlueprintReadOnly)
@@ -120,8 +114,8 @@ protected:
 	UPROPERTY(BlueprintAssignable)
 	FOnLoadingLevel onLoadingLevel;
 
-	UPROPERTY(BlueprintAssignable)
-	FOnScreenshotsTaken onScreenshotsTaken;
+	// UPROPERTY(BlueprintAssignable)
+	// FOnScreenshotsTaken onScreenshotsTaken;
 	
 public:
 	/////////////////////////// VARIABLES ///////////////////////////
@@ -131,6 +125,9 @@ public:
 	
 	UPROPERTY(BlueprintAssignable)
 	FOnChangedSpawn onSpawnChanged;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnFirstLoad onFirstLoad;
 	
 
 	/////////////////////////// FUNCTIONS ///////////////////////////
@@ -155,10 +152,10 @@ public:
 	const TArray<ASpawnPoint*>& GetLevel3Spawns() const { return lvl3Spawns; }
 
 	// These return the screenshots from each spawn from each level
-	UFUNCTION(BlueprintCallable)
-	const TArray<UTexture*>& GetLevel1Screenshots() const { return lvl1Screenshots; }
-	UFUNCTION(BlueprintCallable)
-	const TArray<UTexture*>& GetLevel2Screenshots() const { return lvl2Screenshots; }
-	UFUNCTION(BlueprintCallable)
-	const TArray<UTexture*>& GetLevel3Screenshots() const { return lvl3Screenshots; }
+	// UFUNCTION(BlueprintCallable)
+	// const TArray<UTexture*>& GetLevel1Screenshots() const { return lvl1Screenshots; }
+	// UFUNCTION(BlueprintCallable)
+	// const TArray<UTexture*>& GetLevel2Screenshots() const { return lvl2Screenshots; }
+	// UFUNCTION(BlueprintCallable)
+	// const TArray<UTexture*>& GetLevel3Screenshots() const { return lvl3Screenshots; }
 };

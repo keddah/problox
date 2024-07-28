@@ -132,7 +132,7 @@ class PROJPROBLOX_API UMoneySave : public USaveGame
 	GENERATED_BODY()
 	UMoneySave() { money = 10000;  }
 
-	int money;
+	unsigned int money;
 
 
 public:

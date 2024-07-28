@@ -62,7 +62,7 @@ void AHoverer::Ability(float deltaTime)
 	{
 		if(!IsValid(point)) continue;
 		
-		for(int i = 0; i < 5; i++)
+		for(unsigned short i = 0; i < 5; i++)
 		{
 			FHitResult hit;
 			FCollisionQueryParams collisionParams;

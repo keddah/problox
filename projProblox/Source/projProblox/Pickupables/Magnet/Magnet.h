@@ -37,8 +37,8 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
 	float attractionForce = 15;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
-	float fieldRange = 1500000;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 10))
+	int fieldRange = 1500000;
 
 	bool magAttached;
 

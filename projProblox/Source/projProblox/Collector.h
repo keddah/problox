@@ -38,10 +38,10 @@ protected:
 	
 	/////////////// Cells ///////////////
 	UPROPERTY(BlueprintReadWrite)
-	int32 cellsInLevel;
+	int cellsInLevel;
 
 	UPROPERTY(BlueprintReadOnly)
-	int32 cellCount;
+	int cellCount;
 
 	/////////////// Other ///////////////
 	UPROPERTY(BlueprintReadOnly)

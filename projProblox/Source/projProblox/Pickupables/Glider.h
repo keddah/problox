@@ -3,7 +3,7 @@
 * 
 * The header file for one of the pickupable objects.
 * OVERRIDES:
-*	Ability
+*	SetAbilityActive
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/
@@ -31,10 +31,10 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 	virtual void Ability(float deltaTime) override;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float glideSpeed = 2000;
+	unsigned int glideSpeed = 2000;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability")
-	float floatAmount = 1750;
+	unsigned int floatAmount = 1750;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "How fast the object has to be falling in order to activate the glide (Z axis velocity)."))
 	float activationSpeed = 500;

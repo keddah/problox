@@ -88,25 +88,25 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
 	bool toggleSelection = false;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Controls",  BlueprintReadOnly, meta = (ToolTip = "The max speed the core is allowed to be going when trying to adjust the core's rotation.", Delta = .05f))
-	float adjustSpeedThreshold = 10;
+	UPROPERTY(EditDefaultsOnly, Category = "Controls",  BlueprintReadOnly, meta = (ToolTip = "The max speed the core is allowed to be going when trying to adjust the core's rotation.", Delta = 1))
+	int adjustSpeedThreshold = 10;
 	
 	
 	/////////////// Camera ///////////////
 	UPROPERTY(EditDefaultsOnly, Category = "Camera", BlueprintReadOnly)
 	FVector2f sensitivity {1.8f, 1.2f};
 
-	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = .1f))
-	float orbitSpeed = 100;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = .1f))
-	float camZoomSpeed = orbitSpeed;
+	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = 1))
+	int orbitSpeed = 100;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = 1))
-	float maxOrbitDistance = 2750;
+	int camZoomSpeed = orbitSpeed;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Orbit", BlueprintReadOnly, meta = (Delta = 1))
+	int maxOrbitDistance = 2750;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Orbit",  BlueprintReadOnly, meta = (Delta = 1))
-	float minOrbitDistance = 15;
+	int minOrbitDistance = 15;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* playerCam;
@@ -129,7 +129,7 @@ protected:
 	UCustomGameInstance* instance;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Controls")
-	float mouseDistance = 20000;
+	int mouseDistance = 20000;
 
 
 	/////////////// Game States ///////////////

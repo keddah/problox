@@ -55,7 +55,7 @@ void ABuyableAttachment::SetHide(const bool hide) const
 	if(!hide)
 	{
 		const FBuyableInfoStruct buyInfo = info->GetInfo();
-		for(int i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, buyInfo.attachmentMesh->GetMaterial(i));
+		for(unsigned short i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, buyInfo.attachmentMesh->GetMaterial(i));
 	}
 	// if(lockedMaterial) for(int i = 0; i < meshComp->GetNumMaterials(); i++) meshComp->SetMaterial(i, lockedMaterial);
 }

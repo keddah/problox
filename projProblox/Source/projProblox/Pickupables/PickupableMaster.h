@@ -20,11 +20,11 @@
 
 
 /// .................
-#define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, x); }
-#define PrintInt(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::FromInt(x)); }
-#define PrintFloat(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, FString::SanitizeFloat(x, 4)); }
-#define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.X, 4) + ", " + "Y: " + FString::SanitizeFloat(x.Y, 4) + ", " + "Z: " + FString::SanitizeFloat(x.Z, 4)); }
-#define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Cyan, "X: " + FString::SanitizeFloat(x.Roll, 4) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch, 4) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw, 4)); }
+#define Print(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Red, x); }
+#define PrintInt(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Red, FString::FromInt(x)); }
+#define PrintFloat(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Red, FString::SanitizeFloat(x, 4)); }
+#define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Red, "X: " + FString::SanitizeFloat(x.X, 4) + ", " + "Y: " + FString::SanitizeFloat(x.Y, 4) + ", " + "Z: " + FString::SanitizeFloat(x.Z, 4)); }
+#define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Red, "X: " + FString::SanitizeFloat(x.Roll, 4) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch, 4) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw, 4)); }
 
 class ACubeCore;
 UENUM(BlueprintType)
@@ -250,7 +250,7 @@ public:
 	virtual APickupableMaster* GetParent();
 
 	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
-	FName GetAttachedSocket() const { return attachedSocket; }
+	const FName& GetAttachedSocket() const { return attachedSocket; }
 	virtual bool GetIsAttached() const { return isAttached; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")
@@ -260,7 +260,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsTimerRequired() const { return needsTimer; }
 
-	ECoreSockets GetFavouredSocket() const { return favouredSlot; }
+	const ECoreSockets& GetFavouredSocket() const { return favouredSlot; }
 
 	UFUNCTION(BlueprintCallable, Category = "Getters")
 	const EAttachmentIcon& GetUIIcon() const { return uiIcon; }

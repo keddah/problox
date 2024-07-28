@@ -45,7 +45,7 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 {
 	GENERATED_BODY()
 
-	UBuyableInfo();
+	UBuyableInfo() { name = GetName(); }
 	
 	UPROPERTY(EditAnywhere)
 	FString name = "No description given...";
@@ -76,5 +76,5 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 
 public:
 	FBuyableInfoStruct GetInfo() const { return {name, description, comboIcon, objIcon, price, attachmentMesh, editScale, defaultScale, classToSpawn }; }
-	TSubclassOf<APickupableMaster> GetClassToSpawn() const { return classToSpawn; }
+	const TSubclassOf<APickupableMaster>& GetClassToSpawn() const { return classToSpawn; }
 };

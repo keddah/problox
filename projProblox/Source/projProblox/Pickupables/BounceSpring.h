@@ -35,7 +35,7 @@ class PROJPROBLOX_API ABounceSpring : public APickupableMaster
 	bool contracting;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Spring", meta = (Delta = 1, ToolTip = "The maximum amount the spring is allowed to stretch."))
-	float maxSpringLength = 3000;
+	unsigned int maxSpringLength = 3000;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Spring", meta = (Delta = 1, ToolTip = "The length of the spring when its fully compressed."))
 	float minSpringLength = maxSpringLength * .05f;

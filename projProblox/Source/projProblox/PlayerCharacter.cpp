@@ -145,7 +145,7 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 	const float dotProduct = FVector::DotProduct(newDirection, FVector::UpVector);
 
 	// Clamps the rotation
-	const float tolerance = 0.95f; 
+	constexpr float tolerance = 0.95f; 
 	if (FMath::Abs(dotProduct) < tolerance) direction = newDirection;
 
 	const FVector newPos = corePos + direction * radius;
@@ -320,9 +320,10 @@ void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTim
 	if(currentMode != EGameMode::Build) return;
 	
 	OrbitControls(deltaTime);
-	
+
 	// Only continue if the hit object is a mesh or a box collider (ignores its widget)...
-	if(!Cast<UStaticMeshComponent>(hit.GetComponent()) && !Cast<UBoxComponent>(hit.GetComponent())) return;
+	UPrimitiveComponent* hitComp = hit.GetComponent();
+	if(!Cast<UStaticMeshComponent>(hitComp) && !Cast<UBoxComponent>(hitComp)) return;
 	AActor* hitActor = hit.GetActor();
 
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
@@ -347,46 +348,19 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 	if(currentMode != EGameMode::Build) return;
 
 	// Only continue if the hit object is a mesh or a box collider...
-	if (!(Cast<UStaticMeshComponent>(hit.GetComponent()) || Cast<UBoxComponent>(hit.GetComponent()))) return;
+	UPrimitiveComponent* hitComp = hit.GetComponent();
+	if (!(Cast<UStaticMeshComponent>(hitComp) || Cast<UBoxComponent>(hitComp))) return;
 	AActor* hitActor = hit.GetActor();
 	
 	if(ABuyableAttachment* buyable = Cast<ABuyableAttachment>(hitActor))
 	{
+		// Don't do anything if the clicked buyable is already selected.
 		if(buyable == selectedBuyable) return;
 		
-		const FBuyableInfoStruct buyInfo = buyable->GetInfo();
-		// if(!buyable->IsUnlocked())
-		// {
-		// 	if(!core)
-		// 	{
-		// 		Print("Couldn't buy object because the core was invalid...", 4)
-		// 		return;
-		// 	}
-		// 	if (!instance) 
-		// 	{
-		// 		Print("Couldn't buy because instance was invald...", 4)
-		// 		return;
-		// 	}
-		//
-		// 	const int money = instance->GetMoney();
-		// 	if(money < buyInfo.price)
-		// 	{
-		// 		Print("Couldn't afford it...: " + FString::FromInt(money), 4)
-		// 		return;
-		// 	}
-		//
-		// 	// Deselect the selected object
-		// 	if(selectedObj) selectedObj->Deselect();
-		// 	instance->LoseMoney(buyInfo.price);
-		// 	// Print("new balance = " + FString::FromInt(instance->GetMoney()), 5)
-		//
-		// 	buyable->UnlockAttachment();
-		// 	return;
-		// }
-		
-		/////////////// When clicking on an unlocked buyable ///////////////
 		// Don't do anything if there aren't any free slots...
 		if(core->GetFreeSockets().IsEmpty()) return;
+
+		const FBuyableInfoStruct buyInfo = buyable->GetInfo();
 
 		UWorld* wrld = GetWorld();
 		if(!wrld)

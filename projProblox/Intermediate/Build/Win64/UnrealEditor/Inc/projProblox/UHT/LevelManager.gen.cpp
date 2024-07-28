@@ -11,15 +11,14 @@ void EmptyLinkFunctionForGeneratedCodeLevelManager() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_ULevelStreamingDynamic_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UTexture_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ALevelManager();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ALevelManager_NoRegister();
 	PROJPROBLOX_API UClass* Z_Construct_UClass_ASpawnPoint_NoRegister();
 	PROJPROBLOX_API UEnum* Z_Construct_UEnum_projProblox_ELevel();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnChangedLevels__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature();
+	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature();
 	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature();
-	PROJPROBLOX_API UFunction* Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_projProblox();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature_Statics
@@ -48,7 +47,7 @@ void FOnLoadingLevel_DelegateWrapper(const FMulticastScriptDelegate& OnLoadingLe
 {
 	OnLoadingLevel.ProcessMulticastDelegate<UObject>(NULL);
 }
-	struct Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature_Statics
+	struct Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature_Statics
 	{
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -56,23 +55,29 @@ void FOnLoadingLevel_DelegateWrapper(const FMulticastScriptDelegate& OnLoadingLe
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnScreenshotsTaken);\n" },
+#endif
 		{ "ModuleRelativePath", "LevelManager.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnScreenshotsTaken);" },
+#endif
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnScreenshotsTaken__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnFirstLoad__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-void FOnScreenshotsTaken_DelegateWrapper(const FMulticastScriptDelegate& OnScreenshotsTaken)
+void FOnFirstLoad_DelegateWrapper(const FMulticastScriptDelegate& OnFirstLoad)
 {
-	OnScreenshotsTaken.ProcessMulticastDelegate<UObject>(NULL);
+	OnFirstLoad.ProcessMulticastDelegate<UObject>(NULL);
 }
 	struct Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature_Statics
 	{
@@ -171,27 +176,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	Parms.newLevel=newLevel;
 	OnChangedLevels.ProcessMulticastDelegate<UObject>(&Parms);
 }
-	DEFINE_FUNCTION(ALevelManager::execGetLevel3Screenshots)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(TArray<UTexture*>*)Z_Param__Result=P_THIS->GetLevel3Screenshots();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ALevelManager::execGetLevel2Screenshots)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(TArray<UTexture*>*)Z_Param__Result=P_THIS->GetLevel2Screenshots();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ALevelManager::execGetLevel1Screenshots)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(TArray<UTexture*>*)Z_Param__Result=P_THIS->GetLevel1Screenshots();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ALevelManager::execGetLevel3Spawns)
 	{
 		P_FINISH;
@@ -277,11 +261,8 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FNameNativePtrPair Funcs[] = {
 			{ "FindSpawns", &ALevelManager::execFindSpawns },
 			{ "GetCurrentLevel", &ALevelManager::execGetCurrentLevel },
-			{ "GetLevel1Screenshots", &ALevelManager::execGetLevel1Screenshots },
 			{ "GetLevel1Spawns", &ALevelManager::execGetLevel1Spawns },
-			{ "GetLevel2Screenshots", &ALevelManager::execGetLevel2Screenshots },
 			{ "GetLevel2Spawns", &ALevelManager::execGetLevel2Spawns },
-			{ "GetLevel3Screenshots", &ALevelManager::execGetLevel3Screenshots },
 			{ "GetLevel3Spawns", &ALevelManager::execGetLevel3Spawns },
 			{ "LoadLevel", &ALevelManager::execLoadLevel },
 			{ "OnHidden", &ALevelManager::execOnHidden },
@@ -357,57 +338,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics
-	{
-		struct LevelManager_eventGetLevel1Screenshots_Parms
-		{
-			TArray<UTexture*> ReturnValue;
-		};
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
-#endif
-		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UTexture_NoRegister, METADATA_PARAMS(0, nullptr) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::NewProp_ReturnValue_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000008000582, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(LevelManager_eventGetLevel1Screenshots_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::NewProp_ReturnValue_MetaData) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::NewProp_ReturnValue_Inner,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// These return the screenshots from each spawn from each level\n" },
-#endif
-		{ "ModuleRelativePath", "LevelManager.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "These return the screenshots from each spawn from each level" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "GetLevel1Screenshots", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::LevelManager_eventGetLevel1Screenshots_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::LevelManager_eventGetLevel1Screenshots_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_ALevelManager_GetLevel1Spawns_Statics
 	{
 		struct LevelManager_eventGetLevel1Spawns_Parms
@@ -459,51 +389,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics
-	{
-		struct LevelManager_eventGetLevel2Screenshots_Parms
-		{
-			TArray<UTexture*> ReturnValue;
-		};
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
-#endif
-		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UTexture_NoRegister, METADATA_PARAMS(0, nullptr) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::NewProp_ReturnValue_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000008000582, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(LevelManager_eventGetLevel2Screenshots_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::NewProp_ReturnValue_MetaData) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::NewProp_ReturnValue_Inner,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "LevelManager.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "GetLevel2Screenshots", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::LevelManager_eventGetLevel2Screenshots_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::LevelManager_eventGetLevel2Screenshots_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_ALevelManager_GetLevel2Spawns_Statics
 	{
 		struct LevelManager_eventGetLevel2Spawns_Parms
@@ -546,51 +431,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_GetLevel2Spawns_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics
-	{
-		struct LevelManager_eventGetLevel3Screenshots_Parms
-		{
-			TArray<UTexture*> ReturnValue;
-		};
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
-#endif
-		static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UTexture_NoRegister, METADATA_PARAMS(0, nullptr) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::NewProp_ReturnValue_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000008000582, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(LevelManager_eventGetLevel3Screenshots_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::NewProp_ReturnValue_MetaData) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::NewProp_ReturnValue_Inner,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "LevelManager.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelManager, nullptr, "GetLevel3Screenshots", nullptr, nullptr, Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::PropPointers), sizeof(Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::LevelManager_eventGetLevel3Screenshots_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::LevelManager_eventGetLevel3Screenshots_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -857,10 +697,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 #endif
 		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onLoadingLevel;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_onScreenshotsTaken_MetaData[];
-#endif
-		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onScreenshotsTaken;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_onLevelChanged_MetaData[];
 #endif
 		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onLevelChanged;
@@ -868,6 +704,10 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_onSpawnChanged_MetaData[];
 #endif
 		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onSpawnChanged;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_onFirstLoad_MetaData[];
+#endif
+		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onFirstLoad;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -880,11 +720,8 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	const FClassFunctionLinkInfo Z_Construct_UClass_ALevelManager_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ALevelManager_FindSpawns, "FindSpawns" }, // 587090323
 		{ &Z_Construct_UFunction_ALevelManager_GetCurrentLevel, "GetCurrentLevel" }, // 257163267
-		{ &Z_Construct_UFunction_ALevelManager_GetLevel1Screenshots, "GetLevel1Screenshots" }, // 114784450
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel1Spawns, "GetLevel1Spawns" }, // 3445442489
-		{ &Z_Construct_UFunction_ALevelManager_GetLevel2Screenshots, "GetLevel2Screenshots" }, // 3949829570
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel2Spawns, "GetLevel2Spawns" }, // 2339672390
-		{ &Z_Construct_UFunction_ALevelManager_GetLevel3Screenshots, "GetLevel3Screenshots" }, // 491255176
 		{ &Z_Construct_UFunction_ALevelManager_GetLevel3Spawns, "GetLevel3Spawns" }, // 1683549394
 		{ &Z_Construct_UFunction_ALevelManager_LoadLevel, "LoadLevel" }, // 2367168764
 		{ &Z_Construct_UFunction_ALevelManager_OnHidden, "OnHidden" }, // 2857873469
@@ -926,12 +763,6 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 #endif
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ALevelManager_Statics::NewProp_onLoadingLevel = { "onLoadingLevel", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALevelManager, onLoadingLevel), Z_Construct_UDelegateFunction_projProblox_OnLoadingLevel__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::NewProp_onLoadingLevel_MetaData), Z_Construct_UClass_ALevelManager_Statics::NewProp_onLoadingLevel_MetaData) }; // 1426361282
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALevelManager_Statics::NewProp_onScreenshotsTaken_MetaData[] = {
-		{ "ModuleRelativePath", "LevelManager.h" },
-	};
-#endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ALevelManager_Statics::NewProp_onScreenshotsTaken = { "onScreenshotsTaken", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALevelManager, onScreenshotsTaken), Z_Construct_UDelegateFunction_projProblox_OnScreenshotsTaken__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::NewProp_onScreenshotsTaken_MetaData), Z_Construct_UClass_ALevelManager_Statics::NewProp_onScreenshotsTaken_MetaData) }; // 1395783005
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALevelManager_Statics::NewProp_onLevelChanged_MetaData[] = {
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/////////////////////////// VARIABLES ///////////////////////////\n////////////// DELEGATES ///////////\n" },
@@ -949,14 +780,20 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 	};
 #endif
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ALevelManager_Statics::NewProp_onSpawnChanged = { "onSpawnChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALevelManager, onSpawnChanged), Z_Construct_UDelegateFunction_projProblox_OnChangedSpawn__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::NewProp_onSpawnChanged_MetaData), Z_Construct_UClass_ALevelManager_Statics::NewProp_onSpawnChanged_MetaData) }; // 1927768340
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALevelManager_Statics::NewProp_onFirstLoad_MetaData[] = {
+		{ "ModuleRelativePath", "LevelManager.h" },
+	};
+#endif
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ALevelManager_Statics::NewProp_onFirstLoad = { "onFirstLoad", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALevelManager, onFirstLoad), Z_Construct_UDelegateFunction_projProblox_OnFirstLoad__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ALevelManager_Statics::NewProp_onFirstLoad_MetaData), Z_Construct_UClass_ALevelManager_Statics::NewProp_onFirstLoad_MetaData) }; // 3194864220
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALevelManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_bLevelLoading,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_levels_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_levels,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_onLoadingLevel,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_onScreenshotsTaken,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_onLevelChanged,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_onSpawnChanged,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALevelManager_Statics::NewProp_onFirstLoad,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ALevelManager_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ALevelManager>::IsAbstract,
@@ -996,9 +833,9 @@ void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDelegate& OnChangedL
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 1576551327U) },
+		{ Z_Construct_UClass_ALevelManager, ALevelManager::StaticClass, TEXT("ALevelManager"), &Z_Registration_Info_UClass_ALevelManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALevelManager), 813254426U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_424247465(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_1374577022(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_LevelManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

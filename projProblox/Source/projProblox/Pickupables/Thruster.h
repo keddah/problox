@@ -27,10 +27,12 @@ class PROJPROBLOX_API AThruster : public APickupableMaster
 	virtual void Ability(float deltaTime) override { if(thrusterComp) thrusterComp->SetActive(active); }
 	virtual void SetAbilityActive(const bool value) override;
 	virtual void GhostSnapRotate(const FString& keypress) override;
-	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
-	UPhysicsThrusterComponent* thrusterComp;
-	
+
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
 	float power = 56;
+
+protected:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPhysicsThrusterComponent* thrusterComp;
+	
 };

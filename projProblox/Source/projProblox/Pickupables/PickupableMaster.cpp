@@ -19,53 +19,6 @@
 #include "Cores/Connectors/CubeConnector.h"
 
 
-void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
-{
-	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
-	{
-		//soundPlayer->StopImpact();
-		return;
-	}
-
-	if(!IsValid(OtherActor)) return;
-	if(OtherActor->IsA<APickupableMaster>()) return;
-	if(OtherActor->IsA<ACell>()) return;
-	
-	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
-	constexpr float minForce = 800;
-	const float force = velocity.Length();
-	
-	if(force < minForce) return;
-
-	//soundPlayer->SetFloatParam("ImpactForce", ::cbrt(force) * .35f);
-	//soundPlayer->PlayImpact();
-	//PrintFloat(std::cbrt(force) * .35f, 3)
-}
-
-void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
-	{
-		//soundPlayer->StopImpact();
-		return;
-	}
-	
-	if(!IsValid(OtherActor)) return;
-	if(OtherActor->IsA<APickupableMaster>()) return;
-	if(OtherActor->IsA<ACell>()) return;
-
-	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
-	constexpr float minForce = 800;
-	const float force = velocity.Length();
-	
-	if(force < minForce) return;
-
-	//soundPlayer->SetFloatParam("ImpactForce", std::cbrt(force) * .35f);
-	//soundPlayer->PlayImpact();
-	//PrintFloat(std::cbrt(force) * .35f, 3)
-}
-
 // Sets default values
 APickupableMaster::APickupableMaster()
 {
@@ -166,6 +119,52 @@ void APickupableMaster::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	Ability(DeltaTime);
+}
+
+void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
+	{
+		//soundPlayer->StopImpact();
+		return;
+	}
+
+	if(!IsValid(OtherActor)) return;
+	if(OtherActor->IsA<APickupableMaster>()) return;
+	if(OtherActor->IsA<ACell>()) return;
+	
+	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
+	constexpr float minForce = 800;
+	const float force = velocity.Length();
+	
+	if(force < minForce) return;
+
+	//soundPlayer->SetFloatParam("ImpactForce", ::cbrt(force) * .35f);
+	//soundPlayer->PlayImpact();
+	//PrintFloat(std::cbrt(force) * .35f, 3)
+}
+
+void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
+	{
+		//soundPlayer->StopImpact();
+		return;
+	}
+	
+	if(!IsValid(OtherActor)) return;
+	if(OtherActor->IsA<APickupableMaster>()) return;
+	if(OtherActor->IsA<ACell>()) return;
+
+	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
+	constexpr float minForce = 800;
+	const float force = velocity.Length();
+	
+	if(force < minForce) return;
+
+	//soundPlayer->SetFloatParam("ImpactForce", std::cbrt(force) * .35f);
+	//soundPlayer->PlayImpact();
+	//PrintFloat(std::cbrt(force) * .35f, 3)
 }
 
 void APickupableMaster::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -341,7 +340,7 @@ FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool n
 {
 	// Quantize each component of the Rotator using Frac and Floor
 	FRotator rounded;
-	const float rounder = negate? -90 : 90;
+	const int rounder = negate? -90 : 90;
 		
 	// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
 	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
@@ -432,8 +431,8 @@ void APickupableMaster::GhostSnapRotate(const FString& keypress)
 {
 	if(snapRot) return;
 	
-	const float turn = keypress == "Q" ? -90 : 90;
-	silhouette->AddRelativeRotation({0,0,turn});
+	const int turn = keypress == "Q" ? -90 : 90;
+	silhouette->AddRelativeRotation(FRotator(0,0,turn));
 }
 
 
@@ -529,7 +528,7 @@ APickupableMaster* APickupableMaster::GetParent()
 bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
 {
 	const AActor* current = this;
-	while (AActor* toCheck = current->GetAttachParentActor())
+	while (const AActor* toCheck = current->GetAttachParentActor())
 	{
 		current = toCheck;
 		if(current == parent) return true;

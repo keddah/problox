@@ -29,7 +29,7 @@ void ALevelManager::BeginPlay()
 	FindCore();
 
 	// Get the level instances that are a part of the main world
-	for (auto& levelStream : wrld->GetStreamingLevels())
+	for (const auto& levelStream : wrld->GetStreamingLevels())
 	{
 		if (levelStream && levelStream->IsA<ULevelStreamingDynamic>())
 		{
@@ -152,7 +152,7 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 
 void ALevelManager::UnloadUnusedLevels()
 {
-	for(int i = 0; i < levels.Num(); i++)
+	for(unsigned short i = 0; i < levels.Num(); i++)
 	{
 		// Ignore the current level
 		if(i == currentLevel) continue;
@@ -167,7 +167,7 @@ void ALevelManager::FindCore()
 	// Isn't really necessary anymore since connectors aren't being used.
 	TArray<AActor*> coreActors;
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACubeCore::StaticClass(), coreActors);
-	for (auto& ACore: coreActors)
+	for (const auto& ACore: coreActors)
 	{
 		// Ignore connectors....
 		if(ACore->IsA<ACubeConnector>()) continue;
@@ -182,7 +182,7 @@ void ALevelManager::FindSpawns()
 	if(!IsValid(wrld)) return;
 	
 	// Only do this once. (will be called everytime a level loads)
-	if(!(lvl1Screenshots.IsEmpty() && lvl2Screenshots.IsEmpty() && lvl3Screenshots.IsEmpty())) return;
+	// if(!(lvl1Screenshots.IsEmpty() && lvl2Screenshots.IsEmpty() && lvl3Screenshots.IsEmpty())) return;
 
 	FTimerHandle delay;
 	auto ConfigSpawners = [this]
@@ -190,12 +190,10 @@ void ALevelManager::FindSpawns()
 		// Get all the spawn points from the PERSISTENT level
 		TArray<AActor*> spawns;
 		UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
-		for (auto& spawn : spawns) 
+		for (const auto& spawn : spawns) 
 		{
 			ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
 			if(!IsValid(point)) continue;
-
-			allSpawns.Add(point);
 
 			// Foreach spawn point add a delegate to save whenever it has been unlocked
 			point->onNewSpawn.AddDynamic(this, &ALevelManager::ALevelManager::SaveSpawns);
@@ -212,40 +210,43 @@ void ALevelManager::FindSpawns()
 				case ELevel::Bedroom:
 					point->SetLevelIndex(1);
 					lvl1Spawns.Add(point);
-					lvl1Screenshots.Add(point->CaptureScreenshot());
+					// lvl1Screenshots.Add(point->CaptureScreenshot());
 					break;
 						
 				case ELevel::Kitchen:
 					point->SetLevelIndex(2);
 					lvl2Spawns.Add(point);
-					lvl2Screenshots.Add(point->CaptureScreenshot());
+					// lvl2Screenshots.Add(point->CaptureScreenshot());
 					break;
 						
 				case ELevel::Bathroom:
 					point->SetLevelIndex(3);
 					lvl3Spawns.Add(point);
-					lvl3Screenshots.Add(point->CaptureScreenshot());
+					// lvl3Screenshots.Add(point->CaptureScreenshot());
 					break;
 			}
 		}
-	
+		
 		// If there wasn't a save file...
 		LoadUnlockedSpawns();
 
-		// Initialise the cell spawns (spawns all the cells from every level then makes them dormant)
+		// Initialise the cell spawns (spawns all the cells from every level)
+		onFirstLoad.Broadcast();
 		InitSpawners();
-	
-		// In blueprint... load the build area when this is broadcast so that the rest of the levels are hidden (needs to be done after the screenshots are taken).
-		onScreenshotsTaken.Broadcast();
 
-		// Remove the delegate so that it doesn't happen again
+		// In blueprint... load the build area when this is broadcast so that the rest of the levels are hidden (needs to be done after the screenshots are taken).
+		// onScreenshotsTaken.Broadcast();
+
+		// Remove the delegate once the last level has been loaded so that it doesn't happen again
 		if(levels.IsEmpty()) return;
 		levels[levels.Num() - 1]->OnLevelShown.RemoveDynamic(this, &ALevelManager::FindSpawns);
 	};
 
 	// Run the above after 1 second to ensure the levels are completely loaded for the screenshot.
+	// (breaks without the delay)
 	wrld->GetTimerManager().SetTimer(delay, ConfigSpawners, 1, false);
 }
+
 
 void ALevelManager::InitSpawners()
 {
@@ -258,7 +259,7 @@ void ALevelManager::InitSpawners()
 	TArray<AActor*> actors;
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), actors);
 
-	for(auto& cellSpawner: actors)
+	for(const auto& cellSpawner: actors)
 	{
 		ACellSpawner* spawner = Cast<ACellSpawner>(cellSpawner);
 		if(!IsValid(spawner)) continue;
@@ -276,12 +277,13 @@ void ALevelManager::InitSpawners()
 				lvl = levels[3];
 				break;
 
-			default: break;
+			default:
+				Print("Spawner was assigned to the wrong level...: " + spawner->GetName(), 5)
+				break;
 		}
 
 		if(!levels[0]) Print("build area invalid", 4)
 		if(!spawner->Init(lvl, levels[0])) continue;
-		cellSpawners.Add(spawner);
 
 		// Always stop the send when the level changes
 		onLevelChanged.AddDynamic(spawner, &ACellSpawner::StopSound);
