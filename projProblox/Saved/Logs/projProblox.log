@@ -6593,3 +6593,262 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.28-18.25.24:179][ 22]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
 [2024.07.28-18.25.24:216][ 23]LogPlayLevel: Display: Destroying online subsystem :Context_20
 [2024.07.28-18.25.24:229][ 23]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.07.28-18.28.50:109][107]LogSlate: Took 0.000155 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.07.28-18.28.50:245][121]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.28.51:445][220]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.30.05:163][831]LogSlate: Window 'Delete Function' being destroyed
+[2024.07.28-18.30.08:229][127]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.07.28-18.30.08:232][127]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.019
+[2024.07.28-18.30.08:233][127]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/HUD/WBP_AreaSelect] ([2] browsable assets)...
+[2024.07.28-18.30.08:237][127]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/HUD/WBP_AreaSelect.WBP_AreaSelect]
+[2024.07.28-18.30.08:237][127]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/HUD/WBP_AreaSelect]
+[2024.07.28-18.30.08:247][127]LogPackageLocalizationCache: Processed 47 localized package path(s) for 1 prioritized culture(s) in 0.008887 seconds
+[2024.07.28-18.30.08:327][127]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/HUD/WBP_AreaSelect_Auto1
+[2024.07.28-18.30.08:328][127]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_AreaSelect_Auto1AD65D2B643893B202CC4F4B3EB899348.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/HUD/WBP_AreaSelect_Auto1.uasset'
+[2024.07.28-18.30.08:329][127]LogFileHelpers: Auto-saving content packages took 0.096
+[2024.07.28-18.30.52:843][311]BlueprintLog: New page: Compile WBP_AreaSelect
+[2024.07.28-18.30.52:901][311]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2024.07.28-18.30.53:045][311]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.30.53:073][311]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/HUD/WBP_AreaSelect" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/HUD/WBP_AreaSelect.uasset" SILENT=true
+[2024.07.28-18.30.53:149][311]LogSavePackage: Moving output files for package: /Game/UI/HUD/WBP_AreaSelect
+[2024.07.28-18.30.53:150][311]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_AreaSelect4E6EF67542BACB2C76EE87BB34FC8A83.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/HUD/WBP_AreaSelect.uasset'
+[2024.07.28-18.30.53:157][311]LogFileHelpers: InternalPromptForCheckoutAndSave took 111 ms
+[2024.07.28-18.30.53:159][311]AssetCheck: New page: Asset Save: WBP_AreaSelect
+[2024.07.28-18.30.53:159][311]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/HUD/WBP_AreaSelect.WBP_AreaSelect
+[2024.07.28-18.30.59:114][848]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/HUD/WBP_Construction.WBP_Construction
+[2024.07.28-18.30.59:114][848]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.30.59:114][848]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.30.59:120][848]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.30.59:120][848]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.31.56:169][660]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/HUD/WBP_HUD.WBP_HUD
+[2024.07.28-18.31.56:169][660]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.31.56:169][660]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.31.56:177][660]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.31.56:177][660]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.33.32:180][780]BlueprintLog: New page: Compile WBP_HUD
+[2024.07.28-18.33.32:238][780]LogUObjectHash: Compacting FUObjectHashTables data took   1.50ms
+[2024.07.28-18.33.32:337][780]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.33.32:367][780]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/HUD/WBP_HUD" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/HUD/WBP_HUD.uasset" SILENT=true
+[2024.07.28-18.33.32:403][780]LogSavePackage: Moving output files for package: /Game/UI/HUD/WBP_HUD
+[2024.07.28-18.33.32:403][780]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_HUDCDDD09594D9FBEFC75905E8207994367.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/HUD/WBP_HUD.uasset'
+[2024.07.28-18.33.32:409][780]LogFileHelpers: InternalPromptForCheckoutAndSave took 71 ms (total: 183 ms)
+[2024.07.28-18.33.32:411][780]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.07.28-18.33.32:411][780]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/HUD/WBP_HUD.WBP_HUD
+[2024.07.28-18.33.36:546][131]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/HUD/WBP_LevelSelect.WBP_LevelSelect
+[2024.07.28-18.33.36:546][131]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.33.36:546][131]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.33.36:552][131]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.33.36:552][131]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.35.37:588][204]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.07.28-18.35.37:591][204]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.025
+[2024.07.28-18.35.37:591][204]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/HUD/WBP_LevelSelect] ([2] browsable assets)...
+[2024.07.28-18.35.37:597][204]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/HUD/WBP_LevelSelect.WBP_LevelSelect]
+[2024.07.28-18.35.37:597][204]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/HUD/WBP_LevelSelect]
+[2024.07.28-18.35.37:641][204]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/HUD/WBP_LevelSelect_Auto2
+[2024.07.28-18.35.37:641][204]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_LevelSelect_Auto2EDACDD15413C66DEE8733783F3C5D2C8.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/HUD/WBP_LevelSelect_Auto2.uasset'
+[2024.07.28-18.35.37:643][204]LogFileHelpers: Auto-saving content packages took 0.052
+[2024.07.28-18.35.58:625][ 82]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_PauseMenu.WBP_PauseMenu
+[2024.07.28-18.35.58:626][ 82]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.35.58:626][ 82]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.35.58:632][ 82]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.35.58:632][ 82]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.36.13:544][393]BlueprintLog: New page: Compile WBP_PauseMenu
+[2024.07.28-18.36.13:586][393]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2024.07.28-18.36.13:687][393]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.36.13:714][393]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_PauseMenu" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Menus/WBP_PauseMenu.uasset" SILENT=true
+[2024.07.28-18.36.13:733][393]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_PauseMenu
+[2024.07.28-18.36.13:733][393]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_PauseMenuCA72A5E64A5B38F09C7D02A276F768C6.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Menus/WBP_PauseMenu.uasset'
+[2024.07.28-18.36.13:740][393]LogFileHelpers: InternalPromptForCheckoutAndSave took 53 ms (total: 236 ms)
+[2024.07.28-18.36.13:742][393]AssetCheck: New page: Asset Save: WBP_PauseMenu
+[2024.07.28-18.36.13:742][393]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_PauseMenu.WBP_PauseMenu
+[2024.07.28-18.36.19:051][853]LogWorld: UWorld::CleanupWorld for World_26, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.36.19:051][853]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.36.19:071][853]LogWorld: UWorld::CleanupWorld for World_25, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.36.19:071][853]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.36.24:247][306]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_WarningPrompt.WBP_WarningPrompt
+[2024.07.28-18.36.24:247][306]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.36.24:247][306]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.36.24:253][306]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.36.24:254][306]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.36.45:184][199]LogWorld: UWorld::CleanupWorld for World_29, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.36.45:185][199]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.36.45:205][199]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.36.45:205][199]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.36.56:713][185]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_DragWidget.WBP_DragWidget
+[2024.07.28-18.36.56:713][185]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.36.56:714][185]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.36.56:721][185]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.36.56:721][185]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.39.19:591][250]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.07.28-18.39.19:595][250]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.034
+[2024.07.28-18.39.19:595][250]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Timeline/WBP_DragWidget] ([2] browsable assets)...
+[2024.07.28-18.39.19:597][250]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Timeline/WBP_DragWidget.WBP_DragWidget]
+[2024.07.28-18.39.19:598][250]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Timeline/WBP_DragWidget]
+[2024.07.28-18.39.19:651][250]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Timeline/WBP_DragWidget_Auto3
+[2024.07.28-18.39.19:652][250]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget_Auto3468400B04470E8A0CEF711BB3FF5994D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Autosaves/Game/UI/Timeline/WBP_DragWidget_Auto3.uasset'
+[2024.07.28-18.39.19:654][250]LogFileHelpers: Auto-saving content packages took 0.059
+[2024.07.28-18.41.26:170][507]BlueprintLog: New page: Compile WBP_DragWidget
+[2024.07.28-18.41.26:255][507]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.07.28-18.41.26:386][507]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.41.26:405][507]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_DragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset" SILENT=true
+[2024.07.28-18.41.26:457][507]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_DragWidget
+[2024.07.28-18.41.26:458][507]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_DragWidget9BB1DE0D4A85B114A25F26B17F8F922C.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_DragWidget.uasset'
+[2024.07.28-18.41.26:463][507]LogFileHelpers: InternalPromptForCheckoutAndSave took 77 ms (total: 313 ms)
+[2024.07.28-18.41.26:465][507]AssetCheck: New page: Asset Save: WBP_DragWidget
+[2024.07.28-18.41.26:465][507]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_DragWidget.WBP_DragWidget
+[2024.07.28-18.41.28:176][649]LogUObjectHash: Compacting FUObjectHashTables data took   1.69ms
+[2024.07.28-18.41.28:254][649]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.41.28:280][649]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/HUD/WBP_LevelSelect" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/HUD/WBP_LevelSelect.uasset" SILENT=true
+[2024.07.28-18.41.28:324][649]LogSavePackage: Moving output files for package: /Game/UI/HUD/WBP_LevelSelect
+[2024.07.28-18.41.28:325][649]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_LevelSelect17C0B84C4A348F88CDAECCB8A1606CA0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/HUD/WBP_LevelSelect.uasset'
+[2024.07.28-18.41.28:330][649]LogFileHelpers: InternalPromptForCheckoutAndSave took 75 ms (total: 389 ms)
+[2024.07.28-18.41.28:332][649]AssetCheck: New page: Asset Save: WBP_LevelSelect
+[2024.07.28-18.41.28:332][649]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/HUD/WBP_LevelSelect.WBP_LevelSelect
+[2024.07.28-18.41.29:347][746]LogWorld: UWorld::CleanupWorld for World_24, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.29:347][746]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.29:367][746]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.29:367][746]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.29:761][777]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.29:761][777]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.29:780][777]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.29:780][777]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.30:208][814]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.30:208][814]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.30:227][814]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.30:227][814]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.30:642][849]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.30:643][849]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.30:661][849]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.30:661][849]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.31:817][962]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.31:817][962]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.31:836][962]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.31:836][962]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.32:289][  3]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.32:289][  3]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.32:519][ 18]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.32:519][ 18]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.32:538][ 18]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.32:538][ 18]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.32:770][ 37]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.07.28-18.41.32:770][ 37]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.32:770][ 37]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.33:092][ 63]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.07.28-18.41.33:092][ 63]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.33:092][ 63]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.33:326][ 83]LogSlate: Window 'Document' being destroyed
+[2024.07.28-18.41.33:330][ 83]LogSlate: Window 'Document' being destroyed
+[2024.07.28-18.41.33:346][ 83]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.07.28-18.41.33:346][ 83]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.33:346][ 83]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.33:578][102]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.07.28-18.41.33:578][102]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.33:578][102]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.33:995][139]LogWorld: UWorld::CleanupWorld for World_31, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.33:995][139]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.34:014][139]LogWorld: UWorld::CleanupWorld for World_30, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.41.34:014][139]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.41.37:458][448]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_MockDragWidget.WBP_MockDragWidget
+[2024.07.28-18.41.37:458][448]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.41.37:458][448]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.41.37:472][448]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.41.37:472][448]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.41.55:013][ 97]BlueprintLog: New page: Compile WBP_MockDragWidget
+[2024.07.28-18.41.55:074][ 97]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2024.07.28-18.41.55:180][ 97]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.41.55:204][ 97]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_MockDragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_MockDragWidget.uasset" SILENT=true
+[2024.07.28-18.41.55:213][ 97]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_MockDragWidget
+[2024.07.28-18.41.55:213][ 97]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_MockDragWidgetA9FF9CAD4B2329E93C84139FEE497235.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_MockDragWidget.uasset'
+[2024.07.28-18.41.55:219][ 97]LogFileHelpers: InternalPromptForCheckoutAndSave took 39 ms (total: 428 ms)
+[2024.07.28-18.41.55:220][ 97]AssetCheck: New page: Asset Save: WBP_MockDragWidget
+[2024.07.28-18.41.55:220][ 97]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_MockDragWidget.WBP_MockDragWidget
+[2024.07.28-18.42.01:100][675]BlueprintLog: New page: Compile WBP_MockDragWidget
+[2024.07.28-18.42.01:149][675]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2024.07.28-18.42.01:254][675]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.42.01:280][675]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_MockDragWidget" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_MockDragWidget.uasset" SILENT=true
+[2024.07.28-18.42.01:291][675]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_MockDragWidget
+[2024.07.28-18.42.01:292][675]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_MockDragWidgetA4A84E194C44731AC95BDA934199B12D.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_MockDragWidget.uasset'
+[2024.07.28-18.42.01:297][675]LogFileHelpers: InternalPromptForCheckoutAndSave took 42 ms (total: 471 ms)
+[2024.07.28-18.42.01:305][675]AssetCheck: New page: Asset Save: WBP_MockDragWidget
+[2024.07.28-18.42.01:306][675]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_MockDragWidget.WBP_MockDragWidget
+[2024.07.28-18.42.03:705][901]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_Timeline.WBP_Timeline
+[2024.07.28-18.42.03:705][901]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.42.03:705][901]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.42.03:712][901]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.42.03:713][901]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.44.19:764][990]BlueprintLog: New page: Compile WBP_Timeline
+[2024.07.28-18.44.19:848][990]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.07.28-18.44.19:969][990]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.44.19:999][990]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Timeline/WBP_Timeline" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_Timeline.uasset" SILENT=true
+[2024.07.28-18.44.20:060][990]LogSavePackage: Moving output files for package: /Game/UI/Timeline/WBP_Timeline
+[2024.07.28-18.44.20:061][990]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/WBP_Timeline2E023BB749F2BF7C388630952BCF34E7.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/UI/Timeline/WBP_Timeline.uasset'
+[2024.07.28-18.44.20:067][990]LogFileHelpers: InternalPromptForCheckoutAndSave took 97 ms (total: 569 ms)
+[2024.07.28-18.44.20:070][990]AssetCheck: New page: Asset Save: WBP_Timeline
+[2024.07.28-18.44.20:070][990]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Timeline/WBP_Timeline.WBP_Timeline
+[2024.07.28-18.44.22:461][209]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_TimelineBar.WBP_TimelineBar
+[2024.07.28-18.44.22:461][209]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.44.22:461][209]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.44.22:467][209]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.44.22:467][209]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.45.32:041][194]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Timeline/WBP_TimelineLine.WBP_TimelineLine
+[2024.07.28-18.45.32:041][194]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.45.32:042][194]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.45.32:048][194]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.45.32:048][194]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.45.48:301][703]LogWorld: UWorld::CleanupWorld for World_44, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.45.48:301][703]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.45.48:323][703]LogWorld: UWorld::CleanupWorld for World_43, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.45.48:323][703]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.45.55:984][401]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Loading/WBP_LoadingScreen.WBP_LoadingScreen
+[2024.07.28-18.45.55:985][401]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.45.55:985][401]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.45.55:991][401]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.45.55:991][401]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.46.08:161][592]LogWorld: UWorld::CleanupWorld for World_46, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.46.08:161][592]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.46.08:181][592]LogWorld: UWorld::CleanupWorld for World_45, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.46.08:181][592]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-18.46.28:792][129]LogSlate: Took 0.000095 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.07.28-18.46.28:865][133]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.28:870][133]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_47:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.28:931][135]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.28:937][135]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_48:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.28:956][136]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.28:961][136]LogActor: Warning: BP_BouncyCell_C /Engine/Transient.World_49:PersistentLevel.BP_BouncyCell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.28:977][137]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.28:982][137]LogActor: Warning: BP_Cell_C /Engine/Transient.World_50:PersistentLevel.BP_Cell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:018][140]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:024][140]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_51:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:066][142]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:072][142]LogActor: Warning: BP_Glider_C /Engine/Transient.World_52:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:084][143]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:089][143]LogActor: Warning: BP_Grapple_C /Engine/Transient.World_53:PersistentLevel.BP_Grapple_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:106][144]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:127][145]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:131][145]LogActor: Warning: BP_HoverCell_C /Engine/Transient.World_55:PersistentLevel.BP_HoverCell_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:144][146]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:150][146]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_56:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:172][148]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:177][148]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_57:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:201][150]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.29:207][150]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_58:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.07.28-18.46.29:878][230]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorBlueprintResources: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EditorBlueprintResources' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.07.28-18.46.29:878][230]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/FunctionalTesting/Blueprints/AITesting_MoveGoal.uasset: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/FunctionalTesting/Blueprints/AITesting_MoveGoal.uasset' is outside repository at 'C:/Users/Deany/Documents/GitHub/problox'
+[2024.07.28-18.46.30:806][341]LogAssetEditorSubsystem: Opening Asset editor for LevelScriptBlueprint /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.Lvl_Combined
+[2024.07.28-18.46.30:806][341]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.28-18.46.30:807][341]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.28-18.46.37:622][982]BlueprintLog: New page: Compile Lvl_Combined
+[2024.07.28-18.46.37:708][982]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.07.28-18.46.37:789][982]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.28-18.46.37:896][982]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2024.07.28-18.46.38:341][982]LogSavePackage: Moving output files for package: /Game/Levels/Lvl_Combined
+[2024.07.28-18.46.38:342][982]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Lvl_CombinedED45380149F480EB7D38E5B0A88350EB.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Levels/Lvl_Combined.umap'
+[2024.07.28-18.46.38:370][982]LogFileHelpers: All files are already saved.
+[2024.07.28-18.46.38:370][982]LogFileHelpers: Saving map 'Lvl_Combined' took 0.557
+[2024.07.28-18.46.38:374][982]LogFileHelpers: InternalPromptForCheckoutAndSave took 584 ms (total: 1.15 sec)
+[2024.07.28-18.46.38:383][982]AssetCheck: New page: Asset Save: Lvl_Combined
+[2024.07.28-18.46.38:383][982]LogContentValidation: Display: Validating /Script/Engine.World /Game/Levels/Lvl_Combined.Lvl_Combined
+[2024.07.28-18.46.40:570][191]LogWorld: UWorld::CleanupWorld for World_59, bSessionEnded=true, bCleanupResources=true
+[2024.07.28-18.46.40:570][191]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.28-19.21.38:535][463]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:02:27.012 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 83946 files in 67253 folders with total size 3096 MiB.
+[2024.07.28-20.21.38:539][263]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:02:27.012 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 83946 files in 67253 folders with total size 3096 MiB.
