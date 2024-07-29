@@ -179,10 +179,8 @@ void ALevelManager::FindCore()
 
 void ALevelManager::FindSpawns()
 {
-	if(!IsValid(wrld)) return;
-	
 	// Only do this once. (will be called everytime a level loads)
-	// if(!(lvl1Screenshots.IsEmpty() && lvl2Screenshots.IsEmpty() && lvl3Screenshots.IsEmpty())) return;
+	if(!IsValid(wrld)) return;
 
 	FTimerHandle delay;
 	auto ConfigSpawners = [this]
@@ -210,19 +208,16 @@ void ALevelManager::FindSpawns()
 				case ELevel::Bedroom:
 					point->SetLevelIndex(1);
 					lvl1Spawns.Add(point);
-					// lvl1Screenshots.Add(point->CaptureScreenshot());
 					break;
 						
 				case ELevel::Kitchen:
 					point->SetLevelIndex(2);
 					lvl2Spawns.Add(point);
-					// lvl2Screenshots.Add(point->CaptureScreenshot());
 					break;
 						
 				case ELevel::Bathroom:
 					point->SetLevelIndex(3);
 					lvl3Spawns.Add(point);
-					// lvl3Screenshots.Add(point->CaptureScreenshot());
 					break;
 			}
 		}
@@ -244,7 +239,7 @@ void ALevelManager::FindSpawns()
 
 	// Run the above after 1 second to ensure the levels are completely loaded for the screenshot.
 	// (breaks without the delay)
-	wrld->GetTimerManager().SetTimer(delay, ConfigSpawners, 1, false);
+	wrld->GetTimerManager().SetTimer(delay, ConfigSpawners, 1.25f, false);
 }
 
 
