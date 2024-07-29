@@ -233,8 +233,6 @@ void ALevelManager::FindSpawns()
 		// If there wasn't a save file...
 		LoadUnlockedSpawns();
 
-		// Initialise the cell spawns (spawns all the cells from every level)
-		onFirstLoad.Broadcast();
 
 		// In blueprint... load the build area when this is broadcast so that the rest of the levels are hidden (needs to be done after the screenshots are taken).
 		// onScreenshotsTaken.Broadcast();
@@ -242,11 +240,14 @@ void ALevelManager::FindSpawns()
 		// Remove the delegate once the last level has been loaded so that it doesn't happen again
 		if(levels.IsEmpty()) return;
 		levels[levels.Num() - 1]->OnLevelShown.RemoveDynamic(this, &ALevelManager::FindSpawns);
+
+		// Initialise the cell spawns (spawns all the cells from every level)
+		onFirstLoad.Broadcast();
 	};
 
-	// Run the above after 1 second to ensure the levels are completely loaded for the screenshot.
+	// Run the above after 2 second to ensure the levels are completely loaded.
 	// (breaks without the delay)
-	wrld->GetTimerManager().SetTimer(delay, ConfigSpawners, 1.25f, false);
+	wrld->GetTimerManager().SetTimer(delay, ConfigSpawners, 2, false);
 }
 
 
