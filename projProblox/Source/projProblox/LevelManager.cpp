@@ -28,6 +28,8 @@ void ALevelManager::BeginPlay()
 
 	FindCore();
 
+	onFirstLoad.AddDynamic(this, &ALevelManager::OnFirstSpawn);
+	
 	// Get the level instances that are a part of the main world
 	for (const auto& levelStream : wrld->GetStreamingLevels())
 	{
@@ -188,6 +190,12 @@ void ALevelManager::FindSpawns()
 		// Get all the spawn points from the PERSISTENT level
 		TArray<AActor*> spawns;
 		UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
+		if(spawns.IsEmpty())
+		{
+			Print("Initial load failed...", 6)
+			return;
+		}
+		
 		for (const auto& spawn : spawns) 
 		{
 			ASpawnPoint* point = Cast<ASpawnPoint>(spawn);
@@ -200,34 +208,33 @@ void ALevelManager::FindSpawns()
 			// Add the points to their respective arrays
 			switch (point->GetLevelEnum())
 			{
-				case ELevel::BuildArea:
-					point->SetLevelIndex(0);
-					lvl0Spawn = point;
-					break;
-						
-				case ELevel::Bedroom:
-					point->SetLevelIndex(1);
-					lvl1Spawns.Add(point);
-					break;
-						
-				case ELevel::Kitchen:
-					point->SetLevelIndex(2);
-					lvl2Spawns.Add(point);
-					break;
-						
-				case ELevel::Bathroom:
-					point->SetLevelIndex(3);
-					lvl3Spawns.Add(point);
-					break;
+			case ELevel::BuildArea:
+				point->SetLevelIndex(0);
+				lvl0Spawn = point;
+				break;
+					
+			case ELevel::Bedroom:
+				point->SetLevelIndex(1);
+				lvl1Spawns.Add(point);
+				break;
+					
+			case ELevel::Kitchen:
+				point->SetLevelIndex(2);
+				lvl2Spawns.Add(point);
+				break;
+					
+			case ELevel::Bathroom:
+				point->SetLevelIndex(3);
+				lvl3Spawns.Add(point);
+				break;
 			}
 		}
-		
+
 		// If there wasn't a save file...
 		LoadUnlockedSpawns();
 
 		// Initialise the cell spawns (spawns all the cells from every level)
 		onFirstLoad.Broadcast();
-		InitSpawners();
 
 		// In blueprint... load the build area when this is broadcast so that the rest of the levels are hidden (needs to be done after the screenshots are taken).
 		// onScreenshotsTaken.Broadcast();
@@ -335,6 +342,16 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	}
 
 	onSpawnChanged.Broadcast(spawnPoint);
+}
+
+void ALevelManager::OnFirstSpawn()
+{
+	InitSpawners();
+	// if(!wrld) return;
+	//
+	// // Initialise the cell spawns after the player spawns have been setup.
+	// FTimerHandle initDelay;
+	// wrld->GetTimerManager().SetTimer(initDelay, [this]{ InitSpawners(); }, .2f, false);
 }
 
 void ALevelManager::SaveSpawns()

@@ -45,6 +45,7 @@ PROJPROBLOX_API void FOnChangedLevels_DelegateWrapper(const FMulticastScriptDele
 	DECLARE_FUNCTION(execLoadLevel); \
 	DECLARE_FUNCTION(execFindSpawns); \
 	DECLARE_FUNCTION(execSaveSpawns); \
+	DECLARE_FUNCTION(execOnFirstSpawn); \
 	DECLARE_FUNCTION(execSetIsLoading); \
 	DECLARE_FUNCTION(execOnShown); \
 	DECLARE_FUNCTION(execOnHidden);

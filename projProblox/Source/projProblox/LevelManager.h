@@ -60,6 +60,9 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	UFUNCTION()
 	void SetIsLoading() { bLevelLoading = true; }
 
+	UFUNCTION()
+	void OnFirstSpawn();
+	
 	// Function called when the new spawn unlocked delegate is broadcast..
 	UFUNCTION()
 	void SaveSpawns();
