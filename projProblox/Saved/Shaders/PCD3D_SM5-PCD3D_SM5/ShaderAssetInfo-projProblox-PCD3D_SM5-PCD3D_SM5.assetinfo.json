@@ -238,6 +238,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "DCC4AE190DDDE9ABC4325B58CA374F002EBED08B",
+			"Assets": [
+				"/Niagara/DefaultAssets/DefaultRIbbonMaterial"
+			]
+		},
+		{
 			"ShaderMapHash": "4908AF1970B42A0E39CE4158A04EA65A806B8F79",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Fire_Splat"
@@ -285,6 +291,12 @@
 			"ShaderMapHash": "9CAF3B1E464339B8A12889EE353088E2FB7B0877",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Leaves_A"
+			]
+		},
+		{
+			"ShaderMapHash": "8338A41E3A018A357904406DD9A7C713BAE04139",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_redglow"
 			]
 		},
 		{
@@ -570,6 +582,12 @@
 			"ShaderMapHash": "D8F6174CD56FD61066918808D25A043E23BF88CA",
 			"Assets": [
 				"/Game/Materials/Pickupables/Core/M_InnerCore_1"
+			]
+		},
+		{
+			"ShaderMapHash": "04D03C4CCE50F342B72D837149F907E464C76089",
+			"Assets": [
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_B"
 			]
 		},
 		{
@@ -1155,12 +1173,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "A19DA299D81CF889A4677D51EBCE363CC5024B55",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_redglow"
-			]
-		},
-		{
 			"ShaderMapHash": "F1D3F699A0309408FC6F04D314DF0D5ACA9D403A",
 			"Assets": [
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Smoke_Ground"
@@ -1274,6 +1286,12 @@
 			"ShaderMapHash": "2480D2A318B9E8EE6B6657287A86185442B65D5C",
 			"Assets": [
 				"/Game/Materials/Pickupables/Core/M_OuterCore"
+			]
+		},
+		{
+			"ShaderMapHash": "FFE4E1A3A66C620F7FC9946F3DD24670EADB6CF1",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/CellGlow"
 			]
 		},
 		{
@@ -1634,12 +1652,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "C5A095D0976641A5E1823C3291F56CC29FA41293",
-			"Assets": [
-				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_B"
-			]
-		},
-		{
 			"ShaderMapHash": "FBCEEED06E6C9DBA1925102C09A2201F85766794",
 			"Assets": [
 				"/Game/Levels/Levels/Kitchen/KitchenLevel/NewMaterial"
@@ -1807,7 +1819,6 @@
 				"/Game/Models/MechanicModels/Material_008",
 				"/Game/Models/MechanicModels/Material_009",
 				"/Game/Models/MechanicModels/Materials/Aluminum",
-				"/Game/Models/MechanicModels/Materials/CellGlow",
 				"/Game/Models/MechanicModels/Materials/Iron",
 				"/Game/Models/MechanicModels/Materials/Material",
 				"/Game/Models/MechanicModels/Materials/Material_001",

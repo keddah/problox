@@ -30,13 +30,13 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_thrusterComp_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_thrusterComp;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_power_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_power;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_thrusterComp_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_thrusterComp;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -53,15 +53,6 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 	};
 #endif
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
-		{ "Category", "Thruster" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Pickupables/Thruster.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp = { "thrusterComp", nullptr, (EPropertyFlags)0x004000000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, thrusterComp), Z_Construct_UClass_UPhysicsThrusterComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData[] = {
 		{ "Category", "Ability" },
 		{ "Delta", "1" },
@@ -69,9 +60,17 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_power = { "power", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, power), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_power_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp_MetaData[] = {
+		{ "Category", "Thruster" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Pickupables/Thruster.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp = { "thrusterComp", nullptr, (EPropertyFlags)0x002008000009001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AThruster, thrusterComp), Z_Construct_UClass_UPhysicsThrusterComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp_MetaData), Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AThruster_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThruster_Statics::NewProp_power,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThruster_Statics::NewProp_thrusterComp,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AThruster_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AThruster>::IsAbstract,
@@ -111,9 +110,9 @@ void EmptyLinkFunctionForGeneratedCodeThruster() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AThruster, AThruster::StaticClass, TEXT("AThruster"), &Z_Registration_Info_UClass_AThruster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThruster), 836870411U) },
+		{ Z_Construct_UClass_AThruster, AThruster::StaticClass, TEXT("AThruster"), &Z_Registration_Info_UClass_AThruster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AThruster), 3815631310U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_747992696(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_2524223819(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Thruster_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

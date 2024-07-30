@@ -434,7 +434,6 @@
 				"/Game/Models/MechanicModels/Material_008",
 				"/Game/Models/MechanicModels/Material_009",
 				"/Game/Models/MechanicModels/Materials/Aluminum",
-				"/Game/Models/MechanicModels/Materials/CellGlow",
 				"/Game/Models/MechanicModels/Materials/Iron",
 				"/Game/Models/MechanicModels/Materials/Material",
 				"/Game/Models/MechanicModels/Materials/Material_001",
@@ -566,6 +565,12 @@
 			"ShaderMapHash": "EFD6D64425C2D4962AEC3B0F8AD6B12BBB12AA68",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Tech_Panel"
+			]
+		},
+		{
+			"ShaderMapHash": "17E1CA46B016C2272FE5FB88437D8D2B0269767C",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_redglow"
 			]
 		},
 		{
@@ -1041,15 +1046,15 @@
 			]
 		},
 		{
-			"ShaderMapHash": "51699C89BC36DCEC9ECE190738FDA3AE09DAD649",
+			"ShaderMapHash": "991E5989442A8133A7631958BF85287E4374AB48",
 			"Assets": [
-				"/Engine/EngineMaterials/DefaultPostProcessMaterial"
+				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_B"
 			]
 		},
 		{
-			"ShaderMapHash": "E0C5ED8945E48549CE6DC96285DBE9776C235D1B",
+			"ShaderMapHash": "51699C89BC36DCEC9ECE190738FDA3AE09DAD649",
 			"Assets": [
-				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_B"
+				"/Engine/EngineMaterials/DefaultPostProcessMaterial"
 			]
 		},
 		{
@@ -1610,6 +1615,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "ED57EDCA3C81E8EBB137B2EAB6AF7F0E46249CF7",
+			"Assets": [
+				"/Niagara/DefaultAssets/DefaultRIbbonMaterial"
+			]
+		},
+		{
 			"ShaderMapHash": "50C76DCBA6D7FED0DF2D3B030E81E0189C9E6243",
 			"Assets": [
 				"/Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud"
@@ -1968,12 +1979,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "C3A11BFAF5FD6C649A37E2FA14F39E745D98928D",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_redglow"
-			]
-		},
-		{
 			"ShaderMapHash": "4F714DFAFEBA64F599C63FD8CB98FD2C4AA4EC57",
 			"Assets": [
 				"/Game/Models/Material"
@@ -1991,6 +1996,12 @@
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Dirt_B",
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glass",
 				"/Game/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Paper"
+			]
+		},
+		{
+			"ShaderMapHash": "36EA39FC124A22C549C2510EDF9BA0119AB79957",
+			"Assets": [
+				"/Game/Models/MechanicModels/Materials/CellGlow"
 			]
 		},
 		{
