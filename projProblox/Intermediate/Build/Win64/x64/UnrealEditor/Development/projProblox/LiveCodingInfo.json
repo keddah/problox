@@ -19,10 +19,10 @@
 			"CustomGameInstance.gen.cpp.obj",
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
-			"Grappler.gen.cpp.obj",
-			"HexagonSocketInfo.gen.cpp.obj"
+			"Grappler.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
+			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
 			"LevelManager.gen.cpp.obj",
