@@ -267,6 +267,13 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		P_THIS->CoreCamera(Z_Param_deltaTime);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ACubeCore::execGetCurrentLevel)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=P_THIS->GetCurrentLevel();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACubeCore::execPlayCollectSound)
 	{
 		P_FINISH;
@@ -324,6 +331,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 			{ "DetachAll", &ACubeCore::execDetachAll },
 			{ "EjectObject", &ACubeCore::execEjectObject },
 			{ "GetCloseAttachments", &ACubeCore::execGetCloseAttachments },
+			{ "GetCurrentLevel", &ACubeCore::execGetCurrentLevel },
 			{ "GetGameMode", &ACubeCore::execGetGameMode },
 			{ "InAdjustPhase", &ACubeCore::execInAdjustPhase },
 			{ "ObjectInSocket", &ACubeCore::execObjectInSocket },
@@ -591,6 +599,40 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_GetCloseAttachments_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics
+	{
+		struct CubeCore_eventGetCurrentLevel_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CubeCore_eventGetCurrentLevel_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACubeCore, nullptr, "GetCurrentLevel", nullptr, nullptr, Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::CubeCore_eventGetCurrentLevel_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::CubeCore_eventGetCurrentLevel_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ACubeCore_GetCurrentLevel()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACubeCore_GetCurrentLevel_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1044,6 +1086,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		{ &Z_Construct_UFunction_ACubeCore_DetachAll, "DetachAll" }, // 3006845982
 		{ &Z_Construct_UFunction_ACubeCore_EjectObject, "EjectObject" }, // 3941029764
 		{ &Z_Construct_UFunction_ACubeCore_GetCloseAttachments, "GetCloseAttachments" }, // 3455939932
+		{ &Z_Construct_UFunction_ACubeCore_GetCurrentLevel, "GetCurrentLevel" }, // 4188750787
 		{ &Z_Construct_UFunction_ACubeCore_GetGameMode, "GetGameMode" }, // 3576473203
 		{ &Z_Construct_UFunction_ACubeCore_InAdjustPhase, "InAdjustPhase" }, // 3601573651
 		{ &Z_Construct_UFunction_ACubeCore_ObjectInSocket, "ObjectInSocket" }, // 3391374434
@@ -1325,9 +1368,9 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3835248341U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 2310649410U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_3478700867(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_3819979207(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

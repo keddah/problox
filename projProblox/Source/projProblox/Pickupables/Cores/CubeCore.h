@@ -180,6 +180,9 @@ private:
 		resetTimer.Invalidate();
 	}
 
+	UFUNCTION(BlueprintCallable)
+	int GetCurrentLevel() const { if(!instance) return -1; return instance->GetCurrentLevel(); }
+	
 	// In BP only run this if the view target is this core.
 	UFUNCTION(BlueprintCallable)
 	void CoreCamera(float deltaTime);
