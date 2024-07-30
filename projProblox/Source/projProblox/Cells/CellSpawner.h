@@ -188,4 +188,21 @@ public:
 	}
 
 	const ULevelStreamingDynamic* GetBuildLevel() const { return buildLevel; }
+
+	UFUNCTION(BlueprintCallable)
+	void ForceSpawn()
+	{
+		if(!wrld) wrld = GetWorld();
+		
+		// Doing outside the loop so it's not done unnecessarily
+		const FVector thisPos = GetActorLocation();
+		const FRotator rot = GetActorRotation();
+
+		for(unsigned int i = 0; i < spawnAmount; i++)
+		{
+			// If spawn radius isn't set, the spawn position will be this position.
+			const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
+			Spawn(spawn, rot)->SetActorScale3D(FVector(.4f));
+		}
+	}
 };
