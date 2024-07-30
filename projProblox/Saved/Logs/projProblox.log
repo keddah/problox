@@ -1511,3 +1511,904 @@ LogConfig: CVar [[r.Occlusion.SingleRHIThreadStall:1]] deferred - dummy variable
 [2024.07.30-17.20.50:306][499]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
 [2024.07.30-17.20.50:331][499]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
 [2024.07.30-17.20.50:331][499]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-17.21.15:442][ 96]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_PauseMenu.WBP_PauseMenu
+[2024.07.30-17.21.15:443][ 96]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.21.15:443][ 96]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.21.15:463][ 96]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.21.15:463][ 96]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.21.47:196][547]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.21.47:237][547]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_PauseMenu" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_PauseMenu.uasset" SILENT=true
+[2024.07.30-17.21.47:261][547]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_PauseMenu
+[2024.07.30-17.21.47:261][547]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_PauseMenuA08F214049711CC613EC509E0CE7BFE2.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_PauseMenu.uasset'
+[2024.07.30-17.21.47:271][547]LogFileHelpers: InternalPromptForCheckoutAndSave took 75 ms (total: 334 ms)
+[2024.07.30-17.21.47:273][547]AssetCheck: New page: Asset Save: WBP_PauseMenu
+[2024.07.30-17.21.47:273][547]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_PauseMenu.WBP_PauseMenu
+[2024.07.30-17.21.47:798][586]LogUObjectHash: Compacting FUObjectHashTables data took   1.54ms
+[2024.07.30-17.21.47:913][586]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.21.47:943][586]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Images/theone" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/theone.uasset" SILENT=true
+[2024.07.30-17.21.47:944][586]LogSavePackage: Moving output files for package: /Game/UI/Images/theone
+[2024.07.30-17.21.47:944][586]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/theone9C92FFD04FC41BA076E8CAA38DA8C889.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/theone.uasset'
+[2024.07.30-17.21.47:947][586]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Images/MMTitle" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/MMTitle.uasset" SILENT=true
+[2024.07.30-17.21.47:953][586]LogSavePackage: Moving output files for package: /Game/UI/Images/MMTitle
+[2024.07.30-17.21.47:953][586]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/MMTitle799415A241787361B0D73E9F2BACD2FE.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/MMTitle.uasset'
+[2024.07.30-17.21.47:954][586]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Images/MMLogoNoBackground" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/MMLogoNoBackground.uasset" SILENT=true
+[2024.07.30-17.21.47:978][586]LogSavePackage: Moving output files for package: /Game/UI/Images/MMLogoNoBackground
+[2024.07.30-17.21.47:978][586]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/MMLogoNoBackgroundEDC51E9F402BFBCA123AC19E8DD77BF5.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/MMLogoNoBackground.uasset'
+[2024.07.30-17.21.47:980][586]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Images/Placeholder_logo" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/Placeholder_logo.uasset" SILENT=true
+[2024.07.30-17.21.47:981][586]LogSavePackage: Moving output files for package: /Game/UI/Images/Placeholder_logo
+[2024.07.30-17.21.47:981][586]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/Placeholder_logoA37D0F8B42CCE70A2697059FD6102899.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/Placeholder_logo.uasset'
+[2024.07.30-17.21.48:175][586]LogFileHelpers: InternalPromptForCheckoutAndSave took 262 ms (total: 596 ms)
+[2024.07.30-17.21.48:176][586]AssetCheck: New page: Asset Save: multiple assets
+[2024.07.30-17.21.48:176][586]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/Images/theone.theone
+[2024.07.30-17.21.48:176][586]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/Images/MMTitle.MMTitle
+[2024.07.30-17.21.48:176][586]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/Images/MMLogoNoBackground.MMLogoNoBackground
+[2024.07.30-17.21.48:176][586]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/Images/Placeholder_logo.Placeholder_logo
+[2024.07.30-17.21.56:122][230]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.22.21:504][208]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.22.32:740][249]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.22.35:819][483]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.22.38:393][678]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.22.44:003][150]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.22.53:097][971]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.23.19:580][210]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.23.28:967][965]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.23.42:001][995]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.23.45:870][304]LogEditorTransaction: Undo Reset to Default
+[2024.07.30-17.23.47:577][409]Cmd: TRANSACTION REDO
+[2024.07.30-17.23.47:577][409]LogEditorTransaction: Redo Reset to Default
+[2024.07.30-17.24.05:334][757]LogEditorTransaction: Undo Edit font size
+[2024.07.30-17.24.08:122][944]LogEditorTransaction: Undo Edit Letter Spacing
+[2024.07.30-17.24.12:143][245]LogEditorTransaction: Undo Edit Skew Amount
+[2024.07.30-17.24.29:959][641]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.24.59:269][931]BlueprintLog: New page: Compile WBP_PauseMenu
+[2024.07.30-17.24.59:320][931]LogUObjectHash: Compacting FUObjectHashTables data took   1.50ms
+[2024.07.30-17.24.59:569][931]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.24.59:609][931]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_PauseMenu" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_PauseMenu.uasset" SILENT=true
+[2024.07.30-17.24.59:632][931]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_PauseMenu
+[2024.07.30-17.24.59:633][931]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_PauseMenuC9DC6C9841703A47ED9C76ABD9D056E5.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_PauseMenu.uasset'
+[2024.07.30-17.24.59:641][931]LogFileHelpers: InternalPromptForCheckoutAndSave took 71 ms (total: 668 ms)
+[2024.07.30-17.24.59:647][931]AssetCheck: New page: Asset Save: WBP_PauseMenu
+[2024.07.30-17.24.59:647][931]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_PauseMenu.WBP_PauseMenu
+[2024.07.30-17.25.02:999][134]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_SettingsMenu.WBP_SettingsMenu
+[2024.07.30-17.25.03:000][134]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.25.03:000][134]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.25.03:018][134]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.25.03:018][134]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.25.06:237][377]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_WarningPrompt.WBP_WarningPrompt
+[2024.07.30-17.25.06:238][377]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.25.06:238][377]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.25.06:247][377]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.25.06:247][377]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.25.27:401][ 20]LogOutputDevice: Warning: 
+
+Script Stack (0 frames) :
+
+[2024.07.30-17.25.27:433][ 20]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.032 s
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: === Handled ensure: ===
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: 
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: Ensure condition failed: ScopedTransaction != nullptr  [File:D:\build\++UE5\Sync\Engine\Source\Editor\UMGEditor\Private\Extensions\DesignerExtension.cpp] [Line: 67] 
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: 
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: Stack: 
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe69a4e3fe UnrealEditor-UMGEditor.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe69a18bb2 UnrealEditor-UMGEditor.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe8a770c51 UnrealEditor-SlateCore.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe8ab9b946 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe8ab81cb9 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe8abee55c UnrealEditor-Slate.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe8abdb562 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffe8abce2fa UnrealEditor-Slate.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffeb53f7dc6 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffeb53db83f UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffeb53fab29 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffeb53d32e3 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007fff8f0082e1 USER32.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007fff8f007da1 USER32.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ffeb53fc226 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ff7e15776f2 UnrealEditor.exe!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ff7e159d28c UnrealEditor.exe!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ff7e159d37a UnrealEditor.exe!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ff7e15a0854 UnrealEditor.exe!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ff7e15b6984 UnrealEditor.exe!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007ff7e15b9d7a UnrealEditor.exe!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007fff8f1c257d KERNEL32.DLL!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: [Callstack] 0x00007fff8fcaaf28 ntdll.dll!UnknownFunction []
+[2024.07.30-17.25.27:433][ 20]LogOutputDevice: Error: 
+[2024.07.30-17.25.27:445][ 20]LogStats:                SubmitErrorReport -  0.000 s
+[2024.07.30-17.25.28:490][ 20]LogStats:                    SendNewReport -  1.046 s
+[2024.07.30-17.25.28:491][ 20]LogStats:             FDebug::EnsureFailed -  1.089 s
+[2024.07.30-17.25.32:452][343]BlueprintLog: New page: Compile WBP_WarningPrompt
+[2024.07.30-17.25.32:539][343]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2024.07.30-17.25.32:781][343]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.25.32:820][343]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_WarningPrompt" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_WarningPrompt.uasset" SILENT=true
+[2024.07.30-17.25.32:834][343]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_WarningPrompt
+[2024.07.30-17.25.32:835][343]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_WarningPromptD239756640F3A3C1D069ADAC3D21454C.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_WarningPrompt.uasset'
+[2024.07.30-17.25.32:843][343]LogFileHelpers: InternalPromptForCheckoutAndSave took 61 ms (total: 729 ms)
+[2024.07.30-17.25.32:851][343]AssetCheck: New page: Asset Save: WBP_WarningPrompt
+[2024.07.30-17.25.32:851][343]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_WarningPrompt.WBP_WarningPrompt
+[2024.07.30-17.25.35:816][578]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_Credits.WBP_Credits
+[2024.07.30-17.25.35:816][578]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.25.35:816][578]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.25.35:828][578]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.25.35:828][578]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.25.36:090][578]LogSlate: FontCache flush requested. Reason: Large atlases out of space; 2/1 Textures; frames since last flush: 15149633463748901894
+[2024.07.30-17.25.36:092][578]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-17.25.36:112][579]LogSlate: Took 0.000200 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2024.07.30-17.25.36:113][579]LogSlate: Took 0.000161 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2024.07.30-17.25.36:115][579]LogSlate: Took 0.000148 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2024.07.30-17.25.36:117][579]LogSlate: Took 0.000169 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2024.07.30-17.25.36:118][579]LogSlate: Took 0.000159 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2024.07.30-17.27.42:930][542]LogSlate: Took 0.000230 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.07.30-17.27.57:987][165]LogSlate: Window 'Pick Parent Class for New Widget Blueprint' being destroyed
+[2024.07.30-17.27.57:998][165]LogContentBrowser: Deferred new asset file creation: NewWidgetBlueprint
+[2024.07.30-17.27.58:006][165]LogContentBrowser: Creating deferred item: NewWidgetBlueprint
+[2024.07.30-17.27.58:030][166]LogContentBrowser: Renaming the item being created (Deferred Item: NewWidgetBlueprint).
+[2024.07.30-17.28.02:176][470]LogContentBrowser: Attempting asset rename: NewWidgetBlueprint -> NewWidgetBlueprint
+[2024.07.30-17.28.02:278][470]LogContentBrowser: End creating deferred item NewWidgetBlueprint
+[2024.07.30-17.28.11:485][183]LogContentBrowser: Attempting asset rename: NewWidgetBlueprint -> WBP_CreditsNew
+[2024.07.30-17.28.12:253][183]LogMetaData: Removing '/Game/UI/Menus/WBP_CreditsNew.SKEL_WBP_CreditsNew_C' ref from Metadata '/Game/UI/Menus/NewWidgetBlueprint.PackageMetaData'
+[2024.07.30-17.28.12:253][183]LogMetaData: Removing '/Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew_C' ref from Metadata '/Game/UI/Menus/NewWidgetBlueprint.PackageMetaData'
+[2024.07.30-17.28.12:253][183]LogMetaData: Removing '/Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew:EventGraph.K2Node_Event_0' ref from Metadata '/Game/UI/Menus/NewWidgetBlueprint.PackageMetaData'
+[2024.07.30-17.28.12:253][183]LogMetaData: Removing '/Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew:EventGraph.K2Node_Event_1' ref from Metadata '/Game/UI/Menus/NewWidgetBlueprint.PackageMetaData'
+[2024.07.30-17.28.12:253][183]LogMetaData: Removing '/Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew:EventGraph.K2Node_Event_2' ref from Metadata '/Game/UI/Menus/NewWidgetBlueprint.PackageMetaData'
+[2024.07.30-17.28.12:264][183]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.28.12:295][183]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset" SILENT=true
+[2024.07.30-17.28.12:297][183]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_CreditsNew
+[2024.07.30-17.28.12:297][183]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNewF75E5BE647917A776A7116B112FC8282.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset'
+[2024.07.30-17.28.12:470][183]LogFileHelpers: InternalPromptForCheckoutAndSave took 205 ms (total: 935 ms)
+[2024.07.30-17.28.12:593][183]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
+[2024.07.30-17.28.12:611][183]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2024.07.30-17.28.12:623][183]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2024.07.30-17.28.12:625][183]AssetCheck: New page: Asset Save: WBP_CreditsNew
+[2024.07.30-17.28.12:625][183]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-17.28.13:027][213]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-17.28.13:027][213]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.28.13:027][213]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.28.13:036][213]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.28.13:036][213]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.28.41:214][597]LogSlate: Window 'Color Picker' being destroyed
+[2024.07.30-17.28.56:476][813]LogDerivedDataCache: C:/Users/rosop/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:01:46.159 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 59597 files in 49789 folders with total size 2092 MiB.
+[2024.07.30-17.29.35:578][925]LogD3D12RHI: Warning: Descriptor cache ran out of sub allocated descriptor blocks! Moving to Context local View heap strategy
+[2024.07.30-17.29.35:578][925]LogD3D12RHI: This should only happen in the Editor where it doesn't matter as much. If it happens in game you should increase the device global heap size!
+[2024.07.30-17.30.12:353][695]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-17.30.16:114][933]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:193][934]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:269][936]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:282][936]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:293][937]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:296][937]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:365][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:368][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:371][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:373][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:377][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:379][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:382][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:386][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:388][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:391][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:394][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:397][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:399][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:405][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:409][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:411][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:414][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:417][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:420][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:423][938]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:443][939]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:447][939]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:452][939]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:519][940]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:532][940]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:542][941]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:545][941]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:613][942]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:626][942]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:636][943]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:639][943]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:644][943]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:711][944]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:740][945]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:815][946]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:892][948]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:905][948]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:920][949]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.16:991][950]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:014][951]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:018][951]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:084][952]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:096][952]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:173][954]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:186][954]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:199][955]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:267][956]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:271][956]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:290][957]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:296][957]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:373][958]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:465][960]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:480][961]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:549][962]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:575][963]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:641][964]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:653][964]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:664][965]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:734][966]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:747][966]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:760][967]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:849][969]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.17:924][970]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:012][972]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:026][973]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:118][975]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:189][976]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:202][976]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:212][977]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:281][978]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:293][978]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:308][979]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:378][980]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:397][981]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:400][981]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:405][981]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:409][981]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:477][982]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:491][982]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:500][983]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:571][984]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:583][984]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:593][985]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:597][985]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:662][986]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:688][987]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:754][988]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:766][988]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:857][990]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:870][991]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:939][992]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.18:965][993]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:042][994]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:130][996]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:144][997]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:233][999]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:312][  0]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:398][  2]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:415][  3]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:483][  4]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:510][  5]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:588][  6]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:677][  8]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:691][  9]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:780][ 11]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:855][ 12]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:864][ 13]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:934][ 14]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:947][ 14]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.19:960][ 15]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:051][ 17]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:127][ 18]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:214][ 20]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:226][ 21]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:335][ 23]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:440][ 24]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:523][ 26]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:535][ 26]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:550][ 27]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:644][ 29]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:719][ 30]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:805][ 32]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:819][ 33]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:905][ 35]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:909][ 35]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:979][ 36]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.20:993][ 36]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:081][ 38]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:094][ 39]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:189][ 41]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:267][ 42]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:355][ 44]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:369][ 45]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:463][ 47]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:541][ 48]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:618][ 50]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:630][ 50]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:644][ 51]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:732][ 53]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:808][ 54]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:896][ 56]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.21:910][ 57]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:000][ 59]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:077][ 60]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:156][ 62]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:169][ 62]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:183][ 63]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:272][ 65]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:350][ 66]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:431][ 68]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:443][ 68]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:454][ 69]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:458][ 69]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:550][ 71]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:628][ 72]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:722][ 74]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:737][ 75]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:839][ 77]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:925][ 78]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.22:942][ 78]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:040][ 80]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:043][ 80]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:056][ 80]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:066][ 81]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:069][ 81]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:075][ 81]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:162][ 82]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:195][ 83]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:282][ 84]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:375][ 86]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:389][ 87]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:500][ 89]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:593][ 90]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:691][ 92]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:705][ 93]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:791][ 94]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:819][ 95]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:899][ 96]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.23:994][ 98]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:008][ 99]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:103][101]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:186][102]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:279][104]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:293][105]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:393][107]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:468][108]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:482][108]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:492][109]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:566][110]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:578][110]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:593][111]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:685][113]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:764][114]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:855][116]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:870][117]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:957][119]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.24:963][119]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:033][120]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:037][120]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:049][120]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:133][122]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:146][122]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:160][123]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:253][125]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:335][126]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:426][128]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:440][129]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.25:532][131]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.32:367][626]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2024.07.30-17.30.36:693][954]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-17.30.36:726][954]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2024.07.30-17.30.36:943][954]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.30.36:976][954]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset" SILENT=true
+[2024.07.30-17.30.36:979][954]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_CreditsNew
+[2024.07.30-17.30.36:980][954]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew1214B3D1464EED1FA2466BA29412CA2E.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset'
+[2024.07.30-17.30.36:988][954]LogFileHelpers: InternalPromptForCheckoutAndSave took 44 ms (total: 979 ms)
+[2024.07.30-17.30.36:996][954]AssetCheck: New page: Asset Save: WBP_CreditsNew
+[2024.07.30-17.30.36:996][954]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-17.30.59:866][712]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:867][712]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:868][712]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:870][712]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:872][712]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:938][713]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:939][713]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:947][713]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:956][714]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.30.59:957][714]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:022][715]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:024][715]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:032][715]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:041][716]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:042][716]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:048][716]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:110][717]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:132][718]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:193][719]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:203][719]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:284][721]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:297][722]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.00:364][723]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.31.04:068][ 46]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-17.32.26:091][352]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.33.02:449][745]LogUObjectHash: Compacting FUObjectHashTables data took   3.35ms
+[2024.07.30-17.33.02:449][745]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.037
+[2024.07.30-17.33.02:449][745]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Menus/WBP_CreditsNew] ([2] browsable assets)...
+[2024.07.30-17.33.02:458][745]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew]
+[2024.07.30-17.33.02:458][745]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menus/WBP_CreditsNew]
+[2024.07.30-17.33.02:458][745]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2024.07.30-17.33.02:465][745]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto2
+[2024.07.30-17.33.02:466][745]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew_Auto2520EE7E144A1D8C47B0667BEC6AE7497.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto2.uasset'
+[2024.07.30-17.33.02:467][745]LogFileHelpers: Auto-saving content packages took 0.020
+[2024.07.30-17.36.21:618][  2]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-17.36.58:236][ 48]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.37.23:683][332]LogUObjectHash: Compacting FUObjectHashTables data took   2.42ms
+[2024.07.30-17.37.23:686][332]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.023
+[2024.07.30-17.37.23:686][332]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Menus/WBP_CreditsNew] ([2] browsable assets)...
+[2024.07.30-17.37.23:693][332]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew]
+[2024.07.30-17.37.23:693][332]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menus/WBP_CreditsNew]
+[2024.07.30-17.37.23:693][332]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto3.uasset" SILENT=false AUTOSAVING=true
+[2024.07.30-17.37.23:696][332]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto3
+[2024.07.30-17.37.23:696][332]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew_Auto397F8D1F14DD19D79CAB55EA7697988E6.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto3.uasset'
+[2024.07.30-17.37.23:697][332]LogFileHelpers: Auto-saving content packages took 0.012
+[2024.07.30-17.39.32:265][847]LogInterchangeEngine: [Pending] Importing
+[2024.07.30-17.39.32:265][847]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/rosop/Downl...website-google_com-1/VistaQR-website-google_com-1.jpeg]
+[2024.07.30-17.39.32:270][847]LogInterchangeImport: JPEG file [C:/Users/rosop/Downloads/VistaQR-website-google_com-1/VistaQR-website-google_com-1.jpeg]: Pipeline setting 'bPreferCompressedSourceData' has been overridden by Editor setting 'RetainJpegFormat'
+[2024.07.30-17.39.32:276][847]LogInterchangeEngine: [Success] Import Done
+[2024.07.30-17.39.32:277][847]LogTexture: Display: Building textures: /Game/UI/Images/VistaQR-website-google_com-1.VistaQR-website-google_com-1 (TFO_AutoDXT, 1000x1000 x1x1x1) (Required Memory Estimate: 99.545726 MB), EncodeSpeed: Fast
+[2024.07.30-17.39.32:304][848]LogInterchangeEngine: [Success] Import Done
+[2024.07.30-17.40.35:102][916]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2024.07.30-17.40.35:104][916]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.019
+[2024.07.30-17.40.35:105][916]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Menus/WBP_CreditsNew] ([2] browsable assets)...
+[2024.07.30-17.40.35:108][916]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew]
+[2024.07.30-17.40.35:108][916]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menus/WBP_CreditsNew]
+[2024.07.30-17.40.35:108][916]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto4.uasset" SILENT=false AUTOSAVING=true
+[2024.07.30-17.40.35:111][916]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto4
+[2024.07.30-17.40.35:111][916]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew_Auto4E89B9315436B256A5D7983A356416945.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto4.uasset'
+[2024.07.30-17.40.35:112][916]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/UI/Images/VistaQR-website-google_com-1] ([1] browsable assets)...
+[2024.07.30-17.40.35:115][916]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/UI/Images/VistaQR-website-google_com-1.VistaQR-website-google_com-1]
+[2024.07.30-17.40.35:115][916]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Images/VistaQR-website-google_com-1]
+[2024.07.30-17.40.35:116][916]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Images/VistaQR-website-google_com-1_Auto4
+[2024.07.30-17.40.35:116][916]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/VistaQR-website-google_com-1_Aut0A1A2DCF4D3791503E29D1B189BB5DA7.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Images/VistaQR-website-google_com-1_Auto4.uasset'
+[2024.07.30-17.40.35:116][916]LogFileHelpers: Auto-saving content packages took 0.013
+[2024.07.30-17.41.00:364][894]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.41.16:408][ 54]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.41.21:321][374]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.41.36:085][430]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.43.14:810][924]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.15:114][925]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.15:421][926]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.15:488][926]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.15:769][927]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.16:053][928]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.16:333][929]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.18:879][ 94]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.43.21:138][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:147][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:156][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:165][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:174][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:183][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:193][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:201][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:212][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:223][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:232][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:241][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:250][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:259][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:269][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:277][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:286][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:295][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:304][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:312][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:322][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:331][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:340][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:350][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:359][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:368][241]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:459][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:467][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:477][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:486][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:494][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:504][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:513][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:521][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:530][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:539][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:548][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:557][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:566][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:567][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:570][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:573][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:576][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:579][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:582][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:584][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:588][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:591][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:594][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:596][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:599][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:602][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:604][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:617][242]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:630][243]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.21:729][245]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.43.30:008][829]LogSlate: Took 0.000117 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.07.30-17.43.31:063][946]SourceControl: fatal: C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineFonts: 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/EngineFonts' is outside repository at 'C:/GitHub/FMP/problox'
+[2024.07.30-17.43.45:294][ 19]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.44.08:316][833]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.44.12:440][ 81]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.44.16:171][301]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.44.30:431][280]LogSlate: Took 0.014177 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2024.07.30-17.45.08:682][412]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.45.09:586][469]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.45.09:941][481]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.46.05:192][496]LogUObjectHash: Compacting FUObjectHashTables data took   1.93ms
+[2024.07.30-17.46.05:194][496]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.025
+[2024.07.30-17.46.05:194][496]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Menus/WBP_CreditsNew] ([2] browsable assets)...
+[2024.07.30-17.46.05:199][496]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew]
+[2024.07.30-17.46.05:199][496]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menus/WBP_CreditsNew]
+[2024.07.30-17.46.05:199][496]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto5.uasset" SILENT=false AUTOSAVING=true
+[2024.07.30-17.46.05:204][496]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto5
+[2024.07.30-17.46.05:204][496]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew_Auto5D84722C24C947E34F778FF8D1EA47628.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto5.uasset'
+[2024.07.30-17.46.05:205][496]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/UI/Images/VistaQR-website-google_com-1] ([1] browsable assets)...
+[2024.07.30-17.46.05:205][496]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Images/VistaQR-website-google_com-1]
+[2024.07.30-17.46.05:206][496]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Images/VistaQR-website-google_com-1_Auto5
+[2024.07.30-17.46.05:206][496]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/VistaQR-website-google_com-1_AutA3D2920D4A0DF8D5C9F68799D2669A49.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Images/VistaQR-website-google_com-1_Auto5.uasset'
+[2024.07.30-17.46.05:207][496]LogFileHelpers: Auto-saving content packages took 0.012
+[2024.07.30-17.46.41:664][947]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.47.18:283][640]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.47.18:952][691]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.18:954][691]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.18:956][691]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.18:959][691]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:028][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:038][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:046][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:055][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:066][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:074][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:084][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:093][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:102][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:111][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:120][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:128][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:138][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:147][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:156][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:165][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:174][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:183][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:192][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:201][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:210][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:219][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:229][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:237][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:247][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:255][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:264][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:279][692]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:356][694]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:371][695]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.47.19:381][695]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.48.20:960][683]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.48.28:851][288]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.49.24:679][720]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-17.49.24:715][720]LogUObjectHash: Compacting FUObjectHashTables data took   1.94ms
+[2024.07.30-17.49.24:912][720]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.49.24:949][720]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset" SILENT=true
+[2024.07.30-17.49.24:957][720]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_CreditsNew
+[2024.07.30-17.49.24:958][720]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNewF44A9F8847D574209B9570BC9A114E82.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset'
+[2024.07.30-17.49.24:966][720]LogFileHelpers: InternalPromptForCheckoutAndSave took 54 ms (total: 1.03 sec)
+[2024.07.30-17.49.24:974][720]AssetCheck: New page: Asset Save: WBP_CreditsNew
+[2024.07.30-17.49.24:974][720]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-17.49.34:228][517]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.49.34:934][570]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.34:936][570]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.34:938][570]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:000][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:003][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:012][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:021][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:030][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:040][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:049][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:059][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:067][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:077][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:086][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:095][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:104][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:113][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:122][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:131][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:141][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:149][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:158][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:168][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:177][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:187][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:196][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:205][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:214][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:223][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:232][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:241][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:250][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:259][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:267][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:277][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:293][571]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:311][572]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:391][574]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:460][575]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:537][577]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:554][578]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:634][580]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:702][581]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:718][582]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:781][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:791][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:800][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:809][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:818][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:828][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:836][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:845][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:855][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:863][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:879][583]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:897][584]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:958][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:967][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:975][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:985][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.35:993][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:003][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:012][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:022][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:031][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:040][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:049][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:058][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:067][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:076][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:085][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:094][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:104][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:112][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:122][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:123][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.36:124][585]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:388][679]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:404][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:415][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:424][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:433][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:444][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:454][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:464][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:473][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:482][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:492][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:501][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:511][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:519][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:529][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:538][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:548][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:557][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:566][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:575][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:585][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:595][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:604][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:612][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:622][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:631][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:641][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:649][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:660][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:669][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:678][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:688][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:696][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:705][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:715][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:723][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:734][680]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.49.37:816][682]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.50.25:204][367]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-17.50.36:179][249]LogEditorTransaction: Undo Paste Property
+[2024.07.30-17.51.00:051][194]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.51.01:844][329]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:846][329]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:848][329]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:850][329]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:913][330]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:921][330]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:931][331]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:935][331]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.01:990][332]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:008][333]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:013][333]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:069][334]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:077][334]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:086][335]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:155][336]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:170][337]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:250][339]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:309][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:312][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:314][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:316][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:318][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:320][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:322][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:324][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:326][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:328][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:330][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:332][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:334][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:335][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:337][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:345][340]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:355][341]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:358][341]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:417][342]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:426][342]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:436][343]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:440][343]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:441][343]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:443][343]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:445][343]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:449][343]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:505][344]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:528][345]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:591][346]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:666][348]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:680][349]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.02:754][351]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Drag and Drop Widget entirely.
+[2024.07.30-17.51.40:338][463]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.52.12:625][173]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.52.34:891][884]LogWindows: LaunchURL https://docs.unrealengine.com/5.3/en/Engine/Blueprints?utm_source=editor&utm_medium=docs&utm_campaign=help_menu_asset
+[2024.07.30-17.53.54:015][227]LogEditorTransaction: Undo Edit Y
+[2024.07.30-17.53.54:334][233]LogEditorTransaction: Undo Edit X
+[2024.07.30-17.54.32:124][ 80]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2024.07.30-17.54.32:128][ 80]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.025
+[2024.07.30-17.54.32:128][ 80]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Menus/WBP_CreditsNew] ([2] browsable assets)...
+[2024.07.30-17.54.32:141][ 80]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew]
+[2024.07.30-17.54.32:141][ 80]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menus/WBP_CreditsNew]
+[2024.07.30-17.54.32:141][ 80]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto6.uasset" SILENT=false AUTOSAVING=true
+[2024.07.30-17.54.32:151][ 80]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto6
+[2024.07.30-17.54.32:151][ 80]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew_Auto6BECB54BB4265CCBF25FA85866ECFEB17.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto6.uasset'
+[2024.07.30-17.54.32:152][ 80]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/UI/Images/VistaQR-website-google_com-1] ([1] browsable assets)...
+[2024.07.30-17.54.32:152][ 80]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Images/VistaQR-website-google_com-1]
+[2024.07.30-17.54.32:154][ 80]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Images/VistaQR-website-google_com-1_Auto6
+[2024.07.30-17.54.32:154][ 80]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/VistaQR-website-google_com-1_Aut8AFDAB904F64C4901940C59AB007A534.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Images/VistaQR-website-google_com-1_Auto6.uasset'
+[2024.07.30-17.54.32:155][ 80]LogFileHelpers: Auto-saving content packages took 0.027
+[2024.07.30-17.54.57:101][382]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.55.07:261][233]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.55.07:302][233]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset" SILENT=true
+[2024.07.30-17.55.07:310][233]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_CreditsNew
+[2024.07.30-17.55.07:310][233]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew3A72E0CB40679E93F7C8D0A3B3D0863F.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset'
+[2024.07.30-17.55.07:319][233]LogFileHelpers: InternalPromptForCheckoutAndSave took 57 ms (total: 1.09 sec)
+[2024.07.30-17.55.07:320][233]AssetCheck: New page: Asset Save: WBP_CreditsNew
+[2024.07.30-17.55.07:320][233]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-17.55.08:218][299]LogUObjectHash: Compacting FUObjectHashTables data took   1.92ms
+[2024.07.30-17.55.08:331][299]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.55.08:366][299]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Images/VistaQR-website-google_com-1" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/VistaQR-website-google_com-1.uasset" SILENT=true
+[2024.07.30-17.55.08:367][299]LogSavePackage: Moving output files for package: /Game/UI/Images/VistaQR-website-google_com-1
+[2024.07.30-17.55.08:367][299]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/VistaQR-website-google_com-1AD82D3CF4ED1D423F12A30BA7E05B05D.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Images/VistaQR-website-google_com-1.uasset'
+[2024.07.30-17.55.08:547][299]LogFileHelpers: InternalPromptForCheckoutAndSave took 216 ms (total: 1.30 sec)
+[2024.07.30-17.55.08:548][299]AssetCheck: New page: Asset Save: VistaQR-website-google_com-1
+[2024.07.30-17.55.08:548][299]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/UI/Images/VistaQR-website-google_com-1.VistaQR-website-google_com-1
+[2024.07.30-17.55.11:787][632]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.55.15:335][876]LogEditorTransaction: Undo Move Anchor
+[2024.07.30-17.55.33:104][730]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-17.55.33:138][730]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset" SILENT=true
+[2024.07.30-17.55.33:146][730]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_CreditsNew
+[2024.07.30-17.55.33:147][730]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNewA0170F6F46F49113EC7BA58ECD32DAF4.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset'
+[2024.07.30-17.55.33:154][730]LogFileHelpers: InternalPromptForCheckoutAndSave took 50 ms (total: 1.35 sec)
+[2024.07.30-17.55.33:155][730]AssetCheck: New page: Asset Save: WBP_CreditsNew
+[2024.07.30-17.55.33:155][730]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-17.55.33:567][760]LogUObjectHash: Compacting FUObjectHashTables data took   1.89ms
+[2024.07.30-17.55.35:112][882]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-17.55.35:112][882]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-17.55.35:138][882]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-17.55.35:138][882]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-17.55.44:914][583]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-17.55.44:914][583]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.55.44:914][583]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.55.44:925][583]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-17.55.44:925][583]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-17.55.48:700][862]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-17.55.48:738][862]LogUObjectHash: Compacting FUObjectHashTables data took   1.87ms
+[2024.07.30-17.57.35:501][445]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-17.57.38:482][701]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-17.57.59:948][351]LogUObjectHash: Compacting FUObjectHashTables data took   1.82ms
+[2024.07.30-17.57.59:951][351]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.020
+[2024.07.30-17.57.59:951][351]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Menus/WBP_CreditsNew] ([2] browsable assets)...
+[2024.07.30-17.57.59:955][351]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew]
+[2024.07.30-17.57.59:955][351]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menus/WBP_CreditsNew]
+[2024.07.30-17.57.59:955][351]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto7.uasset" SILENT=false AUTOSAVING=true
+[2024.07.30-17.57.59:966][351]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto7
+[2024.07.30-17.57.59:966][351]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew_Auto78222964F4CC1912ECA503B987282A633.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto7.uasset'
+[2024.07.30-17.57.59:968][351]LogFileHelpers: Auto-saving content packages took 0.016
+[2024.07.30-17.59.26:914][175]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-17.59.27:449][183]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-17.59.27:983][207]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.59.28:519][230]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.59.29:761][305]LogEditorTransaction: Undo Edit Angle
+[2024.07.30-17.59.45:953][482]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-17.59.57:474][272]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-18.00.00:662][454]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-18.00.34:092][770]SourceControl: Error: fatal: Invalid path 'C:/Program Files/Epic Games/UE_5.3/Engine/Content/UMG': No such file or directory
+[2024.07.30-18.01.10:794][585]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-18.01.10:840][585]LogUObjectHash: Compacting FUObjectHashTables data took   2.02ms
+[2024.07.30-18.01.10:944][585]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-18.01.10:980][585]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset" SILENT=true
+[2024.07.30-18.01.10:991][585]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_CreditsNew
+[2024.07.30-18.01.10:992][585]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew9F8AA34E415867C127828385B3E6AA2B.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset'
+[2024.07.30-18.01.11:000][585]LogFileHelpers: InternalPromptForCheckoutAndSave took 56 ms (total: 1.41 sec)
+[2024.07.30-18.01.11:002][585]AssetCheck: New page: Asset Save: WBP_CreditsNew
+[2024.07.30-18.01.11:002][585]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-18.01.43:348][948]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-18.01.43:384][948]LogUObjectHash: Compacting FUObjectHashTables data took   1.81ms
+[2024.07.30-18.01.45:696][120]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.45:696][120]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.01.45:722][120]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.45:723][120]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.01.45:790][120]LogSlate: Took 0.000247 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2024.07.30-18.01.49:102][313]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.49:102][313]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.01.49:126][313]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.49:126][313]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.01.50:750][428]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.50:751][428]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.01.50:776][428]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.50:776][428]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.01.52:920][578]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.52:920][578]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.01.52:945][578]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.01.52:945][578]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.02.12:708][156]LogEditorTransaction: Undo Move Widget
+[2024.07.30-18.02.13:811][212]LogEditorTransaction: Undo Move Widget
+[2024.07.30-18.03.04:356][910]LogUObjectHash: Compacting FUObjectHashTables data took   1.60ms
+[2024.07.30-18.03.04:360][910]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Lvl_Combined' took 0.028
+[2024.07.30-18.03.04:360][910]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UI/Menus/WBP_CreditsNew] ([2] browsable assets)...
+[2024.07.30-18.03.04:370][910]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew]
+[2024.07.30-18.03.04:370][910]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menus/WBP_CreditsNew]
+[2024.07.30-18.03.04:370][910]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto8.uasset" SILENT=false AUTOSAVING=true
+[2024.07.30-18.03.04:382][910]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto8
+[2024.07.30-18.03.04:382][910]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNew_Auto8433A7CF24C94F345191ED79AF20EA41E.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Saved/Autosaves/Game/UI/Menus/WBP_CreditsNew_Auto8.uasset'
+[2024.07.30-18.03.04:383][910]LogFileHelpers: Auto-saving content packages took 0.023
+[2024.07.30-18.03.22:686][216]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-18.06.31:714][643]LogEditorTransaction: Undo Resize Widget
+[2024.07.30-18.07.30:500][161]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.07.30-18.09.04:676][697]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-18.09.04:718][697]LogUObjectHash: Compacting FUObjectHashTables data took   1.38ms
+[2024.07.30-18.09.04:955][697]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-18.09.04:996][697]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_CreditsNew" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset" SILENT=true
+[2024.07.30-18.09.05:008][697]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_CreditsNew
+[2024.07.30-18.09.05:009][697]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_CreditsNewC2CCE35E4367C320C30D8A9CE2A3BCF8.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_CreditsNew.uasset'
+[2024.07.30-18.09.05:017][697]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 1.47 sec)
+[2024.07.30-18.09.05:024][697]AssetCheck: New page: Asset Save: WBP_CreditsNew
+[2024.07.30-18.09.05:024][697]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_CreditsNew.WBP_CreditsNew
+[2024.07.30-18.10.05:871][416]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-18.10.05:916][416]LogUObjectHash: Compacting FUObjectHashTables data took   2.11ms
+[2024.07.30-18.10.06:867][472]BlueprintLog: New page: Compile WBP_CreditsNew
+[2024.07.30-18.10.06:902][472]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2024.07.30-18.10.08:846][607]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.10.08:846][607]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.10.08:871][607]LogWorld: UWorld::CleanupWorld for World_26, bSessionEnded=true, bCleanupResources=true
+[2024.07.30-18.10.08:871][607]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.07.30-18.10.10:793][714]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menus/WBP_MainMenu.WBP_MainMenu
+[2024.07.30-18.10.10:793][714]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-18.10.10:793][714]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-18.10.10:811][714]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.07.30-18.10.10:811][714]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.07.30-18.10.19:328][378]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.07.30-18.10.19:359][378]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menus/WBP_MainMenu" FILE="../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_MainMenu.uasset" SILENT=true
+[2024.07.30-18.10.19:369][378]LogSavePackage: Moving output files for package: /Game/UI/Menus/WBP_MainMenu
+[2024.07.30-18.10.19:370][378]LogSavePackage: Moving '../../../../../../GitHub/FMP/problox/projProblox/Saved/WBP_MainMenuCAE032E14E70FBD7E994BEA348ED2AFA.tmp' to '../../../../../../GitHub/FMP/problox/projProblox/Content/UI/Menus/WBP_MainMenu.uasset'
+[2024.07.30-18.10.19:379][378]LogFileHelpers: InternalPromptForCheckoutAndSave took 50 ms (total: 1.52 sec)
+[2024.07.30-18.10.19:380][378]AssetCheck: New page: Asset Save: WBP_MainMenu
+[2024.07.30-18.10.19:380][378]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UI/Menus/WBP_MainMenu.WBP_MainMenu
