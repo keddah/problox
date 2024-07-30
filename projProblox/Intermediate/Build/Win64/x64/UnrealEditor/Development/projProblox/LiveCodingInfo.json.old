@@ -8,7 +8,6 @@
 			"BuyableAttachment.gen.cpp.obj",
 			"BuyableInfo.gen.cpp.obj",
 			"Cell.gen.cpp.obj",
-			"CellSpawner.gen.cpp.obj",
 			"Collector.gen.cpp.obj",
 			"CubeConnector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
@@ -19,7 +18,8 @@
 			"CustomGameInstance.gen.cpp.obj",
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
-			"Grappler.gen.cpp.obj"
+			"Grappler.gen.cpp.obj",
+			"CellSpawner.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"HexagonSocketInfo.gen.cpp.obj",
@@ -33,9 +33,9 @@
 			"PickupableMaster.gen.cpp.obj",
 			"Piston.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
-			"SaveFiles.gen.cpp.obj"
+			"SaveFiles.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj"
 		],
 		"Module.projProblox.3.cpp.obj": [
 			"SpawnPoint.gen.cpp.obj",
