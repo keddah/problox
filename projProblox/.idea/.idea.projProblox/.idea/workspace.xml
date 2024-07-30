@@ -11,37 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d59c76d-51db-447a-a5f4-c0ff81693f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Engine/SharedPCH.Engine.Cpp20.h.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/VFX/FX_GrappleShot.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-projProblox.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Timestamp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/projProblox/UHT/Timestamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/projProbloxEditor/Development/projProbloxEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/projProbloxEditor/Development/projProbloxEditor.uhtmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LevelManager.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/LiveCodingInfo.json.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.1.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.dep.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.2.cpp.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/Module.projProblox.3.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.dll.rsp.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.exp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib.rsp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.lib.rsp.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.sup.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/projProblox/UnrealEditor-projProblox.sup.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/DependencyCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/DependencyCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Engine/SharedPCH.Engine.Cpp20.h.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Engine/SharedPCH.Engine.Cpp20.h.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/projProbloxEditor/Development/Makefile.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Pickupables/Grapple/BP_Grapple.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Pickupables/Grapple/BP_Grapple.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/projProblox.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/projProblox.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/LevelManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,17 +55,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="cidr-memory-view://9" root0="SKIP_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://1" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Epic Games/UE_5.3/Engine/Plugins/Runtime/GeometryProcessing/Source/GeometryAlgorithms/Private/ThirdParty/GTEngine/Mathematics/GteContOrientedBox3.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Editor/SwarmInterface/DotNET/SwarmInterface.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/include/atomic" root0="SKIP_HIGHLIGHTING" />
@@ -453,6 +418,7 @@
       <workItem from="1722185849932" duration="6495000" />
       <workItem from="1722270689923" duration="318000" />
       <workItem from="1722273459243" duration="3020000" />
+      <workItem from="1722332705549" duration="1208000" />
     </task>
     <servers />
   </component>
