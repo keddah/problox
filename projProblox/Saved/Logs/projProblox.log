@@ -1284,3 +1284,551 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.07.31-10.58.28:264][370]UATHelper: Packaging (Windows): [16/18] Compile [x64] Module.projProblox.3.cpp (0:07.26 at +0:00)
 [2024.07.31-10.58.28:264][370]UATHelper: Packaging (Windows): C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\SaveFiles.h(17): warning C4005: 'Print': macro redefinition
 [2024.07.31-10.58.28:264][370]UATHelper: Packaging (Windows): C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.h(23): note: see previous definition of 'Print'
+[2024.07.31-10.58.40:164][405]UATHelper: Packaging (Windows): C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.h(23): warning C4005: 'Print': macro redefinition
+[2024.07.31-10.58.40:164][405]UATHelper: Packaging (Windows): C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\SpawnPoint.h(18): note: see previous definition of 'Print'
+[2024.07.31-10.58.40:164][405]UATHelper: Packaging (Windows): [17/18] Link [x64] projProblox-Win64-Shipping.exe (0:11.70 at +0:07)
+[2024.07.31-10.58.40:164][405]UATHelper: Packaging (Windows): [18/18] WriteMetadata projProblox-Win64-Shipping.target (0:00.20 at +0:19)
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows): C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\SaveFiles.h(17): warning C4005: 'Print': macro redefinition
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows): C:\Users\Deany\Documents\GitHub\problox\projProblox\Source\projProblox\Pickupables\PickupableMaster.h(23): note: see previous definition of 'Print'
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows):    Creating library C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\projProblox-Win64-Shipping.lib and object C:\Users\Deany\Documents\GitHub\problox\projProblox\Binaries\Win64\projProblox-Win64-Shipping.exp
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows): ---------------------- Done ----------------------
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows):     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows): 1 build system warning(s):
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows):    - License not activated
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows): Total time in XGE executor: 19.40 seconds
+[2024.07.31-10.58.40:175][405]UATHelper: Packaging (Windows): Total execution time: 31.66 seconds
+[2024.07.31-10.58.40:207][406]UATHelper: Packaging (Windows): Took 31.77s to run dotnet.exe, ExitCode=0
+[2024.07.31-10.58.40:218][406]UATHelper: Packaging (Windows): Build command time: 31.78 s
+[2024.07.31-10.58.40:218][406]UATHelper: Packaging (Windows): ********** BUILD COMMAND COMPLETED **********
+[2024.07.31-10.58.40:218][406]UATHelper: Packaging (Windows): ********** COOK COMMAND STARTED **********
+[2024.07.31-10.58.40:218][406]UATHelper: Packaging (Windows): Running UnrealEditor Cook for project C:\Users\Deany\Documents\GitHub\problox\projProblox\projProblox.uproject
+[2024.07.31-10.58.40:218][406]UATHelper: Packaging (Windows): Commandlet log file is C:\Program Files\Epic Games\UE_5.3\Engine\Programs\AutomationTool\Saved\Cook-2024.07.31-11.58.40.txt
+[2024.07.31-10.58.40:218][406]UATHelper: Packaging (Windows): Running: C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Cmd.exe "C:\Users\Deany\Documents\GitHub\problox\projProblox\projProblox.uproject" -run=Cook  -TargetPlatform=Windows  -unversioned -fileopenlog -abslog="C:\Program Files\Epic Games\UE_5.3\Engine\Programs\AutomationTool\Saved\Cook-2024.07.31-11.58.40.txt" -stdout -CrashForUAT -unattended -NoLogTimes  -UTF8Output
+[2024.07.31-10.58.40:675][407]UATHelper: Packaging (Windows): LogInit: Display: Running engine for game: projProblox
+[2024.07.31-10.58.40:675][407]UATHelper: Packaging (Windows): LogCore: Display: Requested channels: 'cpu,gpu,frame,log,bookmark,screenshot,region'
+[2024.07.31-10.58.40:676][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : platform="Windows"
+[2024.07.31-10.58.40:676][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : config="Development"
+[2024.07.31-10.58.40:676][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : buildversion="++UE5+Release-5.3-CL-29314046"
+[2024.07.31-10.58.40:676][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : engineversion="5.3.2-29314046+++UE5+Release-5.3"
+[2024.07.31-10.58.40:676][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : os="Windows 11 (23H2) [10.0.22631.3958] "
+[2024.07.31-10.58.40:677][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : cpu="GenuineIntel|11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz"
+[2024.07.31-10.58.40:678][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : pgoenabled="0"
+[2024.07.31-10.58.40:678][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : pgoprofilingenabled="0"
+[2024.07.31-10.58.40:678][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : ltoenabled="0"
+[2024.07.31-10.58.40:678][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : asan="0"
+[2024.07.31-10.58.40:678][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : commandline="" C:\Users\Deany\Documents\GitHub\problox\projProblox\projProblox.uproject -run=Cook -TargetPlatform=Windows -unversioned -fileopenlog -abslog="C:\Program Files\Epic Games\UE_5.3\Engine\Programs\AutomationTool\Saved\Cook-2024.07.31-11.58.40.txt" -stdout -CrashForUAT -unattended -NoLogTimes -UTF8Output""
+[2024.07.31-10.58.40:678][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : loginid="73e65d0744ecfe954b536b91e68cb5ae"
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : llm="0"
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading VulkanPC ini files took 0.03 seconds
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading IOS ini files took 0.03 seconds
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading Mac ini files took 0.03 seconds
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading Android ini files took 0.03 seconds
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading Windows ini files took 0.04 seconds
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading TVOS ini files took 0.04 seconds
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading Unix ini files took 0.04 seconds
+[2024.07.31-10.58.40:835][407]UATHelper: Packaging (Windows): LogAssetRegistry: Display: Asset registry cache read as 22.0 MiB from ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/CachedAssetRegistry_0.bin
+[2024.07.31-10.58.40:836][407]UATHelper: Packaging (Windows): LogConfig: Display: Loading Linux ini files took 0.04 seconds
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogConfig: Display: Loading LinuxArm64 ini files took 0.04 seconds
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Bridge/Content/' mounted to '/Bridge/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/TraceUtilities/Content/' mounted to '/TraceUtilities/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Animation/ACLPlugin/Content/' mounted to '/ACLPlugin/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Animation/IKRig/Content/' mounted to '/IKRig/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Animation/ControlRig/Content/' mounted to '/ControlRig/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Animation/ControlRigSpline/Content/' mounted to '/ControlRigSpline/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/FX/Niagara/Content/' mounted to '/Niagara/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Interchange/Runtime/Content/' mounted to '/Interchange/'
+[2024.07.31-10.58.40:898][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/AudioSynesthesia/Content/' mounted to '/AudioSynesthesia/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/AudioWidgets/Content/' mounted to '/AudioWidgets/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/GeometryProcessing/Content/' mounted to '/GeometryProcessing/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/HDRIBackdrop/Content/' mounted to '/HDRIBackdrop/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/MeshModelingToolset/Content/' mounted to '/MeshModelingToolset/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/Metasound/Content/' mounted to '/Metasound/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/RigVM/Content/' mounted to '/RigVM/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/ResonanceAudio/Content/' mounted to '/ResonanceAudio/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/Synthesis/Content/' mounted to '/Synthesis/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Runtime/WaveTable/Content/' mounted to '/WaveTable/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Media/MediaCompositing/Content/' mounted to '/MediaCompositing/'
+[2024.07.31-10.58.40:899][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Developer/AnimationSharing/Content/' mounted to '/AnimationSharing/'
+[2024.07.31-10.58.40:900][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Media/MediaPlate/Content/' mounted to '/MediaPlate/'
+[2024.07.31-10.58.40:900][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/MovieScene/SequencerScripting/Content/' mounted to '/SequencerScripting/'
+[2024.07.31-10.58.40:910][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Editor/BlueprintHeaderView/Content/' mounted to '/BlueprintHeaderView/'
+[2024.07.31-10.58.40:910][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Editor/GeometryMode/Content/' mounted to '/GeometryMode/'
+[2024.07.31-10.58.40:910][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Editor/SpeedTreeImporter/Content/' mounted to '/SpeedTreeImporter/'
+[2024.07.31-10.58.40:910][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Editor/ModelingToolsEditorMode/Content/' mounted to '/ModelingToolsEditorMode/'
+[2024.07.31-10.58.40:910][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/VirtualProduction/Takes/Content/' mounted to '/Takes/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Enterprise/DatasmithContent/Content/' mounted to '/DatasmithContent/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Enterprise/GLTFExporter/Content/' mounted to '/GLTFExporter/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/2D/Paper2D/Content/' mounted to '/Paper2D/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/ChaosCaching/Content/' mounted to '/ChaosCaching/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/ChaosNiagara/Content/' mounted to '/ChaosNiagara/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/ChaosClothEditor/Content/' mounted to '/ChaosClothEditor/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/Dataflow/Content/' mounted to '/Dataflow/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/FullBodyIK/Content/' mounted to '/FullBodyIK/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/GeometryFlow/Content/' mounted to '/GeometryFlow/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/MeshLODToolset/Content/' mounted to '/MeshLODToolset/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/MeshModelingToolsetExp/Content/' mounted to '/MeshModelingToolsetExp/'
+[2024.07.31-10.58.40:911][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/GeometryCollectionPlugin/Content/' mounted to '/GeometryCollectionPlugin/'
+[2024.07.31-10.58.40:912][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Editor/UVEditor/Content/' mounted to '/UVEditor/'
+[2024.07.31-10.58.40:912][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/PythonScriptPlugin/Content/' mounted to '/PythonScriptPlugin/'
+[2024.07.31-10.58.40:912][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/ToolPresets/Content/' mounted to '/ToolPresets/'
+[2024.07.31-10.58.40:912][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/ChaosSolverPlugin/Content/' mounted to '/ChaosSolverPlugin/'
+[2024.07.31-10.58.40:912][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Editor/ObjectMixer/ObjectMixer/Content/' mounted to '/ObjectMixer/'
+[2024.07.31-10.58.40:996][408]UATHelper: Packaging (Windows): LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Editor/ObjectMixer/LightMixer/Content/' mounted to '/LightMixer/'
+[2024.07.31-10.58.41:141][408]UATHelper: Packaging (Windows): RenderDocPlugin: Display: RenderDoc plugin will not be loaded. Use '-AttachRenderDoc' on the cmd line or enable 'renderdoc.AutoAttach' in the plugin settings.
+[2024.07.31-10.58.41:141][408]UATHelper: Packaging (Windows): LogHAL: Display: Platform has ~ 32 GB [34180067328 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : extradevelopmentmemorymb="0"
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatASTC
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatDXT
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatETC2
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatIntelISPCTexComp
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatUncompressed
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatOodle: Display: Oodle Texture TFO init; latest sdk version = 2.9.10
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.5.dll
+[2024.07.31-10.58.41:173][408]UATHelper: Packaging (Windows): LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.6.dll
+[2024.07.31-10.58.41:174][408]UATHelper: Packaging (Windows): LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.7.dll
+[2024.07.31-10.58.41:174][408]UATHelper: Packaging (Windows): LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.8.dll
+[2024.07.31-10.58.41:174][408]UATHelper: Packaging (Windows): LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.9.dll
+[2024.07.31-10.58.41:174][408]UATHelper: Packaging (Windows): LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.10.dll
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatOodle
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2024.07.31-10.58.41:195][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2024.07.31-10.58.41:196][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2024.07.31-10.58.41:196][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Linux'
+[2024.07.31-10.58.41:196][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxEditor'
+[2024.07.31-10.58.41:196][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2024.07.31-10.58.41:206][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2024.07.31-10.58.41:206][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxArm64'
+[2024.07.31-10.58.41:206][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxArm64Server'
+[2024.07.31-10.58.41:206][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxArm64Client'
+[2024.07.31-10.58.41:207][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Mac'
+[2024.07.31-10.58.41:207][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacEditor'
+[2024.07.31-10.58.41:207][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacServer'
+[2024.07.31-10.58.41:207][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacClient'
+[2024.07.31-10.58.41:207][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2024.07.31-10.58.41:217][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2024.07.31-10.58.41:217][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2024.07.31-10.58.41:217][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsEditor'
+[2024.07.31-10.58.41:218][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2024.07.31-10.58.41:218][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2024.07.31-10.58.41:218][409]UATHelper: Packaging (Windows): LogTargetPlatformManager: Display: Building Assets For Windows
+[2024.07.31-10.58.41:689][410]UATHelper: Packaging (Windows): LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2024.07.31-10.58.41:731][410]UATHelper: Packaging (Windows): LogDerivedDataCache: Display: Memory: Max Cache Size: -1 MB
+[2024.07.31-10.58.41:731][410]UATHelper: Packaging (Windows): LogDerivedDataCache: Display: ../../../Engine/DerivedDataCache/Compressed.ddp: Opened pak cache for reading. (2383 MiB)
+[2024.07.31-10.58.41:752][410]UATHelper: Packaging (Windows): LogDerivedDataCache: Display: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Performance: Latency=0.10ms. RandomReadSpeed=259.70MBs, RandomWriteSpeed=259.64MBs. Assigned SpeedClass 'Local'
+[2024.07.31-10.58.41:752][410]UATHelper: Packaging (Windows): LogXGEController: Display: Initialized XGE controller. XGE tasks will be spawned on this machine.
+[2024.07.31-10.58.42:862][414]UATHelper: Packaging (Windows): LogShaderCompilers: Display: Using XGE Controller for Shader Compilation.
+[2024.07.31-10.58.42:862][414]UATHelper: Packaging (Windows): LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush
+[2024.07.31-10.58.42:862][414]UATHelper: Packaging (Windows): LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+[2024.07.31-10.58.42:873][414]UATHelper: Packaging (Windows): LogAssetRegistry: Display: AssetDataGatherer spent 0.000s loading caches ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/CachedAssetRegistry_*.bin.
+[2024.07.31-10.58.43:030][414]UATHelper: Packaging (Windows): LogEditorDomain: Display: EditorDomain is Disabled
+[2024.07.31-10.58.43:030][414]UATHelper: Packaging (Windows): LogDeviceProfileManager: Display: Deviceprofile LinuxArm64Editor not found.
+[2024.07.31-10.58.43:156][414]UATHelper: Packaging (Windows): LogDeviceProfileManager: Display: Deviceprofile LinuxArm64 not found.
+[2024.07.31-10.58.43:156][414]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : deviceprofile="WindowsEditor"
+[2024.07.31-10.58.43:156][414]UATHelper: Packaging (Windows): LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush
+[2024.07.31-10.58.43:187][415]UATHelper: Packaging (Windows): LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+[2024.07.31-10.58.43:187][415]UATHelper: Packaging (Windows): LogTextureEncodingSettings: Display: Texture Encode Speed: Final (cook).
+[2024.07.31-10.58.43:187][415]UATHelper: Packaging (Windows): LogTextureEncodingSettings: Display: Oodle Texture Encode Speed settings: Fast: RDO Off Lambda=0, Effort=Normal Final: RDO Off Lambda=0, Effort=Normal
+[2024.07.31-10.58.43:229][415]UATHelper: Packaging (Windows): LogTextureEncodingSettings: Display: Shared linear texture encoding: Disabled
+[2024.07.31-10.58.43:229][415]UATHelper: Packaging (Windows): LogMeshReduction: Display: Using QuadricMeshReduction for automatic static mesh reduction
+[2024.07.31-10.58.43:229][415]UATHelper: Packaging (Windows): LogMeshReduction: Display: Using SkeletalMeshReduction for automatic skeletal mesh reduction
+[2024.07.31-10.58.43:229][415]UATHelper: Packaging (Windows): LogMeshReduction: Display: Using ProxyLODMeshReduction for automatic mesh merging
+[2024.07.31-10.58.43:376][415]UATHelper: Packaging (Windows): LogMeshReduction: Display: No distributed automatic mesh merging module available
+[2024.07.31-10.58.43:376][415]UATHelper: Packaging (Windows): LogVirtualization: Display: VirtualizationSystem name found in ini file: None
+[2024.07.31-10.58.43:522][416]UATHelper: Packaging (Windows): LogVirtualization: Display: FNullVirtualizationSystem mounted, virtualization will be disabled
+[2024.07.31-10.58.43:522][416]UATHelper: Packaging (Windows): LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize started...
+[2024.07.31-10.58.43:972][417]UATHelper: Packaging (Windows): LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize took 1 ms
+[2024.07.31-10.58.44:848][420]UATHelper: Packaging (Windows): LogAudio: Display: Registering Engine Module Parameter Interfaces...
+[2024.07.31-10.58.44:848][420]UATHelper: Packaging (Windows): LogPython: Warning: 'Level' and 'ELevel' have the same name (Level) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.07.31-10.58.44:943][420]UATHelper: Packaging (Windows): LogPython: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.07.31-10.58.44:943][420]UATHelper: Packaging (Windows): LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2024.07.31-10.58.45:178][421]PackagingResults: Warning: 'Level' and 'ELevel' have the same name (Level) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.07.31-10.58.45:178][421]PackagingResults: Warning: 'GameMode' and 'EGameMode' have the same name (GameMode) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2024.07.31-10.58.45:963][423]UATHelper: Packaging (Windows): LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2024.07.31-10.58.46:132][423]UATHelper: Packaging (Windows): LogCsvProfiler: Display: Metadata set : largeworldcoordinates="1"
+[2024.07.31-10.58.46:132][423]UATHelper: Packaging (Windows): LogCook: Display: CookProcessCount=1. CookMultiprocess is disabled and the cooker is running as a single process.
+[2024.07.31-10.58.46:173][423]UATHelper: Packaging (Windows): LogCook: Display: CookSettings for Memory:
+[2024.07.31-10.58.46:173][423]UATHelper: Packaging (Windows): 	MemoryMaxUsedVirtual 0MiB
+[2024.07.31-10.58.46:174][423]UATHelper: Packaging (Windows): 	MemoryMaxUsedPhysical 0MiB
+[2024.07.31-10.58.46:174][423]UATHelper: Packaging (Windows): 	MemoryMinFreeVirtual 2048MiB
+[2024.07.31-10.58.46:174][423]UATHelper: Packaging (Windows): 	MemoryMinFreePhysical 2048MiB
+[2024.07.31-10.58.46:174][423]UATHelper: Packaging (Windows): 	MemoryTriggerGCAtPressureLevel None
+[2024.07.31-10.58.46:174][423]UATHelper: Packaging (Windows): 	UseSoftGC true (5/10)
+[2024.07.31-10.58.46:195][424]UATHelper: Packaging (Windows): LogAssetRegistry: Display: Triggering cache save on discovery complete
+[2024.07.31-10.58.46:673][425]UATHelper: Packaging (Windows): LogCook: Display: Waiting for Asset Registry
+[2024.07.31-10.58.46:694][425]UATHelper: Packaging (Windows): LogAssetRegistry: Display: Asset registry cache written as 0.0 MiB to ../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Intermediate/CachedAssetRegistry_*.bin
+[2024.07.31-10.58.46:778][425]UATHelper: Packaging (Windows): LogCook: Display: Clearing all cooked content for platform Windows
+[2024.07.31-10.58.46:788][425]UATHelper: Packaging (Windows): LogCook: Display: Sandbox cleanup took 0.046 seconds for platforms Windows
+[2024.07.31-10.58.48:341][430]UATHelper: Packaging (Windows): LogCook: Display: Compiling global changed shaders for platform 'Windows'
+[2024.07.31-10.58.48:341][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display:
+[2024.07.31-10.58.48:341][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Shader Library 'Global' (PCD3D_SM6-PCD3D_SM6) Stats:
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: =================
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Assets: 1, Unique Shadermaps: 326 (32600.00%)
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Total Shaders: 4161, Unique Shaders: 4161 (100.00%)
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Total Shader Size: 73.82mb, Unique Shaders Size: 73.82mb (100.00%)
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: === Extended info:
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Median number of shaders in shadermap: 3
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Maximum number of shaders in shadermap: 264
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+[2024.07.31-10.58.48:352][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display:     1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+[2024.07.31-10.58.48:363][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Textual dump saved to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Shaders/PCD3D_SM6-PCD3D_SM6/ShaderDebug-Global-PCD3D_SM6-PCD3D_SM6/Dump.txt'
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: =================
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display:
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Shader Library 'Global' (PCD3D_SM5-PCD3D_SM5) Stats:
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: =================
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Assets: 1, Unique Shadermaps: 294 (29400.00%)
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Total Shaders: 3549, Unique Shaders: 3539 (99.72%)
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Total Shader Size: 11.82mb, Unique Shaders Size: 11.82mb (99.97%)
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: === Extended info:
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Median number of shaders in shadermap: 3
+[2024.07.31-10.58.48:394][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Maximum number of shaders in shadermap: 264
+[2024.07.31-10.58.48:395][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+[2024.07.31-10.58.48:406][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display:     4, 2, 2, 2, 2, 2, 2, 2, 1, 1
+[2024.07.31-10.58.48:406][430]UATHelper: Packaging (Windows): LogShaderLibrary: Display: Textual dump saved to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/Shaders/PCD3D_SM5-PCD3D_SM5/ShaderDebug-Global-PCD3D_SM5-PCD3D_SM5/Dump.txt'
+[2024.07.31-10.58.48:582][431]UATHelper: Packaging (Windows): LogShaderLibrary: Display: =================
+[2024.07.31-10.58.48:582][431]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/MovieScene/MovieRenderPipeline/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:582][431]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Compositing/OpenColorIO/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:582][431]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Editor/ConsoleVariablesEditor/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:821][431]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Developer/Concert/ConcertSync/ConcertSyncClient/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:821][431]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/MovieScene/MovieRenderPipeline/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:821][431]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Compositing/OpenColorIO/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:821][431]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Editor/ConsoleVariablesEditor/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:844][432]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/MovieScene/MovieRenderPipeline/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:845][432]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Compositing/OpenColorIO/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:845][432]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Editor/ConsoleVariablesEditor/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:845][432]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Developer/Concert/ConcertSync/ConcertSyncClient/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:845][432]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/MovieScene/MovieRenderPipeline/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:845][432]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Compositing/OpenColorIO/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:845][432]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Editor/ConsoleVariablesEditor/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:853][432]UATHelper: Packaging (Windows): LogPackageUtilities: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Developer/Concert/ConcertSync/ConcertSyncClient/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.48:853][432]UATHelper: Packaging (Windows): LogCook: Display: Discovering localized assets for cultures: en
+[2024.07.31-10.58.48:853][432]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 0 Packages Remain 3477 Total 3477
+[2024.07.31-10.58.48:905][432]UATHelper: Packaging (Windows): LogCook: Display: Cook Diagnostics: OpenFileHandles=236, VirtualMemory=1304MiB
+[2024.07.31-10.58.48:905][432]UATHelper: Packaging (Windows): LogCook: Display: Garbage collection triggered (Soft). Triggered by conditions:
+[2024.07.31-10.58.48:905][432]UATHelper: Packaging (Windows):   CookSettings.bUseSoftGC: Available physical memory 7633MiB is less than the current target for SoftGC 16298MiB.
+[2024.07.31-10.58.48:926][432]UATHelper: Packaging (Windows): LogCookCommandlet: Display: GarbageCollection... (Soft GC)
+[2024.07.31-10.58.49:180][433]PackagingResults: Warning: Engine.ini:[Core.System]:Paths entry '../../../Engine/Plugins/Developer/Concert/ConcertSync/ConcertSyncClient/Content' is not mounted. Skipping it.
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): LogCook: Display: GarbageCollection Results:
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 	Type: Soft
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 	NumObjects:
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 		Capacity:           25231360
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 		Before GC:             38486
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 		After GC:              38383
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 		Freed by GC:             103
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 	Virtual Memory:
+[2024.07.31-10.58.51:815][440]UATHelper: Packaging (Windows): 		Before GC:              1367 MB
+[2024.07.31-10.58.51:816][440]UATHelper: Packaging (Windows): 		After GC:               1373 MB
+[2024.07.31-10.58.51:816][440]UATHelper: Packaging (Windows): 		Freed by GC:              -6 MB
+[2024.07.31-10.58.51:816][440]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Sandbox.umap: Failed to load '/Game/Levels/Sandbox': Can't find file.
+[2024.07.31-10.58.51:816][440]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Sandbox.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/Sandbox'
+[2024.07.31-10.58.51:863][440]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Sandbox.umap: Failed to load '/Game/Levels/Sandbox': Can't find file.
+[2024.07.31-10.58.51:864][440]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Sandbox.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/Sandbox'
+[2024.07.31-10.58.51:920][441]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 63 Packages Remain 6577 Total 6640
+[2024.07.31-10.58.51:930][441]UATHelper: Packaging (Windows): PIE: Warning: AttachTo: '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758406965.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758406965.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.58.51:951][441]UATHelper: Packaging (Windows): PIE: Warning: AttachTo: '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758401964.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758401964.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.58.52:172][441]UATHelper: Packaging (Windows): PIE: Warning: AttachTo: '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758410966.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758410966.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.58.52:172][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/Black_1x1_EXR_Texture_VT.Black_1x1_EXR_Texture_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:172][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/Black_1x1_EXR_Texture_VT.Black_1x1_EXR_Texture_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:172][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenNormalMap_VT.BaseFlattenNormalMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:172][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenNormalMap_VT.BaseFlattenNormalMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:172][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenLinearColor_VT.BaseFlattenLinearColor_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:172][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenLinearColor_VT.BaseFlattenLinearColor_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:173][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenGrayscaleMap_VT.BaseFlattenGrayscaleMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:173][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenGrayscaleMap_VT.BaseFlattenGrayscaleMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:173][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenEmissiveMap_VT.BaseFlattenEmissiveMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:173][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenEmissiveMap_VT.BaseFlattenEmissiveMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:173][441]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenDiffuseMap_VT.BaseFlattenDiffuseMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:187][442]PackagingResults: Warning: AttachTo: '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758406965.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758406965.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.58.52:187][442]PackagingResults: Warning: AttachTo: '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758401964.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758401964.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.58.52:189][442]PackagingResults: Warning: AttachTo: '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758410966.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/testKitchen.testKitchen:PersistentLevel.BP_BounceSpring_C_UAID_50EBF622FEB752FF01_1758410966.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.58.52:306][442]UATHelper: Packaging (Windows): LogTexture: Display: /Engine/EngineMaterials/BaseFlattenDiffuseMap_VT.BaseFlattenDiffuseMap_VT is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.52:306][442]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_TimelinePin.uasset: Failed to load '/Game/UI/Timeline/WBP_TimelinePin': Can't find file.
+[2024.07.31-10.58.52:520][443]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_TimelinePin.uasset: Failed to load '/Game/UI/Timeline/WBP_TimelinePin': Can't find file.
+[2024.07.31-10.58.53:187][445]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_TimelinePin.uasset: VerifyImport: Failed to load package for import object 'Package /Game/UI/Timeline/WBP_TimelinePin'
+[2024.07.31-10.58.53:198][445]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\BlenderModelsReece\cubecoreredone.uasset: Failed to load '/Game/Models/BlenderModelsReece/newcubecore': Can't find file.
+[2024.07.31-10.58.53:198][445]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\BlenderModelsReece\cubecoreredone.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Models/BlenderModelsReece/newcubecore'
+[2024.07.31-10.58.53:198][445]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\bed.uasset: Failed to load '/Game/Models/BlenderModelsReece/bed': Can't find file.
+[2024.07.31-10.58.53:230][445]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\bed.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Models/BlenderModelsReece/bed'
+[2024.07.31-10.58.53:517][446]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\UI\WBP_TimelinePin.uasset: VerifyImport: Failed to load package for import object 'Package /Game/UI/Timeline/WBP_TimelinePin'
+[2024.07.31-10.58.53:518][446]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\BlenderModelsReece\cubecoreredone.uasset: Failed to load '/Game/Models/BlenderModelsReece/newcubecore': Can't find file.
+[2024.07.31-10.58.53:518][446]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\BlenderModelsReece\cubecoreredone.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Models/BlenderModelsReece/newcubecore'
+[2024.07.31-10.58.53:519][446]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\bed.uasset: Failed to load '/Game/Models/BlenderModelsReece/bed': Can't find file.
+[2024.07.31-10.58.53:519][446]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Models\bed.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Models/BlenderModelsReece/bed'
+[2024.07.31-10.58.53:828][446]UATHelper: Packaging (Windows): LogSkeletalMesh: Display: Waiting for skinned assets to be ready 0/1 (door_doorknob_Circle) ...
+[2024.07.31-10.58.54:258][448]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 531 Packages Remain 6114 Total 6645
+[2024.07.31-10.58.54:269][448]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\UIGameMode\UIGameMode.uasset: Failed to load '/Game/UI/UI/UI/HUD_UI/HUD_MainMenu': Can't find file.
+[2024.07.31-10.58.54:517][449]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\UIGameMode\UIGameMode.uasset: Failed to load '/Game/UI/UI/UI/HUD_UI/HUD_MainMenu': Can't find file.
+[2024.07.31-10.58.55:834][452]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\UIGameMode\UIGameMode.uasset: VerifyImport: Failed to load package for import object 'Package /Game/UI/UI/UI/HUD_UI/HUD_MainMenu'
+[2024.07.31-10.58.55:850][453]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\UIGameMode\UIGameMode.uasset: VerifyImport: Failed to load package for import object 'Package /Game/UI/UI/UI/HUD_UI/HUD_MainMenu'
+[2024.07.31-10.58.56:192][454]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 774 Packages Remain 5871 Total 6645
+[2024.07.31-10.58.56:192][454]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/WhitePlaceholder.WhitePlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.56:192][454]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/WhitePlaceholder.WhitePlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.56:192][454]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/Placeholder_Normal.Placeholder_Normal is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.56:247][454]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/Placeholder_Normal.Placeholder_Normal is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.56:248][454]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/DefaultDiffuse.DefaultDiffuse is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.56:249][454]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/DefaultDiffuse.DefaultDiffuse is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.56:249][454]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/BlackPlaceholder.BlackPlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.57:846][458]UATHelper: Packaging (Windows): LogTexture: Display: /Game/MSPresets/MSVTTextures/BlackPlaceholder.BlackPlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.58.58:751][461]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 1070 Packages Remain 5575 Total 6645
+[2024.07.31-10.58.58:751][461]UATHelper: Packaging (Windows): LogMaterial: Display: Missing cached shadermap for HDRI_Epic_Courtyard_Daylight_Mat in PCD3D_SM6, Default, SM6, Game (DDC key hash: 1815d9d93117d61e2d83692ba69b39b3e704471e), compiling.
+[2024.07.31-10.58.58:824][461]UATHelper: Packaging (Windows): LogMaterial: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\HDRI\HDRI_Epic_Courtyard_Daylight_Mat.uasset: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+[2024.07.31-10.58.58:825][461]UATHelper: Packaging (Windows): 	(Node TextureSample) Sampler type is Linear Color, should be Color for /Game/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.HDRI_Epic_Courtyard_Daylight
+[2024.07.31-10.58.58:825][461]UATHelper: Packaging (Windows): LogMaterial: Display: Missing cached shadermap for HDRI_Epic_Courtyard_Daylight_Mat in PCD3D_SM5, Default, SM5, Game (DDC key hash: 8948c7994b2e09cf485f0f8aa8e2dc9366e70ae4), compiling.
+[2024.07.31-10.58.58:856][462]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\HDRI\HDRI_Epic_Courtyard_Daylight_Mat.uasset: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+[2024.07.31-10.58.58:858][462]UATHelper: Packaging (Windows): LogMaterial: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\HDRI\HDRI_Epic_Courtyard_Daylight_Mat.uasset: Failed to compile Material for platform PCD3D_SM5, Default Material will be used in game.
+[2024.07.31-10.58.58:858][462]UATHelper: Packaging (Windows): 	(Node TextureSample) Sampler type is Linear Color, should be Color for /Game/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.HDRI_Epic_Courtyard_Daylight
+[2024.07.31-10.58.58:858][462]UATHelper: Packaging (Windows): LogMaterial: Warning: Cooking a material resource (in HDRI_Epic_Courtyard_Daylight_Mat hierarchy) that doesn't have a valid ShaderMap! Shadermap pointer is null.
+[2024.07.31-10.58.59:189][463]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\HDRI\HDRI_Epic_Courtyard_Daylight_Mat.uasset: Failed to compile Material for platform PCD3D_SM5, Default Material will be used in game.
+[2024.07.31-10.58.59:190][463]PackagingResults: Warning: Cooking a material resource (in HDRI_Epic_Courtyard_Daylight_Mat hierarchy) that doesn't have a valid ShaderMap! Shadermap pointer is null.
+[2024.07.31-10.58.59:206][463]UATHelper: Packaging (Windows): LogMaterial: Warning: Cooking a material resource (in HDRI_Epic_Courtyard_Daylight_Mat hierarchy) that doesn't have a valid ShaderMap! Shadermap pointer is null.
+[2024.07.31-10.58.59:277][463]UATHelper: Packaging (Windows): LogMaterial: Display: Missing cached shadermap for M_Balloon in PCD3D_SM6, Default, SM6, Game (DDC key hash: c5b150c7c9e5cf29d6d3e3f77487a5fb7fc25ac5), compiling.
+[2024.07.31-10.58.59:407][463]UATHelper: Packaging (Windows): LogShaderCompilers: Display: Current jobs: 66, Batch size: 6, Num Already Dispatched: 0
+[2024.07.31-10.58.59:408][463]UATHelper: Packaging (Windows): Unreal Engine XGE Tasks
+[2024.07.31-10.58.59:408][463]UATHelper: Packaging (Windows): -----------------------------------------------------------------------
+[2024.07.31-10.58.59:408][463]UATHelper: Packaging (Windows): Incredibuild Console 10.1.11 (build 5157)
+[2024.07.31-10.58.59:408][463]UATHelper: Packaging (Windows): Copyright (C) 2001-2023 Incredibuild Software Ltd. All rights reserved.
+[2024.07.31-10.58.59:408][463]UATHelper: Packaging (Windows): -----------------------------------------------------------------------
+[2024.07.31-10.58.59:526][464]PackagingResults: Warning: Cooking a material resource (in HDRI_Epic_Courtyard_Daylight_Mat hierarchy) that doesn't have a valid ShaderMap! Shadermap pointer is null.
+[2024.07.31-10.58.59:653][464]UATHelper: Packaging (Windows): --------------------Build System Warning---------------------------------------
+[2024.07.31-10.58.59:653][464]UATHelper: Packaging (Windows): License not activated:
+[2024.07.31-10.58.59:653][464]UATHelper: Packaging (Windows):     License is not activated. Please activate the license in the coordinator.
+[2024.07.31-10.58.59:653][464]UATHelper: Packaging (Windows):     This build will run in standalone mode.
+[2024.07.31-10.58.59:653][464]UATHelper: Packaging (Windows): -------------------------------------------------------------------------------
+[2024.07.31-10.58.59:653][464]UATHelper: Packaging (Windows): Build ID: {EB646424-C761-4B55-AE72-5FE23E0281E9}
+[2024.07.31-10.58.59:769][464]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_PropPropeller.uasset: Failed to load '/Game/OutsourcedModels/Propeller': Can't find file.
+[2024.07.31-10.58.59:856][465]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_PropPropeller.uasset: Failed to load '/Game/OutsourcedModels/Propeller': Can't find file.
+[2024.07.31-10.58.59:936][465]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_PropPropeller.uasset: VerifyImport: Failed to load package for import object 'Package /Game/OutsourcedModels/Propeller'
+[2024.07.31-10.59.00:192][466]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_PropPropeller.uasset: VerifyImport: Failed to load package for import object 'Package /Game/OutsourcedModels/Propeller'
+[2024.07.31-10.59.00:895][468]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 1650 Packages Remain 4995 Total 6645
+[2024.07.31-10.59.00:919][468]UATHelper: Packaging (Windows): LogStaticMesh: Display: Waiting for static meshes to be ready 1/10 (/Game/StarterContent/Shapes/Wedge) ...
+[2024.07.31-10.59.02:167][471]UATHelper: Packaging (Windows): LogStaticMesh: Display: Waiting for static meshes to be ready 5/10 (/Game/Models/_GENERATED2/rosop/Stairs_DFFC38BE) ...
+[2024.07.31-10.59.04:180][477]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 2574 Packages Remain 4071 Total 6645
+[2024.07.31-10.59.06:381][484]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 3041 Packages Remain 3604 Total 6645
+[2024.07.31-10.59.08:438][490]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 3503 Packages Remain 3142 Total 6645
+[2024.07.31-10.59.08:480][490]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 5203 Packages Remain 1442 Total 6645
+[2024.07.31-10.59.08:491][490]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_Pad.uasset: Failed to load '/Game/Materials/MM_Magnet': Can't find file.
+[2024.07.31-10.59.08:618][491]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_Pad.uasset: Failed to load '/Game/Materials/MM_Magnet': Can't find file.
+[2024.07.31-10.59.10:529][496]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_Pad.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Materials/MM_Magnet'
+[2024.07.31-10.59.10:617][497]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_Pad.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Materials/MM_Magnet'
+[2024.07.31-10.59.11:082][498]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 5676 Packages Remain 969 Total 6645
+[2024.07.31-10.59.11:085][498]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Minimal_Default.umap: Failed to load '/Game/StarterContent/Maps/Minimal_Default_BuiltData': Can't find file.
+[2024.07.31-10.59.11:201][498]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Minimal_Default.umap: VerifyImport: Failed to load package for import object 'Package /Game/StarterContent/Maps/Minimal_Default_BuiltData'
+[2024.07.31-10.59.11:201][498]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\ArcadeMode\AssaultCourse.umap: Failed to load '/Game/Gamemodes/BP_Mode_Assault': Can't find file.
+[2024.07.31-10.59.11:285][499]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Minimal_Default.umap: Failed to load '/Game/StarterContent/Maps/Minimal_Default_BuiltData': Can't find file.
+[2024.07.31-10.59.11:287][499]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Minimal_Default.umap: VerifyImport: Failed to load package for import object 'Package /Game/StarterContent/Maps/Minimal_Default_BuiltData'
+[2024.07.31-10.59.11:287][499]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\ArcadeMode\AssaultCourse.umap: Failed to load '/Game/Gamemodes/BP_Mode_Assault': Can't find file.
+[2024.07.31-10.59.12:283][501]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\ArcadeMode\AssaultCourse.umap: VerifyImport: Failed to load package for import object 'Package /Game/Gamemodes/BP_Mode_Assault'
+[2024.07.31-10.59.12:283][501]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/BlackPlaceholder.BlackPlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:283][501]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/BlackPlaceholder.BlackPlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:284][501]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/DefaultDiffuse.DefaultDiffuse is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:284][501]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/DefaultDiffuse.DefaultDiffuse is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:284][501]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/Placeholder_Normal.Placeholder_Normal is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:284][501]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/Placeholder_Normal.Placeholder_Normal is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:284][501]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/WhitePlaceholder.WhitePlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:289][502]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\ArcadeMode\AssaultCourse.umap: VerifyImport: Failed to load package for import object 'Package /Game/Gamemodes/BP_Mode_Assault'
+[2024.07.31-10.59.12:326][502]UATHelper: Packaging (Windows): LogTexture: Display: /Bridge/MSPresets/MSVTTextures/WhitePlaceholder.WhitePlaceholder is marked for virtual streaming but virtual texture streaming is not available.
+[2024.07.31-10.59.12:326][502]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_A3851B5F': Can't find file.
+[2024.07.31-10.59.12:326][502]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_A3851B5F'
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_BEF98C43': Can't find file.
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_BEF98C43'
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_CA75D456': Can't find file.
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_CA75D456'
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_D08DC256': Can't find file.
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_D08DC256'
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_D8D47B60': Can't find file.
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_D8D47B60'
+[2024.07.31-10.59.12:327][502]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_FD3C84F9': Can't find file.
+[2024.07.31-10.59.12:590][502]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_FD3C84F9'
+[2024.07.31-10.59.12:626][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_A3851B5F': Can't find file.
+[2024.07.31-10.59.12:626][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_A3851B5F'
+[2024.07.31-10.59.12:626][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_BEF98C43': Can't find file.
+[2024.07.31-10.59.12:628][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_BEF98C43'
+[2024.07.31-10.59.12:629][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_CA75D456': Can't find file.
+[2024.07.31-10.59.12:629][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_CA75D456'
+[2024.07.31-10.59.12:629][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_D08DC256': Can't find file.
+[2024.07.31-10.59.12:630][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_D08DC256'
+[2024.07.31-10.59.12:630][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_D8D47B60': Can't find file.
+[2024.07.31-10.59.12:630][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_D8D47B60'
+[2024.07.31-10.59.12:630][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: Failed to load '/Game/Levels/_GENERATED/rosop/Box_FD3C84F9': Can't find file.
+[2024.07.31-10.59.12:630][503]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\SandboxTesting.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/_GENERATED/rosop/Box_FD3C84F9'
+[2024.07.31-10.59.12:750][503]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 6345 Packages Remain 300 Total 6645
+[2024.07.31-10.59.12:750][503]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_BoostPad.uasset: Failed to load '/Game/Material/M_Wheel': Can't find file.
+[2024.07.31-10.59.12:848][503]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_BoostPad.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Material/M_Wheel'
+[2024.07.31-10.59.12:848][503]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\StarterMap.umap: Failed to load '/Game/StarterContent/Maps/StarterMap_BuiltData': Can't find file.
+[2024.07.31-10.59.12:995][504]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_BoostPad.uasset: Failed to load '/Game/Material/M_Wheel': Can't find file.
+[2024.07.31-10.59.13:014][504]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Blueprints\Pads\BP_BoostPad.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Material/M_Wheel'
+[2024.07.31-10.59.13:021][504]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\StarterMap.umap: Failed to load '/Game/StarterContent/Maps/StarterMap_BuiltData': Can't find file.
+[2024.07.31-10.59.14:902][509]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\StarterMap.umap: VerifyImport: Failed to load package for import object 'Package /Game/StarterContent/Maps/StarterMap_BuiltData'
+[2024.07.31-10.59.14:958][510]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\StarterMap.umap: VerifyImport: Failed to load package for import object 'Package /Game/StarterContent/Maps/StarterMap_BuiltData'
+[2024.07.31-10.59.15:384][511]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 6425 Packages Remain 221 Total 6646
+[2024.07.31-10.59.15:384][511]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Advanced_Lighting.umap: Failed to load '/Game/StarterContent/Maps/Advanced_Lighting_BuiltData': Can't find file.
+[2024.07.31-10.59.15:624][512]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Advanced_Lighting.umap: Failed to load '/Game/StarterContent/Maps/Advanced_Lighting_BuiltData': Can't find file.
+[2024.07.31-10.59.17:364][517]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Advanced_Lighting.umap: VerifyImport: Failed to load package for import object 'Package /Game/StarterContent/Maps/Advanced_Lighting_BuiltData'
+[2024.07.31-10.59.17:624][518]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\StarterContent\Maps\Advanced_Lighting.umap: VerifyImport: Failed to load package for import object 'Package /Game/StarterContent/Maps/Advanced_Lighting_BuiltData'
+[2024.07.31-10.59.17:847][518]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 6546 Packages Remain 100 Total 6646
+[2024.07.31-10.59.17:993][519]UATHelper: Packaging (Windows): LogModuleManager: Display: Unable to bootstrap from archive C:/Users/Deany/AppData/Local/Temp/UnrealXGEWorkingDir/4067A8A34EE520A5C46B11A37135BE8F//Bootstrap-EB646424-C761-4B55-AE72-5FE23E0281E9.modules, will fallback on normal initialization
+[2024.07.31-10.59.17:993][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: Failed to load '/Game/Blueprints/Pickupables/Cores/BP_CubeCoree': Can't find file.
+[2024.07.31-10.59.17:994][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: VerifyImport: Failed to load package for import object 'Package /Game/Blueprints/Pickupables/Cores/BP_CubeCoree'
+[2024.07.31-10.59.17:994][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_931DEEB8': Can't find file.
+[2024.07.31-10.59.17:994][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_931DEEB8'
+[2024.07.31-10.59.17:994][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_C77E96D6': Can't find file.
+[2024.07.31-10.59.18:025][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_C77E96D6'
+[2024.07.31-10.59.18:025][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_420FB664': Can't find file.
+[2024.07.31-10.59.18:025][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_420FB664'
+[2024.07.31-10.59.18:025][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_6E0A6998': Can't find file.
+[2024.07.31-10.59.18:025][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_6E0A6998'
+[2024.07.31-10.59.18:025][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_97BB7D81': Can't find file.
+[2024.07.31-10.59.18:025][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_97BB7D81'
+[2024.07.31-10.59.18:026][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Cylinder_3C2943F9': Can't find file.
+[2024.07.31-10.59.18:026][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Cylinder_3C2943F9'
+[2024.07.31-10.59.18:026][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/book_large_low_book_large_low': Can't find file.
+[2024.07.31-10.59.18:026][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/book_large_low_book_large_low'
+[2024.07.31-10.59.18:026][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/folder_low_folder_low': Can't find file.
+[2024.07.31-10.59.18:026][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/folder_low_folder_low'
+[2024.07.31-10.59.18:027][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/mug_low_Mug_low': Can't find file.
+[2024.07.31-10.59.18:027][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/mug_low_Mug_low'
+[2024.07.31-10.59.18:027][519]UATHelper: Packaging (Windows): LogUObjectGlobals: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/stapler_low': Can't find file.
+[2024.07.31-10.59.18:068][519]UATHelper: Packaging (Windows): LogLinker: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/stapler_low'
+[2024.07.31-10.59.18:068][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Indicator': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:068][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Line': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Sound Player': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Bigger Collider': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Mouse Detector': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Smaller Collider': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Center of Gravity': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Ghost Mesh': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Mesh': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Outliner': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Indicator': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Line': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Sound Player': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:069][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Bigger Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:070][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Mouse Detector': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:070][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Smaller Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:070][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Center of Gravity': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:070][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Ghost Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:070][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:070][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Outliner': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:080][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Indicator': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:080][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Line': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:080][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Sound Player': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:081][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Bigger Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:081][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Mouse Detector': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:081][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Smaller Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:081][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Center of Gravity': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:081][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Ghost Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:081][519]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:289][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: Failed to load '/Game/Blueprints/Pickupables/Cores/BP_CubeCoree': Can't find file.
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: VerifyImport: Failed to load package for import object 'Package /Game/Blueprints/Pickupables/Cores/BP_CubeCoree'
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_931DEEB8': Can't find file.
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_931DEEB8'
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_C77E96D6': Can't find file.
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Kitchen\KitchenLevel\KitchenLevel.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_C77E96D6'
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_420FB664': Can't find file.
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_420FB664'
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_6E0A6998': Can't find file.
+[2024.07.31-10.59.18:290][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_6E0A6998'
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_97BB7D81': Can't find file.
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Box_97BB7D81'
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Cylinder_3C2943F9': Can't find file.
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Levels/StoryMode/24_05_24-Levels/_GENERATED/rosop/Cylinder_3C2943F9'
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/book_large_low_book_large_low': Can't find file.
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/book_large_low_book_large_low'
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/folder_low_folder_low': Can't find file.
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/folder_low_folder_low'
+[2024.07.31-10.59.18:291][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/mug_low_Mug_low': Can't find file.
+[2024.07.31-10.59.18:292][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/mug_low_Mug_low'
+[2024.07.31-10.59.18:292][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: Failed to load '/Game/Models/OutsourcedArt/HassanModels/stapler_low': Can't find file.
+[2024.07.31-10.59.18:292][520]PackagingResults: Warning: [AssetLog] C:\Users\Deany\Documents\GitHub\problox\projProblox\Content\Levels\Levels\Bedroom\BedroomLevel2.umap: VerifyImport: Failed to load package for import object 'Package /Game/Models/OutsourcedArt/HassanModels/stapler_low'
+[2024.07.31-10.59.18:292][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Indicator': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:292][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Line': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:292][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Sound Player': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:292][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Bigger Collider': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Mouse Detector': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Smaller Collider': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Center of Gravity': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Ghost Mesh': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Mesh': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Outliner': BP_CubeCoree_C /Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_CubeCoree_C_0
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Indicator': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:293][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Line': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Sound Player': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Bigger Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Mouse Detector': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Smaller Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Center of Gravity': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Ghost Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:294][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Outliner': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel2.BedroomLevel2:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Indicator': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Line': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Sound Player': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Bigger Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Mouse Detector': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Smaller Collider': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Center of Gravity': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Ghost Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:295][520]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Mesh': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:481][520]UATHelper: Packaging (Windows): LoadErrors: Warning: CreateExport: Failed to load Outer for resource 'Outliner': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:502][520]UATHelper: Packaging (Windows): PIE: Warning: AttachTo: '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_0.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_0.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.59.18:523][520]UATHelper: Packaging (Windows): PIE: Warning: AttachTo: '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_1.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_1.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.59.18:623][521]PackagingResults: Warning: CreateExport: Failed to load Outer for resource 'Outliner': BP_CubeCoree_C /Game/Levels/Levels/Bedroom/BedroomLevel1.BedroomLevel1:PersistentLevel.BP_CubeCoree_C_1
+[2024.07.31-10.59.18:623][521]PackagingResults: Warning: AttachTo: '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_0.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_0.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.59.18:623][521]PackagingResults: Warning: AttachTo: '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_1.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_1.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.59.19:099][522]UATHelper: Packaging (Windows): PIE: Warning: AttachTo: '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_2.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_2.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.59.19:289][523]PackagingResults: Warning: AttachTo: '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_2.Start' is not static  (in blueprint "BP_BounceSpring"), cannot attach '/Game/Levels/Levels/Kitchen/KitchenLevel/KitchenLevel.KitchenLevel:PersistentLevel.BP_BounceSpring_C_2.SplineMesh' which is static to it. Aborting.
+[2024.07.31-10.59.19:519][523]UATHelper: Packaging (Windows): LogCook: Display: Loading secondary levels for package 'Lvl_Combined'
+[2024.07.31-10.59.19:519][523]UATHelper: Packaging (Windows): LogPhysics: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.31-10.59.19:621][524]PackagingResults: Warning: Scale for /Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2024.07.31-10.59.20:462][526]UATHelper: Packaging (Windows): LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector'
+[2024.07.31-10.59.20:462][526]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 6630 Packages Remain 16 Total 6646
+[2024.07.31-10.59.20:622][527]PackagingResults: Warning: Initialising Body : Scale3D is (nearly) zero: Actor: 'BP_CubeCore' Component: '/Game/Levels/Lvl_Combined.Lvl_Combined:PersistentLevel.BP_CubeCore_C_1.Mouse Detector'
+[2024.07.31-10.59.21:970][531]UATHelper: Packaging (Windows): LogCook: Display: Cook Diagnostics: OpenFileHandles=6825, VirtualMemory=2998MiB
+[2024.07.31-10.59.22:023][531]UATHelper: Packaging (Windows): LogMaterial: Display: Missing cached shadermap for M_Balloon in PCD3D_SM5, Default, SM5, Game (DDC key hash: cab88c916a30c33512724ca7aebfbe4de1322adb), compiling.
+[2024.07.31-10.59.22:463][532]UATHelper: Packaging (Windows): LogShaderCompilers: Display: Current jobs: 66, Batch size: 6, Num Already Dispatched: 0
+[2024.07.31-10.59.27:471][547]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 6645 Packages Remain 1 Total 6646
+[2024.07.31-10.59.27:537][547]UATHelper: Packaging (Windows): LogCook: Display: Cooked packages 6645 Packages Remain 1 Total 6646
+[2024.07.31-10.59.27:537][547]UATHelper: Packaging (Windows): LogCook: Display: Garbage collection triggered (Full). Triggered by conditions:
+[2024.07.31-10.59.27:537][547]UATHelper: Packaging (Windows):   CookSettings.MemoryMinFreePhysical: Available physical memory 2042MiB is less than 2048MiB.
+[2024.07.31-10.59.27:538][547]UATHelper: Packaging (Windows): LogCookCommandlet: Display: Detected max mem exceeded - forcing shader compilation flush
+[2024.07.31-10.59.27:538][547]UATHelper: Packaging (Windows): LogCookCommandlet: Display: Finished flushing shader jobs at 60
+[2024.07.31-10.59.28:272][549]UATHelper: Packaging (Windows): LogCookCommandlet: Display: GarbageCollection... (Exceeded Max Memory)
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): LogCook: Display: GarbageCollection Results: Garbage Collection was not very impactful.
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): LogCook: Display: 	MemoryAnalysis: General:
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Type: Full
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): LogCook: Display: 	MemoryAnalysis: NumObjects:
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Capacity:           25231360
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Process Min:           38203
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Process Max:          147900
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Process Spread:       109697
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Before GC:            147900
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		After GC:              38203
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Freed by GC:          109697
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): LogCook: Display: 	MemoryAnalysis: Virtual Memory:
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Process Min:            1120 MB
+[2024.07.31-10.59.28:273][549]UATHelper: Packaging (Windows): 		Process Max:            3146 MB
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Process Spread:         2026 MB
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Before GC:              3146 MB
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		After GC:               3020 MB
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Freed by GC:             125 MB
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): LogCook: Display: 	MemoryAnalysis: Allocator Stats Before:
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Malloc calls 0
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Realloc calls 0
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Free calls 0
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Total Allocator calls 0
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): LogCook: Display: 	MemoryAnalysis: Allocator Stats After:
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Malloc calls 0
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Realloc calls 0
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Free calls 0
+[2024.07.31-10.59.28:274][549]UATHelper: Packaging (Windows): 		Item Total Allocator calls 0
+[2024.07.31-10.59.32:470][562]UATHelper: Packaging (Windows): LogCook: Display: See log for memory use information for UObject classes and LLM tags.
