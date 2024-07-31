@@ -114,7 +114,7 @@ void ACubeConnector::FindOppositeSocket()
 
 void ACubeConnector::Detach(bool playSound, const float _detachForce, const float _detachAngularForce)
 {
-	ResetGhost();
+	HideGhost();
 	
 	if(!parentCore)
 	{

@@ -27,6 +27,7 @@ PROJPROBLOX_API void FOnSpawnTriggered_DelegateWrapper(const FMulticastScriptDel
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_35_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_CellSpawner_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execDisplaySpawn); \
 	DECLARE_FUNCTION(execGetObjective); \
 	DECLARE_FUNCTION(execHasObjective); \
 	DECLARE_FUNCTION(execGetLevelEnum); \

@@ -51,6 +51,7 @@ PROJPROBLOX_API void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate
 	DECLARE_FUNCTION(execObjectInSocket); \
 	DECLARE_FUNCTION(execDetachAll); \
 	DECLARE_FUNCTION(execCoreCamera); \
+	DECLARE_FUNCTION(execGetCurrentLevel); \
 	DECLARE_FUNCTION(execPlayCollectSound); \
 	DECLARE_FUNCTION(execBroadcastBadCam); \
 	DECLARE_FUNCTION(execAddMoney); \

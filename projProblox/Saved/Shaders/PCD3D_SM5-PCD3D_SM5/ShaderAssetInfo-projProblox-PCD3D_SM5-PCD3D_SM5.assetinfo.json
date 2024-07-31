@@ -1240,6 +1240,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "A5DD0E9F8DDE4E22044FC0D0A141F4181A70E8FE",
+			"Assets": [
+				"/Game/UI/Images/M_MMBkg"
+			]
+		},
+		{
 			"ShaderMapHash": "4E24359F43308B88D59C8C3FADEBCDCFF984691B",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Basic_Floor"

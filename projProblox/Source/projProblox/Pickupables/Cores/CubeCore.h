@@ -88,6 +88,7 @@ protected:
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
 	
 	/////////////// Components ///////////////
 	// A data asset that contains an array of things that are attached to each face of the cube.

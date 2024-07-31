@@ -38,6 +38,14 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = 0) override;
 	
 	void BalloonAttach();
+
+	void SetParentDominates(const bool dominate) const
+	{
+		if(!constraint) return;
+		
+		if(dominate) constraint->ConstraintInstance.EnableParentDominates();
+		else constraint->ConstraintInstance.DisableParentDominates();
+	}
 	
 	UFUNCTION()
 	void SaveResetTransform() { resetTransform = GetActorTransform(); }
@@ -48,13 +56,6 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 		constraint->SetActive(constrained);
 		mesh->SetSimulatePhysics(constrained);
 	}
-	void SetParentDominates(const bool dominate) const
-	{
-		if(!constraint) return;
-		
-		if(dominate) constraint->ConstraintInstance.EnableParentDominates();
-		else constraint->ConstraintInstance.DisableParentDominates();
-	}
 
 	UPROPERTY(EditDefaultsOnly)
 	UPhysicsConstraintComponent* constraint;
@@ -63,10 +64,14 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	UCableComponent* string;
 
 	FTransform resetTransform;
-	
+
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .1f, ToolTip = "..."))
 	float floatiness = 40;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1.f, ToolTip = "..."))
 	float stringLength = 300;
+
+public:
+	// Should be called after the cube teleports...
+	void Teleport(bool physicsOn);
 };

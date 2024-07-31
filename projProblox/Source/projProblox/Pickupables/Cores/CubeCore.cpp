@@ -222,25 +222,18 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	
 	// End the turn early when respawning (falling out the map)
 	else EndTurn(true);
-	
-	mesh->SetSimulatePhysics(true);
-	for (auto& obj : GetCloseAttachments())
-	{
-		if(obj->IsA<ABalloon>())
-		{
-			if(!IsValid(instance)) return;
-			
-			obj->GetMesh()->SetSimulatePhysics(instance->GetCurrentLevel() != 0);
-			
-			// Since balloons aren't actually attached to the core....
-			obj->SetActorLocation(lastSpawnPos + FVector(0,0,100));
-			obj->RemoveVelocity();
-		}
-	}
 
+	const bool bEnablePhysics = instance->GetCurrentLevel() != 0;
+	mesh->SetSimulatePhysics(bEnablePhysics);
+	mesh->SetAllUseCCD(bEnablePhysics);
+	
 	SetActorLocation(lastSpawnPos);
 	SetActorRotation(rot);
-	mesh->SetAllUseCCD(true);
+	
+	for (auto& obj : GetCloseAttachments())
+	{
+		if(ABalloon* balloon = Cast<ABalloon>(obj)) balloon->Teleport(bEnablePhysics);
+	}
 
 	// Remove the velocity of all the things attach to the core and the core itself.
 	RemoveVelocity();
@@ -273,7 +266,11 @@ void ACubeCore::EndTurn(const bool force)
 		return;
 	}
 	
-	if(!manager.IsTimerActive(resetTimer)) return;
+	if(!manager.IsTimerActive(resetTimer))
+	{
+		Print("Couldnt stop early because there was no active timer...", 3)
+		return;
+	}
 
 	// Over x% done - Guarantee that you can end the turn if at least some of the end turn percent has been crossed and the longest duration is longer than 24 seconds. 
 	constexpr float helper = 24;
@@ -309,7 +306,7 @@ void ACubeCore::CoreCamera(const float deltaTime)
 	if(coreCam->GetForwardVector().Equals({0,0,1}, .125f))
 	{
 		onBadCamera.Broadcast();
-		camArm->SetRelativeRotation({0,0,0,});
+		camArm->SetRelativeRotation({0,0,0});
 		return;
 	}
 	

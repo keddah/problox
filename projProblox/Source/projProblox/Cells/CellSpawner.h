@@ -125,6 +125,13 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	// Returns the spawned cell.
 	ACell* Spawn(const FVector& spawn, const FRotator& rot) const;
 
+	// Spawns a raw cell (no delegates or other changes made to it)
+	ACell* EmptySpawn(const FVector& spawn, const FRotator& rot) const
+	{
+		if(!IsValid(wrld)) return 0;
+		return wrld->SpawnActor<ACell>(normalCell, spawn, rot, params);
+	}
+	
 	// Spawn parameters
 	FActorSpawnParameters params;
 
@@ -189,20 +196,7 @@ public:
 
 	const ULevelStreamingDynamic* GetBuildLevel() const { return buildLevel; }
 
+	// Used in the main menu to spawn smaller cells that don't do anything
 	UFUNCTION(BlueprintCallable)
-	void ForceSpawn()
-	{
-		if(!wrld) wrld = GetWorld();
-		
-		// Doing outside the loop so it's not done unnecessarily
-		const FVector thisPos = GetActorLocation();
-		const FRotator rot = GetActorRotation();
-
-		for(unsigned int i = 0; i < spawnAmount; i++)
-		{
-			// If spawn radius isn't set, the spawn position will be this position.
-			const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
-			Spawn(spawn, rot)->SetActorScale3D(FVector(.4f));
-		}
-	}
+	void DisplaySpawn();
 };

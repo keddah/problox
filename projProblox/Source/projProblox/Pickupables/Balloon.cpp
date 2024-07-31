@@ -61,7 +61,7 @@ void ABalloon::Ability(float deltaTime)
 	}
 	
 	if(!IsValid(parentCore)) return;
-	if(!parentCore->GetMesh()->IsGravityEnabled()) return;
+	if(!mesh->IsSimulatingPhysics()) return;
 
 	const FVector thisVelocity = mesh->GetPhysicsLinearVelocity();
 	const FVector coreVelocity = parentCore->GetMesh()->GetPhysicsLinearVelocity();
@@ -81,7 +81,7 @@ void ABalloon::Attach()
 
 	SetShowMesh(true);
 	UseSilhouetteTransform();
-	ResetGhost();
+	HideGhost();
 	BalloonAttach();
 
 	parentCore->AddAttachment(this, attachedSocket);
@@ -104,7 +104,7 @@ APickupableMaster* ABalloon::GetParent()
 
 void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForce)
 {
-	ResetGhost();
+	HideGhost();
 
 	if(!IsValid(parentCore))
 	{
@@ -113,8 +113,6 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 	}
 
 	SetHideOutlineMesh(true);
-	
-	parentCore->RemoveAttachment(attachedSocket);
 
 	constraint->Deactivate();
 	constraint->BreakConstraint();
@@ -127,10 +125,9 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 	
 	AddVelocity(launchDir * detachForce);
 	
-	silhouette->SetupAttachment(mesh);
-
 	if(IsValid(soundPlayer) && playSound) soundPlayer->PlayDetach();
 
+	parentCore->RemoveAttachment(attachedSocket);
 	parentCore = nullptr;
 	isAttached = false;
 }
@@ -152,6 +149,25 @@ void ABalloon::BalloonAttach()
 	isAttached = true;
 
 	string->SetPhysicsLinearVelocity({});
+}
+
+void ABalloon::Teleport(const bool physicsOn)
+{
+	if(!IsValid(parentCore)) return;
+	
+	SetConstraintsActive(false);
+	
+	if(IsValid(mesh)) mesh->SetSimulatePhysics(physicsOn);
+
+	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	const FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
+	
+	UseSilhouetteTransform();
+	SetActorRotation(RoundRotation(GetActorRotation()));
+	SetActorLocation(parentMesh->GetSocketLocation(attachedSocket) + socketRot.Vector() * attachOffset);
+
+	RemoveVelocity();
+	SetConstraintsActive(true);
 }
 
 void ABalloon::GhostPlacement()

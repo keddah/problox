@@ -222,6 +222,22 @@ void ACellSpawner::SpawnWithForce()
 	if(IsValid(objective)) objective->SetCompleted();
 }
 
+void ACellSpawner::DisplaySpawn()
+{
+	if(!wrld) wrld = GetWorld();
+		
+	// Doing outside the loop so it's not done unnecessarily
+	const FVector thisPos = GetActorLocation();
+	const FRotator rot = GetActorRotation();
+
+	for(unsigned int i = 0; i < spawnAmount; i++)
+	{
+		// If spawn radius isn't set, the spawn position will be this position.
+		const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
+		EmptySpawn(spawn, rot)->SetActorScale3D(FVector(.4f));
+	}
+}
+
 // int ACellSpawner::GetCollectedAmount()
 // {
 // 	if(spawnedCells.IsEmpty()) return 0;

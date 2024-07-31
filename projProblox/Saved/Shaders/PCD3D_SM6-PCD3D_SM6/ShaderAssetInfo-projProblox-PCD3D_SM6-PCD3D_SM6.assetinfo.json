@@ -151,6 +151,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "5FFCF61286A4724EA66B1DD14E7CE4DE348016E9",
+			"Assets": [
+				"/Game/UI/Images/M_MMBkg"
+			]
+		},
+		{
 			"ShaderMapHash": "DE7B9713B531723E3BB016CA25C954451DA03577",
 			"Assets": [
 				"/HDRIBackdrop/Materials/MI_HDRI_Sky"

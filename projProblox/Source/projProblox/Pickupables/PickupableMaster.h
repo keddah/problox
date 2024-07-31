@@ -154,7 +154,7 @@ protected:
 	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
-	void ResetGhost() const;
+	void HideGhost() const { silhouette->SetHiddenInGame(true); }
 
 	virtual void Ability(float deltaTime) { }
 

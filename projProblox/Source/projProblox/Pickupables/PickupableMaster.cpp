@@ -245,7 +245,7 @@ void APickupableMaster::Attach()
 
 	// Using the silhouette's location/rotation to set the actual transform.
 	UseSilhouetteTransform();
-	ResetGhost();
+	HideGhost();
 
 	if(soundPlayer) soundPlayer->PlayAttach();
 	else Print("Sfx manager is invalid....", 5)
@@ -273,7 +273,7 @@ void APickupableMaster::AddAttachment(APickupableMaster* attachment, const FName
 
 void APickupableMaster::Detach(const bool playSound, float detachForce, float detachAngularForce)
 {
-	ResetGhost();
+	HideGhost();
 	
 	if(!parentCore)
 	{
@@ -294,13 +294,12 @@ void APickupableMaster::Detach(const bool playSound, float detachForce, float de
 	AddVelocity(launchDir * detachForce);
 	mesh->AddTorqueInRadians(FMath::VRand() * detachAngularForce, "", true);
 	
-	parentCore->RemoveAttachment(attachedSocket);
-	silhouette->SetupAttachment(mesh);
 	
 	// Only play the detach sound if there was a parent core
 	if(soundPlayer && playSound) soundPlayer->PlayDetach();
 	else if(!soundPlayer) Print("Sfx manager is invalid.....", 5)
 
+	parentCore->RemoveAttachment(attachedSocket);
 	parentCore = nullptr;
 	isAttached = false;
 }
@@ -465,19 +464,6 @@ void APickupableMaster::RemoveVelocity() const
 {
 	mesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
 	mesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
-}
-
-
-void APickupableMaster::ResetGhost() const
-{
-	// Reattach the silhouette to this actor then hide it.
-	silhouette->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-	silhouette->AttachToComponent(mesh, FAttachmentTransformRules::KeepWorldTransform);
-	silhouette->SetHiddenInGame(true);
-
-	// Reset transform
-	silhouette->SetRelativeRotation({0,0,0});
-	silhouette->SetRelativeLocation({0,0,0});
 }
 
 void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray)
