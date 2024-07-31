@@ -1040,12 +1040,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "AE6F8588F81964CE91679D0C258B55C1854967FC",
-			"Assets": [
-				"/Game/Materials/Pickupables/Balloon/M_Balloon"
-			]
-		},
-		{
 			"ShaderMapHash": "95150F89684A5DD613B71ABB93CAE7B652FEDC10",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_AssetPlatform"
@@ -1715,6 +1709,12 @@
 			"ShaderMapHash": "0CD499D3C37C3AB621009E75C16EABE8203E4135",
 			"Assets": [
 				"/Game/StarterContent/Props/Materials/M_TableRound"
+			]
+		},
+		{
+			"ShaderMapHash": "7EE8AED458ADA353006425476D3A04F8E16E393D",
+			"Assets": [
+				"/Game/Materials/Pickupables/Balloon/M_Balloon"
 			]
 		},
 		{

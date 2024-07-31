@@ -579,6 +579,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "DCB6094BC7C4B52B5213AA448C3A26FC3EB6828F",
+			"Assets": [
+				"/Game/Materials/Pickupables/Balloon/M_Balloon"
+			]
+		},
+		{
 			"ShaderMapHash": "D8F6174CD56FD61066918808D25A043E23BF88CA",
 			"Assets": [
 				"/Game/Materials/Pickupables/Core/M_InnerCore_1"
@@ -1133,12 +1139,6 @@
 			"ShaderMapHash": "8C518D9144002A1E1131D16B1A1C751B450A7142",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Metal_Chrome"
-			]
-		},
-		{
-			"ShaderMapHash": "BE5D3393D1FB19A6BE73528FEA3B01B2D19FED25",
-			"Assets": [
-				"/Game/Materials/Pickupables/Balloon/M_Balloon"
 			]
 		},
 		{
