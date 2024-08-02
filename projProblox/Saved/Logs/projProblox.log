@@ -2261,3 +2261,41 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.08.02-15.33.35:144][964]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
 [2024.08.02-15.33.35:175][965]LogPlayLevel: Display: Destroying online subsystem :Context_3
 [2024.08.02-15.33.35:189][965]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2024.08.02-15.35.39:097][512]LogDerivedDataCache: C:/Users/Deany/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:02:28.106 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 84596 files in 67837 folders with total size 3134 MiB.
+[2024.08.02-15.38.09:862][ 63]LogSlate: Took 0.000151 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.08.02-15.38.10:001][ 75]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.02-15.38.10:060][ 76]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.02-15.38.12:974][343]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.08.02-15.38.12:976][343]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.02-15.38.12:976][343]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.02-15.38.13:940][344]LogSlate: Took 0.000171 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2024.08.02-15.38.40:670][784]BlueprintLog: New page: Collapse to Function
+[2024.08.02-15.39.02:615][743]BlueprintLog: New page: Compile BP_PlayerCharacter
+[2024.08.02-15.39.02:714][743]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.08.02-15.39.02:870][743]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.08.02-15.39.02:903][743]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.08.02-15.39.02:913][743]LogPackageLocalizationCache: Processed 47 localized package path(s) for 1 prioritized culture(s) in 0.008041 seconds
+[2024.08.02-15.39.03:022][743]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.08.02-15.39.03:023][743]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacterE1C8A46E47AC6DC6FF7AE9A27E806CD0.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.08.02-15.39.03:030][743]LogFileHelpers: InternalPromptForCheckoutAndSave took 160 ms
+[2024.08.02-15.39.03:034][743]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.08.02-15.39.03:034][743]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.08.02-15.39.24:679][673]BlueprintLog: New page: Compile BP_PlayerCharacter
+[2024.08.02-15.39.24:774][673]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.08.02-15.39.24:932][673]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.08.02-15.39.24:950][673]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.08.02-15.39.25:049][673]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.08.02-15.39.25:050][673]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter15EA98E74B7EED443BAE43BA79FD5BD9.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.08.02-15.39.25:056][673]LogFileHelpers: InternalPromptForCheckoutAndSave took 123 ms (total: 283 ms)
+[2024.08.02-15.39.25:059][673]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.08.02-15.39.25:059][673]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.08.02-15.40.16:223][782]LogSlate: Window 'Color Picker' being destroyed
+[2024.08.02-15.40.25:501][435]BlueprintLog: New page: Compile BP_PlayerCharacter
+[2024.08.02-15.40.25:600][435]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.08.02-15.40.25:759][435]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.08.02-15.40.25:783][435]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerCharacter" FILE="../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset" SILENT=true
+[2024.08.02-15.40.25:884][435]LogSavePackage: Moving output files for package: /Game/Blueprints/BP_PlayerCharacter
+[2024.08.02-15.40.25:885][435]LogSavePackage: Moving '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Saved/BP_PlayerCharacter7971E517459FD88F0F3B61B9A3D70C63.tmp' to '../../../../../../Users/Deany/Documents/GitHub/problox/projProblox/Content/Blueprints/BP_PlayerCharacter.uasset'
+[2024.08.02-15.40.25:890][435]LogFileHelpers: InternalPromptForCheckoutAndSave took 131 ms (total: 415 ms)
+[2024.08.02-15.40.25:894][435]AssetCheck: New page: Asset Save: BP_PlayerCharacter
+[2024.08.02-15.40.25:894][435]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
