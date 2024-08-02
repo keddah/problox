@@ -27,7 +27,6 @@
 
 #include "CoreMinimal.h"
 #include "./projProblox/Collector.h"
-#include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "projProblox/CustomGameInstance.h"
 #include "SocketInfo/CubeSocketInfo.h"
 #include "CubeCore.generated.h"
@@ -57,11 +56,12 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 
 	/////////////// Game States ///////////////
+	// When the start button is pressed....
 	UFUNCTION()
-	void Start();
+	void Start() { if(IsValid(mesh)) mesh->SetAngularDamping(defaultAngularDrag); }
 	
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
-	void StartGame() { onTurnStarted.Broadcast(); } 
+	void StartGame() { onTurnStarted.Broadcast(); Print("starring", 4) } 
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
 	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
@@ -120,7 +120,7 @@ protected:
 	
 	/////////////// Game States ///////////////
 	UPROPERTY(BlueprintReadOnly)
-	EGameMode currentMode;
+	EGameMode currentMode = EGameMode::Build;
 
 	
 	/////////////// Turn System ///////////////
@@ -220,7 +220,7 @@ public:
 	
 	
 	/////////////// Turn System ///////////////
-	void ResetToStart();
+	void Reset();
 
 
 	/////////////// Getters ///////////////
@@ -236,13 +236,15 @@ public:
 	TArray<FName> GetOccupiedSockets() const { return socketInfo->GetOccupiedSockets(); }
 	TArray<FName> GetFreeSockets() const
 	{
+		if(!IsValid(socketInfo)) return {};
+		
 		TArray<FName> slots = socketInfo->GetFreeSockets();
 		if(slots.Contains(oppositeSocket)) slots.Remove(oppositeSocket);
 		return slots;
 	}
 
 	UFUNCTION(BlueprintCallable, Category = "Socket", meta = (ToolTip = "Gets the attachments that are directly attached to this cube."))
-	TArray<APickupableMaster*> GetCloseAttachments() const { return socketInfo->GetAttachments(); }
+	TArray<APickupableMaster*> GetCloseAttachments() const { if(!IsValid(socketInfo)) return {}; return socketInfo->GetAttachments(); }
 
 	virtual float GetMass() const override;
 	float GetDefaultDrag() const { return defaultAngularDrag; }
@@ -256,8 +258,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool InAdjustPhase() const
 	{
-		if(!wrld) return false;
-		if(!instance) return false;
+		if(!IsValid(wrld)) return false;
+		if(!IsValid(instance)) return false;
 		
 		// If not in the build area and the timer isn't active
 		// When this timer is active, it means that the game is simulating
@@ -286,6 +288,8 @@ public:
 	virtual void ToggleGravity(const bool on) const override
 	{
 		Super::ToggleGravity(on);
+		if(!IsValid(socketInfo)) return;
+		
 		for(const auto& obj : socketInfo->GetAttachments()) obj->ToggleGravity(on);
 	}
 	virtual void RemoveVelocity() const override;

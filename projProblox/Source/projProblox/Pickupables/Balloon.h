@@ -52,6 +52,9 @@ class PROJPROBLOX_API ABalloon : public APickupableMaster
 	
 	void SetConstraintsActive(const bool constrained) const
 	{
+		if(!IsValid(constraint)) return;
+		if(!IsValid(mesh)) return;
+		
 		// Need to deactivate first before disabling physics
 		constraint->SetActive(constrained);
 		mesh->SetSimulatePhysics(constrained);

@@ -29,7 +29,7 @@ ATreads::ATreads()
 
 void ATreads::Ability(const float deltaTime)
 {
-	if(!mesh)
+	if(!IsValid(mesh))
 	{
 		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
@@ -50,6 +50,7 @@ void ATreads::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
 
+	if(!IsValid(soundPlayer)) return;
 	if(value) soundPlayer->PlayAbility();
 	else soundPlayer->StopAbility();
 }

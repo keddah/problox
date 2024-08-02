@@ -27,7 +27,7 @@ class PROJPROBLOX_API ULevelObjective : public UDataAsset
 	{
 		// Whatever the file is called, use the start of it to name the level (the level name is supposed to be the prefix to the objective)
 		const FString name = GetName();
-		for(int i = 0; i < name.Len(); i++)
+		for(unsigned short i = 0; i < name.Len(); i++)
 		{
 			if(name[i] == '_') break;
 

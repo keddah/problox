@@ -32,6 +32,9 @@ public:
 	float GetAttraction() const { return attractionForce * 1000; } 
 	FVector GetMagPosition(const AMagnet* mag) const
 	{
+		if(!IsValid(mag)) return {};
+		if(!IsValid(mesh)) return {};
+		
 		FVector out;
 		mesh->GetClosestPointOnCollision(mag->GetActorLocation(), out);
 		return out;

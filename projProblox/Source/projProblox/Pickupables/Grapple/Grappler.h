@@ -49,5 +49,5 @@ private:
 	}
 
 	UFUNCTION(BlueprintCallable, Category = "Ability")
-	void Pull(const FVector& direction, const float speed) { mesh->AddForce(direction * speed * 1000); }
+	void Pull(const FVector& direction, const float speed) { if(IsValid(mesh)) mesh->AddForce(direction * speed * 1000); }
 };

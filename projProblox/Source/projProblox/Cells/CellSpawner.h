@@ -91,16 +91,13 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Activation", meta = (EditInlineNew, ToolTip = "Whether to spawn the cells as soon as the level is loaded"))
 	bool previewed = true;
 		
-	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Amount", meta = (EditInlineNew, ToolTip = "The maximum amount of cells that can spawn from this spawner..."))
-	unsigned int maxSpawnAmount = 50;
-
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
 	unsigned int spawnRadius = 50;
 
-	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The max angle of the cone of force to be applied when new cells are spawned."))
 	unsigned int coneRadius = 20;
 
-	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ToolTip = "This only applies when cells are spawned using the triggers."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, Delta = 10, ToolTip = "This only applies when cells are spawned using the triggers."))
 	int spawnForce = 2000;
 
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Activation", meta = (ToolTip = "Whether to spawn cells on collision rather than when the game starts..."))
@@ -109,7 +106,6 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 
 	/////////// OTHER ///////////
 	UWorld* wrld;
-	const ULevelStreamingDynamic* buildLevel;
 	
 	TArray<ACell*> spawnedCells;
 	
@@ -150,7 +146,7 @@ public:
 	// Sets default values for this actor's properties
 	ACellSpawner();
 
-	
+
 	/////////////////////////// VARIABLES ///////////////////////////
 	/////////// DELEGATES ///////////
 	UPROPERTY(BlueprintAssignable)
@@ -159,7 +155,7 @@ public:
 	
 	/////////////////////////// FUNCTIONS ///////////////////////////
 	// Returns whether initialisation was successful
-	bool Init(const ULevelStreamingDynamic* streamedLevel, const ULevelStreamingDynamic* _buildArea);
+	bool Init(const ULevelStreamingDynamic* streamedLevel);
 
 	void InitialSpawn();
 	void SpawnWithForce();
@@ -193,8 +189,6 @@ public:
 		// Otherwise return the amount
 		return spawnAmount;
 	}
-
-	const ULevelStreamingDynamic* GetBuildLevel() const { return buildLevel; }
 
 	// Used in the main menu to spawn smaller cells that don't do anything
 	UFUNCTION(BlueprintCallable)

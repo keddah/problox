@@ -24,6 +24,8 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 	virtual void SetAbilityActive(const bool value) override
 	{
 		Super::SetAbilityActive(value);
+		if(!IsValid(soundPlayer)) return;
+		
 		if(value) soundPlayer->PlayAbility();
 		else soundPlayer->StopAbility();
 	}

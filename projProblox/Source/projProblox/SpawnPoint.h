@@ -65,7 +65,7 @@ public:
 
 	// Creates capture component and takes a screenshot then deletes the component and everything it needed to take a picture before
 	// returning the texture of the screenshot.
-	UTexture* CaptureScreenshot();
+	// UTexture* CaptureScreenshot();
 
 	UFUNCTION(BlueprintCallable)
 	int GetLevelIndex() const { return levelIndex; }

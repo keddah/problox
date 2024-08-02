@@ -88,5 +88,4 @@ void AMagnet::Ability(const float deltaTime)
 		// Scale the force by the distance of the involved blocks 
 		mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 	}
-	
 }

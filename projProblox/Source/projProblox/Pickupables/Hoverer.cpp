@@ -55,7 +55,6 @@ void AHoverer::Ability(float deltaTime)
 
 	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is always 45 degrees, only need one distance (the minFloorDistance))
 	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));
-
 	const TArray points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };
 
 	for(const auto& point : points)
@@ -96,10 +95,8 @@ void AHoverer::Ability(float deltaTime)
 			if(wrld->LineTraceSingleByChannel(hit, start, end, ECC_Visibility, collisionParams))
 			{
 				const float distanceSquared = FMath::Max(FVector::Dist(hit.Location, start) / distanceMultiplier, .5f);
-			
 				const float power = (hoverStrength * -1000) / distanceSquared;
 				mesh->AddForceAtLocation(forwardVec * power, end);
-	
 				// DrawDebugPoint(wrld, hit.ImpactPoint, 10, FColor::Green, false, .2f);
 			}
 		}
@@ -109,11 +106,13 @@ void AHoverer::Ability(float deltaTime)
 void AHoverer::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-
-	if(active) soundPlayer->PlayAbility();
-	else soundPlayer->StopAbility();
-	
 	if(!parentCore) return;
+
+	if(IsValid(soundPlayer))
+	{
+		if(active) soundPlayer->PlayAbility();
+		else soundPlayer->StopAbility();
+	}
 
 	// The drag the hover should go to when it's not active
 	const float normalDrag = parentCore->InAdjustPhase()? parentCore->GetHeavyDrag() : parentCore->GetDefaultDrag(); 

@@ -40,7 +40,11 @@ void AGrappler::SetAbilityActive(const bool value)
 	
 	if(IsValid(hook))
 	{
-		if(!active) hook->Destroy();
+		if(!active)
+		{
+			hook->ClearGarbage();
+			hook->Destroy();
+		}
 	}
 	
 	if(active && IsValid(soundPlayer)) soundPlayer->PlayAbility();

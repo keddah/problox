@@ -51,9 +51,6 @@ void ACubeCore::BeginPlay()
 	onTurnStarted.AddDynamic(this, &ACubeCore::Start);
 	if(ACollector* _collector = Cast<ACollector>(UGameplayStatics::GetActorOfClass(GetWorld(), ACollector::StaticClass()))) collector = _collector;
 
-	if(Cast<AMode_Story>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Story;
-	else if(Cast<AMode_Build>(UGameplayStatics::GetGameMode(wrld))) currentMode = EGameMode::Build;
-
 	if (UCustomGameInstance* customInst = Cast<UCustomGameInstance>(UGameplayStatics::GetGameInstance(wrld)))
 	{
 		instance = customInst;
@@ -65,36 +62,28 @@ void ACubeCore::BeginPlay()
 	Super::BeginPlay();
 }
 
-void ACubeCore::ResetToStart()
+void ACubeCore::Reset()
 {
-	if(mesh)
-	{
-		if(mesh->IsSimulatingPhysics()) mesh->SetAngularDamping(heavyAngularDrag);
-	}
-	
+	if(IsValid(mesh)) mesh->SetAngularDamping(heavyAngularDrag);
 	ClearAndInvalidateTimer();
 	onReset.Broadcast();
 }
 
-// When the start button is pressed....
-void ACubeCore::Start()
-{
-	if(mesh)
-	{
-		if(mesh->IsSimulatingPhysics()) mesh->SetAngularDamping(defaultAngularDrag);
-	}
-}
-
-
 
 void ACubeCore::SetEnableCollisions(const bool enable) const
 {
+	if(!IsValid(mesh)) return;
+	
 	mesh->SetSimulatePhysics(enable);
 	mesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
 	
-	for(auto& obj : GetCloseAttachments())
+	for(const auto& obj : GetCloseAttachments())
 	{
+		if(!IsValid(obj)) continue;
+		
 		UStaticMeshComponent* objMesh = obj->GetMesh();
+		if(!IsValid(objMesh)) continue;
+
 		objMesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
 		objMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 		objMesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
@@ -105,6 +94,8 @@ void ACubeCore::SetEnableCollisions(const bool enable) const
 
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
+	if(!IsValid(socketInfo)) return;
+	
 	if(socketInfo->ObjectInSocket(socket))
 	{
 		// Print("Already an object in this socket", 4)
@@ -126,16 +117,32 @@ void ACubeCore::RemoveAttachment(const FName& socket)
 		Print("SocketInfo invalid..... couldn't remove",4)
 		return;
 	}
-	
+
 	socketInfo->RemoveAttachment(socket);
+
+	if(!IsValid(mesh))
+	{
+		Print("mesh was invalid..... couldn't remove",4)
+		return;
+	}
 	mesh->SetEnableGravity(true);
 }
 
 void ACubeCore::RemoveAttachment(APickupableMaster* obj)
 {
 	if(!IsValid(obj)) return;
-	
+	if(!IsValid(socketInfo))
+	{
+		Print("SocketInfo invalid..... couldn't remove",4)
+		return;
+	}
 	socketInfo->RemoveAttachment(obj);
+
+	if(!IsValid(mesh))
+	{
+		Print("mesh was invalid..... couldn't remove",4)
+		return;
+	}
 	mesh->SetEnableGravity(true);
 }
 
@@ -154,7 +161,7 @@ TArray<APickupableMaster*> ACubeCore::DetachAll()
 		obj->Detach(false, detachForce * obj->GetMass(), detachAngularForce * obj->GetMass());
 	}
 
-	soundPlayer->PlayDetachAll();
+	if(IsValid(soundPlayer)) soundPlayer->PlayDetachAll();
 	socketInfo->ClearAttachments();
 	return objs;
 }
@@ -175,16 +182,17 @@ void ACubeCore::EjectObject(APickupableMaster* toEject, const bool playSound)
 
 void ACubeCore::EjectObject(const FName& ejectSocket, const bool playSound) const
 {
+	if(!IsValid(socketInfo)) return;
 	APickupableMaster* toEject = socketInfo->GetObjectFromSocket(ejectSocket);
 
 	if(!toEject) return;
-
 	toEject->Detach(playSound, detachForce, detachAngularForce);
 	// soundPlayer->PlayDetachAll();
 }
 
 float ACubeCore::GetMass() const
 {
+	if(!IsValid(mesh)) return 0;
 	if(!mesh->IsSimulatingPhysics()) return 0;
 	
 	float mass = mesh->GetMass();
@@ -193,7 +201,10 @@ float ACubeCore::GetMass() const
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
 	
-	for (const auto& obj : children) mass += obj->GetMass();
+	for (const auto& obj : children)
+	{
+		if(IsValid(obj)) mass += obj->GetMass();
+	}
 	return mass;
 }
 
@@ -217,6 +228,9 @@ void ACubeCore::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 
 void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bool respawning)
 {
+	if(!IsValid(instance)) return;
+	if(!IsValid(mesh)) return;
+	
 	// Only if the passed position isn't empty .. set the new spawnPos
 	if(!respawning) lastSpawnPos = pos;
 	
@@ -230,7 +244,7 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 	SetActorLocation(lastSpawnPos);
 	SetActorRotation(rot);
 	
-	for (auto& obj : GetCloseAttachments())
+	for (const auto& obj : GetCloseAttachments())
 	{
 		if(ABalloon* balloon = Cast<ABalloon>(obj)) balloon->Teleport(bEnablePhysics);
 	}
@@ -241,7 +255,7 @@ void ACubeCore::Teleport(const FRotator& rot, const FVector& pos = FVector(), bo
 
 void ACubeCore::EndTurn(const bool force)
 {
-	if(!wrld)
+	if(!IsValid(wrld))
 	{
 		Print("world is invalid.. can't end turn", 4)
 		return;
@@ -250,7 +264,7 @@ void ACubeCore::EndTurn(const bool force)
 
 	if(force)
 	{
-		for(auto& obj : GetCloseAttachments())
+		for(const auto& obj : GetCloseAttachments())
 		{
 			if(!IsValid(obj)) continue;
 			
@@ -262,7 +276,7 @@ void ACubeCore::EndTurn(const bool force)
 		}
 
 		// Call the function the timer is supposed to call
-		ResetToStart();
+		Reset();
 		return;
 	}
 	
@@ -281,8 +295,10 @@ void ACubeCore::EndTurn(const bool force)
 	const float percent = canSkip? 1 : elapsedTime / longestDuration;
 	if(percent < endTurnPercent) return;
 
+	Print("Ending turn", 4)
+	
 	// Call the function the timer is supposed to call
-	ResetToStart();
+	Reset();
 
 	for(const auto& obj : GetCloseAttachments())
 	{
@@ -330,11 +346,12 @@ void ACubeCore::ResetRotation(bool resetVelocity)
 	Super::ResetRotation(resetVelocity);
 
 	if(!resetVelocity) return;
+	if(!IsValid(socketInfo)) return;
 
 	const TArray<APickupableMaster*> objs = socketInfo->GetAttachments();
 	if(objs.IsEmpty()) return;
 	
-	for(const auto& obj : objs) obj->RemoveVelocity();
+	for(const auto& obj : objs) if(IsValid(obj)) obj->RemoveVelocity();
 }
 
 void ACubeCore::RemoveVelocity() const
@@ -345,12 +362,12 @@ void ACubeCore::RemoveVelocity() const
 	TArray<APickupableMaster*> children;
 	GetDescendents(self, children);
 	
-	for(const auto& obj : children) obj->RemoveVelocity();
+	for(const auto& obj : children) if(IsValid(obj)) obj->RemoveVelocity();
 }
 
 void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
 {
-	if(!wrld) return;
+	if(!IsValid(wrld)) return;
 	if(wrld->GetTimerManager().IsTimerActive(resetTimer)) return;
 	
 	const TArray<APickupableMaster*> objs = GetCloseAttachments();
@@ -358,7 +375,7 @@ void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<in
 	if(objs.IsEmpty())
 	{
 		longestDuration = 3;
-		const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
+		const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::Reset);
 		wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
 		return;
 	}
@@ -394,6 +411,6 @@ void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<in
 	}
 
 	// Longest duration can't be 0 otherwise the timer won't start.
-	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::ResetToStart);
+	const FTimerDelegate resetDelegate = FTimerDelegate::CreateUObject(this, &ACubeCore::Reset);
 	wrld->GetTimerManager().SetTimer(resetTimer, resetDelegate, longestDuration, false);
 }

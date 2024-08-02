@@ -50,12 +50,12 @@ void ABalloon::BeginPlay()
 		core->onTurnStarted.AddDynamic(this, &ABalloon::SaveResetTransform);
 	}
 
-	mesh->SetSimulatePhysics(false);
+	if(IsValid(mesh)) mesh->SetSimulatePhysics(false);
 }
 
 void ABalloon::Ability(float deltaTime)
 {
-	if(!mesh)
+	if(!IsValid(mesh))
 	{
 		return;
 	}
@@ -76,7 +76,7 @@ void ABalloon::Ability(float deltaTime)
 
 void ABalloon::Attach()
 {
-	if(!parentCore) return;
+	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 
 	SetShowMesh(true);
@@ -91,6 +91,7 @@ void ABalloon::Attach()
 APickupableMaster* ABalloon::GetParent()
 {
 	if(!isAttached) return this;
+	if(!IsValid(constraint)) return this;
 	
 	UPrimitiveComponent* comp1;
 	UPrimitiveComponent* comp2;
@@ -111,6 +112,9 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 		Print("Couldn't detach... parent was invalid..", 4)
 		return;
 	}
+	if(!IsValid(constraint)) return;
+	if(!IsValid(string)) return;
+	if(!IsValid(mesh)) return;
 
 	SetHideOutlineMesh(true);
 
@@ -135,6 +139,9 @@ void ABalloon::Detach(bool playSound, float detachForce, float detachAngularForc
 void ABalloon::BalloonAttach()
 {
 	if(!IsValid(parentCore)) return;
+	if(!IsValid(constraint)) return;
+	if(!IsValid(string)) return;
+	if(!IsValid(mesh)) return;
 	
 	UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	constraint->SetConstrainedComponents(parentMesh,"", mesh, "");

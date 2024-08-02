@@ -75,5 +75,5 @@ void AStickyCell::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimiti
 	stuck = true;
 
 	// GEngine check needed (sometimes crashes without)
-	if(IsValid(GEngine)) body->SetMassOverrideInKg("", 100000);
+	if(IsValid(GEngine)) body->SetMassOverrideInKg("", 50000);
 }

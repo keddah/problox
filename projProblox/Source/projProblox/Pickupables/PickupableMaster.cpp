@@ -78,7 +78,8 @@ void APickupableMaster::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if(IsValid(mesh)) mesh->OnComponentHit.AddDynamic(this, &APickupableMaster::CollisionHitSFX);
+	if(!IsValid(mesh)) return;
+	mesh->OnComponentHit.AddDynamic(this, &APickupableMaster::CollisionHitSFX);
 
 	if(IsValid(mouseDetector))
 	{
@@ -87,7 +88,7 @@ void APickupableMaster::BeginPlay()
 		mouseDetector->OnComponentBeginOverlap.AddDynamic(this, &APickupableMaster::PickupCell);
 	}
 	
-	if(IsValid(soundPlayer) && IsValid(mesh)) soundPlayer->Attach(mesh);
+	if(IsValid(soundPlayer)) soundPlayer->Attach(mesh);
 
 	wrld = GetWorld();
 	
@@ -104,7 +105,6 @@ void APickupableMaster::BeginPlay()
 			break;
 		}
 	}
-	
 	const FVector massOffset = centerMass->GetRelativeLocation();
 
 	// If tthe center of mass component's position is 0 ... return
@@ -123,6 +123,8 @@ void APickupableMaster::Tick(float DeltaTime)
 
 void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	return;
+	
 	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
 	{
 		//soundPlayer->StopImpact();
@@ -133,7 +135,7 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 	if(OtherActor->IsA<APickupableMaster>()) return;
 	if(OtherActor->IsA<ACell>()) return;
 	
-	const FVector velocity = GetMesh()->GetPhysicsLinearVelocity();
+	const FVector velocity = mesh->GetPhysicsLinearVelocity();
 	constexpr float minForce = 800;
 	const float force = velocity.Length();
 	
@@ -146,6 +148,8 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 
 void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	return;
+
 	if(IsValid(mesh)) if(!mesh->IsSimulatingPhysics())
 	{
 		//soundPlayer->StopImpact();
@@ -177,9 +181,14 @@ void APickupableMaster::PickupCell(UPrimitiveComponent* OverlappedComponent, AAc
 // Should only be called in the Placement Function at the very end....
 void APickupableMaster::GhostPlacement()
 {
-	if(!parentCore)
+	if(!IsValid(parentCore))
 	{
 		Print("Couldn't do ghost placement because there's no core", 4)
+		return;
+	}
+	if(!IsValid(silhouette))
+	{
+		Print("Couldn't do ghost placement because the silhouette was invalid...", 4)
 		return;
 	}
 	
@@ -189,6 +198,8 @@ void APickupableMaster::GhostPlacement()
 	silhouette->SetRelativeLocation({attachOffset,0,0});
 	
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
+	if(!IsValid(parentMesh)) return;
+	
 	if(snapRot)
 	{
 		const FVector forwardVec = UKismetMathLibrary::GetForwardVector(parentMesh->GetSocketRotation(attachedSocket));
@@ -234,7 +245,7 @@ void APickupableMaster::GhostPlacement()
 
 void APickupableMaster::Attach()
 {
-	if(!parentCore) return;
+	if(!IsValid(parentCore)) return;
 	if(attachedSocket == NAME_None) return;
 
 	SetShowMesh(true);
@@ -247,13 +258,13 @@ void APickupableMaster::Attach()
 	UseSilhouetteTransform();
 	HideGhost();
 
-	if(soundPlayer) soundPlayer->PlayAttach();
+	if(IsValid(soundPlayer)) soundPlayer->PlayAttach();
 	else Print("Sfx manager is invalid....", 5)
 }
 
 void APickupableMaster::Placement(ACubeCore* core, const FName& socket)
 {
-	if(!core)
+	if(!IsValid(core))
 	{
 		Print("The given core was invalid... ~ OtherPlacement.", 7)
 		return;
@@ -275,9 +286,15 @@ void APickupableMaster::Detach(const bool playSound, float detachForce, float de
 {
 	HideGhost();
 	
-	if(!parentCore)
+	if(!IsValid(parentCore))
 	{
 		Print("Couldn't detach... parent was invalid..", 4)
+		return;
+	}
+
+	if(!IsValid(mesh))
+	{
+		Print("Couldn't detach... mesh was invalid..", 4)
 		return;
 	}
 
@@ -315,7 +332,7 @@ void APickupableMaster::UseSilhouetteTransform(const UStaticMeshComponent* ghost
 
 void APickupableMaster::Reattach(const FName& socket)
 {
-	if(!parentCore)
+	if(!IsValid(parentCore))
 	{
 		Print("couldnt cast to core - Reattaching...", 5)
 		return;
@@ -395,9 +412,11 @@ FRotator APickupableMaster::DiagRoundRot(const FRotator& rotation, const FRotato
 
 void APickupableMaster::AlignSocketRot(const bool useDirection)
 {
-	if(!parentCore) return;
+	if(!IsValid(parentCore)) return;
 	
 	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
+	if(!IsValid(coreMesh)) return;
+	
 	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
 
 	// Make a rotation depending on the place direction
@@ -431,22 +450,23 @@ void APickupableMaster::GhostSnapRotate(const FString& keypress)
 	if(snapRot) return;
 	
 	const int turn = keypress == "Q" ? -90 : 90;
-	silhouette->AddRelativeRotation(FRotator(0,0,turn));
+	if(silhouette) silhouette->AddRelativeRotation(FRotator(0,0,turn));
 }
 
 
 FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hitPos) const
 {
-	if(!parentCore) return NAME_None;
+	if(!IsValid(parentCore)) return NAME_None;
 	
 	float shortestDistance = 999;
 	FName closestSocket;
 	const UStaticMeshComponent* coreMesh = core->GetMesh();
+	if(!IsValid(coreMesh)) return NAME_None;
 	
 	for(const auto& socket: coreMesh->GetAllSocketNames())
 	{
 		// Don't incorporate sockets if there's already an object attached to it
-		if(core) if(core->ObjectInSocket(socket)) continue;
+		if(IsValid(core)) if(core->ObjectInSocket(socket)) continue;
 		
 		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hitPos);
 
@@ -462,13 +482,15 @@ FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hit
 
 void APickupableMaster::RemoveVelocity() const
 {
+	if(!IsValid(mesh)) return;
+	
 	mesh->SetPhysicsLinearVelocity(FVector::ZeroVector);
 	mesh->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
 void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray)
 {
-	if (!parent) return;
+	if (!IsValid(parent)) return;
 
 	TArray<AActor*> children;
 	parent->GetAttachedActors(children);
@@ -486,7 +508,7 @@ void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableM
 
 void APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray)
 {
-	if (!child) return;
+	if (!IsValid(child)) return;
 
 	if (AActor* parent = child->GetAttachParentActor())
 	{

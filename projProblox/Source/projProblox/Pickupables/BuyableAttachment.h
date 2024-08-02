@@ -64,7 +64,15 @@ public:
 	FOnHideDisplay onHide;
 
 	UFUNCTION(BlueprintCallable)
-	FBuyableInfoStruct GetInfo() const { return info->GetInfo(); }
+	FBuyableInfoStruct GetInfo() const
+	{
+		if(!IsValid(info))
+		{
+			Print("No info was given to buyable...", 5)
+			return {};
+		}
+		return info->GetInfo();
+	}
 
 	void ShowDescription() const { if(!selected) onShow.Broadcast(this); }
 	void HideDescription() const { onHide.Broadcast(this); }

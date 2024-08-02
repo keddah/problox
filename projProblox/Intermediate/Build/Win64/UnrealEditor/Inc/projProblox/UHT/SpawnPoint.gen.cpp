@@ -144,7 +144,13 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Creates capture component and takes a screenshot then deletes the component and everything it needed to take a picture before\n// returning the texture of the screenshot.\n// UTexture* CaptureScreenshot();\n" },
+#endif
 		{ "ModuleRelativePath", "SpawnPoint.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Creates capture component and takes a screenshot then deletes the component and everything it needed to take a picture before\nreturning the texture of the screenshot.\nUTexture* CaptureScreenshot();" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpawnPoint, nullptr, "GetLevelIndex", nullptr, nullptr, Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics::SpawnPoint_eventGetLevelIndex_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASpawnPoint_GetLevelIndex_Statics::Function_MetaDataParams) };
@@ -220,7 +226,7 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASpawnPoint_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ASpawnPoint_GetLevelIndex, "GetLevelIndex" }, // 3193090826
+		{ &Z_Construct_UFunction_ASpawnPoint_GetLevelIndex, "GetLevelIndex" }, // 4023662715
 		{ &Z_Construct_UFunction_ASpawnPoint_UnlockPoint, "UnlockPoint" }, // 4088787721
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnPoint_Statics::FuncInfo) < 2048);
@@ -305,19 +311,19 @@ void FOnNewSpawn_DelegateWrapper(const FMulticastScriptDelegate& OnNewSpawn)
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASpawnPoint);
 	ASpawnPoint::~ASpawnPoint() {}
-	struct Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo[] = {
 		{ ELevel_StaticEnum, TEXT("ELevel"), &Z_Registration_Info_UEnum_ELevel, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1235914906U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 2298479602U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ASpawnPoint, ASpawnPoint::StaticClass, TEXT("ASpawnPoint"), &Z_Registration_Info_UClass_ASpawnPoint, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawnPoint), 4078753828U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_2344362477(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_3732165704(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Uni_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SpawnPoint_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

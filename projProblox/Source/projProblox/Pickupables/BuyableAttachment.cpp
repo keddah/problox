@@ -36,6 +36,11 @@ void ABuyableAttachment::UseInfoMesh()
 		Print("Info was invalid... couldn't use its mesh/material", 6)
 		return;
 	}
+	if(!IsValid(meshComp))
+	{
+		Print("Mesh component was invalid... couldn't set its mesh/material", 6)
+		return;
+	}
 
 	const FBuyableInfoStruct buyInfo = info->GetInfo();
 	meshComp->SetStaticMesh(buyInfo.attachmentMesh);

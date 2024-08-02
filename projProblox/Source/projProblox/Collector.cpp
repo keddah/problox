@@ -59,6 +59,8 @@ int ACollector::GetLvlCellCount(const ELevel& lvl) const
 		// Cast to the every cell spawner
 		if(const ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
 		{
+			if(!IsValid(spawner)) continue;
+			
 			// If the spawner's level matches with the parameter...
 			if(lvl == spawner->GetLevelEnum())
 			{
@@ -84,6 +86,8 @@ int ACollector::GetCollectedCountFromLvl(const ELevel& lvl) const
 		// Cast to the every cell spawner
 		if(ACellSpawner* spawner = Cast<ACellSpawner>(spawnActor))
 		{
+			if(!IsValid(spawner)) continue;
+
 			// If the spawner's level matches with the parameter...
 			if(lvl == spawner->GetLevelEnum()) count += spawner->GetCollectedAmount();
 		}

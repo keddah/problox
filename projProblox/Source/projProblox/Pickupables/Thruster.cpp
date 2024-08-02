@@ -35,7 +35,8 @@ void AThruster::BeginPlay()
 void AThruster::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-
+	
+	if(!IsValid(soundPlayer)) return;
 	if(value) soundPlayer->PlayAbility();
 	else soundPlayer->StopAbility();
 }

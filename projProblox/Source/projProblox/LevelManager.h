@@ -19,7 +19,6 @@
 #include "LevelManager.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLoadingLevel);
-// DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnScreenshotsTaken);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFirstLoad);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnChangedSpawn, int, spawn);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangedLevels, int, levelIndex, ELevel, newLevel);
@@ -41,10 +40,6 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	TArray<ASpawnPoint*> lvl2Spawns;
 	TArray<ASpawnPoint*> lvl3Spawns;
 
-	// TArray<UTexture*> lvl1Screenshots;
-	// TArray<UTexture*> lvl2Screenshots;
-	// TArray<UTexture*> lvl3Screenshots;
-
 
 	/////////////////////////// FUNCTIONS ///////////////////////////
 	/////////// DELEGATE FUNCTIONS ///////////
@@ -61,7 +56,7 @@ class PROJPROBLOX_API ALevelManager : public AActor
 	void SetIsLoading() { bLevelLoading = true; }
 
 	UFUNCTION()
-	void OnFirstSpawn();
+	void OnFirstSpawn() { InitSpawners(); }
 	
 	// Function called when the new spawn unlocked delegate is broadcast..
 	UFUNCTION()
@@ -117,8 +112,6 @@ protected:
 	UPROPERTY(BlueprintAssignable)
 	FOnLoadingLevel onLoadingLevel;
 
-	// UPROPERTY(BlueprintAssignable)
-	// FOnScreenshotsTaken onScreenshotsTaken;
 	
 public:
 	/////////////////////////// VARIABLES ///////////////////////////
@@ -153,12 +146,4 @@ public:
 	const TArray<ASpawnPoint*>& GetLevel2Spawns() const { return lvl2Spawns; }
 	UFUNCTION(BlueprintCallable)
 	const TArray<ASpawnPoint*>& GetLevel3Spawns() const { return lvl3Spawns; }
-
-	// These return the screenshots from each spawn from each level
-	// UFUNCTION(BlueprintCallable)
-	// const TArray<UTexture*>& GetLevel1Screenshots() const { return lvl1Screenshots; }
-	// UFUNCTION(BlueprintCallable)
-	// const TArray<UTexture*>& GetLevel2Screenshots() const { return lvl2Screenshots; }
-	// UFUNCTION(BlueprintCallable)
-	// const TArray<UTexture*>& GetLevel3Screenshots() const { return lvl3Screenshots; }
 };

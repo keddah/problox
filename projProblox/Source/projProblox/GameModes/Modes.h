@@ -19,15 +19,10 @@ UCLASS()
 class PROJPROBLOX_API AMode_Story : public AGameModeBase
 {
 	GENERATED_BODY()
-
-	
-protected:
-	virtual void BeginPlay() override;
 };
 
 UCLASS()
 class PROJPROBLOX_API AMode_Build : public AGameModeBase
 {
 	GENERATED_BODY()
-
 };

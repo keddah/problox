@@ -13,7 +13,7 @@
 #include "CellSpawner.h"
 
 #include "projProblox/LevelManager.h"
-#include "projProblox/Pickupables/Cores/Connectors/CubeConnector.h"
+#include "projProblox/Pickupables/Cores/CubeCore.h"
 
 
 ACellSpawner::ACellSpawner()
@@ -43,7 +43,7 @@ void ACellSpawner::BeginPlay()
 	if(IsValid(objective)) objective->SetOwner(this);
 }
 
-bool ACellSpawner::Init(const ULevelStreamingDynamic* streamedLevel, const ULevelStreamingDynamic* _buildArea)
+bool ACellSpawner::Init(const ULevelStreamingDynamic* streamedLevel)
 {
 	if(!streamedLevel)
 	{
@@ -52,8 +52,6 @@ bool ACellSpawner::Init(const ULevelStreamingDynamic* streamedLevel, const ULeve
 	}
 	params.OverrideLevel = streamedLevel->GetLoadedLevel();
 
-	if(_buildArea) buildLevel = _buildArea;
-	
 	wrld = GetWorld();
 	if (!IsValid(wrld))
 	{
@@ -71,9 +69,6 @@ bool ACellSpawner::Overlap(AActor* otherActor)
 	if(!triggerable) return false;
 	if(!IsValid(otherActor)) return false;
 	
-	// Only do something if the core collides (not connectors)....
-	if(otherActor->IsA<ACubeConnector>()) return false;
-
 	APickupableMaster* other = Cast<APickupableMaster>(otherActor);
 
 	// The thing that collided wasn't a pickupable
@@ -83,19 +78,20 @@ bool ACellSpawner::Overlap(AActor* otherActor)
 	if(ACubeCore* otherCore = other->GetCore())
 	{
 		SpawnWithForce();
-		if(otherCore) otherCore->BroadcastNewCells();
+		if(IsValid(otherCore)) otherCore->BroadcastNewCells();
 	}
 
 	// Otherwise, it is the core.
 	else if(IsValid(otherCore = Cast<ACubeCore>(other)))
 	{
 		SpawnWithForce();
-		if(otherCore) otherCore->BroadcastNewCells();
+		if(IsValid(otherCore)) otherCore->BroadcastNewCells();
 	}
 
 	PlaySound();
 	triggerable = false;
-
+	onTriggered.Broadcast(this);
+	
 	return true;
 }
 
@@ -150,6 +146,12 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 	if(!params.OverrideLevel) Print("No level/.", 4)
 	
 	ACell* cell = wrld->SpawnActor<ACell>(subClass, spawn, rot, params);
+	if(!IsValid(cell))
+	{
+		Print("the newly spawned cell was invalid???", 5)
+		return 0;
+	}
+
 	cell->SetOwningSpawner(this);
 	cell->OnDestroyed.AddDynamic(this, &ACellSpawner::ACellSpawner::IncreaseCollectedAmount);
 	
@@ -205,49 +207,34 @@ void ACellSpawner::SpawnWithForce()
 	const FRotator rot = GetActorRotation();
 	
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(unsigned int i = 0; i < spawnAmount; i++)
+	for(unsigned short i = 0; i < spawnAmount; i++)
 	{
 		const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 		if(ACell* newCell = Spawn(spawn, rot)) spawnedCells.Add(newCell);
 	}
 
-	for (auto& cell : spawnedCells)
+	for (const auto& cell : spawnedCells)
 	{
 		const FVector direction = GetActorForwardVector().RotateAngleAxis(FMath::RandRange(0, coneRadius), {1,0,0});
 		cell->GetMesh()->AddImpulse(direction * spawnForce, "", true);
 	}
 	spawned = true;
 
-	onTriggered.Broadcast(this);
 	if(IsValid(objective)) objective->SetCompleted();
 }
 
 void ACellSpawner::DisplaySpawn()
 {
-	if(!wrld) wrld = GetWorld();
+	if(!IsValid(wrld)) wrld = GetWorld();
 		
 	// Doing outside the loop so it's not done unnecessarily
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
-	for(unsigned int i = 0; i < spawnAmount; i++)
+	for(unsigned short i = 0; i < spawnAmount; i++)
 	{
 		// If spawn radius isn't set, the spawn position will be this position.
 		const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 		EmptySpawn(spawn, rot)->SetActorScale3D(FVector(.4f));
 	}
 }
-
-// int ACellSpawner::GetCollectedAmount()
-// {
-// 	if(spawnedCells.IsEmpty()) return 0;
-//
-// 	int count = 0;
-// 	for(const auto& cell : spawnedCells)
-// 	{
-// 		// If it's not valid.. it means it's been destroyed/collected.
-// 		if(!cell) count++;
-// 	}
-//
-// 	return count;
-// }

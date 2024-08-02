@@ -118,7 +118,7 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 	if(currentMode != EGameMode::Build) return;
 	Zoom();
 	
-	if (!core) return;
+	if (!IsValid(core)) return;
 
 	const FVector corePos = core->GetActorLocation();
 	const FVector currentPos = GetActorLocation();
@@ -160,7 +160,8 @@ void APlayerCharacter::OrbitControls(const float deltaTime)
 void APlayerCharacter::Zoom()
 {
 	if(currentMode != EGameMode::Build) return;
-	if (!zooming) return;
+	if(!zooming) return;
+	if(!IsValid(camBoom)) return;
 	
 	const float armLength = camBoom->TargetArmLength;
 	camBoom->TargetArmLength = FMath::Clamp((mouseValues.Y * camZoomSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
@@ -170,6 +171,7 @@ void APlayerCharacter::ScrollZoom(const float input)
 {
 	if(currentMode != EGameMode::Build) return;
 	
+	if(!IsValid(camBoom)) return;
 	const float armLength = camBoom->TargetArmLength;
 	camBoom->TargetArmLength = FMath::Clamp((-input * camZoomSpeed) + armLength, minOrbitDistance, maxOrbitDistance);
 }
@@ -206,7 +208,7 @@ void APlayerCharacter::NextPreviousSlot(const bool next)
 void APlayerCharacter::AboveBelowSlot(const bool above)
 {
 	if(currentMode != EGameMode::Build) return;
-	if(!core) return;
+	if(!IsValid(core)) return;
 	
 	const TArray<FName> freeSockets = core->GetFreeSockets();
 	if(freeSockets.IsEmpty()) return;
@@ -236,7 +238,7 @@ void APlayerCharacter::AboveBelowSlot(const bool above)
 
 void APlayerCharacter::GoToSlot() const
 {
-	if(!selectedObj)
+	if(!IsValid(selectedObj))
 	{
 		Print("Couldn't go to slot because theres no selected obj", 4)
 		return;
@@ -248,7 +250,7 @@ void APlayerCharacter::GoToSlot() const
 		return;
 	}
 	
-	if(!core)
+	if(!IsValid(core))
 	{
 		Print("Couldn't go to slot because the core is invalid", 4)
 		return;
@@ -262,7 +264,7 @@ void APlayerCharacter::EndTurnEarly()
 	if(currentMode == EGameMode::Build) return;
 	if(adjustPhase) return;
 
-	if(core) core->EndTurn();
+	if(IsValid(core)) core->EndTurn();
 }
 
 void APlayerCharacter::SelectObject(APickupableMaster* obj)
@@ -270,8 +272,8 @@ void APlayerCharacter::SelectObject(APickupableMaster* obj)
 	// Can't select anything whilst not in the build area...
 	if(currentMode != EGameMode::Build) return;
 	
-	if(!obj) return;
-	if(!core) return;
+	if(!IsValid(obj)) return;
+	if(!IsValid(core)) return;
 	
 	selectedSocket = FindSuggestedSlot(obj);
 	if(selectedSocket == NAME_None) selectedSocket = core->GetFreeSockets()[0];
@@ -280,7 +282,7 @@ void APlayerCharacter::SelectObject(APickupableMaster* obj)
 
 void APlayerCharacter::Deselect()
 {
-	if(!selectedObj) return;
+	if(!IsValid(selectedObj)) return;
 
 	selectedObj->Attach();
 	if(selectedObj == core) core->ToggleGravity(true);
@@ -290,12 +292,12 @@ void APlayerCharacter::Deselect()
 void APlayerCharacter::Confirm()
 {
 	if(currentMode != EGameMode::Build) return;
-	if(!selectedObj)
+	if(!IsValid(selectedObj))
 	{
 		// Print("Couldnt confirm because there was no selected object...", 6)
 		return;
 	}
-	if(!core)
+	if(!IsValid(core))
 	{
 		// Print("Couldnt confirm because the core was invalid...", 6)
 		return;
@@ -305,7 +307,7 @@ void APlayerCharacter::Confirm()
 	selectedObj->Attach();
 
 	// Deselect the buyable...
-	if(selectedBuyable)
+	if(IsValid(selectedBuyable))
 	{
 		selectedBuyable->SetSelected(false);
 		selectedBuyable = 0;
@@ -338,9 +340,8 @@ void APlayerCharacter::BuildControls(const FHitResult& hit, const float deltaTim
 		hoveredBuyable->ShowDescription();
 	}
 
-	
 	// If the cast fails / when not hovering over the object.... 
-	else if(hoveredBuyable) hoveredBuyable->HideDescription();
+	else if(IsValid(hoveredBuyable)) hoveredBuyable->HideDescription();
 }
 
 void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
@@ -358,7 +359,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		if(buyable == selectedBuyable) return;
 		
 		// Don't do anything if there aren't any free slots...
-		if(core->GetFreeSockets().IsEmpty()) return;
+		if(IsValid(core)) if(core->GetFreeSockets().IsEmpty()) return;
 
 		const FBuyableInfoStruct buyInfo = buyable->GetInfo();
 
@@ -373,7 +374,7 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 		params.bNoFail = true;
 		
 		APickupableMaster* pickupable = wrld->SpawnActor<APickupableMaster>(buyInfo.classToSpawn, buyable->GetActorLocation(), buyable->GetActorRotation(), params);
-		if(!pickupable)
+		if(!IsValid(pickupable))
 		{
 			Print("couldnt cast after spawning from purchase...", 4)
 			return;
@@ -381,8 +382,8 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 
 		buyable->SetSelected(true);
 		
-		if(selectedObj) selectedObj->Deselect();
-		if(selectedBuyable) selectedBuyable->SetSelected(false);
+		if(IsValid(selectedObj)) selectedObj->Deselect();
+		if(IsValid(selectedBuyable)) selectedBuyable->SetSelected(false);
 
 		selectedBuyable = buyable;
 		selectedObj = pickupable;
@@ -391,8 +392,8 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 	}
 
 	// If the hit actor wasn't a buyable (clicking anything that isn't a buyable deselects the selected object if there is one).
-	if(selectedObj) selectedObj->Deselect();
-	if(selectedBuyable)
+	if(IsValid(selectedObj)) selectedObj->Deselect();
+	if(IsValid(selectedBuyable))
 	{
 		selectedBuyable->SetSelected(false);
 		selectedBuyable = 0;
@@ -402,14 +403,14 @@ void APlayerCharacter::SpawnFromBuyable(const FHitResult& hit)
 void APlayerCharacter::EjectObject(const FHitResult& hit)
 {
 	if(currentMode != EGameMode::Build) return;
-	if(!core)
+	if(!IsValid(core))
 	{
 		Print("Core was invalid. couldnt eject...", 4)
 		return;
 	}
 	
 	AActor* hitActor = hit.GetActor();
-	if(!hitActor) return;
+	if(!IsValid(hitActor)) return;
 	if(hitActor == core) return;
 	
 	// Never eject the actual core (for when detaching connectors to the core)
@@ -435,7 +436,7 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 
 void APlayerCharacter::AdjustCore(const FVector& mousePos)
 {
-	if(!core)
+	if(!IsValid(core))
 	{
 		Print("Couldnt adjust core. it's invalid...", 4)
 		return;
@@ -483,7 +484,7 @@ void APlayerCharacter::SetGameMode(EGameMode mode)
 bool APlayerCharacter::EjectAll()
 {
 	if(currentMode != EGameMode::Build) return false;
-	if(!core) return false;
+	if(!IsValid(core)) return false;
 	
 	const TArray<APickupableMaster*> attachments = core->GetCloseAttachments(); 
 	if(attachments.IsEmpty()) return false;

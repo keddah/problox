@@ -268,6 +268,7 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	virtual float GetMass() const
 	{
+		if(!IsValid(mesh)) return 0;
 		if(!mesh->IsSimulatingPhysics()) return 0;
 		return mesh->GetMass();
 	}
@@ -275,7 +276,7 @@ public:
 	/////////////// Other ///////////////
 	void SetCore(ACubeCore* _core) { parentCore = _core; }
 	
-	virtual void SetShowMesh(const bool show) const { mesh->SetHiddenInGame(!show); }
+	virtual void SetShowMesh(const bool show) const { if(IsValid(mesh)) mesh->SetHiddenInGame(!show); }
 
 	virtual void ToggleGravity(const bool on) const
 	{

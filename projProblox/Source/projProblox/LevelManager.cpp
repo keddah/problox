@@ -33,7 +33,8 @@ void ALevelManager::BeginPlay()
 	// Get the level instances that are a part of the main world
 	for (const auto& levelStream : wrld->GetStreamingLevels())
 	{
-		if (levelStream && levelStream->IsA<ULevelStreamingDynamic>())
+		if(!IsValid(levelStream)) continue;
+		if (levelStream->IsA<ULevelStreamingDynamic>())
 		{
 			ULevelStreamingDynamic* lvl = Cast<ULevelStreamingDynamic>(levelStream);
 			if (!lvl) continue;
@@ -176,6 +177,7 @@ void ALevelManager::FindCore()
 
 		if(ACubeCore* objCore = Cast<ACubeCore>(ACore)) core = objCore;
 		if(!core) Print("Core not found... ~ Level Manager", 5)
+		else break;
 	}
 }
 
@@ -232,17 +234,13 @@ void ALevelManager::FindSpawns()
 
 		// If there wasn't a save file...
 		LoadUnlockedSpawns();
-
-
-		// In blueprint... load the build area when this is broadcast so that the rest of the levels are hidden (needs to be done after the screenshots are taken).
-		// onScreenshotsTaken.Broadcast();
+		
+		// Initialise the cell spawns (spawns all the cells from every level)
+		onFirstLoad.Broadcast();
 
 		// Remove the delegate once the last level has been loaded so that it doesn't happen again
 		if(levels.IsEmpty()) return;
 		levels[levels.Num() - 1]->OnLevelShown.RemoveDynamic(this, &ALevelManager::FindSpawns);
-
-		// Initialise the cell spawns (spawns all the cells from every level)
-		onFirstLoad.Broadcast();
 	};
 
 	// Run the above after 2 second to ensure the levels are completely loaded.
@@ -258,6 +256,10 @@ void ALevelManager::InitSpawners()
 		Print("World was invalid when initialising cell spawners...", 8)
 		return;
 	}
+	if(levels.IsEmpty())
+	{
+		Print("Coulding intialise cell spawners since the levels weren't set...", 5)
+	}
 	
 	TArray<AActor*> actors;
 	UGameplayStatics::GetAllActorsOfClass(wrld, ACellSpawner::StaticClass(), actors);
@@ -271,13 +273,13 @@ void ALevelManager::InitSpawners()
 		switch(spawner->GetLevelEnum())
 		{
 			case ELevel::Bedroom:
-				lvl = levels[1];
+				if(levels.IsValidIndex(1)) lvl = levels[1];
 				break;
 			case ELevel::Kitchen:
-				lvl = levels[2];
+				if(levels.IsValidIndex(2))lvl = levels[2];
 				break;
 			case ELevel::Bathroom:
-				lvl = levels[3];
+				if(levels.IsValidIndex(3))lvl = levels[3];
 				break;
 
 			default:
@@ -285,8 +287,7 @@ void ALevelManager::InitSpawners()
 				break;
 		}
 
-		if(!levels[0]) Print("build area invalid", 4)
-		if(!spawner->Init(lvl, levels[0])) continue;
+		if(!spawner->Init(lvl)) continue;
 
 		// Always stop the send when the level changes
 		onLevelChanged.AddDynamic(spawner, &ACellSpawner::StopSound);
@@ -343,16 +344,6 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 	}
 
 	onSpawnChanged.Broadcast(spawnPoint);
-}
-
-void ALevelManager::OnFirstSpawn()
-{
-	InitSpawners();
-	// if(!wrld) return;
-	//
-	// // Initialise the cell spawns after the player spawns have been setup.
-	// FTimerHandle initDelay;
-	// wrld->GetTimerManager().SetTimer(initDelay, [this]{ InitSpawners(); }, .2f, false);
 }
 
 void ALevelManager::SaveSpawns()

@@ -92,6 +92,7 @@ void ABounceSpring::RemoveVelocity() const
 {
 	Super::RemoveVelocity();
 
+	if(!IsValid(end)) return;
 	end->SetPhysicsLinearVelocity(FVector::ZeroVector);
 	end->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
@@ -99,6 +100,10 @@ void ABounceSpring::RemoveVelocity() const
 void ABounceSpring::SetShowMesh(const bool enable) const
 {
 	Super::SetShowMesh(enable);
+
+	if(!IsValid(end)) return;
+	if(!IsValid(spline)) return;
+
 	end->SetCollisionEnabled(enable? ECollisionEnabled::QueryAndPhysics: ECollisionEnabled::NoCollision);
 	end->SetHiddenInGame(!enable);
 

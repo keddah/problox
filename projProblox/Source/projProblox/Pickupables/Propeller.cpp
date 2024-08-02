@@ -25,9 +25,6 @@ APropeller::APropeller()
 
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_propeller.MS_propeller'"));
 
-	// Don't allow cells to be collected from this collider.
-	Tags.Add("NO");
-
 	favouredSlot = ECoreSockets::Up;
 	soundPlayer->SetAbilityLooping(true);
 }
