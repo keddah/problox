@@ -820,22 +820,22 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FPlayerSettings>()
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UMoneySave);
 	UMoneySave::~UMoneySave() {}
-	struct Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_Statics
 	{
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ScriptStructInfo[] = {
+	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ScriptStructInfo[] = {
 		{ FPlayerSettings::StaticStruct, Z_Construct_UScriptStruct_FPlayerSettings_Statics::NewStructOps, TEXT("PlayerSettings"), &Z_Registration_Info_UScriptStruct_PlayerSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerSettings), 2911587900U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_USpawnSaves, USpawnSaves::StaticClass, TEXT("USpawnSaves"), &Z_Registration_Info_UClass_USpawnSaves, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpawnSaves), 3410300512U) },
 		{ Z_Construct_UClass_USettingsSave, USettingsSave::StaticClass, TEXT("USettingsSave"), &Z_Registration_Info_UClass_USettingsSave, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USettingsSave), 85721330U) },
 		{ Z_Construct_UClass_UBoughtAttachments, UBoughtAttachments::StaticClass, TEXT("UBoughtAttachments"), &Z_Registration_Info_UClass_UBoughtAttachments, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBoughtAttachments), 2320845843U) },
 		{ Z_Construct_UClass_UMoneySave, UMoneySave::StaticClass, TEXT("UMoneySave"), &Z_Registration_Info_UClass_UMoneySave, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMoneySave), 1978584357U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_292390149(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ClassInfo),
-		Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHub_FMP_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ScriptStructInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_292390149(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ClassInfo),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_SaveFiles_h_Statics::ScriptStructInfo),
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
