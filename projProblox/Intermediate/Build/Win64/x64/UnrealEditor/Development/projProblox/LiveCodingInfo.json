@@ -2,7 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.projProblox.1.cpp.obj": [
-			"AudioManager.cpp.obj",
 			"AudioManager.gen.cpp.obj",
 			"Balloon.gen.cpp.obj",
 			"BounceSpring.gen.cpp.obj",
@@ -20,7 +19,9 @@
 			"CustomGameInstance.gen.cpp.obj",
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
-			"Grappler.gen.cpp.obj",
+			"Grappler.gen.cpp.obj"
+		],
+		"Module.projProblox.2.cpp.obj": [
 			"HexagonSocketInfo.gen.cpp.obj",
 			"HexCore.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
@@ -34,45 +35,46 @@
 			"PlayerCharacter.gen.cpp.obj",
 			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
-			"SaveFiles.gen.cpp.obj",
+			"SaveFiles.gen.cpp.obj"
+		],
+		"Module.projProblox.3.cpp.obj": [
 			"SpawnPoint.gen.cpp.obj",
 			"Thruster.gen.cpp.obj",
 			"Treads.gen.cpp.obj",
 			"WedgeConnector.gen.cpp.obj",
-			"WedgeSocketInfo.gen.cpp.obj"
-		],
-		"Module.projProblox.2.cpp.obj": [
+			"WedgeSocketInfo.gen.cpp.obj",
+			"AudioManager.cpp.obj",
 			"Cell.cpp.obj",
-			"CustomGameInstance.cpp.obj",
-			"CubeConnector.cpp.obj",
-			"CuboidConnector.cpp.obj",
-			"WedgeConnector.cpp.obj",
-			"CuboidCore.cpp.obj",
-			"HexCore.cpp.obj",
-			"CubeSocketInfo.cpp.obj",
-			"GrappleHead.cpp.obj",
-			"Piston.cpp.obj",
-			"projProblox.cpp.obj",
-			"SpawnSaves.cpp.obj",
 			"CellSpawner.cpp.obj",
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
+			"CustomGameInstance.cpp.obj",
 			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
+			"CubeConnector.cpp.obj",
+			"CuboidConnector.cpp.obj",
+			"WedgeConnector.cpp.obj",
 			"CubeCore.cpp.obj",
+			"CuboidCore.cpp.obj",
+			"HexCore.cpp.obj",
+			"CubeSocketInfo.cpp.obj",
 			"Glider.cpp.obj",
+			"GrappleHead.cpp.obj",
 			"Grappler.cpp.obj",
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
 			"PickupableMaster.cpp.obj",
+			"Piston.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
 			"PlayerCharacter.cpp.obj",
-			"SpawnPoint.cpp.obj"
+			"projProblox.cpp.obj",
+			"SpawnPoint.cpp.obj",
+			"SpawnSaves.cpp.obj"
 		]
 	}
 }
