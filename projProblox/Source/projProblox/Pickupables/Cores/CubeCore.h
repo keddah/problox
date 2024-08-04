@@ -28,7 +28,7 @@
 #include "CoreMinimal.h"
 #include "./projProblox/Collector.h"
 #include "projProblox/CustomGameInstance.h"
-#include "SocketInfo/CubeSocketInfo.h"
+#include "CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnTurnStarted);

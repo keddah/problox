@@ -15,7 +15,7 @@
 
 #include "./projProblox/Cells/Cell.h"
 #include "Kismet/GameplayStatics.h"
-#include "projProblox/GameModes/Modes.h"
+#include "projProblox/Modes.h"
 #include "projProblox/Pickupables/Balloon.h"
 
 
