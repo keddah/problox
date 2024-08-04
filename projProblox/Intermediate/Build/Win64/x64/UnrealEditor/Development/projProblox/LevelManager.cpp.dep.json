@@ -131,7 +131,7 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\cubecore.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\collector.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\collector.generated.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\socketinfo\\cubesocketinfo.h",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\cubesocketinfo.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\cubesocketinfo.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\cubecore.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\cell.generated.h",
@@ -140,9 +140,7 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\levelobjective.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\levelobjective.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\cellspawner.generated.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\levelmanager.generated.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\connectors\\cubeconnector.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\cubeconnector.generated.h"
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\levelmanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

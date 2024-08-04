@@ -13,7 +13,6 @@
 
 #include "SaveFiles.h"
 #include "Pickupables/Cores/CubeCore.h"
-#include "Pickupables/Cores/Connectors/CubeConnector.h"
 
 
 void ALevelManager::BeginPlay()
@@ -168,17 +167,10 @@ void ALevelManager::FindCore()
 	if(!IsValid(wrld)) return;
 
 	// Isn't really necessary anymore since connectors aren't being used.
-	TArray<AActor*> coreActors;
-	UGameplayStatics::GetAllActorsOfClass(wrld, ACubeCore::StaticClass(), coreActors);
-	for (const auto& ACore: coreActors)
-	{
-		// Ignore connectors....
-		if(ACore->IsA<ACubeConnector>()) continue;
-
-		if(ACubeCore* objCore = Cast<ACubeCore>(ACore)) core = objCore;
-		if(!core) Print("Core not found... ~ Level Manager", 5)
-		else break;
-	}
+	AActor* coreActor = UGameplayStatics::GetActorOfClass(wrld, ACubeCore::StaticClass());
+	
+	if(ACubeCore* objCore = Cast<ACubeCore>(coreActor)) core = objCore;
+	if(!core) Print("Core not found... ~ Level Manager", 5)
 }
 
 void ALevelManager::FindSpawns()

@@ -16,7 +16,7 @@
 #include "Cores/CubeCore.h"
 #include "Kismet/GameplayStatics.h"
 #include "./projProblox/Cells/Cell.h"
-#include "Cores/Connectors/CubeConnector.h"
+#include "Cores/CubeCore.h"
 
 
 // Sets default values
@@ -92,22 +92,15 @@ void APickupableMaster::BeginPlay()
 
 	wrld = GetWorld();
 	
-	TArray<AActor*> coreActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACubeCore::StaticClass(), coreActors);
-	for (const auto& actor : coreActors)
+	AActor* coreActor = UGameplayStatics::GetActorOfClass(GetWorld(), ACubeCore::StaticClass());
+	if(ACubeCore* core = Cast<ACubeCore>(coreActor))
 	{
-		if(ACubeCore* core = Cast<ACubeCore>(actor))
-		{
-			if(core->IsA<ACubeConnector>()) continue;
-
-			core->onTurnStarted.AddDynamic(this, &APickupableMaster::ResetOutline);
-			core->onReset.AddDynamic(this, &APickupableMaster::ShowOutline);
-			break;
-		}
+		core->onTurnStarted.AddDynamic(this, &APickupableMaster::ResetOutline);
+		core->onReset.AddDynamic(this, &APickupableMaster::ShowOutline);
 	}
 	const FVector massOffset = centerMass->GetRelativeLocation();
 
-	// If tthe center of mass component's position is 0 ... return
+	// If the center of mass component's position is 0 ... return
 	if(massOffset.Equals({}, .0075f)) return;
 	
 	mesh->SetCenterOfMass(centerMass->GetRelativeLocation());

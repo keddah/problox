@@ -4,7 +4,7 @@
 #include "PlayerCharacter.h"
 
 #include "Components/CapsuleComponent.h"
-#include "Pickupables/Cores/Connectors/CubeConnector.h"
+#include "Pickupables/Cores/CubeCore.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -412,9 +412,6 @@ void APlayerCharacter::EjectObject(const FHitResult& hit)
 	AActor* hitActor = hit.GetActor();
 	if(!IsValid(hitActor)) return;
 	if(hitActor == core) return;
-	
-	// Never eject the actual core (for when detaching connectors to the core)
-	if(hitActor->IsA<ACubeCore>() && !hitActor->IsA<ACubeConnector>()) return;
 	
 	if(APickupableMaster* obj = Cast<APickupableMaster>(hitActor))
 	{
