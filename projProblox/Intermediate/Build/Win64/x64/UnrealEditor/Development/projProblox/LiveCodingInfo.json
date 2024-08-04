@@ -11,20 +11,22 @@
 			"CellSpawner.gen.cpp.obj",
 			"Collector.gen.cpp.obj",
 			"CubeCore.gen.cpp.obj",
+			"CubeSocketInfo.gen.cpp.obj",
 			"CustomGameInstance.gen.cpp.obj",
 			"Glider.gen.cpp.obj",
 			"GrappleHead.gen.cpp.obj",
 			"Grappler.gen.cpp.obj",
 			"Hoverer.gen.cpp.obj",
-			"LevelManager.gen.cpp.obj",
-			"CubeSocketInfo.gen.cpp.obj"
+			"LevelManager.gen.cpp.obj"
 		],
 		"Module.projProblox.2.cpp.obj": [
 			"LevelObjective.gen.cpp.obj",
 			"Magnet.gen.cpp.obj",
 			"MagPole.gen.cpp.obj",
+			"Modes.gen.cpp.obj",
 			"PickupableMaster.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"projProblox.init.gen.cpp.obj",
 			"Propeller.gen.cpp.obj",
 			"SaveFiles.gen.cpp.obj",
 			"SpawnPoint.gen.cpp.obj",
@@ -36,12 +38,10 @@
 			"CellVariations.cpp.obj",
 			"Collector.cpp.obj",
 			"CustomGameInstance.cpp.obj",
+			"LevelManager.cpp.obj",
 			"Balloon.cpp.obj",
 			"BounceSpring.cpp.obj",
 			"BuyableAttachment.cpp.obj",
-			"Modes.gen.cpp.obj",
-			"projProblox.init.gen.cpp.obj",
-			"LevelManager.cpp.obj",
 			"CubeCore.cpp.obj",
 			"CubeSocketInfo.cpp.obj"
 		],
@@ -52,14 +52,14 @@
 			"Hoverer.cpp.obj",
 			"Magnet.cpp.obj",
 			"MagPole.cpp.obj",
+			"PickupableMaster.cpp.obj",
 			"Propeller.cpp.obj",
 			"Thruster.cpp.obj",
 			"Treads.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"projProblox.cpp.obj",
 			"SpawnPoint.cpp.obj",
-			"SpawnSaves.cpp.obj",
-			"PickupableMaster.cpp.obj",
-			"PlayerCharacter.cpp.obj"
+			"SpawnSaves.cpp.obj"
 		]
 	}
 }
