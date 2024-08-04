@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/Pickupables/Cores/SocketInfo/CubeSocketInfo.h"
+#include "projProblox/Pickupables/Cores/CubeSocketInfo.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 // Cross Module References
@@ -53,8 +53,8 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Should never save and only to be made while the game is running\n" },
 #endif
-		{ "IncludePath", "Pickupables/Cores/SocketInfo/CubeSocketInfo.h" },
-		{ "ModuleRelativePath", "Pickupables/Cores/SocketInfo/CubeSocketInfo.h" },
+		{ "IncludePath", "Pickupables/Cores/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeSocketInfo.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Should never save and only to be made while the game is running" },
 #endif
@@ -64,7 +64,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData[] = {
 		{ "Category", "CubeSocketInfo" },
-		{ "ModuleRelativePath", "Pickupables/Cores/SocketInfo/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets = { "sockets", nullptr, (EPropertyFlags)0x0020080000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, sockets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_sockets_MetaData) };
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData[] = {
 		{ "ArrayClamp", "sockets" },
 		{ "Category", "CubeSocketInfo" },
-		{ "ModuleRelativePath", "Pickupables/Cores/SocketInfo/CubeSocketInfo.h" },
+		{ "ModuleRelativePath", "Pickupables/Cores/CubeSocketInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects = { "socketObjects", nullptr, (EPropertyFlags)0x0020080000030001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCubeSocketInfo, socketObjects), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData), Z_Construct_UClass_UCubeSocketInfo_Statics::NewProp_socketObjects_MetaData) };
@@ -117,15 +117,15 @@ void EmptyLinkFunctionForGeneratedCodeCubeSocketInfo() {}
 	UCubeSocketInfo::UCubeSocketInfo(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UCubeSocketInfo);
 	UCubeSocketInfo::~UCubeSocketInfo() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeSocketInfo_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 3440768335U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeSocketInfo_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UCubeSocketInfo, UCubeSocketInfo::StaticClass, TEXT("UCubeSocketInfo"), &Z_Registration_Info_UClass_UCubeSocketInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCubeSocketInfo), 3317631471U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_4042079248(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_SocketInfo_CubeSocketInfo_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeSocketInfo_h_1405908972(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeSocketInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeSocketInfo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

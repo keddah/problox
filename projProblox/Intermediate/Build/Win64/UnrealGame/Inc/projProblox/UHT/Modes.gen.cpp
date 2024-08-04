@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "projProblox/GameModes/Modes.h"
+#include "projProblox/Modes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeModes() {}
 // Cross Module References
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeModes() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMode_Story_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "GameModes/Modes.h" },
-		{ "ModuleRelativePath", "GameModes/Modes.h" },
+		{ "IncludePath", "Modes.h" },
+		{ "ModuleRelativePath", "Modes.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -104,8 +104,8 @@ void EmptyLinkFunctionForGeneratedCodeModes() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMode_Build_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "GameModes/Modes.h" },
-		{ "ModuleRelativePath", "GameModes/Modes.h" },
+		{ "IncludePath", "Modes.h" },
+		{ "ModuleRelativePath", "Modes.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -142,16 +142,16 @@ void EmptyLinkFunctionForGeneratedCodeModes() {}
 	AMode_Build::AMode_Build(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AMode_Build);
 	AMode_Build::~AMode_Build() {}
-	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Modes_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMode_Story, AMode_Story::StaticClass, TEXT("AMode_Story"), &Z_Registration_Info_UClass_AMode_Story, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Story), 2900308758U) },
-		{ Z_Construct_UClass_AMode_Build, AMode_Build::StaticClass, TEXT("AMode_Build"), &Z_Registration_Info_UClass_AMode_Build, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Build), 2849129638U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Modes_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AMode_Story, AMode_Story::StaticClass, TEXT("AMode_Story"), &Z_Registration_Info_UClass_AMode_Story, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Story), 1774700364U) },
+		{ Z_Construct_UClass_AMode_Build, AMode_Build::StaticClass, TEXT("AMode_Build"), &Z_Registration_Info_UClass_AMode_Build, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMode_Build), 559310628U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_2683888969(TEXT("/Script/projProblox"),
-		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_GameModes_Modes_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Modes_h_1195618950(TEXT("/Script/projProblox"),
+		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Modes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Modes_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
