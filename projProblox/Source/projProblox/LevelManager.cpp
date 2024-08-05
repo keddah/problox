@@ -62,7 +62,7 @@ void ALevelManager::BeginPlay()
 	// Unhide all the levels (apart from build level)
 	if(levels.Num() > 1)
 	{
-		for(int i = 1; i < levels.Num(); i++)
+		for(unsigned short i = 1; i < levels.Num(); i++)
 		{
 			levels[i]->SetShouldBeLoaded(true);
 			levels[i]->SetShouldBeVisible(true);
@@ -202,25 +202,25 @@ void ALevelManager::FindSpawns()
 			// Add the points to their respective arrays
 			switch (point->GetLevelEnum())
 			{
-			case ELevel::BuildArea:
-				point->SetLevelIndex(0);
-				lvl0Spawn = point;
-				break;
-					
-			case ELevel::Bedroom:
-				point->SetLevelIndex(1);
-				lvl1Spawns.Add(point);
-				break;
-					
-			case ELevel::Kitchen:
-				point->SetLevelIndex(2);
-				lvl2Spawns.Add(point);
-				break;
-					
-			case ELevel::Bathroom:
-				point->SetLevelIndex(3);
-				lvl3Spawns.Add(point);
-				break;
+				case ELevel::BuildArea:
+					point->SetLevelIndex(0);
+					lvl0Spawn = point;
+					break;
+						
+				case ELevel::Bedroom:
+					point->SetLevelIndex(1);
+					lvl1Spawns.Add(point);
+					break;
+						
+				case ELevel::Kitchen:
+					point->SetLevelIndex(2);
+					lvl2Spawns.Add(point);
+					break;
+						
+				case ELevel::Bathroom:
+					point->SetLevelIndex(3);
+					lvl3Spawns.Add(point);
+					break;
 			}
 		}
 
@@ -302,37 +302,37 @@ void ALevelManager::SelectSpawn(const int spawnPoint)
 
 	core->RemoveVelocity();
 
-	switch (currentLevel)
+	switch(currentLevel)
 	{
-	case 0:
-		if (!IsValid(lvl0Spawn)) break;
-		core->Teleport(lvl0Spawn->GetRot(), lvl0Spawn->GetActorLocation());
-		player->EnterLevel(false);
-		break;
+		case 0:
+			if (!IsValid(lvl0Spawn)) break;
+			core->Teleport(lvl0Spawn->GetRot(), lvl0Spawn->GetActorLocation());
+			player->EnterLevel(false);
+			break;
 
-	case 1:
-		if (lvl1Spawns.IsValidIndex(spawnPoint))
-		{
-			core->Teleport(lvl1Spawns[spawnPoint]->GetRot(), lvl1Spawns[spawnPoint]->GetActorLocation());
-		}
-		player->EnterLevel();
-		break;
+		case 1:
+			if (lvl1Spawns.IsValidIndex(spawnPoint))
+			{
+				core->Teleport(lvl1Spawns[spawnPoint]->GetRot(), lvl1Spawns[spawnPoint]->GetActorLocation());
+			}
+			player->EnterLevel();
+			break;
 
-	case 2:
-		if (lvl2Spawns.IsValidIndex(spawnPoint))
-		{
-			core->Teleport(lvl2Spawns[spawnPoint]->GetRot(), lvl2Spawns[spawnPoint]->GetActorLocation());
-		}
-		player->EnterLevel();
-		break;
+		case 2:
+			if (lvl2Spawns.IsValidIndex(spawnPoint))
+			{
+				core->Teleport(lvl2Spawns[spawnPoint]->GetRot(), lvl2Spawns[spawnPoint]->GetActorLocation());
+			}
+			player->EnterLevel();
+			break;
 
-	case 3:
-		if (lvl3Spawns.IsValidIndex(spawnPoint))
-		{
-			core->Teleport(lvl3Spawns[spawnPoint]->GetRot(), lvl3Spawns[spawnPoint]->GetActorLocation());
-		}
-		player->EnterLevel();
-		break;
+		case 3:
+			if (lvl3Spawns.IsValidIndex(spawnPoint))
+			{
+				core->Teleport(lvl3Spawns[spawnPoint]->GetRot(), lvl3Spawns[spawnPoint]->GetActorLocation());
+			}
+			player->EnterLevel();
+			break;
 	}
 
 	onSpawnChanged.Broadcast(spawnPoint);

@@ -158,22 +158,29 @@ void ABalloon::BalloonAttach()
 	string->SetPhysicsLinearVelocity({});
 }
 
+// Create its own teleport function since whenever this is attached to the core, it doesn't attach in the hierarchy (have to move it separately).
 void ABalloon::Teleport(const bool physicsOn)
 {
 	if(!IsValid(parentCore)) return;
-	
+
+	// Deactivate the constraint before to avoid excessive acceleration
 	SetConstraintsActive(false);
 	
 	if(IsValid(mesh)) mesh->SetSimulatePhysics(physicsOn);
 
 	const UStaticMeshComponent* parentMesh = parentCore->GetMesh();
 	const FRotator socketRot = parentMesh->GetSocketRotation(attachedSocket);
-	
-	UseSilhouetteTransform();
-	SetActorRotation(RoundRotation(GetActorRotation()));
-	SetActorLocation(parentMesh->GetSocketLocation(attachedSocket) + socketRot.Vector() * attachOffset);
 
+	// To try to match the socket rotation
+	UseSilhouetteTransform();
+
+	// The rotations are usually slightly misaligned...
+	SetActorRotation(RoundRotation(GetActorRotation()));
+	
+	SetActorLocation(parentMesh->GetSocketLocation(attachedSocket) + socketRot.Vector() * attachOffset);
 	RemoveVelocity();
+	
+	// Reactivate the constraint after.
 	SetConstraintsActive(true);
 }
 

@@ -35,10 +35,10 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	bool positive;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
-	float attractionForce = 15;
+	unsigned int attractionForce = 15;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 10))
-	int fieldRange = 1500000;
+	unsigned int fieldRange = 1500000;
 
 	bool magAttached;
 

@@ -57,21 +57,21 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed_MetaData[] = {
-		{ "Category", "Ability" },
+		{ "Category", "Ability|Movement" },
 		{ "ModuleRelativePath", "Pickupables/Glider.h" },
 	};
 #endif
 	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed = { "glideSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, glideSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_glideSpeed_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData[] = {
-		{ "Category", "Ability" },
+		{ "Category", "Ability|Movement" },
 		{ "ModuleRelativePath", "Pickupables/Glider.h" },
 	};
 #endif
 	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount = { "floatAmount", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGlider, floatAmount), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData), Z_Construct_UClass_AGlider_Statics::NewProp_floatAmount_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGlider_Statics::NewProp_activationSpeed_MetaData[] = {
-		{ "Category", "Ability" },
+		{ "Category", "Ability|Activation" },
 		{ "ModuleRelativePath", "Pickupables/Glider.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "How fast the object has to be falling in order to activate the glide (Z axis velocity)." },
@@ -122,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeGlider() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 1036230302U) },
+		{ Z_Construct_UClass_AGlider, AGlider::StaticClass, TEXT("AGlider"), &Z_Registration_Info_UClass_AGlider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGlider), 2655354276U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_3943126294(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_3960069418(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Glider_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

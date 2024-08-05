@@ -481,11 +481,6 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_stickThreshold_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_stickThreshold;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -506,19 +501,6 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 #endif
 	};
 #endif
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStickyCell_Statics::NewProp_stickThreshold_MetaData[] = {
-		{ "Category", "StickyCell" },
-		{ "ModuleRelativePath", "Cells/Cell.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The amount of force required to make the Thing unstick." },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AStickyCell_Statics::NewProp_stickThreshold = { "stickThreshold", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AStickyCell, stickThreshold), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AStickyCell_Statics::NewProp_stickThreshold_MetaData), Z_Construct_UClass_AStickyCell_Statics::NewProp_stickThreshold_MetaData) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStickyCell_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStickyCell_Statics::NewProp_stickThreshold,
-	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStickyCell_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AStickyCell>::IsAbstract,
 	};
@@ -528,16 +510,15 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		Z_Construct_UClass_AStickyCell_Statics::PropPointers,
+		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		UE_ARRAY_COUNT(Z_Construct_UClass_AStickyCell_Statics::PropPointers),
+		0,
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AStickyCell_Statics::Class_MetaDataParams), Z_Construct_UClass_AStickyCell_Statics::Class_MetaDataParams)
 	};
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AStickyCell_Statics::PropPointers) < 2048);
 	UClass* Z_Construct_UClass_AStickyCell()
 	{
 		if (!Z_Registration_Info_UClass_AStickyCell.OuterSingleton)
@@ -561,9 +542,9 @@ void EmptyLinkFunctionForGeneratedCodeCell() {}
 		{ Z_Construct_UClass_ACell, ACell::StaticClass, TEXT("ACell"), &Z_Registration_Info_UClass_ACell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACell), 2242426276U) },
 		{ Z_Construct_UClass_ABouncyCell, ABouncyCell::StaticClass, TEXT("ABouncyCell"), &Z_Registration_Info_UClass_ABouncyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABouncyCell), 2543775405U) },
 		{ Z_Construct_UClass_AHoverCell, AHoverCell::StaticClass, TEXT("AHoverCell"), &Z_Registration_Info_UClass_AHoverCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHoverCell), 3756993722U) },
-		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 3211024564U) },
+		{ Z_Construct_UClass_AStickyCell, AStickyCell::StaticClass, TEXT("AStickyCell"), &Z_Registration_Info_UClass_AStickyCell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStickyCell), 1326162187U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_255695678(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_3344864216(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Cells_Cell_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

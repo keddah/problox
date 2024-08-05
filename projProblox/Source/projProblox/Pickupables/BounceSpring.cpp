@@ -97,6 +97,7 @@ void ABounceSpring::RemoveVelocity() const
 	end->SetPhysicsAngularVelocityInDegrees(FVector::ZeroVector);
 }
 
+// Overriden since there are several meshes
 void ABounceSpring::SetShowMesh(const bool enable) const
 {
 	Super::SetShowMesh(enable);
@@ -111,6 +112,7 @@ void ABounceSpring::SetShowMesh(const bool enable) const
 	spline->SetHiddenInGame(!enable);
 }
 
+// Supposed to replicate the actual spring energy formula
 float ABounceSpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const
 {
 	const float change = (endPos - startPos).Length();

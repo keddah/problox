@@ -109,9 +109,6 @@ class PROJPROBLOX_API AStickyCell : public ACell
 
 	virtual void BeginPlay() override { wrld = GetWorld(); Super::BeginPlay(); }
 	
-	UPROPERTY(EditDefaultsOnly, meta = (ToolTip = "The amount of force required to make the Thing unstick."))
-	float stickThreshold = 1;
-
 	UWorld* wrld;
 	
 	bool stuck;

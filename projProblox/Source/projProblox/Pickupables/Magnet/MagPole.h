@@ -19,7 +19,7 @@ class PROJPROBLOX_API AMagPole : public AActor
 	bool positive = true;
 	
 	UPROPERTY(EditInstanceOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "Putting this value too high will cause the magnets that are attracted to it to get destroyed..."))
-	float attractionForce = 2500;
+	unsigned int attractionForce = 2500;
 
 	void UpdateMagnets();
 	

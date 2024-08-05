@@ -25,7 +25,7 @@ struct FBuyableInfoStruct
 	EAttachmentIcon objIcon;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	int price = 0;
+	uint8 price = 0;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UStaticMesh* attachmentMesh;
@@ -63,7 +63,7 @@ class PROJPROBLOX_API UBuyableInfo : public UDataAsset
 	EAttachmentIcon objIcon = EAttachmentIcon::None;
 
 	UPROPERTY(EditAnywhere)
-	int price = 100;
+	uint8 price = 100;
 
 	UPROPERTY(EditAnywhere)
 	bool editScale;

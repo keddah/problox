@@ -60,7 +60,7 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_price_MetaData[];
 #endif
-		static const UECodeGen_Private::FIntPropertyParams NewProp_price;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_price;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_attachmentMesh_MetaData[];
 #endif
@@ -127,7 +127,7 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price = { "price", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, price), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price = { "price", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FBuyableInfoStruct, price), nullptr, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData), Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_price_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewProp_attachmentMesh_MetaData[] = {
 		{ "Category", "BuyableInfoStruct" },
@@ -234,7 +234,7 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_price_MetaData[];
 #endif
-		static const UECodeGen_Private::FIntPropertyParams NewProp_price;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_price;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_editScale_MetaData[];
 #endif
@@ -307,7 +307,7 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		{ "ModuleRelativePath", "Pickupables/BuyableInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price = { "price", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBuyableInfo, price), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price_MetaData), Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price_MetaData) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price = { "price", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBuyableInfo, price), nullptr, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price_MetaData), Z_Construct_UClass_UBuyableInfo_Statics::NewProp_price_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBuyableInfo_Statics::NewProp_editScale_MetaData[] = {
 		{ "Category", "BuyableInfo" },
@@ -385,12 +385,12 @@ template<> PROJPROBLOX_API UScriptStruct* StaticStruct<FBuyableInfoStruct>()
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo[] = {
-		{ FBuyableInfoStruct::StaticStruct, Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewStructOps, TEXT("BuyableInfoStruct"), &Z_Registration_Info_UScriptStruct_BuyableInfoStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBuyableInfoStruct), 2191252077U) },
+		{ FBuyableInfoStruct::StaticStruct, Z_Construct_UScriptStruct_FBuyableInfoStruct_Statics::NewStructOps, TEXT("BuyableInfoStruct"), &Z_Registration_Info_UScriptStruct_BuyableInfoStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBuyableInfoStruct), 1569432880U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UBuyableInfo, UBuyableInfo::StaticClass, TEXT("UBuyableInfo"), &Z_Registration_Info_UClass_UBuyableInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuyableInfo), 479660528U) },
+		{ Z_Construct_UClass_UBuyableInfo, UBuyableInfo::StaticClass, TEXT("UBuyableInfo"), &Z_Registration_Info_UClass_UBuyableInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuyableInfo), 690282966U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_2280722921(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_1333385616(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableInfo_h_Statics::ScriptStructInfo),
 		nullptr, 0);

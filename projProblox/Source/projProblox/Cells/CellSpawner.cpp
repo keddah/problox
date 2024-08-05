@@ -152,6 +152,7 @@ ACell* ACellSpawner::Spawn(const FVector& spawn, const FRotator& rot)const
 		return 0;
 	}
 
+	// Initialise the cell... (assign spawner + assign delegates)
 	cell->SetOwningSpawner(this);
 	cell->OnDestroyed.AddDynamic(this, &ACellSpawner::ACellSpawner::IncreaseCollectedAmount);
 	
@@ -176,16 +177,12 @@ void ACellSpawner::InitialSpawn()
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
-
 	// Spawn a new Thing for however many spawnAmount says to.
 	for(unsigned int i = 0; i < spawnAmount; i++)
 	{
 		// If spawn radius isn't set, the spawn position will be this position.
 		const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 		ACell* cell = Spawn(spawn, rot);
-
-		// Spawns a cell then deactivates it...
-		// cell->Sleep();
 
 		spawnedCells.Add(cell);
 	}
@@ -194,9 +191,6 @@ void ACellSpawner::InitialSpawn()
 
 void ACellSpawner::SpawnWithForce()
 {
-	// Don't allow things to spawn if the objective has already been done.
-	// if(HasObjective()) if(objective->IsCompleted()) return;
-	
 	if(!IsValid(wrld))
 	{
 		Print("World was invalid... couldn't spawn cells.", 5)

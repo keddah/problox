@@ -57,7 +57,8 @@ void ACubeCore::BeginPlay()
 	else Print("Couldn't cast to game instance...", 4)
 
 	cellCollector->OnComponentBeginOverlap.AddDynamic(this, &ACubeCore::PickupCell);
-	
+
+	// Call parent function after so that the blueprint beginplay runs after this...
 	Super::BeginPlay();
 }
 
@@ -294,8 +295,6 @@ void ACubeCore::EndTurn(const bool force)
 	const float percent = canSkip? 1 : elapsedTime / longestDuration;
 	if(percent < endTurnPercent) return;
 
-	Print("Ending turn", 4)
-	
 	// Call the function the timer is supposed to call
 	Reset();
 
@@ -383,7 +382,7 @@ void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<in
 	// Set the longest time to .1 (that's the longest duration when setting both values to 0).
 	longestDuration = _longestTime == 0? .1f : _longestTime;
 	
-	for(int i = 0; i < objs.Num(); i++)
+	for(unsigned short i = 0; i < objs.Num(); i++)
 	{
 		if(!objs[i]->IsTimerRequired()) continue;
 		

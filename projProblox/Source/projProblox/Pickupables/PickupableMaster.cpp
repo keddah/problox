@@ -114,6 +114,7 @@ void APickupableMaster::Tick(float DeltaTime)
 	Ability(DeltaTime);
 }
 
+// Unused...
 void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	return;
@@ -139,6 +140,7 @@ void APickupableMaster::CollisionHitSFX(UPrimitiveComponent* HitComponent, AActo
 	//PrintFloat(std::cbrt(force) * .35f, 3)
 }
 
+// Unused...
 void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	return;
@@ -164,10 +166,10 @@ void APickupableMaster::CollisionOverlapSFX(UPrimitiveComponent* OverlappedCompo
 	//PrintFloat(std::cbrt(force) * .35f, 3)
 }
 
+// When a cell collides with the pickup detector, the core collects the cell.
 void APickupableMaster::PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if(!IsValid(parentCore)) return;
-
 	if(Cast<ACell>(OtherActor)) parentCore->PickupCell(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
 }
 
@@ -195,6 +197,7 @@ void APickupableMaster::GhostPlacement()
 	
 	if(snapRot)
 	{
+		// Use the socket's forward rotation but keep the place direction in consideration
 		const FVector forwardVec = UKismetMathLibrary::GetForwardVector(parentMesh->GetSocketRotation(attachedSocket));
 
 		FRotator rot;
@@ -345,63 +348,6 @@ void APickupableMaster::Reattach(const FName& socket)
 	Attach();
 }
 
-FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool negate)
-{
-	// Quantize each component of the Rotator using Frac and Floor
-	FRotator rounded;
-	const int rounder = negate? -90 : 90;
-		
-	// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
-	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
-	rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
-	rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
-
-	return rounded;
-}
-
-FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const float rounder)
-{
-	FRotator rounded;
-		
-	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
-	rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
-	rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
-
-	return rounded;
-}
-
-FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder)
-{
-	const FRotator difference = rotation - referencedRot;
-
-	// Round the differences to the rounder
-	const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / rounder) * rounder;
-	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / rounder) * rounder;
-	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / rounder) * rounder;
-
-	// Add the rounded differences to the reference rotation to get the rounded rotation
-	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
-}
-
-FRotator APickupableMaster::DiagRoundRot(const FRotator& rotation, const FRotator& referencedRot, const bool isDiag)
-{
-	constexpr float rounder = -90;
-	
-	// Calculate the difference between the rotations
-	const FRotator difference = rotation - referencedRot;
-
-	// If diag... the pitch needs to round to 45 instead of 90.
-	float pitchDiff;
-	if(isDiag) pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / -45) * -45;
-	else pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / rounder) * rounder;
-		
-	// Round the differences to the nearest 90 degrees
-	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / rounder) * rounder;
-	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / rounder) * rounder;
-
-	// Add the rounded differences to the reference rotation to get the rounded rotation
-	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
-}
 
 void APickupableMaster::AlignSocketRot(const bool useDirection)
 {
@@ -536,4 +482,44 @@ bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
 	}
 
 	return false;
+}
+
+
+
+FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool negate)
+{
+	// Quantize each component of the Rotator using Frac and Floor
+	FRotator rounded;
+	const int rounder = negate? -90 : 90;
+		
+	// Using -90 since otherwise the outputted rotation would face the opposite direction when attaching)
+	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
+	rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
+	rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
+
+	return rounded;
+}
+
+FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const float rounder)
+{
+	FRotator rounded;
+		
+	rounded.Pitch = FMath::RoundHalfFromZero(rotation.Pitch / rounder) * rounder;
+	rounded.Yaw = FMath::RoundHalfFromZero(rotation.Yaw / rounder) * rounder;
+	rounded.Roll = FMath::RoundHalfFromZero(rotation.Roll / rounder) * rounder;
+
+	return rounded;
+}
+
+FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder)
+{
+	const FRotator difference = rotation - referencedRot;
+
+	// Round the differences to the rounder
+	const float pitchDiff = FMath::RoundHalfFromZero(difference.Pitch / rounder) * rounder;
+	const float yawDiff = FMath::RoundHalfFromZero(difference.Yaw / rounder) * rounder;
+	const float rollDiff = FMath::RoundHalfFromZero(difference.Roll / rounder) * rounder;
+
+	// Add the rounded differences to the reference rotation to get the rounded rotation
+	return referencedRot + FRotator(pitchDiff, yawDiff, rollDiff);
 }

@@ -31,7 +31,10 @@
 #include "CubeSocketInfo.h"
 #include "CubeCore.generated.h"
 
+// Called whenever the player presses the play button or the spacebar when in actual levels (when the turn starts)...
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnTurnStarted);
+
+// Called the core cam is facing upwards (to avoid looking at the underneath of the level)
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnBadCamera);
 
 // Should be broadcast whenever more cells are spawned in after the game has already started.
@@ -61,7 +64,7 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 	void Start() { if(IsValid(mesh)) mesh->SetAngularDamping(defaultAngularDrag); }
 	
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Calls the delegate that initiates the game."))
-	void StartGame() { onTurnStarted.Broadcast(); Print("starring", 4) } 
+	void StartGame() { onTurnStarted.Broadcast(); } 
 
 	UFUNCTION(BlueprintCallable, meta = (Tooltip = "Gives the core the delay's / durations and calls the start game delegate."))
 	void StartStoryGame(const TArray<int>& delays, const TArray<int>& durations, const float _longestTime)
@@ -95,6 +98,7 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	UCubeSocketInfo* socketInfo;
 
+	
 private:
 	UPROPERTY(EditDefaultsOnly, Category = "Collection")
 	UBoxComponent* cellCollector;
@@ -152,10 +156,10 @@ private:
 	
 	/////////////// Other ///////////////
 	UPROPERTY(EditDefaultsOnly, Category = "Forces|Detachment", meta = (ToolTip = "The force to be applied when detaching."))
-	float detachForce = 3000;
+	unsigned int detachForce = 3000;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Forces|Detachment", meta = (ToolTip = "The angular force to be applied when detaching."))
-	float detachAngularForce = 100;
+	unsigned int detachAngularForce = 100;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Forces|Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
 	float defaultAngularDrag = .05f;

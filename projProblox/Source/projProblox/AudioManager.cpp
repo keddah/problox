@@ -1,4 +1,13 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Audio Manager - Code
+* 
+* The code file the audio manager which is on every pickupable.
+*
+* Problems:
+*	Possibly bad for memory loading instances of sounds for each attachment (could potentially load 7 lots of the same thing)
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "AudioManager.h"

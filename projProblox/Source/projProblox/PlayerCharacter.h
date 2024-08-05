@@ -1,7 +1,7 @@
 /**************************************************************************************************************
 * Player - Header
 * 
-* The header file for the player. Defines the gamemodes enum and the player class.
+* The header file for the player. Defines the gamemodes enum and the player class. 
 *
 * Created by Dean Atkinson-Walker 2024
 ***************************************************************************************************************/

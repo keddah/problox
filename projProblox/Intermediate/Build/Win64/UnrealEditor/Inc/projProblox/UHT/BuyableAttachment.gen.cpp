@@ -189,7 +189,7 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABuyableAttachment_GetInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BuyableAttachment_eventGetInfo_Parms, ReturnValue), Z_Construct_UScriptStruct_FBuyableInfoStruct, METADATA_PARAMS(0, nullptr) }; // 2191252077
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABuyableAttachment_GetInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BuyableAttachment_eventGetInfo_Parms, ReturnValue), Z_Construct_UScriptStruct_FBuyableInfoStruct, METADATA_PARAMS(0, nullptr) }; // 1569432880
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABuyableAttachment_GetInfo_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABuyableAttachment_GetInfo_Statics::NewProp_ReturnValue,
 	};
@@ -290,7 +290,7 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABuyableAttachment_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABuyableAttachment_GetInfo, "GetInfo" }, // 3699264876
+		{ &Z_Construct_UFunction_ABuyableAttachment_GetInfo, "GetInfo" }, // 2438368270
 		{ &Z_Construct_UFunction_ABuyableAttachment_UseInfoMesh, "UseInfoMesh" }, // 427336234
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABuyableAttachment_Statics::FuncInfo) < 2048);
@@ -426,9 +426,9 @@ void FOnHideDisplay_DelegateWrapper(const FMulticastScriptDelegate& OnHideDispla
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABuyableAttachment, ABuyableAttachment::StaticClass, TEXT("ABuyableAttachment"), &Z_Registration_Info_UClass_ABuyableAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuyableAttachment), 99704169U) },
+		{ Z_Construct_UClass_ABuyableAttachment, ABuyableAttachment::StaticClass, TEXT("ABuyableAttachment"), &Z_Registration_Info_UClass_ABuyableAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuyableAttachment), 2384148600U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_306972156(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_4095851515(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BuyableAttachment_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

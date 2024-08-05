@@ -74,7 +74,7 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ACell> stickyCell;
 	
-	UPROPERTY(EditInstanceOnly, meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties", meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
 	ECellType cellType = ECellType::Normal;
 
 	
@@ -82,16 +82,16 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	UPROPERTY(EditInstanceOnly, Category = "Objective")
 	ULevelObjective* objective;
 
-	UPROPERTY(EditInstanceOnly, Category = "Level Assignment", meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Level Assignment", meta = (EditInlineNew, ToolTip = "The type of thing to spawn."))
 	ELevel level;
 	
-	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Amount", meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties", meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
 	unsigned int spawnAmount = 1;
 	
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Activation", meta = (EditInlineNew, ToolTip = "Whether to spawn the cells as soon as the level is loaded"))
 	bool previewed = true;
 		
-	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
+	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
 	unsigned int spawnRadius = 50;
 
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The max angle of the cone of force to be applied when new cells are spawned."))
@@ -110,7 +110,7 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	TArray<ACell*> spawnedCells;
 	
 	bool spawned = false;
-	int collectedCount = 0;
+	unsigned int collectedCount = 0;
 	
 	// Returns whether the overlap caused a spawn
 	UFUNCTION(BlueprintCallable)
@@ -130,7 +130,6 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	
 	// Spawn parameters
 	FActorSpawnParameters params;
-
 
 
 protected:

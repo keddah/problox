@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Audio Manager - Header
+* 
+* The header file for the audio manager that's on every pickupable. Responsible for loading, playing and stopping sound effects for the attachments. 
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 

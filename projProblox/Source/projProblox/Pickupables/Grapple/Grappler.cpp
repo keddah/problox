@@ -37,12 +37,15 @@ AGrappler::AGrappler()
 void AGrappler::SetAbilityActive(const bool value)
 {
 	Super::SetAbilityActive(value);
-	
+
+	// Destroy the hook if there's a valid one
 	if(IsValid(hook))
 	{
 		if(!active)
 		{
+			// To prevent weird pointers...?
 			hook->ClearGarbage();
+			
 			hook->Destroy();
 		}
 	}

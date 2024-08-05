@@ -55,12 +55,15 @@ void AHoverer::Ability(float deltaTime)
 
 	// Using pythagoras to find the distance between the hover point position and the floor (since the angle is always 45 degrees, only need one distance (the minFloorDistance))
 	const float hypDistance = sqrt((hoverDistance * hoverDistance) + (hoverDistance * hoverDistance));
+
+	// Creating a points array so that they can be accessed in a loop
 	const TArray points { topLeft, topRight, bottomLeft, bottomRight, sideUp, sideDown, sideLeft, sideRight };
 
 	for(const auto& point : points)
 	{
 		if(!IsValid(point)) continue;
-		
+
+		// Do linetraces in all directions of the point so that the hover points are stable
 		for(unsigned short i = 0; i < 5; i++)
 		{
 			FHitResult hit;

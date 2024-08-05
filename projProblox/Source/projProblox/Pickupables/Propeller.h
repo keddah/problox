@@ -27,20 +27,21 @@ class PROJPROBLOX_API APropeller : public APickupableMaster
 
 	UPROPERTY(VisibleDefaultsOnly)
 	UBoxComponent* windBox;
-	
-	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true))
-	TArray<UPrimitiveComponent*> pushedObjs;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .5f, ToolTip = "The amount of force to apply to the thing that it's attached to"))
-	float propelForce = 50;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability|Forces", meta = (ToolTip = "The amount of force to apply to the thing that it's attached to"))
+	unsigned int propelForce = 50;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "The amount of force to apply to things that are inside the windCollider while active"))
+	UPROPERTY(EditDefaultsOnly, Category = "Ability|Forces", meta = (Delta = 1, ToolTip = "The amount of force to apply to things that are inside the windCollider while active"))
 	float pushForce = 100;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1, ToolTip = "The speed the propellers rotate (purely visual)."))
-	float spinSpeed = 22;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability|Aesthetic", meta = (Delta = 1, ToolTip = "The speed the propellers rotate (purely visual)."))
+	unsigned int spinSpeed = 22;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (ToolTip = "How much the mass of the core affects the force of the propeller (higher number = higher force)."))
-	float massScale = 1000;
+	UPROPERTY(EditDefaultsOnly, Category = "Ability|Forces", meta = (ToolTip = "How much the mass of the core affects the force of the propeller (higher number = higher force)."))
+	unsigned int massScale = 1000;
+
 	
+protected:
+	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = true))
+	TArray<UPrimitiveComponent*> pushedObjs;
 };

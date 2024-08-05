@@ -1,4 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/**************************************************************************************************************
+* Player - Code
+* 
+* The code file for the player. Supplies player controls.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "PlayerCharacter.h"

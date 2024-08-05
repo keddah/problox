@@ -26,6 +26,7 @@
 #define PrintVector(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Red, "X: " + FString::SanitizeFloat(x.X, 4) + ", " + "Y: " + FString::SanitizeFloat(x.Y, 4) + ", " + "Z: " + FString::SanitizeFloat(x.Z, 4)); }
 #define PrintRotator(x, duration) { GEngine->AddOnScreenDebugMessage(-1, duration, FColor::Red, "X: " + FString::SanitizeFloat(x.Roll, 4) + ", " + "Y: " + FString::SanitizeFloat(x.Pitch, 4) + ", " + "Z: " + FString::SanitizeFloat(x.Yaw, 4)); }
 
+
 class ACubeCore;
 UENUM(BlueprintType)
 enum class EAttachmentIcon : uint8
@@ -168,9 +169,7 @@ protected:
 	static FRotator RoundRotation(const FRotator& rotation, const bool negate = true);
 	static FRotator RoundRotation(const FRotator& rotation, const float rounder);
 	static FRotator RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder = -90);
-
-	static FRotator DiagRoundRot(const FRotator& rotation, const FRotator& referencedRot, const bool isDiag);
-
+	
 	// Ensures that the mesh is pointing in the right direction when attached
 	virtual void AlignSocketRot(bool useDirection = true);
 
@@ -297,7 +296,7 @@ public:
 	{
 		if(!outlineMat || !outlineMesh) return;
 
-		for(int i = 0; i < outlineMesh->GetNumMaterials(); i++)	outlineMesh->SetMaterial(i, outlineMat);
+		for(unsigned short i = 0; i < outlineMesh->GetNumMaterials(); i++)	outlineMesh->SetMaterial(i, outlineMat);
 		outlineMesh->SetHiddenInGame(hide);
 	}
 	

@@ -41,7 +41,7 @@ void APropeller::Ability(const float deltaTime)
 	if(IsValid(soundPlayer)) soundPlayer->SetFloatParam("roll", mesh->GetRelativeRotation().Yaw);
 	if(!active) return;
 
-	mesh->AddLocalRotation({0, spinSpeed, 0});
+	mesh->AddLocalRotation({0, (float)spinSpeed, 0});
 	
 	if(!IsValid(parentCore)) return;
 
