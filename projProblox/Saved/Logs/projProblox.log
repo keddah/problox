@@ -3463,3 +3463,99 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.08.05-12.35.08:843][859]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
 [2024.08.05-12.35.08:876][860]LogPlayLevel: Display: Destroying online subsystem :Context_9
 [2024.08.05-12.35.08:894][860]LogUObjectHash: Compacting FUObjectHashTables data took   2.19ms
+[2024.08.05-12.35.58:047][133]LogAudioMixer: Warning: FMixerPlatformXAudio2: Changing default audio render device to new device: Role=Console, DeviceName=27G1G4 (NVIDIA High Definition Audio), InstanceID=1
+[2024.08.05-12.35.58:064][133]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=3668
+[2024.08.05-12.35.58:398][134]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{89922955-2c81-4238-abfc-7ece2ba60134}, Name=27G1G4 (NVIDIA High Definition Audio)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=27.14
+[2024.08.05-12.35.58:399][134]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2024.08.05-12.35.58:401][134]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2024.08.05-12.50.41:538][784]LogAudioMixer: Warning: FMixerPlatformXAudio2: Changing default audio render device to new device: Role=Console, DeviceName=Headphones (Xbox Controller), InstanceID=1
+[2024.08.05-12.50.41:782][784]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=3668
+[2024.08.05-12.50.42:116][785]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{faf7ad4a-dd14-47eb-8981-099c4245abc8}, Name=Headphones (Xbox Controller)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=16.86
+[2024.08.05-12.50.42:116][785]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2024.08.05-12.50.42:118][785]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2024.08.05-12.51.33:203][830]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/VFX/FX_Grapple.FX_Grapple
+[2024.08.05-12.51.33:405][830]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.33:405][830]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.33:540][830]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.33:540][830]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.33:688][830]LogViewport: Scene viewport resized to 378x419, mode Windowed.
+[2024.08.05-12.51.33:859][836]169252_FX_Grapple_MessageLog: System successfully compiled.
+[2024.08.05-12.51.37:175][136]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2024.08.05-12.51.37:818][136]LogSlate: Window 'Delete Assets' being destroyed
+[2024.08.05-12.51.37:882][136]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2024.08.05-12.51.37:883][136]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.08.05-12.51.37:890][136]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.08.05-12.51.37:890][136]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.08.05-12.51.37:930][136]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/VFX/FX_Grapple.FX_Grapple
+	Asset Type: NiagaraSystem
+[2024.08.05-12.51.38:407][136]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2024.08.05-12.51.38:422][136]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.08.05-12.51.38:433][136]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2024.08.05-12.51.39:008][136]SourceControl: Error: Updated 0 paths from the index
+[2024.08.05-12.51.39:127][136]SourceControl: rm 'projProblox/Content/VFX/FX_Grapple.uasset'
+[2024.08.05-12.51.39:147][136]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.08.05-12.51.42:081][425]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/VFX/FX_Treads.FX_Treads
+[2024.08.05-12.51.42:219][425]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.42:219][425]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.42:322][425]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.42:323][425]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.42:442][425]LogViewport: Scene viewport resized to 378x419, mode Windowed.
+[2024.08.05-12.51.42:667][431]169254_FX_Treads_MessageLog: System successfully compiled.
+[2024.08.05-12.51.45:817][718]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/VFX/FX_TankTreads.FX_TankTreads
+[2024.08.05-12.51.45:920][718]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.45:920][718]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.45:995][718]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.45:995][718]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.46:105][718]LogViewport: Scene viewport resized to 378x419, mode Windowed.
+[2024.08.05-12.51.46:392][724]78244_FX_TankTreads_MessageLog: System successfully compiled.
+[2024.08.05-12.51.50:662][113]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2024.08.05-12.51.51:773][113]LogSlate: Window 'Delete Assets' being destroyed
+[2024.08.05-12.51.51:830][113]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2024.08.05-12.51.51:831][113]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.08.05-12.51.51:837][113]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2024.08.05-12.51.51:837][113]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.08.05-12.51.51:877][113]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/VFX/FX_Treads.FX_Treads
+	Asset Type: NiagaraSystem
+[2024.08.05-12.51.52:351][113]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.08.05-12.51.52:366][113]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2024.08.05-12.51.52:379][113]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.08.05-12.51.52:897][113]SourceControl: Error: Updated 0 paths from the index
+[2024.08.05-12.51.53:006][113]SourceControl: rm 'projProblox/Content/VFX/FX_Treads.uasset'
+[2024.08.05-12.51.53:025][113]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2024.08.05-12.51.54:879][278]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/VFX/FX_Magnet.FX_Magnet
+[2024.08.05-12.51.54:922][278]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.54:922][278]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.54:985][278]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.51.54:985][278]LogChaos: FPhysicsSolverBase::AsyncDt:0.033333
+[2024.08.05-12.51.55:078][278]LogViewport: Scene viewport resized to 378x419, mode Windowed.
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: ================================================
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: Total job queries 27, among them cache hits 0 (0.00%)
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: Tracking 27 distinct input hashes that result in 22 distinct outputs (81.48%)
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: RAM used: 660.64 KiB of 1.60 GiB budget. Usage: 0.04%
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.08.05-12.51.55:171][279]LogShaderCompilers: Display: ================================================
+[2024.08.05-12.51.55:320][284]177740_FX_Magnet_MessageLog: System successfully compiled.
+[2024.08.05-12.59.37:563][850]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.37:569][850]LogActor: Warning: BP_Treads_C /Engine/Transient.World_15:PersistentLevel.BP_Treads_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.37:617][851]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.37:623][851]LogActor: Warning: BP_Rocket_C /Engine/Transient.World_16:PersistentLevel.BP_Rocket_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.37:646][852]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.37:652][852]LogActor: Warning: BP_PropellerFan_C /Engine/Transient.World_17:PersistentLevel.BP_PropellerFan_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.37:673][853]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.37:714][853]LogActor: Warning: BP_Magnet_C /Engine/Transient.World_18:PersistentLevel.BP_Magnet_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.37:778][854]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.37:791][854]LogActor: Warning: BP_Hoverer_C /Engine/Transient.World_19:PersistentLevel.BP_Hoverer_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.37:854][855]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.37:890][855]LogActor: Warning: BP_Glider_C /Engine/Transient.World_20:PersistentLevel.BP_Glider_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.37:956][856]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.38:007][856]LogActor: Warning: BP_CubeCore_C /Engine/Transient.World_21:PersistentLevel.BP_CubeCore_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.38:081][857]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.38:097][857]LogActor: Warning: BP_BounceSpring_C /Engine/Transient.World_22:PersistentLevel.BP_BounceSpring_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2024.08.05-12.59.38:165][858]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.08.05-12.59.38:230][858]LogActor: Warning: BP_Balloon_C /Engine/Transient.World_23:PersistentLevel.BP_Balloon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
