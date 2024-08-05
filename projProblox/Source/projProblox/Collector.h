@@ -37,6 +37,7 @@ protected:
 
 	
 	/////////////// Cells ///////////////
+	// Tried to make these unsigned but ue didnt like it...
 	UPROPERTY(BlueprintReadWrite)
 	int cellsInLevel;
 
