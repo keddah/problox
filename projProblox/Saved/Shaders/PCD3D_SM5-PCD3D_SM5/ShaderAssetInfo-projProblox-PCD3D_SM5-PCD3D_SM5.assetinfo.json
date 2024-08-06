@@ -896,6 +896,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "B231F77C765BFAF61031556242AF593AB9BC345E",
+			"Assets": [
+				"/Game/Materials/Pickupables/M_Ghost"
+			]
+		},
+		{
 			"ShaderMapHash": "97B3867D9A653255686C8252ADB2590F0A512071",
 			"Assets": [
 				"/Engine/EngineDebugMaterials/BoneWeightMaterial"
@@ -1855,12 +1861,6 @@
 			"ShaderMapHash": "65FBD0DFF73E7C54B12EC2C970C53BC45367E55A",
 			"Assets": [
 				"/Game/StarterContent/Particles/Materials/M_Burst"
-			]
-		},
-		{
-			"ShaderMapHash": "ADC535E11C3834862D281DED8020D714FC6A518C",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Ghost"
 			]
 		},
 		{

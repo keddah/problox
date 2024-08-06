@@ -40,7 +40,13 @@ void EmptyLinkFunctionForGeneratedCodeCubeCore() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Called whenever the player presses the play button or the spacebar when in actual levels (when the turn starts)...\n" },
+#endif
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Called whenever the player presses the play button or the spacebar when in actual levels (when the turn starts)..." },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnTurnStarted__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature_Statics::Function_MetaDataParams) };
@@ -66,7 +72,13 @@ void FOnTurnStarted_DelegateWrapper(const FMulticastScriptDelegate& OnTurnStarte
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_projProblox_OnBadCamera__DelegateSignature_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Called the core cam is facing upwards (to avoid looking at the underneath of the level)\n" },
+#endif
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Called the core cam is facing upwards (to avoid looking at the underneath of the level)" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_projProblox_OnBadCamera__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_projProblox, nullptr, "OnBadCamera__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_projProblox_OnBadCamera__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_projProblox_OnBadCamera__DelegateSignature_Statics::Function_MetaDataParams) };
@@ -1036,11 +1048,11 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_detachForce_MetaData[];
 #endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_detachForce;
+		static const UECodeGen_Private::FUInt32PropertyParams NewProp_detachForce;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_detachAngularForce_MetaData[];
 #endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_detachAngularForce;
+		static const UECodeGen_Private::FUInt32PropertyParams NewProp_detachAngularForce;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_defaultAngularDrag_MetaData[];
 #endif
@@ -1230,7 +1242,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce = { "detachForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, detachForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce_MetaData) };
+	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce = { "detachForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, detachForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_detachForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData[] = {
 		{ "Category", "Forces|Detachment" },
@@ -1240,7 +1252,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce = { "detachAngularForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, detachAngularForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData) };
+	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce = { "detachAngularForce", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, detachAngularForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_detachAngularForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_defaultAngularDrag_MetaData[] = {
 		{ "Category", "Forces|Drag" },
@@ -1279,7 +1291,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #endif
 	};
 #endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted = { "onTurnStarted", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onTurnStarted), Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted_MetaData) }; // 141716612
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted = { "onTurnStarted", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onTurnStarted), Z_Construct_UDelegateFunction_projProblox_OnTurnStarted__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onTurnStarted_MetaData) }; // 3818188814
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onReset_MetaData[] = {
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
@@ -1297,7 +1309,7 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 #endif
 	};
 #endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onBadCamera = { "onBadCamera", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onBadCamera), Z_Construct_UDelegateFunction_projProblox_OnBadCamera__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onBadCamera_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onBadCamera_MetaData) }; // 922720821
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACubeCore_Statics::NewProp_onBadCamera = { "onBadCamera", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACubeCore, onBadCamera), Z_Construct_UDelegateFunction_projProblox_OnBadCamera__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACubeCore_Statics::NewProp_onBadCamera_MetaData), Z_Construct_UClass_ACubeCore_Statics::NewProp_onBadCamera_MetaData) }; // 3188104443
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACubeCore_Statics::NewProp_onCellsSpawned_MetaData[] = {
 		{ "ModuleRelativePath", "Pickupables/Cores/CubeCore.h" },
@@ -1368,9 +1380,9 @@ void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate& OnAddedCell, A
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 672503848U) },
+		{ Z_Construct_UClass_ACubeCore, ACubeCore::StaticClass, TEXT("ACubeCore"), &Z_Registration_Info_UClass_ACubeCore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACubeCore), 3142236494U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_3508608701(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_601583849(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Cores_CubeCore_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

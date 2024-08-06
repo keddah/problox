@@ -962,6 +962,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "DACC3D7E1570B5D0DF336029A21C20C7A5158C6E",
+			"Assets": [
+				"/Game/Materials/Pickupables/M_Ghost"
+			]
+		},
+		{
 			"ShaderMapHash": "7D64537EA4F112C29B293AD014BF6AE2FD44C016",
 			"Assets": [
 				"/Game/Materials/RandomMaterials/M_Gray"
@@ -1771,12 +1777,6 @@
 			"ShaderMapHash": "2B75CEDB9CAD5DE7EE655E6C45B8F8D8B1389B0B",
 			"Assets": [
 				"/Game/Materials/RandomMaterials/M_Glass"
-			]
-		},
-		{
-			"ShaderMapHash": "5C6E4FDC632FFB6D908826EA6C860A3996B07607",
-			"Assets": [
-				"/Game/Materials/Pickupables/M_Ghost"
 			]
 		},
 		{
