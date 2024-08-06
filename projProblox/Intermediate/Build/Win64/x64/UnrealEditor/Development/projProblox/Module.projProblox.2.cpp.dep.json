@@ -9,7 +9,8 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\levelobjective.gen.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\levelobjective.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\levelobjective.generated.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\magnet.gen.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\magpole.gen.cpp",
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet\\magpole.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet\\magnet.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\spawnpoint.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\arrowcomponent.h",
@@ -38,8 +39,6 @@
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\audiomanager.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\pickupablemaster.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\magnet.generated.h",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\magpole.gen.cpp",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\magnet\\magpole.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\magpole.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\modes.gen.cpp",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\modes.h",
@@ -189,8 +188,7 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\physicsconstraintcomponent.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\intermediate\\build\\win64\\unrealeditor\\inc\\projproblox\\uht\\balloon.generated.h",
             "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\buyableattachment.cpp",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\cubecore.cpp",
-            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\cubesocketinfo.cpp"
+            "c:\\users\\deany\\documents\\github\\problox\\projproblox\\source\\projproblox\\pickupables\\cores\\cubecore.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

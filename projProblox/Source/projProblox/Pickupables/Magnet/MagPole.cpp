@@ -30,7 +30,8 @@ void AMagPole::UpdateMagnets()
 {
 	UWorld* wrld = GetWorld();
 	if(!wrld) return;
-	
+
+	// Needs to be ran after a delay since this function is called after entering new levels but the magnets reset their array when loading new levels.
 	FTimerHandle delay;
 	wrld->GetTimerManager().SetTimer(delay, [this]
 	{

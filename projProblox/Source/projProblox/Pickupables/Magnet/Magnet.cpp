@@ -41,6 +41,7 @@ void AMagnet::BeginPlay()
 		return;
 	}
 
+	// Not resetting the poles array when entering new levels, the core gets destroyed???????  
 	manager->onLevelChanged.AddDynamic(this, &AMagnet::ResetPoles);
 }
 
@@ -55,7 +56,6 @@ void AMagnet::Ability(const float deltaTime)
 
  	if(!active) return;
 
-	PrintInt(poles.Num(), .4)
 	const FVector thisPos = GetActorLocation();
 
 	if(!poles.IsEmpty())
