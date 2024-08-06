@@ -77,14 +77,14 @@ void ABounceSpring::Ability(float deltaTime)
 	}
 	springLength = FVector::Distance(springHit.Location, start->GetComponentLocation()) + 10;
 	end->SetWorldLocation(springHit.Location);
-	
-	const FVector velocity = (GetActorLocation() - GetVelocity()) / deltaTime;
 
+	const float speed = GetVelocity().Length();
+	
 	// Lower the spring energy when the core is in the adjust phase.
-	const float springEnergy = GetSpringEnergy(startPos, springHit.Location, velocity) * GetMass();
+	const float springEnergy = GetSpringEnergy(startPos, springHit.Location, speed * deltaTime) * GetMass();
 	if(mesh->IsSimulatingPhysics()) mesh->AddForceAtLocation(springHit.ImpactNormal * (parentCore->InAdjustPhase()? springEnergy * .04f : springEnergy), springHit.Location);
 
-	if(GetVelocity().Length() < 20) return;
+	if(speed < 20) return;
 	if(!soundPlayer->IsPlaying()) soundPlayer->PlayAbility();
 }
 
@@ -113,12 +113,12 @@ void ABounceSpring::SetShowMesh(const bool enable) const
 }
 
 // Supposed to replicate the actual spring energy formula
-float ABounceSpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const
+float ABounceSpring::GetSpringEnergy(const FVector& startPos, const FVector& endPos, const float speed) const
 {
 	const float change = (endPos - startPos).Length();
 
 	// Damping is proportional to velocity
-	const float dampingForce = damping * velocity.Length();
+	const float dampingForce = damping * speed;
 
 	// Spring energy with damping
 	const float springEnergy = 0.5f * springConstant * change * change;

@@ -23,8 +23,6 @@ ATreads::ATreads()
 	
 	rotOffset = {90,0,0};
 	soundPlayer->AddAbilitySFX(TEXT("/Script/MetasoundEngine.MetaSoundSource'/Game/Audio/MetaSounds/MS_treads.MS_treads'"));
-
-	soundPlayer->SetAbilityLooping(true);
 }
 
 void ATreads::Ability(const float deltaTime)
