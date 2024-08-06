@@ -23,9 +23,6 @@ void AMagnet::BeginPlay()
 	magActors.Empty();
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagPole::StaticClass(), magActors);
 
-	// Since begin play is ran everytime levels are changed
-	poles.Empty();
-	
 	for (const auto& magActor : magActors) poles.Add(Cast<AMagPole>(magActor));
 
 	if(!wrld)
