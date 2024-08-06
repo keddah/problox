@@ -51,7 +51,7 @@ class PROJPROBLOX_API ABounceSpring : public APickupableMaster
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = .01f))
 	float damping = .01f;
 
-	float GetSpringEnergy(const FVector& startPos, const FVector& endPos, const FVector& velocity) const;
+	float GetSpringEnergy(const FVector& startPos, const FVector& endPos, float speed) const;
 
 protected:
 	UPROPERTY(BlueprintReadOnly)

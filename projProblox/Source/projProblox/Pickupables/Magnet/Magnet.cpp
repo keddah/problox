@@ -11,27 +11,37 @@
 
 #include "MagPole.h"
 #include "Kismet/GameplayStatics.h"
+#include "projProblox/LevelManager.h"
+#include "projProblox/Pickupables/Cores/CubeCore.h"
 
 void AMagnet::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// Getting the other magnets
-	TArray<AActor*> magActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), StaticClass(), magActors);
-	for (const auto& magActor : magActors) otherMagnets.Add(Cast<AMagnet>(magActor));
-
-	// Ignore self...
-	otherMagnets.Remove(this);
-
+	
 	// Getting the Magpoles
+	TArray<AActor*> magActors;
 	magActors.Empty();
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagPole::StaticClass(), magActors);
+
+	// Since begin play is ran everytime levels are changed
+	poles.Empty();
+	
 	for (const auto& magActor : magActors) poles.Add(Cast<AMagPole>(magActor));
 
+	if(!wrld)
+	{
+		Print("no world... ~ magnet", 4)
+		return;
+	}
 
-	// Telling the other magnets in the level that this one was made...
-	for (const auto& mag : otherMagnets) mag->AddMagnet(this);
+	ALevelManager* manager = Cast<ALevelManager>(UGameplayStatics::GetActorOfClass(wrld, ALevelManager::StaticClass()));
+	if(!manager)
+	{
+		Print("no manager found... ~ magnet", 4)
+		return;
+	}
+
+	manager->onLevelChanged.AddDynamic(this, &AMagnet::ResetPoles);
 }
 
 void AMagnet::Ability(const float deltaTime)
@@ -41,9 +51,11 @@ void AMagnet::Ability(const float deltaTime)
 		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
 		return;
 	}
+	if(!IsValid(parentCore)) return;
 
-	if(!active) return;
+ 	if(!active) return;
 
+	PrintInt(poles.Num(), .4)
 	const FVector thisPos = GetActorLocation();
 
 	if(!poles.IsEmpty())
@@ -66,26 +78,5 @@ void AMagnet::Ability(const float deltaTime)
 			// Scale the force by the distance of the involved blocks
 			mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 		}
-	}
-
-	if(otherMagnets.IsEmpty()) return;
-	for (const auto& mag : otherMagnets)
-	{
-		if(!IsValid(mag)) continue;
-		if(mag->GetCore() == parentCore) continue;		
-
-		const FVector otherPos = mag->GetActorLocation();
-
-		// Go to the next iteration if it's out of range
-		if(FVector::Distance(otherPos, thisPos) > fieldRange) continue;
-		
-		const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
-		const FVector direction = otherPos - thisPos;
-		
-		// If the charges aren't matching
-		const bool attract = mag->positive != positive;
-		
-		// Scale the force by the distance of the involved blocks 
-		mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 	}
 }

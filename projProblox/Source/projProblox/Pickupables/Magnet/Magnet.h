@@ -12,6 +12,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "projProblox/SpawnPoint.h"
 #include "./projProblox/Pickupables/PickupableMaster.h"
 #include "Magnet.generated.h"
 
@@ -38,15 +39,14 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	unsigned int attractionForce = 15;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 10))
-	unsigned int fieldRange = 1500000;
+	unsigned int fieldRange = 55000;
 
 	bool magAttached;
 
-	TArray<AMagnet*> otherMagnets;
 	TArray<AMagPole*> poles;
 
-	// Needs to be add unique since this would be done at begin play for all the magnets
-	void AddMagnet(AMagnet* mag) { otherMagnets.AddUnique(mag); }
+	UFUNCTION()
+	void ResetPoles(int lvl, ELevel eLvl) { poles.Empty(); }
 	
 public:
 	float GetAttraction() const { return attractionForce; }

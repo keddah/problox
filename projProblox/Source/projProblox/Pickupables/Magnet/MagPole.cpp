@@ -28,7 +28,14 @@ AMagPole::AMagPole()
 
 void AMagPole::UpdateMagnets()
 {
-	TArray<AActor*> magActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagnet::StaticClass(), magActors);
-	for (const auto& magActor : magActors) Cast<AMagnet>(magActor)->AddMagPole(this);
+	UWorld* wrld = GetWorld();
+	if(!wrld) return;
+	
+	FTimerHandle delay;
+	wrld->GetTimerManager().SetTimer(delay, [this]
+	{
+		TArray<AActor*> magActors;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagnet::StaticClass(), magActors);
+		for (const auto& magActor : magActors) Cast<AMagnet>(magActor)->AddMagPole(this);
+	}, .8, false);
 }

@@ -21,7 +21,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 	GENERATED_BODY()
 
 	ATreads();
-	
+	virtual void BeginPlay() override { soundPlayer->SetAbilityLooping(true); Super::BeginPlay(); }
 	virtual void Ability(float deltaTime) override;
 	virtual void SetAbilityActive(const bool value) override;
 
