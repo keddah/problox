@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Buyable Attachment - Header
+* 
+* The header file for the buyable attachment class. Creates delegates for when the attachment is hovered over, unhovered and clicked on.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -33,9 +40,6 @@ class PROJPROBLOX_API ABuyableAttachment : public AActor
 	UPROPERTY(EditDefaultsOnly)
 	UBoxComponent* mouseDetector;
 	
-	// UPROPERTY(EditDefaultsOnly)
-	// UMaterial* lockedMaterial;
-
 	UPROPERTY(EditAnywhere)
 	UBuyableInfo* info;
 	
@@ -56,8 +60,6 @@ protected:
 public:
 	void SetSelected(const bool value);
 	
-	// void UnlockAttachment();
-
 	UPROPERTY(BlueprintAssignable)
 	FOnShowDisplay onShow;
 	UPROPERTY(BlueprintAssignable)
@@ -76,7 +78,4 @@ public:
 
 	void ShowDescription() const { if(!selected) onShow.Broadcast(this); }
 	void HideDescription() const { onHide.Broadcast(this); }
-
-	// UFUNCTION(BlueprintCallable)
-	// bool IsUnlocked() const { return unlocked; }
 };

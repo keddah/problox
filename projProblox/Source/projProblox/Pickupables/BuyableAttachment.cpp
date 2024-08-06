@@ -1,4 +1,10 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Buyable Attachment - Code
+* 
+* The code file for the buyable attachment class. Creates its components and configures the mesh component using the static mesh from the buyable info data asset. 
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "BuyableAttachment.h"

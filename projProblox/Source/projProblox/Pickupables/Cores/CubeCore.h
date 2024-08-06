@@ -5,18 +5,16 @@
 * Also declares delegates that need to be broadcast to essential parts of levels (like the player, collector and cells). 
 *
 * OVERRIDES:
-*	SetCanPickup
 *	Attach
 *	Placement
 *	ResetRotation
-*	SetAttachedSocket
 *	RemoveVelocity
-*	ToggleGravity
 *	PickupCell
+*	ToggleGravity
 *	GetMass
 *	AddAttachment
-*	Detach
 *	RemoveAttachment
+*	Detach
 *	SetAbilityActive
 *
 * Created by Dean Atkinson-Walker 2024
@@ -118,7 +116,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Collection")
 	ACollector* collector;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The time that has to elapse in order for the game to end once the minimum amount of cells has been collected"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (ToolTip = "The force to be applied to the cells that are in the attraction trigger (in the direction of this core)."))
 	float cellAttraction = 4200000;
 
 	

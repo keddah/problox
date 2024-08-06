@@ -1,4 +1,13 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Mag Pole - Code
+* 
+* The code file for the stationary magnet class. Allows all the pickupable magnets to be configured (by giving all the magnets a reference to this).
+*
+* PROBLEMS:
+*	Should probably inherit from the AMagnet class...
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
 
 
 #include "MagPole.h"

@@ -1,7 +1,7 @@
 /**************************************************************************************************************
 * Level Manager - Code
 * 
-* The code file for the level manager. In charge of keeping track of all the player and cells spawns as well as allowing/managing the process of loading and
+* The code file for the level manager. In charge of keeping track of the player and all the cell spawns as well as allowing/managing the process of loading and
 * unloading levels. The game can be made expandable using this system. The persistent level is essentially a "house" and all the streamed levels are "rooms".
 * Placing a level manager in each "house" would allow you to switch between "rooms". Other UI could be used to select other "houses" by selecting persistent levels.
 *

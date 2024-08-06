@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Mag Pole - Header
+* 
+* The header file for the stationary magnet class. These magnets will be placed in levels so that the pickupable magnets can be attracted to them.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
@@ -6,6 +13,7 @@
 #include "Magnet.h"
 #include "GameFramework/Actor.h"
 #include "MagPole.generated.h"
+
 
 UCLASS()
 class PROJPROBLOX_API AMagPole : public AActor

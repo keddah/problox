@@ -1,4 +1,11 @@
-// Created by Dean Atkinson-Walker 2024
+/**************************************************************************************************************
+* Buyable's Information - Header
+* 
+* The header file for the buyable info struct and data asset. In engine, create a data asset of this then assign its values. the values are to be accessed through the struct.
+*
+* Created by Dean Atkinson-Walker 2024
+***************************************************************************************************************/
+
 
 #pragma once
 
