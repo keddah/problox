@@ -956,6 +956,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "B4AC337D70D308FD6B964F1884435428CBCB8B73",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_Glass"
+			]
+		},
+		{
 			"ShaderMapHash": "33A4777DC285D6D5150904AB343F24367AC0DC05",
 			"Assets": [
 				"/Game/Materials/RandomMaterials/M_Indicator"
@@ -1771,12 +1777,6 @@
 			"Assets": [
 				"/Engine/EngineMaterials/Widget3DPassThrough",
 				"/Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided"
-			]
-		},
-		{
-			"ShaderMapHash": "2B75CEDB9CAD5DE7EE655E6C45B8F8D8B1389B0B",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_Glass"
 			]
 		},
 		{
