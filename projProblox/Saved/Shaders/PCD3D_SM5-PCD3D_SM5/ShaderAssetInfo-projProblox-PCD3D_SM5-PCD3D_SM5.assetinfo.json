@@ -1900,12 +1900,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "824E64E6C338696C46C4B5857244C28B47CC6C55",
-			"Assets": [
-				"/Game/Materials/RandomMaterials/M_Glass"
-			]
-		},
-		{
 			"ShaderMapHash": "19E5DEE6A5ADB2B76B58659DA56FA0871F912988",
 			"Assets": [
 				"/Game/Materials/Pickupables/Thrusters/M_ThrusterThins"
@@ -1941,6 +1935,12 @@
 			"Assets": [
 				"/Game/MSPresets/M_MS_ImperfectionDecal_Material/M_MS_ImperfectionDecal_Material",
 				"/Game/MSPresets/M_MS_ImperfectionDecal_Material_VT/M_MS_ImperfectionDecal_Material_VT"
+			]
+		},
+		{
+			"ShaderMapHash": "6A0EDFEB76E20DE2EA4D7FDA48CEEAFE0E248C49",
+			"Assets": [
+				"/Game/Materials/RandomMaterials/M_Glass"
 			]
 		},
 		{
