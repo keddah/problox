@@ -14,6 +14,16 @@
 #include "projProblox/LevelManager.h"
 #include "projProblox/Pickupables/Cores/CubeCore.h"
 
+
+void AMagnet::SetAbilityActive(const bool value)
+{
+	FScopeLock Lock(&criticalSection); // Lock critical section
+
+	Super::SetAbilityActive(value);
+	if(active) soundPlayer->PlayAbility();
+	else soundPlayer->StopAbility();
+}
+
 void AMagnet::BeginPlay()
 {
 	Super::BeginPlay();
@@ -23,18 +33,20 @@ void AMagnet::BeginPlay()
 	magActors.Empty();
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagPole::StaticClass(), magActors);
 
+	// Lock critical section
+	FScopeLock Lock(&criticalSection); 
 	for (const auto& magActor : magActors) poles.Add(Cast<AMagPole>(magActor));
 
 	if(!wrld)
 	{
-		Print("no world... ~ magnet", 4)
+		Print("no world... ~ magnet", 4);
 		return;
 	}
 
 	ALevelManager* manager = Cast<ALevelManager>(UGameplayStatics::GetActorOfClass(wrld, ALevelManager::StaticClass()));
 	if(!manager)
 	{
-		Print("no manager found... ~ magnet", 4)
+		Print("no manager found... ~ magnet", 4);
 		return;
 	}
 
@@ -44,14 +56,16 @@ void AMagnet::BeginPlay()
 
 void AMagnet::Ability(const float deltaTime)
 {
+	FScopeLock Lock(&criticalSection); // Lock critical section
+
 	if(!IsValid(mesh))
 	{
-		Print("mesh was invalid......?: " + GetName().ToUpper(), 4)
+		Print("mesh was invalid......?: " + GetName().ToUpper(), 4);
 		return;
 	}
 	if(!IsValid(parentCore)) return;
 
- 	if(!active) return;
+	if(!active) return;
 
 	const FVector thisPos = GetActorLocation();
 
@@ -68,12 +82,13 @@ void AMagnet::Ability(const float deltaTime)
 			const FVector direction = otherPos - thisPos;
 			
 			const float distanceSquared = FVector::DistSquared(otherPos, thisPos);
+			if(distanceSquared < KINDA_SMALL_NUMBER) continue; // (to not divide by 0)
 			
 			// If the charges aren't matching
 			const bool attract = mag->GetPositiveCharge() != positive;
 			
 			// Scale the force by the distance of the involved blocks
-			mesh->AddForce((attract? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
+			if(IsValid(mesh)) mesh->AddForce((attract ? direction : -direction) * ((attractionForce + mag->GetAttraction() * 1000) / distanceSquared));
 		}
 	}
 }

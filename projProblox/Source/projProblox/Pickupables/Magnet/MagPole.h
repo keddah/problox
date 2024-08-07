@@ -31,22 +31,16 @@ class PROJPROBLOX_API AMagPole : public AActor
 
 	void UpdateMagnets();
 	
+	// Critical section for synchronization
+	mutable FCriticalSection criticalSection;
+
 public:	
 	// Sets default values for this actor's properties
 	AMagPole();
 
-	// true = positive
-	bool GetPositiveCharge() const { return positive; }
-	float GetAttraction() const { return attractionForce * 1000; } 
-	FVector GetMagPosition(const AMagnet* mag) const
-	{
-		if(!IsValid(mag)) return {};
-		if(!IsValid(mesh)) return {};
-		
-		FVector out;
-		mesh->GetClosestPointOnCollision(mag->GetActorLocation(), out);
-		return out;
-	}
+	bool GetPositiveCharge() const;
+	float GetAttraction() const;
+	FVector GetMagPosition(const AMagnet* mag) const;
 
 protected:
 	// Called when the game starts or when spawned

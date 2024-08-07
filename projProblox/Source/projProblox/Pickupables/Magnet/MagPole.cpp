@@ -35,8 +35,45 @@ void AMagPole::UpdateMagnets()
 	FTimerHandle delay;
 	wrld->GetTimerManager().SetTimer(delay, [this]
 	{
+		FScopeLock Lock(&criticalSection); // Lock critical section
+
 		TArray<AActor*> magActors;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagnet::StaticClass(), magActors);
-		for (const auto& magActor : magActors) Cast<AMagnet>(magActor)->AddMagPole(this);
+		for (const auto& magActor : magActors)
+		{
+			AMagnet* mag = Cast<AMagnet>(magActor);
+			if(mag)
+			{
+				mag->AddMagPole(this);
+			}
+		}
 	}, .8, false);
+}
+
+bool AMagPole::GetPositiveCharge() const
+{
+	FScopeLock Lock(&criticalSection); // Lock critical section
+	return positive;
+}
+
+float AMagPole::GetAttraction() const
+{
+	FScopeLock Lock(&criticalSection); // Lock critical section
+	return attractionForce * 1000.0f;
+}
+
+FVector AMagPole::GetMagPosition(const AMagnet* mag) const
+{
+	FScopeLock Lock(&criticalSection); // Lock critical section
+
+	if(!IsValid(mag)) return FVector::ZeroVector;
+	if(!IsValid(mesh)) return FVector::ZeroVector;
+
+	FVector out;
+	if (mesh->GetClosestPointOnCollision(mag->GetActorLocation(), out))
+	{
+		return out;
+	}
+
+	return FVector::ZeroVector;
 }

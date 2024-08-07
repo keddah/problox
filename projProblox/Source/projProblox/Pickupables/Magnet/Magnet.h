@@ -23,14 +23,13 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 {
 	GENERATED_BODY()
 
-	AMagnet() { favouredSlot = ECoreSockets::Up; soundPlayer->SetAbilityLooping(true); }
-	
-	virtual void SetAbilityActive(const bool value) override
+	AMagnet()
 	{
-		Super::SetAbilityActive(value);
-		if(active) soundPlayer->PlayAbility();
-		else soundPlayer->StopAbility();
+		favouredSlot = ECoreSockets::Up;
+		soundPlayer->SetAbilityLooping(true);
 	}
+
+	virtual void SetAbilityActive(const bool value) override;
 	
 	UPROPERTY(EditAnywhere, Category = "Ability")
 	bool positive;
@@ -45,15 +44,30 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 
 	TArray<AMagPole*> poles;
 
+	// Critical section for synchronization
+	mutable FCriticalSection criticalSection;
+
 	UFUNCTION()
-	void ResetPoles(int lvl, ELevel eLvl) { poles.Empty(); }
-	
+	void ResetPoles(int lvl, ELevel eLvl)
+	{
+		FScopeLock Lock(&criticalSection);
+		poles.Empty();
+	}
+
 public:
-	float GetAttraction() const { return attractionForce; }
+	float GetAttraction() const
+	{
+		FScopeLock Lock(&criticalSection);
+		return attractionForce;
+	}
 
 	// For when a new magpole is created in creative mode...
-	void AddMagPole(AMagPole* newPole) { poles.AddUnique(newPole); }
-	
+	void AddMagPole(AMagPole* newPole)
+	{
+		FScopeLock Lock(&criticalSection);
+		poles.AddUnique(newPole);
+	}
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void Ability(float deltaTime) override;
