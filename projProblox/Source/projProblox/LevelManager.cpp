@@ -183,7 +183,7 @@ void ALevelManager::FindSpawns()
 	{
 		// Get all the spawn points from the PERSISTENT level
 		TArray<AActor*> spawns;
-		UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
+		if(IsValid(wrld)) UGameplayStatics::GetAllActorsOfClass(wrld, ASpawnPoint::StaticClass(), spawns);
 		if(spawns.IsEmpty())
 		{
 			Print("Initial load failed...", 6)

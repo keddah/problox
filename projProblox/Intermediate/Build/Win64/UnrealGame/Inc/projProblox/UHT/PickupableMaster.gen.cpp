@@ -406,13 +406,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APickupableMaster_CollisionHitSFX_Statics::Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/////////////// Other ///////////////\n" },
-#endif
 		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Other" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupableMaster_CollisionHitSFX_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APickupableMaster, nullptr, "CollisionHitSFX", nullptr, nullptr, Z_Construct_UFunction_APickupableMaster_CollisionHitSFX_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_CollisionHitSFX_Statics::PropPointers), sizeof(Z_Construct_UFunction_APickupableMaster_CollisionHitSFX_Statics::PickupableMaster_eventCollisionHitSFX_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C80400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupableMaster_CollisionHitSFX_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupableMaster_CollisionHitSFX_Statics::Function_MetaDataParams) };
@@ -1182,7 +1176,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APickupableMaster_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APickupableMaster_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_APickupableMaster_Attach, "Attach" }, // 1667432005
-		{ &Z_Construct_UFunction_APickupableMaster_CollisionHitSFX, "CollisionHitSFX" }, // 2822049697
+		{ &Z_Construct_UFunction_APickupableMaster_CollisionHitSFX, "CollisionHitSFX" }, // 3552599220
 		{ &Z_Construct_UFunction_APickupableMaster_CollisionOverlapSFX, "CollisionOverlapSFX" }, // 2095882250
 		{ &Z_Construct_UFunction_APickupableMaster_GetMass, "GetMass" }, // 1738982093
 		{ &Z_Construct_UFunction_APickupableMaster_GetMesh, "GetMesh" }, // 627417709
@@ -1336,13 +1330,7 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupableMaster_Statics::NewProp_active_MetaData[] = {
 		{ "Category", "PickupableMaster" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/////////////// Abilities ///////////////\n" },
-#endif
 		{ "ModuleRelativePath", "Pickupables/PickupableMaster.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Abilities" },
-#endif
 	};
 #endif
 	void Z_Construct_UClass_APickupableMaster_Statics::NewProp_active_SetBit(void* Obj)
@@ -1426,9 +1414,9 @@ void EmptyLinkFunctionForGeneratedCodePickupableMaster() {}
 		{ ECoreSockets_StaticEnum, TEXT("ECoreSockets"), &Z_Registration_Info_UEnum_ECoreSockets, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1022227656U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 2385600439U) },
+		{ Z_Construct_UClass_APickupableMaster, APickupableMaster::StaticClass, TEXT("APickupableMaster"), &Z_Registration_Info_UClass_APickupableMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupableMaster), 1880365686U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_1025933869(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_4282421774(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_PickupableMaster_h_Statics::EnumInfo));

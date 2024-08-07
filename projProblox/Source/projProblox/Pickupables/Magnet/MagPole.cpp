@@ -38,7 +38,8 @@ void AMagPole::UpdateMagnets()
 		FScopeLock Lock(&criticalSection); // Lock critical section
 
 		TArray<AActor*> magActors;
-		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMagnet::StaticClass(), magActors);
+		UWorld* wrld = GetWorld();
+		if(IsValid(wrld))UGameplayStatics::GetAllActorsOfClass(wrld, AMagnet::StaticClass(), magActors);
 		for (const auto& magActor : magActors)
 		{
 			AMagnet* mag = Cast<AMagnet>(magActor);
