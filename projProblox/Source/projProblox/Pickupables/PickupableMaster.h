@@ -133,10 +133,10 @@ protected:
 
 	
 	/////////////// Abilities ///////////////
+	bool needsTimer = true;
+	
 	UPROPERTY(BlueprintReadOnly)
 	bool active;
-
-	bool needsTimer = true;
 
 	
 	/////////////// Other ///////////////
@@ -151,13 +151,9 @@ protected:
 
 ///////////////////////////// Functions /////////////////////////////
 	/////////////// Selection / Placement ///////////////
-	FName NearestSocket(const ACubeCore* core, const FVector& hitPos) const;
-	
 	// Shows a preview of what the placed object would look like.
 	virtual void GhostPlacement();
 	void HideGhost() const { silhouette->SetHiddenInGame(true); }
-
-	virtual void Ability(float deltaTime) { }
 
 	
 	/////////////// Attachments ///////////////
@@ -170,11 +166,10 @@ protected:
 	static FRotator RoundRotation(const FRotator& rotation, const float rounder);
 	static FRotator RoundRotation(const FRotator& rotation, const FRotator& referencedRot, const float rounder = -90);
 	
-	// Ensures that the mesh is pointing in the right direction when attached
-	virtual void AlignSocketRot(bool useDirection = true);
-
 	
 	/////////////// Other ///////////////
+	virtual void Ability(float deltaTime) { }
+
 	UFUNCTION()
 	virtual void CollisionHitSFX(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 	UFUNCTION()
@@ -198,8 +193,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement|Rotating", meta = (ToolTip = "Resets the relative rotation of the mesh and removes all velocity if set."))
 	virtual void ResetRotation(bool resetVelocity = false);
 
-	bool ShouldSnapRotation() const { return snapRot; }
-
 	
 	/////////////// Selection / Placement ///////////////
 	UFUNCTION(BlueprintCallable)
@@ -210,16 +203,9 @@ public:
 	virtual void Placement(ACubeCore* core, const FName& socket);
 	virtual void Detach(bool playSound, float detachForce, float detachAngularForce);
 
-	// Add the offset in the direction of the sockets forward vector. Call after the being attached to a core.
-	virtual void ApplyOffset(const ACubeCore* core) { if(core) SetActorRelativeLocation({attachOffset,0,0}); }
-
 	// Since this is used a lot...
 	virtual void UseSilhouetteTransform(const UStaticMeshComponent* ghost = nullptr);
 
-	
-	/////////////// Undo/Redo ///////////////
-	void Reattach(const FName& socket);
-	
 	
 	/////////////// Ability ///////////////
 	UFUNCTION(BlueprintCallable, Category = "Ability")
@@ -227,7 +213,6 @@ public:
 
 
 	/////////////// Attachments ///////////////
-	virtual void SetAttachedSocket(FName socket, const bool useDirection = true) { attachedSocket = socket; isAttached = true; }
 	virtual void RemoveAttachment(const FName& socket) { attachedSocket = "None"; }
 
 
@@ -236,11 +221,6 @@ public:
 	// Includes the attachments that are attached to connector cores.
 	static void GetDescendents(const AActor* parent, TArray<APickupableMaster*>& outArray);
 
-	// Returns all the things that are parents this. Includes the attachments that are attached to connector cores.
-	static void GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray);
-	
-	bool IsChildOf(const APickupableMaster* parent) const;
-
 	
 	/////////////// Getters ///////////////
 	ACubeCore* GetCore() const { return parentCore; }
@@ -248,8 +228,6 @@ public:
 	// Returns the APickupable at the top of this hierarchy
 	virtual APickupableMaster* GetParent();
 
-	virtual float GetAttachOffset(const APickupableMaster& attachee) { return attachOffset; }
-	const FName& GetAttachedSocket() const { return attachedSocket; }
 	virtual bool GetIsAttached() const { return isAttached; }
 	
 	UFUNCTION(BlueprintCallable, Category = "Getters")

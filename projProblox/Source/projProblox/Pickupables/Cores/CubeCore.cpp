@@ -292,7 +292,7 @@ void ACubeCore::CoreCamera(const float deltaTime)
 	}
 
 	// If the core is spinning too fast...
-	constexpr unsigned short maxSpin = 1000; 
+	constexpr unsigned short maxSpin = 1500; 
 	if(mesh->GetPhysicsAngularVelocityInDegrees().Length() > maxSpin)
 	{
 		onBadCamera.Broadcast();

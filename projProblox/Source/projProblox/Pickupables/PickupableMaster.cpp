@@ -326,57 +326,6 @@ void APickupableMaster::UseSilhouetteTransform(const UStaticMeshComponent* ghost
 	SetActorRotation(ghost->GetComponentRotation());
 }
 
-void APickupableMaster::Reattach(const FName& socket)
-{
-	if(!IsValid(parentCore))
-	{
-		Print("couldnt cast to core - Reattaching...", 5)
-		return;
-	}
-	if(socket == NAME_None)
-	{
-		Print("Given socket was bad... Can't reattach.", 5)
-		return;
-	}
-	attachedSocket = socket;
-	isAttached = true;
-
-	// Calling ghost placement whilst the core is valid and there's a valid attachSocket, the silhouette will attach to the attach socket 
-	GhostPlacement();
-
-	// Calling set selected with false attaches the actual mesh to the core and uses the transform of the silhouette (also hides the silhouette)
-	Attach();
-}
-
-
-void APickupableMaster::AlignSocketRot(const bool useDirection)
-{
-	if(!IsValid(parentCore)) return;
-	
-	const UStaticMeshComponent* coreMesh = parentCore->GetMesh();
-	if(!IsValid(coreMesh)) return;
-	
-	const FVector forwardVec = UKismetMathLibrary::GetForwardVector(coreMesh->GetSocketRotation(attachedSocket));
-
-	// Make a rotation depending on the place direction
-	FRotator rot;
-	if(placeDir.X != 0) rot = UKismetMathLibrary::MakeRotFromX(forwardVec);
-	else if(placeDir.Y != 0) rot = UKismetMathLibrary::MakeRotFromY(forwardVec);
-	else if(placeDir.Z != 0) rot = UKismetMathLibrary::MakeRotFromZ(forwardVec);
-
-	const FRotator savedRot = RoundRotation(GetActorRotation());
-	
-	// Rotate to match the socket rotation
-	SetActorRotation(rot);
-
-	if(!useDirection) return;
-	
-	// Do this but just around the forward axis of the socket...
-	if(placeDir.X != 0) AddActorWorldRotation(FRotator(0,0,savedRot.Roll));
-	else if(placeDir.Y != 0) AddActorWorldRotation(FRotator(savedRot.Pitch,0,0));
-	else if(placeDir.Z != 0) AddActorWorldRotation(FRotator(0, savedRot.Yaw, 0));
-}
-
 void APickupableMaster::ResetRotation(const bool resetVelocity)
 {
 	SetActorRotation(defaultRot);
@@ -390,33 +339,6 @@ void APickupableMaster::GhostSnapRotate(const FString& keypress)
 	
 	const int turn = keypress == "Q" ? -90 : 90;
 	if(silhouette) silhouette->AddRelativeRotation(FRotator(0,0,turn));
-}
-
-
-FName APickupableMaster::NearestSocket(const ACubeCore* core, const FVector& hitPos) const
-{
-	if(!IsValid(parentCore)) return NAME_None;
-	
-	float shortestDistance = 999;
-	FName closestSocket;
-	const UStaticMeshComponent* coreMesh = core->GetMesh();
-	if(!IsValid(coreMesh)) return NAME_None;
-	
-	for(const auto& socket: coreMesh->GetAllSocketNames())
-	{
-		// Don't incorporate sockets if there's already an object attached to it
-		if(IsValid(core)) if(core->ObjectInSocket(socket)) continue;
-		
-		const float distance = FVector::Distance(coreMesh->GetSocketLocation(socket), hitPos);
-
-		if(distance < shortestDistance)
-		{
-			shortestDistance = distance;
-			closestSocket = socket;
-		}
-	}
-
-	return closestSocket;
 }
 
 void APickupableMaster::RemoveVelocity() const
@@ -445,22 +367,6 @@ void APickupableMaster::GetDescendents(const AActor* parent, TArray<APickupableM
 	}
 }
 
-void APickupableMaster::GetAscendants(const AActor* child, TArray<APickupableMaster*>& outArray)
-{
-	if (!IsValid(child)) return;
-
-	if (AActor* parent = child->GetAttachParentActor())
-	{
-		if (APickupableMaster* objParent = Cast<APickupableMaster>(parent))
-		{
-			outArray.Add(objParent);
-			
-			// Recursively get ascendants of this parent actor
-			GetAscendants(parent, outArray);
-		}
-	}
-}
-
 APickupableMaster* APickupableMaster::GetParent()
 {
 	AActor* current = this;
@@ -471,20 +377,6 @@ APickupableMaster* APickupableMaster::GetParent()
 	Print("Didn't find a pickupable object at the top.", 5)
 	return 0;
 }
-
-bool APickupableMaster::IsChildOf(const APickupableMaster* parent) const
-{
-	const AActor* current = this;
-	while (const AActor* toCheck = current->GetAttachParentActor())
-	{
-		current = toCheck;
-		if(current == parent) return true;
-	}
-
-	return false;
-}
-
-
 
 FRotator APickupableMaster::RoundRotation(const FRotator& rotation, const bool negate)
 {

@@ -40,6 +40,7 @@ void ATreads::Ability(const float deltaTime)
 	
 	if(!(active && grounded)) return;
 	if(!IsValid(parentCore)) return;
+	if(!IsValid(mesh)) return;
 
 	mesh->AddForce(forward * moveSpeed * parentCore->GetMass());
 }

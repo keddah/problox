@@ -14,9 +14,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projProblox/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/SaveGames/MoneySave.sav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/SaveGames/SpawnSaves.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Cores/CubeCore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Cores/CubeCore.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/MagPole.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/Magnet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/Magnet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/Magnet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Magnet/Magnet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/PickupableMaster.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/PickupableMaster.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/PickupableMaster.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/PickupableMaster.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Propeller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Propeller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/projProblox/Pickupables/Treads.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/projProblox/Pickupables/Treads.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
