@@ -86,7 +86,7 @@ TArray<FName> UCubeSocketInfo::GetFreeSockets() const
 {
 	TArray<FName> free;
 
-	for(unsigned short i = 0; i < socketObjects.Num(); i++)
+	for(uint8 i = 0; i < socketObjects.Num(); i++)
 	{
 		if(IsValid(socketObjects[i])) continue;;
 
@@ -102,7 +102,7 @@ TArray<FName> UCubeSocketInfo::GetOccupiedSockets() const
 	if(socketObjects.IsEmpty()) return {};
 	
 	TArray<FName> output;
-	for (unsigned short i = 0; i < socketObjects.Num(); i++)
+	for (uint8 i = 0; i < socketObjects.Num(); i++)
 	{
 		if(!IsValid(socketObjects[i])) continue;
 

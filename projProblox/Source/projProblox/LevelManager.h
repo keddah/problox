@@ -98,7 +98,7 @@ protected:
 	
 	/////////////////////////// VARIABLES ///////////////////////////
 	// The index of the current level.
-	unsigned short currentLevel = 1;
+	uint8 currentLevel = 1;
 	ELevel levelEnum = ELevel::BuildArea;
 
 	UPROPERTY(BlueprintReadOnly)

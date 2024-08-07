@@ -10,7 +10,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "SaveFiles.h"
 #include "Engine/GameInstance.h"
 #include "CustomGameInstance.generated.h"
 
@@ -19,23 +18,9 @@ class PROJPROBLOX_API UCustomGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 	
-	unsigned short currentLevel;
-	
-	UMoneySave* moneySave;
-	unsigned int money;
-
-	UFUNCTION()
-	void LoadSave();
-	
-protected:
-	virtual void Init() override;
+	uint8 currentLevel;
 	
 public:
 	void SetCurrentLevel(const short index) { currentLevel = index; }
-	unsigned short GetCurrentLevel() const { return currentLevel; }
-
-	void SaveMoney() const;
-	void LoseMoney(const int value);
-	void AddMoney(const int value);
-	unsigned short GetMoney() const { return money; }
+	uint8 GetCurrentLevel() const { return currentLevel; }
 };

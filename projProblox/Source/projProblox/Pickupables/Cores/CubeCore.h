@@ -76,8 +76,6 @@ class PROJPROBLOX_API ACubeCore : public APickupableMaster
 
 
 	/////////////// Other ///////////////
-	UFUNCTION(BlueprintCallable)
-	void AddMoney(const int amount = 10) { if (instance) instance->AddMoney(amount); else Print("Instance was invalid", 4) }
 	UCustomGameInstance* instance;
 
 	UFUNCTION(BlueprintCallable)
@@ -154,10 +152,10 @@ private:
 	
 	/////////////// Other ///////////////
 	UPROPERTY(EditDefaultsOnly, Category = "Forces|Detachment", meta = (ToolTip = "The force to be applied when detaching."))
-	unsigned int detachForce = 3000;
+	uint16 detachForce = 3000;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Forces|Detachment", meta = (ToolTip = "The angular force to be applied when detaching."))
-	unsigned int detachAngularForce = 100;
+	uint16 detachAngularForce = 100;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Forces|Drag", meta = (ToolTip = "The angular drag that the mesh should have when a turn is active."))
 	float defaultAngularDrag = .05f;
@@ -173,8 +171,6 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void PlayCollectSound() { soundPlayer->PlayAbility(); }
 	
-	void SetEnableCollisions(bool enable) const;
-
 	void ClearAndInvalidateTimer()
 	{
 		if(!wrld) return;
@@ -209,7 +205,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void EjectObject(APickupableMaster* toEject, bool playSound = true);
-	void EjectObject(const FName& ejectSocket, bool playSound = true) const;
 	void PlayDetachAll() const { soundPlayer->PlayDetachAll(); }
 	
 	
@@ -235,7 +230,6 @@ public:
 		return out;
 	}
 
-	TArray<FName> GetOccupiedSockets() const { return socketInfo->GetOccupiedSockets(); }
 	TArray<FName> GetFreeSockets() const
 	{
 		if(!IsValid(socketInfo)) return {};
@@ -273,7 +267,6 @@ public:
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once the game has started (when the play button is pressed)."))
 	FOnTurnStarted onTurnStarted;
 
-
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired once x seconds have passed after the last attachment deactivates."))
 	FOnReset onReset;
 	
@@ -285,6 +278,7 @@ public:
 	
 	UPROPERTY(BlueprintAssignable, meta = (ToolTip = "Will be fired when more cells are spawned in whilst the game has already started."))
 	FOnSpawnedCells onCellsSpawned;
+
 	
 	/////////////// Other ///////////////
 	virtual void ToggleGravity(const bool on) const override
@@ -302,5 +296,4 @@ public:
 	void EndTurn(bool force = false);
 
 	virtual void PickupCell(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) override;
-	void LoseMoney(const short amount) const { if(instance) instance->LoseMoney(amount); else Print("Instance was invalid.", 4) }
 };

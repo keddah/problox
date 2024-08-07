@@ -41,7 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_attractionForce_MetaData[];
 #endif
-		static const UECodeGen_Private::FUInt32PropertyParams NewProp_attractionForce;
+		static const UECodeGen_Private::FUInt16PropertyParams NewProp_attractionForce;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -86,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_AMagPole_Statics::NewProp_attractionForce = { "attractionForce", nullptr, (EPropertyFlags)0x0040000000000801, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMagPole, attractionForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagPole_Statics::NewProp_attractionForce_MetaData), Z_Construct_UClass_AMagPole_Statics::NewProp_attractionForce_MetaData) };
+	const UECodeGen_Private::FUInt16PropertyParams Z_Construct_UClass_AMagPole_Statics::NewProp_attractionForce = { "attractionForce", nullptr, (EPropertyFlags)0x0040000000000801, UECodeGen_Private::EPropertyGenFlags::UInt16, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMagPole, attractionForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMagPole_Statics::NewProp_attractionForce_MetaData), Z_Construct_UClass_AMagPole_Statics::NewProp_attractionForce_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMagPole_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMagPole_Statics::NewProp_mesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMagPole_Statics::NewProp_positive,
@@ -130,9 +130,9 @@ void EmptyLinkFunctionForGeneratedCodeMagPole() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMagPole, AMagPole::StaticClass, TEXT("AMagPole"), &Z_Registration_Info_UClass_AMagPole, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagPole), 618718807U) },
+		{ Z_Construct_UClass_AMagPole, AMagPole::StaticClass, TEXT("AMagPole"), &Z_Registration_Info_UClass_AMagPole, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMagPole), 2715009858U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_270774056(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_2843222541(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_Magnet_MagPole_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

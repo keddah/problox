@@ -86,16 +86,16 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	ELevel level;
 	
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties", meta = (EditInlineNew, ToolTip = "The initial number of cells that will spawn from this..."))
-	unsigned int spawnAmount = 1;
+	uint8 spawnAmount = 1;
 	
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Activation", meta = (EditInlineNew, ToolTip = "Whether to spawn the cells as soon as the level is loaded"))
 	bool previewed = true;
 		
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The radius around the position of this actor that cells are allowed to spawn in (setting to means they spawn directly on the actor)."))
-	unsigned int spawnRadius = 50;
+	uint16 spawnRadius = 50;
 
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, ClampMax = 1000000, ToolTip = "The max angle of the cone of force to be applied when new cells are spawned."))
-	unsigned int coneRadius = 20;
+	uint16 coneRadius = 20;
 
 	UPROPERTY(EditInstanceOnly, Category = "Spawn Properties|Force", meta = (EditInlineNew, Delta = 10, ToolTip = "This only applies when cells are spawned using the triggers."))
 	int spawnForce = 2000;
@@ -110,7 +110,9 @@ class PROJPROBLOX_API ACellSpawner : public AActor
 	TArray<ACell*> spawnedCells;
 	
 	bool spawned = false;
-	unsigned int collectedCount = 0;
+
+	// The number of cells that were spawned from this spawner that have been collected.
+	uint8 collectedCount = 0;
 	
 	// Returns whether the overlap caused a spawn
 	UFUNCTION(BlueprintCallable)

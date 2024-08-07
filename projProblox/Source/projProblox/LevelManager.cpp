@@ -11,7 +11,7 @@
 
 #include "LevelManager.h"
 
-#include "SaveFiles.h"
+#include "Kismet/GameplayStatics.h"
 #include "Pickupables/Cores/CubeCore.h"
 
 
@@ -62,7 +62,7 @@ void ALevelManager::BeginPlay()
 	// Unhide all the levels (apart from build level)
 	if(levels.Num() > 1)
 	{
-		for(unsigned short i = 1; i < levels.Num(); i++)
+		for(uint8 i = 1; i < levels.Num(); i++)
 		{
 			levels[i]->SetShouldBeLoaded(true);
 			levels[i]->SetShouldBeVisible(true);
@@ -154,7 +154,7 @@ void ALevelManager::UnloadLevel(short lvlIndex)
 
 void ALevelManager::UnloadUnusedLevels()
 {
-	for(unsigned short i = 0; i < levels.Num(); i++)
+	for(uint8 i = 0; i < levels.Num(); i++)
 	{
 		// Ignore the current level
 		if(i == currentLevel) continue;

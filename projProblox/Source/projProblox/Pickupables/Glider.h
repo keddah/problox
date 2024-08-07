@@ -33,10 +33,10 @@ class PROJPROBLOX_API AGlider : public APickupableMaster
 	virtual void Ability(float deltaTime) override;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability|Movement")
-	unsigned int glideSpeed = 2000;
+	uint16 glideSpeed = 2000;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability|Movement")
-	unsigned int floatAmount = 1750;
+	uint16 floatAmount = 1750;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability|Activation", meta = (ToolTip = "How fast the object has to be falling in order to activate the glide (Z axis velocity)."))
 	float activationSpeed = 500;

@@ -50,7 +50,7 @@ class PROJPROBLOX_API AHoverer : public APickupableMaster
 	USceneComponent* sideRight;
 
 	UPROPERTY(EditDefaultsOnly)
-	unsigned int hoverDistance = 250;
+	uint16 hoverDistance = 250;
 
 	UPROPERTY(EditDefaultsOnly, meta = (ClampMin = 0, ToolTip = "How strong the falloff for the hover strength is (relative to the distance to the floor)."))
 	float distanceMultiplier = .1f;

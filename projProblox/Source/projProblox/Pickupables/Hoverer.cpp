@@ -64,7 +64,7 @@ void AHoverer::Ability(float deltaTime)
 		if(!IsValid(point)) continue;
 
 		// Do linetraces in all directions of the point so that the hover points are stable
-		for(unsigned short i = 0; i < 5; i++)
+		for(uint8 i = 0; i < 5; i++)
 		{
 			FHitResult hit;
 			FCollisionQueryParams collisionParams;

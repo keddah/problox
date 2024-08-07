@@ -54,7 +54,6 @@ PROJPROBLOX_API void FOnAddedCell_DelegateWrapper(const FMulticastScriptDelegate
 	DECLARE_FUNCTION(execGetCurrentLevel); \
 	DECLARE_FUNCTION(execPlayCollectSound); \
 	DECLARE_FUNCTION(execBroadcastBadCam); \
-	DECLARE_FUNCTION(execAddMoney); \
 	DECLARE_FUNCTION(execStartStoryGame); \
 	DECLARE_FUNCTION(execStartGame); \
 	DECLARE_FUNCTION(execStart);

@@ -296,7 +296,7 @@ public:
 	{
 		if(!outlineMat || !outlineMesh) return;
 
-		for(unsigned short i = 0; i < outlineMesh->GetNumMaterials(); i++)	outlineMesh->SetMaterial(i, outlineMat);
+		for(uint8 i = 0; i < outlineMesh->GetNumMaterials(); i++)	outlineMesh->SetMaterial(i, outlineMat);
 		outlineMesh->SetHiddenInGame(hide);
 	}
 	

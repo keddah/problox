@@ -27,7 +27,7 @@ class PROJPROBLOX_API ATreads : public APickupableMaster
 
 	/////////////// Ability ///////////////
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 2))
-	unsigned int moveSpeed = 5000;
+	uint16 moveSpeed = 5000;
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

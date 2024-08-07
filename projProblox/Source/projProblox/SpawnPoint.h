@@ -32,7 +32,7 @@ class PROJPROBLOX_API ASpawnPoint : public AActor
 {
 	GENERATED_BODY()
 	
-	unsigned short levelIndex;
+	uint8 levelIndex;
 	bool unlocked;
 	
 public:	

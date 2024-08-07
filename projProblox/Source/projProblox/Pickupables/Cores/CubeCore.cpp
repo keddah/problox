@@ -69,29 +69,6 @@ void ACubeCore::Reset()
 	onReset.Broadcast();
 }
 
-
-void ACubeCore::SetEnableCollisions(const bool enable) const
-{
-	if(!IsValid(mesh)) return;
-	
-	mesh->SetSimulatePhysics(enable);
-	mesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
-	
-	for(const auto& obj : GetCloseAttachments())
-	{
-		if(!IsValid(obj)) continue;
-		
-		UStaticMeshComponent* objMesh = obj->GetMesh();
-		if(!IsValid(objMesh)) continue;
-
-		objMesh->SetCollisionResponseToAllChannels(enable ? ECR_Block : ECR_Ignore);
-		objMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-		objMesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
-	}
-	mesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	mesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Block);
-}
-
 void ACubeCore::AddAttachment(APickupableMaster* attachment, const FName& socket)
 {
 	if(!IsValid(socketInfo)) return;
@@ -176,16 +153,6 @@ void ACubeCore::EjectObject(APickupableMaster* toEject, const bool playSound)
 {
 	if(!toEject) return;
 
-	toEject->Detach(playSound, detachForce, detachAngularForce);
-	// soundPlayer->PlayDetachAll();
-}
-
-void ACubeCore::EjectObject(const FName& ejectSocket, const bool playSound) const
-{
-	if(!IsValid(socketInfo)) return;
-	APickupableMaster* toEject = socketInfo->GetObjectFromSocket(ejectSocket);
-
-	if(!toEject) return;
 	toEject->Detach(playSound, detachForce, detachAngularForce);
 	// soundPlayer->PlayDetachAll();
 }
@@ -310,14 +277,23 @@ void ACubeCore::EndTurn(const bool force)
 	}
 }
 
-
 void ACubeCore::CoreCamera(const float deltaTime)
 {
 	if(!IsValid(camArm)) return;
 	if(!IsValid(coreCam)) return;
 
 	// If the camera is facing directly up... swap to an actual camera
-	if(coreCam->GetForwardVector().Equals({0,0,1}, .125f))
+	constexpr float upLeeway = .25f; 
+	if(coreCam->GetForwardVector().Equals({0,0,1}, upLeeway))
+	{
+		onBadCamera.Broadcast();
+		camArm->SetRelativeRotation({0,0,0});
+		return;
+	}
+
+	// If the core is spinning too fast...
+	constexpr unsigned short maxSpin = 1000; 
+	if(mesh->GetPhysicsAngularVelocityInDegrees().Length() > maxSpin)
 	{
 		onBadCamera.Broadcast();
 		camArm->SetRelativeRotation({0,0,0});
@@ -382,7 +358,7 @@ void ACubeCore::TimedObjectActivation(const TArray<int>& delays, const TArray<in
 	// Set the longest time to .1 (that's the longest duration when setting both values to 0).
 	longestDuration = _longestTime == 0? .1f : _longestTime;
 	
-	for(unsigned short i = 0; i < objs.Num(); i++)
+	for(uint8 i = 0; i < objs.Num(); i++)
 	{
 		if(!objs[i]->IsTimerRequired()) continue;
 		

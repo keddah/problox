@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_maxSpringLength_MetaData[];
 #endif
-		static const UECodeGen_Private::FUInt32PropertyParams NewProp_maxSpringLength;
+		static const UECodeGen_Private::FUInt16PropertyParams NewProp_maxSpringLength;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_minSpringLength_MetaData[];
 #endif
@@ -94,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_ABounceSpring_Statics::NewProp_maxSpringLength = { "maxSpringLength", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABounceSpring, maxSpringLength), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABounceSpring_Statics::NewProp_maxSpringLength_MetaData), Z_Construct_UClass_ABounceSpring_Statics::NewProp_maxSpringLength_MetaData) };
+	const UECodeGen_Private::FUInt16PropertyParams Z_Construct_UClass_ABounceSpring_Statics::NewProp_maxSpringLength = { "maxSpringLength", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::UInt16, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABounceSpring, maxSpringLength), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABounceSpring_Statics::NewProp_maxSpringLength_MetaData), Z_Construct_UClass_ABounceSpring_Statics::NewProp_maxSpringLength_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABounceSpring_Statics::NewProp_minSpringLength_MetaData[] = {
 		{ "Category", "Spring" },
@@ -212,9 +212,9 @@ void EmptyLinkFunctionForGeneratedCodeBounceSpring() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABounceSpring, ABounceSpring::StaticClass, TEXT("ABounceSpring"), &Z_Registration_Info_UClass_ABounceSpring, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABounceSpring), 1358455216U) },
+		{ Z_Construct_UClass_ABounceSpring, ABounceSpring::StaticClass, TEXT("ABounceSpring"), &Z_Registration_Info_UClass_ABounceSpring, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABounceSpring), 4216513070U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_2449959354(TEXT("/Script/projProblox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_2605529309(TEXT("/Script/projProblox"),
 		Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deany_Documents_GitHub_problox_projProblox_Source_projProblox_Pickupables_BounceSpring_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

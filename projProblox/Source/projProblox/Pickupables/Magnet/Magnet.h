@@ -36,7 +36,7 @@ class PROJPROBLOX_API AMagnet : public APickupableMaster
 	bool positive;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 1))
-	unsigned int attractionForce = 15;
+	uint16 attractionForce = 15;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability", meta = (Delta = 10))
 	unsigned int fieldRange = 55000;

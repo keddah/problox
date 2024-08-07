@@ -178,7 +178,7 @@ void ACellSpawner::InitialSpawn()
 	const FRotator rot = GetActorRotation();
 
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(unsigned int i = 0; i < spawnAmount; i++)
+	for(uint8 i = 0; i < spawnAmount; i++)
 	{
 		// If spawn radius isn't set, the spawn position will be this position.
 		const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
@@ -201,7 +201,8 @@ void ACellSpawner::SpawnWithForce()
 	const FRotator rot = GetActorRotation();
 	
 	// Spawn a new Thing for however many spawnAmount says to.
-	for(unsigned short i = 0; i < spawnAmount; i++)
+	// (max number of spawns is 256)
+	for(uint8 i = 0; i < spawnAmount; i++)
 	{
 		const FVector spawn = FMath::VRand() * spawnRadius + thisPos;
 		if(ACell* newCell = Spawn(spawn, rot)) spawnedCells.Add(newCell);
@@ -225,7 +226,8 @@ void ACellSpawner::DisplaySpawn()
 	const FVector thisPos = GetActorLocation();
 	const FRotator rot = GetActorRotation();
 
-	for(unsigned short i = 0; i < spawnAmount; i++)
+	// (max number of spawns is 256)
+	for(uint8 i = 0; i < spawnAmount; i++)
 	{
 		// If spawn radius isn't set, the spawn position will be this position.
 		const FVector spawn = FMath::VRand() * spawnRadius + thisPos;

@@ -209,7 +209,7 @@ void APickupableMaster::GhostPlacement()
 		silhouette->SetWorldRotation(rot);
 
 		// Whether or not the attached socket is the diagonal side of a wedge...
-		const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90;
+		const uint8 rounder = attachedSocket == "DIAG"? 45 : 90;
 		const FRotator roundRot = RoundRotation(silhouette->GetRelativeRotation(), -float(rounder));
 
 		// Round it to the socket rotation
@@ -230,7 +230,7 @@ void APickupableMaster::GhostPlacement()
 	const bool roundZ = lockAxis.Z == 0;  
 
 	// Whether or not the attached socket is the diagonal side of a wedge...
-	const unsigned short rounder = attachedSocket == "DIAG"? 45 : 90;
+	const uint8 rounder = attachedSocket == "DIAG"? 45 : 90;
 	
 	const FRotator roundRot = RoundRotation(silhouette->GetRelativeRotation(), -float(rounder));
 
